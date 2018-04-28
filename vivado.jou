@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sat Apr 28 19:04:22 2018
+# Process ID: 2252
+# Current directory: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex
+# Command line: vivado.exe -notrace -source f:/Programs/Verilog/FPGA_Group/test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g_ex.tcl
+# Log file: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/vivado.log
+# Journal file: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source f:/Programs/Verilog/FPGA_Group/test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g_ex.tcl -notrace
+update_compile_order -fileset sources_1
+add_files -norecurse {F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/prbs_gen.v F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/prbs_chk.v}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top gtx3g_test [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sim_1/tb_gtx3g_test.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_gtx3g_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_gtx3g_test.tcl
+add_wave {{/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i}} 
+add_wave {{/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen}} 
+add_wave {{/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check}} 
+add_wave {{/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_chk_inst_1}} 
+save_wave_config {F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sim_1/tb_gtx3g_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sim_1/tb_gtx3g_test_behav.wcfg
+set_property xsim.view F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sim_1/tb_gtx3g_test_behav.wcfg [get_filesets sim_1]
+run 110 us
+save_wave_config {F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sim_1/tb_gtx3g_test_behav.wcfg}
+save_wave_config {F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sim_1/tb_gtx3g_test_behav.wcfg}
