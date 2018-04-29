@@ -112,7 +112,7 @@ reg     [79:0]  tx_data_ram_r;
        system_reset_r2 <= `DLY system_reset_r;
         end
 
-    //____________________________ Counter to read from BRAM __________________________    
+    /*//____________________________ Counter to read from BRAM __________________________    
 
     always @(posedge USER_CLK)
         if(system_reset_r2 || (read_counter_i == "111111111"))  
@@ -132,7 +132,7 @@ reg     [79:0]  tx_data_ram_r;
         else             TXCTRL_OUT <= `DLY tx_ctrl_i;  
 
 
-    /*//________________________________ BRAM Inference Logic _____________________________    
+    //________________________________ BRAM Inference Logic _____________________________    
 
     assign tx_data_bram_i      = tx_data_ram_r[79:16];
     assign tx_ctrl_i           = tx_data_ram_r[15:8];

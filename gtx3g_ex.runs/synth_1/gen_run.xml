@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1524920488">
+  <File Type="RDS-PROPCONSTRS" Name="gtx3g_test_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="gtx3g_test.tcl"/>
+  <File Type="RDS-RDS" Name="gtx3g_test.vds"/>
+  <File Type="RDS-UTIL" Name="gtx3g_test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="gtx3g_test_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="gtx3g_test.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="gtx3g_test_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="gtx3g_test_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/gtx3g/gtx3g.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g.xci"/>
+        <Attr Name="ImportTime" Val="1524912967"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/support/gtx3g_common.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/support/gtx3g_common.v"/>
+        <Attr Name="ImportTime" Val="1524913424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/support/gtx3g_common_reset.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/support/gtx3g_common_reset.v"/>
+        <Attr Name="ImportTime" Val="1524913424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/gtx3g_exdes.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/gtx3g_exdes.v"/>
+        <Attr Name="ImportTime" Val="1524913428"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/gtx3g_gt_frame_check.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/gtx3g_gt_frame_check.v"/>
+        <Attr Name="ImportTime" Val="1524913431"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/gtx3g_gt_frame_gen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/gtx3g_gt_frame_gen.v"/>
+        <Attr Name="ImportTime" Val="1524913432"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/support/gtx3g_gt_usrclk_source.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/support/gtx3g_gt_usrclk_source.v"/>
+        <Attr Name="ImportTime" Val="1524913424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/support/gtx3g_support.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/support/gtx3g_support.v"/>
+        <Attr Name="ImportTime" Val="1524913424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/prbs_chk.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/prbs_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/simple_uart.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/gtx3g_test.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/gt_rom_init_rx.dat">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/gt_rom_init_rx.dat"/>
+        <Attr Name="ImportTime" Val="1524913433"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/example_design/gt_rom_init_tx.dat">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/gt_rom_init_tx.dat"/>
+        <Attr Name="ImportTime" Val="1524913433"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="gtx3g_test"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/example_design/gtx3g_exdes.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g/example_design/gtx3g_exdes.xdc"/>
+        <Attr Name="ImportTime" Val="1524913430"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="110591520000fs"></ZoomStartTime>
-      <ZoomEndTime time="110661020001fs"></ZoomEndTime>
-      <Cursor1Time time="107675964000fs"></Cursor1Time>
+      <ZoomStartTime time="110420833333fs"></ZoomStartTime>
+      <ZoomEndTime time="111115833334fs"></ZoomEndTime>
+      <Cursor1Time time="111000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
@@ -79,6 +79,14 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count" type="array">
       <obj_property name="ElementShortName">data_count[9:0]</obj_property>
       <obj_property name="ObjectShortName">data_count[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/link_ctr" type="array">
+      <obj_property name="ElementShortName">link_ctr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">link_ctr[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
+      <obj_property name="ElementShortName">track_data_out_i</obj_property>
+      <obj_property name="ObjectShortName">track_data_out_i</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/refclk_n_in" type="logic">
       <obj_property name="ElementShortName">refclk_n_in</obj_property>
@@ -1068,10 +1076,6 @@
       <obj_property name="ElementShortName">reset_on_data_error_i</obj_property>
       <obj_property name="ObjectShortName">reset_on_data_error_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
-      <obj_property name="ElementShortName">track_data_out_i</obj_property>
-      <obj_property name="ObjectShortName">track_data_out_i</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rxresetdone_vio_i" type="logic">
       <obj_property name="ElementShortName">rxresetdone_vio_i</obj_property>
       <obj_property name="ObjectShortName">rxresetdone_vio_i</obj_property>
@@ -1727,10 +1731,6 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/sm_link" type="logic">
       <obj_property name="ElementShortName">sm_link</obj_property>
       <obj_property name="ObjectShortName">sm_link</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/link_ctr" type="array">
-      <obj_property name="ElementShortName">link_ctr[6:0]</obj_property>
-      <obj_property name="ObjectShortName">link_ctr[6:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_error" type="logic">
       <obj_property name="ElementShortName">prbs_error</obj_property>

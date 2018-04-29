@@ -67,15 +67,23 @@
 
 
 ####################### GT reference clock constraints #########################
+
+create_clock -period 6.667 [get_ports refclk_p_in]
+
+
+
+
+
+create_clock -name drpclk_in_i -period 10.0 [get_ports sysclk_in]
  
 
-    create_clock -period 6.667 [get_ports Q0_CLK1_GTREFCLK_PAD_P_IN]
+    ##create_clock -period 6.667 [get_ports Q0_CLK1_GTREFCLK_PAD_P_IN]
 
 
 
 
 
-create_clock -name drpclk_in_i -period 10.0 [get_ports DRP_CLK_IN_P]
+##create_clock -name drpclk_in_i -period 10.0 [get_ports DRP_CLK_IN_P]
 
 
 
@@ -87,8 +95,8 @@ set_false_path -to [get_pins -hierarchical -filter {NAME =~ *_txfsmresetdone_r*/
 set_false_path -to [get_pins -hierarchical -filter {NAME =~ *_txfsmresetdone_r*/D}]
 set_false_path -to [get_pins -hierarchical -filter {NAME =~ *reset_on_error_in_r*/D}]
 ################################# RefClk Location constraints #####################
-set_property LOC AF9 [get_ports  Q0_CLK1_GTREFCLK_PAD_N_IN ] 
-set_property LOC AF10 [get_ports  Q0_CLK1_GTREFCLK_PAD_P_IN ]
+#set_property LOC AF9 [get_ports  Q0_CLK1_GTREFCLK_PAD_N_IN ] 
+#set_property LOC AF10 [get_ports  Q0_CLK1_GTREFCLK_PAD_P_IN ]
 
 ## LOC constrain for DRP_CLK_P/N 
 ## set_property LOC C25 [get_ports  DRP_CLK_IN_P]
@@ -97,9 +105,9 @@ set_property LOC AF10 [get_ports  Q0_CLK1_GTREFCLK_PAD_P_IN ]
 ################################# mgt wrapper constraints #####################
 
 ##---------- Set placement for gt0_gtx_wrapper_i/GTXE2_CHANNEL ------
-set_property LOC GTXE2_CHANNEL_X0Y1 [get_cells gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i]
+set_property LOC GTXE2_CHANNEL_X0Y1 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i]
 ##---------- Set placement for gt1_gtx_wrapper_i/GTXE2_CHANNEL ------
-set_property LOC GTXE2_CHANNEL_X0Y2 [get_cells gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt1_gtx3g_i/gtxe2_i]
+set_property LOC GTXE2_CHANNEL_X0Y2 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt1_gtx3g_i/gtxe2_i]
 
 ##---------- Set ASYNC_REG for flop which have async input ----------
 ##set_property ASYNC_REG TRUE [get_cells -hier -filter {name=~*gt0_frame_gen*system_reset_r_reg}]
@@ -108,4 +116,24 @@ set_property LOC GTXE2_CHANNEL_X0Y2 [get_cells gtx3g_support_i/gtx3g_init_i/inst
 ##set_property ASYNC_REG TRUE [get_cells -hier -filter {name=~*gt1_frame_check*system_reset_r_reg}]
 
 ##---------- Set False Path from one clock to other ----------
+
+set_property IOSTANDARD LVCMOS25 [get_ports test_succeeded]
+set_property IOSTANDARD LVCMOS25 [get_ports sysclk_in]
+set_property PACKAGE_PIN AK30 [get_ports sysclk_in]
+set_property PACKAGE_PIN AG17 [get_ports test_succeeded]
+set_property IOSTANDARD LVCMOS25 [get_ports track_data_i]
+set_property IOSTANDARD LVCMOS25 [get_ports uart_z7_in]
+set_property IOSTANDARD LVCMOS25 [get_ports uart_z7_out]
+set_property PACKAGE_PIN AG16 [get_ports track_data_i]
+set_property PACKAGE_PIN AJ21 [get_ports uart_z7_in]
+set_property PACKAGE_PIN AK21 [get_ports uart_z7_out]
+set_property PACKAGE_PIN N8 [get_ports refclk_p_in]
+
+set_property IOSTANDARD LVCMOS25 [get_ports refclk_direct_out]
+set_property PACKAGE_PIN AK22 [get_ports refclk_direct_out]
+set_property IOSTANDARD LVCMOS25 [get_ports clk_refdiv]
+set_property PACKAGE_PIN AD21 [get_ports clk_refdiv]
+
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets sysclk_in_IBUF]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/Q0_CLK1_GTREFCLK_OUT]
 

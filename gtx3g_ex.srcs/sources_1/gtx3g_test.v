@@ -13,9 +13,9 @@ module gtx3g_test(
     output test_succeeded,
 
     output refclk_direct_out,
-    output clk_refdiv,
-    output [7:0] gt0_error_count_i,
-    output [9:0] gt0_data_count
+    output clk_refdiv
+    //output [7:0] gt0_error_count_i,
+    //output [9:0] gt0_data_count
 );
 
 
