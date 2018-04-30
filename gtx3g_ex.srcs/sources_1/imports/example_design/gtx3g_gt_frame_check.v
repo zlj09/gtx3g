@@ -517,7 +517,7 @@ endgenerate
             test_over_r <= 1'b0;
         end
         else
-            if (track_data_r3 && !track_data_over) begin
+            if (track_data_r3 && !test_over_r) begin
                 if (data_count_r < DATA_MAX_CNT)
                     data_count_r <= data_count_r + 1'b1;
                 else begin

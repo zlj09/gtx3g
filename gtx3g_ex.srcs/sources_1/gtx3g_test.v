@@ -96,19 +96,19 @@ wire    [1:0]   txp_out_i;
             trans_timer <= 32'd0;
             test_succeeded <= 1'b0;
             test_failed <= 1'b0;
-            //test_over <= 1'b0;
+            test_over <= 1'b0;
         end
         else begin
-            if (trans_timer <= 32'd71800)
+            if (!test_over)
                 trans_timer <= trans_timer + 1'b1;
             if (gt0_test_over_i == 1'b1) begin
-              //test_over <= 1'b1;
+              test_over <= 1'b1;
               if (trans_timer <= 32'd77000)
                 test_succeeded <= 1'b1;
               else
                 test_failed <= 1'b1;
-              gt0_data_count_reg <= gt0_data_count;
-              gt0_error_count_reg <= gt0_error_count_reg;
+              gt0_data_count_reg <= gt0_data_count_i;
+              gt0_error_count_reg <= gt0_error_count_i;
             end
         end
 
@@ -119,6 +119,7 @@ wire    [1:0]   txp_out_i;
     reg wvalid;
     reg [7:0] char;
     reg trans_st;
+    reg data_rdy;
     wire busy;
     wire overflow;
 
@@ -133,52 +134,29 @@ wire    [1:0]   txp_out_i;
         trans_st <= 1'b0;
         cnt_char <= 8'd0;
         cnt_trans <= 8'd0;
-        test_over <= 1'b0;
-        msg_status <= 1'b0;
+  
+        msg_status <= 4'd0;
+        data_rdy <= 1'b0;
       end
       else begin
-        if (test_succeeded) begin
-          cnt_char <= 8'd15;
-
-          string_reg[0] <= STRING_SUC[7:0];
-          string_reg[1] <= STRING_SUC[15:8];
-          string_reg[2] <= STRING_SUC[23:16];
-          string_reg[3] <= STRING_SUC[31:24];
-          string_reg[4] <= STRING_SUC[39:32];
-          string_reg[5] <= STRING_SUC[47:40];
-          string_reg[6] <= STRING_SUC[55:48];
-          string_reg[7] <= STRING_SUC[63:56];
-          string_reg[8] <= STRING_SUC[71:64];
-          string_reg[9] <= STRING_SUC[79:72];
-          string_reg[10] <= STRING_SUC[87:80];
-          string_reg[11] <= STRING_SUC[95:88];
-          string_reg[12] <= STRING_SUC[103:96];
-          string_reg[13] <= STRING_SUC[111:104];
-          string_reg[14] <= STRING_SUC[119:112];
-
-          test_over <= 1'b1;
-        end
-
-        if (test_failed) begin
+        if (test_over) begin
+          string_reg[0] <= trans_timer[7:0];
+          string_reg[1] <= trans_timer[15:8];
+          string_reg[2] <= trans_timer[23:16];
+          string_reg[3] <= trans_timer[31:24];
+          string_reg[4] <= gt0_error_count_reg[7:0];
+          string_reg[5] <= gt0_error_count_reg[15:8];
+          string_reg[6] <= gt0_error_count_reg[23:16];
+          string_reg[7] <= gt0_error_count_reg[31:24];
+          string_reg[8] <= gt0_data_count_reg[7:0];
+          string_reg[9] <= gt0_data_count_reg[15:8];
+          string_reg[10] <= gt0_data_count_reg[23:16];
+          string_reg[11] <= gt0_data_count_reg[31:24];
           cnt_char <= 8'd12;
-
-          string_reg[0] <= STRING_FAI[7:0];
-          string_reg[1] <= STRING_FAI[15:8];
-          string_reg[2] <= STRING_FAI[23:16];
-          string_reg[3] <= STRING_FAI[31:24];
-          string_reg[4] <= STRING_FAI[39:32];
-          string_reg[5] <= STRING_FAI[47:40];
-          string_reg[6] <= STRING_FAI[55:48];
-          string_reg[7] <= STRING_FAI[63:56];
-          string_reg[8] <= STRING_FAI[71:64];
-          string_reg[9] <= STRING_FAI[79:72];
-          string_reg[10] <= STRING_FAI[87:80];
-          string_reg[11] <= STRING_FAI[95:88];
-
-          test_over <= 1'b1;
+          data_rdy <= 1'b1;
         end
         
-        if (test_over) begin
+        if (data_rdy) begin
           if (cnt_char > 0) begin
             wvalid <= 1'b1;
             char <= string_reg[cnt_char - 1];
@@ -194,8 +172,10 @@ wire    [1:0]   txp_out_i;
               end
             end
             else
-              if (cnt_trans < TRANS_TIMES)
+              if (cnt_trans < TRANS_TIMES) begin
                 trans_st <= 1'b1;
+                data_rdy <= 1'b0;
+              end
           end
         end
       end
