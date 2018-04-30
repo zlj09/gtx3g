@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Apr 30 19:42:48 2018
-# Process ID: 13372
+# Start of session at: Mon Apr 30 20:56:11 2018
+# Process ID: 17272
 # Current directory: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1
 # Command line: vivado.exe -log gtx3g_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtx3g_test.tcl
 # Log file: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.vds
@@ -15,7 +15,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11704 
+INFO: Helper process launched with PID 8548 
 WARNING: [Synth 8-2611] redeclaration of ansi port DRPCLK_IN is not allowed [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:392]
 WARNING: [Synth 8-976] DRPCLK_IN has already been declared [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:392]
 WARNING: [Synth 8-2654] second declaration of DRPCLK_IN ignored [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:392]
@@ -34,7 +34,7 @@ WARNING: [Synth 8-2507] parameter declaration becomes local in simple_uart with 
 WARNING: [Synth 8-2611] redeclaration of ansi port test_succeeded is not allowed [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:25]
 WARNING: [Synth 8-2611] redeclaration of ansi port track_data_i is not allowed [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:50]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 565.988 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 564.840 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'gtx3g_test' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:2]
 	Parameter STRING_SUC bound to: Test Succeeded! - type: string 
@@ -138,8 +138,8 @@ INFO: [Synth 8-638] synthesizing module 'gtx3g_common_reset' [f:/Programs/Verilo
 	Parameter ASSERT_COMMON_RESET bound to: 1'b1 
 INFO: [Synth 8-226] default block is never used [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:121]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_common_reset' (8#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:74]
-INFO: [Synth 8-638] synthesizing module 'gtx3g' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-13372-idea-PC/realtime/gtx3g_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g' (9#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-13372-idea-PC/realtime/gtx3g_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'gtx3g' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-17272-idea-PC/realtime/gtx3g_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g' (9#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-17272-idea-PC/realtime/gtx3g_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_support' (10#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_support.v:70]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_GT_FRAME_GEN' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:69]
 	Parameter WORDS_IN_BRAM bound to: 512 - type: integer 
@@ -238,7 +238,7 @@ WARNING: [Synth 8-3331] design gtx3g_support has unconnected port gt0_txpmareset
 WARNING: [Synth 8-3331] design gtx3g_support has unconnected port gt1_txpmareset_in
 WARNING: [Synth 8-3331] design gtx3g_test has unconnected port uart_z7_in
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 565.988 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 564.840 ; gain = 0.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -252,7 +252,7 @@ WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[0] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:203]
 WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:203]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 565.988 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 564.840 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -261,8 +261,8 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-13372-idea-PC/dcp3/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-13372-idea-PC/dcp3/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-17272-idea-PC/dcp3/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-17272-idea-PC/dcp3/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
 Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc]
 WARNING: [Vivado 12-507] No nets matched 'sysclk_in_IBUF'. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:137]
 Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc]
@@ -277,23 +277,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FD => FDRE: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 883.656 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 884.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 883.656 ; gain = 317.668
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 884.648 ; gain = 319.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z100iffg900-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 883.656 ; gain = 317.668
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 884.648 ; gain = 319.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:01:01 . Memory (MB): peak = 883.656 ; gain = 317.668
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 884.648 ; gain = 319.809
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:254]
 INFO: [Synth 8-5544] ROM "cnt_char" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -315,7 +315,7 @@ WARNING: [Synth 8-6014] Unused sequential element data_count_r_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:96]
 WARNING: [Synth 8-6014] Unused sequential element cnt_trans_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:136]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:01:05 . Memory (MB): peak = 883.656 ; gain = 317.668
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 884.648 ; gain = 319.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -646,7 +646,7 @@ WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt1_frame_gen/TX_DATA_
 WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt1_frame_gen/TX_DATA_OUT_reg[44]) is unused and will be removed from module gtx3g_test.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:13 . Memory (MB): peak = 883.656 ; gain = 317.668
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 884.648 ; gain = 319.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -665,13 +665,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_suppo
 INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt1_txoutclkfabric_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt1_txoutclkfabric_out/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:30 . Memory (MB): peak = 883.656 ; gain = 317.668
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 884.648 ; gain = 319.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:34 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -683,7 +683,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:36 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -722,86 +722,20 @@ WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxresetdone_vio_r3_
 WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/rxresetdone_vio_i_inferred:in0 to constant 0
 WARNING: [Synth 8-5410] Found another clock driver \gtx3g_exdes_i/DRP_CLK_BUFG :O [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:845]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_test_over_i with 1st driver pin 'gtx3g_exdes_i/gt1_frame_check/test_over_r_reg/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:517]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_test_over_i with 2nd driver pin 'gtx3g_exdes_i/gt0_frame_check/test_over_r_reg/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:517]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[31] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[31]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[31] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[31]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[30] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[30]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[30] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[30]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[29] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[29]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[29] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[29]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[28] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[28]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[28] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[28]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[27] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[27]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[27] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[27]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[26] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[26]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[26] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[26]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[25] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[25]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[25] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[25]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[24] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[24]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[24] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[24]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[23] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[23]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[23] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[23]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[22] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[22]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[22] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[22]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[21] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[21]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[21] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[21]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[20] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[20]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[20] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[20]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[19] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[19]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[19] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[19]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[18] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[18]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[18] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[18]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[17] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[17]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[17] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[17]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[16] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[16]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[16] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[16]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[15] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[15]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[15] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[15]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[14] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[14]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[14] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[14]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[13] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[13]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[13] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[13]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[12] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[12]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[12] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[12]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[11] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[11]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[11] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[11]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[10] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[10]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[10] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[10]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[9] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[9]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[9] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[9]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[8] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[8]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[8] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[8]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[7] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[7]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[7] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[7]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[6] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[6]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[6] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[6]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[5] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[5]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[5] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[5]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[4] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[4]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[4] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[4]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[3] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[3]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[3] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[3]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[2] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[2]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[2] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[2]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[1] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[1]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[1] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[1]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[0] with 1st driver pin 'gtx3g_exdes_i/gt0_frame_check/data_count_r_reg[0]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net gt0_data_count_i[0] with 2nd driver pin 'gtx3g_exdes_i/gt1_frame_check/data_count_r_reg[0]/Q' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:516]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       33|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -813,25 +747,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -867,21 +801,21 @@ Report Cell Usage:
 +------+-------------+------+
 |1     |gtx3g        |     1|
 |2     |BUFG         |     3|
-|3     |CARRY4       |    63|
+|3     |CARRY4       |    55|
 |4     |GTXE2_COMMON |     1|
 |5     |IBUFDS_GTE2  |     1|
-|6     |LUT1         |   175|
-|7     |LUT2         |   111|
-|8     |LUT3         |   138|
-|9     |LUT4         |    69|
-|10    |LUT5         |   142|
-|11    |LUT6         |   157|
+|6     |LUT1         |   205|
+|7     |LUT2         |   108|
+|8     |LUT3         |   139|
+|9     |LUT4         |    68|
+|10    |LUT5         |   141|
+|11    |LUT6         |   154|
 |12    |MUXF7        |    28|
 |13    |MUXF8        |     8|
 |14    |SRL16E       |    32|
 |15    |FDCE         |    73|
 |16    |FDPE         |     1|
-|17    |FDRE         |   939|
+|17    |FDRE         |   906|
 |18    |FDSE         |    10|
 |19    |IBUF         |     3|
 |20    |OBUF         |     5|
@@ -891,40 +825,40 @@ Report Instance Areas:
 +------+-----------------------+-----------------------+------+
 |      |Instance               |Module                 |Cells |
 +------+-----------------------+-----------------------+------+
-|1     |top                    |                       |  2114|
-|2     |  gtx3g_exdes_i        |gtx3g_exdes            |  1374|
-|3     |    gt0_frame_check    |gtx3g_GT_FRAME_CHECK   |   392|
+|1     |top                    |                       |  2096|
+|2     |  gtx3g_exdes_i        |gtx3g_exdes            |  1362|
+|3     |    gt0_frame_check    |gtx3g_GT_FRAME_CHECK   |   423|
 |4     |      prbs_chk_inst_1  |prbs_chk_3             |    67|
 |5     |    gt0_frame_gen      |gtx3g_GT_FRAME_GEN     |   232|
 |6     |      prbs_gen_inst_1  |prbs_gen_2             |   121|
-|7     |    gt1_frame_check    |gtx3g_GT_FRAME_CHECK_0 |   303|
-|8     |      prbs_chk_inst_1  |prbs_chk               |    67|
+|7     |    gt1_frame_check    |gtx3g_GT_FRAME_CHECK_0 |   260|
+|8     |      prbs_chk_inst_1  |prbs_chk               |    68|
 |9     |    gt1_frame_gen      |gtx3g_GT_FRAME_GEN_1   |   232|
 |10    |      prbs_gen_inst_1  |prbs_gen               |   121|
 |11    |    gtx3g_support_i    |gtx3g_support          |   190|
 |12    |      common0_i        |gtx3g_common           |     1|
 |13    |      common_reset_i   |gtx3g_common_reset     |    28|
 |14    |      gt_usrclk_source |gtx3g_GT_USRCLK_SOURCE |     2|
-|15    |  rst_generator_inst_0 |rst_generator          |    27|
+|15    |  rst_generator_inst_0 |rst_generator          |    25|
 |16    |  simple_uart_inst_1   |simple_uart            |   361|
 +------+-----------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:38 . Memory (MB): peak = 897.313 ; gain = 331.324
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 66 critical warnings and 210 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:01 . Memory (MB): peak = 897.313 ; gain = 13.656
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:39 . Memory (MB): peak = 897.313 ; gain = 331.324
+Synthesis finished with 0 errors, 0 critical warnings and 243 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 897.434 ; gain = 12.785
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 897.434 ; gain = 332.594
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-136 Infos, 211 Warnings, 66 Critical Warnings and 0 Errors encountered.
+136 Infos, 211 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:02:25 . Memory (MB): peak = 897.313 ; gain = 631.969
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:58 . Memory (MB): peak = 897.434 ; gain = 631.770
 INFO: [Common 17-1381] The checkpoint 'f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 897.313 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 30 19:46:00 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.270 . Memory (MB): peak = 897.434 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 30 20:57:19 2018...

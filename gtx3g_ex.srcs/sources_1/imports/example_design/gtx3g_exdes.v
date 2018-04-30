@@ -1070,8 +1070,8 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .TRACK_DATA_OUT                 (gt1_track_data_i),
 
         //Modified by lingjun, for data statistics
-        .DATA_COUNT_OUT                 (gt0_data_count_i),
-        .TEST_OVER_OUT                  (gt0_test_over_i)
+        .DATA_COUNT_OUT                 (),
+        .TEST_OVER_OUT                  ()
     );
 
 

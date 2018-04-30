@@ -517,16 +517,17 @@ endgenerate
             test_over_r <= 1'b0;
         end
         else begin
-            if (data_valid_reg && data_count_r < DATA_MAX_CNT && !test_over_r)
+            if (data_valid_reg && data_count_r < DATA_MAX_CNT)
                 data_count_r <= data_count_r + 1'b1;
             else
                 data_count_r <= data_count_r;
-                
+
             if (data_count_r == DATA_MAX_CNT)
                 test_over_r <= 1'b1;
             else
                 test_over_r <= test_over_r;
         end
+        
 
     assign DATA_COUNT_OUT = data_count_r;    
     assign TEST_OVER_OUT = test_over_r;

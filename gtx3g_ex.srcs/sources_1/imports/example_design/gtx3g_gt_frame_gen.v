@@ -176,12 +176,12 @@ reg     [79:0]  tx_data_ram_r;
             else
                 data_gen_cnt <= 32'b0;
 
-            case(data_gen_cnt)
+            /*case(data_gen_cnt)
             //32'h01000000, 32'h57f349a8, 32'h9d3e05f7, 32'hda96f442:
             32'h00000100, 32'h000049a8, 32'h000095f7, 32'h0000e442:
                 err_insrt <= 1'b1;
             default:
-                err_insrt <= 1'b0;
+                err_insrt <= 1'b0;*/
             endcase
         end
 

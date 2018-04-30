@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Apr 30 19:42:48 2018
-# Process ID: 13372
+# Start of session at: Mon Apr 30 20:56:11 2018
+# Process ID: 17272
 # Current directory: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1
 # Command line: vivado.exe -log gtx3g_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtx3g_test.tcl
 # Log file: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.vds
