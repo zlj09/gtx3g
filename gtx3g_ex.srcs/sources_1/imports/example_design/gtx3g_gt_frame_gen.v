@@ -149,23 +149,6 @@ reg     [79:0]  tx_data_ram_r;
     wire [15 : 0] prbs_data;
     wire k_char;
 
-    prbs_gen #(
-        .PRBS_WIDTH(16),
-        .PRBS_PATTERN("PRBS7"),
-        .PRBS_INIT(16'h0100),
-        .BYTE_ALIGN_CHAR(16'h02bc),
-        .CHAN_ALIGN_CHAR(16'h077c),
-        .CLK_COR_CHAR(16'h1d1c),
-        .ALIGN_PERIOD(16)
-    )prbs_gen_inst_1(
-        .clk(USER_CLK),
-        .rst(system_reset_r2),
-        .prbs_en(~system_reset_r2),
-        .err_insrt(1'b0),
-        .prbs_data(prbs_data),
-        .k_char(k_char)
-    );
-
     // Assign TX_DATA_OUT to PRBS generator output
     always @(posedge USER_CLK)
         if(system_reset_r2) TX_DATA_OUT <= `DLY 80'h0000000000; 
@@ -201,6 +184,23 @@ reg     [79:0]  tx_data_ram_r;
                 err_insrt <= 1'b0;
             endcase
         end
+
+    prbs_gen #(
+        .PRBS_WIDTH(16),
+        .PRBS_PATTERN("PRBS7"),
+        .PRBS_INIT(16'h0100),
+        .BYTE_ALIGN_CHAR(16'h02bc),
+        .CHAN_ALIGN_CHAR(16'h077c),
+        .CLK_COR_CHAR(16'h1d1c),
+        .ALIGN_PERIOD(16)
+    )prbs_gen_inst_1(
+        .clk(USER_CLK),
+        .rst(system_reset_r2),
+        .prbs_en(~system_reset_r2),
+        .err_insrt(err_insrt),
+        .prbs_data(prbs_data),
+        .k_char(k_char)
+    );
 
 endmodule 
 

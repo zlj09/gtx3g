@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="349500001fs"></ZoomEndTime>
-      <Cursor1Time time="1380000fs"></Cursor1Time>
+      <ZoomStartTime time="525591315334fs"></ZoomStartTime>
+      <ZoomEndTime time="535441315335fs"></ZoomEndTime>
+      <Cursor1Time time="532074000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="452" />
+   <WVObjectSize size="450" />
    <wvobject fp_name="/tb_gtx3g_test/refclk_p_in" type="logic">
       <obj_property name="ElementShortName">refclk_p_in</obj_property>
       <obj_property name="ObjectShortName">refclk_p_in</obj_property>
@@ -84,13 +84,17 @@
       <obj_property name="ElementShortName">prbs_err_cnt[15:0]</obj_property>
       <obj_property name="ObjectShortName">prbs_err_cnt[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count" type="array">
-      <obj_property name="ElementShortName">data_count[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_count[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
       <obj_property name="ElementShortName">track_data_out_i</obj_property>
       <obj_property name="ObjectShortName">track_data_out_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ERROR_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">ERROR_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ERROR_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count_r" type="array">
+      <obj_property name="ElementShortName">data_count_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count_r[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/refclk_n_in" type="logic">
       <obj_property name="ElementShortName">refclk_n_in</obj_property>
@@ -177,12 +181,8 @@
       <obj_property name="ObjectShortName">gt0_txusrclk_i</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_error_count_i" type="array">
-      <obj_property name="ElementShortName">gt0_error_count_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">gt0_error_count_i[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_data_count" type="array">
-      <obj_property name="ElementShortName">gt0_data_count[31:0]</obj_property>
-      <obj_property name="ObjectShortName">gt0_data_count[31:0]</obj_property>
+      <obj_property name="ElementShortName">gt0_error_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_error_count_i[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/soft_reset_i" type="logic">
       <obj_property name="ElementShortName">soft_reset_i</obj_property>
@@ -1041,8 +1041,8 @@
       <obj_property name="ObjectShortName">gt1_track_data_i</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_error_count_i" type="array">
-      <obj_property name="ElementShortName">gt1_error_count_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">gt1_error_count_i[7:0]</obj_property>
+      <obj_property name="ElementShortName">gt1_error_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_error_count_i[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_frame_check_reset_i" type="logic">
       <obj_property name="ElementShortName">gt1_frame_check_reset_i</obj_property>
@@ -1536,10 +1536,6 @@
       <obj_property name="ElementShortName">RESET_ON_ERROR_IN</obj_property>
       <obj_property name="ObjectShortName">RESET_ON_ERROR_IN</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ERROR_COUNT_OUT" type="array">
-      <obj_property name="ElementShortName">ERROR_COUNT_OUT[7:0]</obj_property>
-      <obj_property name="ObjectShortName">ERROR_COUNT_OUT[7:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/TRACK_DATA_OUT" type="logic">
       <obj_property name="ElementShortName">TRACK_DATA_OUT</obj_property>
       <obj_property name="ObjectShortName">TRACK_DATA_OUT</obj_property>
@@ -1577,8 +1573,8 @@
       <obj_property name="ObjectShortName">data_error_detected_r</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_count_r" type="array">
-      <obj_property name="ElementShortName">error_count_r[8:0]</obj_property>
-      <obj_property name="ObjectShortName">error_count_r[8:0]</obj_property>
+      <obj_property name="ElementShortName">error_count_r[32:0]</obj_property>
+      <obj_property name="ObjectShortName">error_count_r[32:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_detected_r" type="logic">
       <obj_property name="ElementShortName">error_detected_r</obj_property>
@@ -1723,10 +1719,6 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_valid_reg" type="logic">
       <obj_property name="ElementShortName">data_valid_reg</obj_property>
       <obj_property name="ObjectShortName">data_valid_reg</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count_r" type="array">
-      <obj_property name="ElementShortName">data_count_r[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_count_r[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RX_DATA_WIDTH" type="array">
       <obj_property name="ElementShortName">RX_DATA_WIDTH[31:0]</obj_property>

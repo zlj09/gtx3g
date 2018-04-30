@@ -47,12 +47,18 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/impl_1/gtx3g_test.dcp
+  create_project -in_memory -part xc7z100iffg900-2L
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.cache/wt [current_project]
   set_property parent.project_path f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.xpr [current_project]
   set_property ip_output_repo f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.dcp
+  read_ip -quiet f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g.xci
+  set_property is_locked true [get_files f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g.xci]
+  read_xdc f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc
+  link_design -top gtx3g_test -part xc7z100iffg900-2L
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -67,7 +73,6 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  read_xdc -unmanaged f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/gtx3g/tcl/v7ht.tcl
   opt_design 
   write_checkpoint -force gtx3g_test_opt.dcp
   catch { report_drc -file gtx3g_test_drc_opted.rpt }

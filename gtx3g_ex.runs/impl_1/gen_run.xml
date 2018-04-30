@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1524921166">
-  <File Type="PLACE-DCP" Name="gtx3g_test_placed.dcp"/>
-  <File Type="PA-DCP" Name="gtx3g_test.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525088554">
+  <File Type="PWROPT-DRC" Name="gtx3g_test_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="gtx3g_test_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="gtx3g_test_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="gtx3g_test_power_routed.rpx"/>
@@ -12,8 +11,8 @@
   <File Type="OPT-DRC" Name="gtx3g_test_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="gtx3g_test_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="gtx3g_test_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="gtx3g_test_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="gtx3g_test_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="gtx3g_test_placed.dcp"/>
   <File Type="PLACE-IO" Name="gtx3g_test_io_placed.rpt"/>
   <File Type="PLACE-CLK" Name="gtx3g_test_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="gtx3g_test_utilization_placed.rpt"/>

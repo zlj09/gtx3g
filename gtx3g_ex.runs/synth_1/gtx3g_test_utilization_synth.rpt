@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat Apr 28 21:07:15 2018
+| Date         : Mon Apr 30 19:46:00 2018
 | Host         : idea-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gtx3g_test_utilization_synth.rpt -pb gtx3g_test_utilization_synth.pb
 | Design       : gtx3g_test
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  444 |     0 |    277400 |  0.16 |
-|   LUT as Logic             |  412 |     0 |    277400 |  0.15 |
+| Slice LUTs*                |  673 |     0 |    277400 |  0.24 |
+|   LUT as Logic             |  641 |     0 |    277400 |  0.23 |
 |   LUT as Memory            |   32 |     0 |    108200 |  0.03 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   32 |     0 |           |       |
-| Slice Registers            |  630 |     0 |    554800 |  0.11 |
-|   Register as Flip Flop    |  630 |     0 |    554800 |  0.11 |
+| Slice Registers            | 1023 |     0 |    554800 |  0.18 |
+|   Register as Flip Flop    | 1023 |     0 |    554800 |  0.18 |
 |   Register as Latch        |    0 |     0 |    554800 |  0.00 |
-| F7 Muxes                   |   14 |     0 |    138700 |  0.01 |
-| F8 Muxes                   |    7 |     0 |     69350 |  0.01 |
+| F7 Muxes                   |   28 |     0 |    138700 |  0.02 |
+| F8 Muxes                   |    8 |     0 |     69350 |  0.01 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 70    |          Yes |           - |        Reset |
-| 8     |          Yes |         Set |            - |
-| 551   |          Yes |       Reset |            - |
+| 73    |          Yes |           - |        Reset |
+| 10    |          Yes |         Set |            - |
+| 939   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,19 +154,19 @@ Table of Contents
 +--------------+------+---------------------+
 |   Ref Name   | Used | Functional Category |
 +--------------+------+---------------------+
-| FDRE         |  551 |        Flop & Latch |
-| LUT6         |  128 |                 LUT |
-| LUT3         |   95 |                 LUT |
-| LUT5         |   92 |                 LUT |
-| LUT1         |   76 |                 LUT |
-| LUT2         |   75 |                 LUT |
-| FDCE         |   70 |        Flop & Latch |
-| LUT4         |   48 |                 LUT |
+| FDRE         |  939 |        Flop & Latch |
+| LUT1         |  175 |                 LUT |
+| LUT6         |  157 |                 LUT |
+| LUT5         |  142 |                 LUT |
+| LUT3         |  138 |                 LUT |
+| LUT2         |  111 |                 LUT |
+| FDCE         |   73 |        Flop & Latch |
+| LUT4         |   69 |                 LUT |
+| CARRY4       |   63 |          CarryLogic |
 | SRL16E       |   32 |  Distributed Memory |
-| CARRY4       |   23 |          CarryLogic |
-| MUXF7        |   14 |               MuxFx |
-| FDSE         |    8 |        Flop & Latch |
-| MUXF8        |    7 |               MuxFx |
+| MUXF7        |   28 |               MuxFx |
+| FDSE         |   10 |        Flop & Latch |
+| MUXF8        |    8 |               MuxFx |
 | OBUF         |    5 |                  IO |
 | IBUF         |    3 |                  IO |
 | BUFG         |    3 |               Clock |
