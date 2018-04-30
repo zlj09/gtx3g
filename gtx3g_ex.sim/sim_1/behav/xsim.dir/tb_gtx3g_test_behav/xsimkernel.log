@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_gtx3g_test_behav/xsimk.exe -simmode gui -wdb tb_gtx3g_test_behav.wdb -simrunnum 0 -socket 25725
-Design successfully loaded
-Design Loading Memory Usage: 219732 KB (Peak: 219732 KB)
-Design Loading CPU Usage: 1390 ms
-Simulation completed
-Simulation Memory Usage: 269176 KB (Peak: 269176 KB)
-Simulation CPU Usage: 648171 ms

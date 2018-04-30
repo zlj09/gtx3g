@@ -94,7 +94,7 @@ module gtx3g_GT_FRAME_CHECK #
 
 
     // Error Monitoring
-    output wire [7:0]   ERROR_COUNT_OUT,
+    output wire [31:0]   ERROR_COUNT_OUT,
     
     // Track Data
     output wire         TRACK_DATA_OUT,
@@ -103,8 +103,9 @@ module gtx3g_GT_FRAME_CHECK #
     input  wire         USER_CLK,
     input  wire         SYSTEM_RESET,
 
-    // For data statistics
-    output wire [9:0]   data_count
+    //Modified by lingjun, for data statistics
+    output wire [31:0]   DATA_COUNT_OUT,
+    output wire          TEST_OVER_OUT
 );
 
 
@@ -117,7 +118,7 @@ reg             reset_on_error_in_r2;
 
 reg             begin_r;
 reg             data_error_detected_r;
-reg     [8:0]   error_count_r;
+reg     [32:0]   error_count_r;
 reg             error_detected_r;
 reg     [9:0]   read_counter_i;    
 
@@ -374,13 +375,13 @@ wire            tied_to_vcc_i;
     //errors we did not directly observe. 
     always @(posedge USER_CLK)
         if(system_reset_r2)
-            error_count_r       <=  `DLY    9'd0;
-        else if(error_detected_r)
+            error_count_r       <=  `DLY    32'd0;
+        else if(error_detected_r && !test_over_r)  //Modified by lingjun: count the errors before test is over
             error_count_r       <=  `DLY    error_count_r + 1;    
     
     //Here we connect the lower 8 bits of the count (the MSbit is used only to check when the counter reaches
     //max value) to the module output
-    assign  ERROR_COUNT_OUT =   error_count_r[7:0];
+    assign  ERROR_COUNT_OUT =   error_count_r[31:0];
 
   localparam ST_LINK_DOWN = 1'b0;
   localparam ST_LINK_UP   = 1'b1;
@@ -431,7 +432,7 @@ wire            tied_to_vcc_i;
   end
 
 assign TRACK_DATA_OUT = sm_link;
-    /*//____________________________ Counter to read from BRAM __________________________    
+    /*>//____________________________ Counter to read from BRAM __________________________    
     always @(posedge USER_CLK)
         if(system_reset_r2 ||  (read_counter_i == (WORDS_IN_BRAM-1)))
         begin
@@ -468,6 +469,7 @@ endgenerate
     always @(posedge USER_CLK)
            rx_data_ram_r <= `DLY  rom[read_counter_i];*/
 
+    //Modified by lingjun, use PRBS to check the incoming data
     //________________________________ PRBS Checker Logic ___________________________
     wire [15 : 0] prbs_err_cnt;
     wire data_valid;
@@ -503,17 +505,29 @@ endgenerate
     
 
     // Count the number of data frames
-    reg [9:0] data_count_r;
+    localparam DATA_MAX_CNT = 32'h0000ffff;
+
+    reg [31:0] data_count_r;
+    reg test_over_r;
 
 
-    always @(RX_DATA_IN or system_reset_r2 or track_data_r3)
-        if (system_reset_r2)
-            data_count_r <= 10'd0;
+    always @(posedge USER_CLK)
+        if (system_reset_r2) begin
+            data_count_r <= 32'b0;
+            test_over_r <= 1'b0;
+        end
         else
-            if (track_data_r3)
-                data_count_r <= data_count_r + 1'b1;
+            if (track_data_r3 && !track_data_over) begin
+                if (data_count_r < DATA_MAX_CNT)
+                    data_count_r <= data_count_r + 1'b1;
+                else begin
+                    data_count_r <= 32'b0;
+                    test_over_r <= 1'b1;
+                end
+            end
 
-    assign data_count = data_count_r;    
+    assign DATA_COUNT_OUT = data_count_r;    
+    assign TEST_OVER_OUT = test_over_r;
     
     
 endmodule           

@@ -14,8 +14,6 @@ module gtx3g_test(
 
     output refclk_direct_out,
     output clk_refdiv
-    //output [7:0] gt0_error_count_i,
-    //output [9:0] gt0_data_count
 );
 
 
@@ -43,6 +41,10 @@ wire            sysrst;
 wire            drp_clk;
 
 wire            refclk_out;
+
+wire    [31:0]   gt0_error_count_i;
+wire    [31:0]   gt0_data_count_i;
+wire             gt0_test_over_i;
     
     //-------------------------- Example Module Connections -------------------------
 wire            track_data_i;
@@ -76,23 +78,6 @@ wire    [1:0]   txp_out_i;
         .rst(sysrst)
     );
     
-
-
-    //Use 7 Series FPGA's CMT to generate the reference clock
-    /*refclk_gen refclk_gen_inst0(
-        .clk_in1(sysclk_in),
-        .clk_out1(refclk),
-        .reset(sysrst),
-        .locked()
-    );
-
-    OBUFDS #( 
-        .IOSTANDARD("DEFAULT") 
-    ) OBUFDS_inst_1 ( 
-        .O(tx_refclk_p), 
-        .OB(tx_refclk_n), 
-        .I(refclk) 
-    );*/ 
     
                  
     //------------------------ Generate DRP Clock ----------------------------
@@ -102,21 +87,29 @@ wire    [1:0]   txp_out_i;
     
     
     //----------------------------- Track Data ---------------------------------
+
+    reg [31:0] gt0_data_count_reg, gt0_error_count_reg;
+
  
     always @(posedge sysclk_in)
         if (sysrst) begin
             trans_timer <= 32'd0;
             test_succeeded <= 1'b0;
             test_failed <= 1'b0;
+            //test_over <= 1'b0;
         end
         else begin
             if (trans_timer <= 32'd71800)
                 trans_timer <= trans_timer + 1'b1;
-            if (trans_timer == 32'd71700)
-              if (track_data_i == 1'b1)
+            if (gt0_test_over_i == 1'b1) begin
+              //test_over <= 1'b1;
+              if (trans_timer <= 32'd77000)
                 test_succeeded <= 1'b1;
-              else              
+              else
                 test_failed <= 1'b1;
+              gt0_data_count_reg <= gt0_data_count;
+              gt0_error_count_reg <= gt0_error_count_reg;
+            end
         end
 
     parameter STRING_SUC = "Test Succeeded!";
@@ -131,6 +124,7 @@ wire    [1:0]   txp_out_i;
 
     reg [7:0] cnt_char, cnt_trans;
     reg [7:0] string_reg [0:31];
+    reg [3:0] msg_status;
 
     always @(posedge sysclk_in or negedge sysrst)
       if (sysrst) begin
@@ -140,6 +134,7 @@ wire    [1:0]   txp_out_i;
         cnt_char <= 8'd0;
         cnt_trans <= 8'd0;
         test_over <= 1'b0;
+        msg_status <= 1'b0;
       end
       else begin
         if (test_succeeded) begin
@@ -205,19 +200,6 @@ wire    [1:0]   txp_out_i;
         end
       end
 
-    /*always @(posedge refclk_out)
-      if (sysrst) begin
-        clk_refdiv_reg <= 1'b0;
-        cnt_refclk <= 16'd0;
-      end
-      else 
-        if (cnt_refclk < 16'd7500)
-          cnt_refclk <= cnt_refclk + 1'b1;
-        else begin
-          clk_refdiv_reg <= ~clk_refdiv_reg;
-          cnt_refclk <= 16'd0;
-        end*/
-
     assign clk_refdiv = refclk_out;//clk_refdiv_reg;
     //----------------- Instantiate an gtxaui_exdes module  -----------------
 
@@ -235,26 +217,7 @@ wire    [1:0]   txp_out_i;
       .overflow(overflow)
     ); 
 
-  /*  //Convert input differential refclk signals into single-ended signal, for clock division and verification
-  IBUFDS #( 
-    .DIFF_TERM("FALSE"), 
-    .IOSTANDARD("DEFAULT") 
-  ) IBUFDS_inst_1 ( 
-    .O(refclk), 
-    .I(refclk_p_in), 
-    .IB(refclk_n_in) 
-  );*/ 
- 
 
-    //Use the input differential clock as the reference clk
-
-    /*OBUFDS #( 
-      .IOSTANDARD("DEFAULT") 
-    ) OBUFDS_inst_1 ( 
-      .O(drp_clk_p), 
-      .OB(drp_clk_n), 
-      .I(sysclk_in) 
-    );*/ 
 
     gtx3g_exdes 
     gtx3g_exdes_i
@@ -271,8 +234,10 @@ wire    [1:0]   txp_out_i;
         .TXP_OUT                             (txp_out_i),
         .q0_clk1_refclk_i                    (refclk_direct_out),
         .gt0_txusrclk_i                      (refclk_out),
+
         .gt0_error_count_i                   (gt0_error_count_i),
-        .gt0_data_count                (gt0_data_count)
+        .gt0_data_count_i                    (gt0_data_count_i),
+        .gt0_test_over_i                     (gt0_test_over_i)
     );
 
 endmodule

@@ -11,18 +11,26 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="110420833333fs"></ZoomStartTime>
-      <ZoomEndTime time="111115833334fs"></ZoomEndTime>
-      <Cursor1Time time="111000000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="349500001fs"></ZoomEndTime>
+      <Cursor1Time time="1380000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="458" />
+   <WVObjectSize size="452" />
    <wvobject fp_name="/tb_gtx3g_test/refclk_p_in" type="logic">
       <obj_property name="ElementShortName">refclk_p_in</obj_property>
       <obj_property name="ObjectShortName">refclk_p_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_system_reset_c" type="logic">
+      <obj_property name="ElementShortName">gt0_rx_system_reset_c</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_system_reset_c</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdata_i" type="array">
       <obj_property name="ElementShortName">gt0_txdata_i[15:0]</obj_property>
@@ -77,12 +85,8 @@
       <obj_property name="ObjectShortName">prbs_err_cnt[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count" type="array">
-      <obj_property name="ElementShortName">data_count[9:0]</obj_property>
-      <obj_property name="ObjectShortName">data_count[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/link_ctr" type="array">
-      <obj_property name="ElementShortName">link_ctr[6:0]</obj_property>
-      <obj_property name="ObjectShortName">link_ctr[6:0]</obj_property>
+      <obj_property name="ElementShortName">data_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
       <obj_property name="ElementShortName">track_data_out_i</obj_property>
@@ -115,14 +119,6 @@
    <wvobject fp_name="/tb_gtx3g_test/clk_refdiv" type="logic">
       <obj_property name="ElementShortName">clk_refdiv</obj_property>
       <obj_property name="ObjectShortName">clk_refdiv</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gt0_error_count_i" type="array">
-      <obj_property name="ElementShortName">gt0_error_count_i[7:0]</obj_property>
-      <obj_property name="ObjectShortName">gt0_error_count_i[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gt0_data_count" type="array">
-      <obj_property name="ElementShortName">gt0_data_count[9:0]</obj_property>
-      <obj_property name="ObjectShortName">gt0_data_count[9:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/TX_REFCLK_PERIOD" type="other">
       <obj_property name="ElementShortName">TX_REFCLK_PERIOD</obj_property>
@@ -185,8 +181,8 @@
       <obj_property name="ObjectShortName">gt0_error_count_i[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_data_count" type="array">
-      <obj_property name="ElementShortName">gt0_data_count[9:0]</obj_property>
-      <obj_property name="ObjectShortName">gt0_data_count[9:0]</obj_property>
+      <obj_property name="ElementShortName">gt0_data_count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_data_count[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/soft_reset_i" type="logic">
       <obj_property name="ElementShortName">soft_reset_i</obj_property>
@@ -479,10 +475,6 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxcharisk_i" type="array">
       <obj_property name="ElementShortName">gt0_rxcharisk_i[1:0]</obj_property>
       <obj_property name="ObjectShortName">gt0_rxcharisk_i[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_i" type="logic">
-      <obj_property name="ElementShortName">gt0_rxresetdone_i</obj_property>
-      <obj_property name="ObjectShortName">gt0_rxresetdone_i</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txpostcursor_i" type="array">
       <obj_property name="ElementShortName">gt0_txpostcursor_i[4:0]</obj_property>
@@ -919,10 +911,6 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_system_reset_c" type="logic">
       <obj_property name="ElementShortName">gt0_tx_system_reset_c</obj_property>
       <obj_property name="ObjectShortName">gt0_tx_system_reset_c</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_system_reset_c" type="logic">
-      <obj_property name="ElementShortName">gt0_rx_system_reset_c</obj_property>
-      <obj_property name="ObjectShortName">gt0_rx_system_reset_c</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_system_reset_c" type="logic">
       <obj_property name="ElementShortName">gt1_tx_system_reset_c</obj_property>
@@ -1728,10 +1716,6 @@
       <obj_property name="ElementShortName">tied_to_vcc_i</obj_property>
       <obj_property name="ObjectShortName">tied_to_vcc_i</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/sm_link" type="logic">
-      <obj_property name="ElementShortName">sm_link</obj_property>
-      <obj_property name="ObjectShortName">sm_link</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_error" type="logic">
       <obj_property name="ElementShortName">prbs_error</obj_property>
       <obj_property name="ObjectShortName">prbs_error</obj_property>
@@ -1741,8 +1725,8 @@
       <obj_property name="ObjectShortName">data_valid_reg</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count_r" type="array">
-      <obj_property name="ElementShortName">data_count_r[9:0]</obj_property>
-      <obj_property name="ObjectShortName">data_count_r[9:0]</obj_property>
+      <obj_property name="ElementShortName">data_count_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count_r[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RX_DATA_WIDTH" type="array">
       <obj_property name="ElementShortName">RX_DATA_WIDTH[31:0]</obj_property>
@@ -1767,14 +1751,6 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/START_OF_PACKET_CHAR" type="array">
       <obj_property name="ElementShortName">START_OF_PACKET_CHAR[15:0]</obj_property>
       <obj_property name="ObjectShortName">START_OF_PACKET_CHAR[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ST_LINK_DOWN" type="logic">
-      <obj_property name="ElementShortName">ST_LINK_DOWN</obj_property>
-      <obj_property name="ObjectShortName">ST_LINK_DOWN</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ST_LINK_UP" type="logic">
-      <obj_property name="ElementShortName">ST_LINK_UP</obj_property>
-      <obj_property name="ObjectShortName">ST_LINK_UP</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_chk_inst_1/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>

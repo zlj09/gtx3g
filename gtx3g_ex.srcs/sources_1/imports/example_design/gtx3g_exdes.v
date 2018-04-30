@@ -96,8 +96,9 @@ module gtx3g_exdes #
     output      gt0_txusrclk_i,
 
     //output the error statistic data
-    output wire [7:0]   gt0_error_count_i,
-    output wire [9:0]   gt0_data_count
+    output wire [31:0]   gt0_error_count_i,
+    output wire [31:0]   gt0_data_count_i,
+    output wire          gt0_test_over_i
 );
 
     wire soft_reset_i;
@@ -427,7 +428,7 @@ module gtx3g_exdes #
     
     wire            gt0_block_sync_i;
     wire            gt0_track_data_i;
-    wire    [7:0]   gt0_error_count_i;
+    wire    [31:0]   gt0_error_count_i;
     wire            gt0_frame_check_reset_i;
     wire            gt0_inc_in_i;
     wire            gt0_inc_out_i;
@@ -443,7 +444,7 @@ module gtx3g_exdes #
     
     wire            gt1_block_sync_i;
     wire            gt1_track_data_i;
-    wire    [7:0]   gt1_error_count_i;
+    wire    [31:0]   gt1_error_count_i;
     wire            gt1_frame_check_reset_i;
     wire            gt1_inc_in_i;
     wire            gt1_inc_out_i;
@@ -585,7 +586,7 @@ module gtx3g_exdes #
     (
         .soft_reset_tx_in               (soft_reset_i),
         .soft_reset_rx_in               (soft_reset_i),
-        .dont_reset_on_data_error_in    (tied_to_ground_i),
+        .dont_reset_on_data_error_in    (tied_to_vcc_i), //tied_to_ground_i), //Modified by lingjun, don't reset on data error in order to research BERT
     .q0_clk1_gtrefclk_pad_n_in(Q0_CLK1_GTREFCLK_PAD_N_IN),
     .q0_clk1_gtrefclk_pad_p_in(Q0_CLK1_GTREFCLK_PAD_P_IN),
         .gt0_tx_fsm_reset_done_out      (gt0_txfsmresetdone_i),
@@ -1027,7 +1028,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .ERROR_COUNT_OUT                (gt0_error_count_i),
         .TRACK_DATA_OUT                 (gt0_track_data_i),
 
-        .data_count                     (gt0_data_count)
+        //Modified by lingjun, for data statistics
+        .DATA_COUNT_OUT                 (gt0_data_count_i),
+        .TEST_OVER_OUT                  (gt0_test_over_i)
     );
 
 
@@ -1066,7 +1069,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .ERROR_COUNT_OUT                (gt1_error_count_i),
         .TRACK_DATA_OUT                 (gt1_track_data_i),
 
-        .data_count                     ()
+        //Modified by lingjun, for data statistics
+        .DATA_COUNT_OUT                 (gt0_data_count_i),
+        .TEST_OVER_OUT                  (gt0_test_over_i)
     );
 
 
@@ -1098,7 +1103,7 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 //------------ optional Ports assignments --------------
 assign  gt0_rxprbscntreset_i                 =  tied_to_ground_i;
 assign  gt0_rxprbssel_i                      =  0;
-assign  gt0_loopback_i                       =  3'b010;
+assign  gt0_loopback_i                       =  3'b010; //Modified by lingjun, use the loopback mode for BERT
  
 assign  gt0_txdiffctrl_i                     =  0;
 assign  gt0_rxbufreset_i                     =  tied_to_ground_i;
@@ -1119,7 +1124,7 @@ assign  gt0_txprbsforceerr_i                 =  tied_to_ground_i;
 assign  gt0_txprbssel_i                      =  0;
 assign  gt1_rxprbscntreset_i                 =  tied_to_ground_i;
 assign  gt1_rxprbssel_i                      =  0;
-assign  gt1_loopback_i                       =  3'b010;
+assign  gt1_loopback_i                       =  3'b010; ////Modified by lingjun, use the loopback mode for BERT
  
 assign  gt1_txdiffctrl_i                     =  0;
 assign  gt1_rxbufreset_i                     =  tied_to_ground_i;

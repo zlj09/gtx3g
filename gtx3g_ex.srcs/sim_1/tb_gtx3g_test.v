@@ -7,9 +7,7 @@ module tb_gtx3g_test(
     output uart_z7_out,
     output track_data_i,
     output test_succeeded,
-    output clk_refdiv,
-    output [7:0] gt0_error_count_i,
-    output [9:0] gt0_data_count
+    output clk_refdiv
 );
 
 //*************************Parameter Declarations******************************
@@ -53,9 +51,7 @@ module tb_gtx3g_test(
 		.uart_z7_out(uart_z7_out),
 		.track_data_i(track_data_i),
 		.test_succeeded(test_succeeded),
-        .clk_refdiv(clk_refdiv),
-        .gt0_error_count_i(gt0_error_count_i),
-        .gt0_data_count(gt0_data_count)
+        .clk_refdiv(clk_refdiv)
     );
 
 endmodule

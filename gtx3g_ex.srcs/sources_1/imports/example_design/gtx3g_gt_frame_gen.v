@@ -176,5 +176,31 @@ reg     [79:0]  tx_data_ram_r;
         if(system_reset_r2) TXCTRL_OUT <= `DLY 8'h0; 
         else             TXCTRL_OUT <= `DLY (k_char)? (8'h01) : (8'h00);
 
+
+    localparam DATA_MAX_CNT = 32'h0000ffff;
+
+    reg [31 : 0] data_gen_cnt;
+    reg err_insrt;
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2) begin
+            data_gen_cnt <= 32'b0;
+            err_insrt <= 1'b0;
+        end
+        else begin
+            if (data_gen_cnt < DATA_MAX_CNT)
+                data_gen_cnt <= data_gen_cnt + 1'b1;
+            else
+                data_gen_cnt <= 32'b0;
+
+            case(data_gen_cnt)
+            //32'h01000000, 32'h57f349a8, 32'h9d3e05f7, 32'hda96f442:
+            32'h00000100, 32'h000049a8, 32'h000095f7, 32'h0000e442:
+                err_insrt <= 1'b1;
+            default:
+                err_insrt <= 1'b0;
+            endcase
+        end
+
 endmodule 
 
