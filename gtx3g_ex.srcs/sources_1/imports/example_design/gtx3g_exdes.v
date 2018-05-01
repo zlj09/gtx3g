@@ -93,7 +93,7 @@ module gtx3g_exdes #
 
     //output the buffered reference clock
     output wire q0_clk1_refclk_i,
-    output      gt0_txusrclk_i,
+    output      gt0_txusrclk2_i,
 
     //output the error statistic data
     output wire [31:0]   gt0_prbs_error_count_i,
@@ -1076,7 +1076,8 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         //Modified by lingjun, for data statistics
         .DATA_COUNT_OUT                 (),
         .PRBS_ERROR_COUNT_OUT           (),
-        .TEST_OVER_OUT                  ()
+        .TEST_OVER_OUT                  (),
+        .PRBS_ERROR_OUT                 ()
     );
 
 

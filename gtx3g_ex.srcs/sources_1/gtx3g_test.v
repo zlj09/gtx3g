@@ -77,7 +77,7 @@ wire    [1:0]   txp_out_i;
     )
     rst_generator_inst_0
     (
-        .clk(sysclk_in),
+        .clk(refclk_out),
         .rst(sysrst)
     );
     
@@ -96,7 +96,7 @@ wire    [1:0]   txp_out_i;
     reg [15:0] gt0_error_data_count_regs [3:0];
     reg [1:0] error_data_cnt;
  
-    always @(posedge sysclk_in)
+    always @(posedge refclk_out)
         if (sysrst) begin
             trans_timer <= 32'd0;
             test_over <= 1'b0;
@@ -140,7 +140,7 @@ wire    [1:0]   txp_out_i;
     reg [7:0] string_reg [0:31];
     reg [3:0] msg_status;
 
-    always @(posedge sysclk_in or negedge sysrst)
+    always @(posedge refclk_out or negedge sysrst)
       if (sysrst) begin
         wvalid <= 1'b0;
         char <= 8'h0;
@@ -221,7 +221,7 @@ wire    [1:0]   txp_out_i;
       .BAUD_RATE(32'd9600),
       .BUF_LEN(8'd16)
     )simple_uart_inst_1(
-      .clk_100m(sysclk_in),
+      .clk_150m(refclk_out),
       .rst(sysrst),
       .wvalid(wvalid),
       .char(char),
@@ -247,7 +247,7 @@ wire    [1:0]   txp_out_i;
         .TXN_OUT                             (txn_out_i),
         .TXP_OUT                             (txp_out_i),
         .q0_clk1_refclk_i                    (refclk_direct_out),
-        .gt0_txusrclk_i                      (refclk_out),
+        .gt0_txusrclk2_i                     (refclk_out),
 
         .gt0_prbs_error_count_i              (gt0_prbs_error_count_i),
         .gt0_data_count_i                    (gt0_data_count_i),

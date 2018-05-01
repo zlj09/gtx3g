@@ -2,7 +2,7 @@ module simple_uart #(
 	parameter BAUD_RATE = 32'd9600,
 	parameter BUF_LEN	= 8'd16
 )(
-	input clk_100m,
+	input clk_150m,
 	input rst,
 	input wvalid,
 	input [7:0] char,
@@ -11,30 +11,30 @@ module simple_uart #(
 	output busy,
 	output overflow
 );
-	parameter CNT_NUM = 32'd100_000_000 / BAUD_RATE / 2;
+	parameter CNT_NUM = 32'd150_000_000 / BAUD_RATE / 2;
 
 	reg clk_br, busy_reg, overflow_reg, txd_reg, trans_end;
-	reg [31:0] cnt_clk_100m;
+	reg [31:0] cnt_clk_150m;
 	reg [3:0] cnt_bit;
 	reg [7:0] cnt_char, num_char;
 	reg [7:0] char_buf [BUF_LEN:0];
 
-	always @(posedge clk_100m or negedge rst)
+	always @(posedge clk_150m or negedge rst)
 		if (rst) begin
 			clk_br <= 1'b0;
-			cnt_clk_100m <= 32'd0;
+			cnt_clk_150m <= 32'd0;
 		end
 		else
-			if (cnt_clk_100m < CNT_NUM) begin
+			if (cnt_clk_150m < CNT_NUM) begin
 				clk_br <= clk_br;
-				cnt_clk_100m <= cnt_clk_100m + 1'b1;
+				cnt_clk_150m <= cnt_clk_150m + 1'b1;
 			end
 			else begin
 				clk_br <= ~clk_br;
-				cnt_clk_100m <= 32'd0;
+				cnt_clk_150m <= 32'd0;
 			end
 
-	always @(posedge clk_100m or negedge rst)
+	always @(posedge clk_150m or negedge rst)
 		if (rst) begin
 			busy_reg <= 1'b0;
 			overflow_reg <= 1'b0;
