@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Mon Apr 30 21:05:15 2018
+| Date             : Tue May  1 00:30:32 2018
 | Host             : idea-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file gtx3g_test_power_routed.rpt -pb gtx3g_test_power_summary_routed.pb -rpx gtx3g_test_power_routed.rpx
 | Design           : gtx3g_test
@@ -49,13 +49,13 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.012 |       10 |       --- |             --- |
-| Slice Logic             |     0.004 |     3094 |       --- |             --- |
+| Clocks                  |     0.011 |       10 |       --- |             --- |
+| Slice Logic             |     0.004 |     3090 |       --- |             --- |
 |   LUT as Logic          |     0.003 |      939 |    277400 |            0.34 |
 |   Register              |    <0.001 |     1635 |    554800 |            0.29 |
 |   CARRY4                |    <0.001 |      125 |     69350 |            0.18 |
 |   LUT as Shift Register |    <0.001 |       16 |    108200 |            0.01 |
-|   F7/F8 Muxes           |    <0.001 |       44 |    277400 |            0.02 |
+|   F7/F8 Muxes           |    <0.001 |       42 |    277400 |            0.02 |
 |   Others                |     0.000 |      112 |       --- |             --- |
 | Signals                 |     0.004 |     2357 |       --- |             --- |
 | I/O                     |     0.021 |        6 |       362 |            1.66 |
@@ -165,7 +165,7 @@ Table of Contents
 |       gt_usrclk_source                   |    <0.001 |
 |       gtx3g_init_i                       |     0.262 |
 |         inst                             |     0.262 |
-|           gt0_rxresetfsm_i               |     0.002 |
+|           gt0_rxresetfsm_i               |     0.001 |
 |             sync_RXRESETDONE             |    <0.001 |
 |             sync_data_valid              |    <0.001 |
 |             sync_mmcm_lock_reclocked     |    <0.001 |
@@ -187,7 +187,7 @@ Table of Contents
 |             sync_run_phase_alignment_int |    <0.001 |
 |             sync_time_out_wait_bypass    |    <0.001 |
 |             sync_tx_fsm_reset_done_int   |    <0.001 |
-|           gt1_rxresetfsm_i               |     0.001 |
+|           gt1_rxresetfsm_i               |     0.002 |
 |             sync_RXRESETDONE             |    <0.001 |
 |             sync_data_valid              |    <0.001 |
 |             sync_mmcm_lock_reclocked     |    <0.001 |
