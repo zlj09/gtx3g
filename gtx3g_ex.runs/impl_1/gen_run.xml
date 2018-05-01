@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525162977">
+<GenRun Id="impl_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525171781">
   <File Type="PWROPT-DRC" Name="gtx3g_test_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="gtx3g_test_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="gtx3g_test_timing_summary_init.rpt"/>

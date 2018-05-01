@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Tue May  1 16:27:50 2018
+| Date             : Tue May  1 19:01:41 2018
 | Host             : idea-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file gtx3g_test_power_routed.rpt -pb gtx3g_test_power_summary_routed.pb -rpx gtx3g_test_power_routed.rpx
 | Design           : gtx3g_test
@@ -50,14 +50,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.012 |       10 |       --- |             --- |
-| Slice Logic             |     0.004 |     3228 |       --- |             --- |
-|   LUT as Logic          |     0.004 |      915 |    277400 |            0.33 |
+| Slice Logic             |     0.004 |     3236 |       --- |             --- |
+|   LUT as Logic          |     0.004 |      924 |    277400 |            0.33 |
 |   Register              |    <0.001 |     1811 |    554800 |            0.33 |
 |   CARRY4                |    <0.001 |      123 |     69350 |            0.18 |
 |   F7/F8 Muxes           |    <0.001 |       66 |    277400 |            0.02 |
 |   LUT as Shift Register |    <0.001 |        8 |    108200 |           <0.01 |
 |   Others                |     0.000 |      110 |       --- |             --- |
-| Signals                 |     0.005 |     2515 |       --- |             --- |
+| Signals                 |     0.005 |     2522 |       --- |             --- |
 | I/O                     |     0.022 |        6 |       362 |            1.66 |
 | GTX                     |     0.256 |        2 |        16 |           12.50 |
 | Static Power            |     0.222 |          |           |                 |

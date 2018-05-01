@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date              : Tue May  1 16:27:53 2018
+| Date              : Tue May  1 19:01:44 2018
 | Host              : idea-PC running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file gtx3g_test_clock_utilization_routed.rpt
 | Design            : gtx3g_test
@@ -73,7 +73,7 @@ Table of Contents
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+---------------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL          | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                      | Net                       |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+---------------------------+
-| 0        | FDCE/Q          | None       | SLICE_X195Y26/AFF | X1Y0         |          14 |               1 |              |       | simple_uart_inst_1/clk_br_reg/Q | simple_uart_inst_1/clk_br |
+| 0        | FDCE/Q          | None       | SLICE_X190Y28/AFF | X1Y0         |          14 |               1 |              |       | simple_uart_inst_1/clk_br_reg/Q | simple_uart_inst_1/clk_br |
 +----------+-----------------+------------+-------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+---------------------------+
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -89,7 +89,7 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    2 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 1811 |  5100 |  693 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
+| X1Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    2 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 1811 |  5100 |  644 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
 | X1Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  5100 |    0 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
 | X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
