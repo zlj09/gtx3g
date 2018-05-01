@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="525591315334fs"></ZoomStartTime>
-      <ZoomEndTime time="535441315335fs"></ZoomEndTime>
-      <Cursor1Time time="532074000000fs"></Cursor1Time>
+      <ZoomStartTime time="346128021333fs"></ZoomStartTime>
+      <ZoomEndTime time="346198721334fs"></ZoomEndTime>
+      <Cursor1Time time="346170270000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="450" />
+   <WVObjectSize size="453" />
    <wvobject fp_name="/tb_gtx3g_test/refclk_p_in" type="logic">
       <obj_property name="ElementShortName">refclk_p_in</obj_property>
       <obj_property name="ObjectShortName">refclk_p_in</obj_property>
@@ -80,9 +80,29 @@
       <obj_property name="ElementShortName">error_detected_c</obj_property>
       <obj_property name="ObjectShortName">error_detected_c</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/prbs_data" type="array">
+      <obj_property name="ElementShortName">prbs_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">prbs_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/data_gen_cnt" type="array">
+      <obj_property name="ElementShortName">data_gen_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_gen_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/err_insrt" type="logic">
+      <obj_property name="ElementShortName">err_insrt</obj_property>
+      <obj_property name="ObjectShortName">err_insrt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count_r" type="array">
+      <obj_property name="ElementShortName">data_count_r[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_count_r[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_error" type="logic">
+      <obj_property name="ElementShortName">prbs_error</obj_property>
+      <obj_property name="ObjectShortName">prbs_error</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_err_cnt" type="array">
-      <obj_property name="ElementShortName">prbs_err_cnt[15:0]</obj_property>
-      <obj_property name="ObjectShortName">prbs_err_cnt[15:0]</obj_property>
+      <obj_property name="ElementShortName">prbs_err_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prbs_err_cnt[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
       <obj_property name="ElementShortName">track_data_out_i</obj_property>
@@ -91,10 +111,6 @@
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ERROR_COUNT_OUT" type="array">
       <obj_property name="ElementShortName">ERROR_COUNT_OUT[31:0]</obj_property>
       <obj_property name="ObjectShortName">ERROR_COUNT_OUT[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_count_r" type="array">
-      <obj_property name="ElementShortName">data_count_r[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_count_r[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/refclk_n_in" type="logic">
       <obj_property name="ElementShortName">refclk_n_in</obj_property>
@@ -1488,10 +1504,6 @@
       <obj_property name="ElementShortName">system_reset_r2</obj_property>
       <obj_property name="ObjectShortName">system_reset_r2</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/prbs_data" type="array">
-      <obj_property name="ElementShortName">prbs_data[15:0]</obj_property>
-      <obj_property name="ObjectShortName">prbs_data[15:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/k_char" type="logic">
       <obj_property name="ElementShortName">k_char</obj_property>
       <obj_property name="ObjectShortName">k_char</obj_property>
@@ -1769,16 +1781,16 @@
       <obj_property name="ObjectShortName">prbs_error</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_chk_inst_1/prbs_err_cnt" type="array">
-      <obj_property name="ElementShortName">prbs_err_cnt[15:0]</obj_property>
-      <obj_property name="ObjectShortName">prbs_err_cnt[15:0]</obj_property>
+      <obj_property name="ElementShortName">prbs_err_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prbs_err_cnt[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_chk_inst_1/prbs_error_reg" type="logic">
       <obj_property name="ElementShortName">prbs_error_reg</obj_property>
       <obj_property name="ObjectShortName">prbs_error_reg</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_chk_inst_1/prbs_err_cnt_reg" type="array">
-      <obj_property name="ElementShortName">prbs_err_cnt_reg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">prbs_err_cnt_reg[15:0]</obj_property>
+      <obj_property name="ElementShortName">prbs_err_cnt_reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prbs_err_cnt_reg[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/prbs_chk_inst_1/data_init" type="logic">
       <obj_property name="ElementShortName">data_init</obj_property>

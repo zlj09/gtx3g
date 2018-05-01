@@ -3,7 +3,7 @@ module prbs_chk #
 	parameter PRBS_WIDTH = 16,
 	parameter PRBS_PATTERN = "PRBS7",
 	//parameter PRBS_INIT = 16'haaaa,
-	parameter ERR_CNT_WIDTH = 16,
+	parameter ERR_CNT_WIDTH = 32,
 	parameter BYTE_ALIGN_CHAR = 16'h02bc,
 	parameter CHAN_ALIGN_CHAR = 16'h077c,
 	parameter CLK_COR_CHAR = 16'h1d1c

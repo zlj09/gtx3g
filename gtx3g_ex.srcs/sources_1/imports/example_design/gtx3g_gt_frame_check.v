@@ -105,7 +105,9 @@ module gtx3g_GT_FRAME_CHECK #
 
     //Modified by lingjun, for data statistics
     output wire [31:0]   DATA_COUNT_OUT,
-    output wire          TEST_OVER_OUT
+    output wire [31:0]   PRBS_ERROR_COUNT_OUT,
+    output wire          TEST_OVER_OUT,
+    output wire          PRBS_ERROR_OUT
 );
 
 
@@ -361,8 +363,8 @@ wire            tied_to_vcc_i;
     //An error is detected when data read for the BRAM does not match the incoming data
     //assign  error_detected_c    =  track_data_r3 && (rx_data_r_track != bram_data_r); 
 
-    //Modified by Lingjun: an error is detected when the incoming data does not match the data PRBS checker expected
-    assign  error_detected_c    =  data_valid && prbs_error;     
+    //Modified by Lingjun: disable the normal error detection
+    assign  error_detected_c    =  1'b0;     
 
     //We register the error_detected signal for use with the error counter logic
     always @(posedge USER_CLK)
@@ -376,7 +378,7 @@ wire            tied_to_vcc_i;
     always @(posedge USER_CLK)
         if(system_reset_r2)
             error_count_r       <=  `DLY    32'd0;
-        else if(error_detected_r && !test_over_r)  //Modified by lingjun: count the errors before test is over
+        else if(error_detected_r)
             error_count_r       <=  `DLY    error_count_r + 1;    
     
     //Here we connect the lower 8 bits of the count (the MSbit is used only to check when the counter reaches
@@ -471,7 +473,7 @@ endgenerate
 
     //Modified by lingjun, use PRBS to check the incoming data
     //________________________________ PRBS Checker Logic ___________________________
-    wire [15 : 0] prbs_err_cnt;
+    wire [31 : 0] prbs_err_cnt;
     wire data_valid;
     wire prbs_error;
 
@@ -487,7 +489,7 @@ endgenerate
     prbs_chk #(
         .PRBS_WIDTH(16),
         .PRBS_PATTERN("PRBS7"),
-        .ERR_CNT_WIDTH(16),
+        .ERR_CNT_WIDTH(32),
         .BYTE_ALIGN_CHAR(16'h02bc),
         .CHAN_ALIGN_CHAR(16'h077c),
         .CLK_COR_CHAR(16'h1d1c)
@@ -531,6 +533,8 @@ endgenerate
 
     assign DATA_COUNT_OUT = data_count_r;    
     assign TEST_OVER_OUT = test_over_r;
+    assign PRBS_ERROR_COUNT_OUT = prbs_err_cnt;
+    assign PRBS_ERROR_OUT = prbs_error;
     
     
 endmodule           

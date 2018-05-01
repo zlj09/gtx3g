@@ -135,5 +135,4 @@ set_property IOSTANDARD LVCMOS25 [get_ports clk_refdiv]
 set_property PACKAGE_PIN AD21 [get_ports clk_refdiv]
 
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets sysclk_in_IBUF]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/Q0_CLK1_GTREFCLK_OUT]
-
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/q0_clk1_refclk_i]

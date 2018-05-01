@@ -96,9 +96,11 @@ module gtx3g_exdes #
     output      gt0_txusrclk_i,
 
     //output the error statistic data
-    output wire [31:0]   gt0_error_count_i,
+    output wire [31:0]   gt0_prbs_error_count_i,
     output wire [31:0]   gt0_data_count_i,
-    output wire          gt0_test_over_i
+    output wire [15:0]   gt0_rxdata_i,
+    output wire          gt0_test_over_i,
+    output wire          gt0_prbs_error_i
 );
 
     wire soft_reset_i;
@@ -1030,7 +1032,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 
         //Modified by lingjun, for data statistics
         .DATA_COUNT_OUT                 (gt0_data_count_i),
-        .TEST_OVER_OUT                  (gt0_test_over_i)
+        .PRBS_ERROR_COUNT_OUT           (gt0_prbs_error_count_i),
+        .TEST_OVER_OUT                  (gt0_test_over_i),
+        .PRBS_ERROR_OUT                 (gt0_prbs_error_i)
     );
 
 
@@ -1071,6 +1075,7 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 
         //Modified by lingjun, for data statistics
         .DATA_COUNT_OUT                 (),
+        .PRBS_ERROR_COUNT_OUT           (),
         .TEST_OVER_OUT                  ()
     );
 

@@ -42,9 +42,12 @@ wire            drp_clk;
 
 wire            refclk_out;
 
-wire    [31:0]   gt0_error_count_i;
+wire    [31:0]   gt0_prbs_error_count_i;
 wire    [31:0]   gt0_data_count_i;
+wire    [15:0]   gt0_rxdata_i;
+wire             gt0_prbs_error_i;
 wire             gt0_test_over_i;
+
     
     //-------------------------- Example Module Connections -------------------------
 wire            track_data_i;
@@ -88,27 +91,37 @@ wire    [1:0]   txp_out_i;
     
     //----------------------------- Track Data ---------------------------------
 
-    reg [31:0] gt0_data_count_reg, gt0_error_count_reg;
-
+    reg [31:0] gt0_data_count_reg, gt0_prbs_error_count_reg;
+    reg [15:0] gt0_error_rxdata_regs [3:0];
+    reg [15:0] gt0_error_data_count_regs [3:0];
+    reg [1:0] error_data_cnt;
  
     always @(posedge sysclk_in)
         if (sysrst) begin
             trans_timer <= 32'd0;
-            test_succeeded <= 1'b0;
-            test_failed <= 1'b0;
             test_over <= 1'b0;
+            gt0_data_count_reg <= 32'b0;
+            gt0_prbs_error_count_reg <= 32'b0;
+            error_data_cnt <= 2'd0;
+            gt0_error_rxdata_regs[0] <= 16'b0;
+            gt0_error_rxdata_regs[1] <= 16'b0;
+            gt0_error_rxdata_regs[2] <= 16'b0;
+            gt0_error_rxdata_regs[3] <= 16'b0;
         end
         else begin
             if (!test_over)
                 trans_timer <= trans_timer + 1'b1;
             if (gt0_test_over_i == 1'b1) begin
               test_over <= 1'b1;
-              if (trans_timer <= 32'd77000)
-                test_succeeded <= 1'b1;
-              else
-                test_failed <= 1'b1;
               gt0_data_count_reg <= gt0_data_count_i;
-              gt0_error_count_reg <= gt0_error_count_i;
+              gt0_prbs_error_count_reg <= gt0_prbs_error_count_i;
+            end
+
+            if (gt0_prbs_error_i) begin
+              gt0_error_rxdata_regs[error_data_cnt] <= gt0_rxdata_i;
+              gt0_error_data_count_regs[error_data_cnt] <= gt0_data_count_i[15:0];
+              if (error_data_cnt < 3'd3)
+                error_data_cnt <= error_data_cnt + 1'b1;
             end
         end
 
@@ -144,15 +157,36 @@ wire    [1:0]   txp_out_i;
           string_reg[1] <= trans_timer[15:8];
           string_reg[2] <= trans_timer[23:16];
           string_reg[3] <= trans_timer[31:24];
-          string_reg[4] <= gt0_error_count_reg[7:0];
-          string_reg[5] <= gt0_error_count_reg[15:8];
-          string_reg[6] <= gt0_error_count_reg[23:16];
-          string_reg[7] <= gt0_error_count_reg[31:24];
-          string_reg[8] <= gt0_data_count_reg[7:0];
-          string_reg[9] <= gt0_data_count_reg[15:8];
-          string_reg[10] <= gt0_data_count_reg[23:16];
-          string_reg[11] <= gt0_data_count_reg[31:24];
-          cnt_char <= 8'd12;
+
+          string_reg[4] <= gt0_error_rxdata_regs[3][7:0];
+          string_reg[5] <= gt0_error_rxdata_regs[3][15:8];
+          string_reg[6] <= gt0_error_data_count_regs[3][7:0];
+          string_reg[7] <= gt0_error_data_count_regs[3][15:8];
+          string_reg[8] <= gt0_error_rxdata_regs[2][7:0];
+          string_reg[9] <= gt0_error_rxdata_regs[2][15:8];
+          string_reg[10] <= gt0_error_data_count_regs[2][7:0];
+          string_reg[11] <= gt0_error_data_count_regs[2][15:8];
+          string_reg[12] <= gt0_error_rxdata_regs[1][7:0];
+          string_reg[13] <= gt0_error_rxdata_regs[1][15:8];
+          string_reg[14] <= gt0_error_data_count_regs[1][7:0];
+          string_reg[15] <= gt0_error_data_count_regs[1][15:8];
+          string_reg[16] <= gt0_error_rxdata_regs[0][7:0];
+          string_reg[17] <= gt0_error_rxdata_regs[0][15:8];
+          string_reg[18] <= gt0_error_data_count_regs[0][7:0];
+          string_reg[19] <= gt0_error_data_count_regs[0][15:8];
+
+
+          string_reg[20] <= gt0_prbs_error_count_reg[7:0];
+          string_reg[21] <= gt0_prbs_error_count_reg[15:8];
+          string_reg[22] <= gt0_prbs_error_count_reg[23:16];
+          string_reg[23] <= gt0_prbs_error_count_reg[31:24];
+
+          string_reg[24] <= gt0_data_count_reg[7:0];
+          string_reg[25] <= gt0_data_count_reg[15:8];
+          string_reg[26] <= gt0_data_count_reg[23:16];
+          string_reg[27] <= gt0_data_count_reg[31:24];
+
+          cnt_char <= 8'd28;
           data_rdy <= 1'b1;
         end
         
@@ -215,9 +249,11 @@ wire    [1:0]   txp_out_i;
         .q0_clk1_refclk_i                    (refclk_direct_out),
         .gt0_txusrclk_i                      (refclk_out),
 
-        .gt0_error_count_i                   (gt0_error_count_i),
+        .gt0_prbs_error_count_i              (gt0_prbs_error_count_i),
         .gt0_data_count_i                    (gt0_data_count_i),
-        .gt0_test_over_i                     (gt0_test_over_i)
+        .gt0_test_over_i                     (gt0_test_over_i),
+        .gt0_prbs_error_i                    (gt0_prbs_error_i),
+        .gt0_rxdata_i                        (gt0_rxdata_i)
     );
 
 endmodule
