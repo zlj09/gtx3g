@@ -154,7 +154,6 @@ reg     [79:0]  tx_data_ram_r;
     reg pattern_rst_reg;
     reg encoder_rst_reg;
     reg error_insertion_rst_reg;
-    reg error_insert_mask_reg;
     reg pattern_pause_reg;
     reg [31 : 0] word_cnt;
     reg [31 : 0] bit_pointer;
@@ -200,7 +199,7 @@ reg     [79:0]  tx_data_ram_r;
                 TX_DATA_OUT <= 16'h02bc;
                 TXCTRL_OUT <= 2'b01;
                 data_word_valid <= 1'b0;
-                pattern_pause_reg <= 1'b1;
+                pattern_pause_reg <= 1'b0;
                 encoder_rst_reg <= 1'b1;
             end
             8'd1: begin
@@ -211,40 +210,47 @@ reg     [79:0]  tx_data_ram_r;
                 pattern_pause_reg <= 1'b0;
                 encoder_rst_reg <= 1'b0;
             end
-            8'd17: begin
+            8'd16: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= (error_insert)? (pattern_word) : (pattern_word ^ bit_pointer);
+                TX_DATA_OUT <= (error_insert)? (pattern_word ^ bit_pointer) : (pattern_word);
                 TXCTRL_OUT <= 2'b00;
                 data_word_valid <= 1'b1;
-                pattern_pause <= 1'b1;
+                pattern_pause_reg <= 1'b1;
+            end
+            8'd17: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+                TX_DATA_OUT <= (error_insert)? (pattern_word ^ bit_pointer) : (pattern_word);
+                TXCTRL_OUT <= 2'b00;
+                data_word_valid <= 1'b1;
+                pattern_pause_reg <= 1'b1;
             end
             8'd18: begin
                 block_word_cnt <= (ENCODER_EN) ? (block_word_cnt + 1'b1) : (8'd0);
                 TX_DATA_OUT <= 16'h1d1c;
                 TXCTRL_OUT <= 2'b01;
                 data_word_valid <= 1'b0;
-                pattern_pause <= 1'b1;
+                pattern_pause_reg <= 1'b1;
             end
             8'd19: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
                 TX_DATA_OUT <= hor_parity_word;
                 TXCTRL_OUT <= 2'b00;
                 data_word_valid <= 1'b0;
-                pattern_pause <= 1'b1;
+                pattern_pause_reg <= 1'b1;
             end
             8'd20: begin
                 block_word_cnt <= 8'd0;
                 TX_DATA_OUT <= ver_parity_word;
                 TXCTRL_OUT <= 2'b00;
                 data_word_valid <= 1'b0;
-                pattern_pause <= 1'b1;
+                pattern_pause_reg <= 1'b1;
             end
             default: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= (error_insert)? (pattern_word) : (pattern_word ^ bit_pointer);
+                TX_DATA_OUT <= (error_insert)? (pattern_word ^ bit_pointer) : (pattern_word);
                 TXCTRL_OUT <= 2'b00;
                 data_word_valid <= 1'b1;
-                pattern_pause <= 1'b0;
+                pattern_pause_reg <= 1'b0;
             end
             endcase
         end
@@ -252,10 +258,10 @@ reg     [79:0]  tx_data_ram_r;
 
     pattern_gen pattern_gen_inst_1(
         .clk(USER_CLK),
-        .pattern_rst(pattern_rst),
+        .pattern_rst(pattern_rst_reg),
         .pattern_mode(PATTERN_MODE),
-        .pattern_pause(pattern_pause),
-        .pattern_word(pattern_word),
+        .pattern_pause(pattern_pause_reg),
+        .pattern_word(pattern_word)
     );
     
     parity_encoder parity_encoder_inst_1(
@@ -289,8 +295,8 @@ module parity_encoder(
     always @(posedge clk)
         if (encoder_rst) begin
             parity_word_cnt <= 4'd0;
-            hor_parity_word_reg <= 32'h0;
-            ver_parity_word_reg <= 32'h0;
+            hor_parity_word_reg <= 16'h0;
+            ver_parity_word_reg <= 16'h0;
         end
         else
             if (data_word_valid) begin
@@ -306,6 +312,7 @@ endmodule
 module error_insertion(
     input clk,
     input error_insertion_rst,
+    input error_insert_mask,
     output error_insert
 );
     reg error_insert_reg;

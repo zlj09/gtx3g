@@ -16,7 +16,7 @@ module tb_frame_gen(
 	initial begin
 		USER_CLK <= 1'b0;
 		SYSTEM_RESET <= 1'b1;
-		TEST_START <= 1'b1;
+		TEST_START <= 1'b0;
 		PATTERN_MODE <= 3'd1;
 		ERROR_INSERT_MASK <= 32'b0;
 		ENCODER_EN <= 1'b0;
@@ -24,10 +24,10 @@ module tb_frame_gen(
 		#100
 		SYSTEM_RESET <= 1'b0;
 		#100
-		TEST_START <= 1'b0;
+		TEST_START <= 1'b1;
 
 		#2000
-		TEST_START <= 1'b1;
+		TEST_START <= 1'b0;
 		PATTERN_MODE <= 3'd2;
 		ENCODER_EN <= 1'b1;
 

@@ -12,7 +12,7 @@ module pattern_gen(
 	wire [15 : 0] prbs15_word;
 
 	always @(posedge clk)
-		if (rst)
+		if (pattern_rst)
 			pattern_reg <= 16'b0;
 		else
 			case (pattern_mode)
@@ -121,7 +121,7 @@ module prbs15_gen(
 			if (pause)
 				prbs15_reg <= prbs15_reg;
 			else
-				prbs15_reg <= {prbs15_reg[14 : 0], prbs15_reg[15] ^ prbs15_reg[14]};
+				prbs15_reg <= {prbs15_reg[14 : 0], prbs15_reg[14] ^ prbs15_reg[13]};
 
 	assign prbs15_word = prbs15_reg;
 endmodule
