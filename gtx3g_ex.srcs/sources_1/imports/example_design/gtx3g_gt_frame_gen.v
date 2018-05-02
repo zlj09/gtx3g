@@ -73,19 +73,24 @@ module gtx3g_GT_FRAME_GEN #
 )
 (
    // User Interface
-output reg  [79:0]  TX_DATA_OUT,
-output reg  [7:0]   TXCTRL_OUT,
+output reg  [15:0]  TX_DATA_OUT,
+output reg  [1:0]   TXCTRL_OUT,
 
       // System Interface
 input  wire         USER_CLK,
-input  wire         SYSTEM_RESET 
+input  wire         SYSTEM_RESET,
+
+input  wire         TEST_START,
+input  wire [2:0]   PATTERN_MODE,
+input  wire [31:0]  ERROR_INSERT_MASK,
+input  wire         ENCODER_EN
 ); 
 
 
 //********************************* Wire Declarations********************************* 
 
 wire            tied_to_ground_i;
-wire             tied_to_vcc_i;
+wire            tied_to_vcc_i;
 wire    [31:0]  tied_to_ground_vec_i;
 wire    [63:0]  tx_data_bram_i;
 wire    [7:0]   tx_ctrl_i;
@@ -146,63 +151,172 @@ reg     [79:0]  tx_data_ram_r;
            tx_data_ram_r <= `DLY rom[read_counter_i];*/
 
     //___________________ Use PRBS Generator to generate the test pattern_________________
-    wire [15 : 0] prbs_data;
-    wire k_char;
+    reg pattern_rst_reg;
+    reg encoder_rst_reg;
+    reg error_insertion_rst_reg;
+    reg error_insert_mask_reg;
+    reg pattern_pause_reg;
+    reg [31 : 0] word_cnt;
+    reg [31 : 0] bit_pointer;
+    reg [7 : 0] block_word_cnt;
+    reg data_word_valid;
 
-    // Assign TX_DATA_OUT to PRBS generator output
-    always @(posedge USER_CLK)
-        if(system_reset_r2) TX_DATA_OUT <= `DLY 80'h0000000000; 
-        else             TX_DATA_OUT <= `DLY {48'b0, prbs_data, 16'b0};  
-
-    // Assign TXCTRL_OUT to PRBS generator output
-    always @(posedge USER_CLK)
-        if(system_reset_r2) TXCTRL_OUT <= `DLY 8'h0; 
-        else             TXCTRL_OUT <= `DLY (k_char)? (8'h01) : (8'h00);
-
-
-    localparam DATA_MAX_CNT = 32'h0000ffff;
-
-    reg [31 : 0] data_gen_cnt;
-    reg err_insrt;
+    wire error_insert;
+    wire [15 : 0] pattern_word;
+    wire [15 : 0] hor_parity_word;
+    wire [15 : 0] ver_parity_word;
 
     always @(posedge USER_CLK)
-        if (system_reset_r2) begin
-            data_gen_cnt <= 32'b0;
-            err_insrt <= 1'b0;
+        if (system_reset_r2 || !TEST_START) begin
+            word_cnt <= 32'b0;
+            bit_pointer <= 32'b1;
+        end
+        else
+            if (data_word_valid) begin
+                word_cnt <= word_cnt + 1'b1;
+                if (bit_pointer[31])
+                    bit_pointer <= 32'b1;
+                else
+                    bit_pointer <= bit_pointer << 1;
+            end
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2 || !TEST_START) begin
+            TX_DATA_OUT <= 16'b0;
+            TXCTRL_OUT <= 2'b0;
+            encoder_rst_reg <= 1'b1;
+            error_insertion_rst_reg <= 1'b1;
+            pattern_rst_reg <= 1'b1;
+            pattern_pause_reg <= 1'b1;
+            block_word_cnt <= 8'b0;
+            data_word_valid <= 1'b0;
         end
         else begin
-            if (data_gen_cnt < DATA_MAX_CNT)
-                data_gen_cnt <= data_gen_cnt + 1'b1;
-            else
-                data_gen_cnt <= data_gen_cnt;
-
-            case(data_gen_cnt)
-            //32'h01000000, 32'h57f349a8, 32'h9d3e05f7, 32'hda96f442:
-            //32'h0000498a, 32'h000085ea:
-            //32'h00000101, 32'h000049a8, 32'h000095f7, 32'h0000e44a:
-            32'h000095f7, 32'h0000e44a, 32'h0000f129, 32'h0000f23c, 32'h0000f45d, 32'h0000f67e:
-                err_insrt <= 1'b1;
-            default:
-                err_insrt <= 1'b0;
+            pattern_rst_reg <= 1'b0;
+            error_insertion_rst_reg <= 1'b0;
+            case (block_word_cnt)
+            8'd0: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+                TX_DATA_OUT <= 16'h02bc;
+                TXCTRL_OUT <= 2'b01;
+                data_word_valid <= 1'b0;
+                pattern_pause_reg <= 1'b1;
+                encoder_rst_reg <= 1'b1;
+            end
+            8'd1: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+                TX_DATA_OUT <= 16'h03fc;
+                TXCTRL_OUT <= 2'b01;
+                data_word_valid <= 1'b0;
+                pattern_pause_reg <= 1'b0;
+                encoder_rst_reg <= 1'b0;
+            end
+            8'd17: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+                TX_DATA_OUT <= (error_insert)? (pattern_word) : (pattern_word ^ bit_pointer);
+                TXCTRL_OUT <= 2'b00;
+                data_word_valid <= 1'b1;
+                pattern_pause <= 1'b1;
+            end
+            8'd18: begin
+                block_word_cnt <= (ENCODER_EN) ? (block_word_cnt + 1'b1) : (8'd0);
+                TX_DATA_OUT <= 16'h1d1c;
+                TXCTRL_OUT <= 2'b01;
+                data_word_valid <= 1'b0;
+                pattern_pause <= 1'b1;
+            end
+            8'd19: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+                TX_DATA_OUT <= hor_parity_word;
+                TXCTRL_OUT <= 2'b00;
+                data_word_valid <= 1'b0;
+                pattern_pause <= 1'b1;
+            end
+            8'd20: begin
+                block_word_cnt <= 8'd0;
+                TX_DATA_OUT <= ver_parity_word;
+                TXCTRL_OUT <= 2'b00;
+                data_word_valid <= 1'b0;
+                pattern_pause <= 1'b1;
+            end
+            default: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+                TX_DATA_OUT <= (error_insert)? (pattern_word) : (pattern_word ^ bit_pointer);
+                TXCTRL_OUT <= 2'b00;
+                data_word_valid <= 1'b1;
+                pattern_pause <= 1'b0;
+            end
             endcase
         end
 
-    prbs_gen #(
-        .PRBS_WIDTH(16),
-        .PRBS_PATTERN("PRBS7"),
-        .PRBS_INIT(16'h0100),
-        .BYTE_ALIGN_CHAR(16'h02bc),
-        .CHAN_ALIGN_CHAR(16'h077c),
-        .CLK_COR_CHAR(16'h1d1c),
-        .ALIGN_PERIOD(16)
-    )prbs_gen_inst_1(
+
+    pattern_gen pattern_gen_inst_1(
         .clk(USER_CLK),
-        .rst(system_reset_r2),
-        .prbs_en(~system_reset_r2),
-        .err_insrt(err_insrt),
-        .prbs_data(prbs_data),
-        .k_char(k_char)
+        .pattern_rst(pattern_rst),
+        .pattern_mode(PATTERN_MODE),
+        .pattern_pause(pattern_pause),
+        .pattern_word(pattern_word),
+    );
+    
+    parity_encoder parity_encoder_inst_1(
+        .clk(USER_CLK),
+        .encoder_rst(encoder_rst_reg),
+        .data_word(TX_DATA_OUT),
+        .data_word_valid(data_word_valid),
+        .hor_parity_word(hor_parity_word),
+        .ver_parity_word(ver_parity_word)
+    );
+
+    error_insertion error_insertion_inst_1(
+        .clk(USER_CLK),
+        .error_insertion_rst(error_insertion_rst_reg),
+        .error_insert(error_insert)
     );
 
 endmodule 
 
+module parity_encoder(
+    input clk,
+    input encoder_rst,
+    input [15 : 0] data_word,
+    input data_word_valid,
+    output [15 : 0] hor_parity_word,
+    output [15 : 0] ver_parity_word
+);
+    reg [3 : 0] parity_word_cnt;
+    reg [15 : 0] hor_parity_word_reg;
+    reg [15 : 0] ver_parity_word_reg;
+    always @(posedge clk)
+        if (encoder_rst) begin
+            parity_word_cnt <= 4'd0;
+            hor_parity_word_reg <= 32'h0;
+            ver_parity_word_reg <= 32'h0;
+        end
+        else
+            if (data_word_valid) begin
+                parity_word_cnt <= parity_word_cnt + 1'b1;
+                hor_parity_word_reg[parity_word_cnt] <= ^data_word;
+                ver_parity_word_reg <= ver_parity_word_reg ^ data_word;
+            end
+
+    assign hor_parity_word = hor_parity_word_reg;
+    assign ver_parity_word = ver_parity_word_reg;
+endmodule
+
+module error_insertion(
+    input clk,
+    input error_insertion_rst,
+    output error_insert
+);
+    reg error_insert_reg;
+
+    always @(posedge clk)
+        if (error_insertion_rst) begin
+            error_insert_reg <= 1'b0;
+        end
+        else begin
+            error_insert_reg <= 1'b0;
+        end
+
+    assign error_insert = error_insert_reg;
+endmodule

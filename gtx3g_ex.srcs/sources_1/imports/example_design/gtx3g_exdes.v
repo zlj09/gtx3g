@@ -954,8 +954,8 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     gt0_frame_gen
     (
         // User Interface
-        .TX_DATA_OUT                    ({gt0_txdata_float_i,gt0_txdata_i,gt0_txdata_float16_i}),
-        .TXCTRL_OUT                     ({gt0_txcharisk_float_i,gt0_txcharisk_i}),
+        .TX_DATA_OUT                    (gt0_txdata_i),
+        .TXCTRL_OUT                     (gt0_txcharisk_i),
 
         // System Interface
         .USER_CLK                        (gt0_txusrclk2_i),
@@ -969,8 +969,8 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     gt1_frame_gen
     (
         // User Interface
-        .TX_DATA_OUT                    ({gt1_txdata_float_i,gt1_txdata_i,gt1_txdata_float16_i}),
-        .TXCTRL_OUT                     ({gt1_txcharisk_float_i,gt1_txcharisk_i}),
+        .TX_DATA_OUT                    (gt1_txdata_i),
+        .TXCTRL_OUT                     (gt1_txcharisk_i),
 
         // System Interface
         .USER_CLK                        (gt1_txusrclk2_i),
