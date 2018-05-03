@@ -11,7 +11,7 @@ module simple_uart #(
 	output busy,
 	output overflow
 );
-	parameter CNT_NUM = 32'd150_000_000 / BAUD_RATE / 2;
+	localparam CNT_NUM = 32'd150_000_000 / BAUD_RATE / 2;
 
 	reg clk_br, busy_reg, overflow_reg, txd_reg, trans_end;
 	reg [31:0] cnt_clk_150m;

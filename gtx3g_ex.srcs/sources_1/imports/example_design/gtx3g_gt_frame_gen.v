@@ -270,7 +270,7 @@ module error_insertion(
     input clk,
     input error_insertion_rst,
     input [31 : 0] word_cnt,
-    input error_insert_mask,
+    input [31 : 0] error_insert_mask,
     output error_insert
 );
     reg error_insert_reg;

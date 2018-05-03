@@ -95,18 +95,19 @@ module gtx3g_exdes #
     input  wire         TEST_RESET,
     input  wire [2:0]   PATTERN_MODE,
     input  wire [31:0]  ERROR_INSERT_MASK,
-    input  wire         ENCODER_EN
+    input  wire         ECC_CODE_EN,
 
-    //output the buffered reference clock
-    output wire q0_clk1_refclk_i,
-    output      gt0_txusrclk2_i,
+    //Output the reference clock as USER CLK
+    output              USER_CLK,
 
     //output the error statistic data
-    output wire [31:0]   gt0_prbs_error_count_i,
-    output wire [31:0]   gt0_data_count_i,
-    output wire [15:0]   gt0_rxdata_i,
-    output wire          gt0_test_over_i,
-    output wire          gt0_prbs_error_i
+    output wire [31:0]  DATA_COUNT_OUT,
+    output wire [31:0]  PATTERN_ERROR_COUNT_OUT,
+    output wire         TEST_OVER_OUT,
+    output wire         PATTERN_ERROR_OUT,
+    output wire [3:0]   BLOCK_ERROR_OUT,
+
+    output wire [15:0]  RXDATA_OUT
 );
 
     wire soft_reset_i;
@@ -837,10 +838,7 @@ module gtx3g_exdes #
     .gt0_qpllrefclklost_out(),
     .gt0_qplloutclk_out(),
     .gt0_qplloutrefclk_out(),
-    .sysclk_in(drpclk_in_i),
-
-    //Output the reference clock for check
-    .q0_clk1_refclk_i(q0_clk1_refclk_i)
+    .sysclk_in(drpclk_in_i)
     );
 
     /*IBUFDS IBUFDS_DRP_CLK
@@ -952,15 +950,15 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     // generator in this file. Pay careful attention to bit order and the spacing
     // of your control and alignment characters.
 
-    wire gt0_test_reset_i;
-    wire [2 : 0] gt0_pattern_mode_i;
-    wire [31 : 0] gt0_error_insert_mask_i;
-    wire gt0_encoder_en_i;
+    wire gt0_tx_test_reset_i;
+    wire [2 : 0] gt0_tx_pattern_mode_i;
+    wire [31 : 0] gt0_tx_error_insert_mask_i;
+    wire gt0_tx_encoder_en_i;
 
-    wire gt1_test_reset_i;
-    wire [2 : 0] gt1_pattern_mode_i;
-    wire [31 : 0] gt1_error_insert_mask_i;
-    wire gt1_encoder_en_i;
+    wire gt1_tx_test_reset_i;
+    wire [2 : 0] gt1_tx_pattern_mode_i;
+    wire [31 : 0] gt1_tx_error_insert_mask_i;
+    wire gt1_tx_encoder_en_i;
 
 
     gtx3g_GT_FRAME_GEN #
@@ -981,15 +979,18 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .SYSTEM_RESET                   (gt0_tx_system_reset_c),
 
         // Test Control Interface
-        .TEST_RESET                     (gt0_test_reset_i),
-        .PATTERN_MODE                   (gt0_pattern_mode_i),
-        .ERROR_INSERT_MASK              (gt0_error_insert_mask_i),
-        .ENCODER_EN                     (gt0_encoder_en_i)
+        .TEST_RESET                     (gt0_tx_test_reset_i),
+        .PATTERN_MODE                   (gt0_tx_pattern_mode_i),
+        .ERROR_INSERT_MASK              (gt0_tx_error_insert_mask_i),
+        .ENCODER_EN                     (gt0_tx_encoder_en_i)
     );
 
     gtx3g_GT_FRAME_GEN #
     (
-        .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM)
+        .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
+        .BYTE_ALIGN_CHAR(16'h02bc),
+        .BLOCK_ALIGN_CHAR(16'h03fc),
+        .CLK_COR_CHAR(16'h1d1c)
     )
     gt1_frame_gen
     (
@@ -998,21 +999,24 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .TXCTRL_OUT                     (gt1_txcharisk_i),
 
         // System Interface
-        .USER_CLK                        (gt1_txusrclk2_i),
+        .USER_CLK                       (gt1_txusrclk2_i),
         .SYSTEM_RESET                   (gt1_tx_system_reset_c),
 
         // Test Control Interface
-        .TEST_RESET                     (gt1_test_reset_i),
-        .PATTERN_MODE                   (gt1_pattern_mode_i),
-        .ERROR_INSERT_MASK              (gt1_error_insert_mask_i),
-        .ENCODER_EN                     (gt1_encoder_en_i)
+        .TEST_RESET                     (gt1_tx_test_reset_i),
+        .PATTERN_MODE                   (gt1_tx_pattern_mode_i),
+        .ERROR_INSERT_MASK              (gt1_tx_error_insert_mask_i),
+        .ENCODER_EN                     (gt1_tx_encoder_en_i)
     );
 
-    assign gt0_test_reset_i = TEST_RESET;
-    assign gt0_pattern_mode_i = PATTERN_MODE;
-    assign gt0_error_insert_mask_i = ERROR_INSERT_MASK;
-    assign gt0_encoder_en_i = ENCODER_EN;
-
+    assign gt0_tx_test_reset_i = TEST_RESET;
+    assign gt0_tx_pattern_mode_i = PATTERN_MODE;
+    assign gt0_tx_error_insert_mask_i = ERROR_INSERT_MASK;
+    assign gt0_tx_encoder_en_i = ECC_CODE_EN;
+    assign gt1_tx_test_reset_i = TEST_RESET;
+    assign gt1_tx_pattern_mode_i = PATTERN_MODE;
+    assign gt1_tx_error_insert_mask_i = ERROR_INSERT_MASK;
+    assign gt1_tx_encoder_en_i = ECC_CODE_EN;
 
 
     //***********************************************************************//
@@ -1033,6 +1037,27 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     // finds the first sequence, it increments through the sequence, and indicates an 
     // error whenever the next value received does not match the expected value.
 
+    wire gt0_rx_test_reset_i;
+    wire [2 : 0] gt0_rx_pattern_mode_i;
+    wire gt0_rx_decoder_en_i;
+
+    wire gt1_rx_test_reset_i;
+    wire [2 : 0] gt1_rx_pattern_mode_i;
+    wire gt1_rx_decoder_en_i;
+
+    wire [31 : 0] gt0_data_count_i;
+    wire [31 : 0] gt0_pattern_error_count_i;
+    wire gt0_test_over_i;
+    wire gt0_pattern_error_i;
+    wire [3 : 0] gt0_block_error_i;
+
+    wire [31 : 0] gt1_data_count_i;
+    wire [31 : 0] gt1_pattern_error_count_i;
+    wire gt1_test_over_i;
+    wire gt1_pattern_error_i;
+    wire [3 : 0] gt1_block_error_i;
+
+
 
     assign gt0_frame_check_reset_i = (EXAMPLE_CONFIG_INDEPENDENT_LANES==0)?reset_on_data_error_i:gt0_matchn_i;
 
@@ -1042,11 +1067,15 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 
     gtx3g_GT_FRAME_CHECK #
     (
-.RX_DATA_WIDTH ( 16 ),
-.RXCTRL_WIDTH ( 2 ),
-.COMMA_DOUBLE ( 16'h02bc ),
+        .RX_DATA_WIDTH ( 16 ),
+        .RXCTRL_WIDTH ( 2 ),
+        .COMMA_DOUBLE ( 16'h02bc ),
         .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
-.START_OF_PACKET_CHAR ( 16'h02bc )
+        .START_OF_PACKET_CHAR ( 16'h02bc ),
+
+        .BYTE_ALIGN_CHAR(16'h02bc),
+        .BLOCK_ALIGN_CHAR(16'h03fc),
+        .CLK_COR_CHAR(16'h1d1c)
     )
     gt0_frame_check
     (
@@ -1068,11 +1097,17 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .ERROR_COUNT_OUT                (gt0_error_count_i),
         .TRACK_DATA_OUT                 (gt0_track_data_i),
 
+        //Test Control Interface
+        .TEST_RESET                     (gt0_rx_test_reset_i),
+        .PATTERN_MODE                   (gt0_rx_pattern_mode_i),
+        .DECODER_EN                     (gt0_rx_decoder_en_i),
+
         //Modified by lingjun, for data statistics
         .DATA_COUNT_OUT                 (gt0_data_count_i),
-        .PRBS_ERROR_COUNT_OUT           (gt0_prbs_error_count_i),
+        .PATTERN_ERROR_COUNT_OUT        (gt0_pattern_error_count_i),
         .TEST_OVER_OUT                  (gt0_test_over_i),
-        .PRBS_ERROR_OUT                 (gt0_prbs_error_i)
+        .PATTERN_ERROR_OUT              (gt0_pattern_error_i),
+        .BLOCK_ERROR_OUT                (gt0_block_error_i)
     );
 
 
@@ -1085,11 +1120,15 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 
     gtx3g_GT_FRAME_CHECK #
     (
-.RX_DATA_WIDTH ( 16 ),
-.RXCTRL_WIDTH ( 2 ),
-.COMMA_DOUBLE ( 16'h02bc ),
+        .RX_DATA_WIDTH ( 16 ),
+        .RXCTRL_WIDTH ( 2 ),
+        .COMMA_DOUBLE ( 16'h02bc ),
         .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
-.START_OF_PACKET_CHAR ( 16'h02bc )
+        .START_OF_PACKET_CHAR ( 16'h02bc ),
+
+        .BYTE_ALIGN_CHAR(16'h02bc),
+        .BLOCK_ALIGN_CHAR(16'h03fc),
+        .CLK_COR_CHAR(16'h1d1c)
     )
     gt1_frame_check
     (
@@ -1111,12 +1150,35 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .ERROR_COUNT_OUT                (gt1_error_count_i),
         .TRACK_DATA_OUT                 (gt1_track_data_i),
 
+        //Test Control Interface
+        .TEST_RESET                     (gt1_rx_test_reset_i),
+        .PATTERN_MODE                   (gt1_rx_pattern_mode_i),
+        .DECODER_EN                     (gt1_rx_decoder_en_i),
+
         //Modified by lingjun, for data statistics
-        .DATA_COUNT_OUT                 (),
-        .PRBS_ERROR_COUNT_OUT           (),
-        .TEST_OVER_OUT                  (),
-        .PRBS_ERROR_OUT                 ()
+        .DATA_COUNT_OUT                 (gt1_data_count_i),
+        .PATTERN_ERROR_COUNT_OUT        (gt1_pattern_error_count_i),
+        .TEST_OVER_OUT                  (gt1_test_over_i),
+        .PATTERN_ERROR_OUT              (gt1_pattern_error_i),
+        .BLOCK_ERROR_OUT                (gt1_block_error_i)
     );
+
+    assign gt0_rx_test_reset_i = TEST_RESET;
+    assign gt0_rx_pattern_mode_i = PATTERN_MODE;
+    assign gt0_rx_decoder_en_i = ECC_CODE_EN;
+    assign gt1_rx_test_reset_i = TEST_RESET;
+    assign gt1_rx_pattern_mode_i = PATTERN_MODE;
+    assign gt1_rx_decoder_en_i = ECC_CODE_EN;
+
+    assign USER_CLK = gt0_rxusrclk2_i;
+    
+    assign DATA_COUNT_OUT = gt0_data_count_i;
+    assign PATTERN_ERROR_COUNT_OUT = gt0_pattern_error_count_i;
+    assign TEST_OVER_OUT = gt0_test_over_i;
+    assign PATTERN_ERROR_OUT = gt0_pattern_error_i;
+    assign BLOCK_ERROR_OUT = gt0_block_error_i;
+
+    assign RXDATA_OUT = gt0_rxdata_i;
 
 
 

@@ -5,9 +5,9 @@ module tb_gtx3g_test(
     output reg sysclk_in,
     output reg uart_z7_in,
     output uart_z7_out,
-    output track_data_i,
-    output test_succeeded,
-    output clk_refdiv
+    output track_data_out,
+    output test_succeeded_out,
+    output user_clk
 );
 
 //*************************Parameter Declarations******************************
@@ -49,9 +49,9 @@ module tb_gtx3g_test(
 		.sysclk_in(sysclk_in),
 		.uart_z7_in(uart_z7_in),
 		.uart_z7_out(uart_z7_out),
-		.track_data_i(track_data_i),
-		.test_succeeded(test_succeeded),
-        .clk_refdiv(clk_refdiv)
+		.track_data_out(track_data_out),
+		.test_succeeded_out(test_succeeded_out),
+        .user_clk(user_clk)
     );
 
 endmodule

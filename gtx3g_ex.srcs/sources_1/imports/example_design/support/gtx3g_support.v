@@ -311,11 +311,7 @@ input           gt1_data_valid_in,
     output      gt0_qpllrefclklost_out,
     output      gt0_qplloutclk_out,
     output      gt0_qplloutrefclk_out,
-    input          sysclk_in,
-
-    //Output the buffered reference clock
-    output q0_clk1_refclk_i
-
+    input          sysclk_in
 );
 
 

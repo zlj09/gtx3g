@@ -4,16 +4,14 @@ module gtx3g_test(
     input refclk_p_in,
     input refclk_n_in,
 
-    //input sysrst,
-
     input sysclk_in,
     input uart_z7_in,
     output uart_z7_out,
-    output track_data_i,
-    output test_succeeded,
 
-    output refclk_direct_out,
-    output clk_refdiv
+    output track_data_out,
+    output test_succeeded_out,
+
+    output user_clk
 );
 
 
@@ -26,31 +24,16 @@ reg             test_succeeded;
 reg             test_failed;
 reg             test_over;
 
-reg             clk_refdiv_reg;   //Divide the reference clock into 10 kHz
-reg     [15:0]  cnt_refclk;
-
 
 
 //********************************Wire Declarations**********************************
 
     //--------------------------------- Global Signals ------------------------------
-//wire            refclk;
 wire            sysrst; 
-//wire            drp_clk_p;
-//wire            drp_clk_n;
 wire            drp_clk;
-
-wire            refclk_out;
-
-wire    [31:0]   gt0_prbs_error_count_i;
-wire    [31:0]   gt0_data_count_i;
-wire    [15:0]   gt0_rxdata_i;
-wire             gt0_prbs_error_i;
-wire             gt0_test_over_i;
 
     
     //-------------------------- Example Module Connections -------------------------
-wire            track_data_i;
 wire    [1:0]   rxn_in_i;
 wire    [1:0]   rxp_in_i;
 wire    [1:0]   txn_out_i;
@@ -64,10 +47,6 @@ wire    [1:0]   txp_out_i;
     wire  tied_to_ground_i;
     assign  tied_to_ground_i     =    1'b0;
     
-    // ------------------------- GT Serial Connections ------------------------
-    //assign   rxn_in_i           =  txn_out_i;
-    //assign   rxp_in_i           =  txp_out_i;  
-    //------------------------------ Global Signals ----------------------------
     
     //Use reset generator to generate reset signal
     rst_generator #
@@ -77,7 +56,7 @@ wire    [1:0]   txp_out_i;
     )
     rst_generator_inst_0
     (
-        .clk(refclk_out),
+        .clk(user_clk),
         .rst(sysrst)
     );
     
@@ -89,17 +68,34 @@ wire    [1:0]   txp_out_i;
       
     
     
-    //----------------------------- Track Data ---------------------------------
+    //----------------------------- Test Control ---------------------------------
 
-    reg [31:0] gt0_data_count_reg, gt0_prbs_error_count_reg;
+    reg test_reset;
+    reg [2:0] pattern_mode;
+    reg [31:0] error_insert_mask;
+    reg ecc_code_en;
+
+    wire [31:0] data_count_out;
+    wire [31:0] pattern_error_count_out;
+    wire test_over_out;
+    wire pattern_error_out;
+    wire [3:0] block_error_out;
+
+    wire [15:0] rxdata_out;
+
+    reg [31:0] gt0_data_count_reg;
+    reg [31:0] gt0_prbs_error_count_reg;
+
     reg [15:0] gt0_error_rxdata_regs [3:0];
     reg [15:0] gt0_error_data_count_regs [3:0];
     reg [1:0] error_data_cnt;
  
-    always @(posedge refclk_out)
+    always @(posedge user_clk)
         if (sysrst) begin
             trans_timer <= 32'd0;
             test_over <= 1'b0;
+            test_succeeded <= 1'b1;
+
             gt0_data_count_reg <= 32'b0;
             gt0_prbs_error_count_reg <= 32'b0;
             error_data_cnt <= 2'd0;
@@ -107,27 +103,32 @@ wire    [1:0]   txp_out_i;
             gt0_error_rxdata_regs[1] <= 16'b0;
             gt0_error_rxdata_regs[2] <= 16'b0;
             gt0_error_rxdata_regs[3] <= 16'b0;
+
+            test_reset <= 1'b0;
+            pattern_mode <= 3'd1;
+            error_insert_mask <= 32'h8a34f09d;
+            ecc_code_en <= 1'b0;
         end
         else begin
+            test_reset <= 1'b1;
             if (!test_over)
                 trans_timer <= trans_timer + 1'b1;
-            if (gt0_test_over_i == 1'b1) begin
+            if (test_over_out == 1'b1) begin
               test_over <= 1'b1;
-              gt0_data_count_reg <= gt0_data_count_i;
-              gt0_prbs_error_count_reg <= gt0_prbs_error_count_i;
+              test_succeeded <= 1'b1;
+              gt0_data_count_reg <= data_count_out;
+              gt0_prbs_error_count_reg <= pattern_error_count_out;
             end
 
-            if (gt0_prbs_error_i) begin
-              gt0_error_rxdata_regs[error_data_cnt] <= gt0_rxdata_i;
-              gt0_error_data_count_regs[error_data_cnt] <= gt0_data_count_i[15:0];
+            if (pattern_error_out) begin
+              gt0_error_rxdata_regs[error_data_cnt] <= rxdata_out;
+              gt0_error_data_count_regs[error_data_cnt] <= data_count_out;
               if (error_data_cnt < 3'd3)
                 error_data_cnt <= error_data_cnt + 1'b1;
             end
         end
 
-    parameter STRING_SUC = "Test Succeeded!";
-    parameter STRING_FAI = "Test Failed!";
-    parameter TRANS_TIMES = 1;
+    assign test_succeeded_out = test_succeeded;
 
     reg wvalid;
     reg [7:0] char;
@@ -140,7 +141,9 @@ wire    [1:0]   txp_out_i;
     reg [7:0] string_reg [0:31];
     reg [3:0] msg_status;
 
-    always @(posedge refclk_out or negedge sysrst)
+    localparam TRANS_TIMES = 1;
+
+    always @(posedge user_clk)
       if (sysrst) begin
         wvalid <= 1'b0;
         char <= 8'h0;
@@ -214,14 +217,13 @@ wire    [1:0]   txp_out_i;
         end
       end
 
-    assign clk_refdiv = refclk_out;//clk_refdiv_reg;
     //----------------- Instantiate an gtxaui_exdes module  -----------------
 
     simple_uart #(
       .BAUD_RATE(32'd9600),
       .BUF_LEN(8'd16)
     )simple_uart_inst_1(
-      .clk_150m(refclk_out),
+      .clk_150m(user_clk),
       .rst(sysrst),
       .wvalid(wvalid),
       .char(char),
@@ -236,24 +238,28 @@ wire    [1:0]   txp_out_i;
     gtx3g_exdes 
     gtx3g_exdes_i
     (
-         .Q0_CLK1_GTREFCLK_PAD_N_IN           (refclk_n_in), 
-         .Q0_CLK1_GTREFCLK_PAD_P_IN           (refclk_p_in),
-        //.DRP_CLK_IN_P                        (drp_clk_p),
-        //.DRP_CLK_IN_N                        (drp_clk_n),
-        .DRPCLK_IN                            (drp_clk),
+        .Q0_CLK1_GTREFCLK_PAD_N_IN           (refclk_n_in), 
+        .Q0_CLK1_GTREFCLK_PAD_P_IN           (refclk_p_in),
+        .DRPCLK_IN                           (drp_clk),
         .TRACK_DATA_OUT                      (track_data_i),
         .RXN_IN                              (rxn_in_i),
         .RXP_IN                              (rxp_in_i),
         .TXN_OUT                             (txn_out_i),
         .TXP_OUT                             (txp_out_i),
-        .q0_clk1_refclk_i                    (refclk_direct_out),
-        .gt0_txusrclk2_i                     (refclk_out),
 
-        .gt0_prbs_error_count_i              (gt0_prbs_error_count_i),
-        .gt0_data_count_i                    (gt0_data_count_i),
-        .gt0_test_over_i                     (gt0_test_over_i),
-        .gt0_prbs_error_i                    (gt0_prbs_error_i),
-        .gt0_rxdata_i                        (gt0_rxdata_i)
+        .TEST_RESET                          (test_reset),
+        .PATTERN_MODE                        (pattern_mode),
+        .ERROR_INSERT_MASK                   (error_insert_mask),
+        .ECC_CODE_EN                         (ecc_code_en),
+
+        .USER_CLK                            (user_clk),
+        .DATA_COUNT_OUT                      (data_count_out),
+        .PATTERN_ERROR_COUNT_OUT             (pattern_error_count_out),
+        .TEST_OVER_OUT                       (test_over_out),
+        .PATTERN_ERROR_OUT                   (pattern_error_out),
+        .BLOCK_ERROR_OUT                     (block_error_out),
+
+        .RXDATA_OUT                          (rxdata_out)
     );
 
 endmodule
