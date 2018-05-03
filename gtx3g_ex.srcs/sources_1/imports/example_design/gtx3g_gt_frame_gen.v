@@ -69,17 +69,24 @@
 module gtx3g_GT_FRAME_GEN #
 (
     // parameter to set the number of words in the BRAM
-    parameter   WORDS_IN_BRAM =   512
+    parameter   WORDS_IN_BRAM =   512,
+
+    // Modified by lingjun, add align characters
+    parameter   BYTE_ALIGN_CHAR = 4'h02bc,
+    parameter   BLOCK_ALIGN_CHAR = 4'h03fc,
+    parameter   CLK_COR_CHAR = 4'h1d1c
+
 )
 (
-   // User Interface
+// User Interface
 output reg  [15:0]  TX_DATA_OUT,
 output reg  [1:0]   TXCTRL_OUT,
 
-      // System Interface
+// System Interface
 input  wire         USER_CLK,
 input  wire         SYSTEM_RESET,
 
+//Modified by lingjun, test process control
 input  wire         TEST_START,
 input  wire [2:0]   PATTERN_MODE,
 input  wire [31:0]  ERROR_INSERT_MASK,
@@ -198,7 +205,7 @@ reg     [79:0]  tx_data_ram_r;
             case (block_word_cnt)
             8'd0: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                tx_data_reg <= 16'h02bc;
+                tx_data_reg <= BYTE_ALIGN_CHAR;
                 txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b0;
@@ -206,7 +213,7 @@ reg     [79:0]  tx_data_ram_r;
             end
             8'd1: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                tx_data_reg <= 16'h03fc;
+                tx_data_reg <= BLOCK_ALIGN_CHAR;
                 txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b0;
@@ -228,7 +235,7 @@ reg     [79:0]  tx_data_ram_r;
             end
             8'd18: begin
                 block_word_cnt <= (ENCODER_EN) ? (block_word_cnt + 1'b1) : (8'd0);
-                tx_data_reg <= 16'h1d1c;
+                tx_data_reg <= CLK_COR_CHAR;
                 txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b1;

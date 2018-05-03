@@ -74,7 +74,12 @@ module gtx3g_GT_FRAME_CHECK #
     parameter   WORDS_IN_BRAM            =  512,
     parameter   CHANBOND_SEQ_LEN         =  1,
     parameter   COMMA_DOUBLE             =  16'hf628,
-    parameter   START_OF_PACKET_CHAR     =  64'h00000000000000fb
+    parameter   START_OF_PACKET_CHAR     =  64'h00000000000000fb,
+
+    //Modified by lingjun, add control characters
+    parameter   BYTE_ALIGN_CHAR = 4'h02bc,
+    parameter   BLOCK_ALIGN_CHAR = 4'h03fc,
+    parameter   CLK_COR_CHAR = 4'h1d1c
 )                            
 (
     // User Interface
@@ -102,6 +107,11 @@ module gtx3g_GT_FRAME_CHECK #
     // System Interface
     input  wire         USER_CLK,
     input  wire         SYSTEM_RESET,
+
+    //Modified by lingjun, test process control
+    input  wire         TEST_START,
+    input  wire [2:0]   PATTERN_MODE,
+    input  wire         DECODER_EN,
 
     //Modified by lingjun, for data statistics
     output wire [31:0]   DATA_COUNT_OUT,
@@ -471,70 +481,226 @@ endgenerate
     always @(posedge USER_CLK)
            rx_data_ram_r <= `DLY  rom[read_counter_i];*/
 
-    //Modified by lingjun, use PRBS to check the incoming data
-    //________________________________ PRBS Checker Logic ___________________________
-    wire [31 : 0] prbs_err_cnt;
-    wire data_valid;
-    wire prbs_error;
 
-    reg data_valid_reg;
+    //Modified by lingjun, use block word checker to check the incoming data
+    //____________________Block Word check____________________
+    //localparam BUF_LEN = 24;
 
-    always @(posedge USER_CLK)
-        if (system_reset_r2)
-            data_valid_reg <= 1'b0;
-        else
-            if (track_data_r3)
-                data_valid_reg <= 1'b1;
+    reg [7 : 0] block_word_cnt;
+    reg [3 : 0] block_error_reg;
 
-    prbs_chk #(
-        .PRBS_WIDTH(16),
-        .PRBS_PATTERN("PRBS7"),
-        .ERR_CNT_WIDTH(32),
-        .BYTE_ALIGN_CHAR(16'h02bc),
-        .CHAN_ALIGN_CHAR(16'h077c),
-        .CLK_COR_CHAR(16'h1d1c)
-    )prbs_chk_inst_1(
-        .clk(USER_CLK),
-        .rst(system_reset_r2),
-        .prbs_data(rx_data_r_track),
-        .data_valid(data_valid),
-        .err_cnt_rst(1'b0),
-        .prbs_error(prbs_error),
-        .prbs_err_cnt(prbs_err_cnt)
-    );
+    reg [15 : 0] rx_word_buf [15 : 0];
+    reg [15 : 0] rx_buf_in_reg; 
+    reg [15 : 0] rx_buf_out_reg; 
+    reg rx_buf_shift;
+    reg rx_buf_out_valid;
 
-    assign data_valid = data_valid_reg; //track_data_r3;//start_of_packet_detected_r && !track_data_r;
-    
+    reg pattern_rst_reg;
+    reg pattern_pause_reg;
 
-    // Count the number of data frames
-    localparam DATA_MAX_CNT = 32'h0000ffff;
+    reg pattern_error_reg;
+    reg [31 : 0] pattern_error_cnt;
 
-    reg [31:0] data_count_r;
-    reg test_over_r;
+    reg encoder_rst_reg;
+    reg data_word_valid;
 
+    reg [15 : 0] hor_correct_mask;
+    reg [15 : 0] ver_correct_mask;
+
+    reg correct_mask_valid;
+    reg [15 : 0] hor_correct_mask_reg;
+    reg [15 : 0] ver_correct_mask_reg;
+
+    wire [15 : 0] pattern_word;
+    wire [15 : 0] hor_parity_word;
+    wire [15 : 0] ver_parity_word;
+
+    integer i;
 
     always @(posedge USER_CLK)
-        if (system_reset_r2) begin
-            data_count_r <= 32'b0;
-            test_over_r <= 1'b0;
+        if (system_reset_r2 || !TESET_START) begin
+            block_word_cnt <= 8'd0;
+            block_error_reg <= 4'd0;
+
+            rx_buf_in_reg <= 16'h0;
+            rx_buf_shift <= 1'b0;
+            rx_buf_out_valid <= 1'b0;
+
+            pattern_rst_reg <= 1'b1;
+            pattern_pause_reg <= 1'b1;
+
+            pattern_error_reg <= 1'b0;
+            pattern_error_cnt <= 32'd0;
+
+            encoder_rst_reg <= 1'b1;
+            data_word_valid <= 1'b0;
+
+            correct_mask_valid <= 1'b0;
+            hor_correct_mask <= 16'h0;
+            ver_correct_mask <= 16'h0;
         end
         else begin
-            if (data_valid_reg && data_count_r < DATA_MAX_CNT)
-                data_count_r <= data_count_r + 1'b1;
-            else
-                data_count_r <= data_count_r;
+            pattern_rst_reg <= 1'b0;
+            case (block_word_cnt)
+            8'd0: begin
+                if (rx_data_r_track == BYTE_ALIGN_CHAR) begin
+                    block_word_cnt <= 8'd1;
+                    block_error_reg <= 4'd0;
 
-            if (data_count_r == DATA_MAX_CNT)
-                test_over_r <= 1'b1;
-            else
-                test_over_r <= test_over_r;
+                    pattern_pause_reg <= 1'b1;
+
+                    encoder_rst_reg <= 1'b1;
+                    data_word_valid <= 1'b0;
+
+                    correct_mask_valid <= 1'b0;                  
+                end
+            end
+            8'd1: begin
+                if (rx_data_r_track == BLOCK_ALIGN_CHAR) begin
+                    block_word_cnt <= 8'd2;
+                    
+                    if (rx_buf_out_valid)
+                        pattern_pause <= 1'b0;
+                    else
+                        pattern_pause <= 1'b1;
+                    
+                    encoder_rst_reg <= 1'b0;
+                    data_word_valid <= 1'b0;
+                end
+                else begin
+                    block_error_reg <= 4'd1;
+                end
+            end
+            8'd2: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+
+                rx_buf_shift <= 1'b1;
+                rx_buf_in_reg <= rx_data_r_track;
+
+                data_word_valid <= 1'b1;
+            end
+            8'd17: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+
+                rx_buf_shift <= 1'b1;
+                rx_buf_in_reg <= rx_data_r_track;
+
+                pattern_pause <= 1'b1;
+
+                data_word_valid <= 1'b1;
+
+                if (rx_buf_out_valid && (rx_buf_out_reg != pattern_word) begin
+                   pattern_error_reg <= 1'b1;
+                   pattern_error_cnt <= pattern_error_cnt + 1'b1; 
+                end
+                else begin
+                   pattern_error_reg <= 1'b0;
+                   pattern_error_cnt <= pattern_error_cnt; 
+                end
+            end
+            8'd18: begin
+                if (rx_data_r_track == CLK_COR_CHAR) begin
+                    block_word_cnt <= (DECODER_EN)? (block_word_cnt + 1'b1) : (8'd0);
+
+                    rx_buf_shift <= 1'b0;
+                    rx_buf_out_valid <= 1'b1;
+
+                    pattern_pause <= 1'b1;
+
+                    data_word_valid <= 1'b0;
+
+                    if (rx_buf_out_valid && (rx_buf_out_reg != pattern_word) begin
+                       pattern_error_reg <= 1'b1;
+                       pattern_error_cnt <= pattern_error_cnt + 1'b1; 
+                    end
+                    else begin
+                       pattern_error_reg <= 1'b0;
+                       pattern_error_cnt <= pattern_error_cnt; 
+                    end
+                end
+                else begin
+                    block_error_reg <= 4'd2;
+                end
+            end
+            8'd19: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+
+                correct_mask_valid <= 1'b1;
+                hor_correct_mask <= hor_parity_word ^ rx_data_r_track;
+            end
+            8'd20: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+
+                correct_mask_valid <= 1'b1;
+                ver_correct_mask <= ver_parity_word ^ rx_data_r_track;
+            end
+            default:begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+
+                rx_buf_shift <= 1'b1;
+                rx_buf_in_reg <= rx_data_r_track;
+
+                data_word_valid <= 1'b1;
+
+                if (rx_buf_out_valid && (rx_buf_out_reg != pattern_word) begin
+                   pattern_error_reg <= 1'b1;
+                   pattern_error_cnt <= pattern_error_cnt + 1'b1; 
+                end
+                else begin
+                   pattern_error_reg <= 1'b0;
+                   pattern_error_cnt <= pattern_error_cnt; 
+                end
+            end
+
+            endcase
         end
-        
 
-    assign DATA_COUNT_OUT = data_count_r;    
-    assign TEST_OVER_OUT = test_over_r;
-    assign PRBS_ERROR_COUNT_OUT = prbs_err_cnt;
-    assign PRBS_ERROR_OUT = prbs_error;
-    
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2 || !TEST_START) begin
+            for (i = 0; i < BUF_LEN; i)
+                rx_word_buf[i] <= 16'h0;
+            rx_buf_out_reg <= 16'h0;
+
+            hor_correct_mask_reg <= 16'b0;
+            ver_correct_mask_reg <= 16'b0;
+        end 
+        else begin
+            if (correct_mask_valid) begin
+                hor_correct_mask_reg <= hor_correct_mask;
+                ver_correct_mask_reg <= ver_correct_mask;
+            end
+            else 
+                if (rx_buf_shift)
+                    hor_correct_mask_reg <= hor_correct_mask_reg >> 1;
+
+            if (rx_buf_shift) begin
+                rx_word_buf[0] <= rx_buf_in_reg;
+                for (i = 1; i < BUF_LEN; i)
+                    rx_word_buf[i] <= rx_word_buf[i - 1];
+
+                if (DECODER_EN && hor_correct_mask_reg[0])
+                    rx_buf_out_reg <= rx_word_buf[15] ^ ver_correct_mask_reg;
+                else 
+                    rx_buf_out_reg <= rx_word_buf[18];
+            end
+        end
+
+    pattern_gen pattern_gen_inst_2(
+        .clk(USER_CLK),
+        .pattern_rst(pattern_rst_reg),
+        .pattern_mode(PATTERN_MODE),
+        .pattern_pause(pattern_pause_reg),
+        .pattern_word(pattern_word)
+    );
+
+    parity_encoder parity_encoder_inst_2(
+        .clk(USER_CLK),
+        .encoder_rst(encoder_rst_reg),
+        .data_word(rx_buf_in_reg),
+        .data_word_valid(data_word_valid),
+        .hor_parity_word(hor_parity_word),
+        .ver_parity_word(ver_parity_word)
+    );
     
 endmodule           
