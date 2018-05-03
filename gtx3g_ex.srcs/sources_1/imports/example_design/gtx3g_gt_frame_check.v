@@ -109,15 +109,16 @@ module gtx3g_GT_FRAME_CHECK #
     input  wire         SYSTEM_RESET,
 
     //Modified by lingjun, test process control
-    input  wire         TEST_START,
+    input  wire         TEST_RESET,
     input  wire [2:0]   PATTERN_MODE,
     input  wire         DECODER_EN,
 
     //Modified by lingjun, for data statistics
     output wire [31:0]   DATA_COUNT_OUT,
-    output wire [31:0]   PRBS_ERROR_COUNT_OUT,
+    output wire [31:0]   PATTERN_ERROR_COUNT_OUT,
     output wire          TEST_OVER_OUT,
-    output wire          PRBS_ERROR_OUT
+    output wire          PATTERN_ERROR_OUT,
+    output wire [3:0]    BLOCK_ERROR_OUT
 );
 
 
@@ -444,47 +445,9 @@ wire            tied_to_vcc_i;
   end
 
 assign TRACK_DATA_OUT = sm_link;
-    /*>//____________________________ Counter to read from BRAM __________________________    
-    always @(posedge USER_CLK)
-        if(system_reset_r2 ||  (read_counter_i == (WORDS_IN_BRAM-1)))
-        begin
-            read_counter_i   <=  `DLY    10'd0;
-        end
-        else if (start_of_packet_detected_r && !track_data_r)
-        begin
-            read_counter_i   <=  `DLY    10'd0;
-        end
-        else
-        begin
-            read_counter_i  <=  `DLY    read_counter_i + 10'd1;
-        end
+    
 
-    //________________________________ BRAM Inference Logic _____________________________    
-
-//Array slice from dat file to compare against receive data  
-generate
-if(RX_DATA_WIDTH==80)
-begin : datapath_80
-    assign bram_data_r      = rx_data_ram_r[(RX_DATA_WIDTH-1):0];
-end
-else
-begin : datapath_16_20_32_40_64
-    assign bram_data_r = rx_data_ram_r[(16+RX_DATA_WIDTH-1):16];
-end 
-endgenerate
-
-    initial
-    begin
-           $readmemh("gt_rom_init_rx.dat",rom,0,511);
-    end
-
-    always @(posedge USER_CLK)
-           rx_data_ram_r <= `DLY  rom[read_counter_i];*/
-
-
-    //Modified by lingjun, use block word checker to check the incoming data
     //____________________Block Word check____________________
-    //localparam fifo_LEN = 24;
 
     reg [7 : 0] block_word_cnt;
     reg [3 : 0] block_error_reg;
@@ -514,6 +477,9 @@ endgenerate
     reg [15 : 0] hor_correct_mask_reg;
     reg [15 : 0] ver_correct_mask_reg;
 
+    reg [31 : 0] data_word_cnt;
+    reg test_over_reg;
+
     wire [15 : 0] rx_fifo_out;
     wire rx_fifo_full;
     wire rx_fifo_empty;
@@ -521,10 +487,9 @@ endgenerate
     wire [15 : 0] hor_parity_word;
     wire [15 : 0] ver_parity_word;
 
-    integer j;
 
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
+        if (system_reset_r2 || TEST_RESET) begin
             block_word_cnt <= 8'd0;
             block_error_reg <= 4'd0;
 
@@ -668,23 +633,17 @@ endgenerate
             endcase
         end
 
-    integer fp;
-
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
+        if (system_reset_r2 || TEST_RESET) begin
             rx_fifo_out_correct <= 16'h0;
 
             hor_correct_mask_reg <= 16'b0;
             ver_correct_mask_reg <= 16'b0;
-
-            fp = $fopen("LFSR_parameters.log", "w");
         end 
         else begin
             if (correct_mask_valid) begin
                 hor_correct_mask_reg <= hor_correct_mask;
                 ver_correct_mask_reg <= ver_correct_mask;
-                $fwrite(fp, "hor_correct_mask: %16b\n", hor_correct_mask);
-                $fwrite(fp, "ver_correct_mask: %16b\n", ver_correct_mask);
             end
             else 
                 if (rx_fifo_out_reg_en)
@@ -698,20 +657,38 @@ endgenerate
         end
 
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
+        if (system_reset_r2 || TEST_RESET) begin
             pattern_error_reg <= 1'b0;
             pattern_error_cnt <= 32'd0;
         end
         else
             if (pattern_check_en) begin
                 if (rx_fifo_valid && (rx_fifo_out_correct != pattern_word)) begin
-                   pattern_error_reg <= 1'b1;
-                   pattern_error_cnt <= pattern_error_cnt + 1'b1; 
+                    pattern_error_reg <= 1'b1;
+                    if (!test_over_reg)
+                        pattern_error_cnt <= pattern_error_cnt + 1'b1; 
+                    else
+                        pattern_error_cnt <= pattern_error_cnt;
                 end
                 else begin
                    pattern_error_reg <= 1'b0;
                    pattern_error_cnt <= pattern_error_cnt; 
                 end
+            end
+
+    localparam TEST_DATA_MAX_CNT = 32'h0000ffff;
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2 || TEST_RESET) begin
+            test_over_reg <= 1'b0;
+            data_word_cnt <= 32'd0;
+        end
+        else
+            if (pattern_check_en) begin
+                if (data_word_cnt < TEST_DATA_MAX_CNT)
+                    data_word_cnt <= data_word_cnt + 1'b1;
+                else
+                    test_over_reg <= 1'b1;
             end
 
     pattern_gen pattern_gen_inst_2(
@@ -741,5 +718,11 @@ endgenerate
         .full(rx_fifo_full),
         .empty(rx_fifo_empty)
     );
+
+    assign DATA_COUNT_OUT = data_word_cnt;
+    assign PATTERN_ERROR_OUT = pattern_error_reg;
+    assign TEST_OVER_OUT = test_over_reg;
+    assign PATTERN_ERROR_COUNT_OUT = pattern_error_cnt;
+    assign BLOCK_ERROR_OUT = block_error_reg;
 
 endmodule           

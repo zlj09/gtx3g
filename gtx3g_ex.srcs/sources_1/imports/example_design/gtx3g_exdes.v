@@ -91,6 +91,12 @@ module gtx3g_exdes #
     output wire [1:0]   TXN_OUT,
     output wire [1:0]   TXP_OUT,
 
+    //Modified by lingjun, test control interface
+    input  wire         TEST_RESET,
+    input  wire [2:0]   PATTERN_MODE,
+    input  wire [31:0]  ERROR_INSERT_MASK,
+    input  wire         ENCODER_EN
+
     //output the buffered reference clock
     output wire q0_clk1_refclk_i,
     output      gt0_txusrclk2_i,
@@ -946,10 +952,23 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     // generator in this file. Pay careful attention to bit order and the spacing
     // of your control and alignment characters.
 
+    wire gt0_test_reset_i;
+    wire [2 : 0] gt0_pattern_mode_i;
+    wire [31 : 0] gt0_error_insert_mask_i;
+    wire gt0_encoder_en_i;
+
+    wire gt1_test_reset_i;
+    wire [2 : 0] gt1_pattern_mode_i;
+    wire [31 : 0] gt1_error_insert_mask_i;
+    wire gt1_encoder_en_i;
+
 
     gtx3g_GT_FRAME_GEN #
     (
-        .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM)
+        .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
+        .BYTE_ALIGN_CHAR(16'h02bc),
+        .BLOCK_ALIGN_CHAR(16'h03fc),
+        .CLK_COR_CHAR(16'h1d1c)
     )
     gt0_frame_gen
     (
@@ -958,8 +977,14 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .TXCTRL_OUT                     (gt0_txcharisk_i),
 
         // System Interface
-        .USER_CLK                        (gt0_txusrclk2_i),
-        .SYSTEM_RESET                   (gt0_tx_system_reset_c)
+        .USER_CLK                       (gt0_txusrclk2_i),
+        .SYSTEM_RESET                   (gt0_tx_system_reset_c),
+
+        // Test Control Interface
+        .TEST_RESET                     (gt0_test_reset_i),
+        .PATTERN_MODE                   (gt0_pattern_mode_i),
+        .ERROR_INSERT_MASK              (gt0_error_insert_mask_i),
+        .ENCODER_EN                     (gt0_encoder_en_i)
     );
 
     gtx3g_GT_FRAME_GEN #
@@ -974,8 +999,21 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 
         // System Interface
         .USER_CLK                        (gt1_txusrclk2_i),
-        .SYSTEM_RESET                   (gt1_tx_system_reset_c)
+        .SYSTEM_RESET                   (gt1_tx_system_reset_c),
+
+        // Test Control Interface
+        .TEST_RESET                     (gt1_test_reset_i),
+        .PATTERN_MODE                   (gt1_pattern_mode_i),
+        .ERROR_INSERT_MASK              (gt1_error_insert_mask_i),
+        .ENCODER_EN                     (gt1_encoder_en_i)
     );
+
+    assign gt0_test_reset_i = TEST_RESET;
+    assign gt0_pattern_mode_i = PATTERN_MODE;
+    assign gt0_error_insert_mask_i = ERROR_INSERT_MASK;
+    assign gt0_encoder_en_i = ENCODER_EN;
+
+
 
     //***********************************************************************//
     //                                                                       //

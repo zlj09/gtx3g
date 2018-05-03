@@ -78,86 +78,46 @@ module gtx3g_GT_FRAME_GEN #
 
 )
 (
-// User Interface
-output reg  [15:0]  TX_DATA_OUT,
-output reg  [1:0]   TXCTRL_OUT,
-
-// System Interface
-input  wire         USER_CLK,
-input  wire         SYSTEM_RESET,
-
-//Modified by lingjun, test process control
-input  wire         TEST_START,
-input  wire [2:0]   PATTERN_MODE,
-input  wire [31:0]  ERROR_INSERT_MASK,
-input  wire         ENCODER_EN
+    // User Interface
+    output reg  [15:0]  TX_DATA_OUT,
+    output reg  [1:0]   TXCTRL_OUT,
+    
+    // System Interface
+    input  wire         USER_CLK,
+    input  wire         SYSTEM_RESET,
+    
+    //Modified by lingjun, test process control
+    input  wire         TEST_RESET,
+    input  wire [2:0]   PATTERN_MODE,
+    input  wire [31:0]  ERROR_INSERT_MASK,
+    input  wire         ENCODER_EN
 ); 
 
 
-//********************************* Wire Declarations********************************* 
+    //********************************* Wire Declarations********************************* 
 
-wire            tied_to_ground_i;
-wire            tied_to_vcc_i;
-wire    [31:0]  tied_to_ground_vec_i;
-wire    [63:0]  tx_data_bram_i;
-wire    [7:0]   tx_ctrl_i;
+    wire            tied_to_ground_i;
+    wire            tied_to_vcc_i;
+    wire    [31:0]  tied_to_ground_vec_i;
 
-//***************************Internal Register Declarations*************************** 
-
-reg     [8:0]   read_counter_i;
-    reg     [79:0] rom [0:511];
-reg     [79:0]  tx_data_ram_r;
-(* ASYNC_REG = "TRUE" *) (* keep = "true" *)    reg     system_reset_r; 
-(* ASYNC_REG = "TRUE" *) (* keep = "true" *)    reg     system_reset_r2; 
+    //***************************Internal Register Declarations*************************** 
+    (* ASYNC_REG = "TRUE" *) (* keep = "true" *)    reg     system_reset_r; 
+    (* ASYNC_REG = "TRUE" *) (* keep = "true" *)    reg     system_reset_r2; 
 
 
-//*********************************Main Body of Code**********************************
+    //*********************************Main Body of Code**********************************
 
     assign tied_to_ground_vec_i  =   32'h00000000;
     assign tied_to_ground_i      =   1'b0;
     assign tied_to_vcc_i         =   1'b1;
     
     //___________ synchronizing the async reset for ease of timing simulation ________
-    always@(posedge USER_CLK)
-        begin
-       system_reset_r <= `DLY SYSTEM_RESET;
-       system_reset_r2 <= `DLY system_reset_r;
-        end
-
-    /*//____________________________ Counter to read from BRAM __________________________    
-
-    always @(posedge USER_CLK)
-        if(system_reset_r2 || (read_counter_i == "111111111"))  
-        begin
-             read_counter_i   <=  `DLY    9'd0;
-        end
-        else read_counter_i   <=  `DLY    read_counter_i + 9'd1;
-
-    // Assign TX_DATA_OUT to BRAM output
-    always @(posedge USER_CLK)
-        if(system_reset_r2) TX_DATA_OUT <= `DLY 80'h0000000000; 
-        else             TX_DATA_OUT <= `DLY {tx_data_bram_i,tx_data_ram_r[15:0]};   
-
-    // Assign TXCTRL_OUT to BRAM output
-    always @(posedge USER_CLK)
-        if(system_reset_r2) TXCTRL_OUT <= `DLY 8'h0; 
-        else             TXCTRL_OUT <= `DLY tx_ctrl_i;  
-
-
-    //________________________________ BRAM Inference Logic _____________________________    
-
-    assign tx_data_bram_i      = tx_data_ram_r[79:16];
-    assign tx_ctrl_i           = tx_data_ram_r[15:8];
-  
-    initial
-    begin
-           $readmemh("gt_rom_init_tx.dat",rom,0,511);
+    always@(posedge USER_CLK) begin
+        system_reset_r <= `DLY SYSTEM_RESET;
+        system_reset_r2 <= `DLY system_reset_r;
     end
 
-    always @(posedge USER_CLK)
-           tx_data_ram_r <= `DLY rom[read_counter_i];*/
-
-    //___________________ Use PRBS Generator to generate the test pattern_________________
+    //___________________Control the test pattern generator, encoder, error insertion_________________
     reg [15 : 0] tx_data_reg;
     reg [15 : 0] txctrl_reg;
     reg pattern_rst_reg;
@@ -175,7 +135,7 @@ reg     [79:0]  tx_data_ram_r;
     wire [15 : 0] ver_parity_word;
 
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
+        if (system_reset_r2 || TEST_RESET) begin
             word_cnt <= 32'b0;
             bit_pointer <= 16'b1;
         end
@@ -189,7 +149,7 @@ reg     [79:0]  tx_data_ram_r;
             end
 
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
+        if (system_reset_r2 || TEST_RESET) begin
             tx_data_reg <= 16'b0;
             txctrl_reg <= 2'b0;
             encoder_rst_reg <= 1'b1;
@@ -265,7 +225,7 @@ reg     [79:0]  tx_data_ram_r;
         end
 
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
+        if (system_reset_r2 || TEST_RESET) begin
             TX_DATA_OUT <= tx_data_reg;
             TXCTRL_OUT <= txctrl_reg;
         end
@@ -306,34 +266,6 @@ reg     [79:0]  tx_data_ram_r;
 
 endmodule 
 
-module parity_encoder(
-    input clk,
-    input encoder_rst,
-    input [15 : 0] data_word,
-    input data_word_valid,
-    output [15 : 0] hor_parity_word,
-    output [15 : 0] ver_parity_word
-);
-    reg [3 : 0] parity_word_cnt;
-    reg [15 : 0] hor_parity_word_reg;
-    reg [15 : 0] ver_parity_word_reg;
-    always @(posedge clk)
-        if (encoder_rst) begin
-            parity_word_cnt <= 4'd0;
-            hor_parity_word_reg <= 16'h0;
-            ver_parity_word_reg <= 16'h0;
-        end
-        else
-            if (data_word_valid) begin
-                parity_word_cnt <= parity_word_cnt + 1'b1;
-                hor_parity_word_reg[parity_word_cnt] <= ^data_word;
-                ver_parity_word_reg <= ver_parity_word_reg ^ data_word;
-            end
-
-    assign hor_parity_word = hor_parity_word_reg;
-    assign ver_parity_word = ver_parity_word_reg;
-endmodule
-
 module error_insertion(
     input clk,
     input error_insertion_rst,
@@ -348,10 +280,10 @@ module error_insertion(
             error_insert_reg <= 1'b0;
         end
         else begin
-            if (word_cnt == 32'd25)
+            if (word_cnt == 32'h0000_6c25)
                 error_insert_reg <= 1'b1;
             else
-                if (word_cnt == 32'd53)
+                if (word_cnt == 32'h0000_db9a)
                     error_insert_reg <= 1'b1;
                 else
                     error_insert_reg <= 1'b0;
