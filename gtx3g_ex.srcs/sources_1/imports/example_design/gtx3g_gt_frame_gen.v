@@ -151,12 +151,14 @@ reg     [79:0]  tx_data_ram_r;
            tx_data_ram_r <= `DLY rom[read_counter_i];*/
 
     //___________________ Use PRBS Generator to generate the test pattern_________________
+    reg [15 : 0] tx_data_reg;
+    reg [15 : 0] txctrl_reg;
     reg pattern_rst_reg;
     reg encoder_rst_reg;
     reg error_insertion_rst_reg;
     reg pattern_pause_reg;
     reg [31 : 0] word_cnt;
-    reg [31 : 0] bit_pointer;
+    reg [15 : 0] bit_pointer;
     reg [7 : 0] block_word_cnt;
     reg data_word_valid;
 
@@ -168,21 +170,21 @@ reg     [79:0]  tx_data_ram_r;
     always @(posedge USER_CLK)
         if (system_reset_r2 || !TEST_START) begin
             word_cnt <= 32'b0;
-            bit_pointer <= 32'b1;
+            bit_pointer <= 16'b1;
         end
         else
             if (data_word_valid) begin
                 word_cnt <= word_cnt + 1'b1;
-                if (bit_pointer[31])
-                    bit_pointer <= 32'b1;
+                if (bit_pointer[15])
+                    bit_pointer <= 15'b1;
                 else
                     bit_pointer <= bit_pointer << 1;
             end
 
     always @(posedge USER_CLK)
         if (system_reset_r2 || !TEST_START) begin
-            TX_DATA_OUT <= 16'b0;
-            TXCTRL_OUT <= 2'b0;
+            tx_data_reg <= 16'b0;
+            txctrl_reg <= 2'b0;
             encoder_rst_reg <= 1'b1;
             error_insertion_rst_reg <= 1'b1;
             pattern_rst_reg <= 1'b1;
@@ -196,63 +198,77 @@ reg     [79:0]  tx_data_ram_r;
             case (block_word_cnt)
             8'd0: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= 16'h02bc;
-                TXCTRL_OUT <= 2'b01;
+                tx_data_reg <= 16'h02bc;
+                txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b0;
                 encoder_rst_reg <= 1'b1;
             end
             8'd1: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= 16'h03fc;
-                TXCTRL_OUT <= 2'b01;
+                tx_data_reg <= 16'h03fc;
+                txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b0;
                 encoder_rst_reg <= 1'b0;
             end
             8'd16: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= (error_insert)? (pattern_word ^ bit_pointer) : (pattern_word);
-                TXCTRL_OUT <= 2'b00;
+                tx_data_reg <= pattern_word;
+                txctrl_reg <= 2'b00;
                 data_word_valid <= 1'b1;
                 pattern_pause_reg <= 1'b1;
             end
             8'd17: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= (error_insert)? (pattern_word ^ bit_pointer) : (pattern_word);
-                TXCTRL_OUT <= 2'b00;
+                tx_data_reg <= pattern_word;
+                txctrl_reg <= 2'b00;
                 data_word_valid <= 1'b1;
                 pattern_pause_reg <= 1'b1;
             end
             8'd18: begin
                 block_word_cnt <= (ENCODER_EN) ? (block_word_cnt + 1'b1) : (8'd0);
-                TX_DATA_OUT <= 16'h1d1c;
-                TXCTRL_OUT <= 2'b01;
+                tx_data_reg <= 16'h1d1c;
+                txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b1;
             end
             8'd19: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= hor_parity_word;
-                TXCTRL_OUT <= 2'b00;
+                tx_data_reg <= hor_parity_word;
+                txctrl_reg <= 2'b00;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b1;
             end
             8'd20: begin
                 block_word_cnt <= 8'd0;
-                TX_DATA_OUT <= ver_parity_word;
-                TXCTRL_OUT <= 2'b00;
+                tx_data_reg <= ver_parity_word;
+                txctrl_reg <= 2'b00;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b1;
             end
             default: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
-                TX_DATA_OUT <= (error_insert)? (pattern_word ^ bit_pointer) : (pattern_word);
-                TXCTRL_OUT <= 2'b00;
+                tx_data_reg <= pattern_word;
+                txctrl_reg <= 2'b00;
                 data_word_valid <= 1'b1;
                 pattern_pause_reg <= 1'b0;
             end
             endcase
+        end
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2 || !TEST_START) begin
+            TX_DATA_OUT <= tx_data_reg;
+            TXCTRL_OUT <= txctrl_reg;
+        end
+        else begin
+            if (txctrl_reg != 2'b01 && error_insert)
+                TX_DATA_OUT <= tx_data_reg ^ bit_pointer;
+            else
+                TX_DATA_OUT <= tx_data_reg;
+
+            TXCTRL_OUT <= txctrl_reg;
         end
 
 
@@ -267,7 +283,7 @@ reg     [79:0]  tx_data_ram_r;
     parity_encoder parity_encoder_inst_1(
         .clk(USER_CLK),
         .encoder_rst(encoder_rst_reg),
-        .data_word(TX_DATA_OUT),
+        .data_word(tx_data_reg),
         .data_word_valid(data_word_valid),
         .hor_parity_word(hor_parity_word),
         .ver_parity_word(ver_parity_word)
@@ -276,6 +292,7 @@ reg     [79:0]  tx_data_ram_r;
     error_insertion error_insertion_inst_1(
         .clk(USER_CLK),
         .error_insertion_rst(error_insertion_rst_reg),
+        .word_cnt(word_cnt),
         .error_insert(error_insert)
     );
 
@@ -312,6 +329,7 @@ endmodule
 module error_insertion(
     input clk,
     input error_insertion_rst,
+    input [31 : 0] word_cnt,
     input error_insert_mask,
     output error_insert
 );
@@ -322,7 +340,13 @@ module error_insertion(
             error_insert_reg <= 1'b0;
         end
         else begin
-            error_insert_reg <= 1'b0;
+            if (word_cnt == 32'd25)
+                error_insert_reg <= 1'b1;
+            else
+                if (word_cnt == 32'd53)
+                    error_insert_reg <= 1'b1;
+                else
+                    error_insert_reg <= 1'b0;
         end
 
     assign error_insert = error_insert_reg;
