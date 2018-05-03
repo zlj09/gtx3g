@@ -77,9 +77,9 @@ module gtx3g_GT_FRAME_CHECK #
     parameter   START_OF_PACKET_CHAR     =  64'h00000000000000fb,
 
     //Modified by lingjun, add control characters
-    parameter   BYTE_ALIGN_CHAR = 4'h02bc,
-    parameter   BLOCK_ALIGN_CHAR = 4'h03fc,
-    parameter   CLK_COR_CHAR = 4'h1d1c
+    parameter   BYTE_ALIGN_CHAR = 16'h02bc,
+    parameter   BLOCK_ALIGN_CHAR = 16'h03fc,
+    parameter   CLK_COR_CHAR = 16'h1d1c
 )                            
 (
     // User Interface
@@ -484,24 +484,27 @@ endgenerate
 
     //Modified by lingjun, use block word checker to check the incoming data
     //____________________Block Word check____________________
-    //localparam BUF_LEN = 24;
+    //localparam fifo_LEN = 24;
 
     reg [7 : 0] block_word_cnt;
     reg [3 : 0] block_error_reg;
 
-    reg [15 : 0] rx_word_buf [15 : 0];
-    reg [15 : 0] rx_buf_in_reg; 
-    reg [15 : 0] rx_buf_out_reg; 
-    reg rx_buf_shift;
-    reg rx_buf_out_valid;
+    reg [15 : 0] rx_fifo_in_reg;  
+    reg rx_fifo_rst;
+    reg rx_fifo_wr_en;
+    reg rx_fifo_rd_en;
+    reg rx_fifo_valid;
+    reg rx_fifo_out_reg_en;
+    reg [15 : 0] rx_fifo_out_correct;
 
-    reg pattern_rst_reg;
+    reg pattern_rst;
     reg pattern_pause_reg;
 
+    reg pattern_check_en;
     reg pattern_error_reg;
     reg [31 : 0] pattern_error_cnt;
 
-    reg encoder_rst_reg;
+    reg encoder_rst;
     reg data_word_valid;
 
     reg [15 : 0] hor_correct_mask;
@@ -511,28 +514,33 @@ endgenerate
     reg [15 : 0] hor_correct_mask_reg;
     reg [15 : 0] ver_correct_mask_reg;
 
+    wire [15 : 0] rx_fifo_out;
+    wire rx_fifo_full;
+    wire rx_fifo_empty;
     wire [15 : 0] pattern_word;
     wire [15 : 0] hor_parity_word;
     wire [15 : 0] ver_parity_word;
 
-    integer i;
+    integer j;
 
     always @(posedge USER_CLK)
-        if (system_reset_r2 || !TESET_START) begin
+        if (system_reset_r2 || !TEST_START) begin
             block_word_cnt <= 8'd0;
             block_error_reg <= 4'd0;
 
-            rx_buf_in_reg <= 16'h0;
-            rx_buf_shift <= 1'b0;
-            rx_buf_out_valid <= 1'b0;
+            rx_fifo_rst <= 1'b1;
+            rx_fifo_in_reg <= 16'h0;
+            rx_fifo_rd_en <= 1'b0;
+            rx_fifo_wr_en <= 1'b0;
+            rx_fifo_valid <= 1'b0;
+            rx_fifo_out_reg_en <= 1'b0;
 
-            pattern_rst_reg <= 1'b1;
+            pattern_rst <= 1'b1;
             pattern_pause_reg <= 1'b1;
 
-            pattern_error_reg <= 1'b0;
-            pattern_error_cnt <= 32'd0;
+            pattern_check_en <= 1'b0;
 
-            encoder_rst_reg <= 1'b1;
+            encoder_rst <= 1'b1;
             data_word_valid <= 1'b0;
 
             correct_mask_valid <= 1'b0;
@@ -540,16 +548,19 @@ endgenerate
             ver_correct_mask <= 16'h0;
         end
         else begin
-            pattern_rst_reg <= 1'b0;
+            pattern_rst <= 1'b0;
+            rx_fifo_rst <= 1'b0;
             case (block_word_cnt)
             8'd0: begin
                 if (rx_data_r_track == BYTE_ALIGN_CHAR) begin
                     block_word_cnt <= 8'd1;
                     block_error_reg <= 4'd0;
 
+                    rx_fifo_rd_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
+
                     pattern_pause_reg <= 1'b1;
 
-                    encoder_rst_reg <= 1'b1;
+                    encoder_rst <= 1'b1;
                     data_word_valid <= 1'b0;
 
                     correct_mask_valid <= 1'b0;                  
@@ -558,13 +569,13 @@ endgenerate
             8'd1: begin
                 if (rx_data_r_track == BLOCK_ALIGN_CHAR) begin
                     block_word_cnt <= 8'd2;
+
+                    rx_fifo_rd_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
+                    rx_fifo_out_reg_en <= 1'b1;
+
+                    pattern_pause_reg <= (rx_fifo_valid) ? (1'b0) : (1'b1);
                     
-                    if (rx_buf_out_valid)
-                        pattern_pause <= 1'b0;
-                    else
-                        pattern_pause <= 1'b1;
-                    
-                    encoder_rst_reg <= 1'b0;
+                    encoder_rst <= 1'b0;
                     data_word_valid <= 1'b0;
                 end
                 else begin
@@ -574,49 +585,54 @@ endgenerate
             8'd2: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
 
-                rx_buf_shift <= 1'b1;
-                rx_buf_in_reg <= rx_data_r_track;
+                rx_fifo_wr_en <= 1'b1;
+                rx_fifo_in_reg <= rx_data_r_track;
+                rx_fifo_rd_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
+                rx_fifo_out_reg_en <= 1'b1;
+
+                pattern_check_en <= 1'b1;
+
+                data_word_valid <= 1'b1;
+            end
+            8'd16: begin
+                block_word_cnt <= block_word_cnt + 1'b1;
+
+                rx_fifo_wr_en <= 1'b1;
+                rx_fifo_in_reg <= rx_data_r_track;
+                rx_fifo_rd_en <= 1'b0;
+                rx_fifo_out_reg_en <= 1'b1;
+
+                pattern_check_en <= 1'b1;
 
                 data_word_valid <= 1'b1;
             end
             8'd17: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
 
-                rx_buf_shift <= 1'b1;
-                rx_buf_in_reg <= rx_data_r_track;
+                rx_fifo_wr_en <= 1'b1;
+                rx_fifo_in_reg <= rx_data_r_track;
+                rx_fifo_rd_en <= 1'b0;
+                rx_fifo_out_reg_en <= 1'b0;
 
-                pattern_pause <= 1'b1;
+                pattern_check_en <= 1'b1;
+
+                pattern_pause_reg <= 1'b1;
 
                 data_word_valid <= 1'b1;
-
-                if (rx_buf_out_valid && (rx_buf_out_reg != pattern_word) begin
-                   pattern_error_reg <= 1'b1;
-                   pattern_error_cnt <= pattern_error_cnt + 1'b1; 
-                end
-                else begin
-                   pattern_error_reg <= 1'b0;
-                   pattern_error_cnt <= pattern_error_cnt; 
-                end
             end
             8'd18: begin
                 if (rx_data_r_track == CLK_COR_CHAR) begin
                     block_word_cnt <= (DECODER_EN)? (block_word_cnt + 1'b1) : (8'd0);
 
-                    rx_buf_shift <= 1'b0;
-                    rx_buf_out_valid <= 1'b1;
+                    rx_fifo_wr_en <= 1'b0;
+                    rx_fifo_valid <= 1'b1;
+                    rx_fifo_rd_en <= 1'b0;
 
-                    pattern_pause <= 1'b1;
+                    pattern_check_en <= 1'b0;
+
+                    pattern_pause_reg <= 1'b1;
 
                     data_word_valid <= 1'b0;
-
-                    if (rx_buf_out_valid && (rx_buf_out_reg != pattern_word) begin
-                       pattern_error_reg <= 1'b1;
-                       pattern_error_cnt <= pattern_error_cnt + 1'b1; 
-                    end
-                    else begin
-                       pattern_error_reg <= 1'b0;
-                       pattern_error_cnt <= pattern_error_cnt; 
-                    end
                 end
                 else begin
                     block_error_reg <= 4'd2;
@@ -629,7 +645,7 @@ endgenerate
                 hor_correct_mask <= hor_parity_word ^ rx_data_r_track;
             end
             8'd20: begin
-                block_word_cnt <= block_word_cnt + 1'b1;
+                block_word_cnt <= 8'd0;
 
                 correct_mask_valid <= 1'b1;
                 ver_correct_mask <= ver_parity_word ^ rx_data_r_track;
@@ -637,12 +653,58 @@ endgenerate
             default:begin
                 block_word_cnt <= block_word_cnt + 1'b1;
 
-                rx_buf_shift <= 1'b1;
-                rx_buf_in_reg <= rx_data_r_track;
+                rx_fifo_wr_en <= 1'b1;
+                rx_fifo_in_reg <= rx_data_r_track;
+                rx_fifo_rd_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
+                rx_fifo_out_reg_en <= 1'b1;
+
+                pattern_check_en <= 1'b1;
 
                 data_word_valid <= 1'b1;
 
-                if (rx_buf_out_valid && (rx_buf_out_reg != pattern_word) begin
+                pattern_check_en <= 1'b1;
+            end
+
+            endcase
+        end
+
+    integer fp;
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2 || !TEST_START) begin
+            rx_fifo_out_correct <= 16'h0;
+
+            hor_correct_mask_reg <= 16'b0;
+            ver_correct_mask_reg <= 16'b0;
+
+            fp = $fopen("LFSR_parameters.log", "w");
+        end 
+        else begin
+            if (correct_mask_valid) begin
+                hor_correct_mask_reg <= hor_correct_mask;
+                ver_correct_mask_reg <= ver_correct_mask;
+                $fwrite(fp, "hor_correct_mask: %16b\n", hor_correct_mask);
+                $fwrite(fp, "ver_correct_mask: %16b\n", ver_correct_mask);
+            end
+            else 
+                if (rx_fifo_out_reg_en)
+                    hor_correct_mask_reg <= hor_correct_mask_reg >> 1;
+
+            if (rx_fifo_out_reg_en)
+                if (DECODER_EN && hor_correct_mask_reg[0])
+                    rx_fifo_out_correct <= rx_fifo_out ^ ver_correct_mask_reg;
+                else
+                    rx_fifo_out_correct <= rx_fifo_out;
+        end
+
+    always @(posedge USER_CLK)
+        if (system_reset_r2 || !TEST_START) begin
+            pattern_error_reg <= 1'b0;
+            pattern_error_cnt <= 32'd0;
+        end
+        else
+            if (pattern_check_en) begin
+                if (rx_fifo_valid && (rx_fifo_out_correct != pattern_word)) begin
                    pattern_error_reg <= 1'b1;
                    pattern_error_cnt <= pattern_error_cnt + 1'b1; 
                 end
@@ -652,43 +714,9 @@ endgenerate
                 end
             end
 
-            endcase
-        end
-
-
-    always @(posedge USER_CLK)
-        if (system_reset_r2 || !TEST_START) begin
-            for (i = 0; i < BUF_LEN; i)
-                rx_word_buf[i] <= 16'h0;
-            rx_buf_out_reg <= 16'h0;
-
-            hor_correct_mask_reg <= 16'b0;
-            ver_correct_mask_reg <= 16'b0;
-        end 
-        else begin
-            if (correct_mask_valid) begin
-                hor_correct_mask_reg <= hor_correct_mask;
-                ver_correct_mask_reg <= ver_correct_mask;
-            end
-            else 
-                if (rx_buf_shift)
-                    hor_correct_mask_reg <= hor_correct_mask_reg >> 1;
-
-            if (rx_buf_shift) begin
-                rx_word_buf[0] <= rx_buf_in_reg;
-                for (i = 1; i < BUF_LEN; i)
-                    rx_word_buf[i] <= rx_word_buf[i - 1];
-
-                if (DECODER_EN && hor_correct_mask_reg[0])
-                    rx_buf_out_reg <= rx_word_buf[15] ^ ver_correct_mask_reg;
-                else 
-                    rx_buf_out_reg <= rx_word_buf[18];
-            end
-        end
-
     pattern_gen pattern_gen_inst_2(
         .clk(USER_CLK),
-        .pattern_rst(pattern_rst_reg),
+        .pattern_rst(pattern_rst),
         .pattern_mode(PATTERN_MODE),
         .pattern_pause(pattern_pause_reg),
         .pattern_word(pattern_word)
@@ -696,11 +724,22 @@ endgenerate
 
     parity_encoder parity_encoder_inst_2(
         .clk(USER_CLK),
-        .encoder_rst(encoder_rst_reg),
-        .data_word(rx_buf_in_reg),
+        .encoder_rst(encoder_rst),
+        .data_word(rx_fifo_in_reg),
         .data_word_valid(data_word_valid),
         .hor_parity_word(hor_parity_word),
         .ver_parity_word(ver_parity_word)
     );
     
+    rx_word_fifo rx_word_fifo_inst_1(
+        .clk(USER_CLK),
+        .srst(rx_fifo_rst),
+        .din(rx_fifo_in_reg),
+        .wr_en(rx_fifo_wr_en),
+        .rd_en(rx_fifo_rd_en),
+        .dout(rx_fifo_out),
+        .full(rx_fifo_full),
+        .empty(rx_fifo_empty)
+    );
+
 endmodule           

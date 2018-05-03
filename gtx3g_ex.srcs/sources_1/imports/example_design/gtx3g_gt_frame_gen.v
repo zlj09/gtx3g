@@ -72,9 +72,9 @@ module gtx3g_GT_FRAME_GEN #
     parameter   WORDS_IN_BRAM =   512,
 
     // Modified by lingjun, add align characters
-    parameter   BYTE_ALIGN_CHAR = 4'h02bc,
-    parameter   BLOCK_ALIGN_CHAR = 4'h03fc,
-    parameter   CLK_COR_CHAR = 4'h1d1c
+    parameter   BYTE_ALIGN_CHAR = 16'h02bc,
+    parameter   BLOCK_ALIGN_CHAR = 16'h03fc,
+    parameter   CLK_COR_CHAR = 16'h1d1c
 
 )
 (
@@ -300,6 +300,7 @@ reg     [79:0]  tx_data_ram_r;
         .clk(USER_CLK),
         .error_insertion_rst(error_insertion_rst_reg),
         .word_cnt(word_cnt),
+        .error_insert_mask(ERROR_INSERT_MASK),
         .error_insert(error_insert)
     );
 

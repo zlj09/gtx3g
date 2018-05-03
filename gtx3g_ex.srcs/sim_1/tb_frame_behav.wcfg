@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_frame_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_frame" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="353813333fs"></ZoomStartTime>
+      <ZoomEndTime time="452713334fs"></ZoomEndTime>
+      <Cursor1Time time="365013000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="199"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="142" />
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/USER_CLK" type="logic">
+      <obj_property name="ElementShortName">USER_CLK</obj_property>
+      <obj_property name="ObjectShortName">USER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/ENCODER_EN" type="logic">
+      <obj_property name="ElementShortName">ENCODER_EN</obj_property>
+      <obj_property name="ObjectShortName">ENCODER_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/PATTERN_MODE" type="array">
+      <obj_property name="ElementShortName">PATTERN_MODE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MODE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/TEST_START" type="logic">
+      <obj_property name="ElementShortName">TEST_START</obj_property>
+      <obj_property name="ObjectShortName">TEST_START</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insert" type="logic">
+      <obj_property name="ElementShortName">error_insert</obj_property>
+      <obj_property name="ObjectShortName">error_insert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/TX_DATA_OUT" type="array">
+      <obj_property name="ElementShortName">TX_DATA_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">TX_DATA_OUT[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/TXCTRL_OUT" type="array">
+      <obj_property name="ElementShortName">TXCTRL_OUT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TXCTRL_OUT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r_track" type="array">
+      <obj_property name="ElementShortName">rx_data_r_track[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r_track[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/block_word_cnt" type="array">
+      <obj_property name="ElementShortName">block_word_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">block_word_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/block_error_reg" type="array">
+      <obj_property name="ElementShortName">block_error_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">block_error_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_in_reg" type="array">
+      <obj_property name="ElementShortName">rx_fifo_in_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_in_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_wr_en" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_rd_en" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_out" type="array">
+      <obj_property name="ElementShortName">rx_fifo_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_full" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_empty" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_out_correct" type="array">
+      <obj_property name="ElementShortName">rx_fifo_out_correct[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_out_correct[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/pattern_word" type="array">
+      <obj_property name="ElementShortName">pattern_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/pattern_error_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_error_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_error_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/pattern_error_cnt" type="array">
+      <obj_property name="ElementShortName">pattern_error_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_error_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/pattern_check_en" type="logic">
+      <obj_property name="ElementShortName">pattern_check_en</obj_property>
+      <obj_property name="ObjectShortName">pattern_check_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_out_reg_en" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_out_reg_en</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_out_reg_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/pattern_pause_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_pause_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_pause_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/ver_correct_mask" type="array">
+      <obj_property name="ElementShortName">ver_correct_mask[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_correct_mask[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/hor_correct_mask" type="array">
+      <obj_property name="ElementShortName">hor_correct_mask[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_correct_mask[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/hor_parity_word" type="array">
+      <obj_property name="ElementShortName">hor_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/ver_parity_word" type="array">
+      <obj_property name="ElementShortName">ver_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tied_to_ground_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_ground_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tied_to_vcc_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_vcc_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_vcc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tied_to_ground_vec_i" type="array">
+      <obj_property name="ElementShortName">tied_to_ground_vec_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_vec_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tx_data_bram_i" type="array">
+      <obj_property name="ElementShortName">tx_data_bram_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_bram_i[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tx_ctrl_i" type="array">
+      <obj_property name="ElementShortName">tx_ctrl_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_ctrl_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/read_counter_i" type="array">
+      <obj_property name="ElementShortName">read_counter_i[8:0]</obj_property>
+      <obj_property name="ObjectShortName">read_counter_i[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/rom" type="array">
+      <obj_property name="ElementShortName">rom[0:511][79:0]</obj_property>
+      <obj_property name="ObjectShortName">rom[0:511][79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tx_data_ram_r" type="array">
+      <obj_property name="ElementShortName">tx_data_ram_r[79:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_ram_r[79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/system_reset_r" type="logic">
+      <obj_property name="ElementShortName">system_reset_r</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/ERROR_INSERT_MASK" type="array">
+      <obj_property name="ElementShortName">ERROR_INSERT_MASK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ERROR_INSERT_MASK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/system_reset_r2" type="logic">
+      <obj_property name="ElementShortName">system_reset_r2</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/SYSTEM_RESET" type="logic">
+      <obj_property name="ElementShortName">SYSTEM_RESET</obj_property>
+      <obj_property name="ObjectShortName">SYSTEM_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/tx_data_reg" type="array">
+      <obj_property name="ElementShortName">tx_data_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/txctrl_reg" type="array">
+      <obj_property name="ElementShortName">txctrl_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">txctrl_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/pattern_rst_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_rst_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_rst_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/encoder_rst_reg" type="logic">
+      <obj_property name="ElementShortName">encoder_rst_reg</obj_property>
+      <obj_property name="ObjectShortName">encoder_rst_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_rst_reg" type="logic">
+      <obj_property name="ElementShortName">error_insertion_rst_reg</obj_property>
+      <obj_property name="ObjectShortName">error_insertion_rst_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/word_cnt" type="array">
+      <obj_property name="ElementShortName">word_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">word_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/bit_pointer" type="array">
+      <obj_property name="ElementShortName">bit_pointer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_pointer[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/block_word_cnt" type="array">
+      <obj_property name="ElementShortName">block_word_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">block_word_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/data_word_valid" type="logic">
+      <obj_property name="ElementShortName">data_word_valid</obj_property>
+      <obj_property name="ObjectShortName">data_word_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/pattern_word" type="array">
+      <obj_property name="ElementShortName">pattern_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/hor_parity_word" type="array">
+      <obj_property name="ElementShortName">hor_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/ver_parity_word" type="array">
+      <obj_property name="ElementShortName">ver_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/WORDS_IN_BRAM" type="array">
+      <obj_property name="ElementShortName">WORDS_IN_BRAM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WORDS_IN_BRAM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/BYTE_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/BLOCK_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/CLK_COR_CHAR" type="array">
+      <obj_property name="ElementShortName">CLK_COR_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_COR_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RX_DATA_IN" type="array">
+      <obj_property name="ElementShortName">RX_DATA_IN[15:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_DATA_IN[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RXCTRL_IN" type="array">
+      <obj_property name="ElementShortName">RXCTRL_IN[1:0]</obj_property>
+      <obj_property name="ObjectShortName">RXCTRL_IN[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RXENPCOMMADET_OUT" type="logic">
+      <obj_property name="ElementShortName">RXENPCOMMADET_OUT</obj_property>
+      <obj_property name="ObjectShortName">RXENPCOMMADET_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RXENMCOMMADET_OUT" type="logic">
+      <obj_property name="ElementShortName">RXENMCOMMADET_OUT</obj_property>
+      <obj_property name="ObjectShortName">RXENMCOMMADET_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RX_ENCHAN_SYNC_OUT" type="logic">
+      <obj_property name="ElementShortName">RX_ENCHAN_SYNC_OUT</obj_property>
+      <obj_property name="ObjectShortName">RX_ENCHAN_SYNC_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RX_CHANBOND_SEQ_IN" type="logic">
+      <obj_property name="ElementShortName">RX_CHANBOND_SEQ_IN</obj_property>
+      <obj_property name="ObjectShortName">RX_CHANBOND_SEQ_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/INC_IN" type="logic">
+      <obj_property name="ElementShortName">INC_IN</obj_property>
+      <obj_property name="ObjectShortName">INC_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/INC_OUT" type="logic">
+      <obj_property name="ElementShortName">INC_OUT</obj_property>
+      <obj_property name="ObjectShortName">INC_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/PATTERN_MATCHB_OUT" type="logic">
+      <obj_property name="ElementShortName">PATTERN_MATCHB_OUT</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MATCHB_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RESET_ON_ERROR_IN" type="logic">
+      <obj_property name="ElementShortName">RESET_ON_ERROR_IN</obj_property>
+      <obj_property name="ObjectShortName">RESET_ON_ERROR_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/ERROR_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">ERROR_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ERROR_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/TRACK_DATA_OUT" type="logic">
+      <obj_property name="ElementShortName">TRACK_DATA_OUT</obj_property>
+      <obj_property name="ObjectShortName">TRACK_DATA_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/USER_CLK" type="logic">
+      <obj_property name="ElementShortName">USER_CLK</obj_property>
+      <obj_property name="ObjectShortName">USER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/SYSTEM_RESET" type="logic">
+      <obj_property name="ElementShortName">SYSTEM_RESET</obj_property>
+      <obj_property name="ObjectShortName">SYSTEM_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/TEST_START" type="logic">
+      <obj_property name="ElementShortName">TEST_START</obj_property>
+      <obj_property name="ObjectShortName">TEST_START</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/PATTERN_MODE" type="array">
+      <obj_property name="ElementShortName">PATTERN_MODE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MODE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/DECODER_EN" type="logic">
+      <obj_property name="ElementShortName">DECODER_EN</obj_property>
+      <obj_property name="ObjectShortName">DECODER_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/DATA_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">DATA_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/PRBS_ERROR_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">PRBS_ERROR_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PRBS_ERROR_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/TEST_OVER_OUT" type="logic">
+      <obj_property name="ElementShortName">TEST_OVER_OUT</obj_property>
+      <obj_property name="ObjectShortName">TEST_OVER_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/PRBS_ERROR_OUT" type="logic">
+      <obj_property name="ElementShortName">PRBS_ERROR_OUT</obj_property>
+      <obj_property name="ObjectShortName">PRBS_ERROR_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/reset_on_error_in_r" type="logic">
+      <obj_property name="ElementShortName">reset_on_error_in_r</obj_property>
+      <obj_property name="ObjectShortName">reset_on_error_in_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/reset_on_error_in_r2" type="logic">
+      <obj_property name="ElementShortName">reset_on_error_in_r2</obj_property>
+      <obj_property name="ObjectShortName">reset_on_error_in_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/system_reset_r" type="logic">
+      <obj_property name="ElementShortName">system_reset_r</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/system_reset_r2" type="logic">
+      <obj_property name="ElementShortName">system_reset_r2</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/begin_r" type="logic">
+      <obj_property name="ElementShortName">begin_r</obj_property>
+      <obj_property name="ObjectShortName">begin_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/data_error_detected_r" type="logic">
+      <obj_property name="ElementShortName">data_error_detected_r</obj_property>
+      <obj_property name="ObjectShortName">data_error_detected_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/error_count_r" type="array">
+      <obj_property name="ElementShortName">error_count_r[32:0]</obj_property>
+      <obj_property name="ObjectShortName">error_count_r[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/error_detected_r" type="logic">
+      <obj_property name="ElementShortName">error_detected_r</obj_property>
+      <obj_property name="ObjectShortName">error_detected_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/read_counter_i" type="array">
+      <obj_property name="ElementShortName">read_counter_i[9:0]</obj_property>
+      <obj_property name="ObjectShortName">read_counter_i[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rom" type="array">
+      <obj_property name="ElementShortName">rom[0:511][79:0]</obj_property>
+      <obj_property name="ObjectShortName">rom[0:511][79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r" type="array">
+      <obj_property name="ElementShortName">rx_data_r[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/start_of_packet_detected_r" type="logic">
+      <obj_property name="ElementShortName">start_of_packet_detected_r</obj_property>
+      <obj_property name="ObjectShortName">start_of_packet_detected_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/track_data_r" type="logic">
+      <obj_property name="ElementShortName">track_data_r</obj_property>
+      <obj_property name="ObjectShortName">track_data_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/track_data_r2" type="logic">
+      <obj_property name="ElementShortName">track_data_r2</obj_property>
+      <obj_property name="ObjectShortName">track_data_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/track_data_r3" type="logic">
+      <obj_property name="ElementShortName">track_data_r3</obj_property>
+      <obj_property name="ObjectShortName">track_data_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_ram_r" type="array">
+      <obj_property name="ElementShortName">rx_data_ram_r[79:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_ram_r[79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r2" type="array">
+      <obj_property name="ElementShortName">rx_data_r2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r3" type="array">
+      <obj_property name="ElementShortName">rx_data_r3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r3[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r4" type="array">
+      <obj_property name="ElementShortName">rx_data_r4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r5" type="array">
+      <obj_property name="ElementShortName">rx_data_r5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r5[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r6" type="array">
+      <obj_property name="ElementShortName">rx_data_r6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r6[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rxctrl_r" type="array">
+      <obj_property name="ElementShortName">rxctrl_r[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rxctrl_r[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rxctrl_r2" type="array">
+      <obj_property name="ElementShortName">rxctrl_r2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rxctrl_r2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rxctrl_r3" type="array">
+      <obj_property name="ElementShortName">rxctrl_r3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rxctrl_r3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_chanbond_seq_r" type="logic">
+      <obj_property name="ElementShortName">rx_chanbond_seq_r</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_seq_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_chanbond_seq_r2" type="logic">
+      <obj_property name="ElementShortName">rx_chanbond_seq_r2</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_seq_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_chanbond_seq_r3" type="logic">
+      <obj_property name="ElementShortName">rx_chanbond_seq_r3</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_seq_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/sel" type="array">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/bram_data_r" type="array">
+      <obj_property name="ElementShortName">bram_data_r[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_data_r[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/error_detected_c" type="logic">
+      <obj_property name="ElementShortName">error_detected_c</obj_property>
+      <obj_property name="ObjectShortName">error_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/next_begin_c" type="logic">
+      <obj_property name="ElementShortName">next_begin_c</obj_property>
+      <obj_property name="ObjectShortName">next_begin_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/next_data_error_detected_c" type="logic">
+      <obj_property name="ElementShortName">next_data_error_detected_c</obj_property>
+      <obj_property name="ObjectShortName">next_data_error_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/next_track_data_c" type="logic">
+      <obj_property name="ElementShortName">next_track_data_c</obj_property>
+      <obj_property name="ObjectShortName">next_track_data_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/start_of_packet_detected_c" type="logic">
+      <obj_property name="ElementShortName">start_of_packet_detected_c</obj_property>
+      <obj_property name="ObjectShortName">start_of_packet_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/chanbondseq_in_data" type="logic">
+      <obj_property name="ElementShortName">chanbondseq_in_data</obj_property>
+      <obj_property name="ObjectShortName">chanbondseq_in_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/input_to_chanbond_data_i" type="logic">
+      <obj_property name="ElementShortName">input_to_chanbond_data_i</obj_property>
+      <obj_property name="ObjectShortName">input_to_chanbond_data_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/input_to_chanbond_reg_i" type="logic">
+      <obj_property name="ElementShortName">input_to_chanbond_reg_i</obj_property>
+      <obj_property name="ObjectShortName">input_to_chanbond_reg_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_chanbond_reg" type="array">
+      <obj_property name="ElementShortName">rx_chanbond_reg[0:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_reg[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_aligned" type="array">
+      <obj_property name="ElementShortName">rx_data_aligned[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_aligned[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_has_start_char_c" type="logic">
+      <obj_property name="ElementShortName">rx_data_has_start_char_c</obj_property>
+      <obj_property name="ObjectShortName">rx_data_has_start_char_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/tied_to_ground_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_ground_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/tied_to_ground_vec_i" type="array">
+      <obj_property name="ElementShortName">tied_to_ground_vec_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_vec_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/tied_to_vcc_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_vcc_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_vcc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/sm_link" type="logic">
+      <obj_property name="ElementShortName">sm_link</obj_property>
+      <obj_property name="ObjectShortName">sm_link</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/link_ctr" type="array">
+      <obj_property name="ElementShortName">link_ctr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">link_ctr[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/rx_fifo_rst" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_rst</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/pattern_rst" type="logic">
+      <obj_property name="ElementShortName">pattern_rst</obj_property>
+      <obj_property name="ObjectShortName">pattern_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/encoder_rst" type="logic">
+      <obj_property name="ElementShortName">encoder_rst</obj_property>
+      <obj_property name="ObjectShortName">encoder_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/data_word_valid" type="logic">
+      <obj_property name="ElementShortName">data_word_valid</obj_property>
+      <obj_property name="ObjectShortName">data_word_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/correct_mask_valid" type="logic">
+      <obj_property name="ElementShortName">correct_mask_valid</obj_property>
+      <obj_property name="ObjectShortName">correct_mask_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/hor_correct_mask_reg" type="array">
+      <obj_property name="ElementShortName">hor_correct_mask_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_correct_mask_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/ver_correct_mask_reg" type="array">
+      <obj_property name="ElementShortName">ver_correct_mask_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_correct_mask_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/j" type="array">
+      <obj_property name="ElementShortName">j[31:0]</obj_property>
+      <obj_property name="ObjectShortName">j[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/fp" type="array">
+      <obj_property name="ElementShortName">fp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RX_DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">RX_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/RXCTRL_WIDTH" type="array">
+      <obj_property name="ElementShortName">RXCTRL_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RXCTRL_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/WORDS_IN_BRAM" type="array">
+      <obj_property name="ElementShortName">WORDS_IN_BRAM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WORDS_IN_BRAM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/CHANBOND_SEQ_LEN" type="array">
+      <obj_property name="ElementShortName">CHANBOND_SEQ_LEN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CHANBOND_SEQ_LEN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/COMMA_DOUBLE" type="array">
+      <obj_property name="ElementShortName">COMMA_DOUBLE[15:0]</obj_property>
+      <obj_property name="ObjectShortName">COMMA_DOUBLE[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/START_OF_PACKET_CHAR" type="array">
+      <obj_property name="ElementShortName">START_OF_PACKET_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">START_OF_PACKET_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/BYTE_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/BLOCK_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/CLK_COR_CHAR" type="array">
+      <obj_property name="ElementShortName">CLK_COR_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_COR_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/ST_LINK_DOWN" type="logic">
+      <obj_property name="ElementShortName">ST_LINK_DOWN</obj_property>
+      <obj_property name="ObjectShortName">ST_LINK_DOWN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gt0_frame_check/ST_LINK_UP" type="logic">
+      <obj_property name="ElementShortName">ST_LINK_UP</obj_property>
+      <obj_property name="ObjectShortName">ST_LINK_UP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/pattern_pause_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_pause_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_pause_reg</obj_property>
+   </wvobject>
+</wave_config>

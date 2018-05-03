@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu May  3 16:18:09 2018
+# Process ID: 14220
+# Current directory: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/rx_word_fifo_synth_1
+# Command line: vivado.exe -log rx_word_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rx_word_fifo.tcl
+# Log file: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/rx_word_fifo_synth_1/rx_word_fifo.vds
+# Journal file: f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/rx_word_fifo_synth_1\vivado.jou
+#-----------------------------------------------------------
+source rx_word_fifo.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 247.469 ; gain = 27.363
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 564.078 ; gain = 0.000
+INFO: [Synth 8-638] synthesizing module 'rx_word_fifo' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/rx_word_fifo/synth/rx_word_fifo.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'rx_word_fifo' (24#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/rx_word_fifo/synth/rx_word_fifo.vhd:72]
+Finished RTL Elaboration : Time (s): cpu = 00:01:05 ; elapsed = 00:01:49 . Memory (MB): peak = 672.813 ; gain = 108.734
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:59 . Memory (MB): peak = 672.813 ; gain = 108.734
+INFO: [Device 21-403] Loading part xc7z100iffg900-2L
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 822.520 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:04:33 . Memory (MB): peak = 822.520 ; gain = 258.441
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:04:33 . Memory (MB): peak = 822.520 ; gain = 258.441
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:04:34 . Memory (MB): peak = 822.520 ; gain = 258.441
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:04:38 . Memory (MB): peak = 822.520 ; gain = 258.441
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:04:41 . Memory (MB): peak = 822.520 ; gain = 258.441
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:05:13 . Memory (MB): peak = 832.734 ; gain = 268.656
+Finished Timing Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:05:13 . Memory (MB): peak = 843.879 ; gain = 279.801
+Finished Technology Mapping : Time (s): cpu = 00:01:40 ; elapsed = 00:05:14 . Memory (MB): peak = 853.023 ; gain = 288.945
+Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:05:16 . Memory (MB): peak = 853.023 ; gain = 288.945
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:05:17 . Memory (MB): peak = 853.023 ; gain = 288.945
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:41 ; elapsed = 00:05:18 . Memory (MB): peak = 853.023 ; gain = 288.945
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:41 ; elapsed = 00:05:18 . Memory (MB): peak = 853.023 ; gain = 288.945
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:41 ; elapsed = 00:05:18 . Memory (MB): peak = 853.023 ; gain = 288.945
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:41 ; elapsed = 00:05:18 . Memory (MB): peak = 853.023 ; gain = 288.945
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     4|
+|2     |LUT2     |     4|
+|3     |LUT3     |     5|
+|4     |LUT4     |     2|
+|5     |LUT5     |     2|
+|6     |LUT6     |     4|
+|7     |RAMB18E1 |     1|
+|8     |FDRE     |    16|
+|9     |FDSE     |     4|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:41 ; elapsed = 00:05:18 . Memory (MB): peak = 853.023 ; gain = 288.945
+synth_design: Time (s): cpu = 00:01:47 ; elapsed = 00:08:08 . Memory (MB): peak = 861.516 ; gain = 595.828
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:28 . Memory (MB): peak = 861.516 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:00 ; elapsed = 00:00:21 . Memory (MB): peak = 861.516 ; gain = 0.000
+get_ips: Time (s): cpu = 00:00:00 ; elapsed = 00:00:16 . Memory (MB): peak = 861.516 ; gain = 0.000
+config_ip_cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:56 . Memory (MB): peak = 861.516 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 861.516 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:02:12 . Memory (MB): peak = 861.516 ; gain = 0.000

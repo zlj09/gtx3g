@@ -56,12 +56,12 @@ module tb_frame(
 		.RX_DATA_WIDTH ( 16 ),
 		.RXCTRL_WIDTH ( 2 ),
 		.COMMA_DOUBLE ( 16'h02bc ),
-		.WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
+		.WORDS_IN_BRAM( 512 ),
 		.START_OF_PACKET_CHAR ( 16'h02bc ),
 
-		.BYTE_ALIGN_CHAR(4'h02bc),
-		.BLOCK_ALIGN_CHAR(4'h03fc),
-		.CLK_COR_CHAR(4'h1d1c)
+		.BYTE_ALIGN_CHAR(16'h02bc),
+		.BLOCK_ALIGN_CHAR(16'h03fc),
+		.CLK_COR_CHAR(16'h1d1c)
     )
     gt0_frame_check
     (
@@ -93,4 +93,18 @@ module tb_frame(
         .PATTERN_MODE					(PATTERN_MODE),
         .DECODER_EN						(ENCODER_EN)
     );
+endmodule
+
+
+module FD(
+	input D, 
+	input C,
+	output Q
+);
+	reg Q_reg;
+	
+	always @(posedge C)
+		Q_reg <= D;
+
+	assign Q = Q_reg;
 endmodule
