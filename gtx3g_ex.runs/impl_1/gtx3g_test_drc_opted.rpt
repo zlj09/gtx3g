@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Fri May  4 18:06:45 2018
+| Date         : Fri May  4 19:42:53 2018
 | Host         : idea-PC running 64-bit major release  (build 9200)
 | Command      : report_drc -file gtx3g_test_drc_opted.rpt
 | Design       : gtx3g_test

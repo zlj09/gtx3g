@@ -9,22 +9,23 @@
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source gtx3g_test.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 247.953 ; gain = 28.371
 Command: synth_design -top gtx3g_test -part xc7z100iffg900-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8036 
+INFO: Helper process launched with PID 8208 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 568.078 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 568.254 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'gtx3g_test' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:2]
 	Parameter TRANS_TIMES bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'rst_generator' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:268]
+INFO: [Synth 8-638] synthesizing module 'rst_generator' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:287]
 	Parameter valid_high bound to: 1'b1 
 	Parameter cnt_num bound to: 10'b0000010000 
-WARNING: [Synth 8-6014] Unused sequential element cnt_start_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:293]
-INFO: [Synth 8-256] done synthesizing module 'rst_generator' (1#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:268]
+WARNING: [Synth 8-6014] Unused sequential element cnt_start_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:312]
+INFO: [Synth 8-256] done synthesizing module 'rst_generator' (1#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:287]
 INFO: [Synth 8-638] synthesizing module 'simple_uart' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:1]
 	Parameter BAUD_RATE bound to: 9600 - type: integer 
 	Parameter BUF_LEN bound to: 8'b00010000 
@@ -118,8 +119,8 @@ INFO: [Synth 8-638] synthesizing module 'gtx3g_common_reset' [f:/Programs/Verilo
 	Parameter ASSERT_COMMON_RESET bound to: 1'b1 
 INFO: [Synth 8-226] default block is never used [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:121]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_common_reset' (8#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:74]
-INFO: [Synth 8-638] synthesizing module 'gtx3g' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/realtime/gtx3g_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g' (9#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/realtime/gtx3g_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'gtx3g' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/gtx3g_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g' (9#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/gtx3g_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_support' (10#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_support.v:70]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_GT_FRAME_GEN' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:69]
 	Parameter WORDS_IN_BRAM bound to: 512 - type: integer 
@@ -186,8 +187,8 @@ INFO: [Synth 8-638] synthesizing module 'FD' [G:/Xilinx/Vivado/Vivado/2017.2/scr
 INFO: [Synth 8-256] done synthesizing module 'FD' (23#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3723]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:411]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:426]
-INFO: [Synth 8-638] synthesizing module 'rx_word_fifo' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/realtime/rx_word_fifo_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rx_word_fifo' (24#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/realtime/rx_word_fifo_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'rx_word_fifo' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/rx_word_fifo_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rx_word_fifo' (24#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/rx_word_fifo_stub.v:6]
 WARNING: [Synth 8-6014] Unused sequential element track_data_r2_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:241]
 WARNING: [Synth 8-6014] Unused sequential element track_data_r3_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:244]
 WARNING: [Synth 8-6014] Unused sequential element rx_chanbond_seq_r3_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:300]
@@ -199,11 +200,11 @@ WARNING: [Synth 8-6014] Unused sequential element RX_ENCHAN_SYNC_OUT_reg was rem
 WARNING: [Synth 8-6014] Unused sequential element pattern_rst_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:501]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_FRAME_CHECK' (25#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:69]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_exdes' (26#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:70]
-WARNING: [Synth 8-6014] Unused sequential element msg_status_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:154]
-WARNING: [Synth 8-3848] Net string_reg[28] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:141]
-WARNING: [Synth 8-3848] Net string_reg[29] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:141]
-WARNING: [Synth 8-3848] Net string_reg[30] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:141]
-WARNING: [Synth 8-3848] Net string_reg[31] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:141]
+WARNING: [Synth 8-6014] Unused sequential element msg_status_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:172]
+WARNING: [Synth 8-3848] Net string_reg[28] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
+WARNING: [Synth 8-3848] Net string_reg[29] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
+WARNING: [Synth 8-3848] Net string_reg[30] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
+WARNING: [Synth 8-3848] Net string_reg[31] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
 WARNING: [Synth 8-3848] Net rxn_in_i in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:37]
 WARNING: [Synth 8-3848] Net rxp_in_i in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:38]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_test' (27#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:2]
@@ -243,9 +244,8 @@ WARNING: [Synth 8-3331] design error_insertion has unconnected port error_insert
 WARNING: [Synth 8-3331] design gtx3g_GT_USRCLK_SOURCE has unconnected port GT1_TXOUTCLK_IN
 WARNING: [Synth 8-3331] design gtx3g_support has unconnected port gt0_txpmareset_in
 WARNING: [Synth 8-3331] design gtx3g_support has unconnected port gt1_txpmareset_in
-WARNING: [Synth 8-3331] design gtx3g_test has unconnected port uart_z7_in
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 568.078 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 568.254 ; gain = 0.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -254,12 +254,12 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:239]
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:239]
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:239]
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:239]
+WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
+WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
+WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
+WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 568.078 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 568.254 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -268,12 +268,12 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/dcp5/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/dcp5/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1'
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-9268-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1'
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp5/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp5/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1'
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1'
 Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc]
 WARNING: [Vivado 12-507] No nets matched 'sysclk_in_IBUF'. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:124]
 WARNING: [Vivado 12-507] No nets matched 'gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/q0_clk1_refclk_i'. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:125]
@@ -289,18 +289,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FD => FDRE: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 892.465 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 893.113 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1' at clock pin 'clk' is different from the actual clock period '6.667', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1' at clock pin 'clk' is different from the actual clock period '6.667', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 892.465 ; gain = 324.387
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 893.113 ; gain = 324.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z100iffg900-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 892.465 ; gain = 324.387
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:53 . Memory (MB): peak = 893.113 ; gain = 324.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -309,9 +309,9 @@ Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gt0_frame_check/rx_word
 Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 892.465 ; gain = 324.387
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:53 . Memory (MB): peak = 893.113 ; gain = 324.859
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:296]
+WARNING: [Synth 8-6014] Unused sequential element rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:315]
 INFO: [Synth 8-5544] ROM "cnt_char" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cnt_bit" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element num_char_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:41]
@@ -359,14 +359,13 @@ INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[3]" won't be mapped to Block
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:95]
-WARNING: [Synth 8-6014] Unused sequential element cnt_trans_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:152]
+WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:97]
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:49 . Memory (MB): peak = 892.465 ; gain = 324.387
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 893.113 ; gain = 324.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -406,12 +405,12 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 7     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 11    
-	                1 Bit    Registers := 93    
+	                1 Bit    Registers := 94    
 +---Muxes : 
 	 513 Input     80 Bit        Muxes := 8     
 	   2 Input     16 Bit        Muxes := 26    
 	   2 Input     13 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 8     
+	   2 Input      8 Bit        Muxes := 12    
 	   4 Input      8 Bit        Muxes := 1     
 	   9 Input      8 Bit        Muxes := 4     
 	   2 Input      7 Bit        Muxes := 4     
@@ -422,7 +421,7 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 4     
 	   5 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 122   
+	   2 Input      1 Bit        Muxes := 128   
 	   5 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 6     
 	   9 Input      1 Bit        Muxes := 50    
@@ -444,10 +443,10 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 31    
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 12    
+	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 18    
 	   4 Input      1 Bit        Muxes := 1     
 Module rst_generator 
 Detailed RTL Component Info : 
@@ -699,10 +698,9 @@ WARNING: [Synth 8-6014] Unused sequential element gt0_frame_gen/word_cnt_reg was
 WARNING: [Synth 8-6014] Unused sequential element gt1_frame_gen/test_init_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:164]
 WARNING: [Synth 8-6014] Unused sequential element gt1_frame_gen/word_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:141]
 WARNING: [Synth 8-6014] Unused sequential element simple_uart_inst_1/overflow_reg_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:40]
-WARNING: [Synth 8-6014] Unused sequential element rst_generator_inst_0/rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:296]
+WARNING: [Synth 8-6014] Unused sequential element rst_generator_inst_0/rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:315]
 WARNING: [Synth 8-6014] Unused sequential element simple_uart_inst_1/num_char_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:41]
-WARNING: [Synth 8-6014] Unused sequential element cnt_trans_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:152]
-WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:95]
+WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:97]
 WARNING: [Synth 8-3331] design gtx3g_GT_FRAME_CHECK has unconnected port INC_IN
 WARNING: [Synth 8-3331] design gtx3g_GT_FRAME_CHECK__xdcDup__1 has unconnected port INC_IN
 WARNING: [Synth 8-3331] design error_insertion has unconnected port error_insert_mask[31]
@@ -766,6 +764,7 @@ WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_ins
 WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_insert_mask[5]
 WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_insert_mask[4]
 WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_insert_mask[3]
+WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_insert_mask[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[6] )
@@ -782,44 +781,44 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_ex
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15] )
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[0]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[2]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[3]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[4]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[7]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[12]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[13]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[14]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[15]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[18]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[20]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[21]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[25]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[27]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[31]' (FDSE) to 'pattern_mode_reg[0]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\pattern_mode_reg[0] )
-INFO: [Synth 8-3886] merging instance 'pattern_mode_reg[1]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[1]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[5]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[6]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[8]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[9]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[10]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[11]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[16]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[17]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[19]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[22]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[23]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[24]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[26]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[28]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[29]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[30]' (FDRE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'pattern_mode_reg[2]' (FDRE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'pattern_mode_reg[0]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[0]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[2]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[3]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[4]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[7]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[12]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[13]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[14]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[15]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[18]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[20]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[21]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[25]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[27]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[31]' (FDSE) to 'ecc_code_en_reg'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[1]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[5]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[6]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[8]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[9]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[10]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[11]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[16]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[17]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[19]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[22]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[23]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[24]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[26]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[28]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[29]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[30]' (FDRE) to 'pattern_mode_reg[1]'
+INFO: [Synth 8-3886] merging instance 'pattern_mode_reg[1]' (FDRE) to 'pattern_mode_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pattern_mode_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/rx_chanbond_seq_r_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/rx_chanbond_seq_r_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (ecc_code_en_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ecc_code_en_reg)
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/sel_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/sel_reg[1] )
 INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[15]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
@@ -986,7 +985,7 @@ WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_
 WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[10]) is unused and will be removed from module gtx3g_test.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 892.465 ; gain = 324.387
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:07 . Memory (MB): peak = 893.113 ; gain = 324.859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1006,13 +1005,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_suppo
 WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 85 of f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:85]
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:12 . Memory (MB): peak = 892.465 ; gain = 324.387
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:22 . Memory (MB): peak = 893.113 ; gain = 324.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:15 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:27 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1024,7 +1023,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:28 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1062,7 +1061,7 @@ WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxresetdone_vio_r2_
 WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxresetdone_vio_r3_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/rxresetdone_vio_i_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:29 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1075,7 +1074,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:29 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1087,25 +1086,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1148,19 +1147,19 @@ Report Cell Usage:
 |6     |GTXE2_COMMON    |     1|
 |7     |IBUFDS_GTE2     |     1|
 |8     |LUT1            |   242|
-|9     |LUT2            |   147|
-|10    |LUT3            |   105|
-|11    |LUT4            |   101|
-|12    |LUT5            |   115|
-|13    |LUT6            |   388|
+|9     |LUT2            |   206|
+|10    |LUT3            |   139|
+|11    |LUT4            |    99|
+|12    |LUT5            |   125|
+|13    |LUT6            |   410|
 |14    |MUXF7           |    42|
 |15    |MUXF8           |     8|
 |16    |SRL16E          |    32|
 |17    |FDCE            |    46|
 |18    |FDPE            |     1|
-|19    |FDRE            |  1349|
-|20    |FDSE            |    20|
-|21    |IBUF            |     3|
+|19    |FDRE            |  1452|
+|20    |FDSE            |    21|
+|21    |IBUF            |     4|
 |22    |OBUF            |     4|
 +------+----------------+------+
 
@@ -1168,46 +1167,47 @@ Report Instance Areas:
 +------+-----------------------------+--------------------------------+------+
 |      |Instance                     |Module                          |Cells |
 +------+-----------------------------+--------------------------------+------+
-|1     |top                          |                                |  2859|
-|2     |  gtx3g_exdes_i              |gtx3g_exdes                     |  1823|
-|3     |    gt0_frame_check          |gtx3g_GT_FRAME_CHECK__xdcDup__1 |   503|
-|4     |      pattern_gen_inst_2     |pattern_gen_5                   |    40|
-|5     |        prbs7_gen_inst1      |prbs7_gen_6                     |    18|
-|6     |    gt0_frame_gen            |gtx3g_GT_FRAME_GEN              |   422|
-|7     |      error_insertion_inst_1 |error_insertion_1               |    26|
-|8     |      parity_encoder_inst_1  |parity_encoder_2                |    96|
-|9     |      pattern_gen_inst_1     |pattern_gen_3                   |    66|
-|10    |        prbs7_gen_inst1      |prbs7_gen_4                     |    16|
-|11    |    gt1_frame_check          |gtx3g_GT_FRAME_CHECK            |   261|
-|12    |    gt1_frame_gen            |gtx3g_GT_FRAME_GEN_0            |   422|
-|13    |      error_insertion_inst_1 |error_insertion                 |    26|
-|14    |      parity_encoder_inst_1  |parity_encoder                  |    96|
-|15    |      pattern_gen_inst_1     |pattern_gen                     |    66|
-|16    |        prbs7_gen_inst1      |prbs7_gen                       |    16|
-|17    |    gtx3g_support_i          |gtx3g_support                   |   190|
-|18    |      common0_i              |gtx3g_common                    |     1|
-|19    |      common_reset_i         |gtx3g_common_reset              |    28|
-|20    |      gt_usrclk_source       |gtx3g_GT_USRCLK_SOURCE          |     2|
-|21    |  rst_generator_inst_0       |rst_generator                   |    26|
-|22    |  simple_uart_inst_1         |simple_uart                     |   361|
+|1     |top                          |                                |  3087|
+|2     |  gtx3g_exdes_i              |gtx3g_exdes                     |  2041|
+|3     |    gt0_frame_check          |gtx3g_GT_FRAME_CHECK__xdcDup__1 |   721|
+|4     |      parity_encoder_inst_2  |parity_encoder_5                |   112|
+|5     |      pattern_gen_inst_2     |pattern_gen_6                   |    40|
+|6     |        prbs7_gen_inst1      |prbs7_gen_7                     |    18|
+|7     |    gt0_frame_gen            |gtx3g_GT_FRAME_GEN              |   422|
+|8     |      error_insertion_inst_1 |error_insertion_1               |    26|
+|9     |      parity_encoder_inst_1  |parity_encoder_2                |    96|
+|10    |      pattern_gen_inst_1     |pattern_gen_3                   |    66|
+|11    |        prbs7_gen_inst1      |prbs7_gen_4                     |    16|
+|12    |    gt1_frame_check          |gtx3g_GT_FRAME_CHECK            |   261|
+|13    |    gt1_frame_gen            |gtx3g_GT_FRAME_GEN_0            |   422|
+|14    |      error_insertion_inst_1 |error_insertion                 |    26|
+|15    |      parity_encoder_inst_1  |parity_encoder                  |    96|
+|16    |      pattern_gen_inst_1     |pattern_gen                     |    66|
+|17    |        prbs7_gen_inst1      |prbs7_gen                       |    16|
+|18    |    gtx3g_support_i          |gtx3g_support                   |   190|
+|19    |      common0_i              |gtx3g_common                    |     1|
+|20    |      common_reset_i         |gtx3g_common_reset              |    28|
+|21    |      gt_usrclk_source       |gtx3g_GT_USRCLK_SOURCE          |     2|
+|22    |  rst_generator_inst_0       |rst_generator                   |    28|
+|23    |  simple_uart_inst_1         |simple_uart                     |   370|
 +------+-----------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:19 . Memory (MB): peak = 921.156 ; gain = 353.078
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1207 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:48 . Memory (MB): peak = 921.156 ; gain = 28.691
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:19 . Memory (MB): peak = 921.156 ; gain = 353.078
+Synthesis finished with 0 errors, 0 critical warnings and 1101 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 924.434 ; gain = 31.320
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-288 Infos, 289 Warnings, 0 Critical Warnings and 0 Errors encountered.
+288 Infos, 287 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:42 . Memory (MB): peak = 921.156 ; gain = 655.320
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:50 . Memory (MB): peak = 924.434 ; gain = 658.445
 INFO: [Common 17-1381] The checkpoint 'f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.578 . Memory (MB): peak = 921.156 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May  4 18:01:27 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.600 . Memory (MB): peak = 924.434 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May  4 19:40:48 2018...

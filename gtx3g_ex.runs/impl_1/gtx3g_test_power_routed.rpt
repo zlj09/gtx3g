@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Fri May  4 18:09:53 2018
+| Date             : Fri May  4 19:46:06 2018
 | Host             : idea-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file gtx3g_test_power_routed.rpt -pb gtx3g_test_power_summary_routed.pb -rpx gtx3g_test_power_routed.rpx
 | Design           : gtx3g_test
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.525  |
-| Dynamic (W)              | 0.303  |
+| Total On-Chip Power (W)  | 0.526  |
+| Dynamic (W)              | 0.304  |
 | Device Static (W)        | 0.222  |
 | Effective TJA (C/W)      | 1.8    |
 | Max Ambient (C)          | 99.1   |
@@ -49,20 +49,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.016 |       10 |       --- |             --- |
-| Slice Logic             |     0.009 |     3897 |       --- |             --- |
-|   LUT as Logic          |     0.008 |     1260 |    277400 |            0.45 |
-|   Register              |    <0.001 |     2085 |    554800 |            0.38 |
+| Clocks                  |     0.015 |       10 |       --- |             --- |
+| Slice Logic             |     0.009 |     4125 |       --- |             --- |
+|   LUT as Logic          |     0.008 |     1339 |    277400 |            0.48 |
+|   Register              |    <0.001 |     2189 |    554800 |            0.39 |
 |   CARRY4                |    <0.001 |      131 |     69350 |            0.19 |
 |   LUT as Shift Register |    <0.001 |       16 |    108200 |            0.01 |
 |   F7/F8 Muxes           |    <0.001 |       58 |    277400 |            0.02 |
-|   Others                |     0.000 |      124 |       --- |             --- |
-| Signals                 |     0.010 |     2985 |       --- |             --- |
+|   Others                |     0.000 |      125 |       --- |             --- |
+| Signals                 |     0.011 |     3125 |       --- |             --- |
 | Block RAM               |     0.001 |      0.5 |       755 |            0.07 |
-| I/O                     |     0.012 |        5 |       362 |            1.38 |
+| I/O                     |     0.012 |        6 |       362 |            1.66 |
 | GTX                     |     0.256 |        2 |        16 |           12.50 |
 | Static Power            |     0.222 |          |           |                 |
-| Total                   |     0.525 |          |           |                 |
+| Total                   |     0.526 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       0.950 |     0.120 |       0.082 |      0.039 |
+| Vccint    |       0.950 |     0.122 |       0.083 |      0.039 |
 | Vccaux    |       1.800 |     0.056 |       0.000 |      0.056 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.005 |       0.004 |      0.001 |
@@ -98,17 +98,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                               |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
-| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                   |                                                                                                            |
-|                             |            |                                                |                                                                                                            |
-| Overall confidence level    | Medium     |                                                |                                                                                                            |
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -150,16 +150,17 @@ Table of Contents
 +------------------------------------------------------------+-----------+
 | Name                                                       | Power (W) |
 +------------------------------------------------------------+-----------+
-| gtx3g_test                                                 |     0.303 |
-|   gtx3g_exdes_i                                            |     0.281 |
-|     gt0_frame_check                                        |     0.005 |
+| gtx3g_test                                                 |     0.304 |
+|   gtx3g_exdes_i                                            |     0.284 |
+|     gt0_frame_check                                        |     0.009 |
+|       parity_encoder_inst_2                                |     0.001 |
 |       pattern_gen_inst_2                                   |    <0.001 |
 |         prbs7_gen_inst1                                    |    <0.001 |
-|       rx_word_fifo_inst_1                                  |     0.001 |
-|         U0                                                 |     0.001 |
-|           inst_fifo_gen                                    |     0.001 |
-|             gconvfifo.rf                                   |     0.001 |
-|               grf.rf                                       |     0.001 |
+|       rx_word_fifo_inst_1                                  |     0.002 |
+|         U0                                                 |     0.002 |
+|           inst_fifo_gen                                    |     0.002 |
+|             gconvfifo.rf                                   |     0.002 |
+|               grf.rf                                       |     0.002 |
 |                 gntv_or_sync_fifo.gl0.rd                   |    <0.001 |
 |                   grss.rsts                                |    <0.001 |
 |                   rpntr                                    |    <0.001 |
@@ -175,8 +176,8 @@ Table of Contents
 |                             prim_noinit.ram                |     0.001 |
 |     gt0_frame_gen                                          |     0.005 |
 |       error_insertion_inst_1                               |    <0.001 |
-|       parity_encoder_inst_1                                |     0.001 |
-|       pattern_gen_inst_1                                   |     0.001 |
+|       parity_encoder_inst_1                                |    <0.001 |
+|       pattern_gen_inst_1                                   |    <0.001 |
 |         prbs7_gen_inst1                                    |    <0.001 |
 |     gt1_frame_check                                        |     0.002 |
 |       rx_word_fifo_inst_1                                  |    <0.001 |
@@ -192,15 +193,15 @@ Table of Contents
 |                   wpntr                                    |    <0.001 |
 |     gt1_frame_gen                                          |     0.005 |
 |       error_insertion_inst_1                               |    <0.001 |
-|       parity_encoder_inst_1                                |     0.001 |
-|       pattern_gen_inst_1                                   |     0.001 |
+|       parity_encoder_inst_1                                |    <0.001 |
+|       pattern_gen_inst_1                                   |    <0.001 |
 |         prbs7_gen_inst1                                    |    <0.001 |
 |     gtx3g_support_i                                        |     0.264 |
 |       common0_i                                            |    <0.001 |
 |       common_reset_i                                       |    <0.001 |
 |       gt_usrclk_source                                     |    <0.001 |
-|       gtx3g_init_i                                         |     0.264 |
-|         inst                                               |     0.264 |
+|       gtx3g_init_i                                         |     0.263 |
+|         inst                                               |     0.263 |
 |           gt0_rxresetfsm_i                                 |     0.002 |
 |             sync_RXRESETDONE                               |    <0.001 |
 |             sync_data_valid                                |    <0.001 |
