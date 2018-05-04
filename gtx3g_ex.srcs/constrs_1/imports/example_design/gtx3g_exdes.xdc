@@ -106,22 +106,20 @@ set_property LOC GTXE2_CHANNEL_X0Y2 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx
 
 ##---------- Set False Path from one clock to other ----------
 
-set_property IOSTANDARD LVCMOS25 [get_ports test_succeeded]
+set_property IOSTANDARD LVCMOS25 [get_ports test_succeeded_out]
 set_property IOSTANDARD LVCMOS25 [get_ports sysclk_in]
 set_property PACKAGE_PIN AK30 [get_ports sysclk_in]
-set_property PACKAGE_PIN AG17 [get_ports test_succeeded]
-set_property IOSTANDARD LVCMOS25 [get_ports track_data_i]
+set_property PACKAGE_PIN AG17 [get_ports test_succeeded_out]
+set_property IOSTANDARD LVCMOS25 [get_ports track_data_out]
 set_property IOSTANDARD LVCMOS25 [get_ports uart_z7_in]
 set_property IOSTANDARD LVCMOS25 [get_ports uart_z7_out]
-set_property PACKAGE_PIN AG16 [get_ports track_data_i]
+set_property PACKAGE_PIN AG16 [get_ports track_data_out]
 set_property PACKAGE_PIN AJ21 [get_ports uart_z7_in]
 set_property PACKAGE_PIN AK21 [get_ports uart_z7_out]
 set_property PACKAGE_PIN N8 [get_ports refclk_p_in]
 
-set_property IOSTANDARD LVCMOS25 [get_ports refclk_direct_out]
-set_property PACKAGE_PIN AK22 [get_ports refclk_direct_out]
-set_property IOSTANDARD LVCMOS25 [get_ports clk_refdiv]
-set_property PACKAGE_PIN AD21 [get_ports clk_refdiv]
+set_property IOSTANDARD LVCMOS25 [get_ports user_clk]
+set_property PACKAGE_PIN AD21 [get_ports user_clk]
 
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets sysclk_in_IBUF]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/q0_clk1_refclk_i]

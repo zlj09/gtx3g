@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525171781">
+<GenRun Id="synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525417739">
   <File Type="RDS-PROPCONSTRS" Name="gtx3g_test_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="gtx3g_test.tcl"/>
   <File Type="RDS-RDS" Name="gtx3g_test.vds"/>
@@ -82,14 +82,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/prbs_chk.v">
+    <File Path="$PSRCDIR/sources_1/parity_coding.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/prbs_gen.v">
+    <File Path="$PSRCDIR/sources_1/pattern_gen.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -148,4 +148,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="rx_word_fifo"/>
 </GenRun>

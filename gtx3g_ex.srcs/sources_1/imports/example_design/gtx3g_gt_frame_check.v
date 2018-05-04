@@ -554,7 +554,7 @@ assign TRACK_DATA_OUT = sm_link;
                 rx_fifo_rd_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
                 rx_fifo_out_reg_en <= 1'b1;
 
-                pattern_check_en <= 1'b1;
+                pattern_check_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
 
                 data_word_valid <= 1'b1;
             end
@@ -566,7 +566,7 @@ assign TRACK_DATA_OUT = sm_link;
                 rx_fifo_rd_en <= 1'b0;
                 rx_fifo_out_reg_en <= 1'b1;
 
-                pattern_check_en <= 1'b1;
+                pattern_check_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
 
                 data_word_valid <= 1'b1;
             end
@@ -578,7 +578,7 @@ assign TRACK_DATA_OUT = sm_link;
                 rx_fifo_rd_en <= 1'b0;
                 rx_fifo_out_reg_en <= 1'b0;
 
-                pattern_check_en <= 1'b1;
+                pattern_check_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
 
                 pattern_pause_reg <= 1'b1;
 
@@ -622,11 +622,9 @@ assign TRACK_DATA_OUT = sm_link;
                 rx_fifo_rd_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
                 rx_fifo_out_reg_en <= 1'b1;
 
-                pattern_check_en <= 1'b1;
+                pattern_check_en <= (rx_fifo_valid) ? (1'b1) : (1'b0);
 
                 data_word_valid <= 1'b1;
-
-                pattern_check_en <= 1'b1;
             end
 
             endcase
@@ -662,7 +660,7 @@ assign TRACK_DATA_OUT = sm_link;
         end
         else
             if (pattern_check_en) begin
-                if (rx_fifo_valid && (rx_fifo_out_correct != pattern_word)) begin
+                if (rx_fifo_out_correct != pattern_word) begin
                     pattern_error_reg <= 1'b1;
                     if (!test_over_reg)
                         pattern_error_cnt <= pattern_error_cnt + 1'b1; 
