@@ -241,7 +241,7 @@ wire    [1:0]   txp_out_i;
         .Q0_CLK1_GTREFCLK_PAD_N_IN           (refclk_n_in), 
         .Q0_CLK1_GTREFCLK_PAD_P_IN           (refclk_p_in),
         .DRPCLK_IN                           (drp_clk),
-        .TRACK_DATA_OUT                      (track_data_i),
+        .TRACK_DATA_OUT                      (track_data_out),
         .RXN_IN                              (rxn_in_i),
         .RXP_IN                              (rxp_in_i),
         .TXN_OUT                             (txn_out_i),

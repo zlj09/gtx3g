@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Fri May  4 15:12:02 2018
+| Date         : Fri May  4 18:01:27 2018
 | Host         : idea-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gtx3g_test_utilization_synth.rpt -pb gtx3g_test_utilization_synth.pb
 | Design       : gtx3g_test
@@ -157,7 +157,7 @@ Table of Contents
 | FDRE         | 1349 |        Flop & Latch |
 | LUT6         |  388 |                 LUT |
 | LUT1         |  242 |                 LUT |
-| LUT2         |  146 |                 LUT |
+| LUT2         |  147 |                 LUT |
 | LUT5         |  115 |                 LUT |
 | LUT3         |  105 |                 LUT |
 | LUT4         |  101 |                 LUT |
@@ -167,10 +167,9 @@ Table of Contents
 | SRL16E       |   32 |  Distributed Memory |
 | FDSE         |   20 |        Flop & Latch |
 | MUXF8        |    8 |               MuxFx |
-| OBUF         |    3 |                  IO |
+| OBUF         |    4 |                  IO |
 | IBUF         |    3 |                  IO |
 | BUFG         |    2 |               Clock |
-| OBUFT        |    1 |                  IO |
 | IBUFDS_GTE2  |    1 |                  IO |
 | GTXE2_COMMON |    1 |                  IO |
 | FDPE         |    1 |        Flop & Latch |

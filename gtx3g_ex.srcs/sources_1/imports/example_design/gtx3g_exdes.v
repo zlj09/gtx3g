@@ -398,7 +398,6 @@ module gtx3g_exdes #
     //----------------------------- Global Signals -----------------------------
 
     wire            drpclk_in_i;
-    wire            DRPCLK_IN;
     wire            gt0_tx_system_reset_c;
     wire            gt0_rx_system_reset_c;
     wire            gt1_tx_system_reset_c;
