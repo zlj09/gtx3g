@@ -46,7 +46,7 @@ module tb_frame(
 	gtx3g_GT_FRAME_GEN #(
 	    .WORDS_IN_BRAM(512),
 		.BYTE_ALIGN_CHAR(16'h02bc),
-		.BLOCK_ALIGN_CHAR(16'h03fc),
+		.BLOCK_ALIGN_CHAR(16'h03fb),
 		.CLK_COR_CHAR(16'h1d1c)
 	)
 	gtx3g_GT_FRAME_GEN_inst_1(
@@ -69,7 +69,7 @@ module tb_frame(
 		.START_OF_PACKET_CHAR ( 16'h02bc ),
 
 		.BYTE_ALIGN_CHAR(16'h02bc),
-		.BLOCK_ALIGN_CHAR(16'h03fc),
+		.BLOCK_ALIGN_CHAR(16'h03fb),
 		.CLK_COR_CHAR(16'h1d1c)
     )
     gt0_frame_check

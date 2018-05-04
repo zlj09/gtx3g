@@ -73,8 +73,9 @@ module gtx3g_GT_FRAME_GEN #
 
     // Modified by lingjun, add align characters
     parameter   BYTE_ALIGN_CHAR = 16'h02bc,
-    parameter   BLOCK_ALIGN_CHAR = 16'h03fc,
-    parameter   CLK_COR_CHAR = 16'h1d1c
+    parameter   BLOCK_ALIGN_CHAR = 16'h03fb,
+    parameter   CLK_COR_CHAR = 16'h1d1c,
+    parameter   INIT_NOISE_CHAR = 16'haaaa
 
 )
 (
@@ -128,6 +129,7 @@ module gtx3g_GT_FRAME_GEN #
     reg [15 : 0] bit_pointer;
     reg [7 : 0] block_word_cnt;
     reg data_word_valid;
+    reg [15 : 0] test_init_cnt;
 
     wire error_insert;
     wire [15 : 0] pattern_word;
@@ -156,14 +158,40 @@ module gtx3g_GT_FRAME_GEN #
             error_insertion_rst_reg <= 1'b1;
             pattern_rst_reg <= 1'b1;
             pattern_pause_reg <= 1'b1;
-            block_word_cnt <= 8'b0;
+            block_word_cnt <= 8'd0;
             data_word_valid <= 1'b0;
+
+            test_init_cnt <= 16'd64;
         end
         else begin
             pattern_rst_reg <= 1'b0;
-            error_insertion_rst_reg <= 1'b0;
             case (block_word_cnt)
             8'd0: begin
+                if (test_init_cnt) begin
+                    block_word_cnt <= 8'd0;
+                    test_init_cnt <= test_init_cnt - 1'b1;
+                    if (test_init_cnt[3 : 0] == 4'b0) begin
+                        tx_data_reg <= BYTE_ALIGN_CHAR;
+                        txctrl_reg <= 2'b01;        
+                    end
+                    else begin
+                        tx_data_reg <= test_init_cnt;
+                        txctrl_reg <= 2'b00;         
+                    end
+                end
+                else begin
+                    block_word_cnt <= 8'd2;
+                    tx_data_reg <= BYTE_ALIGN_CHAR;
+                    txctrl_reg <= 2'b01;
+
+                    error_insertion_rst_reg <= 1'b0;
+
+                    data_word_valid <= 1'b0;
+                    pattern_pause_reg <= 1'b0;
+                    encoder_rst_reg <= 1'b1;                    
+                end
+            end
+            8'd1: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
                 tx_data_reg <= BYTE_ALIGN_CHAR;
                 txctrl_reg <= 2'b01;
@@ -171,20 +199,13 @@ module gtx3g_GT_FRAME_GEN #
                 pattern_pause_reg <= 1'b0;
                 encoder_rst_reg <= 1'b1;
             end
-            8'd1: begin
+            8'd2: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
                 tx_data_reg <= BLOCK_ALIGN_CHAR;
                 txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b0;
                 encoder_rst_reg <= 1'b0;
-            end
-            8'd16: begin
-                block_word_cnt <= block_word_cnt + 1'b1;
-                tx_data_reg <= pattern_word;
-                txctrl_reg <= 2'b00;
-                data_word_valid <= 1'b1;
-                pattern_pause_reg <= 1'b1;
             end
             8'd17: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
@@ -194,20 +215,27 @@ module gtx3g_GT_FRAME_GEN #
                 pattern_pause_reg <= 1'b1;
             end
             8'd18: begin
-                block_word_cnt <= (ENCODER_EN) ? (block_word_cnt + 1'b1) : (8'd0);
+                block_word_cnt <= block_word_cnt + 1'b1;
+                tx_data_reg <= pattern_word;
+                txctrl_reg <= 2'b00;
+                data_word_valid <= 1'b1;
+                pattern_pause_reg <= 1'b1;
+            end
+            8'd19: begin
+                block_word_cnt <= (ENCODER_EN) ? (block_word_cnt + 1'b1) : (8'd1);
                 tx_data_reg <= CLK_COR_CHAR;
                 txctrl_reg <= 2'b01;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b1;
             end
-            8'd19: begin
+            8'd20: begin
                 block_word_cnt <= block_word_cnt + 1'b1;
                 tx_data_reg <= hor_parity_word;
                 txctrl_reg <= 2'b00;
                 data_word_valid <= 1'b0;
                 pattern_pause_reg <= 1'b1;
             end
-            8'd20: begin
+            8'd21: begin
                 block_word_cnt <= 8'd0;
                 tx_data_reg <= ver_parity_word;
                 txctrl_reg <= 2'b00;

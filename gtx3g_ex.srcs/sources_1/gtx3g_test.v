@@ -104,13 +104,13 @@ wire    [1:0]   txp_out_i;
             gt0_error_rxdata_regs[2] <= 16'b0;
             gt0_error_rxdata_regs[3] <= 16'b0;
 
-            test_reset <= 1'b0;
+            test_reset <= 1'b1;
             pattern_mode <= 3'd1;
             error_insert_mask <= 32'h8a34f09d;
             ecc_code_en <= 1'b0;
         end
         else begin
-            test_reset <= 1'b1;
+            test_reset <= 1'b0;
             if (!test_over)
                 trans_timer <= trans_timer + 1'b1;
             if (test_over_out == 1'b1) begin

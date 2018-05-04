@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1441083332fs"></ZoomStartTime>
-      <ZoomEndTime time="1511783334fs"></ZoomEndTime>
-      <Cursor1Time time="1464399000fs"></Cursor1Time>
+      <ZoomStartTime time="90363225333fs"></ZoomStartTime>
+      <ZoomEndTime time="90435125334fs"></ZoomEndTime>
+      <Cursor1Time time="90413302000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="122"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="520" />
    <wvobject fp_name="/tb_gtx3g_test/refclk_p_in" type="logic">
       <obj_property name="ElementShortName">refclk_p_in</obj_property>
       <obj_property name="ObjectShortName">refclk_p_in</obj_property>
@@ -64,10 +64,6 @@
       <obj_property name="ElementShortName">track_data_r3</obj_property>
       <obj_property name="ObjectShortName">track_data_r3</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_detected_c" type="logic">
-      <obj_property name="ElementShortName">error_detected_c</obj_property>
-      <obj_property name="ObjectShortName">error_detected_c</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
       <obj_property name="ElementShortName">track_data_out_i</obj_property>
       <obj_property name="ObjectShortName">track_data_out_i</obj_property>
@@ -87,5 +83,2021 @@
    <wvobject fp_name="/tb_gtx3g_test/uart_z7_out" type="logic">
       <obj_property name="ElementShortName">uart_z7_out</obj_property>
       <obj_property name="ObjectShortName">uart_z7_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/Q0_CLK1_GTREFCLK_PAD_N_IN" type="logic">
+      <obj_property name="ElementShortName">Q0_CLK1_GTREFCLK_PAD_N_IN</obj_property>
+      <obj_property name="ObjectShortName">Q0_CLK1_GTREFCLK_PAD_N_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/Q0_CLK1_GTREFCLK_PAD_P_IN" type="logic">
+      <obj_property name="ElementShortName">Q0_CLK1_GTREFCLK_PAD_P_IN</obj_property>
+      <obj_property name="ObjectShortName">Q0_CLK1_GTREFCLK_PAD_P_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/DRPCLK_IN" type="logic">
+      <obj_property name="ElementShortName">DRPCLK_IN</obj_property>
+      <obj_property name="ObjectShortName">DRPCLK_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/TRACK_DATA_OUT" type="logic">
+      <obj_property name="ElementShortName">TRACK_DATA_OUT</obj_property>
+      <obj_property name="ObjectShortName">TRACK_DATA_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/RXN_IN" type="array">
+      <obj_property name="ElementShortName">RXN_IN[1:0]</obj_property>
+      <obj_property name="ObjectShortName">RXN_IN[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/RXP_IN" type="array">
+      <obj_property name="ElementShortName">RXP_IN[1:0]</obj_property>
+      <obj_property name="ObjectShortName">RXP_IN[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/TXN_OUT" type="array">
+      <obj_property name="ElementShortName">TXN_OUT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TXN_OUT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/TXP_OUT" type="array">
+      <obj_property name="ElementShortName">TXP_OUT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TXP_OUT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/TEST_RESET" type="logic">
+      <obj_property name="ElementShortName">TEST_RESET</obj_property>
+      <obj_property name="ObjectShortName">TEST_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/PATTERN_MODE" type="array">
+      <obj_property name="ElementShortName">PATTERN_MODE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MODE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/ERROR_INSERT_MASK" type="array">
+      <obj_property name="ElementShortName">ERROR_INSERT_MASK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ERROR_INSERT_MASK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/ECC_CODE_EN" type="logic">
+      <obj_property name="ElementShortName">ECC_CODE_EN</obj_property>
+      <obj_property name="ObjectShortName">ECC_CODE_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/USER_CLK" type="logic">
+      <obj_property name="ElementShortName">USER_CLK</obj_property>
+      <obj_property name="ObjectShortName">USER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/DATA_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">DATA_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/PATTERN_ERROR_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">PATTERN_ERROR_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_ERROR_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/TEST_OVER_OUT" type="logic">
+      <obj_property name="ElementShortName">TEST_OVER_OUT</obj_property>
+      <obj_property name="ObjectShortName">TEST_OVER_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/PATTERN_ERROR_OUT" type="logic">
+      <obj_property name="ElementShortName">PATTERN_ERROR_OUT</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_ERROR_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/BLOCK_ERROR_OUT" type="array">
+      <obj_property name="ElementShortName">BLOCK_ERROR_OUT[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_ERROR_OUT[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/RXDATA_OUT" type="array">
+      <obj_property name="ElementShortName">RXDATA_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">RXDATA_OUT[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/soft_reset_i" type="logic">
+      <obj_property name="ElementShortName">soft_reset_i</obj_property>
+      <obj_property name="ObjectShortName">soft_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/soft_reset_vio_i" type="logic">
+      <obj_property name="ElementShortName">soft_reset_vio_i</obj_property>
+      <obj_property name="ObjectShortName">soft_reset_vio_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt_txfsmresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt_txfsmresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt_txfsmresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt_rxfsmresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt_rxfsmresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt_rxfsmresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt_txfsmresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt_txfsmresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt_txfsmresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt_txfsmresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt_txfsmresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt_txfsmresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txfsmresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txfsmresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txfsmresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxfsmresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxfsmresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxfsmresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txfsmresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt0_txfsmresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt0_txfsmresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txfsmresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt0_txfsmresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt0_txfsmresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxfsmresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt0_rxfsmresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxfsmresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxfsmresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt0_rxfsmresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxfsmresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_r3" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_r3</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_vio_r" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_vio_r</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_vio_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_vio_r2" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_vio_r2</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_vio_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_vio_r3" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_vio_r3</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_vio_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txfsmresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txfsmresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txfsmresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxfsmresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxfsmresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxfsmresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txfsmresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt1_txfsmresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt1_txfsmresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txfsmresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt1_txfsmresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt1_txfsmresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxfsmresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt1_rxfsmresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxfsmresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxfsmresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt1_rxfsmresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxfsmresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_r" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_r</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_r2" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_r2</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_r3" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_r3</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_vio_r" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_vio_r</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_vio_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_vio_r2" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_vio_r2</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_vio_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_vio_r3" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_vio_r3</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_vio_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/reset_counter" type="array">
+      <obj_property name="ElementShortName">reset_counter[5:0]</obj_property>
+      <obj_property name="ObjectShortName">reset_counter[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/reset_pulse" type="array">
+      <obj_property name="ElementShortName">reset_pulse[3:0]</obj_property>
+      <obj_property name="ObjectShortName">reset_pulse[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_drpaddr_i" type="array">
+      <obj_property name="ElementShortName">gt0_drpaddr_i[8:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_drpaddr_i[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_drpdi_i" type="array">
+      <obj_property name="ElementShortName">gt0_drpdi_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_drpdi_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_drpdo_i" type="array">
+      <obj_property name="ElementShortName">gt0_drpdo_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_drpdo_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_drpen_i" type="logic">
+      <obj_property name="ElementShortName">gt0_drpen_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_drpen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_drprdy_i" type="logic">
+      <obj_property name="ElementShortName">gt0_drprdy_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_drprdy_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_drpwe_i" type="logic">
+      <obj_property name="ElementShortName">gt0_drpwe_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_drpwe_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_dmonitorout_i" type="array">
+      <obj_property name="ElementShortName">gt0_dmonitorout_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_dmonitorout_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_loopback_i" type="array">
+      <obj_property name="ElementShortName">gt0_loopback_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_loopback_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxrate_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxrate_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxrate_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxpd_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxpd_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxpd_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txpd_i" type="array">
+      <obj_property name="ElementShortName">gt0_txpd_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txpd_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_eyescanreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_eyescanreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_eyescanreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxuserrdy_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxuserrdy_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxuserrdy_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_eyescandataerror_i" type="logic">
+      <obj_property name="ElementShortName">gt0_eyescandataerror_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_eyescandataerror_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_eyescantrigger_i" type="logic">
+      <obj_property name="ElementShortName">gt0_eyescantrigger_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_eyescantrigger_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxcdrhold_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxcdrhold_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxcdrhold_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxclkcorcnt_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxclkcorcnt_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxclkcorcnt_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxdata_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxdata_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxdata_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxprbserr_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxprbserr_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxprbserr_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxprbssel_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxprbssel_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxprbssel_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxprbscntreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxprbscntreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxprbscntreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxdisperr_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxdisperr_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxdisperr_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxnotintable_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxnotintable_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxnotintable_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gtxrxp_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gtxrxp_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gtxrxp_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gtxrxn_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gtxrxn_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gtxrxn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxbufreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxbufreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxbufreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxbufstatus_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxbufstatus_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxbufstatus_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxbyteisaligned_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxbyteisaligned_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxbyteisaligned_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxbyterealign_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxbyterealign_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxbyterealign_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxcommadet_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxcommadet_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxcommadet_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxmcommaalignen_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxmcommaalignen_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxmcommaalignen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxpcommaalignen_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxpcommaalignen_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxpcommaalignen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxdfelpmreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxdfelpmreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxdfelpmreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxmonitorout_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxmonitorout_i[6:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxmonitorout_i[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxmonitorsel_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxmonitorsel_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxmonitorsel_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxratedone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxratedone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxratedone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxoutclk_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxoutclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxoutclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxoutclkfabric_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxoutclkfabric_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxoutclkfabric_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gtrxreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gtrxreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gtrxreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxpcsreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxpcsreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxpcsreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxpmareset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxpmareset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxpmareset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxlpmen_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxlpmen_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxlpmen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxpolarity_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxpolarity_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxpolarity_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxchariscomma_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxchariscomma_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxchariscomma_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxcharisk_i" type="array">
+      <obj_property name="ElementShortName">gt0_rxcharisk_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxcharisk_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txpostcursor_i" type="array">
+      <obj_property name="ElementShortName">gt0_txpostcursor_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txpostcursor_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txprecursor_i" type="array">
+      <obj_property name="ElementShortName">gt0_txprecursor_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txprecursor_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gttxreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gttxreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gttxreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txuserrdy_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txuserrdy_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txuserrdy_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txelecidle_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txelecidle_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txelecidle_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txprbsforceerr_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txprbsforceerr_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txprbsforceerr_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdlyen_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txdlyen_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdlyen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdlysreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txdlysreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdlysreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdlysresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txdlysresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdlysresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txphalign_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txphalign_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txphalign_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txphaligndone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txphaligndone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txphaligndone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txphalignen_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txphalignen_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txphalignen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txphdlyreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txphdlyreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txphdlyreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txphinit_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txphinit_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txphinit_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txphinitdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txphinitdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txphinitdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdiffctrl_i" type="array">
+      <obj_property name="ElementShortName">gt0_txdiffctrl_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdiffctrl_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdata_i" type="array">
+      <obj_property name="ElementShortName">gt0_txdata_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gtxtxn_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gtxtxn_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gtxtxn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gtxtxp_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gtxtxp_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gtxtxp_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txoutclk_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txoutclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txoutclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txoutclkfabric_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txoutclkfabric_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txoutclkfabric_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txoutclkpcs_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txoutclkpcs_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txoutclkpcs_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txcharisk_i" type="array">
+      <obj_property name="ElementShortName">gt0_txcharisk_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txcharisk_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txpcsreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txpcsreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txpcsreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txpmareset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txpmareset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txpmareset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txpolarity_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txpolarity_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txpolarity_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx8b10bbypass_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx8b10bbypass_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx8b10bbypass_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txprbssel_i" type="array">
+      <obj_property name="ElementShortName">gt0_txprbssel_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txprbssel_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_drpaddr_i" type="array">
+      <obj_property name="ElementShortName">gt1_drpaddr_i[8:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_drpaddr_i[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_drpdi_i" type="array">
+      <obj_property name="ElementShortName">gt1_drpdi_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_drpdi_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_drpdo_i" type="array">
+      <obj_property name="ElementShortName">gt1_drpdo_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_drpdo_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_drpen_i" type="logic">
+      <obj_property name="ElementShortName">gt1_drpen_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_drpen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_drprdy_i" type="logic">
+      <obj_property name="ElementShortName">gt1_drprdy_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_drprdy_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_drpwe_i" type="logic">
+      <obj_property name="ElementShortName">gt1_drpwe_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_drpwe_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_dmonitorout_i" type="array">
+      <obj_property name="ElementShortName">gt1_dmonitorout_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_dmonitorout_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_loopback_i" type="array">
+      <obj_property name="ElementShortName">gt1_loopback_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_loopback_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxrate_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxrate_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxrate_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxpd_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxpd_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxpd_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txpd_i" type="array">
+      <obj_property name="ElementShortName">gt1_txpd_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txpd_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_eyescanreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_eyescanreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_eyescanreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxuserrdy_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxuserrdy_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxuserrdy_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_eyescandataerror_i" type="logic">
+      <obj_property name="ElementShortName">gt1_eyescandataerror_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_eyescandataerror_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_eyescantrigger_i" type="logic">
+      <obj_property name="ElementShortName">gt1_eyescantrigger_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_eyescantrigger_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxcdrhold_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxcdrhold_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxcdrhold_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxclkcorcnt_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxclkcorcnt_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxclkcorcnt_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxdata_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxdata_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxdata_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxprbserr_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxprbserr_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxprbserr_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxprbssel_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxprbssel_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxprbssel_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxprbscntreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxprbscntreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxprbscntreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxdisperr_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxdisperr_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxdisperr_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxnotintable_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxnotintable_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxnotintable_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_detected_c" type="logic">
+      <obj_property name="ElementShortName">error_detected_c</obj_property>
+      <obj_property name="ObjectShortName">error_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_gtxrxp_i" type="logic">
+      <obj_property name="ElementShortName">gt1_gtxrxp_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_gtxrxp_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_gtxrxn_i" type="logic">
+      <obj_property name="ElementShortName">gt1_gtxrxn_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_gtxrxn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxbufreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxbufreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxbufreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxbufstatus_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxbufstatus_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxbufstatus_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxbyteisaligned_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxbyteisaligned_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxbyteisaligned_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxbyterealign_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxbyterealign_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxbyterealign_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxcommadet_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxcommadet_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxcommadet_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxmcommaalignen_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxmcommaalignen_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxmcommaalignen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxpcommaalignen_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxpcommaalignen_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxpcommaalignen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxdfelpmreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxdfelpmreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxdfelpmreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxmonitorout_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxmonitorout_i[6:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxmonitorout_i[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxmonitorsel_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxmonitorsel_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxmonitorsel_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxratedone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxratedone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxratedone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxoutclk_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxoutclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxoutclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxoutclkfabric_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxoutclkfabric_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxoutclkfabric_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_gtrxreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_gtrxreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_gtrxreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxpcsreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxpcsreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxpcsreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxpmareset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxpmareset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxpmareset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxlpmen_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxlpmen_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxlpmen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxpolarity_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxpolarity_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxpolarity_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxchariscomma_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxchariscomma_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxchariscomma_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxcharisk_i" type="array">
+      <obj_property name="ElementShortName">gt1_rxcharisk_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxcharisk_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txpostcursor_i" type="array">
+      <obj_property name="ElementShortName">gt1_txpostcursor_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txpostcursor_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txprecursor_i" type="array">
+      <obj_property name="ElementShortName">gt1_txprecursor_i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txprecursor_i[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_gttxreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_gttxreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_gttxreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txuserrdy_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txuserrdy_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txuserrdy_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txelecidle_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txelecidle_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txelecidle_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txprbsforceerr_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txprbsforceerr_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txprbsforceerr_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdlyen_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txdlyen_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdlyen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdlysreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txdlysreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdlysreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdlysresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txdlysresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdlysresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txphalign_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txphalign_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txphalign_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txphaligndone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txphaligndone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txphaligndone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txphalignen_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txphalignen_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txphalignen_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txphdlyreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txphdlyreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txphdlyreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txphinit_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txphinit_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txphinit_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txphinitdone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txphinitdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txphinitdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdiffctrl_i" type="array">
+      <obj_property name="ElementShortName">gt1_txdiffctrl_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdiffctrl_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdata_i" type="array">
+      <obj_property name="ElementShortName">gt1_txdata_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdata_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_gtxtxn_i" type="logic">
+      <obj_property name="ElementShortName">gt1_gtxtxn_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_gtxtxn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_gtxtxp_i" type="logic">
+      <obj_property name="ElementShortName">gt1_gtxtxp_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_gtxtxp_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txoutclk_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txoutclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txoutclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txoutclkfabric_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txoutclkfabric_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txoutclkfabric_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txoutclkpcs_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txoutclkpcs_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txoutclkpcs_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txcharisk_i" type="array">
+      <obj_property name="ElementShortName">gt1_txcharisk_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txcharisk_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txpcsreset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txpcsreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txpcsreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txpmareset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txpmareset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txpmareset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txresetdone_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txresetdone_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txresetdone_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txpolarity_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txpolarity_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txpolarity_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx8b10bbypass_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx8b10bbypass_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx8b10bbypass_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txprbssel_i" type="array">
+      <obj_property name="ElementShortName">gt1_txprbssel_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txprbssel_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_gtrefclk1_common_i" type="logic">
+      <obj_property name="ElementShortName">gt0_gtrefclk1_common_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_gtrefclk1_common_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_qplllock_i" type="logic">
+      <obj_property name="ElementShortName">gt0_qplllock_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_qplllock_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_qpllrefclklost_i" type="logic">
+      <obj_property name="ElementShortName">gt0_qpllrefclklost_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_qpllrefclklost_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_qpllreset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_qpllreset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_qpllreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/drpclk_in_i" type="logic">
+      <obj_property name="ElementShortName">drpclk_in_i</obj_property>
+      <obj_property name="ObjectShortName">drpclk_in_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_system_reset_c" type="logic">
+      <obj_property name="ElementShortName">gt0_tx_system_reset_c</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_system_reset_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_system_reset_c" type="logic">
+      <obj_property name="ElementShortName">gt0_rx_system_reset_c</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_system_reset_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_system_reset_c" type="logic">
+      <obj_property name="ElementShortName">gt1_tx_system_reset_c</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_system_reset_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_system_reset_c" type="logic">
+      <obj_property name="ElementShortName">gt1_rx_system_reset_c</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_system_reset_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tied_to_ground_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_ground_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tied_to_ground_vec_i" type="array">
+      <obj_property name="ElementShortName">tied_to_ground_vec_i[63:0]</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_vec_i[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tied_to_vcc_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_vcc_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_vcc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tied_to_vcc_vec_i" type="array">
+      <obj_property name="ElementShortName">tied_to_vcc_vec_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tied_to_vcc_vec_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/GTTXRESET_IN" type="logic">
+      <obj_property name="ElementShortName">GTTXRESET_IN</obj_property>
+      <obj_property name="ObjectShortName">GTTXRESET_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/GTRXRESET_IN" type="logic">
+      <obj_property name="ElementShortName">GTRXRESET_IN</obj_property>
+      <obj_property name="ObjectShortName">GTRXRESET_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/QPLLRESET_IN" type="logic">
+      <obj_property name="ElementShortName">QPLLRESET_IN</obj_property>
+      <obj_property name="ObjectShortName">QPLLRESET_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txusrclk_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txusrclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txusrclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txusrclk2_i" type="logic">
+      <obj_property name="ElementShortName">gt0_txusrclk2_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_txusrclk2_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxusrclk_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxusrclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxusrclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxusrclk2_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rxusrclk2_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxusrclk2_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txusrclk_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txusrclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txusrclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txusrclk2_i" type="logic">
+      <obj_property name="ElementShortName">gt1_txusrclk2_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_txusrclk2_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxusrclk_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxusrclk_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxusrclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxusrclk2_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rxusrclk2_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxusrclk2_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/q0_clk1_refclk_i" type="logic">
+      <obj_property name="ElementShortName">q0_clk1_refclk_i</obj_property>
+      <obj_property name="ObjectShortName">q0_clk1_refclk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_matchn_i" type="logic">
+      <obj_property name="ElementShortName">gt0_matchn_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_matchn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txcharisk_float_i" type="array">
+      <obj_property name="ElementShortName">gt0_txcharisk_float_i[5:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txcharisk_float_i[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdata_float16_i" type="array">
+      <obj_property name="ElementShortName">gt0_txdata_float16_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata_float16_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txdata_float_i" type="array">
+      <obj_property name="ElementShortName">gt0_txdata_float_i[47:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_txdata_float_i[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_block_sync_i" type="logic">
+      <obj_property name="ElementShortName">gt0_block_sync_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_block_sync_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_track_data_i" type="logic">
+      <obj_property name="ElementShortName">gt0_track_data_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_track_data_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_error_count_i" type="array">
+      <obj_property name="ElementShortName">gt0_error_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_error_count_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check_reset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_frame_check_reset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_frame_check_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_inc_in_i" type="logic">
+      <obj_property name="ElementShortName">gt0_inc_in_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_inc_in_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_inc_out_i" type="logic">
+      <obj_property name="ElementShortName">gt0_inc_out_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_inc_out_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_unscrambled_data_i" type="array">
+      <obj_property name="ElementShortName">gt0_unscrambled_data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_unscrambled_data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_matchn_i" type="logic">
+      <obj_property name="ElementShortName">gt1_matchn_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_matchn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txcharisk_float_i" type="array">
+      <obj_property name="ElementShortName">gt1_txcharisk_float_i[5:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txcharisk_float_i[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdata_float16_i" type="array">
+      <obj_property name="ElementShortName">gt1_txdata_float16_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdata_float16_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txdata_float_i" type="array">
+      <obj_property name="ElementShortName">gt1_txdata_float_i[47:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_txdata_float_i[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_block_sync_i" type="logic">
+      <obj_property name="ElementShortName">gt1_block_sync_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_block_sync_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_track_data_i" type="logic">
+      <obj_property name="ElementShortName">gt1_track_data_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_track_data_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_error_count_i" type="array">
+      <obj_property name="ElementShortName">gt1_error_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_error_count_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_frame_check_reset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_frame_check_reset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_frame_check_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_inc_in_i" type="logic">
+      <obj_property name="ElementShortName">gt1_inc_in_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_inc_in_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_inc_out_i" type="logic">
+      <obj_property name="ElementShortName">gt1_inc_out_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_inc_out_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_unscrambled_data_i" type="array">
+      <obj_property name="ElementShortName">gt1_unscrambled_data_i[15:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_unscrambled_data_i[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/reset_on_data_error_i" type="logic">
+      <obj_property name="ElementShortName">reset_on_data_error_i</obj_property>
+      <obj_property name="ObjectShortName">reset_on_data_error_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/track_data_out_i" type="logic">
+      <obj_property name="ElementShortName">track_data_out_i</obj_property>
+      <obj_property name="ObjectShortName">track_data_out_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rxresetdone_vio_i" type="logic">
+      <obj_property name="ElementShortName">rxresetdone_vio_i</obj_property>
+      <obj_property name="ObjectShortName">rxresetdone_vio_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_data_vio_control_i" type="array">
+      <obj_property name="ElementShortName">tx_data_vio_control_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_vio_control_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_data_vio_control_i" type="array">
+      <obj_property name="ElementShortName">rx_data_vio_control_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_vio_control_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/shared_vio_control_i" type="array">
+      <obj_property name="ElementShortName">shared_vio_control_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">shared_vio_control_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/ila_control_i" type="array">
+      <obj_property name="ElementShortName">ila_control_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">ila_control_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/channel_drp_vio_control_i" type="array">
+      <obj_property name="ElementShortName">channel_drp_vio_control_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_drp_vio_control_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/common_drp_vio_control_i" type="array">
+      <obj_property name="ElementShortName">common_drp_vio_control_i[35:0]</obj_property>
+      <obj_property name="ObjectShortName">common_drp_vio_control_i[35:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_data_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">tx_data_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_data_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">tx_data_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_data_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">tx_data_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_data_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">tx_data_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_data_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">rx_data_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_data_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">rx_data_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_data_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">rx_data_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_data_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">rx_data_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/shared_vio_in_i" type="array">
+      <obj_property name="ElementShortName">shared_vio_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">shared_vio_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/shared_vio_out_i" type="array">
+      <obj_property name="ElementShortName">shared_vio_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">shared_vio_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/ila_in_i" type="array">
+      <obj_property name="ElementShortName">ila_in_i[163:0]</obj_property>
+      <obj_property name="ObjectShortName">ila_in_i[163:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/channel_drp_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">channel_drp_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_drp_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/channel_drp_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">channel_drp_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_drp_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/channel_drp_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">channel_drp_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_drp_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/channel_drp_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">channel_drp_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">channel_drp_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/common_drp_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">common_drp_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">common_drp_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/common_drp_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">common_drp_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">common_drp_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/common_drp_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">common_drp_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">common_drp_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/common_drp_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">common_drp_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">common_drp_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_data_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx_data_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_data_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_data_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx_data_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_data_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_data_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx_data_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_data_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_data_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx_data_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_data_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_data_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_rx_data_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_data_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_data_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_rx_data_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_data_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_data_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_rx_data_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_data_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_data_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_rx_data_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_data_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_ila_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_ila_in_i[163:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_ila_in_i[163:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_channel_drp_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_channel_drp_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_channel_drp_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_channel_drp_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_channel_drp_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_channel_drp_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_channel_drp_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_channel_drp_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_channel_drp_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_channel_drp_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_channel_drp_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_channel_drp_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_common_drp_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_common_drp_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_common_drp_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_common_drp_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt0_common_drp_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_common_drp_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_common_drp_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_common_drp_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_common_drp_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_common_drp_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt0_common_drp_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_common_drp_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_data_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx_data_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_data_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_data_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx_data_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_data_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_data_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx_data_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_data_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_data_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx_data_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_data_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_data_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_rx_data_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_data_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_data_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_rx_data_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_data_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_data_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_rx_data_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_data_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_data_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_rx_data_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_data_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_ila_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_ila_in_i[163:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_ila_in_i[163:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_channel_drp_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_channel_drp_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_channel_drp_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_channel_drp_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_channel_drp_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_channel_drp_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_channel_drp_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_channel_drp_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_channel_drp_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_channel_drp_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_channel_drp_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_channel_drp_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_common_drp_vio_async_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_common_drp_vio_async_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_common_drp_vio_async_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_common_drp_vio_sync_in_i" type="array">
+      <obj_property name="ElementShortName">gt1_common_drp_vio_sync_in_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_common_drp_vio_sync_in_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_common_drp_vio_async_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_common_drp_vio_async_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_common_drp_vio_async_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_common_drp_vio_sync_out_i" type="array">
+      <obj_property name="ElementShortName">gt1_common_drp_vio_sync_out_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_common_drp_vio_sync_out_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gttxreset_i" type="logic">
+      <obj_property name="ElementShortName">gttxreset_i</obj_property>
+      <obj_property name="ObjectShortName">gttxreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gtrxreset_i" type="logic">
+      <obj_property name="ElementShortName">gtrxreset_i</obj_property>
+      <obj_property name="ObjectShortName">gtrxreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/mux_sel_i" type="logic">
+      <obj_property name="ElementShortName">mux_sel_i</obj_property>
+      <obj_property name="ObjectShortName">mux_sel_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/user_tx_reset_i" type="logic">
+      <obj_property name="ElementShortName">user_tx_reset_i</obj_property>
+      <obj_property name="ObjectShortName">user_tx_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/user_rx_reset_i" type="logic">
+      <obj_property name="ElementShortName">user_rx_reset_i</obj_property>
+      <obj_property name="ObjectShortName">user_rx_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_vio_clk_i" type="logic">
+      <obj_property name="ElementShortName">tx_vio_clk_i</obj_property>
+      <obj_property name="ObjectShortName">tx_vio_clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/tx_vio_clk_mux_out_i" type="logic">
+      <obj_property name="ElementShortName">tx_vio_clk_mux_out_i</obj_property>
+      <obj_property name="ObjectShortName">tx_vio_clk_mux_out_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_vio_ila_clk_i" type="logic">
+      <obj_property name="ElementShortName">rx_vio_ila_clk_i</obj_property>
+      <obj_property name="ObjectShortName">rx_vio_ila_clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/rx_vio_ila_clk_mux_out_i" type="logic">
+      <obj_property name="ElementShortName">rx_vio_ila_clk_mux_out_i</obj_property>
+      <obj_property name="ObjectShortName">rx_vio_ila_clk_mux_out_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/qpllreset_i" type="logic">
+      <obj_property name="ElementShortName">qpllreset_i</obj_property>
+      <obj_property name="ObjectShortName">qpllreset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/zero_vector_rx_80" type="array">
+      <obj_property name="ElementShortName">zero_vector_rx_80[63:0]</obj_property>
+      <obj_property name="ObjectShortName">zero_vector_rx_80[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/zero_vector_rx_8" type="array">
+      <obj_property name="ElementShortName">zero_vector_rx_8[5:0]</obj_property>
+      <obj_property name="ObjectShortName">zero_vector_rx_8[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxdata_ila" type="array">
+      <obj_property name="ElementShortName">gt0_rxdata_ila[79:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxdata_ila[79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxdatavalid_ila" type="array">
+      <obj_property name="ElementShortName">gt0_rxdatavalid_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxdatavalid_ila[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxcharisk_ila" type="array">
+      <obj_property name="ElementShortName">gt0_rxcharisk_ila[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxcharisk_ila[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txmmcm_lock_ila" type="logic">
+      <obj_property name="ElementShortName">gt0_txmmcm_lock_ila</obj_property>
+      <obj_property name="ObjectShortName">gt0_txmmcm_lock_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxmmcm_lock_ila" type="logic">
+      <obj_property name="ElementShortName">gt0_rxmmcm_lock_ila</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxmmcm_lock_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rxresetdone_ila" type="logic">
+      <obj_property name="ElementShortName">gt0_rxresetdone_ila</obj_property>
+      <obj_property name="ObjectShortName">gt0_rxresetdone_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_txresetdone_ila" type="logic">
+      <obj_property name="ElementShortName">gt0_txresetdone_ila</obj_property>
+      <obj_property name="ObjectShortName">gt0_txresetdone_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxdata_ila" type="array">
+      <obj_property name="ElementShortName">gt1_rxdata_ila[79:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxdata_ila[79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxdatavalid_ila" type="array">
+      <obj_property name="ElementShortName">gt1_rxdatavalid_ila[1:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxdatavalid_ila[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxcharisk_ila" type="array">
+      <obj_property name="ElementShortName">gt1_rxcharisk_ila[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxcharisk_ila[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txmmcm_lock_ila" type="logic">
+      <obj_property name="ElementShortName">gt1_txmmcm_lock_ila</obj_property>
+      <obj_property name="ObjectShortName">gt1_txmmcm_lock_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxmmcm_lock_ila" type="logic">
+      <obj_property name="ElementShortName">gt1_rxmmcm_lock_ila</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxmmcm_lock_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rxresetdone_ila" type="logic">
+      <obj_property name="ElementShortName">gt1_rxresetdone_ila</obj_property>
+      <obj_property name="ObjectShortName">gt1_rxresetdone_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_txresetdone_ila" type="logic">
+      <obj_property name="ElementShortName">gt1_txresetdone_ila</obj_property>
+      <obj_property name="ObjectShortName">gt1_txresetdone_ila</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_test_reset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_tx_test_reset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_test_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_pattern_mode_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx_pattern_mode_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_pattern_mode_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_error_insert_mask_i" type="array">
+      <obj_property name="ElementShortName">gt0_tx_error_insert_mask_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_error_insert_mask_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_tx_encoder_en_i" type="logic">
+      <obj_property name="ElementShortName">gt0_tx_encoder_en_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_tx_encoder_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_test_reset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_tx_test_reset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_test_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_pattern_mode_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx_pattern_mode_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_pattern_mode_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_error_insert_mask_i" type="array">
+      <obj_property name="ElementShortName">gt1_tx_error_insert_mask_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_error_insert_mask_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_tx_encoder_en_i" type="logic">
+      <obj_property name="ElementShortName">gt1_tx_encoder_en_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_tx_encoder_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_test_reset_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rx_test_reset_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_test_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_pattern_mode_i" type="array">
+      <obj_property name="ElementShortName">gt0_rx_pattern_mode_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_pattern_mode_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_rx_decoder_en_i" type="logic">
+      <obj_property name="ElementShortName">gt0_rx_decoder_en_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_rx_decoder_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_test_reset_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rx_test_reset_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_test_reset_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_pattern_mode_i" type="array">
+      <obj_property name="ElementShortName">gt1_rx_pattern_mode_i[2:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_pattern_mode_i[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_rx_decoder_en_i" type="logic">
+      <obj_property name="ElementShortName">gt1_rx_decoder_en_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_rx_decoder_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_data_count_i" type="array">
+      <obj_property name="ElementShortName">gt0_data_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_data_count_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_pattern_error_count_i" type="array">
+      <obj_property name="ElementShortName">gt0_pattern_error_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_pattern_error_count_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_test_over_i" type="logic">
+      <obj_property name="ElementShortName">gt0_test_over_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_test_over_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_pattern_error_i" type="logic">
+      <obj_property name="ElementShortName">gt0_pattern_error_i</obj_property>
+      <obj_property name="ObjectShortName">gt0_pattern_error_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_block_error_i" type="array">
+      <obj_property name="ElementShortName">gt0_block_error_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt0_block_error_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_data_count_i" type="array">
+      <obj_property name="ElementShortName">gt1_data_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_data_count_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_pattern_error_count_i" type="array">
+      <obj_property name="ElementShortName">gt1_pattern_error_count_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_pattern_error_count_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_test_over_i" type="logic">
+      <obj_property name="ElementShortName">gt1_test_over_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_test_over_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_pattern_error_i" type="logic">
+      <obj_property name="ElementShortName">gt1_pattern_error_i</obj_property>
+      <obj_property name="ObjectShortName">gt1_pattern_error_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt1_block_error_i" type="array">
+      <obj_property name="ElementShortName">gt1_block_error_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">gt1_block_error_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/EXAMPLE_CONFIG_INDEPENDENT_LANES" type="array">
+      <obj_property name="ElementShortName">EXAMPLE_CONFIG_INDEPENDENT_LANES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EXAMPLE_CONFIG_INDEPENDENT_LANES[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/EXAMPLE_LANE_WITH_START_CHAR" type="array">
+      <obj_property name="ElementShortName">EXAMPLE_LANE_WITH_START_CHAR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EXAMPLE_LANE_WITH_START_CHAR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/EXAMPLE_WORDS_IN_BRAM" type="array">
+      <obj_property name="ElementShortName">EXAMPLE_WORDS_IN_BRAM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EXAMPLE_WORDS_IN_BRAM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/EXAMPLE_SIM_GTRESET_SPEEDUP" type="array">
+      <obj_property name="ElementShortName">EXAMPLE_SIM_GTRESET_SPEEDUP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EXAMPLE_SIM_GTRESET_SPEEDUP[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/EXAMPLE_USE_CHIPSCOPE" type="array">
+      <obj_property name="ElementShortName">EXAMPLE_USE_CHIPSCOPE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EXAMPLE_USE_CHIPSCOPE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/STABLE_CLOCK_PERIOD" type="array">
+      <obj_property name="ElementShortName">STABLE_CLOCK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STABLE_CLOCK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/TX_DATA_OUT" type="array">
+      <obj_property name="ElementShortName">TX_DATA_OUT[15:0]</obj_property>
+      <obj_property name="ObjectShortName">TX_DATA_OUT[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/TXCTRL_OUT" type="array">
+      <obj_property name="ElementShortName">TXCTRL_OUT[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TXCTRL_OUT[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/USER_CLK" type="logic">
+      <obj_property name="ElementShortName">USER_CLK</obj_property>
+      <obj_property name="ObjectShortName">USER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/SYSTEM_RESET" type="logic">
+      <obj_property name="ElementShortName">SYSTEM_RESET</obj_property>
+      <obj_property name="ObjectShortName">SYSTEM_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/TEST_RESET" type="logic">
+      <obj_property name="ElementShortName">TEST_RESET</obj_property>
+      <obj_property name="ObjectShortName">TEST_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/PATTERN_MODE" type="array">
+      <obj_property name="ElementShortName">PATTERN_MODE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MODE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/ERROR_INSERT_MASK" type="array">
+      <obj_property name="ElementShortName">ERROR_INSERT_MASK[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ERROR_INSERT_MASK[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/ENCODER_EN" type="logic">
+      <obj_property name="ElementShortName">ENCODER_EN</obj_property>
+      <obj_property name="ObjectShortName">ENCODER_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/tied_to_ground_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_ground_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/tied_to_vcc_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_vcc_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_vcc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/tied_to_ground_vec_i" type="array">
+      <obj_property name="ElementShortName">tied_to_ground_vec_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_vec_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/system_reset_r" type="logic">
+      <obj_property name="ElementShortName">system_reset_r</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/system_reset_r2" type="logic">
+      <obj_property name="ElementShortName">system_reset_r2</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/tx_data_reg" type="array">
+      <obj_property name="ElementShortName">tx_data_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/txctrl_reg" type="array">
+      <obj_property name="ElementShortName">txctrl_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">txctrl_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/pattern_rst_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_rst_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_rst_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/encoder_rst_reg" type="logic">
+      <obj_property name="ElementShortName">encoder_rst_reg</obj_property>
+      <obj_property name="ObjectShortName">encoder_rst_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/error_insertion_rst_reg" type="logic">
+      <obj_property name="ElementShortName">error_insertion_rst_reg</obj_property>
+      <obj_property name="ObjectShortName">error_insertion_rst_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/pattern_pause_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_pause_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_pause_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/word_cnt" type="array">
+      <obj_property name="ElementShortName">word_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">word_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/bit_pointer" type="array">
+      <obj_property name="ElementShortName">bit_pointer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_pointer[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/block_word_cnt" type="array">
+      <obj_property name="ElementShortName">block_word_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">block_word_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/data_word_valid" type="logic">
+      <obj_property name="ElementShortName">data_word_valid</obj_property>
+      <obj_property name="ObjectShortName">data_word_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/error_insert" type="logic">
+      <obj_property name="ElementShortName">error_insert</obj_property>
+      <obj_property name="ObjectShortName">error_insert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/pattern_word" type="array">
+      <obj_property name="ElementShortName">pattern_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/hor_parity_word" type="array">
+      <obj_property name="ElementShortName">hor_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/ver_parity_word" type="array">
+      <obj_property name="ElementShortName">ver_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/WORDS_IN_BRAM" type="array">
+      <obj_property name="ElementShortName">WORDS_IN_BRAM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WORDS_IN_BRAM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/BYTE_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/BLOCK_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_gen/CLK_COR_CHAR" type="array">
+      <obj_property name="ElementShortName">CLK_COR_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_COR_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RX_DATA_IN" type="array">
+      <obj_property name="ElementShortName">RX_DATA_IN[15:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_DATA_IN[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RXCTRL_IN" type="array">
+      <obj_property name="ElementShortName">RXCTRL_IN[1:0]</obj_property>
+      <obj_property name="ObjectShortName">RXCTRL_IN[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RXENPCOMMADET_OUT" type="logic">
+      <obj_property name="ElementShortName">RXENPCOMMADET_OUT</obj_property>
+      <obj_property name="ObjectShortName">RXENPCOMMADET_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RXENMCOMMADET_OUT" type="logic">
+      <obj_property name="ElementShortName">RXENMCOMMADET_OUT</obj_property>
+      <obj_property name="ObjectShortName">RXENMCOMMADET_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RX_ENCHAN_SYNC_OUT" type="logic">
+      <obj_property name="ElementShortName">RX_ENCHAN_SYNC_OUT</obj_property>
+      <obj_property name="ObjectShortName">RX_ENCHAN_SYNC_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RX_CHANBOND_SEQ_IN" type="logic">
+      <obj_property name="ElementShortName">RX_CHANBOND_SEQ_IN</obj_property>
+      <obj_property name="ObjectShortName">RX_CHANBOND_SEQ_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/INC_IN" type="logic">
+      <obj_property name="ElementShortName">INC_IN</obj_property>
+      <obj_property name="ObjectShortName">INC_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/INC_OUT" type="logic">
+      <obj_property name="ElementShortName">INC_OUT</obj_property>
+      <obj_property name="ObjectShortName">INC_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/PATTERN_MATCHB_OUT" type="logic">
+      <obj_property name="ElementShortName">PATTERN_MATCHB_OUT</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MATCHB_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RESET_ON_ERROR_IN" type="logic">
+      <obj_property name="ElementShortName">RESET_ON_ERROR_IN</obj_property>
+      <obj_property name="ObjectShortName">RESET_ON_ERROR_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ERROR_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">ERROR_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ERROR_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/TRACK_DATA_OUT" type="logic">
+      <obj_property name="ElementShortName">TRACK_DATA_OUT</obj_property>
+      <obj_property name="ObjectShortName">TRACK_DATA_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/USER_CLK" type="logic">
+      <obj_property name="ElementShortName">USER_CLK</obj_property>
+      <obj_property name="ObjectShortName">USER_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/SYSTEM_RESET" type="logic">
+      <obj_property name="ElementShortName">SYSTEM_RESET</obj_property>
+      <obj_property name="ObjectShortName">SYSTEM_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/TEST_RESET" type="logic">
+      <obj_property name="ElementShortName">TEST_RESET</obj_property>
+      <obj_property name="ObjectShortName">TEST_RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/PATTERN_MODE" type="array">
+      <obj_property name="ElementShortName">PATTERN_MODE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_MODE[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/DECODER_EN" type="logic">
+      <obj_property name="ElementShortName">DECODER_EN</obj_property>
+      <obj_property name="ObjectShortName">DECODER_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/DATA_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">DATA_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/PATTERN_ERROR_COUNT_OUT" type="array">
+      <obj_property name="ElementShortName">PATTERN_ERROR_COUNT_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_ERROR_COUNT_OUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/TEST_OVER_OUT" type="logic">
+      <obj_property name="ElementShortName">TEST_OVER_OUT</obj_property>
+      <obj_property name="ObjectShortName">TEST_OVER_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/PATTERN_ERROR_OUT" type="logic">
+      <obj_property name="ElementShortName">PATTERN_ERROR_OUT</obj_property>
+      <obj_property name="ObjectShortName">PATTERN_ERROR_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/BLOCK_ERROR_OUT" type="array">
+      <obj_property name="ElementShortName">BLOCK_ERROR_OUT[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_ERROR_OUT[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/reset_on_error_in_r" type="logic">
+      <obj_property name="ElementShortName">reset_on_error_in_r</obj_property>
+      <obj_property name="ObjectShortName">reset_on_error_in_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/reset_on_error_in_r2" type="logic">
+      <obj_property name="ElementShortName">reset_on_error_in_r2</obj_property>
+      <obj_property name="ObjectShortName">reset_on_error_in_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/system_reset_r" type="logic">
+      <obj_property name="ElementShortName">system_reset_r</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/system_reset_r2" type="logic">
+      <obj_property name="ElementShortName">system_reset_r2</obj_property>
+      <obj_property name="ObjectShortName">system_reset_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/begin_r" type="logic">
+      <obj_property name="ElementShortName">begin_r</obj_property>
+      <obj_property name="ObjectShortName">begin_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_error_detected_r" type="logic">
+      <obj_property name="ElementShortName">data_error_detected_r</obj_property>
+      <obj_property name="ObjectShortName">data_error_detected_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_count_r" type="array">
+      <obj_property name="ElementShortName">error_count_r[32:0]</obj_property>
+      <obj_property name="ObjectShortName">error_count_r[32:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_detected_r" type="logic">
+      <obj_property name="ElementShortName">error_detected_r</obj_property>
+      <obj_property name="ObjectShortName">error_detected_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r" type="array">
+      <obj_property name="ElementShortName">rx_data_r[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r_track" type="array">
+      <obj_property name="ElementShortName">rx_data_r_track[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r_track[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/start_of_packet_detected_r" type="logic">
+      <obj_property name="ElementShortName">start_of_packet_detected_r</obj_property>
+      <obj_property name="ObjectShortName">start_of_packet_detected_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/track_data_r" type="logic">
+      <obj_property name="ElementShortName">track_data_r</obj_property>
+      <obj_property name="ObjectShortName">track_data_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/track_data_r2" type="logic">
+      <obj_property name="ElementShortName">track_data_r2</obj_property>
+      <obj_property name="ObjectShortName">track_data_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/track_data_r3" type="logic">
+      <obj_property name="ElementShortName">track_data_r3</obj_property>
+      <obj_property name="ObjectShortName">track_data_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_ram_r" type="array">
+      <obj_property name="ElementShortName">rx_data_ram_r[79:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_ram_r[79:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r2" type="array">
+      <obj_property name="ElementShortName">rx_data_r2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r3" type="array">
+      <obj_property name="ElementShortName">rx_data_r3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r3[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r4" type="array">
+      <obj_property name="ElementShortName">rx_data_r4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r5" type="array">
+      <obj_property name="ElementShortName">rx_data_r5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r5[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_r6" type="array">
+      <obj_property name="ElementShortName">rx_data_r6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_r6[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rxctrl_r" type="array">
+      <obj_property name="ElementShortName">rxctrl_r[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rxctrl_r[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rxctrl_r2" type="array">
+      <obj_property name="ElementShortName">rxctrl_r2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rxctrl_r2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rxctrl_r3" type="array">
+      <obj_property name="ElementShortName">rxctrl_r3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rxctrl_r3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_chanbond_seq_r" type="logic">
+      <obj_property name="ElementShortName">rx_chanbond_seq_r</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_seq_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_chanbond_seq_r2" type="logic">
+      <obj_property name="ElementShortName">rx_chanbond_seq_r2</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_seq_r2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_chanbond_seq_r3" type="logic">
+      <obj_property name="ElementShortName">rx_chanbond_seq_r3</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_seq_r3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/sel" type="array">
+      <obj_property name="ElementShortName">sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/error_detected_c" type="logic">
+      <obj_property name="ElementShortName">error_detected_c</obj_property>
+      <obj_property name="ObjectShortName">error_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/next_begin_c" type="logic">
+      <obj_property name="ElementShortName">next_begin_c</obj_property>
+      <obj_property name="ObjectShortName">next_begin_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/next_data_error_detected_c" type="logic">
+      <obj_property name="ElementShortName">next_data_error_detected_c</obj_property>
+      <obj_property name="ObjectShortName">next_data_error_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/next_track_data_c" type="logic">
+      <obj_property name="ElementShortName">next_track_data_c</obj_property>
+      <obj_property name="ObjectShortName">next_track_data_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/start_of_packet_detected_c" type="logic">
+      <obj_property name="ElementShortName">start_of_packet_detected_c</obj_property>
+      <obj_property name="ObjectShortName">start_of_packet_detected_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/chanbondseq_in_data" type="logic">
+      <obj_property name="ElementShortName">chanbondseq_in_data</obj_property>
+      <obj_property name="ObjectShortName">chanbondseq_in_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/input_to_chanbond_data_i" type="logic">
+      <obj_property name="ElementShortName">input_to_chanbond_data_i</obj_property>
+      <obj_property name="ObjectShortName">input_to_chanbond_data_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/input_to_chanbond_reg_i" type="logic">
+      <obj_property name="ElementShortName">input_to_chanbond_reg_i</obj_property>
+      <obj_property name="ObjectShortName">input_to_chanbond_reg_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_chanbond_reg" type="array">
+      <obj_property name="ElementShortName">rx_chanbond_reg[0:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_chanbond_reg[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_aligned" type="array">
+      <obj_property name="ElementShortName">rx_data_aligned[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_aligned[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_data_has_start_char_c" type="logic">
+      <obj_property name="ElementShortName">rx_data_has_start_char_c</obj_property>
+      <obj_property name="ObjectShortName">rx_data_has_start_char_c</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/tied_to_ground_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_ground_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/tied_to_ground_vec_i" type="array">
+      <obj_property name="ElementShortName">tied_to_ground_vec_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">tied_to_ground_vec_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/tied_to_vcc_i" type="logic">
+      <obj_property name="ElementShortName">tied_to_vcc_i</obj_property>
+      <obj_property name="ObjectShortName">tied_to_vcc_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/sm_link" type="logic">
+      <obj_property name="ElementShortName">sm_link</obj_property>
+      <obj_property name="ObjectShortName">sm_link</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/link_ctr" type="array">
+      <obj_property name="ElementShortName">link_ctr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">link_ctr[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/block_word_cnt" type="array">
+      <obj_property name="ElementShortName">block_word_cnt[7:0]</obj_property>
+      <obj_property name="ObjectShortName">block_word_cnt[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/block_error_reg" type="array">
+      <obj_property name="ElementShortName">block_error_reg[3:0]</obj_property>
+      <obj_property name="ObjectShortName">block_error_reg[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_in_reg" type="array">
+      <obj_property name="ElementShortName">rx_fifo_in_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_in_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_rst" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_rst</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_wr_en" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_rd_en" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_valid" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_valid</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_out_reg_en" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_out_reg_en</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_out_reg_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_out_correct" type="array">
+      <obj_property name="ElementShortName">rx_fifo_out_correct[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_out_correct[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/pattern_word" type="array">
+      <obj_property name="ElementShortName">pattern_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/pattern_rst" type="logic">
+      <obj_property name="ElementShortName">pattern_rst</obj_property>
+      <obj_property name="ObjectShortName">pattern_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/pattern_pause_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_pause_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_pause_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/pattern_check_en" type="logic">
+      <obj_property name="ElementShortName">pattern_check_en</obj_property>
+      <obj_property name="ObjectShortName">pattern_check_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/pattern_error_reg" type="logic">
+      <obj_property name="ElementShortName">pattern_error_reg</obj_property>
+      <obj_property name="ObjectShortName">pattern_error_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/pattern_error_cnt" type="array">
+      <obj_property name="ElementShortName">pattern_error_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_error_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/encoder_rst" type="logic">
+      <obj_property name="ElementShortName">encoder_rst</obj_property>
+      <obj_property name="ObjectShortName">encoder_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_word_valid" type="logic">
+      <obj_property name="ElementShortName">data_word_valid</obj_property>
+      <obj_property name="ObjectShortName">data_word_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/hor_correct_mask" type="array">
+      <obj_property name="ElementShortName">hor_correct_mask[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_correct_mask[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ver_correct_mask" type="array">
+      <obj_property name="ElementShortName">ver_correct_mask[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_correct_mask[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/correct_mask_valid" type="logic">
+      <obj_property name="ElementShortName">correct_mask_valid</obj_property>
+      <obj_property name="ObjectShortName">correct_mask_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/hor_correct_mask_reg" type="array">
+      <obj_property name="ElementShortName">hor_correct_mask_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_correct_mask_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ver_correct_mask_reg" type="array">
+      <obj_property name="ElementShortName">ver_correct_mask_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_correct_mask_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/data_word_cnt" type="array">
+      <obj_property name="ElementShortName">data_word_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_word_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/test_over_reg" type="logic">
+      <obj_property name="ElementShortName">test_over_reg</obj_property>
+      <obj_property name="ObjectShortName">test_over_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_out" type="array">
+      <obj_property name="ElementShortName">rx_fifo_out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_out[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_full" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/rx_fifo_empty" type="logic">
+      <obj_property name="ElementShortName">rx_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">rx_fifo_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/hor_parity_word" type="array">
+      <obj_property name="ElementShortName">hor_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hor_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ver_parity_word" type="array">
+      <obj_property name="ElementShortName">ver_parity_word[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ver_parity_word[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RX_DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">RX_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RX_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/RXCTRL_WIDTH" type="array">
+      <obj_property name="ElementShortName">RXCTRL_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RXCTRL_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/WORDS_IN_BRAM" type="array">
+      <obj_property name="ElementShortName">WORDS_IN_BRAM[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WORDS_IN_BRAM[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/CHANBOND_SEQ_LEN" type="array">
+      <obj_property name="ElementShortName">CHANBOND_SEQ_LEN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CHANBOND_SEQ_LEN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/COMMA_DOUBLE" type="array">
+      <obj_property name="ElementShortName">COMMA_DOUBLE[15:0]</obj_property>
+      <obj_property name="ObjectShortName">COMMA_DOUBLE[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/START_OF_PACKET_CHAR" type="array">
+      <obj_property name="ElementShortName">START_OF_PACKET_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">START_OF_PACKET_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/BYTE_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/BLOCK_ALIGN_CHAR" type="array">
+      <obj_property name="ElementShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">BLOCK_ALIGN_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/CLK_COR_CHAR" type="array">
+      <obj_property name="ElementShortName">CLK_COR_CHAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_COR_CHAR[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ST_LINK_DOWN" type="logic">
+      <obj_property name="ElementShortName">ST_LINK_DOWN</obj_property>
+      <obj_property name="ObjectShortName">ST_LINK_DOWN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/ST_LINK_UP" type="logic">
+      <obj_property name="ElementShortName">ST_LINK_UP</obj_property>
+      <obj_property name="ObjectShortName">ST_LINK_UP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_test/gtx3g_test_inst_0/gtx3g_exdes_i/gt0_frame_check/TEST_DATA_MAX_CNT" type="array">
+      <obj_property name="ElementShortName">TEST_DATA_MAX_CNT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TEST_DATA_MAX_CNT[31:0]</obj_property>
    </wvobject>
 </wave_config>

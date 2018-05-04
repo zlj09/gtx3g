@@ -965,8 +965,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     (
         .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
         .BYTE_ALIGN_CHAR(16'h02bc),
-        .BLOCK_ALIGN_CHAR(16'h03fc),
-        .CLK_COR_CHAR(16'h1d1c)
+        .BLOCK_ALIGN_CHAR(16'h03fb),
+        .CLK_COR_CHAR(16'h1d1c),
+        .INIT_NOISE_CHAR(16'haaaa)
     )
     gt0_frame_gen
     (
@@ -989,8 +990,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
     (
         .WORDS_IN_BRAM(EXAMPLE_WORDS_IN_BRAM),
         .BYTE_ALIGN_CHAR(16'h02bc),
-        .BLOCK_ALIGN_CHAR(16'h03fc),
-        .CLK_COR_CHAR(16'h1d1c)
+        .BLOCK_ALIGN_CHAR(16'h03fb),
+        .CLK_COR_CHAR(16'h1d1c),
+        .INIT_NOISE_CHAR(16'haaaa)
     )
     gt1_frame_gen
     (
@@ -1074,8 +1076,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .START_OF_PACKET_CHAR ( 16'h02bc ),
 
         .BYTE_ALIGN_CHAR(16'h02bc),
-        .BLOCK_ALIGN_CHAR(16'h03fc),
-        .CLK_COR_CHAR(16'h1d1c)
+        .BLOCK_ALIGN_CHAR(16'h03fb),
+        .CLK_COR_CHAR(16'h1d1c),
+        .INIT_NOISE_CHAR(16'haaaa)
     )
     gt0_frame_check
     (
@@ -1127,8 +1130,9 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
         .START_OF_PACKET_CHAR ( 16'h02bc ),
 
         .BYTE_ALIGN_CHAR(16'h02bc),
-        .BLOCK_ALIGN_CHAR(16'h03fc),
-        .CLK_COR_CHAR(16'h1d1c)
+        .BLOCK_ALIGN_CHAR(16'h03fb),
+        .CLK_COR_CHAR(16'h1d1c),
+        .INIT_NOISE_CHAR(16'haaaa)
     )
     gt1_frame_check
     (

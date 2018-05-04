@@ -78,8 +78,9 @@ module gtx3g_GT_FRAME_CHECK #
 
     //Modified by lingjun, add control characters
     parameter   BYTE_ALIGN_CHAR = 16'h02bc,
-    parameter   BLOCK_ALIGN_CHAR = 16'h03fc,
-    parameter   CLK_COR_CHAR = 16'h1d1c
+    parameter   BLOCK_ALIGN_CHAR = 16'h03fb,
+    parameter   CLK_COR_CHAR = 16'h1d1c,
+    parameter   INIT_NOISE_CHAR = 16'haaaa
 )                            
 (
     // User Interface
@@ -133,9 +134,7 @@ reg             begin_r;
 reg             data_error_detected_r;
 reg     [32:0]   error_count_r;
 reg             error_detected_r;
-reg     [9:0]   read_counter_i;    
-
-    reg     [79:0] rom [0:511];    
+    
 
     reg     [(RX_DATA_WIDTH-1):0] rx_data_r;
     reg     [(RX_DATA_WIDTH-1):0] rx_data_r_track;
@@ -162,7 +161,6 @@ reg             rx_chanbond_seq_r3;
     reg     [1:0]   sel;
 //*********************************Wire Declarations***************************
 
-    wire    [(RX_DATA_WIDTH-1):0] bram_data_r;
 wire            error_detected_c;
 wire            next_begin_c;
 wire            next_data_error_detected_c;
@@ -544,6 +542,7 @@ assign TRACK_DATA_OUT = sm_link;
                     data_word_valid <= 1'b0;
                 end
                 else begin
+                    block_word_cnt <= 8'd0;
                     block_error_reg <= 4'd1;
                 end
             end
