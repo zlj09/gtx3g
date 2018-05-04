@@ -84,7 +84,7 @@ output          gt1_rx_fsm_reset_done_out,
 input           gt1_data_valid_in,
 
     //_________________________________________________________________________
-    //GT0  (X1Y1)
+    //GT0  (X1Y5)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
     input   [8:0]   gt0_drpaddr_in,
@@ -197,7 +197,7 @@ input           gt1_data_valid_in,
     //---------------- Transmit Ports - pattern Generator Ports ----------------
     input   [2:0]   gt0_txprbssel_in,
 
-    //GT1  (X1Y2)
+    //GT1  (X1Y6)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
     input   [8:0]   gt1_drpaddr_in,
@@ -342,7 +342,7 @@ input           gt1_data_valid_in,
      .gt1_data_valid_in(gt1_data_valid_in),
 
     //_________________________________________________________________________
-    //GT0  (X1Y1)
+    //GT0  (X1Y5)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
         .gt0_drpaddr_in                 (gt0_drpaddr_in), // input wire [8:0] gt0_drpaddr_in
@@ -455,7 +455,7 @@ input           gt1_data_valid_in,
     //---------------- Transmit Ports - pattern Generator Ports ----------------
         .gt0_txprbssel_in               (gt0_txprbssel_in), // input wire [2:0] gt0_txprbssel_in
 
-    //GT1  (X1Y2)
+    //GT1  (X1Y6)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
         .gt1_drpaddr_in                 (gt1_drpaddr_in), // input wire [8:0] gt1_drpaddr_in

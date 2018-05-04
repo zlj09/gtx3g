@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Sat Apr 28 19:02:04 2018
+// Date        : Fri May  4 23:08:30 2018
 // Host        : idea-PC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               f:/Programs/Verilog/FPGA_Group/test_hssi/test_hssi.srcs/sources_1/ip/gtx3g/gtx3g_sim_netlist.v
+//               f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g_sim_netlist.v
 // Design      : gtx3g
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

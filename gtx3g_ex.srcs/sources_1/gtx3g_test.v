@@ -109,30 +109,18 @@ wire    [1:0]   txp_out_i;
             test_reset <= 1'b1;
             pattern_mode <= 3'd1;
             error_insert_mask <= 32'h8a34f09d;
-            ecc_code_en <= 1'b1;
+            ecc_code_en <= 1'b0;
 
             test_flag <= 1'b0;
         end
         else begin
-            if (uart_z7_in == test_flag) begin
-              test_flag <= ~uart_z7_in;
-              test_reset <= 1'b0;
-              test_over <= 1'b0;
-            end
-
-            if (test_over_out)
-              if (test_over) begin
-                test_over <= 1'b0;
-                test_reset <= 1'b1;
-              end
-              else begin
-                test_over <= 1'b1;
-              end
+            test_reset <= 1'b0;
 
             if (!test_reset && !test_over)
                 trans_timer <= trans_timer + 1'b1;
 
             if (test_over_out == 1'b1) begin
+              test_over <= 1'b1;
               test_succeeded <= 1'b1;
               gt0_data_count_reg <= data_count_out;
               gt0_prbs_error_count_reg <= pattern_error_count_out;
@@ -209,7 +197,6 @@ wire    [1:0]   txp_out_i;
 
           cnt_char <= 8'd28;
           data_rdy <= 1'b1;
-          cnt_trans <= 8'd0;
         end
         
         if (data_rdy) begin

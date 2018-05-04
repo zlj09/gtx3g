@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log gtx3g_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtx3g_test.tcl
+    with args -log gtx3g_exdes.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtx3g_exdes.tcl
 
 
 ****** Vivado v2017.2 (64-bit)
@@ -8,34 +8,17 @@
   **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
-source gtx3g_test.tcl -notrace
-create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 247.953 ; gain = 28.371
-Command: synth_design -top gtx3g_test -part xc7z100iffg900-2L
+source gtx3g_exdes.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 248.109 ; gain = 28.484
+Command: synth_design -top gtx3g_exdes -part xc7z100iffg900-2L
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8208 
+INFO: Helper process launched with PID 13100 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 568.254 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 568.520 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'gtx3g_test' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:2]
-	Parameter TRANS_TIMES bound to: 1 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'rst_generator' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:287]
-	Parameter valid_high bound to: 1'b1 
-	Parameter cnt_num bound to: 10'b0000010000 
-WARNING: [Synth 8-6014] Unused sequential element cnt_start_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:312]
-INFO: [Synth 8-256] done synthesizing module 'rst_generator' (1#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:287]
-INFO: [Synth 8-638] synthesizing module 'simple_uart' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:1]
-	Parameter BAUD_RATE bound to: 9600 - type: integer 
-	Parameter BUF_LEN bound to: 8'b00010000 
-	Parameter CNT_NUM bound to: 7812 - type: integer 
-WARNING: [Synth 8-5788] Register char_buf_reg in module simple_uart is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-4767] Trying to implement RAM 'char_buf_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-Reason is one or more of the following :
-	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
-RAM "char_buf_reg" dissolved into registers
-INFO: [Synth 8-256] done synthesizing module 'simple_uart' (2#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:1]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_exdes' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:70]
 	Parameter EXAMPLE_CONFIG_INDEPENDENT_LANES bound to: 1 - type: integer 
 	Parameter EXAMPLE_LANE_WITH_START_CHAR bound to: 0 - type: integer 
@@ -75,10 +58,10 @@ INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE2' [G:/Xilinx/Vivado/Vivado/2
 	Parameter CLKCM_CFG bound to: TRUE - type: string 
 	Parameter CLKRCV_TRST bound to: TRUE - type: string 
 	Parameter CLKSWING_CFG bound to: 2'b11 
-INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE2' (3#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14622]
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE2' (1#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14622]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'BUFG' (4#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_USRCLK_SOURCE' (5#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_gt_usrclk_source.v:68]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_USRCLK_SOURCE' (3#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_gt_usrclk_source.v:68]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_common' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common.v:69]
 	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: TRUE - type: string 
 	Parameter SIM_QPLLREFCLK_SEL bound to: 3'b010 
@@ -108,8 +91,8 @@ INFO: [Synth 8-638] synthesizing module 'GTXE2_COMMON' [G:/Xilinx/Vivado/Vivado/
 	Parameter SIM_QPLLREFCLK_SEL bound to: 3'b010 
 	Parameter SIM_RESET_SPEEDUP bound to: TRUE - type: string 
 	Parameter SIM_VERSION bound to: 4.0 - type: string 
-INFO: [Synth 8-256] done synthesizing module 'GTXE2_COMMON' (6#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:11315]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_common' (7#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common.v:69]
+INFO: [Synth 8-256] done synthesizing module 'GTXE2_COMMON' (4#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:11315]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_common' (5#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common.v:69]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_common_reset' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:74]
 	Parameter STABLE_CLOCK_PERIOD bound to: 10 - type: integer 
 	Parameter STARTUP_DELAY bound to: 500 - type: integer 
@@ -118,10 +101,10 @@ INFO: [Synth 8-638] synthesizing module 'gtx3g_common_reset' [f:/Programs/Verilo
 	Parameter INIT bound to: 1'b0 
 	Parameter ASSERT_COMMON_RESET bound to: 1'b1 
 INFO: [Synth 8-226] default block is never used [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:121]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_common_reset' (8#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:74]
-INFO: [Synth 8-638] synthesizing module 'gtx3g' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/gtx3g_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g' (9#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/gtx3g_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_support' (10#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_support.v:70]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_common_reset' (6#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:74]
+INFO: [Synth 8-638] synthesizing module 'gtx3g' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/realtime/gtx3g_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g' (7#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/realtime/gtx3g_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_support' (8#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_support.v:70]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_GT_FRAME_GEN' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:69]
 	Parameter WORDS_IN_BRAM bound to: 512 - type: integer 
 	Parameter BYTE_ALIGN_CHAR bound to: 16'b0000001010111100 
@@ -136,34 +119,34 @@ INFO: [Synth 8-638] synthesizing module 'pattern_gen' [F:/Programs/Verilog/FPGA_
 INFO: [Synth 8-226] default block is never used [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:23]
 INFO: [Synth 8-638] synthesizing module 'bram_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:95]
 INFO: [Synth 8-3876] $readmem data file 'gt_rom_init_tx.dat' is read successfully [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:107]
-INFO: [Synth 8-256] done synthesizing module 'bram_gen' (11#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:95]
+INFO: [Synth 8-256] done synthesizing module 'bram_gen' (9#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:95]
 INFO: [Synth 8-638] synthesizing module 'prbs7_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:132]
 	Parameter PRBS7_INIT bound to: 16'b0000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs7_gen' (12#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:132]
+INFO: [Synth 8-256] done synthesizing module 'prbs7_gen' (10#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:132]
 INFO: [Synth 8-638] synthesizing module 'prbs9_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:154]
 	Parameter prbs9_INIT bound to: 16'b0000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs9_gen' (13#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:154]
+INFO: [Synth 8-256] done synthesizing module 'prbs9_gen' (11#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:154]
 INFO: [Synth 8-638] synthesizing module 'prbs11_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:176]
 	Parameter prbs11_INIT bound to: 16'b0000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs11_gen' (14#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:176]
+INFO: [Synth 8-256] done synthesizing module 'prbs11_gen' (12#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:176]
 INFO: [Synth 8-638] synthesizing module 'prbs15_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:199]
 	Parameter PRBS15_INIT bound to: 16'b0000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs15_gen' (15#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:199]
+INFO: [Synth 8-256] done synthesizing module 'prbs15_gen' (13#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:199]
 INFO: [Synth 8-638] synthesizing module 'prbs20_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:221]
 	Parameter prbs20_INIT bound to: 20'b00000000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs20_gen' (16#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:221]
+INFO: [Synth 8-256] done synthesizing module 'prbs20_gen' (14#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:221]
 INFO: [Synth 8-638] synthesizing module 'prbs23_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:243]
 	Parameter prbs23_INIT bound to: 23'b00000000000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs23_gen' (17#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:243]
+INFO: [Synth 8-256] done synthesizing module 'prbs23_gen' (15#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:243]
 INFO: [Synth 8-638] synthesizing module 'prbs31_gen' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:265]
 	Parameter prbs31_INIT bound to: 31'b0000000000000000000000000000001 
-INFO: [Synth 8-256] done synthesizing module 'prbs31_gen' (18#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:265]
-INFO: [Synth 8-256] done synthesizing module 'pattern_gen' (19#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:1]
+INFO: [Synth 8-256] done synthesizing module 'prbs31_gen' (16#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:265]
+INFO: [Synth 8-256] done synthesizing module 'pattern_gen' (17#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/pattern_gen.v:1]
 INFO: [Synth 8-638] synthesizing module 'parity_encoder' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/parity_coding.v:1]
-INFO: [Synth 8-256] done synthesizing module 'parity_encoder' (20#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/parity_coding.v:1]
+INFO: [Synth 8-256] done synthesizing module 'parity_encoder' (18#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/parity_coding.v:1]
 INFO: [Synth 8-638] synthesizing module 'error_insertion' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:297]
-INFO: [Synth 8-256] done synthesizing module 'error_insertion' (21#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:297]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_FRAME_GEN' (22#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:69]
+INFO: [Synth 8-256] done synthesizing module 'error_insertion' (19#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:297]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_FRAME_GEN' (20#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:69]
 INFO: [Synth 8-638] synthesizing module 'gtx3g_GT_FRAME_CHECK' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:69]
 	Parameter RX_DATA_WIDTH bound to: 16 - type: integer 
 	Parameter RXCTRL_WIDTH bound to: 2 - type: integer 
@@ -184,11 +167,11 @@ INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [f:/Programs/Verilog
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:131]
 INFO: [Synth 8-638] synthesizing module 'FD' [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3723]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-256] done synthesizing module 'FD' (23#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3723]
+INFO: [Synth 8-256] done synthesizing module 'FD' (21#1) [G:/Xilinx/Vivado/Vivado/2017.2/scripts/rt/data/unisim_comp.v:3723]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:411]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:426]
-INFO: [Synth 8-638] synthesizing module 'rx_word_fifo' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/rx_word_fifo_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rx_word_fifo' (24#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/realtime/rx_word_fifo_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'rx_word_fifo' [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/realtime/rx_word_fifo_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rx_word_fifo' (22#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/realtime/rx_word_fifo_stub.v:6]
 WARNING: [Synth 8-6014] Unused sequential element track_data_r2_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:241]
 WARNING: [Synth 8-6014] Unused sequential element track_data_r3_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:244]
 WARNING: [Synth 8-6014] Unused sequential element rx_chanbond_seq_r3_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:300]
@@ -198,16 +181,8 @@ INFO: [Synth 8-4471] merging register 'pattern_rst_reg' into 'rx_fifo_rst_reg' [
 WARNING: [Synth 8-6014] Unused sequential element RXENMCOMMADET_OUT_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:358]
 WARNING: [Synth 8-6014] Unused sequential element RX_ENCHAN_SYNC_OUT_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:367]
 WARNING: [Synth 8-6014] Unused sequential element pattern_rst_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:501]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_FRAME_CHECK' (25#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:69]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_exdes' (26#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:70]
-WARNING: [Synth 8-6014] Unused sequential element msg_status_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:172]
-WARNING: [Synth 8-3848] Net string_reg[28] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
-WARNING: [Synth 8-3848] Net string_reg[29] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
-WARNING: [Synth 8-3848] Net string_reg[30] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
-WARNING: [Synth 8-3848] Net string_reg[31] in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:159]
-WARNING: [Synth 8-3848] Net rxn_in_i in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:37]
-WARNING: [Synth 8-3848] Net rxp_in_i in module/entity gtx3g_test does not have driver. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:38]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_test' (27#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:2]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_GT_FRAME_CHECK' (23#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:69]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_exdes' (24#1) [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_exdes.v:70]
 WARNING: [Synth 8-3331] design gtx3g_GT_FRAME_CHECK has unconnected port INC_IN
 WARNING: [Synth 8-3331] design error_insertion has unconnected port error_insert_mask[31]
 WARNING: [Synth 8-3331] design error_insertion has unconnected port error_insert_mask[30]
@@ -245,7 +220,7 @@ WARNING: [Synth 8-3331] design gtx3g_GT_USRCLK_SOURCE has unconnected port GT1_T
 WARNING: [Synth 8-3331] design gtx3g_support has unconnected port gt0_txpmareset_in
 WARNING: [Synth 8-3331] design gtx3g_support has unconnected port gt1_txpmareset_in
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 568.254 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 568.520 ; gain = 0.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -254,12 +229,8 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXN_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[1] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i:RXP_IN[0] to constant 0 [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:258]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 568.254 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 568.520 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -268,53 +239,47 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp5/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp5/gtx3g_in_context.xdc] for cell 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i'
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1'
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1'
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-19616-idea-PC/dcp7/rx_word_fifo_in_context.xdc] for cell 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1'
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc]
-WARNING: [Vivado 12-507] No nets matched 'sysclk_in_IBUF'. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:124]
-WARNING: [Vivado 12-507] No nets matched 'gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/q0_clk1_refclk_i'. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:125]
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/gtx3g_test_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gtx3g_test_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/gtx3g_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/dcp5/rx_word_fifo_in_context.xdc] for cell 'gt0_frame_check/rx_word_fifo_inst_1'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/dcp5/rx_word_fifo_in_context.xdc] for cell 'gt0_frame_check/rx_word_fifo_inst_1'
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/dcp5/rx_word_fifo_in_context.xdc] for cell 'gt1_frame_check/rx_word_fifo_inst_1'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/dcp5/rx_word_fifo_in_context.xdc] for cell 'gt1_frame_check/rx_word_fifo_inst_1'
+Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/dcp7/gtx3g_in_context.xdc] for cell 'gtx3g_support_i/gtx3g_init_i'
+Finished Parsing XDC File [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/.Xil/Vivado-3224-idea-PC/dcp7/gtx3g_in_context.xdc] for cell 'gtx3g_support_i/gtx3g_init_i'
+Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc]
+WARNING: [Vivado 12-507] No nets matched 'DRPCLK_IN_IBUF'. [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc:114]
+WARNING: [Vivado 12-507] No nets matched 'gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/Q0_CLK1_GTREFCLK_OUT'. [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc:117]
+Finished Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/gtx3g_exdes_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gtx3g_exdes_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/gtx3g_exdes_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   FD => FDRE: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 893.113 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1' at clock pin 'clk' is different from the actual clock period '6.667', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1' at clock pin 'clk' is different from the actual clock period '6.667', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 889.191 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'gt0_frame_check/rx_word_fifo_inst_1' at clock pin 'clk' is different from the actual clock period '6.667', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'gt1_frame_check/rx_word_fifo_inst_1' at clock pin 'clk' is different from the actual clock period '6.667', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 893.113 ; gain = 324.859
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 889.191 ; gain = 320.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z100iffg900-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:53 . Memory (MB): peak = 893.113 ; gain = 324.859
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 889.191 ; gain = 320.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gt0_frame_check/rx_word_fifo_inst_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gt1_frame_check/rx_word_fifo_inst_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for gt0_frame_check/rx_word_fifo_inst_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for gt1_frame_check/rx_word_fifo_inst_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for gtx3g_support_i/gtx3g_init_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:53 . Memory (MB): peak = 893.113 ; gain = 324.859
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 889.191 ; gain = 320.672
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:315]
-INFO: [Synth 8-5544] ROM "cnt_char" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "cnt_bit" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element num_char_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:41]
 INFO: [Synth 8-5546] ROM "init_wait_done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "init_wait_count" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element init_wait_count_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/support/gtx3g_common_reset.v:104]
@@ -355,17 +320,8 @@ WARNING: [Synth 8-6014] Unused sequential element error_count_r_reg was removed.
 WARNING: [Synth 8-6014] Unused sequential element link_ctr_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:412]
 WARNING: [Synth 8-6014] Unused sequential element pattern_error_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:659]
 WARNING: [Synth 8-6014] Unused sequential element data_word_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_check.v:681]
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:97]
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[3]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[2]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[1]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gt0_error_rxdata_regs_reg[0]" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:57 . Memory (MB): peak = 893.113 ; gain = 324.859
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:46 . Memory (MB): peak = 889.191 ; gain = 320.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -378,51 +334,37 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 8     
-	   2 Input      8 Bit       Adders := 9     
+	   2 Input      8 Bit       Adders := 5     
 	   2 Input      7 Bit       Adders := 4     
-	   2 Input      4 Bit       Adders := 5     
-	   2 Input      3 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 4     
 +---XORs : 
 	   2 Input     16 Bit         XORs := 12    
 	   2 Input      1 Bit         XORs := 28    
 +---XORs : 
 	               16 Bit    Wide XORs := 4     
 +---Registers : 
-	               32 Bit    Registers := 4     
 	               31 Bit    Registers := 4     
 	               23 Bit    Registers := 4     
 	               20 Bit    Registers := 4     
-	               16 Bit    Registers := 74    
-	               10 Bit    Registers := 1     
+	               16 Bit    Registers := 66    
 	                9 Bit    Registers := 4     
-	                8 Bit    Registers := 55    
+	                8 Bit    Registers := 5     
 	                7 Bit    Registers := 2     
-	                4 Bit    Registers := 7     
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 11    
-	                1 Bit    Registers := 94    
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 10    
+	                1 Bit    Registers := 80    
 +---Muxes : 
 	 513 Input     80 Bit        Muxes := 8     
 	   2 Input     16 Bit        Muxes := 26    
-	   2 Input     13 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 12    
-	   4 Input      8 Bit        Muxes := 1     
 	   9 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 4     
 	   2 Input      7 Bit        Muxes := 4     
 	   2 Input      5 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 4     
 	   5 Input      2 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 128   
-	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 88    
 	   3 Input      1 Bit        Muxes := 6     
 	   9 Input      1 Bit        Muxes := 50    
 ---------------------------------------------------------------------------------
@@ -432,51 +374,10 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module gtx3g_test 
+Module gtx3g_exdes 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 2     
-	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 3     
-	               16 Bit    Registers := 8     
-	                8 Bit    Registers := 31    
-	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 8     
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 18    
-	   4 Input      1 Bit        Muxes := 1     
-Module rst_generator 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-Module simple_uart 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                8 Bit    Registers := 19    
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
-+---Muxes : 
-	   2 Input     13 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
-	   4 Input      8 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 22    
-	   5 Input      1 Bit        Muxes := 1     
+	                1 Bit    Registers := 10    
 Module gtx3g_common_reset 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -633,10 +534,6 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 33    
 	   3 Input      1 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 17    
-Module gtx3g_exdes 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -697,10 +594,6 @@ WARNING: [Synth 8-6014] Unused sequential element gt0_frame_gen/test_init_cnt_re
 WARNING: [Synth 8-6014] Unused sequential element gt0_frame_gen/word_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:141]
 WARNING: [Synth 8-6014] Unused sequential element gt1_frame_gen/test_init_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:164]
 WARNING: [Synth 8-6014] Unused sequential element gt1_frame_gen/word_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/imports/example_design/gtx3g_gt_frame_gen.v:141]
-WARNING: [Synth 8-6014] Unused sequential element simple_uart_inst_1/overflow_reg_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:40]
-WARNING: [Synth 8-6014] Unused sequential element rst_generator_inst_0/rst_cnt_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:315]
-WARNING: [Synth 8-6014] Unused sequential element simple_uart_inst_1/num_char_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/simple_uart.v:41]
-WARNING: [Synth 8-6014] Unused sequential element trans_timer_reg was removed.  [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/gtx3g_test.v:97]
 WARNING: [Synth 8-3331] design gtx3g_GT_FRAME_CHECK has unconnected port INC_IN
 WARNING: [Synth 8-3331] design gtx3g_GT_FRAME_CHECK__xdcDup__1 has unconnected port INC_IN
 WARNING: [Synth 8-3331] design error_insertion has unconnected port error_insert_mask[31]
@@ -766,226 +659,172 @@ WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_ins
 WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_insert_mask[3]
 WARNING: [Synth 8-3331] design error_insertion__1 has unconnected port error_insert_mask[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[15] )
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gtx3g_exdes_i/gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15] )
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15] )
-INFO: [Synth 8-3886] merging instance 'pattern_mode_reg[0]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[0]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[2]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[3]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[4]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[7]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[12]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[13]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[14]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[15]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[18]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[20]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[21]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[25]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[27]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[31]' (FDSE) to 'ecc_code_en_reg'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[1]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[5]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[6]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[8]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[9]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[10]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[11]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[16]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[17]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[19]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[22]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[23]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[24]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[26]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[28]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[29]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'error_insert_mask_reg[30]' (FDRE) to 'pattern_mode_reg[1]'
-INFO: [Synth 8-3886] merging instance 'pattern_mode_reg[1]' (FDRE) to 'pattern_mode_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pattern_mode_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/rx_chanbond_seq_r_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/rx_chanbond_seq_r_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (ecc_code_en_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/sel_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/sel_reg[1] )
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[15]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[14]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[12]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[13]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[8]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[9]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[10]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[11]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[2]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[3]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[1]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[6]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[7]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[4]' (FDR) to 'gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_gen/txctrl_reg_reg[5] )
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[15]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[14]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[12]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[13]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[8]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[9]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[10]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[11]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[2]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[3]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[1]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[6]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[7]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[4]' (FDR) to 'gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/txctrl_reg_reg[5] )
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[26]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[27]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[25]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[23]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[24]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[31]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[30]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[28]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[29]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[16]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[17]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[15]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[13]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[13]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[14]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[14]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[18]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[21]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[18]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[22]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[18]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[20]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[18]'
-INFO: [Synth 8-3886] merging instance 'simple_uart_inst_1/cnt_clk_150m_reg[18]' (FDC) to 'simple_uart_inst_1/cnt_clk_150m_reg[19]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\simple_uart_inst_1/cnt_clk_150m_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/error_detected_r_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/error_detected_r_reg )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (test_succeeded_reg)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/reset_on_error_in_r_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/reset_on_error_in_r_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/rx_chanbond_seq_r2_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/rx_chanbond_seq_r2_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_gen/TXCTRL_OUT_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_gen/TXCTRL_OUT_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/reset_on_error_in_r2_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/reset_on_error_in_r2_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt0_frame_check/register_chan_seq[0].rx_chanbond_reg_0 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_exdes_i/gt1_frame_check/register_chan_seq[0].rx_chanbond_reg_0 )
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[5]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[5]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[5]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[12]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[11]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[10]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[9]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[15]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[14]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[13]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[12]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[11]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[10]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[9]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[5]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs9_gen_inst1/prbs9_reg_reg[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[15]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[14]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[13]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[12]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[11]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[10]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[9]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[5]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs11_gen_inst1/prbs11_reg_reg[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[15]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[14]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[13]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[12]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[11]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[10]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[9]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[8]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[7]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[6]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[5]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[4]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[3]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[2]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[1]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs15_gen_inst1/prbs15_reg_reg[0]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[19]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[18]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[17]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[16]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[15]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[14]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[13]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[12]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[11]) is unused and will be removed from module gtx3g_test.
-WARNING: [Synth 8-3332] Sequential element (gtx3g_exdes_i/gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[10]) is unused and will be removed from module gtx3g_test.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/rx_chanbond_seq_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/rx_chanbond_seq_r_reg )
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15] )
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/sel_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/sel_reg[1] )
+INFO: [Synth 8-3886] merging instance 'gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[5]' (FD) to 'gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[15] )
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[15]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[14]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[12]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[13]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[8]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[9]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[10]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[11]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[2]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[3]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[1]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[6]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[7]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gt1_frame_gen/txctrl_reg_reg[4]' (FDR) to 'gt1_frame_gen/txctrl_reg_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_gen/txctrl_reg_reg[5] )
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[15]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[14]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[12]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[13]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[8]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[9]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[10]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[11]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[2]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[3]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[1]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[6]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[7]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gt0_frame_gen/txctrl_reg_reg[4]' (FDR) to 'gt0_frame_gen/txctrl_reg_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_gen/txctrl_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/error_detected_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/error_detected_r_reg )
+INFO: [Synth 8-3886] merging instance 'gt0_frame_check/block_error_reg_reg[2]' (FDRE) to 'gt0_frame_check/block_error_reg_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/block_error_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/reset_on_error_in_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/reset_on_error_in_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/rx_chanbond_seq_r2_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/rx_chanbond_seq_r2_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_gen/TXCTRL_OUT_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_gen/TXCTRL_OUT_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/reset_on_error_in_r2_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/reset_on_error_in_r2_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt0_frame_check/register_chan_seq[0].rx_chanbond_reg_0 )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gt1_frame_check/register_chan_seq[0].rx_chanbond_reg_0 )
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg_rep[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_d1_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/read_counter_i_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[15]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[14]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[13]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_gen/pattern_gen_inst_1/bram_gen_inst1/bram_reg_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg_rep[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg_rep[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg_rep[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg_rep[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg_rep[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_d1_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_d1_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_d1_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_d1_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_d1_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/register_chan_seq[0].rx_chanbond_reg_0) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/sel_reg[1]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/rx_chanbond_seq_r_reg) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_detected_r_reg) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/data_error_detected_r_reg) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/reset_on_error_in_r_reg) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/reset_on_error_in_r2_reg) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[0]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[1]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[2]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[3]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[4]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[5]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[7]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[8]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[9]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[10]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[11]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[12]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[13]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[14]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[15]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[16]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[17]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[18]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[19]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[20]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[21]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[22]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[23]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[24]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[25]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[26]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[27]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[28]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[29]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[30]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[31]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/error_count_r_reg[32]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[15]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[14]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[13]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/pattern_gen_inst_2/bram_gen_inst1/bram_reg_reg[6]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/block_error_reg_reg[3]) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt0_frame_check/rx_chanbond_seq_r2_reg) is unused and will be removed from module gtx3g_exdes.
+INFO: [Synth 8-3332] Sequential element (gt1_frame_check/pattern_gen_inst_2/bram_gen_inst1/read_counter_i_reg_rep[8]) is unused and will be removed from module gtx3g_exdes.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:07 . Memory (MB): peak = 893.113 ; gain = 324.859
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:56 . Memory (MB): peak = 889.191 ; gain = 320.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -996,22 +835,22 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt0_rxoutclkfabric_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt0_rxoutclkfabric_out/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt0_txoutclk_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt0_txoutclk_out/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt0_txoutclkfabric_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt0_txoutclkfabric_out/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt1_rxoutclkfabric_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt1_rxoutclkfabric_out/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt1_txoutclk_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt1_txoutclk_out/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/gt1_txoutclkfabric_out' to pin 'gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/bbstub_gt1_txoutclkfabric_out/O'
-WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 85 of f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc. [f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc:85]
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_support_i/gtx3g_init_i/gt0_rxoutclkfabric_out' to pin 'gtx3g_support_i/gtx3g_init_i/bbstub_gt0_rxoutclkfabric_out/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_support_i/gtx3g_init_i/gt0_txoutclk_out' to pin 'gtx3g_support_i/gtx3g_init_i/bbstub_gt0_txoutclk_out/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_support_i/gtx3g_init_i/gt0_txoutclkfabric_out' to pin 'gtx3g_support_i/gtx3g_init_i/bbstub_gt0_txoutclkfabric_out/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_support_i/gtx3g_init_i/gt1_rxoutclkfabric_out' to pin 'gtx3g_support_i/gtx3g_init_i/bbstub_gt1_rxoutclkfabric_out/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_support_i/gtx3g_init_i/gt1_txoutclk_out' to pin 'gtx3g_support_i/gtx3g_init_i/bbstub_gt1_txoutclk_out/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_support_i/gtx3g_init_i/gt1_txoutclkfabric_out' to pin 'gtx3g_support_i/gtx3g_init_i/bbstub_gt1_txoutclkfabric_out/O'
+WARNING: [Synth 8-3321] set_false_path : Empty to list for constraint at line 81 of F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc. [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc:81]
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:22 . Memory (MB): peak = 893.113 ; gain = 324.859
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 889.191 ; gain = 320.672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:27 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:17 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1023,7 +862,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:28 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:19 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1046,22 +885,22 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/soft_reset_vio_i_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt_txfsmresetdone_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt_txfsmresetdone_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt0_rxfsmresetdone_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt0_rxfsmresetdone_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt0_rxresetdone_vio_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt0_rxresetdone_vio_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt0_rxresetdone_vio_r3_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxfsmresetdone_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxfsmresetdone_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxresetdone_vio_r_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxresetdone_vio_r2_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/gt1_rxresetdone_vio_r3_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin gtx3g_exdes_i/rxresetdone_vio_i_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin soft_reset_vio_i_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt_txfsmresetdone_r_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt_txfsmresetdone_r2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt0_rxfsmresetdone_r_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt0_rxfsmresetdone_r2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt0_rxresetdone_vio_r_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt0_rxresetdone_vio_r2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt0_rxresetdone_vio_r3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt1_rxfsmresetdone_r_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt1_rxfsmresetdone_r2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt1_rxresetdone_vio_r_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt1_rxresetdone_vio_r2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin gt1_rxresetdone_vio_r3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin rxresetdone_vio_i_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:29 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1074,7 +913,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:29 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1086,39 +925,48 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:20 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:20 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:21 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                                              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|gtx3g_test  | gtx3g_exdes_i/gt0_frame_check/rx_data_r_track_reg[15] | 5      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-|gtx3g_test  | gtx3g_exdes_i/gt0_frame_check/rx_data_r_track_reg[7]  | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-|gtx3g_test  | gtx3g_exdes_i/gt1_frame_check/rx_data_r_track_reg[15] | 5      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-|gtx3g_test  | gtx3g_exdes_i/gt1_frame_check/rx_data_r_track_reg[7]  | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-+------------+-------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|gtx3g_exdes | gt0_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[19]   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt0_frame_gen/pattern_gen_inst_1/prbs23_gen_inst1/prbs23_reg_reg[22]   | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt0_frame_gen/pattern_gen_inst_1/prbs31_gen_inst1/prbs31_reg_reg[27]   | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt1_frame_gen/pattern_gen_inst_1/prbs20_gen_inst1/prbs20_reg_reg[19]   | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt1_frame_gen/pattern_gen_inst_1/prbs23_gen_inst1/prbs23_reg_reg[22]   | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt1_frame_gen/pattern_gen_inst_1/prbs31_gen_inst1/prbs31_reg_reg[27]   | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt0_frame_check/pattern_gen_inst_2/prbs20_gen_inst1/prbs20_reg_reg[19] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt0_frame_check/pattern_gen_inst_2/prbs23_gen_inst1/prbs23_reg_reg[22] | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt0_frame_check/pattern_gen_inst_2/prbs31_gen_inst1/prbs31_reg_reg[27] | 12     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|gtx3g_exdes | gt0_frame_check/rx_data_r_track_reg[15]                                | 5      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|gtx3g_exdes | gt0_frame_check/rx_data_r_track_reg[7]                                 | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|gtx3g_exdes | gt1_frame_check/rx_data_r_track_reg[15]                                | 5      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|gtx3g_exdes | gt1_frame_check/rx_data_r_track_reg[7]                                 | 4      | 8     | YES          | NO                 | YES               | 8      | 0       | 
++------------+------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -1143,71 +991,87 @@ Report Cell Usage:
 |2     |rx_word_fifo    |     1|
 |3     |rx_word_fifo__2 |     1|
 |4     |BUFG            |     2|
-|5     |CARRY4          |    61|
+|5     |CARRY4          |    46|
 |6     |GTXE2_COMMON    |     1|
 |7     |IBUFDS_GTE2     |     1|
-|8     |LUT1            |   242|
-|9     |LUT2            |   206|
-|10    |LUT3            |   139|
-|11    |LUT4            |    99|
-|12    |LUT5            |   125|
-|13    |LUT6            |   410|
-|14    |MUXF7           |    42|
-|15    |MUXF8           |     8|
-|16    |SRL16E          |    32|
-|17    |FDCE            |    46|
-|18    |FDPE            |     1|
-|19    |FDRE            |  1452|
-|20    |FDSE            |    21|
-|21    |IBUF            |     4|
-|22    |OBUF            |     4|
+|8     |LUT1            |   198|
+|9     |LUT2            |   220|
+|10    |LUT3            |   119|
+|11    |LUT4            |   104|
+|12    |LUT5            |   151|
+|13    |LUT6            |   309|
+|14    |MUXF7           |    53|
+|15    |SRL16E          |    41|
+|16    |FDCE            |    10|
+|17    |FDRE            |  1236|
+|18    |FDSE            |    35|
+|19    |IBUF            |    12|
+|20    |OBUF            |    92|
 +------+----------------+------+
 
 Report Instance Areas: 
-+------+-----------------------------+--------------------------------+------+
-|      |Instance                     |Module                          |Cells |
-+------+-----------------------------+--------------------------------+------+
-|1     |top                          |                                |  3087|
-|2     |  gtx3g_exdes_i              |gtx3g_exdes                     |  2041|
-|3     |    gt0_frame_check          |gtx3g_GT_FRAME_CHECK__xdcDup__1 |   721|
-|4     |      parity_encoder_inst_2  |parity_encoder_5                |   112|
-|5     |      pattern_gen_inst_2     |pattern_gen_6                   |    40|
-|6     |        prbs7_gen_inst1      |prbs7_gen_7                     |    18|
-|7     |    gt0_frame_gen            |gtx3g_GT_FRAME_GEN              |   422|
-|8     |      error_insertion_inst_1 |error_insertion_1               |    26|
-|9     |      parity_encoder_inst_1  |parity_encoder_2                |    96|
-|10    |      pattern_gen_inst_1     |pattern_gen_3                   |    66|
-|11    |        prbs7_gen_inst1      |prbs7_gen_4                     |    16|
-|12    |    gt1_frame_check          |gtx3g_GT_FRAME_CHECK            |   261|
-|13    |    gt1_frame_gen            |gtx3g_GT_FRAME_GEN_0            |   422|
-|14    |      error_insertion_inst_1 |error_insertion                 |    26|
-|15    |      parity_encoder_inst_1  |parity_encoder                  |    96|
-|16    |      pattern_gen_inst_1     |pattern_gen                     |    66|
-|17    |        prbs7_gen_inst1      |prbs7_gen                       |    16|
-|18    |    gtx3g_support_i          |gtx3g_support                   |   190|
-|19    |      common0_i              |gtx3g_common                    |     1|
-|20    |      common_reset_i         |gtx3g_common_reset              |    28|
-|21    |      gt_usrclk_source       |gtx3g_GT_USRCLK_SOURCE          |     2|
-|22    |  rst_generator_inst_0       |rst_generator                   |    28|
-|23    |  simple_uart_inst_1         |simple_uart                     |   370|
-+------+-----------------------------+--------------------------------+------+
++------+---------------------------+--------------------------------+------+
+|      |Instance                   |Module                          |Cells |
++------+---------------------------+--------------------------------+------+
+|1     |top                        |                                |  2821|
+|2     |  gt0_frame_check          |gtx3g_GT_FRAME_CHECK__xdcDup__1 |   940|
+|3     |    parity_encoder_inst_2  |parity_encoder_12               |   113|
+|4     |    pattern_gen_inst_2     |pattern_gen_13                  |   263|
+|5     |      bram_gen_inst1       |bram_gen_14                     |    45|
+|6     |      prbs11_gen_inst1     |prbs11_gen_15                   |    49|
+|7     |      prbs15_gen_inst1     |prbs15_gen_16                   |    17|
+|8     |      prbs20_gen_inst1     |prbs20_gen_17                   |    21|
+|9     |      prbs23_gen_inst1     |prbs23_gen_18                   |    23|
+|10    |      prbs31_gen_inst1     |prbs31_gen_19                   |    52|
+|11    |      prbs7_gen_inst1      |prbs7_gen_20                    |    17|
+|12    |      prbs9_gen_inst1      |prbs9_gen_21                    |    17|
+|13    |  gt0_frame_gen            |gtx3g_GT_FRAME_GEN              |   644|
+|14    |    error_insertion_inst_1 |error_insertion_1               |    27|
+|15    |    parity_encoder_inst_1  |parity_encoder_2                |   100|
+|16    |    pattern_gen_inst_1     |pattern_gen_3                   |   282|
+|17    |      bram_gen_inst1       |bram_gen_4                      |    38|
+|18    |      prbs11_gen_inst1     |prbs11_gen_5                    |    49|
+|19    |      prbs15_gen_inst1     |prbs15_gen_6                    |    17|
+|20    |      prbs20_gen_inst1     |prbs20_gen_7                    |    21|
+|21    |      prbs23_gen_inst1     |prbs23_gen_8                    |    23|
+|22    |      prbs31_gen_inst1     |prbs31_gen_9                    |    52|
+|23    |      prbs7_gen_inst1      |prbs7_gen_10                    |    17|
+|24    |      prbs9_gen_inst1      |prbs9_gen_11                    |    17|
+|25    |  gt1_frame_check          |gtx3g_GT_FRAME_CHECK            |   270|
+|26    |  gt1_frame_gen            |gtx3g_GT_FRAME_GEN_0            |   648|
+|27    |    error_insertion_inst_1 |error_insertion                 |    27|
+|28    |    parity_encoder_inst_1  |parity_encoder                  |   104|
+|29    |    pattern_gen_inst_1     |pattern_gen                     |   278|
+|30    |      bram_gen_inst1       |bram_gen                        |    38|
+|31    |      prbs11_gen_inst1     |prbs11_gen                      |    49|
+|32    |      prbs15_gen_inst1     |prbs15_gen                      |    17|
+|33    |      prbs20_gen_inst1     |prbs20_gen                      |    21|
+|34    |      prbs23_gen_inst1     |prbs23_gen                      |    23|
+|35    |      prbs31_gen_inst1     |prbs31_gen                      |    52|
+|36    |      prbs7_gen_inst1      |prbs7_gen                       |    17|
+|37    |      prbs9_gen_inst1      |prbs9_gen                       |    17|
+|38    |  gtx3g_support_i          |gtx3g_support                   |   190|
+|39    |    common0_i              |gtx3g_common                    |     1|
+|40    |    common_reset_i         |gtx3g_common_reset              |    28|
+|41    |    gt_usrclk_source       |gtx3g_GT_USRCLK_SOURCE          |     2|
++------+---------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:21 . Memory (MB): peak = 917.508 ; gain = 348.988
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1101 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 924.434 ; gain = 31.320
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:30 . Memory (MB): peak = 924.434 ; gain = 356.180
+Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:51 . Memory (MB): peak = 917.508 ; gain = 28.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:01:21 . Memory (MB): peak = 917.508 ; gain = 348.988
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 65 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-288 Infos, 287 Warnings, 0 Critical Warnings and 0 Errors encountered.
+332 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:50 . Memory (MB): peak = 924.434 ; gain = 658.445
-INFO: [Common 17-1381] The checkpoint 'f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.600 . Memory (MB): peak = 924.434 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May  4 19:40:48 2018...
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:32 . Memory (MB): peak = 917.508 ; gain = 651.363
+INFO: [Common 17-1381] The checkpoint 'f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_exdes.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.653 . Memory (MB): peak = 917.508 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May  4 23:17:14 2018...

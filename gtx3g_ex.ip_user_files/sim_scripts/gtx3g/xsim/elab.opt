@@ -1,1 +1,1 @@
---relax --debug typical --mt auto -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot gtx3g xil_defaultlib.gtx3g xil_defaultlib.glbl -log elaborate.log
+--relax --debug typical --mt auto -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot gtx3g xil_defaultlib.gtx3g xil_defaultlib.glbl -log elaborate.log

@@ -99,7 +99,7 @@ set_false_path -to [get_cells -hierarchical -filter {NAME =~ *data_sync_reg1}]
 
 
 ################################# RefClk Location constraints (Can be uncommented) ##################### 
-## set_property LOC AF9 [get_ports  Q0_CLK1_GTREFCLK_PAD_N_IN ] 
-## set_property LOC AF10 [get_ports  Q0_CLK1_GTREFCLK_PAD_P_IN ]
+## set_property LOC AC7 [get_ports  Q1_CLK1_GTREFCLK_PAD_N_IN ] 
+## set_property LOC AC8 [get_ports  Q1_CLK1_GTREFCLK_PAD_P_IN ]
 
 
