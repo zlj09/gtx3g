@@ -69,12 +69,7 @@
 (* CORE_GENERATION_INFO = "gtx3g,gtwizard_v3_6_7,{protocol_file=xaui}" *)
 module gtx3g_exdes #
 (
-    parameter EXAMPLE_CONFIG_INDEPENDENT_LANES     =   1,//configuration for frame gen and check
-    parameter EXAMPLE_LANE_WITH_START_CHAR         =   0,         // specifies lane with unique start frame char
-    parameter EXAMPLE_WORDS_IN_BRAM                =   512,       // specifies amount of data in BRAM
-    parameter EXAMPLE_SIM_GTRESET_SPEEDUP          =   "TRUE",    // simulation setting for GT SecureIP model
-    parameter EXAMPLE_USE_CHIPSCOPE                =   0,         // Set to 1 to use Chipscope to drive resets
-    parameter STABLE_CLOCK_PERIOD                  = 10
+    localparam LOOPBACK_MODE = 3'b010
 
 )
 (
@@ -106,9 +101,17 @@ module gtx3g_exdes #
     output wire         TEST_OVER_OUT,
     output wire         PATTERN_ERROR_OUT,
     output wire [3:0]   BLOCK_ERROR_OUT,
+    output wire [15:0]  RXDATA_OUT,
 
-    output wire [15:0]  RXDATA_OUT
+    output wire GTX_RESETDONE_OUT
 );
+
+    localparam EXAMPLE_CONFIG_INDEPENDENT_LANES     =   1;//configuration for frame gen and check
+    localparam EXAMPLE_LANE_WITH_START_CHAR         =   0;         // specifies lane with unique start frame char
+    localparam EXAMPLE_WORDS_IN_BRAM                =   512;       // specifies amount of data in BRAM
+    localparam EXAMPLE_SIM_GTRESET_SPEEDUP          =   "TRUE";    // simulation setting for GT SecureIP model
+    localparam EXAMPLE_USE_CHIPSCOPE                =   0;         // Set to 1 to use Chipscope to drive resets
+    localparam STABLE_CLOCK_PERIOD                  = 10;
 
     wire soft_reset_i;
     (*mark_debug = "TRUE" *) wire soft_reset_vio_i;
@@ -1187,6 +1190,12 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 
     assign TRACK_DATA_OUT = track_data_out_i;
 
+    assign GTX_RESETDONE_OUT =  gt0_txfsmresetdone_r2 &
+                                gt1_txfsmresetdone_r2 &
+                                gt0_rxresetdone_r3 &
+                                gt0_rxresetdone_r3;
+
+
     assign track_data_out_i = 
                                 gt0_track_data_i &
                                 gt1_track_data_i ;
@@ -1212,7 +1221,7 @@ always @(posedge  gt1_txusrclk2_i or negedge gt1_txfsmresetdone_i)
 //------------ optional Ports assignments --------------
 assign  gt0_rxprbscntreset_i                 =  tied_to_ground_i;
 assign  gt0_rxprbssel_i                      =  0;
-assign  gt0_loopback_i                       =  3'b010; //Modified by lingjun, use the loopback mode for BERT
+assign  gt0_loopback_i                       =  LOOPBACK_MODE; //3'b010; //Modified by lingjun, use the loopback mode for BERT
  
 assign  gt0_txdiffctrl_i                     =  0;
 assign  gt0_rxbufreset_i                     =  tied_to_ground_i;
@@ -1233,7 +1242,7 @@ assign  gt0_txprbsforceerr_i                 =  tied_to_ground_i;
 assign  gt0_txprbssel_i                      =  0;
 assign  gt1_rxprbscntreset_i                 =  tied_to_ground_i;
 assign  gt1_rxprbssel_i                      =  0;
-assign  gt1_loopback_i                       =  3'b010; ////Modified by lingjun, use the loopback mode for BERT
+assign  gt1_loopback_i                       =  LOOPBACK_MODE; //3'b010; ////Modified by lingjun, use the loopback mode for BERT
  
 assign  gt1_txdiffctrl_i                     =  0;
 assign  gt1_rxbufreset_i                     =  tied_to_ground_i;

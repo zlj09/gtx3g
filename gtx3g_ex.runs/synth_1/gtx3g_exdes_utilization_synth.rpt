@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Fri May  4 23:17:14 2018
+| Date         : Sat May  5 10:56:03 2018
 | Host         : idea-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gtx3g_exdes_utilization_synth.rpt -pb gtx3g_exdes_utilization_synth.pb
 | Design       : gtx3g_exdes
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  975 |     0 |    277400 |  0.35 |
-|   LUT as Logic             |  934 |     0 |    277400 |  0.34 |
+| Slice LUTs*                |  976 |     0 |    277400 |  0.35 |
+|   LUT as Logic             |  935 |     0 |    277400 |  0.34 |
 |   LUT as Memory            |   41 |     0 |    108200 |  0.04 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |   41 |     0 |           |       |
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |  102 |     0 |       362 | 28.18 |
+| Bonded IOB                  |  103 |     0 |       362 | 28.45 |
 | Bonded IPADs                |    2 |     0 |        50 |  4.00 |
 | Bonded OPADs                |    0 |     0 |        32 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
@@ -159,9 +159,9 @@ Table of Contents
 | LUT2         |  220 |                 LUT |
 | LUT1         |  198 |                 LUT |
 | LUT5         |  151 |                 LUT |
-| LUT3         |  119 |                 LUT |
+| LUT3         |  120 |                 LUT |
 | LUT4         |  104 |                 LUT |
-| OBUF         |   92 |                  IO |
+| OBUF         |   93 |                  IO |
 | MUXF7        |   53 |               MuxFx |
 | CARRY4       |   46 |          CarryLogic |
 | SRL16E       |   41 |  Distributed Memory |

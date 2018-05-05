@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525493032">
+  <File Type="RDS-PROPCONSTRS" Name="gtx3g_exdes_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="gtx3g_exdes.tcl"/>
+  <File Type="RDS-RDS" Name="gtx3g_exdes.vds"/>
+  <File Type="RDS-UTIL" Name="gtx3g_exdes_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="gtx3g_exdes_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="gtx3g_exdes.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="gtx3g_exdes_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="gtx3g_exdes_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/rx_word_fifo/rx_word_fifo.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g/gtx3g.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_common.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_common_reset.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_gt_frame_check.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_gt_frame_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_gt_usrclk_source.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_support.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/parity_coding.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/pattern_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_exdes.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gt_rom_init_rx.dat">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gt_rom_init_tx.dat">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="gtx3g_exdes"/>
+      <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_exdes.v"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../../../../../Programs/Verilog/FPGA_Group/test_gtx/gtx_ip/src/gtx3g_exdes_packaging.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

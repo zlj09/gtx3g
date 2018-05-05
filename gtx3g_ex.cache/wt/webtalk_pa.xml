@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Fri May  4 23:18:30 2018">
+<application name="pa" timeStamp="Sat May  5 10:57:35 2018">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="ae3f9898f4a74b96b5af409176995ffd" type="ProjectID"/>
-<property name="ProjectIteration" value="30" type="ProjectIteration"/>
+<property name="ProjectIteration" value="31" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -21,7 +21,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AutoConnectTarget" value="13" type="JavaHandler"/>
 <property name="CloseProject" value="2" type="JavaHandler"/>
 <property name="CloseTarget" value="1" type="JavaHandler"/>
-<property name="CoreView" value="1" type="JavaHandler"/>
+<property name="CoreView" value="2" type="JavaHandler"/>
 <property name="CreateBlockDesign" value="1" type="JavaHandler"/>
 <property name="CustomizeCore" value="1" type="JavaHandler"/>
 <property name="EditDelete" value="7" type="JavaHandler"/>
@@ -37,9 +37,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="RefreshDevice" value="1" type="JavaHandler"/>
 <property name="RefreshTarget" value="1" type="JavaHandler"/>
 <property name="RunBitgen" value="18" type="JavaHandler"/>
-<property name="RunImplementation" value="15" type="JavaHandler"/>
+<property name="RunImplementation" value="17" type="JavaHandler"/>
 <property name="RunSchematic" value="1" type="JavaHandler"/>
-<property name="RunSynthesis" value="22" type="JavaHandler"/>
+<property name="RunSynthesis" value="23" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="1" type="JavaHandler"/>
 <property name="SelectClockPathPreference" value="2" type="JavaHandler"/>
 <property name="SetTopNode" value="3" type="JavaHandler"/>
@@ -59,9 +59,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AbstractFileView_RELOAD" value="7" type="GuiResourceData"/>
 <property name="AbstractSearchablePanel_SHOW_SEARCH" value="1" type="GuiResourceData"/>
 <property name="AddSrcWizard_SPECIFY_HDL_NETLIST_BLOCK_DESIGN" value="1" type="GuiResourceData"/>
-<property name="BaseDialog_CANCEL" value="36" type="GuiResourceData"/>
+<property name="BaseDialog_CANCEL" value="38" type="GuiResourceData"/>
 <property name="BaseDialog_NO" value="1" type="GuiResourceData"/>
-<property name="BaseDialog_OK" value="126" type="GuiResourceData"/>
+<property name="BaseDialog_OK" value="129" type="GuiResourceData"/>
 <property name="BaseDialog_YES" value="23" type="GuiResourceData"/>
 <property name="CheckTimingResultTreeTablePanel_CHECK_TIMING_RESULT_TREE_TABLE" value="2" type="GuiResourceData"/>
 <property name="CheckTimingSectionPanel_CHECK_TIMING_SELECTION_TABLE" value="4" type="GuiResourceData"/>
@@ -70,16 +70,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ConfirmDelete_ALSO_DELETE_CONSTRAINTS_SET_DIRECTORY" value="2" type="GuiResourceData"/>
 <property name="ConstraintsChooserPanel_ADD_FILES" value="2" type="GuiResourceData"/>
 <property name="ConstraintsChooserPanel_FILE_TABLE" value="2" type="GuiResourceData"/>
-<property name="CoreTreeTablePanel_CORE_TREE_TABLE" value="2" type="GuiResourceData"/>
+<property name="CoreTreeTablePanel_CORE_TREE_TABLE" value="7" type="GuiResourceData"/>
 <property name="CreateNewDiagramDialog_DESIGN_NAME" value="7" type="GuiResourceData"/>
 <property name="CreateNewDiagramDialog_SPECIFY_SOURCE_SET" value="1" type="GuiResourceData"/>
 <property name="CustomizeCoreDialog_DOCUMENTATION" value="1" type="GuiResourceData"/>
 <property name="DelayValuesChooser_APPLY" value="1" type="GuiResourceData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="227" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="228" type="GuiResourceData"/>
 <property name="FileSetPanel_MESSAGES" value="6" type="GuiResourceData"/>
 <property name="FloatingTopDialog_SELECT_TOP_MODULE_OF_YOUR_DESIGN" value="1" type="GuiResourceData"/>
 <property name="FloatingTopDialog_SPECIFY_NEW_TOP_MODULE" value="1" type="GuiResourceData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="129" type="GuiResourceData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="133" type="GuiResourceData"/>
 <property name="GeneratedClockTablePanel_TABLE" value="2" type="GuiResourceData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiResourceData"/>
 <property name="GraphicalView_ZOOM_IN" value="118" type="GuiResourceData"/>
@@ -134,6 +134,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PAViews_CODE" value="19" type="GuiResourceData"/>
 <property name="PAViews_DEVICE" value="2" type="GuiResourceData"/>
 <property name="PAViews_FLOW_NAVIGATOR" value="2" type="GuiResourceData"/>
+<property name="PAViews_IP_CATALOG" value="1" type="GuiResourceData"/>
 <property name="PAViews_SCHEMATIC" value="1" type="GuiResourceData"/>
 <property name="PAViews_TIMING_CONSTRAINTS" value="1" type="GuiResourceData"/>
 <property name="PrimaryClocksPanel_RECOMMENDED_CONSTRAINTS_TABLE" value="11" type="GuiResourceData"/>

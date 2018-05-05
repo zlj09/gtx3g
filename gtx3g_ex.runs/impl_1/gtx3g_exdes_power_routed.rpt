@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Fri May  4 23:23:45 2018
+| Date             : Sat May  5 11:02:24 2018
 | Host             : idea-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file gtx3g_exdes_power_routed.rpt -pb gtx3g_exdes_power_summary_routed.pb -rpx gtx3g_exdes_power_routed.rpx
 | Design           : gtx3g_exdes
@@ -50,16 +50,16 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.015 |       10 |       --- |             --- |
-| Slice Logic             |     0.006 |     3824 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     1287 |    277400 |            0.46 |
+| Slice Logic             |     0.006 |     3825 |       --- |             --- |
+|   LUT as Logic          |     0.005 |     1288 |    277400 |            0.46 |
 |   Register              |    <0.001 |     1950 |    554800 |            0.35 |
 |   CARRY4                |    <0.001 |      116 |     69350 |            0.17 |
 |   LUT as Shift Register |    <0.001 |       25 |    108200 |            0.02 |
 |   F7/F8 Muxes           |    <0.001 |       61 |    277400 |            0.02 |
 |   Others                |     0.000 |      143 |       --- |             --- |
-| Signals                 |     0.007 |     2790 |       --- |             --- |
+| Signals                 |     0.007 |     2794 |       --- |             --- |
 | Block RAM               |     0.001 |      0.5 |       755 |            0.07 |
-| I/O                     |     0.029 |       94 |       362 |           25.97 |
+| I/O                     |     0.030 |       95 |       362 |           26.24 |
 | GTX                     |     0.492 |        2 |        16 |           12.50 |
 | Static Power            |     0.225 |          |           |                 |
 | Total                   |     0.776 |          |           |                 |

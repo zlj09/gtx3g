@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Fri May  4 23:21:05 2018
+| Date                      : Sat May  5 10:59:40 2018
 | Host                      : idea-PC running 64-bit major release  (build 9200)
 | Command                   : report_io -file gtx3g_exdes_io_placed.rpt
 | Design                    : gtx3g_exdes
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           136 |
+|           137 |
 +---------------+
 
 
@@ -516,7 +516,7 @@ Table of Contents
 | F29        |                             |                  | PS_DDR_DQS_N2_502       | PSS IO        |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | F30        |                             |                  | PS_DDR_DQ23_502         | PSS IO        |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | G1         | PATTERN_ERROR_COUNT_OUT[29] | High Performance | IO_L10N_T1_33           | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
-| G2         | PATTERN_ERROR_OUT           | High Performance | IO_L7P_T1_33            | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
+| G2         | GTX_RESETDONE_OUT           | High Performance | IO_L7P_T1_33            | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | G3         |                             |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
 | G4         | PATTERN_ERROR_COUNT_OUT[25] | High Performance | IO_L12N_T1_MRCC_33      | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | G5         | PATTERN_ERROR_COUNT_OUT[26] | High Performance | IO_L12P_T1_MRCC_33      | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
@@ -579,8 +579,8 @@ Table of Contents
 | J2         |                             | High Performance | VCCO_33                 | VCCO          |             |      33 |            |      |                     |                      |      1.80 |            |           |          |      |                  |
 | J3         |                             | High Performance | IO_L1N_T0_33            | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
 | J4         |                             | High Performance | IO_L1P_T0_33            | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
-| J5         | PATTERN_MODE[1]             | High Performance | IO_L5N_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
-| J6         | TEST_OVER_OUT               | High Performance | IO_L6N_T0_VREF_33       | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
+| J5         | PATTERN_MODE[0]             | High Performance | IO_L5N_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
+| J6         | PATTERN_ERROR_OUT           | High Performance | IO_L6N_T0_VREF_33       | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | J7         |                             |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
 | J8         | DATA_COUNT_OUT[20]          | High Performance | IO_L15P_T2_DQS_34       | OUTPUT        | LVCMOS18*   |      34 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | J9         | DATA_COUNT_OUT[9]           | High Performance | IO_L20N_T3_34           | OUTPUT        | LVCMOS18*   |      34 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
@@ -606,11 +606,11 @@ Table of Contents
 | J29        |                             |                  | PS_DDR_DQ24_502         | PSS IO        |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | J30        |                             |                  | PS_DDR_DQ26_502         | PSS IO        |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | K1         |                             | High Performance | IO_L2N_T0_33            | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
-| K2         |                             | High Performance | IO_L3N_T0_DQS_33        | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
+| K2         | TEST_RESET                  | High Performance | IO_L3N_T0_DQS_33        | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
 | K3         |                             | High Performance | IO_L3P_T0_DQS_33        | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
 | K4         |                             |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
-| K5         | PATTERN_MODE[2]             | High Performance | IO_L5P_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
-| K6         | PATTERN_MODE[0]             | High Performance | IO_L6P_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
+| K5         | PATTERN_MODE[1]             | High Performance | IO_L5P_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
+| K6         | TEST_OVER_OUT               | High Performance | IO_L6P_T0_33            | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | K7         | DATA_COUNT_OUT[11]          | High Performance | IO_L19N_T3_VREF_34      | OUTPUT        | LVCMOS18*   |      34 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | K8         | DATA_COUNT_OUT[7]           | High Performance | IO_L21N_T3_DQS_34       | OUTPUT        | LVCMOS18*   |      34 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | K9         |                             | High Performance | VCCO_34                 | VCCO          |             |      34 |            |      |                     |                      |      1.80 |            |           |          |      |                  |
@@ -636,8 +636,8 @@ Table of Contents
 | K29        |                             |                  | VCCO_DDR_502            | VCCO          |             |         |            |      |                     |                      |     any** |            |           |          |      |                  |
 | K30        |                             |                  | PS_DDR_DQ28_502         | PSS IO        |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | L1         |                             | High Performance | IO_L2P_T0_33            | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
-| L2         | ECC_CODE_EN                 | High Performance | IO_L4N_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
-| L3         | TEST_RESET                  | High Performance | IO_L4P_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
+| L2         | PATTERN_MODE[2]             | High Performance | IO_L4N_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
+| L3         | ECC_CODE_EN                 | High Performance | IO_L4P_T0_33            | INPUT         | LVCMOS18*   |      33 |            |      |                     |                 NONE |           | UNFIXED    |           |          |      | NONE             |
 | L4         | PATTERN_ERROR_COUNT_OUT[0]  | High Performance | IO_25_VRP_33            | OUTPUT        | LVCMOS18*   |      33 |         12 | SLOW |                     |            FP_VTT_50 |           | UNFIXED    |           |          |      | NONE             |
 | L5         |                             | High Performance | IO_0_VRN_33             | User IO       |             |      33 |            |      |                     |                      |           |            |           |          |      |                  |
 | L6         |                             | High Performance | VCCO_33                 | VCCO          |             |      33 |            |      |                     |                      |      1.80 |            |           |          |      |                  |

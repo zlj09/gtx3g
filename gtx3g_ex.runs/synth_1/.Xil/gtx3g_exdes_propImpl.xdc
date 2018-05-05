@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc rfile:../../../gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc rfile:../../../gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes_packaging.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:93 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC GTXE2_CHANNEL_X0Y5 [get_cells gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i]
 set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
