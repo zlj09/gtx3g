@@ -1,0 +1,397 @@
+
+*** Running vivado
+    with args -log gtx3g_bert_axi_v1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtx3g_bert_axi_v1_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source gtx3g_bert_axi_v1_0.tcl -notrace
+Command: synth_design -top gtx3g_bert_axi_v1_0 -part xc7z100iffg900-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17424 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 569.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_axi_v1_0' [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_axi_v1_0_S00_AXI' [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter LOOPBACK_MODE bound to: 3'b010 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:273]
+INFO: [Synth 8-226] default block is never used [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:522]
+INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_0' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/realtime/gtx3g_bert_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_0' (1#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/realtime/gtx3g_bert_0_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element byte_index was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:251]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_axi_v1_0_S00_AXI' (2#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_axi_v1_0' (3#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 569.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 569.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z100iffg900-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/dcp3/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
+Finished Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/dcp3/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.505 . Memory (MB): peak = 884.988 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z100iffg900-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:47 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'test_state_reg' in module 'gtx3g_bert_axi_v1_0_S00_AXI'
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:624]
+INFO: [Synth 8-5544] ROM "test_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:624]
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:624]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                              000
+                 iSTATE0 |                               01 |                              001
+                 iSTATE1 |                               10 |                              010
+                 iSTATE2 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'test_state_reg' using encoding 'sequential' in module 'gtx3g_bert_axi_v1_0_S00_AXI'
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:624]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 28    
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	  16 Input     32 Bit        Muxes := 16    
+	   2 Input     32 Bit        Muxes := 21    
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module gtx3g_bert_axi_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 28    
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	  16 Input     32 Bit        Muxes := 16    
+	   2 Input     32 Bit        Muxes := 21    
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2020 (col length:140)
+BRAMs: 1510 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[16]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[17]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[17]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[18]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[18]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[19]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[19]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[20]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[20]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[21]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[21]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[22]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[22]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[23]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[23]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[24]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[24]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[25]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[25]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[26]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[26]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[27]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[27]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[28]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[28]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[29]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[29]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[30]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[30]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31] )
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[16]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[17]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[18]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[18]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[19]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[20]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[20]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[21]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[22]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[23]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[23]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[24]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[24]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[25]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[25]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[26]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[26]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[27]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[27]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[28]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[28]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[29]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[29]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[30]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[30]' (FD) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d1_reg[31]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/USER_CLK' to pin 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/bbstub_USER_CLK/O'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:06 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:08 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:09 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:09 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++--------------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name         | RTL Name                                          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|gtx3g_bert_axi_v1_0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_reset_r2_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++--------------------+---------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |gtx3g_bert_0  |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |gtx3g_bert_0 |     1|
+|2     |BUFG         |     1|
+|3     |LUT1         |     1|
+|4     |LUT2         |    22|
+|5     |LUT3         |   124|
+|6     |LUT4         |    26|
+|7     |LUT5         |    13|
+|8     |LUT6         |   189|
+|9     |MUXF7        |    64|
+|10    |MUXF8        |    32|
+|11    |SRL16E       |     1|
+|12    |FDRE         |   908|
+|13    |FDSE         |     9|
+|14    |IBUF         |    54|
+|15    |OBUF         |    42|
++------+-------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+----------------------------+------+
+|      |Instance                           |Module                      |Cells |
++------+-----------------------------------+----------------------------+------+
+|1     |top                                |                            |  1575|
+|2     |  gtx3g_bert_axi_v1_0_S00_AXI_inst |gtx3g_bert_axi_v1_0_S00_AXI |  1478|
++------+-----------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:42 . Memory (MB): peak = 884.988 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'gtx3g_bert_axi_v1_0' is not ideal for floorplanning, since the cellview 'gtx3g_bert_axi_v1_0_S00_AXI' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+59 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:29 . Memory (MB): peak = 884.988 ; gain = 618.910
+INFO: [Common 17-1381] The checkpoint 'F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/gtx3g_bert_axi_v1_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.620 . Memory (MB): peak = 884.988 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat May  5 21:50:54 2018...
