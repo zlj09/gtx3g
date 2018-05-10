@@ -50,18 +50,21 @@ set rc [catch {
   create_project -in_memory -part xc7z100iffg900-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.cache/wt [current_project]
-  set_property parent.project_path F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.xpr [current_project]
+  set_property webtalk.parent_dir E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.cache/wt [current_project]
+  set_property parent.project_path E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.xpr [current_project]
   set_property ip_repo_paths {
-  F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert
-  F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0
+  E:/ljzhu/test_gtx/ip_repo/gtx3g_bert
+  E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0
 } [current_project]
-  set_property ip_output_repo F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.cache/ip [current_project]
+  set_property ip_output_repo E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/gtx3g_bert_axi_v1_0.dcp
-  read_ip -quiet F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci
-  set_property is_locked true [get_files F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci]
+  add_files -quiet E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/gtx3g_bert_axi_v1_0.dcp
+  read_ip -quiet e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_3/gtx3g_bert_0.xci
+  set_property is_locked true [get_files e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_3/gtx3g_bert_0.xci]
+  read_ip -quiet E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci
+  set_property is_locked true [get_files E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci]
+  read_xdc E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/constrs_1/new/gtx3g_bert_axi_v1_0.xdc
   link_design -top gtx3g_bert_axi_v1_0 -part xc7z100iffg900-2L
   close_msg_db -file init_design.pb
 } RESULT]

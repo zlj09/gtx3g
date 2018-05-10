@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date              : Tue May  8 21:44:07 2018
-| Host              : idea-PC running 64-bit major release  (build 9200)
+| Date              : Thu May 10 21:11:30 2018
+| Host              : FPGA-PC running 64-bit Service Pack 1  (build 7601)
 | Command           : report_clock_utilization -file gtx3g_bert_axi_v1_0_clock_utilization_routed.rpt
 | Design            : gtx3g_bert_axi_v1_0
 | Device            : 7z100i-ffg900
@@ -49,8 +49,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                                                                                           | Driver Pin                                                                                                   | Net                                                                                                        |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 2 |        1462 |               1 |        6.667 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/txoutclk_bufg0_i/O | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |         911 |               0 |              |                                                                                                                                 | s00_axi_aclk_IBUF_BUFG_inst/O                                                                                | s00_axi_aclk_IBUF_BUFG                                                                                     |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 3 |        1697 |               1 |        6.667 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/txoutclk_bufg0_i/O | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y17 | n/a          |                 2 |         596 |               0 |       10.000 | s00_axi_aclk                                                                                                                    | s00_axi_aclk_IBUF_BUFG_inst/O                                                                                | s00_axi_aclk_IBUF_BUFG                                                                                     |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 2 |         540 |               0 |       10.000 | drpclk_in_i                                                                                                                     | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/DRP_CLK_BUFG/O                                      | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/drpclk_in_i                                       |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+---------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -64,7 +64,7 @@ Table of Contents
 | Source Id | Global Id | Driver Type/Pin        | Constraint         | Site               | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                                                                                                                    | Driver Pin                                                                                                                      | Net                                                                                                                             |
 +-----------+-----------+------------------------+--------------------+--------------------+--------------+-------------+-----------------+---------------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 | src0      | g0        | GTXE2_CHANNEL/TXOUTCLK | GTXE2_CHANNEL_X0Y5 | GTXE2_CHANNEL_X0Y5 | X1Y1         |           1 |               0 |               6.667 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gt0_txoutclk_out |
-| src1      | g1        | IBUF/O                 | None               | IOB_X1Y278         | X1Y5         |           1 |               0 |                     |                                                                                                                                 | s00_axi_aclk_IBUF_inst/O                                                                                                        | s00_axi_aclk_IBUF                                                                                                               |
+| src1      | g1        | IBUF/O                 | None               | IOB_X1Y278         | X1Y5         |           1 |               0 |              10.000 | s00_axi_aclk                                                                                                                    | s00_axi_aclk_IBUF_inst/O                                                                                                        | s00_axi_aclk_IBUF                                                                                                               |
 | src2      | g2        | IBUF/O                 | None               | IOB_X1Y276         | X1Y5         |           1 |               0 |                     |                                                                                                                                 | drpclk_in_IBUF_inst/O                                                                                                           | drpclk_in_IBUF                                                                                                                  |
 +-----------+-----------+------------------------+--------------------+--------------------+--------------+-------------+-----------------+---------------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -80,11 +80,11 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y0              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |    6 |  5100 |    6 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
+| X1Y0              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |   48 |  5100 |   18 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
 | X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y1              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    2 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 2838 |  5100 | 1195 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
+| X1Y1              |    3 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    2 |     4 |    0 |     0 |    0 |     0 |    0 |     0 | 2715 |  5100 | 1052 |  1950 |    0 |   100 |    1 |    50 |    0 |   140 |
 | X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
-| X1Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |   14 |  5100 |   12 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
+| X1Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     0 |    0 |     0 |    0 |     0 |   14 |  5100 |   10 |  1950 |    0 |   100 |    0 |    50 |    0 |   140 |
 | X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
 | X1Y3              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |  4950 |    0 |  1900 |    0 |    90 |    0 |    45 |    0 |   140 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  5200 |    0 |  2050 |    0 |   120 |    0 |    60 |    0 |   160 |
@@ -109,7 +109,7 @@ Table of Contents
 | Y3 |  0 |  0 |
 | Y2 |  0 |  1 |
 | Y1 |  0 |  3 |
-| Y0 |  0 |  1 |
+| Y0 |  0 |  2 |
 +----+----+----+
 
 
@@ -119,7 +119,7 @@ Table of Contents
 +-----------+-----------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                                                                                                                           | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                        |
 +-----------+-----------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK |       6.667 | {0.000 3.333} |        1453 |        1 |              0 |        2 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
+| g0        | BUFG/O          | n/a               | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK |       6.667 | {0.000 3.333} |        1688 |        1 |              0 |        2 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
 +-----------+-----------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -135,19 +135,19 @@ Table of Contents
 | Y4 |  0 |     1 |
 | Y3 |  0 |     0 |
 | Y2 |  0 |     0 |
-| Y1 |  0 |  1455 |
-| Y0 |  0 |     0 |
+| Y1 |  0 |  1674 |
+| Y0 |  0 |    16 |
 +----+----+-------+
 
 
 7. Device Cell Placement Summary for Global Clock g1
 ----------------------------------------------------
 
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------+
-| Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                    |
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------+
-| g1        | BUFG/O          | n/a               |       |             |               |         911 |        0 |              0 |        0 | s00_axi_aclk_IBUF_BUFG |
-+-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+------------------------+
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock        | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                    |
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+------------------------+
+| g1        | BUFG/O          | n/a               | s00_axi_aclk |      10.000 | {0.000 5.000} |         596 |        0 |              0 |        0 | s00_axi_aclk_IBUF_BUFG |
++-----------+-----------------+-------------------+--------------+-------------+---------------+-------------+----------+----------------+----------+------------------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
 *** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
@@ -162,7 +162,7 @@ Table of Contents
 | Y4 |  0 |    0 |
 | Y3 |  0 |    0 |
 | Y2 |  0 |   14 |
-| Y1 |  0 |  897 |
+| Y1 |  0 |  582 |
 | Y0 |  0 |    0 |
 +----+----+------+
 
@@ -189,19 +189,20 @@ Table of Contents
 | Y4 |  0 |    0 |
 | Y3 |  0 |    0 |
 | Y2 |  0 |    0 |
-| Y1 |  0 |  534 |
-| Y0 |  0 |    6 |
+| Y1 |  0 |  508 |
+| Y0 |  0 |   32 |
 +----+----+------+
 
 
 9. Clock Region Cell Placement per Global Clock: Region X1Y0
 ------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                  |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
-| g2        | n/a   | BUFG/O          | None       |           6 |               0 |  6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/drpclk_in_i |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+----------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                        |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          16 |               0 | 16 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
+| g2        | n/a   | BUFG/O          | None       |          32 |               0 | 32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/drpclk_in_i                                       |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -213,9 +214,9 @@ Table of Contents
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1455 |               0 | 1411 |     41 |    0 |   0 |  2 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
-| g1        | n/a   | BUFG/O          | None       |         897 |               0 |  896 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | s00_axi_aclk_IBUF_BUFG                                                                                     |
-| g2        | n/a   | BUFG/O          | None       |         534 |               0 |  531 |      0 |    0 |   0 |  2 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/drpclk_in_i                                       |
+| g0        | n/a   | BUFG/O          | None       |        1674 |               0 | 1629 |     41 |    1 |   0 |  2 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT |
+| g1        | n/a   | BUFG/O          | None       |         582 |               0 |  581 |      0 |    1 |   0 |  0 |    0 |   0 |       0 | s00_axi_aclk_IBUF_BUFG                                                                                     |
+| g2        | n/a   | BUFG/O          | None       |         508 |               0 |  505 |      0 |    0 |   0 |  2 |    0 |   0 |       0 | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/drpclk_in_i                                       |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -272,7 +273,7 @@ resize_pblock [get_pblocks {CLKAG_s00_axi_aclk_IBUF_BUFG}] -add {CLOCKREGION_X1Y
 #startgroup
 create_pblock {CLKAG_gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT}
 add_cells_to_pblock [get_pblocks  {CLKAG_gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=user_clk_OBUF_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT"}]]]
-resize_pblock [get_pblocks {CLKAG_gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT}] -add {CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gt_usrclk_source/GT0_TXUSRCLK_OUT}] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/drpclk_in_i" driven by instance "gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/DRP_CLK_BUFG" located at site "BUFGCTRL_X0Y16"

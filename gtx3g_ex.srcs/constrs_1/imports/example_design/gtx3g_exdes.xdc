@@ -116,7 +116,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports uart_z7_out]
 set_property PACKAGE_PIN AG16 [get_ports track_data_out]
 set_property PACKAGE_PIN AJ21 [get_ports uart_z7_in]
 set_property PACKAGE_PIN AK21 [get_ports uart_z7_out]
-set_property PACKAGE_PIN U8 [get_ports refclk_p_in]
+set_property PACKAGE_PIN N8 [get_ports refclk_p_in]
 
 set_property IOSTANDARD LVCMOS25 [get_ports user_clk]
 set_property PACKAGE_PIN AD21 [get_ports user_clk]

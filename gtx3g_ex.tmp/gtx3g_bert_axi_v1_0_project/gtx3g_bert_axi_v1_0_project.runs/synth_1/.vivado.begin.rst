@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="admin" Host="IDEA-PC" Pid="3912">
+    <Process Command="vivado.bat" Owner="FPGA" Host="FPGA-PC" Pid="7516">
     </Process>
 </ProcessHandle>

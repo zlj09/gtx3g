@@ -1,0 +1,3 @@
+verilog xil_defaultlib "../../../ip/async_dual_port_bram/sim/async_dual_port_bram.v" 
+verilog xil_defaultlib "glbl.v"
+nosort

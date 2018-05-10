@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue May  8 21:39:57 2018
-| Host         : idea-PC running 64-bit major release  (build 9200)
+| Date         : Thu May 10 21:08:50 2018
+| Host         : FPGA-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file gtx3g_bert_axi_v1_0_utilization_synth.rpt -pb gtx3g_bert_axi_v1_0_utilization_synth.pb
 | Design       : gtx3g_bert_axi_v1_0
 | Device       : 7z100iffg900-2L
@@ -27,20 +27,18 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  305 |     0 |    277400 |  0.11 |
-|   LUT as Logic             |  304 |     0 |    277400 |  0.11 |
-|   LUT as Memory            |    1 |     0 |    108200 | <0.01 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            |  917 |     0 |    554800 |  0.17 |
-|   Register as Flip Flop    |  917 |     0 |    554800 |  0.17 |
-|   Register as Latch        |    0 |     0 |    554800 |  0.00 |
-| F7 Muxes                   |   64 |     0 |    138700 |  0.05 |
-| F8 Muxes                   |   32 |     0 |     69350 |  0.05 |
-+----------------------------+------+-------+-----------+-------+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs*             |  385 |     0 |    277400 |  0.14 |
+|   LUT as Logic          |  385 |     0 |    277400 |  0.14 |
+|   LUT as Memory         |    0 |     0 |    108200 |  0.00 |
+| Slice Registers         |  833 |     0 |    554800 |  0.15 |
+|   Register as Flip Flop |  833 |     0 |    554800 |  0.15 |
+|   Register as Latch     |    0 |     0 |    554800 |  0.00 |
+| F7 Muxes                |   64 |     0 |    138700 |  0.05 |
+| F8 Muxes                |   32 |     0 |     69350 |  0.05 |
++-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -58,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 9     |          Yes |         Set |            - |
-| 908   |          Yes |       Reset |            - |
+| 10    |          Yes |         Set |            - |
+| 823   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,19 +152,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  908 |        Flop & Latch |
-| LUT6     |  189 |                 LUT |
-| LUT3     |  124 |                 LUT |
+| FDRE     |  823 |        Flop & Latch |
+| LUT6     |  310 |                 LUT |
 | MUXF7    |   64 |               MuxFx |
 | IBUF     |   54 |                  IO |
+| LUT5     |   50 |                 LUT |
 | OBUF     |   42 |                  IO |
 | MUXF8    |   32 |               MuxFx |
-| LUT4     |   26 |                 LUT |
-| LUT2     |   22 |                 LUT |
-| LUT5     |   13 |                 LUT |
-| FDSE     |    9 |        Flop & Latch |
-| SRL16E   |    1 |  Distributed Memory |
-| LUT1     |    1 |                 LUT |
+| LUT4     |   21 |                 LUT |
+| LUT2     |   13 |                 LUT |
+| FDSE     |   10 |        Flop & Latch |
+| LUT3     |    6 |                 LUT |
+| LUT1     |    4 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
@@ -174,11 +171,12 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+--------------+------+
-|   Ref Name   | Used |
-+--------------+------+
-| gtx3g_bert_0 |    1 |
-+--------------+------+
++----------------------+------+
+|       Ref Name       | Used |
++----------------------+------+
+| gtx3g_bert_0         |    1 |
+| async_dual_port_bram |    1 |
++----------------------+------+
 
 
 9. Instantiated Netlists

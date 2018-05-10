@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=G:/Xilinx/Vivado/SDK/2017.2/bin;G:/Xilinx/Vivado/Vivado/2017.2/ids_lite/ISE/bin/nt64;G:/Xilinx/Vivado/Vivado/2017.2/ids_lite/ISE/lib/nt64:G:/Xilinx/Vivado/Vivado/2017.2/bin
+  PATH=C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.2/bin
 else
-  PATH=G:/Xilinx/Vivado/SDK/2017.2/bin;G:/Xilinx/Vivado/Vivado/2017.2/ids_lite/ISE/bin/nt64;G:/Xilinx/Vivado/Vivado/2017.2/ids_lite/ISE/lib/nt64:G:/Xilinx/Vivado/Vivado/2017.2/bin:$PATH
+  PATH=C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2017.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1'
+HD_PWD='E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

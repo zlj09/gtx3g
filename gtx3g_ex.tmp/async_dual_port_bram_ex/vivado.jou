@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed May  9 22:48:28 2018
+# Process ID: 7924
+# Current directory: e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/async_dual_port_bram_ex
+# Command line: vivado.exe -notrace -source e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/async_dual_port_bram_ex/async_dual_port_bram_ex.tcl
+# Log file: e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/async_dual_port_bram_ex/vivado.log
+# Journal file: e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/async_dual_port_bram_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/async_dual_port_bram_ex/async_dual_port_bram_ex.tcl -notrace
+update_compile_order -fileset sources_1

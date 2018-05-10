@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="async_dual_port_bram_synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525877126">
+  <File Type="RDS-PROPCONSTRS" Name="async_dual_port_bram_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="async_dual_port_bram.tcl"/>
+  <File Type="RDS-RDS" Name="async_dual_port_bram.vds"/>
+  <File Type="RDS-UTIL" Name="async_dual_port_bram_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="async_dual_port_bram_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="async_dual_port_bram.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="async_dual_port_bram_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="async_dual_port_bram_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/async_dual_port_bram">
+    <File Path="$PSRCDIR/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/async_dual_port_bram.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="async_dual_port_bram"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/async_dual_port_bram">
+    <File Path="$PSRCDIR/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/async_dual_port_bram.xcix">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="async_dual_port_bram"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
