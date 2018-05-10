@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525488871">
+<GenRun Id="synth_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525616789">
   <File Type="RDS-PROPCONSTRS" Name="gtx3g_exdes_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="gtx3g_exdes.tcl"/>
   <File Type="RDS-RDS" Name="gtx3g_exdes.vds"/>

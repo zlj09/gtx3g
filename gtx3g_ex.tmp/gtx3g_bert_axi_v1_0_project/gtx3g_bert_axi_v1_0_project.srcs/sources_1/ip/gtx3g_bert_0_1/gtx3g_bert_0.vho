@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: fudan.edu.cn:user:gtx3g_bert:1.0
--- IP Revision: 1
+-- IP Revision: 4
 
 -- The following code must appear in the VHDL architecture header.
 

@@ -106,7 +106,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports DRPCLK_IN]
 set_property PACKAGE_PIN AK30 [get_ports DRPCLK_IN]
 set_property IOSTANDARD LVCMOS25 [get_ports TRACK_DATA_OUT]
 set_property PACKAGE_PIN AG16 [get_ports TRACK_DATA_OUT]
-set_property PACKAGE_PIN W8 [get_ports Q0_CLK1_GTREFCLK_PAD_P_IN]
+set_property PACKAGE_PIN U8 [get_ports Q0_CLK1_GTREFCLK_PAD_P_IN]
 
 set_property IOSTANDARD LVCMOS25 [get_ports USER_CLK]
 set_property PACKAGE_PIN AD21 [get_ports USER_CLK]

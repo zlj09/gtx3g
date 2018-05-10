@@ -48,7 +48,7 @@
 
 
 // IP VLNV: fudan.edu.cn:user:gtx3g_bert:1.0
-// IP Revision: 1
+// IP Revision: 4
 
 (* X_CORE_INFO = "gtx3g_exdes,Vivado 2017.2" *)
 (* CHECK_LICENSE_TYPE = "gtx3g_bert_0,gtx3g_exdes,{}" *)

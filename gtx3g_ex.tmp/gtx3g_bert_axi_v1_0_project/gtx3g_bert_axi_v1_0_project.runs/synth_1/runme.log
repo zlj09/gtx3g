@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17424 
+INFO: Helper process launched with PID 7932 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 569.266 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 568.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_axi_v1_0' [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -29,8 +29,8 @@ INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_axi_v1_0_S00_AXI' [F:/Progra
 	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
 INFO: [Synth 8-226] default block is never used [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:273]
 INFO: [Synth 8-226] default block is never used [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:522]
-INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_0' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/realtime/gtx3g_bert_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_0' (1#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/realtime/gtx3g_bert_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_0' [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-4120-idea-PC/realtime/gtx3g_bert_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_0' (1#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-4120-idea-PC/realtime/gtx3g_bert_0_stub.v:6]
 WARNING: [Synth 8-6014] Unused sequential element byte_index was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:251]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_axi_v1_0_S00_AXI' (2#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:4]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_axi_v1_0' (3#1) [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]
@@ -41,7 +41,7 @@ WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port 
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 569.266 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 568.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -51,37 +51,37 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 569.266 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 568.879 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z100iffg900-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/dcp3/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
-Finished Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-16204-idea-PC/dcp3/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
+Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-4120-idea-PC/dcp3/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
+Finished Parsing XDC File [F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-4120-idea-PC/dcp3/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.505 . Memory (MB): peak = 884.988 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 884.832 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z100iffg900-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:46 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:47 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'test_state_reg' in module 'gtx3g_bert_axi_v1_0_S00_AXI'
 WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:624]
@@ -99,7 +99,7 @@ WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [
 INFO: [Synth 8-3354] encoded FSM with state register 'test_state_reg' using encoding 'sequential' in module 'gtx3g_bert_axi_v1_0_S00_AXI'
 WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:624]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -220,7 +220,7 @@ WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:53 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,13 +234,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/USER_CLK' to pin 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/bbstub_USER_CLK/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:06 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -252,7 +252,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:08 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -276,7 +276,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:09 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -289,7 +289,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:09 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,25 +301,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -375,11 +375,11 @@ Report Instance Areas:
 |2     |  gtx3g_bert_axi_v1_0_S00_AXI_inst |gtx3g_bert_axi_v1_0_S00_AXI |  1478|
 +------+-----------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:42 . Memory (MB): peak = 884.988 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 884.988 ; gain = 315.723
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 884.832 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 884.832 ; gain = 315.953
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -391,7 +391,7 @@ No Unisim elements were transformed.
 
 59 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:29 . Memory (MB): peak = 884.988 ; gain = 618.910
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 884.832 ; gain = 618.207
 INFO: [Common 17-1381] The checkpoint 'F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/gtx3g_bert_axi_v1_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.620 . Memory (MB): peak = 884.988 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat May  5 21:50:54 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 884.832 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue May  8 21:39:58 2018...

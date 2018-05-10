@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.xpr">
+<Project Version="7" Minor="20" Path="F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="5ba44cec9b714e52b734f70e3b7f3445"/>

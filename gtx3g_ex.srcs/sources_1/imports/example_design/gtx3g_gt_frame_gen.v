@@ -303,19 +303,25 @@ module error_insertion(
 );
     reg error_insert_reg;
 
+    wire [30 : 0] prbs31_rand;
+
     always @(posedge clk)
         if (error_insertion_rst) begin
             error_insert_reg <= 1'b0;
         end
         else begin
-            if (word_cnt == 32'h0000_6c25)
+            if ((prbs31_rand & error_insert_mask[30 : 0]) == error_insert_mask[30 : 0])
                 error_insert_reg <= 1'b1;
             else
-                if (word_cnt == 32'h0000_db9a)
-                    error_insert_reg <= 1'b1;
-                else
-                    error_insert_reg <= 1'b0;
+                error_insert_reg <= 1'b0;
         end
+
+    prbs31_rand_gen prbs31_rand_gen_inst_1(
+        .clk(clk),
+        .rst(error_insertion_rst),
+        .pause(1'b0),
+        .prbs31_rand(prbs31_rand)
+    );
 
     assign error_insert = error_insert_reg;
 endmodule

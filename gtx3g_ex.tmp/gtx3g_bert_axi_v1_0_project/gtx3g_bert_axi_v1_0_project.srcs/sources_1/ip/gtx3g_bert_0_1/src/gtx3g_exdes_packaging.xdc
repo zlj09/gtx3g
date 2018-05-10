@@ -78,7 +78,7 @@ create_clock -name drpclk_in_i -period 10.0 [get_ports DRPCLK_IN]
 
 set_false_path -to [get_pins -hierarchical -filter {NAME =~ *_txfsmresetdone_r*/CLR}]
 set_false_path -to [get_pins -hierarchical -filter {NAME =~ *_txfsmresetdone_r*/D}]
-set_false_path -to [get_pins -hierarchical -filter {NAME =~ *reset_on_error_in_r*/D}]
+#set_false_path -to [get_pins -hierarchical -filter {NAME =~ *reset_on_error_in_r*/D}]
 ################################# RefClk Location constraints #####################
 #set_property LOC AF9 [get_ports  Q0_CLK1_GTREFCLK_PAD_N_IN ]
 #set_property LOC AF10 [get_ports  Q0_CLK1_GTREFCLK_PAD_P_IN ]
@@ -102,19 +102,19 @@ set_property LOC GTXE2_CHANNEL_X0Y6 [get_cells gtx3g_support_i/gtx3g_init_i/inst
 
 ##---------- Set False Path from one clock to other ----------
 
-set_property IOSTANDARD LVCMOS25 [get_ports DRPCLK_IN]
-set_property PACKAGE_PIN AK30 [get_ports DRPCLK_IN]
-set_property IOSTANDARD LVCMOS25 [get_ports TRACK_DATA_OUT]
-set_property PACKAGE_PIN AG16 [get_ports TRACK_DATA_OUT]
-set_property PACKAGE_PIN W8 [get_ports Q0_CLK1_GTREFCLK_PAD_P_IN]
+#set_property IOSTANDARD LVCMOS25 [get_ports DRPCLK_IN]
+#set_property PACKAGE_PIN AK30 [get_ports DRPCLK_IN]
+#set_property IOSTANDARD LVCMOS25 [get_ports TRACK_DATA_OUT]
+#set_property PACKAGE_PIN AG16 [get_ports TRACK_DATA_OUT]
+#set_property PACKAGE_PIN U8 [get_ports Q0_CLK1_GTREFCLK_PAD_P_IN]
 
-set_property IOSTANDARD LVCMOS25 [get_ports USER_CLK]
-set_property PACKAGE_PIN AD21 [get_ports USER_CLK]
+#set_property IOSTANDARD LVCMOS25 [get_ports USER_CLK]
+#set_property PACKAGE_PIN AD21 [get_ports USER_CLK]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets DRPCLK_IN_IBUF]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets DRPCLK_IN_IBUF]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/q0_clk1_refclk_i]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/Q0_CLK1_GTREFCLK_OUT]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets gtx3g_exdes_i/gtx3g_support_i/gt_usrclk_source/Q0_CLK1_GTREFCLK_OUT]
 
 
 

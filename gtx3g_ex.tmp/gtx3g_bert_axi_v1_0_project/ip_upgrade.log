@@ -1,0 +1,58 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue May  8 21:36:03 2018
+| Host         : idea-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z100iffg900-2L
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'gtx3g_bert_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of gtx3g_bert_0 (fudan.edu.cn:user:gtx3g_bert:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue May  8 20:49:07 2018
+| Host         : idea-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z100iffg900-2L
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'gtx3g_bert_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of gtx3g_bert_0 (fudan.edu.cn:user:gtx3g_bert:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Sun May  6 23:05:14 2018
+| Host         : idea-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z100iffg900-2L
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'gtx3g_bert_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of gtx3g_bert_0 (fudan.edu.cn:user:gtx3g_bert:1.0) from (Rev. 1) to (Rev. 2)
+

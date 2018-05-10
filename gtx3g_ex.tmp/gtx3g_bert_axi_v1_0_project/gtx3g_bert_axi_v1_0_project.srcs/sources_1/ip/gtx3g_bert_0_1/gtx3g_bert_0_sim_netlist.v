@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Sat May  5 12:58:57 2018
+// Date        : Tue May  8 21:39:01 2018
 // Host        : idea-PC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top gtx3g_bert_0 -prefix
-//               gtx3g_bert_0_ gtx3g_bert_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0_sim_netlist.v
 // Design      : gtx3g_bert_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,6 +12,93 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "gtx3g_bert_0,gtx3g_exdes,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "gtx3g_exdes,Vivado 2017.2" *) 
+(* NotValidForBitStream *)
+module gtx3g_bert_0
+   (Q0_CLK1_GTREFCLK_PAD_N_IN,
+    Q0_CLK1_GTREFCLK_PAD_P_IN,
+    DRPCLK_IN,
+    TRACK_DATA_OUT,
+    TEST_RESET,
+    PATTERN_MODE,
+    ERROR_INSERT_MASK,
+    ECC_CODE_EN,
+    USER_CLK,
+    DATA_COUNT_OUT,
+    PATTERN_ERROR_COUNT_OUT,
+    TEST_OVER_OUT,
+    PATTERN_ERROR_OUT,
+    BLOCK_ERROR_OUT,
+    RXDATA_OUT,
+    GTX_RESETDONE_OUT);
+  input Q0_CLK1_GTREFCLK_PAD_N_IN;
+  input Q0_CLK1_GTREFCLK_PAD_P_IN;
+  input DRPCLK_IN;
+  output TRACK_DATA_OUT;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 TEST_RESET RST" *) input TEST_RESET;
+  input [2:0]PATTERN_MODE;
+  input [31:0]ERROR_INSERT_MASK;
+  input ECC_CODE_EN;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 USER_CLK CLK" *) output USER_CLK;
+  output [31:0]DATA_COUNT_OUT;
+  output [31:0]PATTERN_ERROR_COUNT_OUT;
+  output TEST_OVER_OUT;
+  output PATTERN_ERROR_OUT;
+  output [3:0]BLOCK_ERROR_OUT;
+  output [15:0]RXDATA_OUT;
+  output GTX_RESETDONE_OUT;
+
+  wire [3:0]BLOCK_ERROR_OUT;
+  wire [31:0]DATA_COUNT_OUT;
+  wire DRPCLK_IN;
+  wire ECC_CODE_EN;
+  wire [31:0]ERROR_INSERT_MASK;
+  wire GTX_RESETDONE_OUT;
+  wire [31:0]PATTERN_ERROR_COUNT_OUT;
+  wire PATTERN_ERROR_OUT;
+  wire [2:0]PATTERN_MODE;
+  wire Q0_CLK1_GTREFCLK_PAD_N_IN;
+  wire Q0_CLK1_GTREFCLK_PAD_P_IN;
+  wire [15:0]RXDATA_OUT;
+  wire TEST_OVER_OUT;
+  wire TEST_RESET;
+  wire TRACK_DATA_OUT;
+  wire USER_CLK;
+  wire [1:0]NLW_inst_TXN_OUT_UNCONNECTED;
+  wire [1:0]NLW_inst_TXP_OUT_UNCONNECTED;
+
+  (* DowngradeIPIdentifiedWarnings = "yes" *) 
+  (* EXAMPLE_CONFIG_INDEPENDENT_LANES = "1" *) 
+  (* EXAMPLE_LANE_WITH_START_CHAR = "0" *) 
+  (* EXAMPLE_SIM_GTRESET_SPEEDUP = "TRUE" *) 
+  (* EXAMPLE_USE_CHIPSCOPE = "0" *) 
+  (* EXAMPLE_WORDS_IN_BRAM = "512" *) 
+  (* LOOPBACK_MODE = "3'b010" *) 
+  (* STABLE_CLOCK_PERIOD = "10" *) 
+  gtx3g_bert_0_gtx3g_exdes inst
+       (.BLOCK_ERROR_OUT(BLOCK_ERROR_OUT),
+        .DATA_COUNT_OUT(DATA_COUNT_OUT),
+        .DRPCLK_IN(DRPCLK_IN),
+        .ECC_CODE_EN(ECC_CODE_EN),
+        .ERROR_INSERT_MASK(ERROR_INSERT_MASK),
+        .GTX_RESETDONE_OUT(GTX_RESETDONE_OUT),
+        .PATTERN_ERROR_COUNT_OUT(PATTERN_ERROR_COUNT_OUT),
+        .PATTERN_ERROR_OUT(PATTERN_ERROR_OUT),
+        .PATTERN_MODE(PATTERN_MODE),
+        .Q0_CLK1_GTREFCLK_PAD_N_IN(Q0_CLK1_GTREFCLK_PAD_N_IN),
+        .Q0_CLK1_GTREFCLK_PAD_P_IN(Q0_CLK1_GTREFCLK_PAD_P_IN),
+        .RXDATA_OUT(RXDATA_OUT),
+        .RXN_IN({1'b1,1'b0}),
+        .RXP_IN({1'b1,1'b0}),
+        .TEST_OVER_OUT(TEST_OVER_OUT),
+        .TEST_RESET(TEST_RESET),
+        .TRACK_DATA_OUT(TRACK_DATA_OUT),
+        .TXN_OUT(NLW_inst_TXN_OUT_UNCONNECTED[1:0]),
+        .TXP_OUT(NLW_inst_TXP_OUT_UNCONNECTED[1:0]),
+        .USER_CLK(USER_CLK));
+endmodule
+
+(* ORIG_REF_NAME = "bram_gen" *) 
 module gtx3g_bert_0_bram_gen
    (Q,
     \bram_reg_reg[12]_0 ,
@@ -65,7 +152,7 @@ module gtx3g_bert_0_bram_gen
         .I1(pattern_pause_reg),
         .I2(\bram_reg_reg[12]_0 [1]),
         .O(bram_reg[10]));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[11]_i_1__0 
@@ -73,7 +160,7 @@ module gtx3g_bert_0_bram_gen
         .I1(pattern_pause_reg),
         .I2(\bram_reg_reg[12]_0 [2]),
         .O(bram_reg[11]));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[12]_i_1__0 
@@ -81,7 +168,7 @@ module gtx3g_bert_0_bram_gen
         .I1(pattern_pause_reg),
         .I2(\bram_reg_reg[12]_0 [3]),
         .O(bram_reg[12]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT5 #(
     .INIT(32'h20202F20)) 
     \bram_reg[1]_i_1__0 
@@ -141,7 +228,7 @@ module gtx3g_bert_0_bram_gen
         .I4(pattern_pause_reg),
         .I5(p_0_in[5]),
         .O(bram_reg[8]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[9]_i_1__0 
@@ -291,34 +378,34 @@ module gtx3g_bert_0_bram_gen
         .D(\read_counter_i_rep[3]_i_2__1_n_0 ),
         .Q(\bram_reg_reg[12]_0 [3]),
         .R(pattern_rst_reg));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \read_counter_i_rep[0]_i_1__1 
        (.I0(read_counter_i_reg[0]),
         .O(\read_counter_i_rep[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \read_counter_i_rep[1]_i_1__1 
-       (.I0(read_counter_i_reg[1]),
-        .I1(read_counter_i_reg[0]),
+       (.I0(read_counter_i_reg[0]),
+        .I1(read_counter_i_reg[1]),
         .O(\read_counter_i_rep[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \read_counter_i_rep[2]_i_1__1 
        (.I0(read_counter_i_reg[2]),
-        .I1(read_counter_i_reg[0]),
-        .I2(read_counter_i_reg[1]),
+        .I1(read_counter_i_reg[1]),
+        .I2(read_counter_i_reg[0]),
         .O(\read_counter_i_rep[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \read_counter_i_rep[3]_i_2__1 
        (.I0(read_counter_i_reg[3]),
-        .I1(read_counter_i_reg[1]),
-        .I2(read_counter_i_reg[0]),
+        .I1(read_counter_i_reg[0]),
+        .I2(read_counter_i_reg[1]),
         .I3(read_counter_i_reg[2]),
         .O(\read_counter_i_rep[3]_i_2__1_n_0 ));
 endmodule
@@ -377,7 +464,7 @@ module gtx3g_bert_0_bram_gen_37
         .I1(pattern_pause_reg),
         .I2(\bram_reg_reg[12]_0 [1]),
         .O(bram_reg[10]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[11]_i_1 
@@ -385,7 +472,7 @@ module gtx3g_bert_0_bram_gen_37
         .I1(pattern_pause_reg),
         .I2(\bram_reg_reg[12]_0 [2]),
         .O(bram_reg[11]));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[12]_i_1 
@@ -393,7 +480,7 @@ module gtx3g_bert_0_bram_gen_37
         .I1(pattern_pause_reg),
         .I2(\bram_reg_reg[12]_0 [3]),
         .O(bram_reg[12]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT5 #(
     .INIT(32'h20202F20)) 
     \bram_reg[1]_i_1 
@@ -453,7 +540,7 @@ module gtx3g_bert_0_bram_gen_37
         .I4(pattern_pause_reg),
         .I5(p_0_in[5]),
         .O(bram_reg[8]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[9]_i_1 
@@ -603,40 +690,40 @@ module gtx3g_bert_0_bram_gen_37
         .D(\read_counter_i_rep[3]_i_2__0_n_0 ),
         .Q(\bram_reg_reg[12]_0 [3]),
         .R(pattern_rst_reg));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \read_counter_i_rep[0]_i_1__0 
        (.I0(read_counter_i_reg__0[0]),
         .O(\read_counter_i_rep[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \read_counter_i_rep[1]_i_1__0 
-       (.I0(read_counter_i_reg__0[1]),
-        .I1(read_counter_i_reg__0[0]),
+       (.I0(read_counter_i_reg__0[0]),
+        .I1(read_counter_i_reg__0[1]),
         .O(\read_counter_i_rep[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \read_counter_i_rep[2]_i_1__0 
        (.I0(read_counter_i_reg__0[2]),
-        .I1(read_counter_i_reg__0[0]),
-        .I2(read_counter_i_reg__0[1]),
+        .I1(read_counter_i_reg__0[1]),
+        .I2(read_counter_i_reg__0[0]),
         .O(\read_counter_i_rep[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \read_counter_i_rep[3]_i_2__0 
        (.I0(read_counter_i_reg__0[3]),
-        .I1(read_counter_i_reg__0[1]),
-        .I2(read_counter_i_reg__0[0]),
+        .I1(read_counter_i_reg__0[0]),
+        .I2(read_counter_i_reg__0[1]),
         .I3(read_counter_i_reg__0[2]),
         .O(\read_counter_i_rep[3]_i_2__0_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "bram_gen" *) 
-module gtx3g_bert_0_bram_gen_47
+module gtx3g_bert_0_bram_gen_48
    (Q,
     pattern_pause_reg_reg,
     rx_fifo_rst,
@@ -664,7 +751,7 @@ module gtx3g_bert_0_bram_gen_47
   wire \read_counter_i_rep[3]_i_2_n_0 ;
   wire rx_fifo_rst;
 
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hFEFFFE00)) 
     \bram_reg[0]_i_1__1 
@@ -681,7 +768,7 @@ module gtx3g_bert_0_bram_gen_47
         .I1(pattern_pause_reg_reg),
         .I2(read_counter_i[1]),
         .O(bram_reg[10]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[11]_i_1__1 
@@ -689,7 +776,7 @@ module gtx3g_bert_0_bram_gen_47
         .I1(pattern_pause_reg_reg),
         .I2(read_counter_i[2]),
         .O(bram_reg[11]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[12]_i_1__1 
@@ -697,7 +784,7 @@ module gtx3g_bert_0_bram_gen_47
         .I1(pattern_pause_reg_reg),
         .I2(read_counter_i[3]),
         .O(bram_reg[12]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'h20202F20)) 
     \bram_reg[1]_i_1__1 
@@ -707,7 +794,7 @@ module gtx3g_bert_0_bram_gen_47
         .I3(p_0_in[0]),
         .I4(read_counter_i[0]),
         .O(bram_reg[1]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \bram_reg[1]_i_2 
@@ -715,7 +802,7 @@ module gtx3g_bert_0_bram_gen_47
         .I1(read_counter_i_d1[3]),
         .I2(read_counter_i_d1[1]),
         .O(p_1_in));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \bram_reg[1]_i_3 
@@ -733,7 +820,7 @@ module gtx3g_bert_0_bram_gen_47
         .I4(pattern_pause_reg_reg),
         .I5(p_0_in[2]),
         .O(bram_reg[2]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'h999A)) 
     \bram_reg[2]_i_2 
@@ -752,7 +839,7 @@ module gtx3g_bert_0_bram_gen_47
         .I4(pattern_pause_reg_reg),
         .I5(p_0_in[3]),
         .O(bram_reg[3]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'hCC9A)) 
     \bram_reg[3]_i_2 
@@ -771,7 +858,7 @@ module gtx3g_bert_0_bram_gen_47
         .I4(pattern_pause_reg_reg),
         .I5(p_0_in[4]),
         .O(bram_reg[4]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \bram_reg[4]_i_2 
@@ -790,7 +877,7 @@ module gtx3g_bert_0_bram_gen_47
         .I4(pattern_pause_reg_reg),
         .I5(p_0_in[7]),
         .O(bram_reg[7]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     \bram_reg[7]_i_2 
@@ -809,7 +896,7 @@ module gtx3g_bert_0_bram_gen_47
         .I4(pattern_pause_reg_reg),
         .I5(p_0_in[8]),
         .O(bram_reg[8]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \bram_reg[8]_i_2 
@@ -818,7 +905,7 @@ module gtx3g_bert_0_bram_gen_47
         .I2(read_counter_i[1]),
         .I3(read_counter_i[2]),
         .O(p_0_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bram_reg[9]_i_1__1 
@@ -968,80 +1055,95 @@ module gtx3g_bert_0_bram_gen_47
         .D(\read_counter_i_rep[3]_i_2_n_0 ),
         .Q(read_counter_i[3]),
         .R(rx_fifo_rst));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \read_counter_i_rep[0]_i_1 
        (.I0(read_counter_i_reg__0[0]),
         .O(\read_counter_i_rep[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \read_counter_i_rep[1]_i_1 
-       (.I0(read_counter_i_reg__0[1]),
-        .I1(read_counter_i_reg__0[0]),
+       (.I0(read_counter_i_reg__0[0]),
+        .I1(read_counter_i_reg__0[1]),
         .O(\read_counter_i_rep[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \read_counter_i_rep[2]_i_1 
        (.I0(read_counter_i_reg__0[2]),
-        .I1(read_counter_i_reg__0[0]),
-        .I2(read_counter_i_reg__0[1]),
+        .I1(read_counter_i_reg__0[1]),
+        .I2(read_counter_i_reg__0[0]),
         .O(\read_counter_i_rep[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \read_counter_i_rep[3]_i_2 
        (.I0(read_counter_i_reg__0[3]),
-        .I1(read_counter_i_reg__0[1]),
-        .I2(read_counter_i_reg__0[0]),
+        .I1(read_counter_i_reg__0[0]),
+        .I2(read_counter_i_reg__0[1]),
         .I3(read_counter_i_reg__0[2]),
         .O(\read_counter_i_rep[3]_i_2_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "error_insertion" *) 
 module gtx3g_bert_0_error_insertion
    (D,
+    error_insertion_rst_reg,
     GT0_TXUSRCLK_OUT,
     Q,
     \txctrl_reg_reg[0] ,
     \bit_pointer_reg[15] ,
     TEST_RESET,
     out,
-    word_cnt_reg,
-    error_insertion_rst_reg);
+    ERROR_INSERT_MASK);
   output [15:0]D;
+  input error_insertion_rst_reg;
   input GT0_TXUSRCLK_OUT;
   input [15:0]Q;
   input \txctrl_reg_reg[0] ;
   input [15:0]\bit_pointer_reg[15] ;
   input TEST_RESET;
   input out;
-  input [31:0]word_cnt_reg;
-  input error_insertion_rst_reg;
+  input [30:0]ERROR_INSERT_MASK;
 
   wire [15:0]D;
+  wire [30:0]ERROR_INSERT_MASK;
   wire GT0_TXUSRCLK_OUT;
   wire [15:0]Q;
   wire TEST_RESET;
   wire [15:0]\bit_pointer_reg[15] ;
   wire error_insert;
-  wire error_insert_reg_i_10__0_n_0;
-  wire error_insert_reg_i_11__0_n_0;
-  wire error_insert_reg_i_12__0_n_0;
-  wire error_insert_reg_i_1__0_n_0;
-  wire error_insert_reg_i_2__0_n_0;
-  wire error_insert_reg_i_3__0_n_0;
-  wire error_insert_reg_i_4__0_n_0;
-  wire error_insert_reg_i_5__0_n_0;
-  wire error_insert_reg_i_6__0_n_0;
-  wire error_insert_reg_i_7__0_n_0;
-  wire error_insert_reg_i_8__0_n_0;
-  wire error_insert_reg_i_9__0_n_0;
+  wire error_insert_reg0_carry__0_n_0;
+  wire error_insert_reg0_carry__0_n_1;
+  wire error_insert_reg0_carry__0_n_2;
+  wire error_insert_reg0_carry__0_n_3;
+  wire error_insert_reg0_carry__1_n_2;
+  wire error_insert_reg0_carry__1_n_3;
+  wire error_insert_reg0_carry_n_0;
+  wire error_insert_reg0_carry_n_1;
+  wire error_insert_reg0_carry_n_2;
+  wire error_insert_reg0_carry_n_3;
   wire error_insertion_rst_reg;
   wire out;
+  wire p_0_in;
+  wire prbs31_rand_gen_inst_1_n_0;
+  wire prbs31_rand_gen_inst_1_n_1;
+  wire prbs31_rand_gen_inst_1_n_10;
+  wire prbs31_rand_gen_inst_1_n_2;
+  wire prbs31_rand_gen_inst_1_n_3;
+  wire prbs31_rand_gen_inst_1_n_4;
+  wire prbs31_rand_gen_inst_1_n_5;
+  wire prbs31_rand_gen_inst_1_n_6;
+  wire prbs31_rand_gen_inst_1_n_7;
+  wire prbs31_rand_gen_inst_1_n_8;
+  wire prbs31_rand_gen_inst_1_n_9;
   wire \txctrl_reg_reg[0] ;
-  wire [31:0]word_cnt_reg;
+  wire [3:0]NLW_error_insert_reg0_carry_O_UNCONNECTED;
+  wire [3:0]NLW_error_insert_reg0_carry__0_O_UNCONNECTED;
+  wire [3:3]NLW_error_insert_reg0_carry__1_CO_UNCONNECTED;
+  wire [3:0]NLW_error_insert_reg0_carry__1_O_UNCONNECTED;
 
   LUT6 #(
     .INIT(64'hAAAAAAAAAAAAA6AA)) 
@@ -1203,163 +1305,99 @@ module gtx3g_bert_0_error_insertion
         .I4(TEST_RESET),
         .I5(out),
         .O(D[9]));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    error_insert_reg_i_10__0
-       (.I0(word_cnt_reg[3]),
-        .I1(word_cnt_reg[9]),
-        .I2(word_cnt_reg[0]),
-        .I3(word_cnt_reg[7]),
-        .O(error_insert_reg_i_10__0_n_0));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    error_insert_reg_i_11__0
-       (.I0(word_cnt_reg[12]),
-        .I1(word_cnt_reg[10]),
-        .I2(word_cnt_reg[2]),
-        .I3(word_cnt_reg[5]),
-        .O(error_insert_reg_i_11__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
-  LUT4 #(
-    .INIT(16'hFF7F)) 
-    error_insert_reg_i_12__0
-       (.I0(word_cnt_reg[1]),
-        .I1(word_cnt_reg[9]),
-        .I2(word_cnt_reg[3]),
-        .I3(word_cnt_reg[0]),
-        .O(error_insert_reg_i_12__0_n_0));
-  LUT6 #(
-    .INIT(64'h0000000001010100)) 
-    error_insert_reg_i_1__0
-       (.I0(error_insert_reg_i_2__0_n_0),
-        .I1(error_insert_reg_i_3__0_n_0),
-        .I2(error_insert_reg_i_4__0_n_0),
-        .I3(error_insert_reg_i_5__0_n_0),
-        .I4(error_insert_reg_i_6__0_n_0),
-        .I5(error_insertion_rst_reg),
-        .O(error_insert_reg_i_1__0_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFBFFFFFBFFFF)) 
-    error_insert_reg_i_2__0
-       (.I0(word_cnt_reg[18]),
-        .I1(word_cnt_reg[14]),
-        .I2(word_cnt_reg[29]),
-        .I3(word_cnt_reg[12]),
-        .I4(word_cnt_reg[13]),
-        .I5(word_cnt_reg[15]),
-        .O(error_insert_reg_i_2__0_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    error_insert_reg_i_3__0
-       (.I0(word_cnt_reg[28]),
-        .I1(word_cnt_reg[17]),
-        .I2(word_cnt_reg[19]),
-        .I3(word_cnt_reg[31]),
-        .I4(error_insert_reg_i_7__0_n_0),
-        .O(error_insert_reg_i_3__0_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    error_insert_reg_i_4__0
-       (.I0(word_cnt_reg[26]),
-        .I1(word_cnt_reg[22]),
-        .I2(word_cnt_reg[23]),
-        .I3(word_cnt_reg[21]),
-        .I4(error_insert_reg_i_8__0_n_0),
-        .O(error_insert_reg_i_4__0_n_0));
-  LUT5 #(
-    .INIT(32'h00000040)) 
-    error_insert_reg_i_5__0
-       (.I0(word_cnt_reg[12]),
-        .I1(word_cnt_reg[10]),
-        .I2(word_cnt_reg[2]),
-        .I3(error_insert_reg_i_9__0_n_0),
-        .I4(error_insert_reg_i_10__0_n_0),
-        .O(error_insert_reg_i_5__0_n_0));
-  LUT5 #(
-    .INIT(32'h00000080)) 
-    error_insert_reg_i_6__0
-       (.I0(word_cnt_reg[7]),
-        .I1(word_cnt_reg[4]),
-        .I2(word_cnt_reg[8]),
-        .I3(error_insert_reg_i_11__0_n_0),
-        .I4(error_insert_reg_i_12__0_n_0),
-        .O(error_insert_reg_i_6__0_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    error_insert_reg_i_7__0
-       (.I0(word_cnt_reg[25]),
-        .I1(word_cnt_reg[24]),
-        .I2(word_cnt_reg[27]),
-        .I3(word_cnt_reg[30]),
-        .O(error_insert_reg_i_7__0_n_0));
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    error_insert_reg_i_8__0
-       (.I0(word_cnt_reg[6]),
-        .I1(word_cnt_reg[20]),
-        .I2(word_cnt_reg[11]),
-        .I3(word_cnt_reg[16]),
-        .O(error_insert_reg_i_8__0_n_0));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    error_insert_reg_i_9__0
-       (.I0(word_cnt_reg[5]),
-        .I1(word_cnt_reg[1]),
-        .I2(word_cnt_reg[4]),
-        .I3(word_cnt_reg[8]),
-        .O(error_insert_reg_i_9__0_n_0));
+  CARRY4 error_insert_reg0_carry
+       (.CI(1'b0),
+        .CO({error_insert_reg0_carry_n_0,error_insert_reg0_carry_n_1,error_insert_reg0_carry_n_2,error_insert_reg0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_error_insert_reg0_carry_O_UNCONNECTED[3:0]),
+        .S({prbs31_rand_gen_inst_1_n_0,prbs31_rand_gen_inst_1_n_1,prbs31_rand_gen_inst_1_n_2,prbs31_rand_gen_inst_1_n_3}));
+  CARRY4 error_insert_reg0_carry__0
+       (.CI(error_insert_reg0_carry_n_0),
+        .CO({error_insert_reg0_carry__0_n_0,error_insert_reg0_carry__0_n_1,error_insert_reg0_carry__0_n_2,error_insert_reg0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_error_insert_reg0_carry__0_O_UNCONNECTED[3:0]),
+        .S({prbs31_rand_gen_inst_1_n_4,prbs31_rand_gen_inst_1_n_5,prbs31_rand_gen_inst_1_n_6,prbs31_rand_gen_inst_1_n_7}));
+  CARRY4 error_insert_reg0_carry__1
+       (.CI(error_insert_reg0_carry__0_n_0),
+        .CO({NLW_error_insert_reg0_carry__1_CO_UNCONNECTED[3],p_0_in,error_insert_reg0_carry__1_n_2,error_insert_reg0_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_error_insert_reg0_carry__1_O_UNCONNECTED[3:0]),
+        .S({1'b0,prbs31_rand_gen_inst_1_n_8,prbs31_rand_gen_inst_1_n_9,prbs31_rand_gen_inst_1_n_10}));
   FDRE error_insert_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(error_insert_reg_i_1__0_n_0),
+        .D(p_0_in),
         .Q(error_insert),
-        .R(1'b0));
+        .R(error_insertion_rst_reg));
+  gtx3g_bert_0_prbs31_rand_gen prbs31_rand_gen_inst_1
+       (.ERROR_INSERT_MASK(ERROR_INSERT_MASK),
+        .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
+        .S({prbs31_rand_gen_inst_1_n_0,prbs31_rand_gen_inst_1_n_1,prbs31_rand_gen_inst_1_n_2,prbs31_rand_gen_inst_1_n_3}),
+        .error_insert_reg_reg({prbs31_rand_gen_inst_1_n_4,prbs31_rand_gen_inst_1_n_5,prbs31_rand_gen_inst_1_n_6,prbs31_rand_gen_inst_1_n_7}),
+        .error_insert_reg_reg_0({prbs31_rand_gen_inst_1_n_8,prbs31_rand_gen_inst_1_n_9,prbs31_rand_gen_inst_1_n_10}),
+        .error_insertion_rst_reg(error_insertion_rst_reg));
 endmodule
 
 (* ORIG_REF_NAME = "error_insertion" *) 
 module gtx3g_bert_0_error_insertion_34
    (D,
+    error_insertion_rst_reg,
     GT0_TXUSRCLK_OUT,
     Q,
     \txctrl_reg_reg[0] ,
     \bit_pointer_reg[15] ,
     TEST_RESET,
     out,
-    word_cnt_reg,
-    error_insertion_rst_reg);
+    ERROR_INSERT_MASK);
   output [15:0]D;
+  input error_insertion_rst_reg;
   input GT0_TXUSRCLK_OUT;
   input [15:0]Q;
   input \txctrl_reg_reg[0] ;
   input [15:0]\bit_pointer_reg[15] ;
   input TEST_RESET;
   input out;
-  input [31:0]word_cnt_reg;
-  input error_insertion_rst_reg;
+  input [30:0]ERROR_INSERT_MASK;
 
   wire [15:0]D;
+  wire [30:0]ERROR_INSERT_MASK;
   wire GT0_TXUSRCLK_OUT;
   wire [15:0]Q;
   wire TEST_RESET;
   wire [15:0]\bit_pointer_reg[15] ;
   wire error_insert;
-  wire error_insert_reg_i_10_n_0;
-  wire error_insert_reg_i_11_n_0;
-  wire error_insert_reg_i_12_n_0;
-  wire error_insert_reg_i_1_n_0;
-  wire error_insert_reg_i_2_n_0;
-  wire error_insert_reg_i_3_n_0;
-  wire error_insert_reg_i_4_n_0;
-  wire error_insert_reg_i_5_n_0;
-  wire error_insert_reg_i_6_n_0;
-  wire error_insert_reg_i_7_n_0;
-  wire error_insert_reg_i_8_n_0;
-  wire error_insert_reg_i_9_n_0;
+  wire error_insert_reg0_carry__0_n_0;
+  wire error_insert_reg0_carry__0_n_1;
+  wire error_insert_reg0_carry__0_n_2;
+  wire error_insert_reg0_carry__0_n_3;
+  wire error_insert_reg0_carry__1_n_2;
+  wire error_insert_reg0_carry__1_n_3;
+  wire error_insert_reg0_carry_n_0;
+  wire error_insert_reg0_carry_n_1;
+  wire error_insert_reg0_carry_n_2;
+  wire error_insert_reg0_carry_n_3;
   wire error_insertion_rst_reg;
   wire out;
+  wire p_0_in;
+  wire prbs31_rand_gen_inst_1_n_0;
+  wire prbs31_rand_gen_inst_1_n_1;
+  wire prbs31_rand_gen_inst_1_n_10;
+  wire prbs31_rand_gen_inst_1_n_2;
+  wire prbs31_rand_gen_inst_1_n_3;
+  wire prbs31_rand_gen_inst_1_n_4;
+  wire prbs31_rand_gen_inst_1_n_5;
+  wire prbs31_rand_gen_inst_1_n_6;
+  wire prbs31_rand_gen_inst_1_n_7;
+  wire prbs31_rand_gen_inst_1_n_8;
+  wire prbs31_rand_gen_inst_1_n_9;
   wire \txctrl_reg_reg[0] ;
-  wire [31:0]word_cnt_reg;
+  wire [3:0]NLW_error_insert_reg0_carry_O_UNCONNECTED;
+  wire [3:0]NLW_error_insert_reg0_carry__0_O_UNCONNECTED;
+  wire [3:3]NLW_error_insert_reg0_carry__1_CO_UNCONNECTED;
+  wire [3:0]NLW_error_insert_reg0_carry__1_O_UNCONNECTED;
 
   LUT6 #(
     .INIT(64'hAAAAAAAAAAAAA6AA)) 
@@ -1521,119 +1559,43 @@ module gtx3g_bert_0_error_insertion_34
         .I4(TEST_RESET),
         .I5(out),
         .O(D[9]));
-  LUT6 #(
-    .INIT(64'h0000000001010100)) 
-    error_insert_reg_i_1
-       (.I0(error_insert_reg_i_2_n_0),
-        .I1(error_insert_reg_i_3_n_0),
-        .I2(error_insert_reg_i_4_n_0),
-        .I3(error_insert_reg_i_5_n_0),
-        .I4(error_insert_reg_i_6_n_0),
-        .I5(error_insertion_rst_reg),
-        .O(error_insert_reg_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    error_insert_reg_i_10
-       (.I0(word_cnt_reg[4]),
-        .I1(word_cnt_reg[10]),
-        .I2(word_cnt_reg[1]),
-        .I3(word_cnt_reg[2]),
-        .O(error_insert_reg_i_10_n_0));
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    error_insert_reg_i_11
-       (.I0(word_cnt_reg[0]),
-        .I1(word_cnt_reg[8]),
-        .I2(word_cnt_reg[5]),
-        .I3(word_cnt_reg[3]),
-        .O(error_insert_reg_i_11_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    error_insert_reg_i_12
-       (.I0(word_cnt_reg[7]),
-        .I1(word_cnt_reg[12]),
-        .I2(word_cnt_reg[4]),
-        .I3(word_cnt_reg[1]),
-        .O(error_insert_reg_i_12_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFBFFFFFBFFFF)) 
-    error_insert_reg_i_2
-       (.I0(word_cnt_reg[18]),
-        .I1(word_cnt_reg[14]),
-        .I2(word_cnt_reg[29]),
-        .I3(word_cnt_reg[12]),
-        .I4(word_cnt_reg[13]),
-        .I5(word_cnt_reg[15]),
-        .O(error_insert_reg_i_2_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    error_insert_reg_i_3
-       (.I0(word_cnt_reg[28]),
-        .I1(word_cnt_reg[17]),
-        .I2(word_cnt_reg[19]),
-        .I3(word_cnt_reg[31]),
-        .I4(error_insert_reg_i_7_n_0),
-        .O(error_insert_reg_i_3_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    error_insert_reg_i_4
-       (.I0(word_cnt_reg[26]),
-        .I1(word_cnt_reg[22]),
-        .I2(word_cnt_reg[23]),
-        .I3(word_cnt_reg[21]),
-        .I4(error_insert_reg_i_8_n_0),
-        .O(error_insert_reg_i_4_n_0));
-  LUT5 #(
-    .INIT(32'h00000004)) 
-    error_insert_reg_i_5
-       (.I0(word_cnt_reg[5]),
-        .I1(word_cnt_reg[8]),
-        .I2(word_cnt_reg[0]),
-        .I3(error_insert_reg_i_9_n_0),
-        .I4(error_insert_reg_i_10_n_0),
-        .O(error_insert_reg_i_5_n_0));
-  LUT5 #(
-    .INIT(32'h00000040)) 
-    error_insert_reg_i_6
-       (.I0(word_cnt_reg[9]),
-        .I1(word_cnt_reg[2]),
-        .I2(word_cnt_reg[10]),
-        .I3(error_insert_reg_i_11_n_0),
-        .I4(error_insert_reg_i_12_n_0),
-        .O(error_insert_reg_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    error_insert_reg_i_7
-       (.I0(word_cnt_reg[25]),
-        .I1(word_cnt_reg[24]),
-        .I2(word_cnt_reg[27]),
-        .I3(word_cnt_reg[30]),
-        .O(error_insert_reg_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    error_insert_reg_i_8
-       (.I0(word_cnt_reg[6]),
-        .I1(word_cnt_reg[20]),
-        .I2(word_cnt_reg[11]),
-        .I3(word_cnt_reg[16]),
-        .O(error_insert_reg_i_8_n_0));
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    error_insert_reg_i_9
-       (.I0(word_cnt_reg[3]),
-        .I1(word_cnt_reg[12]),
-        .I2(word_cnt_reg[9]),
-        .I3(word_cnt_reg[7]),
-        .O(error_insert_reg_i_9_n_0));
+  CARRY4 error_insert_reg0_carry
+       (.CI(1'b0),
+        .CO({error_insert_reg0_carry_n_0,error_insert_reg0_carry_n_1,error_insert_reg0_carry_n_2,error_insert_reg0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_error_insert_reg0_carry_O_UNCONNECTED[3:0]),
+        .S({prbs31_rand_gen_inst_1_n_0,prbs31_rand_gen_inst_1_n_1,prbs31_rand_gen_inst_1_n_2,prbs31_rand_gen_inst_1_n_3}));
+  CARRY4 error_insert_reg0_carry__0
+       (.CI(error_insert_reg0_carry_n_0),
+        .CO({error_insert_reg0_carry__0_n_0,error_insert_reg0_carry__0_n_1,error_insert_reg0_carry__0_n_2,error_insert_reg0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_error_insert_reg0_carry__0_O_UNCONNECTED[3:0]),
+        .S({prbs31_rand_gen_inst_1_n_4,prbs31_rand_gen_inst_1_n_5,prbs31_rand_gen_inst_1_n_6,prbs31_rand_gen_inst_1_n_7}));
+  CARRY4 error_insert_reg0_carry__1
+       (.CI(error_insert_reg0_carry__0_n_0),
+        .CO({NLW_error_insert_reg0_carry__1_CO_UNCONNECTED[3],p_0_in,error_insert_reg0_carry__1_n_2,error_insert_reg0_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_error_insert_reg0_carry__1_O_UNCONNECTED[3:0]),
+        .S({1'b0,prbs31_rand_gen_inst_1_n_8,prbs31_rand_gen_inst_1_n_9,prbs31_rand_gen_inst_1_n_10}));
   FDRE error_insert_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(error_insert_reg_i_1_n_0),
+        .D(p_0_in),
         .Q(error_insert),
-        .R(1'b0));
+        .R(error_insertion_rst_reg));
+  gtx3g_bert_0_prbs31_rand_gen_45 prbs31_rand_gen_inst_1
+       (.ERROR_INSERT_MASK(ERROR_INSERT_MASK),
+        .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
+        .S({prbs31_rand_gen_inst_1_n_0,prbs31_rand_gen_inst_1_n_1,prbs31_rand_gen_inst_1_n_2,prbs31_rand_gen_inst_1_n_3}),
+        .error_insert_reg_reg({prbs31_rand_gen_inst_1_n_4,prbs31_rand_gen_inst_1_n_5,prbs31_rand_gen_inst_1_n_6,prbs31_rand_gen_inst_1_n_7}),
+        .error_insert_reg_reg_0({prbs31_rand_gen_inst_1_n_8,prbs31_rand_gen_inst_1_n_9,prbs31_rand_gen_inst_1_n_10}),
+        .error_insertion_rst_reg(error_insertion_rst_reg));
 endmodule
 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "gtx3g,gtwizard_v3_6_7,{protocol_file=xaui}" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "gtx3g" *) (* X_CORE_INFO = "gtx3g,gtwizard_v3_6_7,{protocol_file=xaui}" *) 
 module gtx3g_bert_0_gtx3g
    (sysclk_in,
     soft_reset_tx_in,
@@ -2267,6 +2229,7 @@ module gtx3g_bert_0_gtx3g
         .sysclk_in(sysclk_in));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_GT" *) 
 module gtx3g_bert_0_gtx3g_GT
    (gt0_drprdy_out,
     gt0_eyescandataerror_out,
@@ -3711,6 +3674,7 @@ module gtx3g_bert_0_gtx3g_GT_3
         .TXUSRCLK2(gt1_txusrclk2_in));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_GT_FRAME_CHECK" *) 
 module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
    (gt1_rxpcommaalignen_in,
     gt1_track_data_i,
@@ -3737,28 +3701,30 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
   wire [1:1]block_word_cnt;
   wire block_word_cnt0;
   wire \block_word_cnt[0]_i_2__0_n_0 ;
-  wire \block_word_cnt[0]_i_3__0_n_0 ;
+  wire \block_word_cnt[0]_i_3_n_0 ;
+  wire \block_word_cnt[0]_i_4_n_0 ;
   wire \block_word_cnt[1]_i_2__0_n_0 ;
-  wire \block_word_cnt[1]_i_3_n_0 ;
-  wire \block_word_cnt[1]_i_4__0_n_0 ;
-  wire \block_word_cnt[1]_i_5__1_n_0 ;
-  wire \block_word_cnt[1]_i_7_n_0 ;
-  wire \block_word_cnt[1]_i_8_n_0 ;
+  wire \block_word_cnt[1]_i_4_n_0 ;
+  wire \block_word_cnt[1]_i_5_n_0 ;
   wire \block_word_cnt[3]_i_1_n_0 ;
-  wire \block_word_cnt[4]_i_2__2_n_0 ;
-  wire \block_word_cnt[4]_i_3__0_n_0 ;
+  wire \block_word_cnt[4]_i_2_n_0 ;
+  wire \block_word_cnt[4]_i_3_n_0 ;
+  wire \block_word_cnt[4]_i_4__2_n_0 ;
+  wire \block_word_cnt[4]_i_5_n_0 ;
+  wire \block_word_cnt[4]_i_6_n_0 ;
   wire \block_word_cnt[5]_i_1__2_n_0 ;
   wire \block_word_cnt[5]_i_2_n_0 ;
-  wire \block_word_cnt[5]_i_3_n_0 ;
+  wire \block_word_cnt[6]_i_2_n_0 ;
   wire \block_word_cnt[7]_i_10_n_0 ;
   wire \block_word_cnt[7]_i_11_n_0 ;
   wire \block_word_cnt[7]_i_12_n_0 ;
+  wire \block_word_cnt[7]_i_13_n_0 ;
   wire \block_word_cnt[7]_i_1__0_n_0 ;
   wire \block_word_cnt[7]_i_3__2_n_0 ;
-  wire \block_word_cnt[7]_i_4_n_0 ;
-  wire \block_word_cnt[7]_i_5_n_0 ;
-  wire \block_word_cnt[7]_i_6_n_0 ;
-  wire \block_word_cnt[7]_i_7_n_0 ;
+  wire \block_word_cnt[7]_i_4__0_n_0 ;
+  wire \block_word_cnt[7]_i_5__0_n_0 ;
+  wire \block_word_cnt[7]_i_6__0_n_0 ;
+  wire \block_word_cnt[7]_i_7__0_n_0 ;
   wire \block_word_cnt[7]_i_8_n_0 ;
   wire \block_word_cnt[7]_i_9_n_0 ;
   wire \block_word_cnt_reg_n_0_[0] ;
@@ -3775,6 +3741,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
   wire gt1_track_data_i;
   wire [1:0]gtrxreset_i_reg;
   wire link_ctr;
+  wire [0:0]link_ctr0__0;
   wire link_ctr0_carry__0_i_1__0_n_0;
   wire link_ctr0_carry__0_i_2__0_n_0;
   wire link_ctr0_carry__0_n_3;
@@ -3793,7 +3760,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
   wire next_begin_c;
   wire next_track_data_c;
   wire out;
-  wire [6:0]p_0_in;
+  wire [6:1]p_0_in;
   wire [15:0]p_0_in1_in;
   wire [7:0]p_1_in;
   wire p_1_in5_in;
@@ -3861,14 +3828,19 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
   wire rx_fifo_rd_en_i_2_n_0;
   wire rx_fifo_rd_en_i_3_n_0;
   wire rx_fifo_rd_en_i_4_n_0;
+  wire rx_fifo_rd_en_i_5_n_0;
+  wire rx_fifo_rd_en_i_6_n_0;
+  wire rx_fifo_rd_en_i_7_n_0;
   wire rx_fifo_rd_en_reg_n_0;
   wire rx_fifo_rst;
   wire rx_fifo_valid;
   wire rx_fifo_valid_i_1__0_n_0;
-  wire rx_fifo_valid_i_2__0_n_0;
-  wire rx_fifo_valid_i_3__0_n_0;
+  wire rx_fifo_valid_i_2_n_0;
+  wire rx_fifo_valid_i_3_n_0;
+  wire rx_fifo_valid_i_4_n_0;
   wire rx_fifo_wr_en;
   wire rx_fifo_wr_en_i_1_n_0;
+  wire rx_fifo_wr_en_i_2_n_0;
   wire [1:0]rxctrl_r2;
   wire [1:0]rxctrl_r3;
   wire \rxctrl_r_reg_n_0_[0] ;
@@ -3902,7 +3874,6 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
     SYSTEM_RESET_inferred_i_1__2
        (.I0(out),
         .O(gt1_rx_system_reset_c));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h2)) 
     begin_r_i_1__0
@@ -3915,285 +3886,321 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .D(next_begin_c),
         .Q(begin_r),
         .S(system_reset_r2));
-  LUT6 #(
-    .INIT(64'h1511151533333333)) 
-    \block_word_cnt[0]_i_1__0 
+  LUT5 #(
+    .INIT(32'h44FF44F4)) 
+    \block_word_cnt[0]_i_1__2 
        (.I0(\block_word_cnt[0]_i_2__0_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .I5(\block_word_cnt[0]_i_3__0_n_0 ),
+        .I1(\block_word_cnt[5]_i_2_n_0 ),
+        .I2(\block_word_cnt[0]_i_3_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt[0]_i_4_n_0 ),
         .O(p_1_in[0]));
   LUT6 #(
-    .INIT(64'h00000000331C0300)) 
+    .INIT(64'h000000000F340300)) 
     \block_word_cnt[0]_i_2__0 
        (.I0(ECC_CODE_EN),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
         .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(\block_word_cnt_reg_n_0_[4] ),
         .I5(\block_word_cnt_reg_n_0_[3] ),
         .O(\block_word_cnt[0]_i_2__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000233)) 
-    \block_word_cnt[0]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  LUT3 #(
+    .INIT(8'hA8)) 
+    \block_word_cnt[0]_i_3 
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .O(\block_word_cnt[0]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFEFEFFFFFFFE)) 
+    \block_word_cnt[0]_i_4 
+       (.I0(\block_word_cnt_reg_n_0_[5] ),
+        .I1(\block_word_cnt_reg_n_0_[7] ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
         .I3(\block_word_cnt_reg_n_0_[2] ),
         .I4(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[0]_i_3__0_n_0 ));
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(\block_word_cnt[0]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT4 #(
-    .INIT(16'h8BB8)) 
+    .INIT(16'hFF14)) 
     \block_word_cnt[1]_i_1__0 
-       (.I0(\block_word_cnt[1]_i_2__0_n_0 ),
-        .I1(\block_word_cnt[5]_i_3_n_0 ),
+       (.I0(\block_word_cnt[5]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt[1]_i_2__0_n_0 ),
         .O(p_1_in[1]));
-  LUT5 #(
-    .INIT(32'h0B3C083C)) 
+  LUT6 #(
+    .INIT(64'h000088CC00CCC000)) 
     \block_word_cnt[1]_i_2__0 
        (.I0(ECC_CODE_EN),
-        .I1(\block_word_cnt[1]_i_3_n_0 ),
-        .I2(\block_word_cnt[1]_i_4__0_n_0 ),
-        .I3(\block_word_cnt[1]_i_5__1_n_0 ),
-        .I4(block_word_cnt),
+        .I1(\block_word_cnt[5]_i_2_n_0 ),
+        .I2(block_word_cnt),
+        .I3(\block_word_cnt[4]_i_5_n_0 ),
+        .I4(\block_word_cnt[4]_i_4__2_n_0 ),
+        .I5(\block_word_cnt[4]_i_6_n_0 ),
         .O(\block_word_cnt[1]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
-  LUT5 #(
-    .INIT(32'h04040440)) 
-    \block_word_cnt[1]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
+  LUT6 #(
+    .INIT(64'h0000000000004000)) 
+    \block_word_cnt[1]_i_3__0 
+       (.I0(\block_word_cnt[7]_i_11_n_0 ),
+        .I1(rx_data_r_track[7]),
+        .I2(rx_data_r_track[5]),
+        .I3(\block_word_cnt[7]_i_12_n_0 ),
+        .I4(\block_word_cnt[1]_i_4_n_0 ),
+        .I5(\block_word_cnt[1]_i_5_n_0 ),
+        .O(block_word_cnt));
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    \block_word_cnt[1]_i_4 
+       (.I0(rx_data_r_track[4]),
+        .I1(rx_data_r_track[8]),
+        .I2(rx_data_r_track[9]),
+        .I3(rx_data_r_track[6]),
+        .O(\block_word_cnt[1]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  LUT4 #(
+    .INIT(16'hDFFF)) 
+    \block_word_cnt[1]_i_5 
+       (.I0(rx_data_r_track[0]),
+        .I1(rx_data_r_track[2]),
+        .I2(rx_data_r_track[3]),
+        .I3(rx_data_r_track[1]),
+        .O(\block_word_cnt[1]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0750055050505050)) 
+    \block_word_cnt[2]_i_1__0 
+       (.I0(\block_word_cnt[5]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
         .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(\block_word_cnt[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .I5(\block_word_cnt_reg_n_0_[0] ),
+        .O(p_1_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT5 #(
-    .INIT(32'h10000510)) 
-    \block_word_cnt[1]_i_4__0 
+    .INIT(32'h14444444)) 
+    \block_word_cnt[3]_i_1 
+       (.I0(\block_word_cnt[5]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF0000A6AA)) 
+    \block_word_cnt[4]_i_1 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt[6]_i_2_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt[5]_i_2_n_0 ),
+        .I5(\block_word_cnt[4]_i_2_n_0 ),
+        .O(p_1_in[4]));
+  LUT6 #(
+    .INIT(64'h00A030F0F0000000)) 
+    \block_word_cnt[4]_i_2 
+       (.I0(ECC_CODE_EN),
+        .I1(\block_word_cnt[4]_i_3_n_0 ),
+        .I2(\block_word_cnt[5]_i_2_n_0 ),
+        .I3(\block_word_cnt[4]_i_4__2_n_0 ),
+        .I4(\block_word_cnt[4]_i_5_n_0 ),
+        .I5(\block_word_cnt[4]_i_6_n_0 ),
+        .O(\block_word_cnt[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  LUT5 #(
+    .INIT(32'hFFBFEFEB)) 
+    \block_word_cnt[4]_i_3 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[4]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  LUT5 #(
+    .INIT(32'h00401014)) 
+    \block_word_cnt[4]_i_4__2 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[4]_i_4__2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  LUT5 #(
+    .INIT(32'h00011500)) 
+    \block_word_cnt[4]_i_5 
        (.I0(\block_word_cnt_reg_n_0_[3] ),
         .I1(\block_word_cnt_reg_n_0_[2] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
         .I3(\block_word_cnt_reg_n_0_[4] ),
         .I4(\block_word_cnt_reg_n_0_[0] ),
-        .O(\block_word_cnt[1]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+        .O(\block_word_cnt[4]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT5 #(
-    .INIT(32'h00040414)) 
-    \block_word_cnt[1]_i_5__1 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
+    .INIT(32'h00003600)) 
+    \block_word_cnt[4]_i_6 
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[1]_i_5__1_n_0 ));
+        .I3(\block_word_cnt_reg_n_0_[4] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[4]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \block_word_cnt[1]_i_6 
-       (.I0(\block_word_cnt[7]_i_7_n_0 ),
-        .I1(rx_data_r_track[12]),
-        .I2(rx_data_r_track[10]),
-        .I3(rx_data_r_track[13]),
-        .I4(\block_word_cnt[1]_i_7_n_0 ),
-        .I5(\block_word_cnt[1]_i_8_n_0 ),
-        .O(block_word_cnt));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \block_word_cnt[1]_i_7 
-       (.I0(rx_data_r_track[4]),
-        .I1(rx_data_r_track[8]),
-        .I2(rx_data_r_track[1]),
-        .I3(rx_data_r_track[6]),
-        .O(\block_word_cnt[1]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
-  LUT3 #(
-    .INIT(8'hDF)) 
-    \block_word_cnt[1]_i_8 
-       (.I0(rx_data_r_track[3]),
-        .I1(rx_data_r_track[2]),
-        .I2(rx_data_r_track[0]),
-        .O(\block_word_cnt[1]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'h002F0F000F000F00)) 
-    \block_word_cnt[2]_i_1__0 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt[5]_i_3_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .I5(\block_word_cnt_reg_n_0_[0] ),
-        .O(p_1_in[2]));
-  LUT5 #(
-    .INIT(32'h14444444)) 
-    \block_word_cnt[3]_i_1 
-       (.I0(\block_word_cnt[5]_i_3_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
-    \block_word_cnt[4]_i_2__2 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(\block_word_cnt[4]_i_2__2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0030002000300030)) 
-    \block_word_cnt[4]_i_3__0 
-       (.I0(ECC_CODE_EN),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[0] ),
-        .I5(\block_word_cnt_reg_n_0_[1] ),
-        .O(\block_word_cnt[4]_i_3__0_n_0 ));
-  LUT3 #(
-    .INIT(8'h06)) 
+    .INIT(64'h00000000A6AAAAAA)) 
     \block_word_cnt[5]_i_1__2 
        (.I0(\block_word_cnt_reg_n_0_[5] ),
-        .I1(\block_word_cnt[5]_i_2_n_0 ),
-        .I2(\block_word_cnt[5]_i_3_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt[6]_i_2_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .I5(\block_word_cnt[5]_i_2_n_0 ),
         .O(\block_word_cnt[5]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
-  LUT5 #(
-    .INIT(32'h80000000)) 
+  LUT6 #(
+    .INIT(64'h0100010101011101)) 
     \block_word_cnt[5]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[3] ),
         .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
         .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[0] ),
         .O(\block_word_cnt[5]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000031300000103)) 
-    \block_word_cnt[5]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
-        .I5(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[5]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(64'hAA6AAAAAAAAAAAAA)) 
     \block_word_cnt[6]_i_1__0 
        (.I0(\block_word_cnt_reg_n_0_[6] ),
-        .I1(\block_word_cnt[7]_i_4_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[3] ),
+        .I3(\block_word_cnt[6]_i_2_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .I5(\block_word_cnt_reg_n_0_[5] ),
         .O(p_1_in[6]));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    \block_word_cnt[7]_i_10 
-       (.I0(rx_data_r_track[11]),
-        .I1(rx_data_r_track[13]),
-        .I2(rx_data_r_track[7]),
-        .I3(rx_data_r_track[0]),
-        .O(\block_word_cnt[7]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT2 #(
     .INIT(4'h7)) 
+    \block_word_cnt[6]_i_2 
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  LUT4 #(
+    .INIT(16'hFFF7)) 
+    \block_word_cnt[7]_i_10 
+       (.I0(rx_data_r_track[2]),
+        .I1(rx_data_r_track[3]),
+        .I2(rx_data_r_track[6]),
+        .I3(rx_data_r_track[1]),
+        .O(\block_word_cnt[7]_i_10_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \block_word_cnt[7]_i_11 
-       (.I0(rx_data_r_track[8]),
-        .I1(rx_data_r_track[4]),
+       (.I0(rx_data_r_track[14]),
+        .I1(rx_data_r_track[15]),
         .O(\block_word_cnt[7]_i_11_n_0 ));
   LUT4 #(
-    .INIT(16'hFFDF)) 
+    .INIT(16'h0001)) 
     \block_word_cnt[7]_i_12 
-       (.I0(rx_data_r_track[10]),
-        .I1(rx_data_r_track[9]),
-        .I2(rx_data_r_track[12]),
-        .I3(rx_data_r_track[5]),
+       (.I0(rx_data_r_track[12]),
+        .I1(rx_data_r_track[13]),
+        .I2(rx_data_r_track[10]),
+        .I3(rx_data_r_track[11]),
         .O(\block_word_cnt[7]_i_12_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  LUT4 #(
+    .INIT(16'hFFDF)) 
+    \block_word_cnt[7]_i_13 
+       (.I0(rx_data_r_track[4]),
+        .I1(rx_data_r_track[0]),
+        .I2(rx_data_r_track[9]),
+        .I3(rx_data_r_track[8]),
+        .O(\block_word_cnt[7]_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFEAE)) 
     \block_word_cnt[7]_i_1__0 
-       (.I0(\block_word_cnt[7]_i_3__2_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[7] ),
-        .I3(\block_word_cnt_reg_n_0_[5] ),
-        .I4(\block_word_cnt_reg_n_0_[6] ),
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt[7]_i_3__2_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt[7]_i_4__0_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
         .O(\block_word_cnt[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \block_word_cnt[7]_i_2__2 
        (.I0(\block_word_cnt_reg_n_0_[6] ),
-        .I1(\block_word_cnt[7]_i_4_n_0 ),
+        .I1(\block_word_cnt[7]_i_5__0_n_0 ),
         .I2(\block_word_cnt_reg_n_0_[7] ),
         .O(p_1_in[7]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFEEEFFFFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \block_word_cnt[7]_i_3__2 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt[7]_i_5_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt[7]_i_6_n_0 ),
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt[7]_i_6__0_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
         .O(\block_word_cnt[7]_i_3__2_n_0 ));
   LUT6 #(
+    .INIT(64'hFFFF0001FFFFFFFF)) 
+    \block_word_cnt[7]_i_4__0 
+       (.I0(\block_word_cnt[7]_i_7__0_n_0 ),
+        .I1(\block_word_cnt[7]_i_8_n_0 ),
+        .I2(\block_word_cnt[7]_i_9_n_0 ),
+        .I3(\block_word_cnt[7]_i_10_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt_reg_n_0_[1] ),
+        .O(\block_word_cnt[7]_i_4__0_n_0 ));
+  LUT6 #(
     .INIT(64'h8000000000000000)) 
-    \block_word_cnt[7]_i_4 
+    \block_word_cnt[7]_i_5__0 
        (.I0(\block_word_cnt_reg_n_0_[5] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(\block_word_cnt_reg_n_0_[3] ),
         .I5(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[7]_i_4_n_0 ));
+        .O(\block_word_cnt[7]_i_5__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \block_word_cnt[7]_i_5 
-       (.I0(\block_word_cnt[7]_i_7_n_0 ),
-        .I1(rx_data_r_track[12]),
-        .I2(rx_data_r_track[10]),
-        .I3(rx_data_r_track[13]),
-        .I4(\block_word_cnt[7]_i_8_n_0 ),
-        .I5(\block_word_cnt[7]_i_9_n_0 ),
-        .O(\block_word_cnt[7]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \block_word_cnt[7]_i_6 
-       (.I0(\block_word_cnt[7]_i_10_n_0 ),
+    .INIT(64'h0000000000004000)) 
+    \block_word_cnt[7]_i_6__0 
+       (.I0(\block_word_cnt[7]_i_11_n_0 ),
+        .I1(rx_data_r_track[7]),
+        .I2(rx_data_r_track[5]),
+        .I3(\block_word_cnt[7]_i_12_n_0 ),
+        .I4(\block_word_cnt[7]_i_13_n_0 ),
+        .I5(\block_word_cnt[7]_i_10_n_0 ),
+        .O(\block_word_cnt[7]_i_6__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    \block_word_cnt[7]_i_7__0 
+       (.I0(rx_data_r_track[15]),
         .I1(rx_data_r_track[14]),
-        .I2(rx_data_r_track[15]),
-        .I3(\block_word_cnt[7]_i_11_n_0 ),
-        .I4(\block_word_cnt[7]_i_12_n_0 ),
-        .I5(\block_word_cnt[7]_i_9_n_0 ),
-        .O(\block_word_cnt[7]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFEFFFFFFFFFFF)) 
-    \block_word_cnt[7]_i_7 
-       (.I0(rx_data_r_track[14]),
-        .I1(rx_data_r_track[15]),
-        .I2(rx_data_r_track[9]),
-        .I3(rx_data_r_track[5]),
-        .I4(rx_data_r_track[11]),
-        .I5(rx_data_r_track[7]),
-        .O(\block_word_cnt[7]_i_7_n_0 ));
-  LUT3 #(
-    .INIT(8'hFB)) 
+        .I2(rx_data_r_track[4]),
+        .I3(rx_data_r_track[8]),
+        .O(\block_word_cnt[7]_i_7__0_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFD)) 
     \block_word_cnt[7]_i_8 
-       (.I0(rx_data_r_track[8]),
-        .I1(rx_data_r_track[4]),
-        .I2(rx_data_r_track[0]),
+       (.I0(rx_data_r_track[10]),
+        .I1(rx_data_r_track[5]),
+        .I2(rx_data_r_track[9]),
+        .I3(rx_data_r_track[0]),
         .O(\block_word_cnt[7]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT4 #(
     .INIT(16'hFFDF)) 
     \block_word_cnt[7]_i_9 
-       (.I0(rx_data_r_track[2]),
-        .I1(rx_data_r_track[1]),
-        .I2(rx_data_r_track[3]),
-        .I3(rx_data_r_track[6]),
+       (.I0(rx_data_r_track[12]),
+        .I1(rx_data_r_track[7]),
+        .I2(rx_data_r_track[11]),
+        .I3(rx_data_r_track[13]),
         .O(\block_word_cnt[7]_i_9_n_0 ));
   FDRE \block_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -4225,11 +4232,6 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .D(p_1_in[4]),
         .Q(\block_word_cnt_reg_n_0_[4] ),
         .R(block_word_cnt0));
-  MUXF7 \block_word_cnt_reg[4]_i_1 
-       (.I0(\block_word_cnt[4]_i_2__2_n_0 ),
-        .I1(\block_word_cnt[4]_i_3__0_n_0 ),
-        .O(p_1_in[4]),
-        .S(\block_word_cnt[5]_i_3_n_0 ));
   FDRE \block_word_cnt_reg[5] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\block_word_cnt[7]_i_1__0_n_0 ),
@@ -4296,30 +4298,30 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
     link_ctr0_carry_i_4__0
        (.I0(link_ctr_reg[1]),
         .O(link_ctr0_carry_i_4__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \link_ctr[0]_i_1__0 
        (.I0(link_ctr_reg[0]),
-        .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+        .O(link_ctr0__0));
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT4 #(
     .INIT(16'h8BB8)) 
     \link_ctr[1]_i_1__0 
        (.I0(data[1]),
         .I1(gt1_track_data_i),
-        .I2(link_ctr_reg[0]),
-        .I3(link_ctr_reg[1]),
+        .I2(link_ctr_reg[1]),
+        .I3(link_ctr_reg[0]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT5 #(
     .INIT(32'h8BB8B8B8)) 
     \link_ctr[2]_i_1__0 
        (.I0(data[2]),
         .I1(gt1_track_data_i),
         .I2(link_ctr_reg[2]),
-        .I3(link_ctr_reg[0]),
-        .I4(link_ctr_reg[1]),
+        .I3(link_ctr_reg[1]),
+        .I4(link_ctr_reg[0]),
         .O(p_0_in[2]));
   LUT6 #(
     .INIT(64'h8BB8B8B8B8B8B8B8)) 
@@ -4328,8 +4330,8 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(gt1_track_data_i),
         .I2(link_ctr_reg[3]),
         .I3(link_ctr_reg[2]),
-        .I4(link_ctr_reg[0]),
-        .I5(link_ctr_reg[1]),
+        .I4(link_ctr_reg[1]),
+        .I5(link_ctr_reg[0]),
         .O(p_0_in[3]));
   LUT5 #(
     .INIT(32'hB8B88BB8)) 
@@ -4341,21 +4343,21 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I4(\link_ctr[5]_i_2__0_n_0 ),
         .O(p_0_in[4]));
   LUT6 #(
-    .INIT(64'hB88BB8B8B8B8B8B8)) 
+    .INIT(64'hB8B88BB8B8B8B8B8)) 
     \link_ctr[5]_i_1__0 
        (.I0(data[5]),
         .I1(gt1_track_data_i),
         .I2(link_ctr_reg[5]),
-        .I3(\link_ctr[5]_i_2__0_n_0 ),
-        .I4(link_ctr_reg[3]),
-        .I5(link_ctr_reg[4]),
+        .I3(link_ctr_reg[4]),
+        .I4(\link_ctr[5]_i_2__0_n_0 ),
+        .I5(link_ctr_reg[3]),
         .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \link_ctr[5]_i_2__0 
-       (.I0(link_ctr_reg[1]),
-        .I1(link_ctr_reg[0]),
+       (.I0(link_ctr_reg[0]),
+        .I1(link_ctr_reg[1]),
         .I2(link_ctr_reg[2]),
         .O(\link_ctr[5]_i_2__0_n_0 ));
   LUT6 #(
@@ -4364,43 +4366,43 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
        (.I0(track_data_r),
         .I1(\link_ctr[6]_i_3__0_n_0 ),
         .I2(link_ctr_reg[4]),
-        .I3(link_ctr_reg[3]),
-        .I4(link_ctr_reg[5]),
+        .I3(link_ctr_reg[5]),
+        .I4(link_ctr_reg[3]),
         .I5(link_ctr_reg[6]),
         .O(link_ctr));
   LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
+    .INIT(32'hB88BB8B8)) 
     \link_ctr[6]_i_2__0 
        (.I0(data[6]),
         .I1(gt1_track_data_i),
         .I2(link_ctr_reg[6]),
-        .I3(link_ctr_reg[5]),
-        .I4(\link_ctr[6]_i_4__0_n_0 ),
+        .I3(\link_ctr[6]_i_4__0_n_0 ),
+        .I4(link_ctr_reg[5]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'h07)) 
     \link_ctr[6]_i_3__0 
-       (.I0(link_ctr_reg[1]),
-        .I1(link_ctr_reg[0]),
+       (.I0(link_ctr_reg[0]),
+        .I1(link_ctr_reg[1]),
         .I2(link_ctr_reg[2]),
         .O(\link_ctr[6]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT5 #(
-    .INIT(32'h80000000)) 
+    .INIT(32'h7FFFFFFF)) 
     \link_ctr[6]_i_4__0 
-       (.I0(link_ctr_reg[4]),
-        .I1(link_ctr_reg[3]),
+       (.I0(link_ctr_reg[3]),
+        .I1(link_ctr_reg[0]),
         .I2(link_ctr_reg[1]),
-        .I3(link_ctr_reg[0]),
-        .I4(link_ctr_reg[2]),
+        .I3(link_ctr_reg[2]),
+        .I4(link_ctr_reg[4]),
         .O(\link_ctr[6]_i_4__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \link_ctr_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(link_ctr),
-        .D(p_0_in[0]),
+        .D(link_ctr0__0),
         .Q(link_ctr_reg[0]),
         .R(1'b0));
   FDRE #(
@@ -4547,7 +4549,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .D(rx_data_r[9]),
         .Q(rx_data_r2[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[0]_i_1__0 
@@ -4555,7 +4557,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[0]),
         .O(p_0_in1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[1]_i_1__0 
@@ -4563,7 +4565,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[1]),
         .O(p_0_in1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[2]_i_1__0 
@@ -4571,7 +4573,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[2]),
         .O(p_0_in1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[3]_i_1__0 
@@ -4579,7 +4581,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[3]),
         .O(p_0_in1_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[4]_i_1__0 
@@ -4587,7 +4589,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[4]),
         .O(p_0_in1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[5]_i_1__0 
@@ -4595,7 +4597,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[5]),
         .O(p_0_in1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[6]_i_1__0 
@@ -4603,7 +4605,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[6]),
         .O(p_0_in1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[7]_i_1__0 
@@ -4693,7 +4695,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[10]),
         .Q(\rx_data_r5_reg[10]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[10]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4712,7 +4714,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[11]),
         .Q(\rx_data_r5_reg[11]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[11]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4731,7 +4733,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[12]),
         .Q(\rx_data_r5_reg[12]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[12]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4750,7 +4752,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[13]),
         .Q(\rx_data_r5_reg[13]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[13]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4769,7 +4771,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[14]),
         .Q(\rx_data_r5_reg[14]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[14]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4788,7 +4790,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[15]),
         .Q(\rx_data_r5_reg[15]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[15]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4884,7 +4886,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[8]),
         .Q(\rx_data_r5_reg[8]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[8]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -4903,7 +4905,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[9]),
         .Q(\rx_data_r5_reg[9]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[9]_srl3___gt1_frame_check_rx_data_r5_reg_r_i_1 
@@ -5013,112 +5015,112 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .D(\rx_data_r5_reg[9]_srl3___gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .Q(\rx_data_r6_reg[9]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate
        (.I0(\rx_data_r6_reg[15]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__0
        (.I0(\rx_data_r6_reg[14]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__1
        (.I0(\rx_data_r6_reg[13]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__10
        (.I0(\rx_data_r6_reg[4]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__10_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__11
        (.I0(\rx_data_r6_reg[3]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__11_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__12
        (.I0(\rx_data_r6_reg[2]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__12_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__13
        (.I0(\rx_data_r6_reg[1]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__13_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__14
        (.I0(\rx_data_r6_reg[0]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__14_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__2
        (.I0(\rx_data_r6_reg[12]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__3
        (.I0(\rx_data_r6_reg[11]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__4
        (.I0(\rx_data_r6_reg[10]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__5
        (.I0(\rx_data_r6_reg[9]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__6
        (.I0(\rx_data_r6_reg[8]_gt1_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__7
        (.I0(\rx_data_r6_reg[7]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__8
        (.I0(\rx_data_r6_reg[6]_gt1_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__9
@@ -5324,22 +5326,22 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .Q(rx_data_r_track[9]),
         .R(system_reset_r2));
   LUT6 #(
-    .INIT(64'hFFFFFFF6FFFBFFF6)) 
+    .INIT(64'hFFFFFFFBFFF6FFF6)) 
     \rx_fifo_in_reg[15]_i_1__0 
        (.I0(\block_word_cnt_reg_n_0_[1] ),
         .I1(\block_word_cnt_reg_n_0_[4] ),
         .I2(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
         .I3(\block_word_cnt_reg_n_0_[3] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt_reg_n_0_[2] ),
         .O(\rx_fifo_in_reg[15]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \rx_fifo_in_reg[15]_i_2__0 
        (.I0(\block_word_cnt_reg_n_0_[6] ),
-        .I1(\block_word_cnt_reg_n_0_[5] ),
-        .I2(\block_word_cnt_reg_n_0_[7] ),
+        .I1(\block_word_cnt_reg_n_0_[7] ),
+        .I2(\block_word_cnt_reg_n_0_[5] ),
         .O(\rx_fifo_in_reg[15]_i_2__0_n_0 ));
   FDRE \rx_fifo_in_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -5438,45 +5440,66 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .Q(rx_fifo_in_reg[9]),
         .R(block_word_cnt0));
   LUT6 #(
-    .INIT(64'h00000000FE020202)) 
+    .INIT(64'h00000000EEFE2202)) 
     rx_fifo_rd_en_i_1
        (.I0(rx_fifo_rd_en_reg_n_0),
         .I1(rx_fifo_rd_en_i_2_n_0),
         .I2(rx_fifo_rd_en_i_3_n_0),
-        .I3(rx_fifo_valid_i_3__0_n_0),
-        .I4(rx_fifo_valid),
+        .I3(rx_fifo_rd_en_i_4_n_0),
+        .I4(rx_fifo_rd_en_i_5_n_0),
         .I5(block_word_cnt0),
         .O(rx_fifo_rd_en_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFC0FFCF8)) 
+    .INIT(64'hFFFFFFFF0000FA0C)) 
     rx_fifo_rd_en_i_2
        (.I0(block_word_cnt),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(rx_fifo_rd_en_i_4_n_0),
-        .O(rx_fifo_rd_en_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
-  LUT5 #(
-    .INIT(32'h000000E2)) 
-    rx_fifo_rd_en_i_3
-       (.I0(\block_word_cnt[7]_i_5_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt[7]_i_6_n_0 ),
+        .I1(\block_word_cnt[7]_i_6__0_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
         .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(rx_fifo_rd_en_i_6_n_0),
+        .O(rx_fifo_rd_en_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    rx_fifo_rd_en_i_3
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
         .O(rx_fifo_rd_en_i_3_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFEFE)) 
+    .INIT(64'hFFFFFFFEFFFFFFFF)) 
     rx_fifo_rd_en_i_4
-       (.I0(\block_word_cnt_reg_n_0_[7] ),
-        .I1(\block_word_cnt_reg_n_0_[5] ),
-        .I2(\block_word_cnt_reg_n_0_[6] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
-        .I5(\block_word_cnt_reg_n_0_[2] ),
+       (.I0(rx_fifo_valid_i_4_n_0),
+        .I1(\block_word_cnt[7]_i_8_n_0 ),
+        .I2(rx_fifo_rd_en_i_7_n_0),
+        .I3(rx_data_r_track[14]),
+        .I4(rx_data_r_track[15]),
+        .I5(\block_word_cnt_reg_n_0_[1] ),
         .O(rx_fifo_rd_en_i_4_n_0));
+  LUT5 #(
+    .INIT(32'hAAAAAAA2)) 
+    rx_fifo_rd_en_i_5
+       (.I0(rx_fifo_valid),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[3] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
+        .O(rx_fifo_rd_en_i_5_n_0));
+  LUT5 #(
+    .INIT(32'hFFEFEFFE)) 
+    rx_fifo_rd_en_i_6
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\rx_fifo_in_reg[15]_i_2__0_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .O(rx_fifo_rd_en_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h7)) 
+    rx_fifo_rd_en_i_7
+       (.I0(rx_data_r_track[8]),
+        .I1(rx_data_r_track[4]),
+        .O(rx_fifo_rd_en_i_7_n_0));
   FDRE rx_fifo_rd_en_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -5495,33 +5518,46 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .D(block_word_cnt0),
         .Q(rx_fifo_rst),
         .R(1'b0));
-  LUT5 #(
-    .INIT(32'h000000AE)) 
+  LUT6 #(
+    .INIT(64'h00000000AABAAAAA)) 
     rx_fifo_valid_i_1__0
        (.I0(rx_fifo_valid),
-        .I1(rx_fifo_valid_i_2__0_n_0),
-        .I2(rx_fifo_valid_i_3__0_n_0),
-        .I3(system_reset_r2),
-        .I4(TEST_RESET),
+        .I1(rx_fifo_valid_i_2_n_0),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(rx_fifo_valid_i_3_n_0),
+        .I5(block_word_cnt0),
         .O(rx_fifo_valid_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    rx_fifo_valid_i_2__0
-       (.I0(\block_word_cnt[7]_i_6_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .O(rx_fifo_valid_i_2__0_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
-    rx_fifo_valid_i_3__0
-       (.I0(\block_word_cnt_reg_n_0_[7] ),
-        .I1(\block_word_cnt_reg_n_0_[5] ),
+    .INIT(64'hFFFFFFFFFFFFFFFB)) 
+    rx_fifo_valid_i_2
+       (.I0(\block_word_cnt[7]_i_7__0_n_0 ),
+        .I1(rx_data_r_track[10]),
+        .I2(rx_data_r_track[5]),
+        .I3(rx_data_r_track[9]),
+        .I4(rx_data_r_track[0]),
+        .I5(rx_fifo_valid_i_4_n_0),
+        .O(rx_fifo_valid_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h0000000100000000)) 
+    rx_fifo_valid_i_3
+       (.I0(\block_word_cnt_reg_n_0_[5] ),
+        .I1(\block_word_cnt_reg_n_0_[7] ),
         .I2(\block_word_cnt_reg_n_0_[6] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(\block_word_cnt_reg_n_0_[3] ),
-        .O(rx_fifo_valid_i_3__0_n_0));
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(rx_fifo_valid_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  LUT5 #(
+    .INIT(32'hFFEFFFFF)) 
+    rx_fifo_valid_i_4
+       (.I0(\block_word_cnt[7]_i_10_n_0 ),
+        .I1(rx_data_r_track[13]),
+        .I2(rx_data_r_track[11]),
+        .I3(rx_data_r_track[7]),
+        .I4(rx_data_r_track[12]),
+        .O(rx_fifo_valid_i_4_n_0));
   FDRE rx_fifo_valid_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -5529,15 +5565,25 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .Q(rx_fifo_valid),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h00000000FEFE02FE)) 
+    .INIT(64'h0000000002FEFEFE)) 
     rx_fifo_wr_en_i_1
        (.I0(rx_fifo_wr_en),
-        .I1(rx_fifo_valid_i_2__0_n_0),
-        .I2(\rx_fifo_in_reg[15]_i_1__0_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(rx_fifo_valid_i_3__0_n_0),
+        .I1(\rx_fifo_in_reg[15]_i_1__0_n_0 ),
+        .I2(rx_fifo_wr_en_i_2_n_0),
+        .I3(rx_fifo_valid_i_3_n_0),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
         .I5(block_word_cnt0),
         .O(rx_fifo_wr_en_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    rx_fifo_wr_en_i_2
+       (.I0(\block_word_cnt_reg_n_0_[0] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt[7]_i_7__0_n_0 ),
+        .I3(\block_word_cnt[7]_i_8_n_0 ),
+        .I4(\block_word_cnt[7]_i_9_n_0 ),
+        .I5(\block_word_cnt[7]_i_10_n_0 ),
+        .O(rx_fifo_wr_en_i_2_n_0));
   FDRE rx_fifo_wr_en_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -5603,41 +5649,40 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
         .I5(system_reset_r2),
         .O(\sel[0]_i_1__0_n_0 ));
   LUT4 #(
-    .INIT(16'h4000)) 
+    .INIT(16'h0040)) 
     \sel[0]_i_2__0 
-       (.I0(rx_data_r[14]),
-        .I1(begin_r),
-        .I2(rx_data_r[13]),
-        .I3(rx_data_r[11]),
+       (.I0(rx_data_r[9]),
+        .I1(rx_data_r[13]),
+        .I2(rx_data_r[12]),
+        .I3(rx_data_r[8]),
         .O(\sel[0]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
+    .INIT(64'hDFFFFFFFFFFFFFFF)) 
     \sel[0]_i_3__0 
        (.I0(rx_data_r[10]),
-        .I1(rx_data_r[9]),
-        .I2(rx_data_r[15]),
-        .I3(rx_data_r[12]),
-        .I4(rx_data_r[8]),
-        .I5(p_1_in5_in),
+        .I1(rx_data_r[14]),
+        .I2(begin_r),
+        .I3(rx_data_r[15]),
+        .I4(p_1_in5_in),
+        .I5(rx_data_r[11]),
         .O(\sel[0]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     \sel[0]_i_4__0 
-       (.I0(rx_data_r[3]),
-        .I1(begin_r),
-        .I2(\rxctrl_r_reg_n_0_[0] ),
-        .I3(rx_data_r[1]),
+       (.I0(rx_data_r[7]),
+        .I1(rx_data_r[2]),
+        .I2(rx_data_r[5]),
+        .I3(rx_data_r[6]),
         .O(\sel[0]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
+    .INIT(64'hFFFFF7FFFFFFFFFF)) 
     \sel[0]_i_5__0 
-       (.I0(rx_data_r[5]),
-        .I1(rx_data_r[0]),
-        .I2(rx_data_r[4]),
-        .I3(rx_data_r[2]),
-        .I4(rx_data_r[6]),
-        .I5(rx_data_r[7]),
+       (.I0(rx_data_r[3]),
+        .I1(begin_r),
+        .I2(rx_data_r[0]),
+        .I3(\rxctrl_r_reg_n_0_[0] ),
+        .I4(rx_data_r[1]),
+        .I5(rx_data_r[4]),
         .O(\sel[0]_i_5__0_n_0 ));
   FDRE \sel_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -5656,8 +5701,8 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK
     .INIT(32'hAAA8AAAA)) 
     sm_link_i_2__0
        (.I0(link_ctr_reg[6]),
-        .I1(link_ctr_reg[5]),
-        .I2(link_ctr_reg[3]),
+        .I1(link_ctr_reg[3]),
+        .I2(link_ctr_reg[5]),
         .I3(link_ctr_reg[4]),
         .I4(\link_ctr[6]_i_3__0_n_0 ),
         .O(sm_link_i_2__0_n_0));
@@ -5774,25 +5819,30 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire \block_error_reg[0]_i_1_n_0 ;
   wire \block_error_reg[0]_i_2_n_0 ;
   wire \block_error_reg[0]_i_3_n_0 ;
+  wire \block_error_reg[0]_i_4_n_0 ;
+  wire \block_error_reg[0]_i_5_n_0 ;
+  wire \block_error_reg[0]_i_6_n_0 ;
+  wire \block_error_reg[0]_i_7_n_0 ;
+  wire \block_error_reg[0]_i_8_n_0 ;
+  wire \block_error_reg[0]_i_9_n_0 ;
   wire \block_error_reg[1]_i_1_n_0 ;
   wire \block_error_reg[1]_i_2_n_0 ;
   wire \block_error_reg[1]_i_3_n_0 ;
-  wire \block_error_reg[1]_i_4_n_0 ;
-  wire \block_error_reg[1]_i_5_n_0 ;
-  wire \block_error_reg[1]_i_6_n_0 ;
-  wire \block_error_reg[1]_i_7_n_0 ;
-  wire \block_error_reg[1]_i_8_n_0 ;
   wire block_word_cnt0;
   wire \block_word_cnt[0]_i_2_n_0 ;
-  wire \block_word_cnt[0]_i_3_n_0 ;
+  wire \block_word_cnt[0]_i_3__0_n_0 ;
   wire \block_word_cnt[1]_i_2_n_0 ;
+  wire \block_word_cnt[1]_i_3_n_0 ;
   wire \block_word_cnt[3]_i_1__0_n_0 ;
-  wire \block_word_cnt[4]_i_2__1_n_0 ;
-  wire \block_word_cnt[4]_i_3_n_0 ;
+  wire \block_word_cnt[4]_i_2__2_n_0 ;
+  wire \block_word_cnt[4]_i_3__0_n_0 ;
   wire \block_word_cnt[4]_i_4_n_0 ;
-  wire \block_word_cnt[4]_i_5_n_0 ;
   wire \block_word_cnt[7]_i_1_n_0 ;
   wire \block_word_cnt[7]_i_3_n_0 ;
+  wire \block_word_cnt[7]_i_4_n_0 ;
+  wire \block_word_cnt[7]_i_5_n_0 ;
+  wire \block_word_cnt[7]_i_6_n_0 ;
+  wire \block_word_cnt[7]_i_7_n_0 ;
   wire \block_word_cnt_reg_n_0_[0] ;
   wire \block_word_cnt_reg_n_0_[1] ;
   wire \block_word_cnt_reg_n_0_[2] ;
@@ -5804,6 +5854,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire correct_mask_valid;
   wire correct_mask_valid_i_1_n_0;
   wire correct_mask_valid_i_2_n_0;
+  wire correct_mask_valid_i_3_n_0;
   wire [6:1]data;
   wire data_word_cnt;
   wire \data_word_cnt[11]_i_2_n_0 ;
@@ -5916,9 +5967,6 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire data_word_valid_i_4_n_0;
   wire encoder_rst_i_1_n_0;
   wire encoder_rst_i_2_n_0;
-  wire encoder_rst_i_3_n_0;
-  wire encoder_rst_i_4_n_0;
-  wire encoder_rst_i_5_n_0;
   wire encoder_rst_reg_n_0;
   wire gt0_rx_system_reset_c;
   wire gt0_rxpcommaalignen_in;
@@ -5961,6 +6009,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire \hor_correct_mask_reg_reg_n_0_[8] ;
   wire \hor_correct_mask_reg_reg_n_0_[9] ;
   wire link_ctr;
+  wire [0:0]link_ctr0;
   wire link_ctr0_carry__0_i_1_n_0;
   wire link_ctr0_carry__0_i_2_n_0;
   wire link_ctr0_carry__0_n_3;
@@ -5979,15 +6028,13 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire next_begin_c;
   wire next_track_data_c;
   wire out;
-  wire [6:0]p_0_in;
+  wire [6:1]p_0_in;
   wire [15:0]p_0_in1_in;
   wire [7:0]p_1_in;
   wire p_1_in5_in;
   wire pattern_check_en;
   wire pattern_check_en_i_1_n_0;
   wire pattern_check_en_i_2_n_0;
-  wire pattern_check_en_i_3_n_0;
-  wire pattern_check_en_i_4_n_0;
   wire pattern_error_cnt;
   wire \pattern_error_cnt[11]_i_2_n_0 ;
   wire \pattern_error_cnt[11]_i_3_n_0 ;
@@ -6099,7 +6146,6 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire pattern_gen_inst_2_n_5;
   wire pattern_pause_reg_i_1_n_0;
   wire pattern_pause_reg_i_2_n_0;
-  wire pattern_pause_reg_i_3_n_0;
   wire pattern_pause_reg_reg_n_0;
   wire [15:0]rx_data_r;
   wire [15:0]rx_data_r2;
@@ -6185,12 +6231,9 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   wire rx_fifo_rst;
   wire rx_fifo_valid;
   wire rx_fifo_valid_i_1_n_0;
-  wire rx_fifo_valid_i_2_n_0;
-  wire rx_fifo_valid_i_3_n_0;
-  wire rx_fifo_valid_i_4_n_0;
+  wire rx_fifo_valid_i_2__0_n_0;
   wire rx_fifo_wr_en;
   wire rx_fifo_wr_en_i_1__0_n_0;
-  wire rx_fifo_wr_en_i_2_n_0;
   wire [1:0]rxctrl_r2;
   wire [1:0]rxctrl_r3;
   wire \rxctrl_r_reg_n_0_[0] ;
@@ -6234,14 +6277,13 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
     SYSTEM_RESET_inferred_i_1
        (.I0(out),
         .O(gt0_rx_system_reset_c));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
     .INIT(4'h8)) 
     TRACK_DATA_OUT_INST_0
        (.I0(gt0_track_data_i),
         .I1(gt1_track_data_i),
         .O(TRACK_DATA_OUT));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT2 #(
     .INIT(4'h2)) 
     begin_r_i_1
@@ -6255,103 +6297,111 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .Q(begin_r),
         .S(system_reset_r2));
   LUT6 #(
-    .INIT(64'hF5F5F0F5A0A0B0A0)) 
+    .INIT(64'hF5F5F4F4A0B0A0B0)) 
     \block_error_reg[0]_i_1 
        (.I0(\block_error_reg[1]_i_2_n_0 ),
-        .I1(\block_error_reg[1]_i_3_n_0 ),
+        .I1(\block_error_reg[0]_i_2_n_0 ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_error_reg[0]_i_2_n_0 ),
-        .I4(\block_error_reg[0]_i_3_n_0 ),
+        .I3(\block_error_reg[0]_i_3_n_0 ),
+        .I4(\block_error_reg[0]_i_4_n_0 ),
         .I5(BLOCK_ERROR_OUT[0]),
         .O(\block_error_reg[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     \block_error_reg[0]_i_2 
-       (.I0(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\rx_fifo_in_reg[15]_i_2_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
         .O(\block_error_reg[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
+  LUT6 #(
+    .INIT(64'h0000000000001000)) 
     \block_error_reg[0]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(encoder_rst_i_2_n_0),
+       (.I0(\block_error_reg[0]_i_5_n_0 ),
+        .I1(\block_error_reg[0]_i_6_n_0 ),
+        .I2(rx_data_r_track[3]),
+        .I3(rx_data_r_track[1]),
+        .I4(\block_error_reg[0]_i_7_n_0 ),
+        .I5(\block_error_reg[0]_i_8_n_0 ),
         .O(\block_error_reg[0]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hBAAABBBB8AAA8888)) 
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \block_error_reg[0]_i_4 
+       (.I0(\block_error_reg[0]_i_5_n_0 ),
+        .I1(rx_data_r_track[8]),
+        .I2(rx_data_r_track[6]),
+        .I3(\block_error_reg[0]_i_7_n_0 ),
+        .I4(\block_error_reg[0]_i_6_n_0 ),
+        .I5(\block_error_reg[0]_i_9_n_0 ),
+        .O(\block_error_reg[0]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \block_error_reg[0]_i_5 
+       (.I0(rx_data_r_track[12]),
+        .I1(rx_data_r_track[15]),
+        .I2(rx_data_r_track[14]),
+        .I3(rx_data_r_track[13]),
+        .O(\block_error_reg[0]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    \block_error_reg[0]_i_6 
+       (.I0(rx_data_r_track[10]),
+        .I1(rx_data_r_track[11]),
+        .I2(rx_data_r_track[5]),
+        .I3(rx_data_r_track[4]),
+        .O(\block_error_reg[0]_i_6_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \block_error_reg[0]_i_7 
+       (.I0(rx_data_r_track[7]),
+        .I1(rx_data_r_track[9]),
+        .O(\block_error_reg[0]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'hDFFF)) 
+    \block_error_reg[0]_i_8 
+       (.I0(rx_data_r_track[0]),
+        .I1(rx_data_r_track[2]),
+        .I2(rx_data_r_track[6]),
+        .I3(rx_data_r_track[8]),
+        .O(\block_error_reg[0]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
+    \block_error_reg[0]_i_9 
+       (.I0(rx_data_r_track[2]),
+        .I1(rx_data_r_track[1]),
+        .I2(rx_data_r_track[3]),
+        .I3(rx_data_r_track[0]),
+        .O(\block_error_reg[0]_i_9_n_0 ));
+  LUT4 #(
+    .INIT(16'hABA8)) 
     \block_error_reg[1]_i_1 
        (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_error_reg[1]_i_2_n_0 ),
         .I2(\block_error_reg[1]_i_3_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_error_reg[1]_i_4_n_0 ),
-        .I5(BLOCK_ERROR_OUT[1]),
+        .I3(BLOCK_ERROR_OUT[1]),
         .O(\block_error_reg[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000100000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT4 #(
+    .INIT(16'h0020)) 
     \block_error_reg[1]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\rx_fifo_in_reg[15]_i_2_n_0 ),
+       (.I0(\block_word_cnt[7]_i_4_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[0] ),
-        .I5(rx_fifo_valid_i_2_n_0),
+        .I3(rx_fifo_valid_i_2__0_n_0),
         .O(\block_error_reg[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000001)) 
+    .INIT(64'h0000000000000035)) 
     \block_error_reg[1]_i_3 
-       (.I0(\block_error_reg[1]_i_5_n_0 ),
-        .I1(\block_error_reg[1]_i_6_n_0 ),
-        .I2(rx_data_r_track[14]),
-        .I3(rx_data_r_track[12]),
-        .I4(\block_error_reg[1]_i_7_n_0 ),
-        .I5(\block_error_reg[1]_i_8_n_0 ),
+       (.I0(\block_error_reg[0]_i_4_n_0 ),
+        .I1(\block_error_reg[0]_i_3_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt[7]_i_3_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
         .O(\block_error_reg[1]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001000100010000)) 
-    \block_error_reg[1]_i_4 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I4(encoder_rst_i_2_n_0),
-        .I5(\block_word_cnt_reg_n_0_[0] ),
-        .O(\block_error_reg[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \block_error_reg[1]_i_5 
-       (.I0(rx_data_r_track[5]),
-        .I1(rx_data_r_track[7]),
-        .I2(rx_data_r_track[4]),
-        .I3(rx_data_r_track[9]),
-        .O(\block_error_reg[1]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \block_error_reg[1]_i_6 
-       (.I0(rx_data_r_track[13]),
-        .I1(rx_data_r_track[15]),
-        .O(\block_error_reg[1]_i_6_n_0 ));
-  LUT4 #(
-    .INIT(16'hEFFF)) 
-    \block_error_reg[1]_i_7 
-       (.I0(rx_data_r_track[11]),
-        .I1(rx_data_r_track[10]),
-        .I2(rx_data_r_track[3]),
-        .I3(rx_data_r_track[8]),
-        .O(\block_error_reg[1]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT4 #(
-    .INIT(16'hFF7F)) 
-    \block_error_reg[1]_i_8 
-       (.I0(rx_data_r_track[1]),
-        .I1(rx_data_r_track[6]),
-        .I2(rx_data_r_track[0]),
-        .I3(rx_data_r_track[2]),
-        .O(\block_error_reg[1]_i_8_n_0 ));
   FDRE \block_error_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -6364,166 +6414,194 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(\block_error_reg[1]_i_1_n_0 ),
         .Q(BLOCK_ERROR_OUT[1]),
         .R(block_word_cnt0));
-  LUT6 #(
-    .INIT(64'hB9B80000B9B8FFFF)) 
+  LUT5 #(
+    .INIT(32'h980098FF)) 
     \block_word_cnt[0]_i_1 
        (.I0(\block_word_cnt[0]_i_2_n_0 ),
-        .I1(\block_word_cnt[0]_i_3_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[3] ),
-        .I3(ECC_CODE_EN),
-        .I4(\block_word_cnt[4]_i_4_n_0 ),
-        .I5(\block_word_cnt_reg_n_0_[0] ),
+        .I1(\block_word_cnt[0]_i_3__0_n_0 ),
+        .I2(ECC_CODE_EN),
+        .I3(\block_word_cnt[4]_i_2__2_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFDB)) 
+    .INIT(32'hFFFFFEBF)) 
     \block_word_cnt[0]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .O(\block_word_cnt[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT5 #(
+    .INIT(32'hFEABFFFF)) 
+    \block_word_cnt[0]_i_3__0 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
         .I1(\block_word_cnt_reg_n_0_[0] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
         .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT4 #(
-    .INIT(16'hDDD7)) 
-    \block_word_cnt[0]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .O(\block_word_cnt[0]_i_3_n_0 ));
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .O(\block_word_cnt[0]_i_3__0_n_0 ));
   LUT5 #(
-    .INIT(32'hE0EFEFE0)) 
+    .INIT(32'hF066FF66)) 
     \block_word_cnt[1]_i_1 
-       (.I0(\block_word_cnt[1]_i_2_n_0 ),
-        .I1(\block_word_cnt[4]_i_3_n_0 ),
-        .I2(\block_word_cnt[4]_i_4_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
+       (.I0(\block_word_cnt_reg_n_0_[0] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt[1]_i_2_n_0 ),
+        .I3(\block_word_cnt[4]_i_2__2_n_0 ),
+        .I4(\block_word_cnt[1]_i_3_n_0 ),
         .O(p_1_in[1]));
   LUT6 #(
-    .INIT(64'h0000000000020300)) 
-    \block_word_cnt[1]_i_2 
-       (.I0(\block_error_reg[1]_i_3_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[0] ),
-        .I5(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT5 #(
-    .INIT(32'h33CCCCC4)) 
-    \block_word_cnt[2]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \block_word_cnt[3]_i_1__0 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .O(\block_word_cnt[3]_i_1__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hF099FF99)) 
-    \block_word_cnt[4]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt[4]_i_2__1_n_0 ),
-        .I2(\block_word_cnt[4]_i_3_n_0 ),
-        .I3(\block_word_cnt[4]_i_4_n_0 ),
-        .I4(\block_word_cnt[4]_i_5_n_0 ),
-        .O(p_1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \block_word_cnt[4]_i_2__1 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[4]_i_2__1_n_0 ));
-  LUT6 #(
     .INIT(64'h00000000000C0800)) 
-    \block_word_cnt[4]_i_3 
+    \block_word_cnt[1]_i_2 
        (.I0(ECC_CODE_EN),
         .I1(\block_word_cnt_reg_n_0_[4] ),
         .I2(\block_word_cnt_reg_n_0_[2] ),
         .I3(\block_word_cnt_reg_n_0_[1] ),
         .I4(\block_word_cnt_reg_n_0_[0] ),
         .I5(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[4]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT5 #(
-    .INIT(32'h10111131)) 
-    \block_word_cnt[4]_i_4 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(\block_word_cnt[4]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT5 #(
-    .INIT(32'hFFFFBFEF)) 
-    \block_word_cnt[4]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[4]_i_5_n_0 ));
+        .O(\block_word_cnt[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \block_word_cnt[5]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt_reg_n_0_[5] ),
-        .O(p_1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \block_word_cnt[6]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[6] ),
-        .I1(\block_word_cnt[7]_i_3_n_0 ),
-        .O(p_1_in[6]));
-  LUT6 #(
-    .INIT(64'h5555555455555555)) 
-    \block_word_cnt[7]_i_1 
-       (.I0(\block_error_reg[1]_i_2_n_0 ),
-        .I1(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_error_reg[0]_i_3_n_0 ),
-        .O(\block_word_cnt[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT3 #(
-    .INIT(8'h6A)) 
-    \block_word_cnt[7]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[7] ),
-        .I1(\block_word_cnt[7]_i_3_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[6] ),
-        .O(p_1_in[7]));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    \block_word_cnt[7]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[5] ),
+    .INIT(64'hFFFFFFFFFFFDFCFF)) 
+    \block_word_cnt[1]_i_3 
+       (.I0(\block_error_reg[0]_i_3_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[4] ),
         .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
         .I5(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[1]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h3C3C3C3CCCC8CCCC)) 
+    \block_word_cnt[2]_i_1 
+       (.I0(\rx_fifo_in_reg[15]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .I5(\block_word_cnt_reg_n_0_[0] ),
+        .O(p_1_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT4 #(
+    .INIT(16'h6AAA)) 
+    \block_word_cnt[3]_i_1__0 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .O(\block_word_cnt[3]_i_1__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h0011000100150011)) 
+    \block_word_cnt[4]_i_2__2 
+       (.I0(\rx_fifo_in_reg[15]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .I5(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[4]_i_2__2_n_0 ));
+  LUT5 #(
+    .INIT(32'h6AAAAAAA)) 
+    \block_word_cnt[4]_i_3__0 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[4]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000000C0C080C)) 
+    \block_word_cnt[4]_i_4 
+       (.I0(ECC_CODE_EN),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[4]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h6AAAAAAAAAAAAAAA)) 
+    \block_word_cnt[5]_i_1 
+       (.I0(\block_word_cnt_reg_n_0_[5] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(p_1_in[5]));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \block_word_cnt[6]_i_1 
+       (.I0(\block_word_cnt[7]_i_5_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[6] ),
+        .O(p_1_in[6]));
+  LUT6 #(
+    .INIT(64'hFFFFF3FDFFFFFFFD)) 
+    \block_word_cnt[7]_i_1 
+       (.I0(\block_error_reg[0]_i_4_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt[7]_i_3_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt[7]_i_4_n_0 ),
+        .O(\block_word_cnt[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT3 #(
+    .INIT(8'h9A)) 
+    \block_word_cnt[7]_i_2 
+       (.I0(\block_word_cnt_reg_n_0_[7] ),
+        .I1(\block_word_cnt[7]_i_5_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
+        .O(p_1_in[7]));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \block_word_cnt[7]_i_3 
+       (.I0(\block_word_cnt_reg_n_0_[5] ),
+        .I1(\block_word_cnt_reg_n_0_[7] ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .I4(\block_word_cnt_reg_n_0_[2] ),
         .O(\block_word_cnt[7]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFEFFF)) 
+    \block_word_cnt[7]_i_4 
+       (.I0(\block_word_cnt[7]_i_6_n_0 ),
+        .I1(\block_error_reg[0]_i_9_n_0 ),
+        .I2(rx_data_r_track[4]),
+        .I3(rx_data_r_track[8]),
+        .I4(rx_data_r_track[6]),
+        .I5(\block_word_cnt[7]_i_7_n_0 ),
+        .O(\block_word_cnt[7]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    \block_word_cnt[7]_i_5 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\block_word_cnt_reg_n_0_[5] ),
+        .O(\block_word_cnt[7]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFDFFF)) 
+    \block_word_cnt[7]_i_6 
+       (.I0(rx_data_r_track[10]),
+        .I1(rx_data_r_track[9]),
+        .I2(rx_data_r_track[12]),
+        .I3(rx_data_r_track[11]),
+        .I4(rx_data_r_track[5]),
+        .I5(rx_data_r_track[7]),
+        .O(\block_word_cnt[7]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \block_word_cnt[7]_i_7 
+       (.I0(rx_data_r_track[13]),
+        .I1(rx_data_r_track[14]),
+        .I2(rx_data_r_track[15]),
+        .O(\block_word_cnt[7]_i_7_n_0 ));
   FDRE \block_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\block_word_cnt[7]_i_1_n_0 ),
@@ -6554,6 +6632,11 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(p_1_in[4]),
         .Q(\block_word_cnt_reg_n_0_[4] ),
         .R(block_word_cnt0));
+  MUXF7 \block_word_cnt_reg[4]_i_1 
+       (.I0(\block_word_cnt[4]_i_3__0_n_0 ),
+        .I1(\block_word_cnt[4]_i_4_n_0 ),
+        .O(p_1_in[4]),
+        .S(\block_word_cnt[4]_i_2__2_n_0 ));
   FDRE \block_word_cnt_reg[5] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\block_word_cnt[7]_i_1_n_0 ),
@@ -6572,25 +6655,32 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(p_1_in[7]),
         .Q(\block_word_cnt_reg_n_0_[7] ),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT4 #(
-    .INIT(16'hEFE0)) 
+  LUT5 #(
+    .INIT(32'hEEEFEEE0)) 
     correct_mask_valid_i_1
        (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(correct_mask_valid_i_2_n_0),
-        .I3(correct_mask_valid),
+        .I2(\hor_correct_mask[15]_i_1_n_0 ),
+        .I3(correct_mask_valid_i_2_n_0),
+        .I4(correct_mask_valid),
         .O(correct_mask_valid_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0020004100200040)) 
+    .INIT(64'h00000000000000C1)) 
     correct_mask_valid_i_2
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .I5(encoder_rst_i_2_n_0),
+       (.I0(\block_error_reg[0]_i_4_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(correct_mask_valid_i_3_n_0),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\rx_fifo_in_reg[15]_i_2_n_0 ),
         .O(correct_mask_valid_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    correct_mask_valid_i_3
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .O(correct_mask_valid_i_3_n_0));
   FDRE correct_mask_valid_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -6700,8 +6790,8 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
   LUT2 #(
     .INIT(4'hE)) 
     \data_word_cnt[31]_i_1 
-       (.I0(system_reset_r2),
-        .I1(TEST_RESET),
+       (.I0(TEST_RESET),
+        .I1(system_reset_r2),
         .O(block_word_cnt0));
   LUT1 #(
     .INIT(2'h2)) 
@@ -6714,39 +6804,39 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
        (.I0(DATA_COUNT_OUT[28]),
         .O(\data_word_cnt[31]_i_11_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h7FFF)) 
     \data_word_cnt[31]_i_12 
-       (.I0(DATA_COUNT_OUT[16]),
-        .I1(DATA_COUNT_OUT[26]),
-        .I2(DATA_COUNT_OUT[27]),
-        .I3(DATA_COUNT_OUT[25]),
+       (.I0(DATA_COUNT_OUT[2]),
+        .I1(DATA_COUNT_OUT[4]),
+        .I2(DATA_COUNT_OUT[30]),
+        .I3(DATA_COUNT_OUT[17]),
         .O(\data_word_cnt[31]_i_12_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h7FFF)) 
     \data_word_cnt[31]_i_13 
-       (.I0(DATA_COUNT_OUT[29]),
-        .I1(DATA_COUNT_OUT[19]),
-        .I2(DATA_COUNT_OUT[17]),
-        .I3(DATA_COUNT_OUT[20]),
+       (.I0(DATA_COUNT_OUT[5]),
+        .I1(DATA_COUNT_OUT[29]),
+        .I2(DATA_COUNT_OUT[9]),
+        .I3(DATA_COUNT_OUT[19]),
         .O(\data_word_cnt[31]_i_13_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
     \data_word_cnt[31]_i_14 
-       (.I0(DATA_COUNT_OUT[0]),
-        .I1(DATA_COUNT_OUT[13]),
-        .I2(DATA_COUNT_OUT[15]),
-        .I3(DATA_COUNT_OUT[9]),
+       (.I0(DATA_COUNT_OUT[3]),
+        .I1(DATA_COUNT_OUT[27]),
+        .I2(DATA_COUNT_OUT[31]),
+        .I3(DATA_COUNT_OUT[24]),
         .O(\data_word_cnt[31]_i_14_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
     \data_word_cnt[31]_i_15 
-       (.I0(DATA_COUNT_OUT[11]),
-        .I1(DATA_COUNT_OUT[3]),
-        .I2(DATA_COUNT_OUT[1]),
-        .I3(DATA_COUNT_OUT[7]),
+       (.I0(DATA_COUNT_OUT[10]),
+        .I1(DATA_COUNT_OUT[16]),
+        .I2(DATA_COUNT_OUT[13]),
+        .I3(DATA_COUNT_OUT[11]),
         .O(\data_word_cnt[31]_i_15_n_0 ));
   LUT5 #(
-    .INIT(32'h40440000)) 
+    .INIT(32'hFFFB0000)) 
     \data_word_cnt[31]_i_2 
        (.I0(\data_word_cnt[31]_i_4_n_0 ),
         .I1(\data_word_cnt[31]_i_5_n_0 ),
@@ -6755,38 +6845,38 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I4(pattern_check_en),
         .O(data_word_cnt));
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+    .INIT(32'hFFFF7FFF)) 
     \data_word_cnt[31]_i_4 
-       (.I0(DATA_COUNT_OUT[30]),
-        .I1(DATA_COUNT_OUT[28]),
-        .I2(DATA_COUNT_OUT[21]),
-        .I3(DATA_COUNT_OUT[22]),
+       (.I0(DATA_COUNT_OUT[18]),
+        .I1(DATA_COUNT_OUT[26]),
+        .I2(DATA_COUNT_OUT[25]),
+        .I3(DATA_COUNT_OUT[28]),
         .I4(\data_word_cnt[31]_i_12_n_0 ),
         .O(\data_word_cnt[31]_i_4_n_0 ));
   LUT5 #(
-    .INIT(32'h00000001)) 
+    .INIT(32'h00008000)) 
     \data_word_cnt[31]_i_5 
-       (.I0(DATA_COUNT_OUT[23]),
-        .I1(DATA_COUNT_OUT[31]),
-        .I2(DATA_COUNT_OUT[24]),
-        .I3(DATA_COUNT_OUT[18]),
+       (.I0(DATA_COUNT_OUT[22]),
+        .I1(DATA_COUNT_OUT[12]),
+        .I2(DATA_COUNT_OUT[7]),
+        .I3(DATA_COUNT_OUT[1]),
         .I4(\data_word_cnt[31]_i_13_n_0 ),
         .O(\data_word_cnt[31]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'hFFFF7FFF)) 
     \data_word_cnt[31]_i_6 
-       (.I0(DATA_COUNT_OUT[4]),
-        .I1(DATA_COUNT_OUT[5]),
-        .I2(DATA_COUNT_OUT[12]),
-        .I3(DATA_COUNT_OUT[6]),
+       (.I0(DATA_COUNT_OUT[0]),
+        .I1(DATA_COUNT_OUT[6]),
+        .I2(DATA_COUNT_OUT[21]),
+        .I3(DATA_COUNT_OUT[15]),
         .I4(\data_word_cnt[31]_i_14_n_0 ),
         .O(\data_word_cnt[31]_i_6_n_0 ));
   LUT5 #(
-    .INIT(32'h00008000)) 
+    .INIT(32'hFFFF7FFF)) 
     \data_word_cnt[31]_i_7 
-       (.I0(DATA_COUNT_OUT[2]),
-        .I1(DATA_COUNT_OUT[10]),
-        .I2(DATA_COUNT_OUT[14]),
+       (.I0(DATA_COUNT_OUT[20]),
+        .I1(DATA_COUNT_OUT[14]),
+        .I2(DATA_COUNT_OUT[23]),
         .I3(DATA_COUNT_OUT[8]),
         .I4(\data_word_cnt[31]_i_15_n_0 ),
         .O(\data_word_cnt[31]_i_7_n_0 ));
@@ -7089,44 +7179,42 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .Q(DATA_COUNT_OUT[9]),
         .R(block_word_cnt0));
   LUT6 #(
-    .INIT(64'h454545FF45454500)) 
+    .INIT(64'hBEBEBEFFBEBEBE00)) 
     data_word_valid_i_1
-       (.I0(\block_error_reg[0]_i_2_n_0 ),
-        .I1(data_word_valid_i_2_n_0),
+       (.I0(\block_word_cnt[7]_i_3_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(data_word_valid_i_3_n_0),
-        .I4(data_word_valid_i_4_n_0),
+        .I3(data_word_valid_i_2_n_0),
+        .I4(data_word_valid_i_3_n_0),
         .I5(data_word_valid),
         .O(data_word_valid_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFEFFFFFFFF)) 
-    data_word_valid_i_2
-       (.I0(\block_word_cnt_reg_n_0_[5] ),
-        .I1(\block_word_cnt_reg_n_0_[7] ),
-        .I2(\block_word_cnt_reg_n_0_[6] ),
-        .I3(\block_word_cnt_reg_n_0_[3] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(\block_word_cnt_reg_n_0_[4] ),
-        .O(data_word_valid_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFCF0FF8)) 
-    data_word_valid_i_3
-       (.I0(\block_error_reg[1]_i_3_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .O(data_word_valid_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
-    .INIT(32'h01110010)) 
-    data_word_valid_i_4
+    .INIT(32'h00011101)) 
+    data_word_valid_i_2
        (.I0(\block_word_cnt_reg_n_0_[2] ),
         .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(rx_fifo_valid_i_2_n_0),
-        .I4(encoder_rst_i_2_n_0),
+        .I2(\block_error_reg[0]_i_4_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt[7]_i_4_n_0 ),
+        .O(data_word_valid_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF0FFAFF8)) 
+    data_word_valid_i_3
+       (.I0(\block_word_cnt_reg_n_0_[0] ),
+        .I1(\block_error_reg[0]_i_3_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(data_word_valid_i_4_n_0),
+        .O(data_word_valid_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    data_word_valid_i_4
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[5] ),
+        .I2(\block_word_cnt_reg_n_0_[7] ),
+        .I3(\block_word_cnt_reg_n_0_[6] ),
         .O(data_word_valid_i_4_n_0));
   FDRE data_word_valid_reg
        (.C(GT0_TXUSRCLK_OUT),
@@ -7135,65 +7223,38 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .Q(data_word_valid),
         .R(block_word_cnt0));
   LUT6 #(
-    .INIT(64'h5F7FFF7F50400040)) 
+    .INIT(64'hFFFFDD5F00001150)) 
     encoder_rst_i_1
        (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(encoder_rst_i_2_n_0),
-        .I2(\block_error_reg[0]_i_2_n_0 ),
-        .I3(encoder_rst_i_3_n_0),
-        .I4(\block_error_reg[1]_i_3_n_0 ),
+        .I1(\block_error_reg[0]_i_4_n_0 ),
+        .I2(\block_error_reg[0]_i_3_n_0 ),
+        .I3(encoder_rst_i_2_n_0),
+        .I4(\block_error_reg[0]_i_2_n_0 ),
         .I5(encoder_rst_reg_n_0),
         .O(encoder_rst_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    encoder_rst_i_2
-       (.I0(\block_error_reg[1]_i_5_n_0 ),
-        .I1(\block_error_reg[1]_i_6_n_0 ),
-        .I2(rx_data_r_track[14]),
-        .I3(rx_data_r_track[12]),
-        .I4(encoder_rst_i_4_n_0),
-        .I5(encoder_rst_i_5_n_0),
-        .O(encoder_rst_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
-    .INIT(8'hBA)) 
-    encoder_rst_i_3
+    .INIT(8'h45)) 
+    encoder_rst_i_2
        (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
-        .O(encoder_rst_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    encoder_rst_i_4
-       (.I0(rx_data_r_track[11]),
-        .I1(rx_data_r_track[10]),
-        .I2(rx_data_r_track[6]),
-        .I3(rx_data_r_track[8]),
-        .O(encoder_rst_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
-  LUT4 #(
-    .INIT(16'hFFF7)) 
-    encoder_rst_i_5
-       (.I0(rx_data_r_track[2]),
-        .I1(rx_data_r_track[3]),
-        .I2(rx_data_r_track[1]),
-        .I3(rx_data_r_track[0]),
-        .O(encoder_rst_i_5_n_0));
+        .O(encoder_rst_i_2_n_0));
   FDSE encoder_rst_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(encoder_rst_i_1_n_0),
         .Q(encoder_rst_reg_n_0),
         .S(block_word_cnt0));
-  LUT5 #(
-    .INIT(32'h00080000)) 
+  LUT6 #(
+    .INIT(64'h0000000000002000)) 
     \hor_correct_mask[15]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\rx_fifo_in_reg[15]_i_2_n_0 ),
         .O(\hor_correct_mask[15]_i_1_n_0 ));
   FDRE \hor_correct_mask_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -7201,7 +7262,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[0]),
         .Q(hor_correct_mask[0]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[0]_i_1 
@@ -7215,7 +7276,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[10]),
         .Q(hor_correct_mask[10]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[10]_i_1 
@@ -7229,7 +7290,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[11]),
         .Q(hor_correct_mask[11]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[11]_i_1 
@@ -7243,7 +7304,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[12]),
         .Q(hor_correct_mask[12]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[12]_i_1 
@@ -7257,7 +7318,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[13]),
         .Q(hor_correct_mask[13]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[13]_i_1 
@@ -7271,7 +7332,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[14]),
         .Q(hor_correct_mask[14]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[14]_i_1 
@@ -7291,7 +7352,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
        (.I0(correct_mask_valid),
         .I1(rx_fifo_out_reg_en),
         .O(\hor_correct_mask_reg[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \hor_correct_mask_reg[15]_i_2 
@@ -7304,7 +7365,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[1]),
         .Q(hor_correct_mask[1]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[1]_i_1 
@@ -7318,7 +7379,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[2]),
         .Q(hor_correct_mask[2]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[2]_i_1 
@@ -7332,7 +7393,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[3]),
         .Q(hor_correct_mask[3]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[3]_i_1 
@@ -7346,7 +7407,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[4]),
         .Q(hor_correct_mask[4]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[4]_i_1 
@@ -7360,7 +7421,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[5]),
         .Q(hor_correct_mask[5]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[5]_i_1 
@@ -7374,7 +7435,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[6]),
         .Q(hor_correct_mask[6]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[6]_i_1 
@@ -7388,7 +7449,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[7]),
         .Q(hor_correct_mask[7]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[7]_i_1 
@@ -7402,7 +7463,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[8]),
         .Q(hor_correct_mask[8]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[8]_i_1 
@@ -7416,7 +7477,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(hor_correct_mask0[9]),
         .Q(hor_correct_mask[9]),
         .R(block_word_cnt0));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \hor_correct_mask_reg[9]_i_1 
@@ -7572,25 +7633,25 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
     .INIT(2'h1)) 
     \link_ctr[0]_i_1 
        (.I0(link_ctr_reg__0[0]),
-        .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+        .O(link_ctr0));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT4 #(
     .INIT(16'h8BB8)) 
     \link_ctr[1]_i_1 
        (.I0(data[1]),
         .I1(gt0_track_data_i),
-        .I2(link_ctr_reg__0[0]),
-        .I3(link_ctr_reg__0[1]),
+        .I2(link_ctr_reg__0[1]),
+        .I3(link_ctr_reg__0[0]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'h8BB8B8B8)) 
     \link_ctr[2]_i_1 
        (.I0(data[2]),
         .I1(gt0_track_data_i),
         .I2(link_ctr_reg__0[2]),
-        .I3(link_ctr_reg__0[0]),
-        .I4(link_ctr_reg__0[1]),
+        .I3(link_ctr_reg__0[1]),
+        .I4(link_ctr_reg__0[0]),
         .O(p_0_in[2]));
   LUT6 #(
     .INIT(64'h8BB8B8B8B8B8B8B8)) 
@@ -7599,8 +7660,8 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(gt0_track_data_i),
         .I2(link_ctr_reg__0[3]),
         .I3(link_ctr_reg__0[2]),
-        .I4(link_ctr_reg__0[0]),
-        .I5(link_ctr_reg__0[1]),
+        .I4(link_ctr_reg__0[1]),
+        .I5(link_ctr_reg__0[0]),
         .O(p_0_in[3]));
   LUT5 #(
     .INIT(32'hB8B88BB8)) 
@@ -7612,21 +7673,21 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I4(\link_ctr[5]_i_2_n_0 ),
         .O(p_0_in[4]));
   LUT6 #(
-    .INIT(64'hB88BB8B8B8B8B8B8)) 
+    .INIT(64'hB8B88BB8B8B8B8B8)) 
     \link_ctr[5]_i_1 
        (.I0(data[5]),
         .I1(gt0_track_data_i),
         .I2(link_ctr_reg__0[5]),
-        .I3(\link_ctr[5]_i_2_n_0 ),
-        .I4(link_ctr_reg__0[3]),
-        .I5(link_ctr_reg__0[4]),
+        .I3(link_ctr_reg__0[4]),
+        .I4(\link_ctr[5]_i_2_n_0 ),
+        .I5(link_ctr_reg__0[3]),
         .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \link_ctr[5]_i_2 
-       (.I0(link_ctr_reg__0[1]),
-        .I1(link_ctr_reg__0[0]),
+       (.I0(link_ctr_reg__0[0]),
+        .I1(link_ctr_reg__0[1]),
         .I2(link_ctr_reg__0[2]),
         .O(\link_ctr[5]_i_2_n_0 ));
   LUT6 #(
@@ -7635,43 +7696,43 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
        (.I0(track_data_r),
         .I1(\link_ctr[6]_i_3_n_0 ),
         .I2(link_ctr_reg__0[4]),
-        .I3(link_ctr_reg__0[3]),
-        .I4(link_ctr_reg__0[5]),
+        .I3(link_ctr_reg__0[5]),
+        .I4(link_ctr_reg__0[3]),
         .I5(link_ctr_reg__0[6]),
         .O(link_ctr));
   LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
+    .INIT(32'hB88BB8B8)) 
     \link_ctr[6]_i_2 
        (.I0(data[6]),
         .I1(gt0_track_data_i),
         .I2(link_ctr_reg__0[6]),
-        .I3(link_ctr_reg__0[5]),
-        .I4(\link_ctr[6]_i_4_n_0 ),
+        .I3(\link_ctr[6]_i_4_n_0 ),
+        .I4(link_ctr_reg__0[5]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'h07)) 
     \link_ctr[6]_i_3 
-       (.I0(link_ctr_reg__0[1]),
-        .I1(link_ctr_reg__0[0]),
+       (.I0(link_ctr_reg__0[0]),
+        .I1(link_ctr_reg__0[1]),
         .I2(link_ctr_reg__0[2]),
         .O(\link_ctr[6]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT5 #(
-    .INIT(32'h80000000)) 
+    .INIT(32'h7FFFFFFF)) 
     \link_ctr[6]_i_4 
-       (.I0(link_ctr_reg__0[4]),
-        .I1(link_ctr_reg__0[3]),
+       (.I0(link_ctr_reg__0[3]),
+        .I1(link_ctr_reg__0[0]),
         .I2(link_ctr_reg__0[1]),
-        .I3(link_ctr_reg__0[0]),
-        .I4(link_ctr_reg__0[2]),
+        .I3(link_ctr_reg__0[2]),
+        .I4(link_ctr_reg__0[4]),
         .O(\link_ctr[6]_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \link_ctr_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(link_ctr),
-        .D(p_0_in[0]),
+        .D(link_ctr0),
         .Q(link_ctr_reg__0[0]),
         .R(1'b0));
   FDRE #(
@@ -7722,7 +7783,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(p_0_in[6]),
         .Q(link_ctr_reg__0[6]),
         .R(1'b0));
-  gtx3g_bert_0_parity_encoder_45 parity_encoder_inst_2
+  gtx3g_bert_0_parity_encoder_46 parity_encoder_inst_2
        (.D(hor_correct_mask0),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(rx_fifo_in_reg),
@@ -7730,42 +7791,25 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .data_word_valid(data_word_valid),
         .rx_data_r_track(rx_data_r_track),
         .\ver_correct_mask_reg[15] (ver_correct_mask0));
-  LUT6 #(
-    .INIT(64'hAAABBBABAAA888A8)) 
-    pattern_check_en_i_1
-       (.I0(pattern_check_en_i_2_n_0),
-        .I1(pattern_check_en_i_3_n_0),
-        .I2(pattern_check_en_i_4_n_0),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(pattern_check_en),
-        .O(pattern_check_en_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
-    .INIT(32'hA8AAAAAA)) 
-    pattern_check_en_i_2
+    .INIT(32'h8AFF8A00)) 
+    pattern_check_en_i_1
        (.I0(rx_fifo_valid),
-        .I1(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(pattern_check_en_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT4 #(
-    .INIT(16'hEBFE)) 
-    pattern_check_en_i_3
-       (.I0(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I1(rx_fifo_valid_i_2__0_n_0),
         .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .O(pattern_check_en_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    pattern_check_en_i_4
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(rx_fifo_valid_i_2_n_0),
-        .O(pattern_check_en_i_4_n_0));
+        .I3(pattern_check_en_i_2_n_0),
+        .I4(pattern_check_en),
+        .O(pattern_check_en_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFDFDDEDEDEFE)) 
+    pattern_check_en_i_2
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(data_word_valid_i_4_n_0),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt[7]_i_4_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt_reg_n_0_[2] ),
+        .O(pattern_check_en_i_2_n_0));
   FDRE pattern_check_en_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -8214,7 +8258,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(pattern_error_reg_i_1_n_0),
         .Q(PATTERN_ERROR_OUT),
         .R(block_word_cnt0));
-  gtx3g_bert_0_pattern_gen_46 pattern_gen_inst_2
+  gtx3g_bert_0_pattern_gen_47 pattern_gen_inst_2
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .PATTERN_MODE(PATTERN_MODE),
         .Q(rx_fifo_out_correct),
@@ -8223,35 +8267,25 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .pattern_pause_reg_reg(pattern_pause_reg_reg_n_0),
         .rx_fifo_rst(rx_fifo_rst));
   LUT6 #(
-    .INIT(64'hFFFFFFDF000000DF)) 
+    .INIT(64'hFFFFDFFF0000DF00)) 
     pattern_pause_reg_i_1
        (.I0(\block_word_cnt_reg_n_0_[0] ),
         .I1(\block_word_cnt_reg_n_0_[4] ),
         .I2(rx_fifo_valid),
         .I3(pattern_pause_reg_i_2_n_0),
-        .I4(pattern_pause_reg_i_3_n_0),
+        .I4(\block_word_cnt[7]_i_3_n_0 ),
         .I5(pattern_pause_reg_reg_n_0),
         .O(pattern_pause_reg_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    pattern_pause_reg_i_2
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[6] ),
-        .I3(\block_word_cnt_reg_n_0_[7] ),
-        .I4(\block_word_cnt_reg_n_0_[5] ),
-        .O(pattern_pause_reg_i_2_n_0));
   LUT6 #(
-    .INIT(64'hF0F5F0F5CFF0CFFF)) 
-    pattern_pause_reg_i_3
-       (.I0(\block_error_reg[1]_i_3_n_0 ),
-        .I1(rx_fifo_valid_i_2_n_0),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(encoder_rst_i_2_n_0),
-        .I5(\block_word_cnt_reg_n_0_[0] ),
-        .O(pattern_pause_reg_i_3_n_0));
+    .INIT(64'h05F000F305F00003)) 
+    pattern_pause_reg_i_2
+       (.I0(\block_word_cnt[7]_i_4_n_0 ),
+        .I1(\block_error_reg[0]_i_4_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .I5(\block_error_reg[0]_i_3_n_0 ),
+        .O(pattern_pause_reg_i_2_n_0));
   FDSE pattern_pause_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -8354,7 +8388,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(rx_data_r[9]),
         .Q(rx_data_r2[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[0]_i_1 
@@ -8362,7 +8396,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[0]),
         .O(p_0_in1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[1]_i_1 
@@ -8370,7 +8404,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[1]),
         .O(p_0_in1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[2]_i_1 
@@ -8378,7 +8412,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[2]),
         .O(p_0_in1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[3]_i_1 
@@ -8386,7 +8420,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[3]),
         .O(p_0_in1_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[4]_i_1 
@@ -8394,7 +8428,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[4]),
         .O(p_0_in1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[5]_i_1 
@@ -8402,7 +8436,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[5]),
         .O(p_0_in1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[6]_i_1 
@@ -8410,7 +8444,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I1(\sel_reg_n_0_[0] ),
         .I2(rx_data_r2[6]),
         .O(p_0_in1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r3[7]_i_1 
@@ -8500,7 +8534,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[10]),
         .Q(\rx_data_r5_reg[10]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[10]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8519,7 +8553,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[11]),
         .Q(\rx_data_r5_reg[11]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[11]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8538,7 +8572,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[12]),
         .Q(\rx_data_r5_reg[12]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[12]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8557,7 +8591,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[13]),
         .Q(\rx_data_r5_reg[13]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[13]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8576,7 +8610,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[14]),
         .Q(\rx_data_r5_reg[14]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[14]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8595,7 +8629,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[15]),
         .Q(\rx_data_r5_reg[15]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[15]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8691,7 +8725,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[8]),
         .Q(\rx_data_r5_reg[8]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[8]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8710,7 +8744,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .CLK(GT0_TXUSRCLK_OUT),
         .D(p_0_in1_in[9]),
         .Q(\rx_data_r5_reg[9]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \rx_data_r5_reg[9]_srl3___gt0_frame_check_rx_data_r5_reg_r_i_1 
@@ -8820,112 +8854,112 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(\rx_data_r5_reg[9]_srl3___gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .Q(\rx_data_r6_reg[9]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate
        (.I0(\rx_data_r6_reg[15]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__0
        (.I0(\rx_data_r6_reg[14]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__1
        (.I0(\rx_data_r6_reg[13]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__10
        (.I0(\rx_data_r6_reg[4]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__10_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__11
        (.I0(\rx_data_r6_reg[3]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__11_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__12
        (.I0(\rx_data_r6_reg[2]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__12_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__13
        (.I0(\rx_data_r6_reg[1]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__13_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__14
        (.I0(\rx_data_r6_reg[0]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__14_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__2
        (.I0(\rx_data_r6_reg[12]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__3
        (.I0(\rx_data_r6_reg[11]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__4
        (.I0(\rx_data_r6_reg[10]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__5
        (.I0(\rx_data_r6_reg[9]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__6
        (.I0(\rx_data_r6_reg[8]_gt0_frame_check_rx_data_r6_reg_r_n_0 ),
         .I1(rx_data_r6_reg_r_n_0),
         .O(rx_data_r6_reg_gate__6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__7
        (.I0(\rx_data_r6_reg[7]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__8
        (.I0(\rx_data_r6_reg[6]_gt0_frame_check_rx_data_r5_reg_r_n_0 ),
         .I1(rx_data_r5_reg_r_n_0),
         .O(rx_data_r6_reg_gate__8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h8)) 
     rx_data_r6_reg_gate__9
@@ -9130,23 +9164,23 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(rx_data_r6_reg_gate__5_n_0),
         .Q(rx_data_r_track[9]),
         .R(system_reset_r2));
-  LUT5 #(
-    .INIT(32'hFFFFAFDA)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFBFFFFFF3C)) 
     \rx_fifo_in_reg[15]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\rx_fifo_in_reg[15]_i_2_n_0 ),
+       (.I0(\block_word_cnt_reg_n_0_[0] ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\rx_fifo_in_reg[15]_i_2_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\block_word_cnt_reg_n_0_[2] ),
         .O(\rx_fifo_in_reg[15]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \rx_fifo_in_reg[15]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[5] ),
+       (.I0(\block_word_cnt_reg_n_0_[6] ),
         .I1(\block_word_cnt_reg_n_0_[7] ),
-        .I2(\block_word_cnt_reg_n_0_[6] ),
-        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[5] ),
         .O(\rx_fifo_in_reg[15]_i_2_n_0 ));
   FDRE \rx_fifo_in_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -9248,128 +9282,128 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[0]_i_1 
        (.I0(rx_fifo_out[0]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[0]),
         .O(\rx_fifo_out_correct[0]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[10]_i_1 
        (.I0(rx_fifo_out[10]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[10]),
         .O(\rx_fifo_out_correct[10]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[11]_i_1 
        (.I0(rx_fifo_out[11]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[11]),
         .O(\rx_fifo_out_correct[11]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[12]_i_1 
        (.I0(rx_fifo_out[12]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[12]),
         .O(\rx_fifo_out_correct[12]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[13]_i_1 
        (.I0(rx_fifo_out[13]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[13]),
         .O(\rx_fifo_out_correct[13]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[14]_i_1 
        (.I0(rx_fifo_out[14]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[14]),
         .O(\rx_fifo_out_correct[14]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[15]_i_1 
        (.I0(rx_fifo_out[15]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[15]),
         .O(\rx_fifo_out_correct[15]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[1]_i_1 
        (.I0(rx_fifo_out[1]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[1]),
         .O(\rx_fifo_out_correct[1]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[2]_i_1 
        (.I0(rx_fifo_out[2]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[2]),
         .O(\rx_fifo_out_correct[2]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[3]_i_1 
        (.I0(rx_fifo_out[3]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[3]),
         .O(\rx_fifo_out_correct[3]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[4]_i_1 
        (.I0(rx_fifo_out[4]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[4]),
         .O(\rx_fifo_out_correct[4]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[5]_i_1 
        (.I0(rx_fifo_out[5]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[5]),
         .O(\rx_fifo_out_correct[5]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[6]_i_1 
        (.I0(rx_fifo_out[6]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[6]),
         .O(\rx_fifo_out_correct[6]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[7]_i_1 
        (.I0(rx_fifo_out[7]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[7]),
         .O(\rx_fifo_out_correct[7]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[8]_i_1 
        (.I0(rx_fifo_out[8]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[8]),
         .O(\rx_fifo_out_correct[8]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h6AAA)) 
     \rx_fifo_out_correct[9]_i_1 
        (.I0(rx_fifo_out[9]),
-        .I1(ECC_CODE_EN),
-        .I2(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I1(\hor_correct_mask_reg_reg_n_0_[0] ),
+        .I2(ECC_CODE_EN),
         .I3(ver_correct_mask_reg__0[9]),
         .O(\rx_fifo_out_correct[9]_i_1_n_0 ));
   FDRE \rx_fifo_out_correct_reg[0] 
@@ -9468,15 +9502,13 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(\rx_fifo_out_correct[9]_i_1_n_0 ),
         .Q(rx_fifo_out_correct[9]),
         .R(block_word_cnt0));
-  LUT6 #(
-    .INIT(64'hFDFFFFFFFDFF0000)) 
+  LUT4 #(
+    .INIT(16'hBFB0)) 
     rx_fifo_out_reg_en_i_1
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(data_word_valid_i_3_n_0),
-        .I5(rx_fifo_out_reg_en),
+       (.I0(rx_fifo_valid_i_2__0_n_0),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(data_word_valid_i_3_n_0),
+        .I3(rx_fifo_out_reg_en),
         .O(rx_fifo_out_reg_en_i_1_n_0));
   FDRE rx_fifo_out_reg_en_reg
        (.C(GT0_TXUSRCLK_OUT),
@@ -9488,9 +9520,9 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
     .INIT(32'h888F8880)) 
     rx_fifo_rd_en_i_1__0
        (.I0(rx_fifo_valid),
-        .I1(data_word_valid_i_2_n_0),
-        .I2(data_word_valid_i_3_n_0),
-        .I3(data_word_valid_i_4_n_0),
+        .I1(rx_fifo_valid_i_2__0_n_0),
+        .I2(data_word_valid_i_2_n_0),
+        .I3(data_word_valid_i_3_n_0),
         .I4(rx_fifo_rd_en_reg_n_0),
         .O(rx_fifo_rd_en_i_1__0_n_0));
   FDRE rx_fifo_rd_en_reg
@@ -9505,69 +9537,40 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(block_word_cnt0),
         .Q(rx_fifo_rst),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00001000)) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT5 #(
+    .INIT(32'hFFFF0004)) 
     rx_fifo_valid_i_1
-       (.I0(rx_fifo_valid_i_2_n_0),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(pattern_pause_reg_i_2_n_0),
-        .I5(rx_fifo_valid),
+       (.I0(rx_fifo_valid_i_2__0_n_0),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt[7]_i_4_n_0 ),
+        .I4(rx_fifo_valid),
         .O(rx_fifo_valid_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFB)) 
-    rx_fifo_valid_i_2
-       (.I0(\block_error_reg[1]_i_6_n_0 ),
-        .I1(rx_data_r_track[4]),
-        .I2(rx_data_r_track[6]),
-        .I3(rx_fifo_valid_i_3_n_0),
-        .I4(rx_fifo_valid_i_4_n_0),
-        .I5(encoder_rst_i_5_n_0),
-        .O(rx_fifo_valid_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    rx_fifo_valid_i_3
-       (.I0(rx_data_r_track[10]),
-        .I1(rx_data_r_track[12]),
-        .I2(rx_data_r_track[11]),
-        .I3(rx_data_r_track[8]),
-        .O(rx_fifo_valid_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    rx_fifo_valid_i_4
-       (.I0(rx_data_r_track[5]),
-        .I1(rx_data_r_track[7]),
-        .I2(rx_data_r_track[14]),
-        .I3(rx_data_r_track[9]),
-        .O(rx_fifo_valid_i_4_n_0));
+    .INIT(64'hFFFFFFFEFFFFFFFF)) 
+    rx_fifo_valid_i_2__0
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
+        .I3(\block_word_cnt_reg_n_0_[7] ),
+        .I4(\block_word_cnt_reg_n_0_[5] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(rx_fifo_valid_i_2__0_n_0));
   FDRE rx_fifo_valid_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(rx_fifo_valid_i_1_n_0),
         .Q(rx_fifo_valid),
         .R(block_word_cnt0));
-  LUT6 #(
-    .INIT(64'h5557775755544454)) 
-    rx_fifo_wr_en_i_1__0
-       (.I0(rx_fifo_wr_en_i_2_n_0),
-        .I1(pattern_check_en_i_3_n_0),
-        .I2(pattern_check_en_i_4_n_0),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(rx_fifo_wr_en),
-        .O(rx_fifo_wr_en_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
-    .INIT(16'h0008)) 
-    rx_fifo_wr_en_i_2
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\rx_fifo_in_reg[15]_i_2_n_0 ),
-        .O(rx_fifo_wr_en_i_2_n_0));
+    .INIT(16'hBFB0)) 
+    rx_fifo_wr_en_i_1__0
+       (.I0(rx_fifo_valid_i_2__0_n_0),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(pattern_check_en_i_2_n_0),
+        .I3(rx_fifo_wr_en),
+        .O(rx_fifo_wr_en_i_1__0_n_0));
   FDRE rx_fifo_wr_en_reg
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -9633,41 +9636,40 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .I5(system_reset_r2),
         .O(\sel[0]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h4000)) 
+    .INIT(16'h0040)) 
     \sel[0]_i_2 
-       (.I0(rx_data_r[14]),
-        .I1(begin_r),
-        .I2(rx_data_r[13]),
-        .I3(rx_data_r[11]),
+       (.I0(rx_data_r[9]),
+        .I1(rx_data_r[13]),
+        .I2(rx_data_r[12]),
+        .I3(rx_data_r[8]),
         .O(\sel[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFDFFFFFFFFFFF)) 
+    .INIT(64'hDFFFFFFFFFFFFFFF)) 
     \sel[0]_i_3 
        (.I0(rx_data_r[10]),
-        .I1(rx_data_r[9]),
-        .I2(rx_data_r[15]),
-        .I3(rx_data_r[12]),
-        .I4(rx_data_r[8]),
-        .I5(p_1_in5_in),
+        .I1(rx_data_r[14]),
+        .I2(begin_r),
+        .I3(rx_data_r[15]),
+        .I4(p_1_in5_in),
+        .I5(rx_data_r[11]),
         .O(\sel[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT4 #(
-    .INIT(16'h8000)) 
+    .INIT(16'h0080)) 
     \sel[0]_i_4 
        (.I0(rx_data_r[7]),
-        .I1(\rxctrl_r_reg_n_0_[0] ),
+        .I1(rx_data_r[2]),
         .I2(rx_data_r[5]),
-        .I3(begin_r),
+        .I3(rx_data_r[6]),
         .O(\sel[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFDFFFFFFFFFF)) 
+    .INIT(64'hFFFFF7FFFFFFFFFF)) 
     \sel[0]_i_5 
-       (.I0(rx_data_r[4]),
-        .I1(rx_data_r[0]),
-        .I2(rx_data_r[1]),
-        .I3(rx_data_r[2]),
-        .I4(rx_data_r[6]),
-        .I5(rx_data_r[3]),
+       (.I0(rx_data_r[3]),
+        .I1(begin_r),
+        .I2(rx_data_r[0]),
+        .I3(\rxctrl_r_reg_n_0_[0] ),
+        .I4(rx_data_r[1]),
+        .I5(rx_data_r[4]),
         .O(\sel[0]_i_5_n_0 ));
   FDRE \sel_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -9686,8 +9688,8 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
     .INIT(32'hAAA8AAAA)) 
     sm_link_i_2
        (.I0(link_ctr_reg__0[6]),
-        .I1(link_ctr_reg__0[5]),
-        .I2(link_ctr_reg__0[3]),
+        .I1(link_ctr_reg__0[3]),
+        .I2(link_ctr_reg__0[5]),
         .I3(link_ctr_reg__0[4]),
         .I4(\link_ctr[6]_i_3_n_0 ),
         .O(sm_link_i_2_n_0));
@@ -9739,7 +9741,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .Q(system_reset_r),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFBFBB0000)) 
+    .INIT(64'hFFFFFFFF00040000)) 
     test_over_reg_i_1
        (.I0(\data_word_cnt[31]_i_4_n_0 ),
         .I1(\data_word_cnt[31]_i_5_n_0 ),
@@ -9767,14 +9769,15 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .D(next_track_data_c),
         .Q(track_data_r),
         .R(system_reset_r2));
-  LUT5 #(
-    .INIT(32'h00000400)) 
+  LUT6 #(
+    .INIT(64'h0000000000000040)) 
     \ver_correct_mask[15]_i_1 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\rx_fifo_in_reg[15]_i_2_n_0 ),
+       (.I0(\rx_fifo_in_reg[15]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\block_word_cnt_reg_n_0_[1] ),
         .O(\ver_correct_mask[15]_i_1_n_0 ));
   FDRE \ver_correct_mask_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -9970,6 +9973,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_CHECK__xdcDup__1
         .R(block_word_cnt0));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_GT_FRAME_GEN" *) 
 module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
    (gt0_txcharisk_in,
     Q,
@@ -9977,6 +9981,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
     TEST_RESET,
     ECC_CODE_EN,
     PATTERN_MODE,
+    ERROR_INSERT_MASK,
     out);
   output [0:0]gt0_txcharisk_in;
   output [15:0]Q;
@@ -9984,9 +9989,11 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   input TEST_RESET;
   input ECC_CODE_EN;
   input [2:0]PATTERN_MODE;
+  input [30:0]ERROR_INSERT_MASK;
   input out;
 
   wire ECC_CODE_EN;
+  wire [30:0]ERROR_INSERT_MASK;
   wire GT0_TXUSRCLK_OUT;
   wire [2:0]PATTERN_MODE;
   wire [15:0]Q;
@@ -10007,24 +10014,23 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   wire \bit_pointer[7]_i_1_n_0 ;
   wire \bit_pointer[8]_i_1_n_0 ;
   wire \bit_pointer[9]_i_1_n_0 ;
-  wire \block_word_cnt[0]_i_1__1_n_0 ;
+  wire \block_word_cnt[0]_i_1__0_n_0 ;
+  wire \block_word_cnt[0]_i_2__1_n_0 ;
+  wire \block_word_cnt[0]_i_3__1_n_0 ;
   wire \block_word_cnt[1]_i_1__1_n_0 ;
   wire \block_word_cnt[1]_i_2__1_n_0 ;
-  wire \block_word_cnt[1]_i_3__0_n_0 ;
-  wire \block_word_cnt[1]_i_4__1_n_0 ;
-  wire \block_word_cnt[1]_i_5_n_0 ;
-  wire \block_word_cnt[1]_i_6__0_n_0 ;
-  wire \block_word_cnt[1]_i_7__0_n_0 ;
+  wire \block_word_cnt[1]_i_3__1_n_0 ;
+  wire \block_word_cnt[1]_i_4__0_n_0 ;
+  wire \block_word_cnt[1]_i_5__0_n_0 ;
   wire \block_word_cnt[2]_i_1__1_n_0 ;
   wire \block_word_cnt[2]_i_2_n_0 ;
   wire \block_word_cnt[2]_i_3_n_0 ;
   wire \block_word_cnt[3]_i_1__1_n_0 ;
-  wire \block_word_cnt[4]_i_2_n_0 ;
+  wire \block_word_cnt[4]_i_2__0_n_0 ;
   wire \block_word_cnt[4]_i_3__1_n_0 ;
   wire \block_word_cnt[4]_i_4__0_n_0 ;
   wire \block_word_cnt[5]_i_1__0_n_0 ;
   wire \block_word_cnt[6]_i_1__1_n_0 ;
-  wire \block_word_cnt[6]_i_2_n_0 ;
   wire \block_word_cnt[7]_i_2__0_n_0 ;
   wire \block_word_cnt[7]_i_3__0_n_0 ;
   wire \block_word_cnt_reg[4]_i_1__0_n_0 ;
@@ -10080,11 +10086,12 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   wire parity_encoder_inst_1_n_9;
   wire pattern_gen_inst_1_n_0;
   wire pattern_gen_inst_1_n_1;
-  wire pattern_gen_inst_1_n_17;
-  wire pattern_gen_inst_1_n_18;
-  wire pattern_gen_inst_1_n_19;
+  wire pattern_gen_inst_1_n_10;
+  wire pattern_gen_inst_1_n_11;
+  wire pattern_gen_inst_1_n_12;
+  wire pattern_gen_inst_1_n_13;
   wire pattern_gen_inst_1_n_2;
-  wire pattern_gen_inst_1_n_20;
+  wire pattern_gen_inst_1_n_21;
   wire pattern_gen_inst_1_n_3;
   wire pattern_gen_inst_1_n_4;
   wire pattern_gen_inst_1_n_5;
@@ -10096,7 +10103,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   wire pattern_pause_reg_i_1__0_n_0;
   wire pattern_pause_reg_i_2__0_n_0;
   wire pattern_rst_reg;
-  wire [15:5]pattern_word;
+  wire [11:0]pattern_word;
   wire sel;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire system_reset_r;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire system_reset_r2;
@@ -10105,8 +10112,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   wire \test_init_cnt[0]_i_5_n_0 ;
   wire \test_init_cnt[0]_i_6_n_0 ;
   wire \test_init_cnt[0]_i_7_n_0 ;
-  wire \test_init_cnt[0]_i_8__0_n_0 ;
-  wire \test_init_cnt[0]_i_9_n_0 ;
+  wire \test_init_cnt[0]_i_8_n_0 ;
   wire \test_init_cnt[12]_i_2_n_0 ;
   wire \test_init_cnt[12]_i_3_n_0 ;
   wire \test_init_cnt[12]_i_4_n_0 ;
@@ -10152,126 +10158,25 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   wire \test_init_cnt_reg[8]_i_1_n_6 ;
   wire \test_init_cnt_reg[8]_i_1_n_7 ;
   wire [15:0]tx_data_reg;
-  wire \tx_data_reg[0]_i_4_n_0 ;
-  wire \tx_data_reg[11]_i_2__0_n_0 ;
-  wire \tx_data_reg[11]_i_4_n_0 ;
-  wire \tx_data_reg[11]_i_5_n_0 ;
-  wire \tx_data_reg[14]_i_2_n_0 ;
-  wire \tx_data_reg[14]_i_3_n_0 ;
+  wire \tx_data_reg[12]_i_3_n_0 ;
   wire \tx_data_reg[15]_i_2_n_0 ;
   wire \tx_data_reg[15]_i_3_n_0 ;
   wire \tx_data_reg[15]_i_5_n_0 ;
   wire \tx_data_reg[1]_i_2__0_n_0 ;
-  wire \tx_data_reg[1]_i_3_n_0 ;
+  wire \tx_data_reg[1]_i_5_n_0 ;
   wire \tx_data_reg[2]_i_4_n_0 ;
-  wire \tx_data_reg[3]_i_2_n_0 ;
   wire \tx_data_reg[3]_i_3_n_0 ;
+  wire \tx_data_reg[3]_i_4__0_n_0 ;
   wire \tx_data_reg[3]_i_5_n_0 ;
-  wire \tx_data_reg[4]_i_3_n_0 ;
-  wire \tx_data_reg[9]_i_2_n_0 ;
+  wire \tx_data_reg[4]_i_2_n_0 ;
+  wire \tx_data_reg[8]_i_4_n_0 ;
+  wire \tx_data_reg[8]_i_5_n_0 ;
   wire \tx_data_reg[9]_i_3_n_0 ;
-  wire \tx_data_reg[9]_i_5_n_0 ;
+  wire \tx_data_reg[9]_i_5__0_n_0 ;
+  wire \tx_data_reg[9]_i_6_n_0 ;
   wire txctrl_reg0;
-  wire \txctrl_reg[0]_i_2_n_0 ;
   wire \txctrl_reg_reg_n_0_[0] ;
-  wire \word_cnt[0]_i_2_n_0 ;
-  wire \word_cnt[0]_i_3_n_0 ;
-  wire \word_cnt[0]_i_4_n_0 ;
-  wire \word_cnt[0]_i_5_n_0 ;
-  wire \word_cnt[12]_i_2_n_0 ;
-  wire \word_cnt[12]_i_3_n_0 ;
-  wire \word_cnt[12]_i_4_n_0 ;
-  wire \word_cnt[12]_i_5_n_0 ;
-  wire \word_cnt[16]_i_2_n_0 ;
-  wire \word_cnt[16]_i_3_n_0 ;
-  wire \word_cnt[16]_i_4_n_0 ;
-  wire \word_cnt[16]_i_5_n_0 ;
-  wire \word_cnt[20]_i_2_n_0 ;
-  wire \word_cnt[20]_i_3_n_0 ;
-  wire \word_cnt[20]_i_4_n_0 ;
-  wire \word_cnt[20]_i_5_n_0 ;
-  wire \word_cnt[24]_i_2_n_0 ;
-  wire \word_cnt[24]_i_3_n_0 ;
-  wire \word_cnt[24]_i_4_n_0 ;
-  wire \word_cnt[24]_i_5_n_0 ;
-  wire \word_cnt[28]_i_2_n_0 ;
-  wire \word_cnt[28]_i_3_n_0 ;
-  wire \word_cnt[28]_i_4_n_0 ;
-  wire \word_cnt[28]_i_5_n_0 ;
-  wire \word_cnt[4]_i_2_n_0 ;
-  wire \word_cnt[4]_i_3_n_0 ;
-  wire \word_cnt[4]_i_4_n_0 ;
-  wire \word_cnt[4]_i_5_n_0 ;
-  wire \word_cnt[8]_i_2_n_0 ;
-  wire \word_cnt[8]_i_3_n_0 ;
-  wire \word_cnt[8]_i_4_n_0 ;
-  wire \word_cnt[8]_i_5_n_0 ;
-  wire [31:0]word_cnt_reg;
-  wire \word_cnt_reg[0]_i_1_n_0 ;
-  wire \word_cnt_reg[0]_i_1_n_1 ;
-  wire \word_cnt_reg[0]_i_1_n_2 ;
-  wire \word_cnt_reg[0]_i_1_n_3 ;
-  wire \word_cnt_reg[0]_i_1_n_4 ;
-  wire \word_cnt_reg[0]_i_1_n_5 ;
-  wire \word_cnt_reg[0]_i_1_n_6 ;
-  wire \word_cnt_reg[0]_i_1_n_7 ;
-  wire \word_cnt_reg[12]_i_1_n_0 ;
-  wire \word_cnt_reg[12]_i_1_n_1 ;
-  wire \word_cnt_reg[12]_i_1_n_2 ;
-  wire \word_cnt_reg[12]_i_1_n_3 ;
-  wire \word_cnt_reg[12]_i_1_n_4 ;
-  wire \word_cnt_reg[12]_i_1_n_5 ;
-  wire \word_cnt_reg[12]_i_1_n_6 ;
-  wire \word_cnt_reg[12]_i_1_n_7 ;
-  wire \word_cnt_reg[16]_i_1_n_0 ;
-  wire \word_cnt_reg[16]_i_1_n_1 ;
-  wire \word_cnt_reg[16]_i_1_n_2 ;
-  wire \word_cnt_reg[16]_i_1_n_3 ;
-  wire \word_cnt_reg[16]_i_1_n_4 ;
-  wire \word_cnt_reg[16]_i_1_n_5 ;
-  wire \word_cnt_reg[16]_i_1_n_6 ;
-  wire \word_cnt_reg[16]_i_1_n_7 ;
-  wire \word_cnt_reg[20]_i_1_n_0 ;
-  wire \word_cnt_reg[20]_i_1_n_1 ;
-  wire \word_cnt_reg[20]_i_1_n_2 ;
-  wire \word_cnt_reg[20]_i_1_n_3 ;
-  wire \word_cnt_reg[20]_i_1_n_4 ;
-  wire \word_cnt_reg[20]_i_1_n_5 ;
-  wire \word_cnt_reg[20]_i_1_n_6 ;
-  wire \word_cnt_reg[20]_i_1_n_7 ;
-  wire \word_cnt_reg[24]_i_1_n_0 ;
-  wire \word_cnt_reg[24]_i_1_n_1 ;
-  wire \word_cnt_reg[24]_i_1_n_2 ;
-  wire \word_cnt_reg[24]_i_1_n_3 ;
-  wire \word_cnt_reg[24]_i_1_n_4 ;
-  wire \word_cnt_reg[24]_i_1_n_5 ;
-  wire \word_cnt_reg[24]_i_1_n_6 ;
-  wire \word_cnt_reg[24]_i_1_n_7 ;
-  wire \word_cnt_reg[28]_i_1_n_1 ;
-  wire \word_cnt_reg[28]_i_1_n_2 ;
-  wire \word_cnt_reg[28]_i_1_n_3 ;
-  wire \word_cnt_reg[28]_i_1_n_4 ;
-  wire \word_cnt_reg[28]_i_1_n_5 ;
-  wire \word_cnt_reg[28]_i_1_n_6 ;
-  wire \word_cnt_reg[28]_i_1_n_7 ;
-  wire \word_cnt_reg[4]_i_1_n_0 ;
-  wire \word_cnt_reg[4]_i_1_n_1 ;
-  wire \word_cnt_reg[4]_i_1_n_2 ;
-  wire \word_cnt_reg[4]_i_1_n_3 ;
-  wire \word_cnt_reg[4]_i_1_n_4 ;
-  wire \word_cnt_reg[4]_i_1_n_5 ;
-  wire \word_cnt_reg[4]_i_1_n_6 ;
-  wire \word_cnt_reg[4]_i_1_n_7 ;
-  wire \word_cnt_reg[8]_i_1_n_0 ;
-  wire \word_cnt_reg[8]_i_1_n_1 ;
-  wire \word_cnt_reg[8]_i_1_n_2 ;
-  wire \word_cnt_reg[8]_i_1_n_3 ;
-  wire \word_cnt_reg[8]_i_1_n_4 ;
-  wire \word_cnt_reg[8]_i_1_n_5 ;
-  wire \word_cnt_reg[8]_i_1_n_6 ;
-  wire \word_cnt_reg[8]_i_1_n_7 ;
   wire [3:3]\NLW_test_init_cnt_reg[12]_i_1_CO_UNCONNECTED ;
-  wire [3:3]\NLW_word_cnt_reg[28]_i_1_CO_UNCONNECTED ;
 
   LUT1 #(
     .INIT(2'h1)) 
@@ -10380,42 +10285,42 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .D(error_insertion_inst_1_n_6),
         .Q(Q[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[10]_i_1 
        (.I0(bit_pointer[9]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[11]_i_1 
        (.I0(bit_pointer[10]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[11]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[12]_i_1 
        (.I0(bit_pointer[11]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[13]_i_1 
        (.I0(bit_pointer[12]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[14]_i_1 
        (.I0(bit_pointer[13]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[15]_i_1 
@@ -10428,56 +10333,56 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
        (.I0(bit_pointer[0]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[2]_i_1 
        (.I0(bit_pointer[1]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[3]_i_1 
        (.I0(bit_pointer[2]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[4]_i_1 
        (.I0(bit_pointer[3]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[5]_i_1 
        (.I0(bit_pointer[4]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[6]_i_1 
        (.I0(bit_pointer[5]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[7]_i_1 
        (.I0(bit_pointer[6]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[8]_i_1 
        (.I0(bit_pointer[7]),
         .I1(bit_pointer[15]),
         .O(\bit_pointer[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[9]_i_1 
@@ -10581,200 +10486,192 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .Q(bit_pointer[9]),
         .R(clear));
   LUT6 #(
-    .INIT(64'hCF00CCCC55555555)) 
-    \block_word_cnt[0]_i_1__1 
+    .INIT(64'hCCCFCC0055555555)) 
+    \block_word_cnt[0]_i_1__0 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt[1]_i_3__0_n_0 ),
+        .I1(\block_word_cnt[0]_i_2__1_n_0 ),
         .I2(ECC_CODE_EN),
-        .I3(\block_word_cnt[1]_i_5_n_0 ),
-        .I4(\block_word_cnt[1]_i_4__1_n_0 ),
-        .I5(\block_word_cnt[4]_i_2_n_0 ),
-        .O(\block_word_cnt[0]_i_1__1_n_0 ));
+        .I3(\block_word_cnt[0]_i_3__1_n_0 ),
+        .I4(\block_word_cnt[1]_i_2__1_n_0 ),
+        .I5(\block_word_cnt[4]_i_2__0_n_0 ),
+        .O(\block_word_cnt[0]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  LUT5 #(
+    .INIT(32'hFBFFBBFB)) 
+    \block_word_cnt[0]_i_2__1 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .O(\block_word_cnt[0]_i_2__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  LUT5 #(
+    .INIT(32'h00002224)) 
+    \block_word_cnt[0]_i_3__1 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[0]_i_3__1_n_0 ));
   LUT6 #(
-    .INIT(64'hC0BFFFFFC0BF0000)) 
+    .INIT(64'h670067FF67FF6700)) 
     \block_word_cnt[1]_i_1__1 
        (.I0(\block_word_cnt[1]_i_2__1_n_0 ),
-        .I1(\block_word_cnt[1]_i_3__0_n_0 ),
-        .I2(\block_word_cnt[1]_i_4__1_n_0 ),
-        .I3(\block_word_cnt[1]_i_5_n_0 ),
-        .I4(\block_word_cnt[4]_i_2_n_0 ),
-        .I5(\block_word_cnt[1]_i_6__0_n_0 ),
-        .O(\block_word_cnt[1]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000002)) 
-    \block_word_cnt[1]_i_2__1 
-       (.I0(\txctrl_reg[0]_i_2_n_0 ),
-        .I1(\block_word_cnt[1]_i_7__0_n_0 ),
-        .I2(test_init_cnt_reg[7]),
-        .I3(test_init_cnt_reg[9]),
-        .I4(test_init_cnt_reg[15]),
-        .I5(test_init_cnt_reg[10]),
-        .O(\block_word_cnt[1]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
-  LUT5 #(
-    .INIT(32'hEFCFFFEF)) 
-    \block_word_cnt[1]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[1]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
-  LUT5 #(
-    .INIT(32'hFBFBFBEF)) 
-    \block_word_cnt[1]_i_4__1 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[1]_i_4__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
-  LUT4 #(
-    .INIT(16'h0440)) 
-    \block_word_cnt[1]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[1]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \block_word_cnt[1]_i_6__0 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .O(\block_word_cnt[1]_i_6__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \block_word_cnt[1]_i_7__0 
-       (.I0(test_init_cnt_reg[8]),
-        .I1(test_init_cnt_reg[14]),
-        .I2(test_init_cnt_reg[4]),
-        .I3(test_init_cnt_reg[13]),
-        .I4(\test_init_cnt[0]_i_8__0_n_0 ),
-        .O(\block_word_cnt[1]_i_7__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h404F4F404F404F40)) 
-    \block_word_cnt[2]_i_1__1 
-       (.I0(\block_word_cnt[2]_i_2_n_0 ),
-        .I1(\block_word_cnt[2]_i_3_n_0 ),
-        .I2(\block_word_cnt[4]_i_2_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt[1]_i_3__1_n_0 ),
+        .I2(\block_word_cnt[1]_i_4__0_n_0 ),
+        .I3(\block_word_cnt[4]_i_2__0_n_0 ),
         .I4(\block_word_cnt_reg_n_0_[0] ),
         .I5(\block_word_cnt_reg_n_0_[1] ),
+        .O(\block_word_cnt[1]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  LUT4 #(
+    .INIT(16'h0028)) 
+    \block_word_cnt[1]_i_2__1 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[1]_i_2__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  LUT5 #(
+    .INIT(32'h00004D42)) 
+    \block_word_cnt[1]_i_3__1 
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[1]_i_3__1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \block_word_cnt[1]_i_4__0 
+       (.I0(\block_word_cnt[1]_i_5__0_n_0 ),
+        .I1(test_init_cnt_reg[15]),
+        .I2(test_init_cnt_reg[14]),
+        .I3(test_init_cnt_reg[12]),
+        .I4(test_init_cnt_reg[13]),
+        .I5(\test_init_cnt[0]_i_3_n_0 ),
+        .O(\block_word_cnt[1]_i_4__0_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \block_word_cnt[1]_i_5__0 
+       (.I0(test_init_cnt_reg[10]),
+        .I1(test_init_cnt_reg[11]),
+        .I2(test_init_cnt_reg[8]),
+        .I3(test_init_cnt_reg[9]),
+        .O(\block_word_cnt[1]_i_5__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h00006A6A00FF6A6A)) 
+    \block_word_cnt[2]_i_1__1 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt[2]_i_2_n_0 ),
+        .I4(\block_word_cnt[4]_i_2__0_n_0 ),
+        .I5(\block_word_cnt[2]_i_3_n_0 ),
         .O(\block_word_cnt[2]_i_1__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFF70FFFFF)) 
+    .INIT(64'hFFF7F0FFFFFFFFFF)) 
     \block_word_cnt[2]_i_2 
        (.I0(ECC_CODE_EN),
         .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[3] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
         .O(\block_word_cnt[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
-    .INIT(16'hFFDF)) 
+    .INIT(16'h0040)) 
     \block_word_cnt[2]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
         .I3(\block_word_cnt_reg_n_0_[3] ),
         .O(\block_word_cnt[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \block_word_cnt[3]_i_1__1 
        (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
         .I3(\block_word_cnt_reg_n_0_[0] ),
         .O(\block_word_cnt[3]_i_1__1_n_0 ));
   LUT5 #(
-    .INIT(32'h22A80222)) 
-    \block_word_cnt[4]_i_2 
-       (.I0(\tx_data_reg[15]_i_2_n_0 ),
+    .INIT(32'h2A280222)) 
+    \block_word_cnt[4]_i_2__0 
+       (.I0(\tx_data_reg[15]_i_5_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[4]_i_2_n_0 ));
+        .O(\block_word_cnt[4]_i_2__0_n_0 ));
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \block_word_cnt[4]_i_3__1 
        (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[3] ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
         .O(\block_word_cnt[4]_i_3__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000360000001600)) 
+    .INIT(64'h0312000001120000)) 
     \block_word_cnt[4]_i_4__0 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
         .I5(ECC_CODE_EN),
         .O(\block_word_cnt[4]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'h6AAAAAAAAAAAAAAA)) 
     \block_word_cnt[5]_i_1__0 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt_reg_n_0_[5] ),
-        .O(\block_word_cnt[5]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hA6AAAAAAAAAAAAAA)) 
-    \block_word_cnt[6]_i_1__1 
-       (.I0(\block_word_cnt_reg_n_0_[6] ),
+       (.I0(\block_word_cnt_reg_n_0_[5] ),
         .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt[6]_i_2_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
         .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt_reg_n_0_[5] ),
-        .O(\block_word_cnt[6]_i_1__1_n_0 ));
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(\block_word_cnt[5]_i_1__0_n_0 ));
   LUT2 #(
-    .INIT(4'h7)) 
-    \block_word_cnt[6]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .O(\block_word_cnt[6]_i_2_n_0 ));
+    .INIT(4'h9)) 
+    \block_word_cnt[6]_i_1__1 
+       (.I0(\block_word_cnt[7]_i_3__0_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[6] ),
+        .O(\block_word_cnt[6]_i_1__1_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \block_word_cnt[7]_i_1__1 
        (.I0(system_reset_r2),
         .I1(TEST_RESET),
         .O(clear));
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h9A)) 
     \block_word_cnt[7]_i_2__0 
        (.I0(\block_word_cnt_reg_n_0_[7] ),
         .I1(\block_word_cnt[7]_i_3__0_n_0 ),
         .I2(\block_word_cnt_reg_n_0_[6] ),
         .O(\block_word_cnt[7]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \block_word_cnt[7]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[5] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
         .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[0] ),
-        .I5(\block_word_cnt_reg_n_0_[3] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\block_word_cnt_reg_n_0_[5] ),
         .O(\block_word_cnt[7]_i_3__0_n_0 ));
   FDRE \block_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(\block_word_cnt[0]_i_1__1_n_0 ),
+        .D(\block_word_cnt[0]_i_1__0_n_0 ),
         .Q(\block_word_cnt_reg_n_0_[0] ),
         .R(clear));
   FDRE \block_word_cnt_reg[1] 
@@ -10805,7 +10702,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
        (.I0(\block_word_cnt[4]_i_3__1_n_0 ),
         .I1(\block_word_cnt[4]_i_4__0_n_0 ),
         .O(\block_word_cnt_reg[4]_i_1__0_n_0 ),
-        .S(\block_word_cnt[4]_i_2_n_0 ));
+        .S(\block_word_cnt[4]_i_2__0_n_0 ));
   FDRE \block_word_cnt_reg[5] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -10827,7 +10724,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
   LUT3 #(
     .INIT(8'hD1)) 
     data_word_valid_i_1__0
-       (.I0(\tx_data_reg[14]_i_2_n_0 ),
+       (.I0(\tx_data_reg[15]_i_2_n_0 ),
         .I1(sel),
         .I2(data_word_valid),
         .O(data_word_valid_i_1__0_n_0));
@@ -10837,15 +10734,14 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .D(data_word_valid_i_1__0_n_0),
         .Q(data_word_valid),
         .R(clear));
-  LUT6 #(
-    .INIT(64'hFFFF33FF00003200)) 
+  LUT5 #(
+    .INIT(32'hFF772202)) 
     encoder_rst_reg_i_1
-       (.I0(\block_word_cnt[1]_i_2__1_n_0 ),
+       (.I0(\tx_data_reg[1]_i_2__0_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\tx_data_reg[9]_i_3_n_0 ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(encoder_rst_reg),
+        .I2(\block_word_cnt[1]_i_4__0_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(encoder_rst_reg),
         .O(encoder_rst_reg_i_1_n_0));
   FDSE encoder_rst_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
@@ -10855,23 +10751,23 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .S(clear));
   gtx3g_bert_0_error_insertion_34 error_insertion_inst_1
        (.D({error_insertion_inst_1_n_0,error_insertion_inst_1_n_1,error_insertion_inst_1_n_2,error_insertion_inst_1_n_3,error_insertion_inst_1_n_4,error_insertion_inst_1_n_5,error_insertion_inst_1_n_6,error_insertion_inst_1_n_7,error_insertion_inst_1_n_8,error_insertion_inst_1_n_9,error_insertion_inst_1_n_10,error_insertion_inst_1_n_11,error_insertion_inst_1_n_12,error_insertion_inst_1_n_13,error_insertion_inst_1_n_14,error_insertion_inst_1_n_15}),
+        .ERROR_INSERT_MASK(ERROR_INSERT_MASK),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(tx_data_reg),
         .TEST_RESET(TEST_RESET),
         .\bit_pointer_reg[15] (bit_pointer),
         .error_insertion_rst_reg(error_insertion_rst_reg),
         .out(system_reset_r2),
-        .\txctrl_reg_reg[0] (\txctrl_reg_reg_n_0_[0] ),
-        .word_cnt_reg(word_cnt_reg));
-  LUT6 #(
-    .INIT(64'hAAAAAAA8AAAAAAAA)) 
+        .\txctrl_reg_reg[0] (\txctrl_reg_reg_n_0_[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  LUT5 #(
+    .INIT(32'hAAAAA8AA)) 
     error_insertion_rst_reg_i_1
        (.I0(error_insertion_rst_reg),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\tx_data_reg[11]_i_2__0_n_0 ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt[1]_i_2__1_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\tx_data_reg[1]_i_2__0_n_0 ),
+        .I4(\block_word_cnt[1]_i_4__0_n_0 ),
         .O(error_insertion_rst_reg_i_1_n_0));
   FDSE error_insertion_rst_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
@@ -10880,91 +10776,88 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .Q(error_insertion_rst_reg),
         .S(clear));
   gtx3g_bert_0_parity_encoder_35 parity_encoder_inst_1
-       (.D({parity_encoder_inst_1_n_0,parity_encoder_inst_1_n_1,parity_encoder_inst_1_n_2,parity_encoder_inst_1_n_3,parity_encoder_inst_1_n_4,parity_encoder_inst_1_n_5}),
+       (.D({parity_encoder_inst_1_n_0,parity_encoder_inst_1_n_1}),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(tx_data_reg),
         .SR(encoder_rst_reg),
-        .\block_word_cnt_reg[0] (pattern_gen_inst_1_n_19),
-        .\block_word_cnt_reg[1] (\tx_data_reg[11]_i_5_n_0 ),
-        .\block_word_cnt_reg[2] (\tx_data_reg[11]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[2]_0 (\tx_data_reg[11]_i_4_n_0 ),
-        .\block_word_cnt_reg[3] (\tx_data_reg[15]_i_2_n_0 ),
-        .\block_word_cnt_reg[4] (\tx_data_reg[15]_i_3_n_0 ),
-        .\block_word_cnt_reg[4]_0 ({\block_word_cnt_reg_n_0_[4] ,\block_word_cnt_reg_n_0_[2] ,\block_word_cnt_reg_n_0_[1] ,\block_word_cnt_reg_n_0_[0] }),
+        .\block_word_cnt_reg[2] (\tx_data_reg[4]_i_2_n_0 ),
+        .\block_word_cnt_reg[2]_0 (\tx_data_reg[1]_i_5_n_0 ),
+        .\block_word_cnt_reg[3] (\tx_data_reg[15]_i_5_n_0 ),
+        .\block_word_cnt_reg[4] ({\block_word_cnt_reg_n_0_[4] ,\block_word_cnt_reg_n_0_[2] ,\block_word_cnt_reg_n_0_[1] ,\block_word_cnt_reg_n_0_[0] }),
+        .\block_word_cnt_reg[4]_0 (\tx_data_reg[3]_i_4__0_n_0 ),
         .\block_word_cnt_reg[4]_1 (\tx_data_reg[1]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[4]_2 (\tx_data_reg[1]_i_3_n_0 ),
-        .\block_word_cnt_reg[4]_3 (pattern_gen_inst_1_n_17),
-        .\block_word_cnt_reg[4]_4 (\tx_data_reg[0]_i_4_n_0 ),
-        .\block_word_cnt_reg[4]_5 (\tx_data_reg[9]_i_5_n_0 ),
-        .\block_word_cnt_reg[4]_6 (\tx_data_reg[14]_i_2_n_0 ),
+        .\block_word_cnt_reg[4]_2 (\tx_data_reg[9]_i_6_n_0 ),
+        .\block_word_cnt_reg[4]_3 (\tx_data_reg[9]_i_5__0_n_0 ),
         .data_word_valid(data_word_valid),
-        .\pattern_reg_reg[0] (pattern_gen_inst_1_n_20),
-        .\pattern_reg_reg[12] (pattern_gen_inst_1_n_18),
-        .\pattern_reg_reg[15] ({pattern_word[15],pattern_word[11:7],pattern_word[5]}),
-        .test_init_cnt_reg({test_init_cnt_reg[15],test_init_cnt_reg[12:10],test_init_cnt_reg[0]}),
-        .\tx_data_reg_reg[13] (parity_encoder_inst_1_n_14),
-        .\tx_data_reg_reg[14] (parity_encoder_inst_1_n_15),
-        .\tx_data_reg_reg[2] (parity_encoder_inst_1_n_10),
-        .\tx_data_reg_reg[3] (parity_encoder_inst_1_n_11),
-        .\tx_data_reg_reg[4] (parity_encoder_inst_1_n_12),
-        .\tx_data_reg_reg[5] (parity_encoder_inst_1_n_6),
-        .\tx_data_reg_reg[6] (parity_encoder_inst_1_n_13),
-        .\tx_data_reg_reg[7] (parity_encoder_inst_1_n_7),
-        .\tx_data_reg_reg[8] (parity_encoder_inst_1_n_8),
-        .\tx_data_reg_reg[9] (parity_encoder_inst_1_n_9));
+        .\pattern_reg_reg[11] ({pattern_word[11],pattern_word[9:7],pattern_word[5],pattern_word[3],pattern_word[0]}),
+        .\pattern_reg_reg[1] (pattern_gen_inst_1_n_21),
+        .test_init_cnt_reg(test_init_cnt_reg[0]),
+        .\test_init_cnt_reg[1] (\tx_data_reg[3]_i_3_n_0 ),
+        .\tx_data_reg_reg[10] (parity_encoder_inst_1_n_11),
+        .\tx_data_reg_reg[11] (parity_encoder_inst_1_n_6),
+        .\tx_data_reg_reg[12] (parity_encoder_inst_1_n_12),
+        .\tx_data_reg_reg[13] (parity_encoder_inst_1_n_13),
+        .\tx_data_reg_reg[14] (parity_encoder_inst_1_n_14),
+        .\tx_data_reg_reg[15] (parity_encoder_inst_1_n_15),
+        .\tx_data_reg_reg[1] (parity_encoder_inst_1_n_5),
+        .\tx_data_reg_reg[2] (parity_encoder_inst_1_n_9),
+        .\tx_data_reg_reg[4] (parity_encoder_inst_1_n_8),
+        .\tx_data_reg_reg[5] (parity_encoder_inst_1_n_2),
+        .\tx_data_reg_reg[6] (parity_encoder_inst_1_n_10),
+        .\tx_data_reg_reg[7] (parity_encoder_inst_1_n_3),
+        .\tx_data_reg_reg[8] (parity_encoder_inst_1_n_7),
+        .\tx_data_reg_reg[9] (parity_encoder_inst_1_n_4));
   gtx3g_bert_0_pattern_gen_36 pattern_gen_inst_1
-       (.D({pattern_gen_inst_1_n_0,pattern_gen_inst_1_n_1,pattern_gen_inst_1_n_2,pattern_gen_inst_1_n_3,pattern_gen_inst_1_n_4,pattern_gen_inst_1_n_5,pattern_gen_inst_1_n_6,pattern_gen_inst_1_n_7,pattern_gen_inst_1_n_8,pattern_gen_inst_1_n_9}),
+       (.D({pattern_gen_inst_1_n_0,pattern_gen_inst_1_n_1,pattern_gen_inst_1_n_2,pattern_gen_inst_1_n_3,pattern_gen_inst_1_n_4,pattern_gen_inst_1_n_5,pattern_gen_inst_1_n_6,pattern_gen_inst_1_n_7,pattern_gen_inst_1_n_8,pattern_gen_inst_1_n_9,pattern_gen_inst_1_n_10,pattern_gen_inst_1_n_11,pattern_gen_inst_1_n_12,pattern_gen_inst_1_n_13}),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .PATTERN_MODE(PATTERN_MODE),
-        .Q({pattern_word[15],pattern_word[11:7],pattern_word[5]}),
-        .\block_word_cnt_reg[1] (\tx_data_reg[2]_i_4_n_0 ),
-        .\block_word_cnt_reg[1]_0 (\block_word_cnt[6]_i_2_n_0 ),
-        .\block_word_cnt_reg[1]_1 (\tx_data_reg[9]_i_3_n_0 ),
-        .\block_word_cnt_reg[2] (\tx_data_reg[4]_i_3_n_0 ),
-        .\block_word_cnt_reg[2]_0 (\tx_data_reg[9]_i_2_n_0 ),
-        .\block_word_cnt_reg[2]_1 (\tx_data_reg[14]_i_3_n_0 ),
-        .\block_word_cnt_reg[2]_2 (\tx_data_reg[11]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[2]_3 (\tx_data_reg[3]_i_2_n_0 ),
-        .\block_word_cnt_reg[3] (\tx_data_reg[15]_i_2_n_0 ),
+        .Q({pattern_word[11],pattern_word[9:7],pattern_word[5],pattern_word[3],pattern_word[0]}),
+        .\block_word_cnt_reg[1] (\tx_data_reg[9]_i_3_n_0 ),
+        .\block_word_cnt_reg[1]_0 (\tx_data_reg[2]_i_4_n_0 ),
+        .\block_word_cnt_reg[2] (\tx_data_reg[15]_i_3_n_0 ),
+        .\block_word_cnt_reg[2]_0 (\tx_data_reg[4]_i_2_n_0 ),
+        .\block_word_cnt_reg[2]_1 (parity_encoder_inst_1_n_8),
+        .\block_word_cnt_reg[3] (\tx_data_reg[15]_i_5_n_0 ),
         .\block_word_cnt_reg[4] ({\block_word_cnt_reg_n_0_[4] ,\block_word_cnt_reg_n_0_[2] ,\block_word_cnt_reg_n_0_[1] ,\block_word_cnt_reg_n_0_[0] }),
-        .\block_word_cnt_reg[4]_0 (\tx_data_reg[15]_i_3_n_0 ),
-        .\block_word_cnt_reg[4]_1 (\tx_data_reg[14]_i_2_n_0 ),
-        .\block_word_cnt_reg[4]_2 (\tx_data_reg[3]_i_3_n_0 ),
-        .\hor_parity_word_reg_reg[3] (parity_encoder_inst_1_n_11),
-        .\hor_parity_word_reg_reg[6] (parity_encoder_inst_1_n_13),
-        .\hor_parity_word_reg_reg[8] (parity_encoder_inst_1_n_8),
+        .\block_word_cnt_reg[4]_0 (\tx_data_reg[1]_i_2__0_n_0 ),
+        .\block_word_cnt_reg[4]_1 (\tx_data_reg[8]_i_4_n_0 ),
+        .\block_word_cnt_reg[4]_2 (\tx_data_reg[15]_i_2_n_0 ),
+        .\block_word_cnt_reg[4]_3 (\tx_data_reg[12]_i_3_n_0 ),
+        .\hor_parity_word_reg_reg[11] (parity_encoder_inst_1_n_6),
+        .\hor_parity_word_reg_reg[2] (parity_encoder_inst_1_n_9),
+        .\hor_parity_word_reg_reg[6] (parity_encoder_inst_1_n_10),
+        .\hor_parity_word_reg_reg[8] (parity_encoder_inst_1_n_7),
         .pattern_pause_reg(pattern_pause_reg),
-        .\pattern_reg_reg[5]_0 (parity_encoder_inst_1_n_6),
-        .\pattern_reg_reg[7]_0 (parity_encoder_inst_1_n_7),
-        .\pattern_reg_reg[9]_0 (parity_encoder_inst_1_n_9),
+        .\pattern_reg_reg[5]_0 (parity_encoder_inst_1_n_2),
+        .\pattern_reg_reg[7]_0 (parity_encoder_inst_1_n_3),
+        .\pattern_reg_reg[9]_0 (parity_encoder_inst_1_n_4),
         .pattern_rst_reg(pattern_rst_reg),
-        .test_init_cnt_reg({test_init_cnt_reg[14:13],test_init_cnt_reg[9:4],test_init_cnt_reg[1]}),
-        .test_init_cnt_reg_3__s_port_(\txctrl_reg[0]_i_2_n_0 ),
-        .\tx_data_reg_reg[0] (pattern_gen_inst_1_n_20),
-        .\tx_data_reg_reg[12] (pattern_gen_inst_1_n_18),
-        .\tx_data_reg_reg[1] (pattern_gen_inst_1_n_17),
-        .\tx_data_reg_reg[1]_0 (pattern_gen_inst_1_n_19),
-        .\ver_parity_word_reg_reg[13] (parity_encoder_inst_1_n_14),
-        .\ver_parity_word_reg_reg[14] (parity_encoder_inst_1_n_15),
-        .\ver_parity_word_reg_reg[2] (parity_encoder_inst_1_n_10),
-        .\ver_parity_word_reg_reg[4] (parity_encoder_inst_1_n_12));
+        .test_init_cnt_reg({test_init_cnt_reg[15:4],test_init_cnt_reg[1]}),
+        .test_init_cnt_reg_3__s_port_(\tx_data_reg[8]_i_5_n_0 ),
+        .\tx_data_reg_reg[1] (pattern_gen_inst_1_n_21),
+        .\ver_parity_word_reg_reg[10] (parity_encoder_inst_1_n_11),
+        .\ver_parity_word_reg_reg[12] (parity_encoder_inst_1_n_12),
+        .\ver_parity_word_reg_reg[13] (parity_encoder_inst_1_n_13),
+        .\ver_parity_word_reg_reg[14] (parity_encoder_inst_1_n_14),
+        .\ver_parity_word_reg_reg[15] (parity_encoder_inst_1_n_15),
+        .\ver_parity_word_reg_reg[1] (parity_encoder_inst_1_n_5));
   LUT4 #(
     .INIT(16'hF808)) 
     pattern_pause_reg_i_1__0
-       (.I0(pattern_pause_reg_i_2__0_n_0),
-        .I1(\block_word_cnt[4]_i_2_n_0 ),
+       (.I0(\block_word_cnt[4]_i_2__0_n_0 ),
+        .I1(pattern_pause_reg_i_2__0_n_0),
         .I2(sel),
         .I3(pattern_pause_reg),
         .O(pattern_pause_reg_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT5 #(
-    .INIT(32'h04044440)) 
+    .INIT(32'h05005400)) 
     pattern_pause_reg_i_2__0
        (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
         .O(pattern_pause_reg_i_2__0_n_0));
   FDSE pattern_pause_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
@@ -10992,63 +10885,53 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .D(gt0_tx_system_reset_c),
         .Q(system_reset_r),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000000000001101)) 
+  LUT5 #(
+    .INIT(32'h000000E0)) 
     \test_init_cnt[0]_i_1 
-       (.I0(\tx_data_reg[11]_i_2__0_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\txctrl_reg[0]_i_2_n_0 ),
-        .I3(\test_init_cnt[0]_i_3_n_0 ),
+       (.I0(\test_init_cnt[0]_i_3_n_0 ),
+        .I1(\test_init_cnt[0]_i_4_n_0 ),
+        .I2(\tx_data_reg[1]_i_2__0_n_0 ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(\block_word_cnt_reg_n_0_[1] ),
-        .I5(\block_word_cnt_reg_n_0_[0] ),
         .O(sel));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     \test_init_cnt[0]_i_3 
-       (.I0(test_init_cnt_reg[10]),
-        .I1(test_init_cnt_reg[15]),
-        .I2(test_init_cnt_reg[9]),
-        .I3(test_init_cnt_reg[7]),
-        .I4(\test_init_cnt[0]_i_8__0_n_0 ),
-        .I5(\test_init_cnt[0]_i_9_n_0 ),
+       (.I0(\tx_data_reg[8]_i_5_n_0 ),
+        .I1(test_init_cnt_reg[7]),
+        .I2(test_init_cnt_reg[6]),
+        .I3(test_init_cnt_reg[5]),
+        .I4(test_init_cnt_reg[4]),
         .O(\test_init_cnt[0]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     \test_init_cnt[0]_i_4 
-       (.I0(test_init_cnt_reg[3]),
+       (.I0(test_init_cnt_reg[13]),
+        .I1(test_init_cnt_reg[12]),
+        .I2(test_init_cnt_reg[14]),
+        .I3(test_init_cnt_reg[15]),
+        .I4(\block_word_cnt[1]_i_5__0_n_0 ),
         .O(\test_init_cnt[0]_i_4_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[0]_i_5 
-       (.I0(test_init_cnt_reg[2]),
+       (.I0(test_init_cnt_reg[3]),
         .O(\test_init_cnt[0]_i_5_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[0]_i_6 
-       (.I0(test_init_cnt_reg[1]),
+       (.I0(test_init_cnt_reg[2]),
         .O(\test_init_cnt[0]_i_6_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[0]_i_7 
-       (.I0(test_init_cnt_reg[0]),
+       (.I0(test_init_cnt_reg[1]),
         .O(\test_init_cnt[0]_i_7_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \test_init_cnt[0]_i_8__0 
-       (.I0(test_init_cnt_reg[12]),
-        .I1(test_init_cnt_reg[6]),
-        .I2(test_init_cnt_reg[5]),
-        .I3(test_init_cnt_reg[11]),
-        .O(\test_init_cnt[0]_i_8__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \test_init_cnt[0]_i_9 
-       (.I0(test_init_cnt_reg[13]),
-        .I1(test_init_cnt_reg[4]),
-        .I2(test_init_cnt_reg[14]),
-        .I3(test_init_cnt_reg[8]),
-        .O(\test_init_cnt[0]_i_9_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \test_init_cnt[0]_i_8 
+       (.I0(test_init_cnt_reg[0]),
+        .O(\test_init_cnt[0]_i_8_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[12]_i_2 
@@ -11121,7 +11004,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .CYINIT(1'b0),
         .DI({1'b1,1'b1,1'b1,1'b1}),
         .O({\test_init_cnt_reg[0]_i_2_n_4 ,\test_init_cnt_reg[0]_i_2_n_5 ,\test_init_cnt_reg[0]_i_2_n_6 ,\test_init_cnt_reg[0]_i_2_n_7 }),
-        .S({\test_init_cnt[0]_i_4_n_0 ,\test_init_cnt[0]_i_5_n_0 ,\test_init_cnt[0]_i_6_n_0 ,\test_init_cnt[0]_i_7_n_0 }));
+        .S({\test_init_cnt[0]_i_5_n_0 ,\test_init_cnt[0]_i_6_n_0 ,\test_init_cnt[0]_i_7_n_0 ,\test_init_cnt[0]_i_8_n_0 }));
   FDRE \test_init_cnt_reg[10] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(sel),
@@ -11233,105 +11116,58 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .D(\test_init_cnt_reg[8]_i_1_n_6 ),
         .Q(test_init_cnt_reg[9]),
         .R(clear));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \tx_data_reg[0]_i_4 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[6] ),
-        .I3(\block_word_cnt_reg_n_0_[7] ),
-        .I4(\block_word_cnt_reg_n_0_[5] ),
-        .I5(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[0]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \tx_data_reg[11]_i_2__0 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[5] ),
-        .I2(\block_word_cnt_reg_n_0_[7] ),
-        .I3(\block_word_cnt_reg_n_0_[6] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
-        .O(\tx_data_reg[11]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
-  LUT5 #(
-    .INIT(32'h00028282)) 
-    \tx_data_reg[11]_i_4 
-       (.I0(\tx_data_reg[15]_i_2_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(\tx_data_reg[11]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
-  LUT5 #(
-    .INIT(32'h00008000)) 
-    \tx_data_reg[11]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\tx_data_reg[15]_i_2_n_0 ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[11]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
-  LUT5 #(
-    .INIT(32'h00888222)) 
-    \tx_data_reg[14]_i_2 
-       (.I0(\tx_data_reg[15]_i_2_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[14]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT2 #(
-    .INIT(4'hE)) 
-    \tx_data_reg[14]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\tx_data_reg[15]_i_3_n_0 ),
-        .O(\tx_data_reg[14]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \tx_data_reg[15]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[6] ),
-        .I2(\block_word_cnt_reg_n_0_[7] ),
-        .I3(\block_word_cnt_reg_n_0_[5] ),
-        .O(\tx_data_reg[15]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAAAAB)) 
-    \tx_data_reg[15]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(test_init_cnt_reg[3]),
-        .I2(test_init_cnt_reg[1]),
-        .I3(test_init_cnt_reg[0]),
-        .I4(test_init_cnt_reg[2]),
-        .I5(\tx_data_reg[15]_i_5_n_0 ),
-        .O(\tx_data_reg[15]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \tx_data_reg[15]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .O(\tx_data_reg[15]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
-  LUT3 #(
-    .INIT(8'h8A)) 
-    \tx_data_reg[1]_i_2__0 
+    .INIT(4'h2)) 
+    \tx_data_reg[12]_i_3 
        (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .O(\tx_data_reg[1]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \tx_data_reg[1]_i_3 
-       (.I0(\tx_data_reg[15]_i_2_n_0 ),
+        .O(\tx_data_reg[12]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  LUT5 #(
+    .INIT(32'h08088222)) 
+    \tx_data_reg[15]_i_2 
+       (.I0(\tx_data_reg[15]_i_5_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[4] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[1]_i_3_n_0 ));
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .O(\tx_data_reg[15]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \tx_data_reg[15]_i_3 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\tx_data_reg[9]_i_3_n_0 ),
+        .O(\tx_data_reg[15]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \tx_data_reg[15]_i_5 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[5] ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
+        .I3(\block_word_cnt_reg_n_0_[7] ),
+        .O(\tx_data_reg[15]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \tx_data_reg[1]_i_2__0 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[5] ),
+        .I3(\block_word_cnt_reg_n_0_[6] ),
+        .I4(\block_word_cnt_reg_n_0_[7] ),
+        .I5(\block_word_cnt_reg_n_0_[2] ),
+        .O(\tx_data_reg[1]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  LUT3 #(
+    .INIT(8'hDF)) 
+    \tx_data_reg[1]_i_5 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .O(\tx_data_reg[1]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hABABABABABABABAA)) 
     \tx_data_reg[2]_i_4 
@@ -11343,594 +11179,193 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN
         .I5(test_init_cnt_reg[1]),
         .O(\tx_data_reg[2]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAABAAAAAAAA)) 
-    \tx_data_reg[3]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(test_init_cnt_reg[3]),
+    .INIT(64'hFFFFFFFFFFFFFF01)) 
+    \tx_data_reg[3]_i_3 
+       (.I0(test_init_cnt_reg[1]),
+        .I1(test_init_cnt_reg[0]),
+        .I2(test_init_cnt_reg[2]),
+        .I3(test_init_cnt_reg[3]),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
         .I5(\tx_data_reg[3]_i_5_n_0 ),
-        .O(\tx_data_reg[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+        .O(\tx_data_reg[3]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'h95)) 
-    \tx_data_reg[3]_i_3 
+    \tx_data_reg[3]_i_4__0 
        (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .O(\tx_data_reg[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .O(\tx_data_reg[3]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \tx_data_reg[3]_i_5 
-       (.I0(test_init_cnt_reg[2]),
-        .I1(test_init_cnt_reg[0]),
-        .I2(test_init_cnt_reg[1]),
+       (.I0(\block_word_cnt_reg_n_0_[0] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
         .O(\tx_data_reg[3]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  LUT4 #(
+    .INIT(16'h22A2)) 
+    \tx_data_reg[4]_i_2 
+       (.I0(\tx_data_reg[15]_i_5_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .O(\tx_data_reg[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  LUT3 #(
+    .INIT(8'h2A)) 
+    \tx_data_reg[8]_i_4 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .O(\tx_data_reg[8]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \tx_data_reg[8]_i_5 
+       (.I0(test_init_cnt_reg[3]),
+        .I1(test_init_cnt_reg[1]),
+        .I2(test_init_cnt_reg[0]),
+        .I3(test_init_cnt_reg[2]),
+        .O(\tx_data_reg[8]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEEEEEEEEEEEEEF)) 
+    \tx_data_reg[9]_i_3 
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(test_init_cnt_reg[2]),
+        .I3(test_init_cnt_reg[0]),
+        .I4(test_init_cnt_reg[1]),
+        .I5(test_init_cnt_reg[3]),
+        .O(\tx_data_reg[9]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'h8A)) 
-    \tx_data_reg[4]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[4]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
-  LUT4 #(
-    .INIT(16'hEAAA)) 
-    \tx_data_reg[9]_i_2 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
+    \tx_data_reg[9]_i_5__0 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[9]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+        .O(\tx_data_reg[9]_i_5__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT4 #(
-    .INIT(16'h002A)) 
-    \tx_data_reg[9]_i_3 
-       (.I0(\tx_data_reg[15]_i_2_n_0 ),
+    .INIT(16'hDFFF)) 
+    \tx_data_reg[9]_i_6 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[9]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
-  LUT4 #(
-    .INIT(16'h08AA)) 
-    \tx_data_reg[9]_i_5 
-       (.I0(\tx_data_reg[15]_i_2_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[9]_i_5_n_0 ));
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\tx_data_reg[15]_i_5_n_0 ),
+        .O(\tx_data_reg[9]_i_6_n_0 ));
   FDRE \tx_data_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_5),
+        .D(parity_encoder_inst_1_n_1),
         .Q(tx_data_reg[0]),
         .R(clear));
   FDRE \tx_data_reg_reg[10] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_3),
+        .D(pattern_gen_inst_1_n_5),
         .Q(tx_data_reg[10]),
         .R(clear));
   FDRE \tx_data_reg_reg[11] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_2),
+        .D(pattern_gen_inst_1_n_4),
         .Q(tx_data_reg[11]),
         .R(clear));
   FDRE \tx_data_reg_reg[12] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_1),
+        .D(pattern_gen_inst_1_n_3),
         .Q(tx_data_reg[12]),
         .R(clear));
   FDRE \tx_data_reg_reg[13] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_1),
+        .D(pattern_gen_inst_1_n_2),
         .Q(tx_data_reg[13]),
         .R(clear));
   FDRE \tx_data_reg_reg[14] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_0),
+        .D(pattern_gen_inst_1_n_1),
         .Q(tx_data_reg[14]),
         .R(clear));
   FDRE \tx_data_reg_reg[15] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_0),
+        .D(pattern_gen_inst_1_n_0),
         .Q(tx_data_reg[15]),
         .R(clear));
   FDRE \tx_data_reg_reg[1] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_4),
+        .D(pattern_gen_inst_1_n_13),
         .Q(tx_data_reg[1]),
         .R(clear));
   FDRE \tx_data_reg_reg[2] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_9),
+        .D(pattern_gen_inst_1_n_12),
         .Q(tx_data_reg[2]),
         .R(clear));
   FDRE \tx_data_reg_reg[3] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_8),
+        .D(parity_encoder_inst_1_n_0),
         .Q(tx_data_reg[3]),
         .R(clear));
   FDRE \tx_data_reg_reg[4] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_7),
+        .D(pattern_gen_inst_1_n_11),
         .Q(tx_data_reg[4]),
         .R(clear));
   FDRE \tx_data_reg_reg[5] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_6),
+        .D(pattern_gen_inst_1_n_10),
         .Q(tx_data_reg[5]),
         .R(clear));
   FDRE \tx_data_reg_reg[6] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_5),
+        .D(pattern_gen_inst_1_n_9),
         .Q(tx_data_reg[6]),
         .R(clear));
   FDRE \tx_data_reg_reg[7] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_4),
+        .D(pattern_gen_inst_1_n_8),
         .Q(tx_data_reg[7]),
         .R(clear));
   FDRE \tx_data_reg_reg[8] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_3),
+        .D(pattern_gen_inst_1_n_7),
         .Q(tx_data_reg[8]),
         .R(clear));
   FDRE \tx_data_reg_reg[9] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_2),
+        .D(pattern_gen_inst_1_n_6),
         .Q(tx_data_reg[9]),
         .R(clear));
   LUT6 #(
-    .INIT(64'h0000C33200000000)) 
+    .INIT(64'h0000822200000000)) 
     \txctrl_reg[0]_i_1 
-       (.I0(\txctrl_reg[0]_i_2_n_0 ),
+       (.I0(\tx_data_reg[9]_i_3_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(\tx_data_reg[15]_i_2_n_0 ),
+        .I5(\tx_data_reg[15]_i_5_n_0 ),
         .O(txctrl_reg0));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \txctrl_reg[0]_i_2 
-       (.I0(test_init_cnt_reg[3]),
-        .I1(test_init_cnt_reg[1]),
-        .I2(test_init_cnt_reg[0]),
-        .I3(test_init_cnt_reg[2]),
-        .O(\txctrl_reg[0]_i_2_n_0 ));
   FDRE \txctrl_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(txctrl_reg0),
         .Q(\txctrl_reg_reg_n_0_[0] ),
-        .R(clear));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[0]_i_2 
-       (.I0(word_cnt_reg[3]),
-        .O(\word_cnt[0]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[0]_i_3 
-       (.I0(word_cnt_reg[2]),
-        .O(\word_cnt[0]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[0]_i_4 
-       (.I0(word_cnt_reg[1]),
-        .O(\word_cnt[0]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \word_cnt[0]_i_5 
-       (.I0(word_cnt_reg[0]),
-        .O(\word_cnt[0]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_2 
-       (.I0(word_cnt_reg[15]),
-        .O(\word_cnt[12]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_3 
-       (.I0(word_cnt_reg[14]),
-        .O(\word_cnt[12]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_4 
-       (.I0(word_cnt_reg[13]),
-        .O(\word_cnt[12]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_5 
-       (.I0(word_cnt_reg[12]),
-        .O(\word_cnt[12]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_2 
-       (.I0(word_cnt_reg[19]),
-        .O(\word_cnt[16]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_3 
-       (.I0(word_cnt_reg[18]),
-        .O(\word_cnt[16]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_4 
-       (.I0(word_cnt_reg[17]),
-        .O(\word_cnt[16]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_5 
-       (.I0(word_cnt_reg[16]),
-        .O(\word_cnt[16]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_2 
-       (.I0(word_cnt_reg[23]),
-        .O(\word_cnt[20]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_3 
-       (.I0(word_cnt_reg[22]),
-        .O(\word_cnt[20]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_4 
-       (.I0(word_cnt_reg[21]),
-        .O(\word_cnt[20]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_5 
-       (.I0(word_cnt_reg[20]),
-        .O(\word_cnt[20]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_2 
-       (.I0(word_cnt_reg[27]),
-        .O(\word_cnt[24]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_3 
-       (.I0(word_cnt_reg[26]),
-        .O(\word_cnt[24]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_4 
-       (.I0(word_cnt_reg[25]),
-        .O(\word_cnt[24]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_5 
-       (.I0(word_cnt_reg[24]),
-        .O(\word_cnt[24]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_2 
-       (.I0(word_cnt_reg[31]),
-        .O(\word_cnt[28]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_3 
-       (.I0(word_cnt_reg[30]),
-        .O(\word_cnt[28]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_4 
-       (.I0(word_cnt_reg[29]),
-        .O(\word_cnt[28]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_5 
-       (.I0(word_cnt_reg[28]),
-        .O(\word_cnt[28]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_2 
-       (.I0(word_cnt_reg[7]),
-        .O(\word_cnt[4]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_3 
-       (.I0(word_cnt_reg[6]),
-        .O(\word_cnt[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_4 
-       (.I0(word_cnt_reg[5]),
-        .O(\word_cnt[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_5 
-       (.I0(word_cnt_reg[4]),
-        .O(\word_cnt[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_2 
-       (.I0(word_cnt_reg[11]),
-        .O(\word_cnt[8]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_3 
-       (.I0(word_cnt_reg[10]),
-        .O(\word_cnt[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_4 
-       (.I0(word_cnt_reg[9]),
-        .O(\word_cnt[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_5 
-       (.I0(word_cnt_reg[8]),
-        .O(\word_cnt[8]_i_5_n_0 ));
-  FDRE \word_cnt_reg[0] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1_n_7 ),
-        .Q(word_cnt_reg[0]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[0]_i_1 
-       (.CI(1'b0),
-        .CO({\word_cnt_reg[0]_i_1_n_0 ,\word_cnt_reg[0]_i_1_n_1 ,\word_cnt_reg[0]_i_1_n_2 ,\word_cnt_reg[0]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b1}),
-        .O({\word_cnt_reg[0]_i_1_n_4 ,\word_cnt_reg[0]_i_1_n_5 ,\word_cnt_reg[0]_i_1_n_6 ,\word_cnt_reg[0]_i_1_n_7 }),
-        .S({\word_cnt[0]_i_2_n_0 ,\word_cnt[0]_i_3_n_0 ,\word_cnt[0]_i_4_n_0 ,\word_cnt[0]_i_5_n_0 }));
-  FDRE \word_cnt_reg[10] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1_n_5 ),
-        .Q(word_cnt_reg[10]),
-        .R(clear));
-  FDRE \word_cnt_reg[11] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1_n_4 ),
-        .Q(word_cnt_reg[11]),
-        .R(clear));
-  FDRE \word_cnt_reg[12] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1_n_7 ),
-        .Q(word_cnt_reg[12]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[12]_i_1 
-       (.CI(\word_cnt_reg[8]_i_1_n_0 ),
-        .CO({\word_cnt_reg[12]_i_1_n_0 ,\word_cnt_reg[12]_i_1_n_1 ,\word_cnt_reg[12]_i_1_n_2 ,\word_cnt_reg[12]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[12]_i_1_n_4 ,\word_cnt_reg[12]_i_1_n_5 ,\word_cnt_reg[12]_i_1_n_6 ,\word_cnt_reg[12]_i_1_n_7 }),
-        .S({\word_cnt[12]_i_2_n_0 ,\word_cnt[12]_i_3_n_0 ,\word_cnt[12]_i_4_n_0 ,\word_cnt[12]_i_5_n_0 }));
-  FDRE \word_cnt_reg[13] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1_n_6 ),
-        .Q(word_cnt_reg[13]),
-        .R(clear));
-  FDRE \word_cnt_reg[14] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1_n_5 ),
-        .Q(word_cnt_reg[14]),
-        .R(clear));
-  FDRE \word_cnt_reg[15] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1_n_4 ),
-        .Q(word_cnt_reg[15]),
-        .R(clear));
-  FDRE \word_cnt_reg[16] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1_n_7 ),
-        .Q(word_cnt_reg[16]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[16]_i_1 
-       (.CI(\word_cnt_reg[12]_i_1_n_0 ),
-        .CO({\word_cnt_reg[16]_i_1_n_0 ,\word_cnt_reg[16]_i_1_n_1 ,\word_cnt_reg[16]_i_1_n_2 ,\word_cnt_reg[16]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[16]_i_1_n_4 ,\word_cnt_reg[16]_i_1_n_5 ,\word_cnt_reg[16]_i_1_n_6 ,\word_cnt_reg[16]_i_1_n_7 }),
-        .S({\word_cnt[16]_i_2_n_0 ,\word_cnt[16]_i_3_n_0 ,\word_cnt[16]_i_4_n_0 ,\word_cnt[16]_i_5_n_0 }));
-  FDRE \word_cnt_reg[17] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1_n_6 ),
-        .Q(word_cnt_reg[17]),
-        .R(clear));
-  FDRE \word_cnt_reg[18] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1_n_5 ),
-        .Q(word_cnt_reg[18]),
-        .R(clear));
-  FDRE \word_cnt_reg[19] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1_n_4 ),
-        .Q(word_cnt_reg[19]),
-        .R(clear));
-  FDRE \word_cnt_reg[1] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1_n_6 ),
-        .Q(word_cnt_reg[1]),
-        .R(clear));
-  FDRE \word_cnt_reg[20] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1_n_7 ),
-        .Q(word_cnt_reg[20]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[20]_i_1 
-       (.CI(\word_cnt_reg[16]_i_1_n_0 ),
-        .CO({\word_cnt_reg[20]_i_1_n_0 ,\word_cnt_reg[20]_i_1_n_1 ,\word_cnt_reg[20]_i_1_n_2 ,\word_cnt_reg[20]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[20]_i_1_n_4 ,\word_cnt_reg[20]_i_1_n_5 ,\word_cnt_reg[20]_i_1_n_6 ,\word_cnt_reg[20]_i_1_n_7 }),
-        .S({\word_cnt[20]_i_2_n_0 ,\word_cnt[20]_i_3_n_0 ,\word_cnt[20]_i_4_n_0 ,\word_cnt[20]_i_5_n_0 }));
-  FDRE \word_cnt_reg[21] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1_n_6 ),
-        .Q(word_cnt_reg[21]),
-        .R(clear));
-  FDRE \word_cnt_reg[22] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1_n_5 ),
-        .Q(word_cnt_reg[22]),
-        .R(clear));
-  FDRE \word_cnt_reg[23] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1_n_4 ),
-        .Q(word_cnt_reg[23]),
-        .R(clear));
-  FDRE \word_cnt_reg[24] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1_n_7 ),
-        .Q(word_cnt_reg[24]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[24]_i_1 
-       (.CI(\word_cnt_reg[20]_i_1_n_0 ),
-        .CO({\word_cnt_reg[24]_i_1_n_0 ,\word_cnt_reg[24]_i_1_n_1 ,\word_cnt_reg[24]_i_1_n_2 ,\word_cnt_reg[24]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[24]_i_1_n_4 ,\word_cnt_reg[24]_i_1_n_5 ,\word_cnt_reg[24]_i_1_n_6 ,\word_cnt_reg[24]_i_1_n_7 }),
-        .S({\word_cnt[24]_i_2_n_0 ,\word_cnt[24]_i_3_n_0 ,\word_cnt[24]_i_4_n_0 ,\word_cnt[24]_i_5_n_0 }));
-  FDRE \word_cnt_reg[25] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1_n_6 ),
-        .Q(word_cnt_reg[25]),
-        .R(clear));
-  FDRE \word_cnt_reg[26] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1_n_5 ),
-        .Q(word_cnt_reg[26]),
-        .R(clear));
-  FDRE \word_cnt_reg[27] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1_n_4 ),
-        .Q(word_cnt_reg[27]),
-        .R(clear));
-  FDRE \word_cnt_reg[28] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1_n_7 ),
-        .Q(word_cnt_reg[28]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[28]_i_1 
-       (.CI(\word_cnt_reg[24]_i_1_n_0 ),
-        .CO({\NLW_word_cnt_reg[28]_i_1_CO_UNCONNECTED [3],\word_cnt_reg[28]_i_1_n_1 ,\word_cnt_reg[28]_i_1_n_2 ,\word_cnt_reg[28]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[28]_i_1_n_4 ,\word_cnt_reg[28]_i_1_n_5 ,\word_cnt_reg[28]_i_1_n_6 ,\word_cnt_reg[28]_i_1_n_7 }),
-        .S({\word_cnt[28]_i_2_n_0 ,\word_cnt[28]_i_3_n_0 ,\word_cnt[28]_i_4_n_0 ,\word_cnt[28]_i_5_n_0 }));
-  FDRE \word_cnt_reg[29] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1_n_6 ),
-        .Q(word_cnt_reg[29]),
-        .R(clear));
-  FDRE \word_cnt_reg[2] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1_n_5 ),
-        .Q(word_cnt_reg[2]),
-        .R(clear));
-  FDRE \word_cnt_reg[30] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1_n_5 ),
-        .Q(word_cnt_reg[30]),
-        .R(clear));
-  FDRE \word_cnt_reg[31] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1_n_4 ),
-        .Q(word_cnt_reg[31]),
-        .R(clear));
-  FDRE \word_cnt_reg[3] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1_n_4 ),
-        .Q(word_cnt_reg[3]),
-        .R(clear));
-  FDRE \word_cnt_reg[4] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1_n_7 ),
-        .Q(word_cnt_reg[4]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[4]_i_1 
-       (.CI(\word_cnt_reg[0]_i_1_n_0 ),
-        .CO({\word_cnt_reg[4]_i_1_n_0 ,\word_cnt_reg[4]_i_1_n_1 ,\word_cnt_reg[4]_i_1_n_2 ,\word_cnt_reg[4]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[4]_i_1_n_4 ,\word_cnt_reg[4]_i_1_n_5 ,\word_cnt_reg[4]_i_1_n_6 ,\word_cnt_reg[4]_i_1_n_7 }),
-        .S({\word_cnt[4]_i_2_n_0 ,\word_cnt[4]_i_3_n_0 ,\word_cnt[4]_i_4_n_0 ,\word_cnt[4]_i_5_n_0 }));
-  FDRE \word_cnt_reg[5] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1_n_6 ),
-        .Q(word_cnt_reg[5]),
-        .R(clear));
-  FDRE \word_cnt_reg[6] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1_n_5 ),
-        .Q(word_cnt_reg[6]),
-        .R(clear));
-  FDRE \word_cnt_reg[7] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1_n_4 ),
-        .Q(word_cnt_reg[7]),
-        .R(clear));
-  FDRE \word_cnt_reg[8] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1_n_7 ),
-        .Q(word_cnt_reg[8]),
-        .R(clear));
-  CARRY4 \word_cnt_reg[8]_i_1 
-       (.CI(\word_cnt_reg[4]_i_1_n_0 ),
-        .CO({\word_cnt_reg[8]_i_1_n_0 ,\word_cnt_reg[8]_i_1_n_1 ,\word_cnt_reg[8]_i_1_n_2 ,\word_cnt_reg[8]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[8]_i_1_n_4 ,\word_cnt_reg[8]_i_1_n_5 ,\word_cnt_reg[8]_i_1_n_6 ,\word_cnt_reg[8]_i_1_n_7 }),
-        .S({\word_cnt[8]_i_2_n_0 ,\word_cnt[8]_i_3_n_0 ,\word_cnt[8]_i_4_n_0 ,\word_cnt[8]_i_5_n_0 }));
-  FDRE \word_cnt_reg[9] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1_n_6 ),
-        .Q(word_cnt_reg[9]),
         .R(clear));
 endmodule
 
@@ -11942,6 +11377,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
     TEST_RESET,
     ECC_CODE_EN,
     PATTERN_MODE,
+    ERROR_INSERT_MASK,
     out);
   output [0:0]gt1_txcharisk_in;
   output [15:0]Q;
@@ -11949,9 +11385,11 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   input TEST_RESET;
   input ECC_CODE_EN;
   input [2:0]PATTERN_MODE;
+  input [30:0]ERROR_INSERT_MASK;
   input out;
 
   wire ECC_CODE_EN;
+  wire [30:0]ERROR_INSERT_MASK;
   wire GT0_TXUSRCLK_OUT;
   wire [2:0]PATTERN_MODE;
   wire [15:0]Q;
@@ -11987,20 +11425,19 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   wire \bit_pointer_reg_n_0_[7] ;
   wire \bit_pointer_reg_n_0_[8] ;
   wire \bit_pointer_reg_n_0_[9] ;
-  wire \block_word_cnt[0]_i_1__2_n_0 ;
-  wire \block_word_cnt[0]_i_2__1_n_0 ;
-  wire \block_word_cnt[0]_i_3__1_n_0 ;
+  wire \block_word_cnt[0]_i_1__1_n_0 ;
+  wire \block_word_cnt[0]_i_2__2_n_0 ;
+  wire \block_word_cnt[0]_i_3__2_n_0 ;
   wire \block_word_cnt[1]_i_1__2_n_0 ;
   wire \block_word_cnt[1]_i_2__2_n_0 ;
-  wire \block_word_cnt[1]_i_3__1_n_0 ;
-  wire \block_word_cnt[1]_i_4_n_0 ;
-  wire \block_word_cnt[1]_i_5__0_n_0 ;
-  wire \block_word_cnt[1]_i_6__1_n_0 ;
+  wire \block_word_cnt[1]_i_3__2_n_0 ;
+  wire \block_word_cnt[1]_i_4__1_n_0 ;
+  wire \block_word_cnt[1]_i_5__1_n_0 ;
   wire \block_word_cnt[2]_i_1__2_n_0 ;
   wire \block_word_cnt[2]_i_2__0_n_0 ;
   wire \block_word_cnt[2]_i_3__0_n_0 ;
   wire \block_word_cnt[3]_i_1__2_n_0 ;
-  wire \block_word_cnt[4]_i_2__0_n_0 ;
+  wire \block_word_cnt[4]_i_2__1_n_0 ;
   wire \block_word_cnt[4]_i_3__2_n_0 ;
   wire \block_word_cnt[4]_i_4__1_n_0 ;
   wire \block_word_cnt[5]_i_1__1_n_0 ;
@@ -12061,9 +11498,13 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   wire pattern_gen_inst_1_n_0;
   wire pattern_gen_inst_1_n_1;
   wire pattern_gen_inst_1_n_10;
+  wire pattern_gen_inst_1_n_11;
+  wire pattern_gen_inst_1_n_18;
   wire pattern_gen_inst_1_n_19;
   wire pattern_gen_inst_1_n_2;
   wire pattern_gen_inst_1_n_20;
+  wire pattern_gen_inst_1_n_21;
+  wire pattern_gen_inst_1_n_22;
   wire pattern_gen_inst_1_n_3;
   wire pattern_gen_inst_1_n_4;
   wire pattern_gen_inst_1_n_5;
@@ -12075,18 +11516,17 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   wire pattern_pause_reg_i_1__1_n_0;
   wire pattern_pause_reg_i_2__1_n_0;
   wire pattern_rst_reg;
-  wire [10:0]pattern_word;
+  wire [11:3]pattern_word;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire system_reset_r;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire system_reset_r2;
-  wire \test_init_cnt[0]_i_10_n_0 ;
   wire \test_init_cnt[0]_i_1__0_n_0 ;
   wire \test_init_cnt[0]_i_3__0_n_0 ;
   wire \test_init_cnt[0]_i_4__0_n_0 ;
   wire \test_init_cnt[0]_i_5__0_n_0 ;
   wire \test_init_cnt[0]_i_6__0_n_0 ;
   wire \test_init_cnt[0]_i_7__0_n_0 ;
-  wire \test_init_cnt[0]_i_8_n_0 ;
-  wire \test_init_cnt[0]_i_9__0_n_0 ;
+  wire \test_init_cnt[0]_i_8__0_n_0 ;
+  wire \test_init_cnt[0]_i_9_n_0 ;
   wire \test_init_cnt[12]_i_2__0_n_0 ;
   wire \test_init_cnt[12]_i_3__0_n_0 ;
   wire \test_init_cnt[12]_i_4__0_n_0 ;
@@ -12132,128 +11572,30 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   wire \test_init_cnt_reg[8]_i_1__0_n_6 ;
   wire \test_init_cnt_reg[8]_i_1__0_n_7 ;
   wire [15:0]tx_data_reg;
-  wire \tx_data_reg[0]_i_3__0_n_0 ;
-  wire \tx_data_reg[10]_i_3_n_0 ;
+  wire \tx_data_reg[0]_i_4_n_0 ;
+  wire \tx_data_reg[10]_i_2__0_n_0 ;
   wire \tx_data_reg[10]_i_4_n_0 ;
-  wire \tx_data_reg[11]_i_3__0_n_0 ;
-  wire \tx_data_reg[11]_i_4__0_n_0 ;
-  wire \tx_data_reg[11]_i_5__0_n_0 ;
-  wire \tx_data_reg[12]_i_2__0_n_0 ;
+  wire \tx_data_reg[10]_i_5_n_0 ;
+  wire \tx_data_reg[10]_i_6_n_0 ;
   wire \tx_data_reg[12]_i_3__0_n_0 ;
   wire \tx_data_reg[12]_i_5_n_0 ;
   wire \tx_data_reg[15]_i_2__0_n_0 ;
   wire \tx_data_reg[15]_i_3__0_n_0 ;
   wire \tx_data_reg[15]_i_5__0_n_0 ;
-  wire \tx_data_reg[2]_i_3__0_n_0 ;
-  wire \tx_data_reg[2]_i_5_n_0 ;
-  wire \tx_data_reg[3]_i_3__0_n_0 ;
-  wire \tx_data_reg[3]_i_4__0_n_0 ;
-  wire \tx_data_reg[3]_i_5__0_n_0 ;
-  wire \tx_data_reg[4]_i_3__0_n_0 ;
-  wire \tx_data_reg[4]_i_5_n_0 ;
-  wire \tx_data_reg[6]_i_2__0_n_0 ;
-  wire \tx_data_reg[8]_i_4_n_0 ;
-  wire \tx_data_reg[8]_i_5_n_0 ;
+  wire \tx_data_reg[1]_i_4__0_n_0 ;
+  wire \tx_data_reg[1]_i_6_n_0 ;
+  wire \tx_data_reg[2]_i_4__0_n_0 ;
+  wire \tx_data_reg[3]_i_4_n_0 ;
+  wire \tx_data_reg[4]_i_4__0_n_0 ;
+  wire \tx_data_reg[8]_i_4__0_n_0 ;
+  wire \tx_data_reg[9]_i_2__0_n_0 ;
+  wire \tx_data_reg[9]_i_3__0_n_0 ;
+  wire \tx_data_reg[9]_i_4__0_n_0 ;
+  wire \tx_data_reg[9]_i_6__0_n_0 ;
   wire \txctrl_reg[0]_i_1__0_n_0 ;
+  wire \txctrl_reg[0]_i_2_n_0 ;
   wire \txctrl_reg_reg_n_0_[0] ;
-  wire \word_cnt[0]_i_2__0_n_0 ;
-  wire \word_cnt[0]_i_3__0_n_0 ;
-  wire \word_cnt[0]_i_4__0_n_0 ;
-  wire \word_cnt[0]_i_5__0_n_0 ;
-  wire \word_cnt[12]_i_2__0_n_0 ;
-  wire \word_cnt[12]_i_3__0_n_0 ;
-  wire \word_cnt[12]_i_4__0_n_0 ;
-  wire \word_cnt[12]_i_5__0_n_0 ;
-  wire \word_cnt[16]_i_2__0_n_0 ;
-  wire \word_cnt[16]_i_3__0_n_0 ;
-  wire \word_cnt[16]_i_4__0_n_0 ;
-  wire \word_cnt[16]_i_5__0_n_0 ;
-  wire \word_cnt[20]_i_2__0_n_0 ;
-  wire \word_cnt[20]_i_3__0_n_0 ;
-  wire \word_cnt[20]_i_4__0_n_0 ;
-  wire \word_cnt[20]_i_5__0_n_0 ;
-  wire \word_cnt[24]_i_2__0_n_0 ;
-  wire \word_cnt[24]_i_3__0_n_0 ;
-  wire \word_cnt[24]_i_4__0_n_0 ;
-  wire \word_cnt[24]_i_5__0_n_0 ;
-  wire \word_cnt[28]_i_2__0_n_0 ;
-  wire \word_cnt[28]_i_3__0_n_0 ;
-  wire \word_cnt[28]_i_4__0_n_0 ;
-  wire \word_cnt[28]_i_5__0_n_0 ;
-  wire \word_cnt[4]_i_2__0_n_0 ;
-  wire \word_cnt[4]_i_3__0_n_0 ;
-  wire \word_cnt[4]_i_4__0_n_0 ;
-  wire \word_cnt[4]_i_5__0_n_0 ;
-  wire \word_cnt[8]_i_2__0_n_0 ;
-  wire \word_cnt[8]_i_3__0_n_0 ;
-  wire \word_cnt[8]_i_4__0_n_0 ;
-  wire \word_cnt[8]_i_5__0_n_0 ;
-  wire [31:0]word_cnt_reg;
-  wire \word_cnt_reg[0]_i_1__0_n_0 ;
-  wire \word_cnt_reg[0]_i_1__0_n_1 ;
-  wire \word_cnt_reg[0]_i_1__0_n_2 ;
-  wire \word_cnt_reg[0]_i_1__0_n_3 ;
-  wire \word_cnt_reg[0]_i_1__0_n_4 ;
-  wire \word_cnt_reg[0]_i_1__0_n_5 ;
-  wire \word_cnt_reg[0]_i_1__0_n_6 ;
-  wire \word_cnt_reg[0]_i_1__0_n_7 ;
-  wire \word_cnt_reg[12]_i_1__0_n_0 ;
-  wire \word_cnt_reg[12]_i_1__0_n_1 ;
-  wire \word_cnt_reg[12]_i_1__0_n_2 ;
-  wire \word_cnt_reg[12]_i_1__0_n_3 ;
-  wire \word_cnt_reg[12]_i_1__0_n_4 ;
-  wire \word_cnt_reg[12]_i_1__0_n_5 ;
-  wire \word_cnt_reg[12]_i_1__0_n_6 ;
-  wire \word_cnt_reg[12]_i_1__0_n_7 ;
-  wire \word_cnt_reg[16]_i_1__0_n_0 ;
-  wire \word_cnt_reg[16]_i_1__0_n_1 ;
-  wire \word_cnt_reg[16]_i_1__0_n_2 ;
-  wire \word_cnt_reg[16]_i_1__0_n_3 ;
-  wire \word_cnt_reg[16]_i_1__0_n_4 ;
-  wire \word_cnt_reg[16]_i_1__0_n_5 ;
-  wire \word_cnt_reg[16]_i_1__0_n_6 ;
-  wire \word_cnt_reg[16]_i_1__0_n_7 ;
-  wire \word_cnt_reg[20]_i_1__0_n_0 ;
-  wire \word_cnt_reg[20]_i_1__0_n_1 ;
-  wire \word_cnt_reg[20]_i_1__0_n_2 ;
-  wire \word_cnt_reg[20]_i_1__0_n_3 ;
-  wire \word_cnt_reg[20]_i_1__0_n_4 ;
-  wire \word_cnt_reg[20]_i_1__0_n_5 ;
-  wire \word_cnt_reg[20]_i_1__0_n_6 ;
-  wire \word_cnt_reg[20]_i_1__0_n_7 ;
-  wire \word_cnt_reg[24]_i_1__0_n_0 ;
-  wire \word_cnt_reg[24]_i_1__0_n_1 ;
-  wire \word_cnt_reg[24]_i_1__0_n_2 ;
-  wire \word_cnt_reg[24]_i_1__0_n_3 ;
-  wire \word_cnt_reg[24]_i_1__0_n_4 ;
-  wire \word_cnt_reg[24]_i_1__0_n_5 ;
-  wire \word_cnt_reg[24]_i_1__0_n_6 ;
-  wire \word_cnt_reg[24]_i_1__0_n_7 ;
-  wire \word_cnt_reg[28]_i_1__0_n_1 ;
-  wire \word_cnt_reg[28]_i_1__0_n_2 ;
-  wire \word_cnt_reg[28]_i_1__0_n_3 ;
-  wire \word_cnt_reg[28]_i_1__0_n_4 ;
-  wire \word_cnt_reg[28]_i_1__0_n_5 ;
-  wire \word_cnt_reg[28]_i_1__0_n_6 ;
-  wire \word_cnt_reg[28]_i_1__0_n_7 ;
-  wire \word_cnt_reg[4]_i_1__0_n_0 ;
-  wire \word_cnt_reg[4]_i_1__0_n_1 ;
-  wire \word_cnt_reg[4]_i_1__0_n_2 ;
-  wire \word_cnt_reg[4]_i_1__0_n_3 ;
-  wire \word_cnt_reg[4]_i_1__0_n_4 ;
-  wire \word_cnt_reg[4]_i_1__0_n_5 ;
-  wire \word_cnt_reg[4]_i_1__0_n_6 ;
-  wire \word_cnt_reg[4]_i_1__0_n_7 ;
-  wire \word_cnt_reg[8]_i_1__0_n_0 ;
-  wire \word_cnt_reg[8]_i_1__0_n_1 ;
-  wire \word_cnt_reg[8]_i_1__0_n_2 ;
-  wire \word_cnt_reg[8]_i_1__0_n_3 ;
-  wire \word_cnt_reg[8]_i_1__0_n_4 ;
-  wire \word_cnt_reg[8]_i_1__0_n_5 ;
-  wire \word_cnt_reg[8]_i_1__0_n_6 ;
-  wire \word_cnt_reg[8]_i_1__0_n_7 ;
   wire [3:3]\NLW_test_init_cnt_reg[12]_i_1__0_CO_UNCONNECTED ;
-  wire [3:3]\NLW_word_cnt_reg[28]_i_1__0_CO_UNCONNECTED ;
 
   LUT1 #(
     .INIT(2'h1)) 
@@ -12362,42 +11704,42 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .D(error_insertion_inst_1_n_6),
         .Q(Q[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[10]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[9] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[10]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[11]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[10] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[11]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[12]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[11] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[12]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[13]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[12] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[13]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[14]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[13] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[14]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[15]_i_1__0 
@@ -12410,56 +11752,56 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
        (.I0(\bit_pointer_reg_n_0_[0] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[2]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[1] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[3]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[2] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[4]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[3] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[4]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[5]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[4] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[6]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[5] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[7]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[6] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[8]_i_1__0 
        (.I0(\bit_pointer_reg_n_0_[7] ),
         .I1(\bit_pointer_reg_n_0_[15] ),
         .O(\bit_pointer[8]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \bit_pointer[9]_i_1__0 
@@ -12563,173 +11905,164 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .Q(\bit_pointer_reg_n_0_[9] ),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   LUT6 #(
-    .INIT(64'hCF00CCCC55555555)) 
-    \block_word_cnt[0]_i_1__2 
+    .INIT(64'hCCCFCC0055555555)) 
+    \block_word_cnt[0]_i_1__1 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt[0]_i_2__1_n_0 ),
+        .I1(\block_word_cnt[0]_i_2__2_n_0 ),
         .I2(ECC_CODE_EN),
-        .I3(\block_word_cnt[1]_i_3__1_n_0 ),
-        .I4(\block_word_cnt[0]_i_3__1_n_0 ),
-        .I5(\block_word_cnt[4]_i_2__0_n_0 ),
-        .O(\block_word_cnt[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+        .I3(\block_word_cnt[0]_i_3__2_n_0 ),
+        .I4(\block_word_cnt[1]_i_3__2_n_0 ),
+        .I5(\block_word_cnt[4]_i_2__1_n_0 ),
+        .O(\block_word_cnt[0]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT5 #(
-    .INIT(32'hEFCFFFEF)) 
-    \block_word_cnt[0]_i_2__1 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[0]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
-  LUT5 #(
-    .INIT(32'hFBFBFBEF)) 
-    \block_word_cnt[0]_i_3__1 
+    .INIT(32'hFBFFBBFB)) 
+    \block_word_cnt[0]_i_2__2 
        (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[0]_i_3__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0FFF66660FF06666)) 
-    \block_word_cnt[1]_i_1__2 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt[1]_i_2__2_n_0 ),
-        .I3(\block_word_cnt[1]_i_3__1_n_0 ),
-        .I4(\block_word_cnt[4]_i_2__0_n_0 ),
-        .I5(\block_word_cnt[1]_i_4_n_0 ),
-        .O(\block_word_cnt[1]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
-  LUT5 #(
-    .INIT(32'h00004E14)) 
-    \block_word_cnt[1]_i_2__2 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
         .I1(\block_word_cnt_reg_n_0_[0] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
         .I3(\block_word_cnt_reg_n_0_[4] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[1]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
-  LUT4 #(
-    .INIT(16'h0220)) 
-    \block_word_cnt[1]_i_3__1 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[1]_i_3__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    \block_word_cnt[1]_i_4 
-       (.I0(\block_word_cnt[1]_i_5__0_n_0 ),
-        .I1(\block_word_cnt[1]_i_6__1_n_0 ),
-        .I2(test_init_cnt_reg[9]),
-        .I3(test_init_cnt_reg[10]),
-        .I4(test_init_cnt_reg[7]),
-        .I5(test_init_cnt_reg[8]),
-        .O(\block_word_cnt[1]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \block_word_cnt[1]_i_5__0 
-       (.I0(test_init_cnt_reg[3]),
-        .I1(test_init_cnt_reg[1]),
-        .I2(test_init_cnt_reg[0]),
-        .I3(test_init_cnt_reg[2]),
-        .O(\block_word_cnt[1]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .O(\block_word_cnt[0]_i_2__2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \block_word_cnt[1]_i_6__1 
-       (.I0(test_init_cnt_reg[6]),
-        .I1(test_init_cnt_reg[12]),
-        .I2(test_init_cnt_reg[5]),
-        .I3(test_init_cnt_reg[4]),
-        .I4(\test_init_cnt[0]_i_9__0_n_0 ),
-        .O(\block_word_cnt[1]_i_6__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00FF00006A6A6A6A)) 
-    \block_word_cnt[2]_i_1__2 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt[2]_i_2__0_n_0 ),
-        .I4(\block_word_cnt[2]_i_3__0_n_0 ),
-        .I5(\block_word_cnt[4]_i_2__0_n_0 ),
-        .O(\block_word_cnt[2]_i_1__2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFF70FFFFFFFFF)) 
-    \block_word_cnt[2]_i_2__0 
-       (.I0(ECC_CODE_EN),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[3] ),
-        .I5(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[2]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
-  LUT4 #(
-    .INIT(16'hFFDF)) 
-    \block_word_cnt[2]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[3] ),
-        .O(\block_word_cnt[2]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \block_word_cnt[3]_i_1__2 
+    .INIT(32'h00540100)) 
+    \block_word_cnt[0]_i_3__2 
        (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\block_word_cnt[3]_i_1__2_n_0 ));
-  LUT5 #(
-    .INIT(32'h22A80222)) 
-    \block_word_cnt[4]_i_2__0 
-       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[2] ),
         .I2(\block_word_cnt_reg_n_0_[0] ),
         .I3(\block_word_cnt_reg_n_0_[1] ),
         .I4(\block_word_cnt_reg_n_0_[4] ),
-        .O(\block_word_cnt[4]_i_2__0_n_0 ));
+        .O(\block_word_cnt[0]_i_3__2_n_0 ));
+  LUT6 #(
+    .INIT(64'h760076FF76FF7600)) 
+    \block_word_cnt[1]_i_1__2 
+       (.I0(\block_word_cnt[1]_i_2__2_n_0 ),
+        .I1(\block_word_cnt[1]_i_3__2_n_0 ),
+        .I2(\block_word_cnt[1]_i_4__1_n_0 ),
+        .I3(\block_word_cnt[4]_i_2__1_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I5(\block_word_cnt_reg_n_0_[1] ),
+        .O(\block_word_cnt[1]_i_1__2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  LUT5 #(
+    .INIT(32'h00004D18)) 
+    \block_word_cnt[1]_i_2__2 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[1]_i_2__2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  LUT4 #(
+    .INIT(16'h0028)) 
+    \block_word_cnt[1]_i_3__2 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[1]_i_3__2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \block_word_cnt[1]_i_4__1 
+       (.I0(\block_word_cnt[1]_i_5__1_n_0 ),
+        .I1(test_init_cnt_reg[14]),
+        .I2(test_init_cnt_reg[12]),
+        .I3(test_init_cnt_reg[15]),
+        .I4(test_init_cnt_reg[13]),
+        .I5(\test_init_cnt[0]_i_3__0_n_0 ),
+        .O(\block_word_cnt[1]_i_4__1_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \block_word_cnt[1]_i_5__1 
+       (.I0(test_init_cnt_reg[10]),
+        .I1(test_init_cnt_reg[11]),
+        .I2(test_init_cnt_reg[8]),
+        .I3(test_init_cnt_reg[9]),
+        .O(\block_word_cnt[1]_i_5__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00006A6A00FF6A6A)) 
+    \block_word_cnt[2]_i_1__2 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt[2]_i_2__0_n_0 ),
+        .I4(\block_word_cnt[4]_i_2__1_n_0 ),
+        .I5(\block_word_cnt[2]_i_3__0_n_0 ),
+        .O(\block_word_cnt[2]_i_1__2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFF7F0FFFFFFFFFF)) 
+    \block_word_cnt[2]_i_2__0 
+       (.I0(ECC_CODE_EN),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[3] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(\block_word_cnt[2]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  LUT4 #(
+    .INIT(16'h0020)) 
+    \block_word_cnt[2]_i_3__0 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .O(\block_word_cnt[2]_i_3__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  LUT4 #(
+    .INIT(16'h6AAA)) 
+    \block_word_cnt[3]_i_1__2 
+       (.I0(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .O(\block_word_cnt[3]_i_1__2_n_0 ));
+  LUT5 #(
+    .INIT(32'h2A280222)) 
+    \block_word_cnt[4]_i_2__1 
+       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[2] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .O(\block_word_cnt[4]_i_2__1_n_0 ));
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \block_word_cnt[4]_i_3__2 
        (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[3] ),
-        .I2(\block_word_cnt_reg_n_0_[2] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
         .O(\block_word_cnt[4]_i_3__2_n_0 ));
   LUT6 #(
-    .INIT(64'h0036000000160000)) 
+    .INIT(64'h0312000001120000)) 
     \block_word_cnt[4]_i_4__1 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[3] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[1] ),
         .I4(\block_word_cnt_reg_n_0_[4] ),
         .I5(ECC_CODE_EN),
         .O(\block_word_cnt[4]_i_4__1_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'h6AAAAAAAAAAAAAAA)) 
     \block_word_cnt[5]_i_1__1 
-       (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\block_word_cnt_reg_n_0_[5] ),
+       (.I0(\block_word_cnt_reg_n_0_[5] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
         .O(\block_word_cnt[5]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h9)) 
     \block_word_cnt[6]_i_1__2 
-       (.I0(\block_word_cnt_reg_n_0_[6] ),
-        .I1(\block_word_cnt[7]_i_3__1_n_0 ),
+       (.I0(\block_word_cnt[7]_i_3__1_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[6] ),
         .O(\block_word_cnt[6]_i_1__2_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
@@ -12737,28 +12070,28 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
        (.I0(system_reset_r2),
         .I1(TEST_RESET),
         .O(\block_word_cnt[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h9A)) 
     \block_word_cnt[7]_i_2__1 
        (.I0(\block_word_cnt_reg_n_0_[7] ),
         .I1(\block_word_cnt[7]_i_3__1_n_0 ),
         .I2(\block_word_cnt_reg_n_0_[6] ),
         .O(\block_word_cnt[7]_i_2__1_n_0 ));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \block_word_cnt[7]_i_3__1 
-       (.I0(\block_word_cnt_reg_n_0_[5] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .I5(\block_word_cnt_reg_n_0_[3] ),
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .I5(\block_word_cnt_reg_n_0_[5] ),
         .O(\block_word_cnt[7]_i_3__1_n_0 ));
   FDRE \block_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(\block_word_cnt[0]_i_1__2_n_0 ),
+        .D(\block_word_cnt[0]_i_1__1_n_0 ),
         .Q(\block_word_cnt_reg_n_0_[0] ),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \block_word_cnt_reg[1] 
@@ -12789,7 +12122,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
        (.I0(\block_word_cnt[4]_i_3__2_n_0 ),
         .I1(\block_word_cnt[4]_i_4__1_n_0 ),
         .O(\block_word_cnt_reg[4]_i_1__1_n_0 ),
-        .S(\block_word_cnt[4]_i_2__0_n_0 ));
+        .S(\block_word_cnt[4]_i_2__1_n_0 ));
   FDRE \block_word_cnt_reg[5] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
@@ -12821,14 +12154,14 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .D(data_word_valid_i_1__1_n_0),
         .Q(data_word_valid),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT5 #(
-    .INIT(32'hFFF30032)) 
+    .INIT(32'hFF5F0A08)) 
     encoder_rst_reg_i_1__0
-       (.I0(\block_word_cnt[1]_i_4_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\tx_data_reg[10]_i_4_n_0 ),
+       (.I0(\tx_data_reg[1]_i_4__0_n_0 ),
+        .I1(\block_word_cnt[1]_i_4__1_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(encoder_rst_reg),
         .O(encoder_rst_reg_i_1__0_n_0));
   FDSE encoder_rst_reg_reg
@@ -12839,23 +12172,23 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .S(\block_word_cnt[7]_i_1__2_n_0 ));
   gtx3g_bert_0_error_insertion error_insertion_inst_1
        (.D({error_insertion_inst_1_n_0,error_insertion_inst_1_n_1,error_insertion_inst_1_n_2,error_insertion_inst_1_n_3,error_insertion_inst_1_n_4,error_insertion_inst_1_n_5,error_insertion_inst_1_n_6,error_insertion_inst_1_n_7,error_insertion_inst_1_n_8,error_insertion_inst_1_n_9,error_insertion_inst_1_n_10,error_insertion_inst_1_n_11,error_insertion_inst_1_n_12,error_insertion_inst_1_n_13,error_insertion_inst_1_n_14,error_insertion_inst_1_n_15}),
+        .ERROR_INSERT_MASK(ERROR_INSERT_MASK),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(tx_data_reg),
         .TEST_RESET(TEST_RESET),
         .\bit_pointer_reg[15] ({\bit_pointer_reg_n_0_[15] ,\bit_pointer_reg_n_0_[14] ,\bit_pointer_reg_n_0_[13] ,\bit_pointer_reg_n_0_[12] ,\bit_pointer_reg_n_0_[11] ,\bit_pointer_reg_n_0_[10] ,\bit_pointer_reg_n_0_[9] ,\bit_pointer_reg_n_0_[8] ,\bit_pointer_reg_n_0_[7] ,\bit_pointer_reg_n_0_[6] ,\bit_pointer_reg_n_0_[5] ,\bit_pointer_reg_n_0_[4] ,\bit_pointer_reg_n_0_[3] ,\bit_pointer_reg_n_0_[2] ,\bit_pointer_reg_n_0_[1] ,\bit_pointer_reg_n_0_[0] }),
         .error_insertion_rst_reg(error_insertion_rst_reg),
         .out(system_reset_r2),
-        .\txctrl_reg_reg[0] (\txctrl_reg_reg_n_0_[0] ),
-        .word_cnt_reg(word_cnt_reg));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
-  LUT5 #(
-    .INIT(32'hAAA8AAAA)) 
+        .\txctrl_reg_reg[0] (\txctrl_reg_reg_n_0_[0] ));
+  LUT6 #(
+    .INIT(64'hAAAAA8AAAAAAAAAA)) 
     error_insertion_rst_reg_i_1__0
        (.I0(error_insertion_rst_reg),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\tx_data_reg[10]_i_4_n_0 ),
-        .I4(\block_word_cnt[1]_i_4_n_0 ),
+        .I1(\test_init_cnt[0]_i_5__0_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
+        .I5(\block_word_cnt[1]_i_4__1_n_0 ),
         .O(error_insertion_rst_reg_i_1__0_n_0));
   FDSE error_insertion_rst_reg_reg
        (.C(GT0_TXUSRCLK_OUT),
@@ -12864,94 +12197,96 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .Q(error_insertion_rst_reg),
         .S(\block_word_cnt[7]_i_1__2_n_0 ));
   gtx3g_bert_0_parity_encoder parity_encoder_inst_1
-       (.D({parity_encoder_inst_1_n_0,parity_encoder_inst_1_n_1,parity_encoder_inst_1_n_2,parity_encoder_inst_1_n_3,parity_encoder_inst_1_n_4}),
+       (.D({parity_encoder_inst_1_n_0,parity_encoder_inst_1_n_1,parity_encoder_inst_1_n_2,parity_encoder_inst_1_n_3}),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(tx_data_reg),
         .SR(encoder_rst_reg),
-        .\block_word_cnt_reg[0] (\tx_data_reg[6]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[0]_0 (\tx_data_reg[0]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[0]_1 (\tx_data_reg[10]_i_3_n_0 ),
-        .\block_word_cnt_reg[2] (pattern_gen_inst_1_n_20),
-        .\block_word_cnt_reg[2]_0 (\tx_data_reg[12]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[2]_1 (\tx_data_reg[12]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[2]_2 (\tx_data_reg[12]_i_5_n_0 ),
+        .\block_word_cnt_reg[0] (\tx_data_reg[0]_i_4_n_0 ),
+        .\block_word_cnt_reg[0]_0 (pattern_gen_inst_1_n_20),
+        .\block_word_cnt_reg[0]_1 (\tx_data_reg[10]_i_2__0_n_0 ),
+        .\block_word_cnt_reg[1] (\tx_data_reg[9]_i_6__0_n_0 ),
+        .\block_word_cnt_reg[2] (\tx_data_reg[15]_i_3__0_n_0 ),
+        .\block_word_cnt_reg[2]_0 (\tx_data_reg[10]_i_4_n_0 ),
         .\block_word_cnt_reg[3] (\tx_data_reg[15]_i_5__0_n_0 ),
-        .\block_word_cnt_reg[4] ({\block_word_cnt_reg_n_0_[4] ,\block_word_cnt_reg_n_0_[2] ,\block_word_cnt_reg_n_0_[1] ,\block_word_cnt_reg_n_0_[0] }),
-        .\block_word_cnt_reg[4]_0 (\tx_data_reg[3]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[4]_1 (\tx_data_reg[11]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[4]_2 (\tx_data_reg[11]_i_4__0_n_0 ),
-        .\block_word_cnt_reg[4]_3 (\tx_data_reg[11]_i_5__0_n_0 ),
-        .\block_word_cnt_reg[4]_4 (\tx_data_reg[10]_i_4_n_0 ),
-        .\block_word_cnt_reg[4]_5 (\tx_data_reg[4]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[4]_6 (\tx_data_reg[15]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[4]_7 (\tx_data_reg[8]_i_5_n_0 ),
+        .\block_word_cnt_reg[4] (pattern_gen_inst_1_n_18),
+        .\block_word_cnt_reg[4]_0 ({\block_word_cnt_reg_n_0_[4] ,\block_word_cnt_reg_n_0_[2] ,\block_word_cnt_reg_n_0_[1] ,\block_word_cnt_reg_n_0_[0] }),
+        .\block_word_cnt_reg[4]_1 (\tx_data_reg[1]_i_4__0_n_0 ),
+        .\block_word_cnt_reg[4]_2 (\tx_data_reg[1]_i_6_n_0 ),
+        .\block_word_cnt_reg[4]_3 (\tx_data_reg[10]_i_5_n_0 ),
         .data_word_valid(data_word_valid),
-        .\pattern_reg_reg[10] ({pattern_word[10:7],pattern_word[5],pattern_word[3],pattern_word[1:0]}),
-        .\pattern_reg_reg[1] (pattern_gen_inst_1_n_19),
-        .test_init_cnt_reg({test_init_cnt_reg[12],test_init_cnt_reg[10],test_init_cnt_reg[1:0]}),
-        .\test_init_cnt_reg_1__s_port_] (\tx_data_reg[3]_i_4__0_n_0 ),
-        .\tx_data_reg_reg[12] (parity_encoder_inst_1_n_8),
-        .\tx_data_reg_reg[13] (parity_encoder_inst_1_n_13),
-        .\tx_data_reg_reg[14] (parity_encoder_inst_1_n_14),
-        .\tx_data_reg_reg[15] (parity_encoder_inst_1_n_15),
-        .\tx_data_reg_reg[2] (parity_encoder_inst_1_n_9),
-        .\tx_data_reg_reg[4] (parity_encoder_inst_1_n_10),
-        .\tx_data_reg_reg[5] (parity_encoder_inst_1_n_5),
-        .\tx_data_reg_reg[6] (parity_encoder_inst_1_n_11),
-        .\tx_data_reg_reg[7] (parity_encoder_inst_1_n_6),
-        .\tx_data_reg_reg[8] (parity_encoder_inst_1_n_12),
-        .\tx_data_reg_reg[9] (parity_encoder_inst_1_n_7));
+        .\pattern_reg_reg[0] (pattern_gen_inst_1_n_21),
+        .\pattern_reg_reg[10] (pattern_gen_inst_1_n_19),
+        .\pattern_reg_reg[11] ({pattern_word[11],pattern_word[9:7],pattern_word[5],pattern_word[3]}),
+        .\pattern_reg_reg[1] (pattern_gen_inst_1_n_22),
+        .test_init_cnt_reg({test_init_cnt_reg[6],test_init_cnt_reg[1:0]}),
+        .\test_init_cnt_reg[14] (\block_word_cnt[1]_i_4__1_n_0 ),
+        .\tx_data_reg_reg[11] (parity_encoder_inst_1_n_15),
+        .\tx_data_reg_reg[12] (parity_encoder_inst_1_n_10),
+        .\tx_data_reg_reg[13] (parity_encoder_inst_1_n_9),
+        .\tx_data_reg_reg[14] (parity_encoder_inst_1_n_8),
+        .\tx_data_reg_reg[15] (parity_encoder_inst_1_n_7),
+        .\tx_data_reg_reg[2] (parity_encoder_inst_1_n_12),
+        .\tx_data_reg_reg[3] (parity_encoder_inst_1_n_13),
+        .\tx_data_reg_reg[4] (parity_encoder_inst_1_n_11),
+        .\tx_data_reg_reg[5] (parity_encoder_inst_1_n_4),
+        .\tx_data_reg_reg[7] (parity_encoder_inst_1_n_5),
+        .\tx_data_reg_reg[8] (parity_encoder_inst_1_n_14),
+        .\tx_data_reg_reg[9] (parity_encoder_inst_1_n_6));
   gtx3g_bert_0_pattern_gen pattern_gen_inst_1
-       (.D({pattern_gen_inst_1_n_0,pattern_gen_inst_1_n_1,pattern_gen_inst_1_n_2,pattern_gen_inst_1_n_3,pattern_gen_inst_1_n_4,pattern_gen_inst_1_n_5,pattern_gen_inst_1_n_6,pattern_gen_inst_1_n_7,pattern_gen_inst_1_n_8,pattern_gen_inst_1_n_9,pattern_gen_inst_1_n_10}),
+       (.D({pattern_gen_inst_1_n_0,pattern_gen_inst_1_n_1,pattern_gen_inst_1_n_2,pattern_gen_inst_1_n_3,pattern_gen_inst_1_n_4,pattern_gen_inst_1_n_5,pattern_gen_inst_1_n_6,pattern_gen_inst_1_n_7,pattern_gen_inst_1_n_8,pattern_gen_inst_1_n_9,pattern_gen_inst_1_n_10,pattern_gen_inst_1_n_11}),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .PATTERN_MODE(PATTERN_MODE),
-        .Q({pattern_word[10:7],pattern_word[5],pattern_word[3],pattern_word[1:0]}),
-        .\block_word_cnt_reg[0] (\tx_data_reg[8]_i_4_n_0 ),
-        .\block_word_cnt_reg[0]_0 (\tx_data_reg[6]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[0]_1 (\tx_data_reg[10]_i_3_n_0 ),
-        .\block_word_cnt_reg[0]_2 (\tx_data_reg[15]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[1] (\tx_data_reg[4]_i_5_n_0 ),
-        .\block_word_cnt_reg[1]_0 (\tx_data_reg[2]_i_5_n_0 ),
-        .\block_word_cnt_reg[2] (\tx_data_reg[2]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[2]_0 (parity_encoder_inst_1_n_11),
-        .\block_word_cnt_reg[2]_1 (\tx_data_reg[12]_i_2__0_n_0 ),
-        .\block_word_cnt_reg[2]_2 (\tx_data_reg[12]_i_3__0_n_0 ),
+        .Q({pattern_word[11],pattern_word[9:7],pattern_word[5],pattern_word[3]}),
+        .\block_word_cnt_reg[0] (\tx_data_reg[9]_i_2__0_n_0 ),
+        .\block_word_cnt_reg[0]_0 (\tx_data_reg[9]_i_3__0_n_0 ),
+        .\block_word_cnt_reg[0]_1 (\tx_data_reg[15]_i_2__0_n_0 ),
+        .\block_word_cnt_reg[0]_2 (\tx_data_reg[4]_i_4__0_n_0 ),
+        .\block_word_cnt_reg[1] (\tx_data_reg[8]_i_4__0_n_0 ),
+        .\block_word_cnt_reg[1]_0 (\tx_data_reg[2]_i_4__0_n_0 ),
+        .\block_word_cnt_reg[2] (\tx_data_reg[15]_i_3__0_n_0 ),
+        .\block_word_cnt_reg[2]_0 (\tx_data_reg[12]_i_3__0_n_0 ),
         .\block_word_cnt_reg[3] (\tx_data_reg[15]_i_5__0_n_0 ),
         .\block_word_cnt_reg[4] ({\block_word_cnt_reg_n_0_[4] ,\block_word_cnt_reg_n_0_[2] ,\block_word_cnt_reg_n_0_[1] ,\block_word_cnt_reg_n_0_[0] }),
-        .\block_word_cnt_reg[4]_0 (\tx_data_reg[4]_i_3__0_n_0 ),
-        .\block_word_cnt_reg[4]_1 (\tx_data_reg[15]_i_3__0_n_0 ),
-        .\hor_parity_word_reg_reg[2] (parity_encoder_inst_1_n_9),
+        .\hor_parity_word_reg_reg[12] (parity_encoder_inst_1_n_10),
+        .\hor_parity_word_reg_reg[13] (parity_encoder_inst_1_n_9),
+        .\hor_parity_word_reg_reg[14] (parity_encoder_inst_1_n_8),
+        .\hor_parity_word_reg_reg[15] (parity_encoder_inst_1_n_7),
+        .\hor_parity_word_reg_reg[4] (parity_encoder_inst_1_n_11),
         .pattern_pause_reg(pattern_pause_reg),
-        .\pattern_reg_reg[5]_0 (parity_encoder_inst_1_n_5),
-        .\pattern_reg_reg[7]_0 (parity_encoder_inst_1_n_6),
-        .\pattern_reg_reg[8]_0 (parity_encoder_inst_1_n_12),
-        .\pattern_reg_reg[9]_0 (parity_encoder_inst_1_n_7),
+        .\pattern_reg_reg[11]_0 (parity_encoder_inst_1_n_15),
+        .\pattern_reg_reg[3]_0 (parity_encoder_inst_1_n_13),
+        .\pattern_reg_reg[5]_0 (parity_encoder_inst_1_n_4),
+        .\pattern_reg_reg[7]_0 (parity_encoder_inst_1_n_5),
+        .\pattern_reg_reg[8]_0 (parity_encoder_inst_1_n_14),
+        .\pattern_reg_reg[9]_0 (parity_encoder_inst_1_n_6),
         .pattern_rst_reg(pattern_rst_reg),
-        .test_init_cnt_reg({test_init_cnt_reg[15:13],test_init_cnt_reg[9:4]}),
-        .\test_init_cnt_reg[12] (parity_encoder_inst_1_n_8),
-        .test_init_cnt_reg_3__s_port_(\block_word_cnt[1]_i_5__0_n_0 ),
-        .\tx_data_reg_reg[11] (pattern_gen_inst_1_n_20),
-        .\tx_data_reg_reg[1] (pattern_gen_inst_1_n_19),
-        .\ver_parity_word_reg_reg[13] (parity_encoder_inst_1_n_13),
-        .\ver_parity_word_reg_reg[14] (parity_encoder_inst_1_n_14),
-        .\ver_parity_word_reg_reg[15] (parity_encoder_inst_1_n_15),
-        .\ver_parity_word_reg_reg[4] (parity_encoder_inst_1_n_10));
+        .test_init_cnt_reg({test_init_cnt_reg[15:11],test_init_cnt_reg[9:7],test_init_cnt_reg[5:3]}),
+        .\test_init_cnt_reg[2]_0 (\tx_data_reg[3]_i_4_n_0 ),
+        .\test_init_cnt_reg[3]_0 (\tx_data_reg[12]_i_5_n_0 ),
+        .test_init_cnt_reg_2__s_port_(\txctrl_reg[0]_i_2_n_0 ),
+        .test_init_cnt_reg_3__s_port_(\tx_data_reg[9]_i_4__0_n_0 ),
+        .\tx_data_reg_reg[0] (pattern_gen_inst_1_n_21),
+        .\tx_data_reg_reg[10] (pattern_gen_inst_1_n_19),
+        .\tx_data_reg_reg[1] (pattern_gen_inst_1_n_20),
+        .\tx_data_reg_reg[1]_0 (pattern_gen_inst_1_n_22),
+        .\tx_data_reg_reg[6] (pattern_gen_inst_1_n_18),
+        .\ver_parity_word_reg_reg[2] (parity_encoder_inst_1_n_12));
   LUT4 #(
     .INIT(16'hF808)) 
     pattern_pause_reg_i_1__1
        (.I0(pattern_pause_reg_i_2__1_n_0),
-        .I1(\block_word_cnt[4]_i_2__0_n_0 ),
+        .I1(\block_word_cnt[4]_i_2__1_n_0 ),
         .I2(\test_init_cnt[0]_i_1__0_n_0 ),
         .I3(pattern_pause_reg),
         .O(pattern_pause_reg_i_1__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT5 #(
-    .INIT(32'h04044440)) 
+    .INIT(32'h05005400)) 
     pattern_pause_reg_i_2__1
        (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
         .I4(\block_word_cnt_reg_n_0_[2] ),
         .O(pattern_pause_reg_i_2__1_n_0));
   FDSE pattern_pause_reg_reg
@@ -12980,73 +12315,61 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .D(gt1_tx_system_reset_c),
         .Q(system_reset_r),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \test_init_cnt[0]_i_10 
-       (.I0(test_init_cnt_reg[4]),
-        .I1(test_init_cnt_reg[5]),
-        .I2(test_init_cnt_reg[12]),
-        .I3(test_init_cnt_reg[6]),
-        .O(\test_init_cnt[0]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000FFFFFFFE)) 
+    .INIT(64'h0000000000000B00)) 
     \test_init_cnt[0]_i_1__0 
        (.I0(\test_init_cnt[0]_i_3__0_n_0 ),
-        .I1(test_init_cnt_reg[3]),
-        .I2(test_init_cnt_reg[1]),
-        .I3(test_init_cnt_reg[0]),
-        .I4(test_init_cnt_reg[2]),
-        .I5(\test_init_cnt[0]_i_4__0_n_0 ),
+        .I1(\test_init_cnt[0]_i_4__0_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .I5(\test_init_cnt[0]_i_5__0_n_0 ),
         .O(\test_init_cnt[0]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \test_init_cnt[0]_i_3__0 
-       (.I0(test_init_cnt_reg[8]),
-        .I1(test_init_cnt_reg[7]),
-        .I2(test_init_cnt_reg[10]),
-        .I3(test_init_cnt_reg[9]),
-        .I4(\test_init_cnt[0]_i_9__0_n_0 ),
-        .I5(\test_init_cnt[0]_i_10_n_0 ),
-        .O(\test_init_cnt[0]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
+    .INIT(32'hFFFFFFFD)) 
+    \test_init_cnt[0]_i_3__0 
+       (.I0(\tx_data_reg[12]_i_5_n_0 ),
+        .I1(test_init_cnt_reg[7]),
+        .I2(test_init_cnt_reg[6]),
+        .I3(test_init_cnt_reg[5]),
+        .I4(test_init_cnt_reg[4]),
+        .O(\test_init_cnt[0]_i_3__0_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
     \test_init_cnt[0]_i_4__0 
+       (.I0(test_init_cnt_reg[13]),
+        .I1(test_init_cnt_reg[15]),
+        .I2(test_init_cnt_reg[12]),
+        .I3(test_init_cnt_reg[14]),
+        .I4(\block_word_cnt[1]_i_5__1_n_0 ),
+        .O(\test_init_cnt[0]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \test_init_cnt[0]_i_5__0 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .O(\test_init_cnt[0]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \test_init_cnt[0]_i_5__0 
-       (.I0(test_init_cnt_reg[3]),
         .O(\test_init_cnt[0]_i_5__0_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[0]_i_6__0 
-       (.I0(test_init_cnt_reg[2]),
+       (.I0(test_init_cnt_reg[3]),
         .O(\test_init_cnt[0]_i_6__0_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[0]_i_7__0 
-       (.I0(test_init_cnt_reg[1]),
+       (.I0(test_init_cnt_reg[2]),
         .O(\test_init_cnt[0]_i_7__0_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \test_init_cnt[0]_i_8 
+    \test_init_cnt[0]_i_8__0 
+       (.I0(test_init_cnt_reg[1]),
+        .O(\test_init_cnt[0]_i_8__0_n_0 ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \test_init_cnt[0]_i_9 
        (.I0(test_init_cnt_reg[0]),
-        .O(\test_init_cnt[0]_i_8_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \test_init_cnt[0]_i_9__0 
-       (.I0(test_init_cnt_reg[14]),
-        .I1(test_init_cnt_reg[13]),
-        .I2(test_init_cnt_reg[15]),
-        .I3(test_init_cnt_reg[11]),
-        .O(\test_init_cnt[0]_i_9__0_n_0 ));
+        .O(\test_init_cnt[0]_i_9_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \test_init_cnt[12]_i_2__0 
@@ -13119,7 +12442,7 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .CYINIT(1'b0),
         .DI({1'b1,1'b1,1'b1,1'b1}),
         .O({\test_init_cnt_reg[0]_i_2__0_n_4 ,\test_init_cnt_reg[0]_i_2__0_n_5 ,\test_init_cnt_reg[0]_i_2__0_n_6 ,\test_init_cnt_reg[0]_i_2__0_n_7 }),
-        .S({\test_init_cnt[0]_i_5__0_n_0 ,\test_init_cnt[0]_i_6__0_n_0 ,\test_init_cnt[0]_i_7__0_n_0 ,\test_init_cnt[0]_i_8_n_0 }));
+        .S({\test_init_cnt[0]_i_6__0_n_0 ,\test_init_cnt[0]_i_7__0_n_0 ,\test_init_cnt[0]_i_8__0_n_0 ,\test_init_cnt[0]_i_9_n_0 }));
   FDRE \test_init_cnt_reg[10] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\test_init_cnt[0]_i_1__0_n_0 ),
@@ -13231,216 +12554,199 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
         .D(\test_init_cnt_reg[8]_i_1__0_n_6 ),
         .Q(test_init_cnt_reg[9]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT4 #(
-    .INIT(16'hFFFB)) 
-    \tx_data_reg[0]_i_3__0 
+    .INIT(16'h0004)) 
+    \tx_data_reg[0]_i_4 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
         .I2(\block_word_cnt_reg_n_0_[2] ),
         .I3(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[0]_i_3__0_n_0 ));
+        .O(\tx_data_reg[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hEEEEEEEEEEEEEEEF)) 
-    \tx_data_reg[10]_i_3 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(test_init_cnt_reg[2]),
-        .I3(test_init_cnt_reg[0]),
-        .I4(test_init_cnt_reg[1]),
-        .I5(test_init_cnt_reg[3]),
-        .O(\tx_data_reg[10]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \tx_data_reg[10]_i_4 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[5] ),
-        .I3(\block_word_cnt_reg_n_0_[7] ),
-        .I4(\block_word_cnt_reg_n_0_[6] ),
-        .I5(\block_word_cnt_reg_n_0_[3] ),
-        .O(\tx_data_reg[10]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
-  LUT5 #(
-    .INIT(32'h00100000)) 
-    \tx_data_reg[11]_i_3__0 
-       (.I0(\tx_data_reg[10]_i_3_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(test_init_cnt_reg[11]),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .I4(\tx_data_reg[15]_i_5__0_n_0 ),
-        .O(\tx_data_reg[11]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
-  LUT4 #(
-    .INIT(16'h0800)) 
-    \tx_data_reg[11]_i_4__0 
-       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
+    .INIT(64'h4040404000000100)) 
+    \tx_data_reg[10]_i_2__0 
+       (.I0(\tx_data_reg[10]_i_6_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
         .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[11]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
-  LUT3 #(
-    .INIT(8'h8A)) 
-    \tx_data_reg[11]_i_5__0 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .O(\tx_data_reg[11]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
-  LUT5 #(
-    .INIT(32'h00028282)) 
-    \tx_data_reg[12]_i_2__0 
-       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[0] ),
-        .I4(\block_word_cnt_reg_n_0_[1] ),
-        .O(\tx_data_reg[12]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
-  LUT5 #(
-    .INIT(32'h40000000)) 
-    \tx_data_reg[12]_i_3__0 
+        .I3(test_init_cnt_reg[10]),
+        .I4(\tx_data_reg[12]_i_5_n_0 ),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(\tx_data_reg[10]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  LUT4 #(
+    .INIT(16'hDFFF)) 
+    \tx_data_reg[10]_i_4 
        (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[0] ),
-        .O(\tx_data_reg[12]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
-  LUT3 #(
-    .INIT(8'hDF)) 
-    \tx_data_reg[12]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
-        .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[12]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
-  LUT5 #(
-    .INIT(32'h30008700)) 
-    \tx_data_reg[15]_i_2__0 
-       (.I0(\block_word_cnt_reg_n_0_[0] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
         .I2(\block_word_cnt_reg_n_0_[4] ),
         .I3(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
+        .O(\tx_data_reg[10]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  LUT3 #(
+    .INIT(8'h8A)) 
+    \tx_data_reg[10]_i_5 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[0] ),
+        .O(\tx_data_reg[10]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \tx_data_reg[10]_i_6 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[7] ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
+        .I3(\block_word_cnt_reg_n_0_[5] ),
+        .I4(\block_word_cnt_reg_n_0_[3] ),
+        .O(\tx_data_reg[10]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  LUT3 #(
+    .INIT(8'h5D)) 
+    \tx_data_reg[12]_i_3__0 
+       (.I0(\block_word_cnt_reg_n_0_[2] ),
+        .I1(\block_word_cnt_reg_n_0_[4] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .O(\tx_data_reg[12]_i_3__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
+    \tx_data_reg[12]_i_5 
+       (.I0(test_init_cnt_reg[3]),
+        .I1(test_init_cnt_reg[1]),
+        .I2(test_init_cnt_reg[0]),
+        .I3(test_init_cnt_reg[2]),
+        .O(\tx_data_reg[12]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  LUT5 #(
+    .INIT(32'h0A80002A)) 
+    \tx_data_reg[15]_i_2__0 
+       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .I4(\block_word_cnt_reg_n_0_[4] ),
         .O(\tx_data_reg[15]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \tx_data_reg[15]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
+       (.I0(\txctrl_reg[0]_i_2_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[2] ),
-        .I2(\tx_data_reg[10]_i_3_n_0 ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
         .O(\tx_data_reg[15]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \tx_data_reg[15]_i_5__0 
        (.I0(\block_word_cnt_reg_n_0_[3] ),
-        .I1(\block_word_cnt_reg_n_0_[6] ),
-        .I2(\block_word_cnt_reg_n_0_[7] ),
-        .I3(\block_word_cnt_reg_n_0_[5] ),
+        .I1(\block_word_cnt_reg_n_0_[5] ),
+        .I2(\block_word_cnt_reg_n_0_[6] ),
+        .I3(\block_word_cnt_reg_n_0_[7] ),
         .O(\tx_data_reg[15]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \tx_data_reg[1]_i_4__0 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .I1(\block_word_cnt_reg_n_0_[3] ),
+        .I2(\block_word_cnt_reg_n_0_[5] ),
+        .I3(\block_word_cnt_reg_n_0_[6] ),
+        .I4(\block_word_cnt_reg_n_0_[7] ),
+        .I5(\block_word_cnt_reg_n_0_[2] ),
+        .O(\tx_data_reg[1]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
-    .INIT(8'h8A)) 
-    \tx_data_reg[2]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[2] ),
+    .INIT(8'hDF)) 
+    \tx_data_reg[1]_i_6 
+       (.I0(\block_word_cnt_reg_n_0_[4] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[2]_i_3__0_n_0 ));
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .O(\tx_data_reg[1]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hABABABABABABABAA)) 
-    \tx_data_reg[2]_i_5 
+    \tx_data_reg[2]_i_4__0 
        (.I0(\block_word_cnt_reg_n_0_[1] ),
         .I1(test_init_cnt_reg[2]),
         .I2(\block_word_cnt_reg_n_0_[0] ),
         .I3(test_init_cnt_reg[3]),
         .I4(test_init_cnt_reg[0]),
         .I5(test_init_cnt_reg[1]),
-        .O(\tx_data_reg[2]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+        .O(\tx_data_reg[2]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
-    .INIT(8'h95)) 
-    \tx_data_reg[3]_i_3__0 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .O(\tx_data_reg[3]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000000000FE)) 
-    \tx_data_reg[3]_i_4__0 
-       (.I0(test_init_cnt_reg[1]),
+    .INIT(8'hFE)) 
+    \tx_data_reg[3]_i_4 
+       (.I0(test_init_cnt_reg[2]),
         .I1(test_init_cnt_reg[0]),
-        .I2(test_init_cnt_reg[2]),
-        .I3(test_init_cnt_reg[3]),
-        .I4(\block_word_cnt_reg_n_0_[4] ),
-        .I5(\tx_data_reg[3]_i_5__0_n_0 ),
-        .O(\tx_data_reg[3]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \tx_data_reg[3]_i_5__0 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .O(\tx_data_reg[3]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
-  LUT4 #(
-    .INIT(16'h08AA)) 
-    \tx_data_reg[4]_i_3__0 
-       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[1] ),
-        .I3(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[4]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+        .I2(test_init_cnt_reg[1]),
+        .O(\tx_data_reg[3]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
-    \tx_data_reg[4]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[1] ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .O(\tx_data_reg[4]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
-  LUT5 #(
-    .INIT(32'h00A0800A)) 
-    \tx_data_reg[6]_i_2__0 
-       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
-        .I1(\block_word_cnt_reg_n_0_[0] ),
-        .I2(\block_word_cnt_reg_n_0_[4] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
-        .I4(\block_word_cnt_reg_n_0_[2] ),
-        .O(\tx_data_reg[6]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
-  LUT3 #(
-    .INIT(8'h8F)) 
-    \tx_data_reg[8]_i_4 
+    \tx_data_reg[4]_i_4__0 
        (.I0(\block_word_cnt_reg_n_0_[0] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
+        .O(\tx_data_reg[4]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  LUT3 #(
+    .INIT(8'h8F)) 
+    \tx_data_reg[8]_i_4__0 
+       (.I0(\block_word_cnt_reg_n_0_[1] ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
         .I2(\block_word_cnt_reg_n_0_[4] ),
-        .O(\tx_data_reg[8]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \tx_data_reg[8]_i_5 
-       (.I0(\block_word_cnt_reg_n_0_[4] ),
+        .O(\tx_data_reg[8]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  LUT4 #(
+    .INIT(16'hF8F0)) 
+    \tx_data_reg[9]_i_2__0 
+       (.I0(\block_word_cnt_reg_n_0_[0] ),
         .I1(\block_word_cnt_reg_n_0_[1] ),
-        .O(\tx_data_reg[8]_i_5_n_0 ));
+        .I2(\block_word_cnt_reg_n_0_[2] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
+        .O(\tx_data_reg[9]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  LUT4 #(
+    .INIT(16'h002A)) 
+    \tx_data_reg[9]_i_3__0 
+       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[0] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[4] ),
+        .O(\tx_data_reg[9]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAAAAB)) 
+    \tx_data_reg[9]_i_4__0 
+       (.I0(\test_init_cnt[0]_i_5__0_n_0 ),
+        .I1(test_init_cnt_reg[3]),
+        .I2(test_init_cnt_reg[1]),
+        .I3(test_init_cnt_reg[0]),
+        .I4(test_init_cnt_reg[2]),
+        .I5(\block_word_cnt_reg_n_0_[4] ),
+        .O(\tx_data_reg[9]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  LUT4 #(
+    .INIT(16'h20AA)) 
+    \tx_data_reg[9]_i_6__0 
+       (.I0(\tx_data_reg[15]_i_5__0_n_0 ),
+        .I1(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[4] ),
+        .I3(\block_word_cnt_reg_n_0_[2] ),
+        .O(\tx_data_reg[9]_i_6__0_n_0 ));
   FDRE \tx_data_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_4),
+        .D(parity_encoder_inst_1_n_3),
         .Q(tx_data_reg[0]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[10] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_1),
+        .D(parity_encoder_inst_1_n_0),
         .Q(tx_data_reg[10]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[11] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_0),
+        .D(pattern_gen_inst_1_n_4),
         .Q(tx_data_reg[11]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[12] 
@@ -13470,19 +12776,19 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   FDRE \tx_data_reg_reg[1] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_3),
+        .D(parity_encoder_inst_1_n_2),
         .Q(tx_data_reg[1]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[2] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_10),
+        .D(pattern_gen_inst_1_n_11),
         .Q(tx_data_reg[2]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[3] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(parity_encoder_inst_1_n_2),
+        .D(pattern_gen_inst_1_n_10),
         .Q(tx_data_reg[3]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[4] 
@@ -13500,453 +12806,56 @@ module gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0
   FDRE \tx_data_reg_reg[6] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_7),
+        .D(parity_encoder_inst_1_n_1),
         .Q(tx_data_reg[6]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[7] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_6),
+        .D(pattern_gen_inst_1_n_7),
         .Q(tx_data_reg[7]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[8] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_5),
+        .D(pattern_gen_inst_1_n_6),
         .Q(tx_data_reg[8]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   FDRE \tx_data_reg_reg[9] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
-        .D(pattern_gen_inst_1_n_4),
+        .D(pattern_gen_inst_1_n_5),
         .Q(tx_data_reg[9]),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
   LUT6 #(
     .INIT(64'h0000822200000000)) 
     \txctrl_reg[0]_i_1__0 
-       (.I0(\tx_data_reg[10]_i_3_n_0 ),
+       (.I0(\txctrl_reg[0]_i_2_n_0 ),
         .I1(\block_word_cnt_reg_n_0_[4] ),
-        .I2(\block_word_cnt_reg_n_0_[0] ),
-        .I3(\block_word_cnt_reg_n_0_[1] ),
+        .I2(\block_word_cnt_reg_n_0_[1] ),
+        .I3(\block_word_cnt_reg_n_0_[0] ),
         .I4(\block_word_cnt_reg_n_0_[2] ),
         .I5(\tx_data_reg[15]_i_5__0_n_0 ),
         .O(\txctrl_reg[0]_i_1__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFF0001)) 
+    \txctrl_reg[0]_i_2 
+       (.I0(test_init_cnt_reg[2]),
+        .I1(test_init_cnt_reg[0]),
+        .I2(test_init_cnt_reg[1]),
+        .I3(test_init_cnt_reg[3]),
+        .I4(\block_word_cnt_reg_n_0_[1] ),
+        .I5(\block_word_cnt_reg_n_0_[0] ),
+        .O(\txctrl_reg[0]_i_2_n_0 ));
   FDRE \txctrl_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(\txctrl_reg[0]_i_1__0_n_0 ),
         .Q(\txctrl_reg_reg_n_0_[0] ),
         .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[0]_i_2__0 
-       (.I0(word_cnt_reg[3]),
-        .O(\word_cnt[0]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[0]_i_3__0 
-       (.I0(word_cnt_reg[2]),
-        .O(\word_cnt[0]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[0]_i_4__0 
-       (.I0(word_cnt_reg[1]),
-        .O(\word_cnt[0]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \word_cnt[0]_i_5__0 
-       (.I0(word_cnt_reg[0]),
-        .O(\word_cnt[0]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_2__0 
-       (.I0(word_cnt_reg[15]),
-        .O(\word_cnt[12]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_3__0 
-       (.I0(word_cnt_reg[14]),
-        .O(\word_cnt[12]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_4__0 
-       (.I0(word_cnt_reg[13]),
-        .O(\word_cnt[12]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[12]_i_5__0 
-       (.I0(word_cnt_reg[12]),
-        .O(\word_cnt[12]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_2__0 
-       (.I0(word_cnt_reg[19]),
-        .O(\word_cnt[16]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_3__0 
-       (.I0(word_cnt_reg[18]),
-        .O(\word_cnt[16]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_4__0 
-       (.I0(word_cnt_reg[17]),
-        .O(\word_cnt[16]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[16]_i_5__0 
-       (.I0(word_cnt_reg[16]),
-        .O(\word_cnt[16]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_2__0 
-       (.I0(word_cnt_reg[23]),
-        .O(\word_cnt[20]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_3__0 
-       (.I0(word_cnt_reg[22]),
-        .O(\word_cnt[20]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_4__0 
-       (.I0(word_cnt_reg[21]),
-        .O(\word_cnt[20]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[20]_i_5__0 
-       (.I0(word_cnt_reg[20]),
-        .O(\word_cnt[20]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_2__0 
-       (.I0(word_cnt_reg[27]),
-        .O(\word_cnt[24]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_3__0 
-       (.I0(word_cnt_reg[26]),
-        .O(\word_cnt[24]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_4__0 
-       (.I0(word_cnt_reg[25]),
-        .O(\word_cnt[24]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[24]_i_5__0 
-       (.I0(word_cnt_reg[24]),
-        .O(\word_cnt[24]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_2__0 
-       (.I0(word_cnt_reg[31]),
-        .O(\word_cnt[28]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_3__0 
-       (.I0(word_cnt_reg[30]),
-        .O(\word_cnt[28]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_4__0 
-       (.I0(word_cnt_reg[29]),
-        .O(\word_cnt[28]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[28]_i_5__0 
-       (.I0(word_cnt_reg[28]),
-        .O(\word_cnt[28]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_2__0 
-       (.I0(word_cnt_reg[7]),
-        .O(\word_cnt[4]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_3__0 
-       (.I0(word_cnt_reg[6]),
-        .O(\word_cnt[4]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_4__0 
-       (.I0(word_cnt_reg[5]),
-        .O(\word_cnt[4]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[4]_i_5__0 
-       (.I0(word_cnt_reg[4]),
-        .O(\word_cnt[4]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_2__0 
-       (.I0(word_cnt_reg[11]),
-        .O(\word_cnt[8]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_3__0 
-       (.I0(word_cnt_reg[10]),
-        .O(\word_cnt[8]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_4__0 
-       (.I0(word_cnt_reg[9]),
-        .O(\word_cnt[8]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \word_cnt[8]_i_5__0 
-       (.I0(word_cnt_reg[8]),
-        .O(\word_cnt[8]_i_5__0_n_0 ));
-  FDRE \word_cnt_reg[0] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[0]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[0]_i_1__0 
-       (.CI(1'b0),
-        .CO({\word_cnt_reg[0]_i_1__0_n_0 ,\word_cnt_reg[0]_i_1__0_n_1 ,\word_cnt_reg[0]_i_1__0_n_2 ,\word_cnt_reg[0]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b1}),
-        .O({\word_cnt_reg[0]_i_1__0_n_4 ,\word_cnt_reg[0]_i_1__0_n_5 ,\word_cnt_reg[0]_i_1__0_n_6 ,\word_cnt_reg[0]_i_1__0_n_7 }),
-        .S({\word_cnt[0]_i_2__0_n_0 ,\word_cnt[0]_i_3__0_n_0 ,\word_cnt[0]_i_4__0_n_0 ,\word_cnt[0]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[10] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[10]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[11] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[11]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[12] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[12]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[12]_i_1__0 
-       (.CI(\word_cnt_reg[8]_i_1__0_n_0 ),
-        .CO({\word_cnt_reg[12]_i_1__0_n_0 ,\word_cnt_reg[12]_i_1__0_n_1 ,\word_cnt_reg[12]_i_1__0_n_2 ,\word_cnt_reg[12]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[12]_i_1__0_n_4 ,\word_cnt_reg[12]_i_1__0_n_5 ,\word_cnt_reg[12]_i_1__0_n_6 ,\word_cnt_reg[12]_i_1__0_n_7 }),
-        .S({\word_cnt[12]_i_2__0_n_0 ,\word_cnt[12]_i_3__0_n_0 ,\word_cnt[12]_i_4__0_n_0 ,\word_cnt[12]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[13] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[13]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[14] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[14]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[15] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[12]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[15]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[16] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[16]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[16]_i_1__0 
-       (.CI(\word_cnt_reg[12]_i_1__0_n_0 ),
-        .CO({\word_cnt_reg[16]_i_1__0_n_0 ,\word_cnt_reg[16]_i_1__0_n_1 ,\word_cnt_reg[16]_i_1__0_n_2 ,\word_cnt_reg[16]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[16]_i_1__0_n_4 ,\word_cnt_reg[16]_i_1__0_n_5 ,\word_cnt_reg[16]_i_1__0_n_6 ,\word_cnt_reg[16]_i_1__0_n_7 }),
-        .S({\word_cnt[16]_i_2__0_n_0 ,\word_cnt[16]_i_3__0_n_0 ,\word_cnt[16]_i_4__0_n_0 ,\word_cnt[16]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[17] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[17]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[18] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[18]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[19] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[16]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[19]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[1] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[1]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[20] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[20]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[20]_i_1__0 
-       (.CI(\word_cnt_reg[16]_i_1__0_n_0 ),
-        .CO({\word_cnt_reg[20]_i_1__0_n_0 ,\word_cnt_reg[20]_i_1__0_n_1 ,\word_cnt_reg[20]_i_1__0_n_2 ,\word_cnt_reg[20]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[20]_i_1__0_n_4 ,\word_cnt_reg[20]_i_1__0_n_5 ,\word_cnt_reg[20]_i_1__0_n_6 ,\word_cnt_reg[20]_i_1__0_n_7 }),
-        .S({\word_cnt[20]_i_2__0_n_0 ,\word_cnt[20]_i_3__0_n_0 ,\word_cnt[20]_i_4__0_n_0 ,\word_cnt[20]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[21] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[21]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[22] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[22]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[23] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[20]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[23]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[24] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[24]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[24]_i_1__0 
-       (.CI(\word_cnt_reg[20]_i_1__0_n_0 ),
-        .CO({\word_cnt_reg[24]_i_1__0_n_0 ,\word_cnt_reg[24]_i_1__0_n_1 ,\word_cnt_reg[24]_i_1__0_n_2 ,\word_cnt_reg[24]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[24]_i_1__0_n_4 ,\word_cnt_reg[24]_i_1__0_n_5 ,\word_cnt_reg[24]_i_1__0_n_6 ,\word_cnt_reg[24]_i_1__0_n_7 }),
-        .S({\word_cnt[24]_i_2__0_n_0 ,\word_cnt[24]_i_3__0_n_0 ,\word_cnt[24]_i_4__0_n_0 ,\word_cnt[24]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[25] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[25]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[26] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[26]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[27] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[24]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[27]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[28] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[28]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[28]_i_1__0 
-       (.CI(\word_cnt_reg[24]_i_1__0_n_0 ),
-        .CO({\NLW_word_cnt_reg[28]_i_1__0_CO_UNCONNECTED [3],\word_cnt_reg[28]_i_1__0_n_1 ,\word_cnt_reg[28]_i_1__0_n_2 ,\word_cnt_reg[28]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[28]_i_1__0_n_4 ,\word_cnt_reg[28]_i_1__0_n_5 ,\word_cnt_reg[28]_i_1__0_n_6 ,\word_cnt_reg[28]_i_1__0_n_7 }),
-        .S({\word_cnt[28]_i_2__0_n_0 ,\word_cnt[28]_i_3__0_n_0 ,\word_cnt[28]_i_4__0_n_0 ,\word_cnt[28]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[29] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[29]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[2] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[2]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[30] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[30]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[31] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[28]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[31]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[3] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[0]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[3]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[4] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[4]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[4]_i_1__0 
-       (.CI(\word_cnt_reg[0]_i_1__0_n_0 ),
-        .CO({\word_cnt_reg[4]_i_1__0_n_0 ,\word_cnt_reg[4]_i_1__0_n_1 ,\word_cnt_reg[4]_i_1__0_n_2 ,\word_cnt_reg[4]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[4]_i_1__0_n_4 ,\word_cnt_reg[4]_i_1__0_n_5 ,\word_cnt_reg[4]_i_1__0_n_6 ,\word_cnt_reg[4]_i_1__0_n_7 }),
-        .S({\word_cnt[4]_i_2__0_n_0 ,\word_cnt[4]_i_3__0_n_0 ,\word_cnt[4]_i_4__0_n_0 ,\word_cnt[4]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[5] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[5]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[6] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1__0_n_5 ),
-        .Q(word_cnt_reg[6]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[7] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[4]_i_1__0_n_4 ),
-        .Q(word_cnt_reg[7]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  FDRE \word_cnt_reg[8] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1__0_n_7 ),
-        .Q(word_cnt_reg[8]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
-  CARRY4 \word_cnt_reg[8]_i_1__0 
-       (.CI(\word_cnt_reg[4]_i_1__0_n_0 ),
-        .CO({\word_cnt_reg[8]_i_1__0_n_0 ,\word_cnt_reg[8]_i_1__0_n_1 ,\word_cnt_reg[8]_i_1__0_n_2 ,\word_cnt_reg[8]_i_1__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\word_cnt_reg[8]_i_1__0_n_4 ,\word_cnt_reg[8]_i_1__0_n_5 ,\word_cnt_reg[8]_i_1__0_n_6 ,\word_cnt_reg[8]_i_1__0_n_7 }),
-        .S({\word_cnt[8]_i_2__0_n_0 ,\word_cnt[8]_i_3__0_n_0 ,\word_cnt[8]_i_4__0_n_0 ,\word_cnt[8]_i_5__0_n_0 }));
-  FDRE \word_cnt_reg[9] 
-       (.C(GT0_TXUSRCLK_OUT),
-        .CE(data_word_valid),
-        .D(\word_cnt_reg[8]_i_1__0_n_6 ),
-        .Q(word_cnt_reg[9]),
-        .R(\block_word_cnt[7]_i_1__2_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_GT_USRCLK_SOURCE" *) 
 module gtx3g_bert_0_gtx3g_GT_USRCLK_SOURCE
    (Q0_CLK1_GTREFCLK_OUT,
     GT0_TXUSRCLK_OUT,
@@ -13983,6 +12892,7 @@ module gtx3g_bert_0_gtx3g_GT_USRCLK_SOURCE
         .O(GT0_TXUSRCLK_OUT));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_RX_STARTUP_FSM" *) 
 module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
    (SR,
     gt0_rx_fsm_reset_done_out,
@@ -14282,7 +13192,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(rx_state16_out),
         .I5(rx_state[3]),
         .O(\FSM_sequential_rx_state[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_rx_state[2]_i_2 
@@ -14323,7 +13233,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(wait_time_cnt_reg[9]),
         .I5(wait_time_cnt_reg[8]),
         .O(\FSM_sequential_rx_state[3]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_rx_state[3]_i_7 
@@ -14439,14 +13349,14 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
     \init_wait_count[0]_i_1__1 
        (.I0(init_wait_count_reg__0[0]),
         .O(\init_wait_count[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \init_wait_count[1]_i_1__1 
        (.I0(init_wait_count_reg__0[0]),
         .I1(init_wait_count_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \init_wait_count[2]_i_1__1 
@@ -14454,7 +13364,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I1(init_wait_count_reg__0[0]),
         .I2(init_wait_count_reg__0[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \init_wait_count[3]_i_1__1 
@@ -14463,7 +13373,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I2(init_wait_count_reg__0[1]),
         .I3(init_wait_count_reg__0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \init_wait_count[4]_i_1__1 
@@ -14493,7 +13403,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(\init_wait_count[6]_i_2__1_n_0 ),
         .I5(init_wait_count_reg__0[6]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \init_wait_count[6]_i_2__1 
@@ -14509,7 +13419,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I3(\init_wait_count[7]_i_3__1_n_0 ),
         .I4(init_wait_count_reg__0[1]),
         .O(init_wait_count));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \init_wait_count[7]_i_2__1 
@@ -14614,14 +13524,14 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
     \mmcm_lock_count[0]_i_1__1 
        (.I0(mmcm_lock_count_reg__0[0]),
         .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \mmcm_lock_count[1]_i_1__1 
        (.I0(mmcm_lock_count_reg__0[0]),
         .I1(mmcm_lock_count_reg__0[1]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \mmcm_lock_count[2]_i_1__1 
@@ -14629,7 +13539,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I1(mmcm_lock_count_reg__0[0]),
         .I2(mmcm_lock_count_reg__0[2]),
         .O(\mmcm_lock_count[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \mmcm_lock_count[3]_i_1__1 
@@ -14638,7 +13548,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I2(mmcm_lock_count_reg__0[1]),
         .I3(mmcm_lock_count_reg__0[3]),
         .O(\mmcm_lock_count[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \mmcm_lock_count[4]_i_1__1 
@@ -14664,7 +13574,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
        (.I0(\mmcm_lock_count[9]_i_4__1_n_0 ),
         .I1(mmcm_lock_count_reg__0[6]),
         .O(\mmcm_lock_count[6]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \mmcm_lock_count[7]_i_1__1 
@@ -14672,7 +13582,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I1(\mmcm_lock_count[9]_i_4__1_n_0 ),
         .I2(mmcm_lock_count_reg__0[7]),
         .O(\mmcm_lock_count[7]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \mmcm_lock_count[8]_i_1__1 
@@ -14690,7 +13600,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I3(mmcm_lock_count_reg__0[8]),
         .I4(mmcm_lock_count_reg__0[9]),
         .O(\mmcm_lock_count[9]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \mmcm_lock_count[9]_i_3__1 
@@ -14790,7 +13700,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .D(p_0_in__0[9]),
         .Q(mmcm_lock_count_reg__0[9]),
         .R(sync_mmcm_lock_reclocked_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     mmcm_lock_reclocked_i_2__1
@@ -14947,7 +13857,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(time_out_100us_i_2_n_0),
         .I5(time_out_100us_reg_n_0),
         .O(time_out_100us_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     time_out_100us_i_2
@@ -14985,7 +13895,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(time_out_counter_reg[2]),
         .I5(time_out_1us_i_3_n_0),
         .O(time_out_1us_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     time_out_1us_i_3
@@ -15067,7 +13977,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I2(time_out_counter_reg[13]),
         .I3(time_out_counter_reg[9]),
         .O(\time_out_counter[0]_i_4__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT5 #(
     .INIT(32'hFEFFFFFF)) 
     \time_out_counter[0]_i_5 
@@ -15380,7 +14290,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(time_tlock_max_i_4_n_0),
         .I5(time_tlock_max),
         .O(time_tlock_max_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT2 #(
     .INIT(4'hE)) 
     time_tlock_max_i_2
@@ -15397,7 +14307,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I4(time_tlock_max_i_6_n_0),
         .I5(time_out_counter_reg[4]),
         .O(time_tlock_max_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     time_tlock_max_i_4
@@ -15415,7 +14325,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM
         .I3(time_out_counter_reg[10]),
         .I4(time_out_counter_reg[8]),
         .O(time_tlock_max_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     time_tlock_max_i_6
@@ -16210,7 +15120,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(rx_state16_out),
         .I5(rx_state[3]),
         .O(\FSM_sequential_rx_state[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_rx_state[2]_i_2__0 
@@ -16251,7 +15161,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(wait_time_cnt_reg[9]),
         .I5(wait_time_cnt_reg[8]),
         .O(\FSM_sequential_rx_state[3]_i_14__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_rx_state[3]_i_7__0 
@@ -16367,14 +15277,14 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
     \init_wait_count[0]_i_1__2 
        (.I0(init_wait_count_reg__0[0]),
         .O(\init_wait_count[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \init_wait_count[1]_i_1__2 
        (.I0(init_wait_count_reg__0[0]),
         .I1(init_wait_count_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \init_wait_count[2]_i_1__2 
@@ -16382,7 +15292,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I1(init_wait_count_reg__0[0]),
         .I2(init_wait_count_reg__0[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \init_wait_count[3]_i_1__2 
@@ -16391,7 +15301,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I2(init_wait_count_reg__0[1]),
         .I3(init_wait_count_reg__0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \init_wait_count[4]_i_1__2 
@@ -16421,7 +15331,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(\init_wait_count[6]_i_2__2_n_0 ),
         .I5(init_wait_count_reg__0[6]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \init_wait_count[6]_i_2__2 
@@ -16437,7 +15347,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I3(\init_wait_count[7]_i_3__2_n_0 ),
         .I4(init_wait_count_reg__0[1]),
         .O(init_wait_count));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \init_wait_count[7]_i_2__2 
@@ -16542,14 +15452,14 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
     \mmcm_lock_count[0]_i_1__2 
        (.I0(mmcm_lock_count_reg__0[0]),
         .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \mmcm_lock_count[1]_i_1__2 
        (.I0(mmcm_lock_count_reg__0[0]),
         .I1(mmcm_lock_count_reg__0[1]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \mmcm_lock_count[2]_i_1__2 
@@ -16557,7 +15467,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I1(mmcm_lock_count_reg__0[0]),
         .I2(mmcm_lock_count_reg__0[2]),
         .O(\mmcm_lock_count[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \mmcm_lock_count[3]_i_1__2 
@@ -16566,7 +15476,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I2(mmcm_lock_count_reg__0[1]),
         .I3(mmcm_lock_count_reg__0[3]),
         .O(\mmcm_lock_count[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \mmcm_lock_count[4]_i_1__2 
@@ -16592,7 +15502,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
        (.I0(\mmcm_lock_count[9]_i_4__2_n_0 ),
         .I1(mmcm_lock_count_reg__0[6]),
         .O(\mmcm_lock_count[6]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \mmcm_lock_count[7]_i_1__2 
@@ -16600,7 +15510,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I1(\mmcm_lock_count[9]_i_4__2_n_0 ),
         .I2(mmcm_lock_count_reg__0[7]),
         .O(\mmcm_lock_count[7]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \mmcm_lock_count[8]_i_1__2 
@@ -16618,7 +15528,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I3(mmcm_lock_count_reg__0[8]),
         .I4(mmcm_lock_count_reg__0[9]),
         .O(\mmcm_lock_count[9]_i_2__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \mmcm_lock_count[9]_i_3__2 
@@ -16718,7 +15628,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .D(p_0_in__0[9]),
         .Q(mmcm_lock_count_reg__0[9]),
         .R(sync_mmcm_lock_reclocked_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     mmcm_lock_reclocked_i_2__2
@@ -16875,7 +15785,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(time_out_100us_i_2__0_n_0),
         .I5(time_out_100us_reg_n_0),
         .O(time_out_100us_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     time_out_100us_i_2__0
@@ -16913,7 +15823,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(time_out_counter_reg[2]),
         .I5(time_out_1us_i_3__0_n_0),
         .O(time_out_1us_i_2__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     time_out_1us_i_3__0
@@ -16995,7 +15905,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I2(time_out_counter_reg[13]),
         .I3(time_out_counter_reg[9]),
         .O(\time_out_counter[0]_i_4__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT5 #(
     .INIT(32'hFEFFFFFF)) 
     \time_out_counter[0]_i_5__0 
@@ -17308,7 +16218,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(time_tlock_max_i_4__0_n_0),
         .I5(time_tlock_max),
         .O(time_tlock_max_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT2 #(
     .INIT(4'hE)) 
     time_tlock_max_i_2__0
@@ -17325,7 +16235,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I4(time_tlock_max_i_6__0_n_0),
         .I5(time_out_counter_reg[4]),
         .O(time_tlock_max_i_3__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     time_tlock_max_i_4__0
@@ -17343,7 +16253,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .I3(time_out_counter_reg[10]),
         .I4(time_out_counter_reg[8]),
         .O(time_tlock_max_i_5__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     time_tlock_max_i_6__0
@@ -17838,6 +16748,7 @@ module gtx3g_bert_0_gtx3g_RX_STARTUP_FSM_1
         .S(\wait_time_cnt[0]_i_1__2_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_TX_MANUAL_PHASE_ALIGN" *) 
 module gtx3g_bert_0_gtx3g_TX_MANUAL_PHASE_ALIGN
    (gt0_tx_phalignment_done_i,
     gt0_txdlyen_in,
@@ -18313,6 +17224,7 @@ module gtx3g_bert_0_gtx3g_TX_MANUAL_PHASE_ALIGN
         .R(txdone_clear_reg_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_TX_STARTUP_FSM" *) 
 module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
    (gt0_gttxreset_in,
     gt0_qpllreset_out,
@@ -18642,7 +17554,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I3(tx_state[2]),
         .I4(tx_state[1]),
         .O(\FSM_sequential_tx_state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \FSM_sequential_tx_state[1]_i_2 
@@ -18668,7 +17580,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I2(mmcm_lock_reclocked),
         .I3(tx_state[1]),
         .O(\FSM_sequential_tx_state[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     \FSM_sequential_tx_state[3]_i_11 
@@ -18704,7 +17616,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I4(wait_time_cnt_reg[9]),
         .I5(wait_time_cnt_reg[8]),
         .O(\FSM_sequential_tx_state[3]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_tx_state[3]_i_15 
@@ -18866,14 +17778,14 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
     \init_wait_count[0]_i_1 
        (.I0(init_wait_count_reg__0[0]),
         .O(\init_wait_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \init_wait_count[1]_i_1 
        (.I0(init_wait_count_reg__0[0]),
         .I1(init_wait_count_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \init_wait_count[2]_i_1 
@@ -18881,7 +17793,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I1(init_wait_count_reg__0[0]),
         .I2(init_wait_count_reg__0[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \init_wait_count[3]_i_1 
@@ -18890,7 +17802,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I2(init_wait_count_reg__0[1]),
         .I3(init_wait_count_reg__0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \init_wait_count[4]_i_1 
@@ -18920,7 +17832,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I4(\init_wait_count[6]_i_2_n_0 ),
         .I5(init_wait_count_reg__0[6]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \init_wait_count[6]_i_2 
@@ -18936,7 +17848,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I3(\init_wait_count[7]_i_3_n_0 ),
         .I4(init_wait_count_reg__0[1]),
         .O(init_wait_count));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \init_wait_count[7]_i_2 
@@ -19041,14 +17953,14 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
     \mmcm_lock_count[0]_i_1 
        (.I0(mmcm_lock_count_reg__0[0]),
         .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \mmcm_lock_count[1]_i_1 
        (.I0(mmcm_lock_count_reg__0[0]),
         .I1(mmcm_lock_count_reg__0[1]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \mmcm_lock_count[2]_i_1 
@@ -19056,7 +17968,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I1(mmcm_lock_count_reg__0[0]),
         .I2(mmcm_lock_count_reg__0[2]),
         .O(\mmcm_lock_count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \mmcm_lock_count[3]_i_1 
@@ -19065,7 +17977,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I2(mmcm_lock_count_reg__0[1]),
         .I3(mmcm_lock_count_reg__0[3]),
         .O(\mmcm_lock_count[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \mmcm_lock_count[4]_i_1 
@@ -19091,7 +18003,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
        (.I0(\mmcm_lock_count[9]_i_4_n_0 ),
         .I1(mmcm_lock_count_reg__0[6]),
         .O(\mmcm_lock_count[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \mmcm_lock_count[7]_i_1 
@@ -19099,7 +18011,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I1(\mmcm_lock_count[9]_i_4_n_0 ),
         .I2(mmcm_lock_count_reg__0[7]),
         .O(\mmcm_lock_count[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \mmcm_lock_count[8]_i_1 
@@ -19117,7 +18029,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I3(mmcm_lock_count_reg__0[8]),
         .I4(mmcm_lock_count_reg__0[9]),
         .O(\mmcm_lock_count[9]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \mmcm_lock_count[9]_i_3 
@@ -19217,7 +18129,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .D(p_0_in__0[9]),
         .Q(mmcm_lock_count_reg__0[9]),
         .R(sync_mmcm_lock_reclocked_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     mmcm_lock_reclocked_i_2
@@ -19326,7 +18238,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
        (.data_out(tx_fsm_reset_done_int_s2),
         .gt0_tx_fsm_reset_done_out(gt0_tx_fsm_reset_done_out),
         .gt0_txusrclk_in(gt0_txusrclk_in));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT4 #(
     .INIT(16'h00AE)) 
     time_out_2ms_i_1__1
@@ -19389,7 +18301,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I2(time_out_counter_reg[8]),
         .I3(time_out_counter_reg[12]),
         .O(\time_out_counter[0]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \time_out_counter[0]_i_11 
@@ -19732,7 +18644,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM
         .I4(time_tlock_max_i_3__1_n_0),
         .I5(reset_time_out),
         .O(time_tlock_max_i_1__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     time_tlock_max_i_2__1
@@ -20660,7 +19572,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I3(tx_state[2]),
         .I4(tx_state[1]),
         .O(\FSM_sequential_tx_state[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \FSM_sequential_tx_state[1]_i_2__0 
@@ -20686,7 +19598,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I2(mmcm_lock_reclocked),
         .I3(tx_state[1]),
         .O(\FSM_sequential_tx_state[2]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     \FSM_sequential_tx_state[3]_i_11__0 
@@ -20722,7 +19634,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I4(wait_time_cnt_reg[9]),
         .I5(wait_time_cnt_reg[8]),
         .O(\FSM_sequential_tx_state[3]_i_14__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_tx_state[3]_i_15__0 
@@ -20860,14 +19772,14 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
     \init_wait_count[0]_i_1__0 
        (.I0(init_wait_count_reg__0[0]),
         .O(\init_wait_count[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \init_wait_count[1]_i_1__0 
        (.I0(init_wait_count_reg__0[0]),
         .I1(init_wait_count_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \init_wait_count[2]_i_1__0 
@@ -20875,7 +19787,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I1(init_wait_count_reg__0[0]),
         .I2(init_wait_count_reg__0[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \init_wait_count[3]_i_1__0 
@@ -20884,7 +19796,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I2(init_wait_count_reg__0[1]),
         .I3(init_wait_count_reg__0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \init_wait_count[4]_i_1__0 
@@ -20914,7 +19826,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I4(\init_wait_count[6]_i_2__0_n_0 ),
         .I5(init_wait_count_reg__0[6]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \init_wait_count[6]_i_2__0 
@@ -20930,7 +19842,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I3(\init_wait_count[7]_i_3__0_n_0 ),
         .I4(init_wait_count_reg__0[1]),
         .O(init_wait_count));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \init_wait_count[7]_i_2__0 
@@ -21035,14 +19947,14 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
     \mmcm_lock_count[0]_i_1__0 
        (.I0(mmcm_lock_count_reg__0[0]),
         .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \mmcm_lock_count[1]_i_1__0 
        (.I0(mmcm_lock_count_reg__0[0]),
         .I1(mmcm_lock_count_reg__0[1]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \mmcm_lock_count[2]_i_1__0 
@@ -21050,7 +19962,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I1(mmcm_lock_count_reg__0[0]),
         .I2(mmcm_lock_count_reg__0[2]),
         .O(\mmcm_lock_count[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \mmcm_lock_count[3]_i_1__0 
@@ -21059,7 +19971,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I2(mmcm_lock_count_reg__0[1]),
         .I3(mmcm_lock_count_reg__0[3]),
         .O(\mmcm_lock_count[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \mmcm_lock_count[4]_i_1__0 
@@ -21085,7 +19997,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
        (.I0(\mmcm_lock_count[9]_i_4__0_n_0 ),
         .I1(mmcm_lock_count_reg__0[6]),
         .O(\mmcm_lock_count[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \mmcm_lock_count[7]_i_1__0 
@@ -21093,7 +20005,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I1(\mmcm_lock_count[9]_i_4__0_n_0 ),
         .I2(mmcm_lock_count_reg__0[7]),
         .O(\mmcm_lock_count[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \mmcm_lock_count[8]_i_1__0 
@@ -21111,7 +20023,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I3(mmcm_lock_count_reg__0[8]),
         .I4(mmcm_lock_count_reg__0[9]),
         .O(\mmcm_lock_count[9]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \mmcm_lock_count[9]_i_3__0 
@@ -21211,7 +20123,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .D(p_0_in__0[9]),
         .Q(mmcm_lock_count_reg__0[9]),
         .R(sync_mmcm_lock_reclocked_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     mmcm_lock_reclocked_i_2__0
@@ -21320,7 +20232,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
        (.data_out(tx_fsm_reset_done_int_s2),
         .gt1_tx_fsm_reset_done_out(gt1_tx_fsm_reset_done_out),
         .gt1_txusrclk_in(gt1_txusrclk_in));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT4 #(
     .INIT(16'h00AE)) 
     time_out_2ms_i_1__2
@@ -21383,7 +20295,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I2(time_out_counter_reg[8]),
         .I3(time_out_counter_reg[12]),
         .O(\time_out_counter[0]_i_10__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \time_out_counter[0]_i_11__0 
@@ -21726,7 +20638,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .I4(time_tlock_max_i_3__2_n_0),
         .I5(reset_time_out_reg_n_0),
         .O(time_tlock_max_i_1__2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     time_tlock_max_i_2__2
@@ -22339,92 +21251,7 @@ module gtx3g_bert_0_gtx3g_TX_STARTUP_FSM_2
         .S(\wait_time_cnt[0]_i_1__0_n_0 ));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "gtx3g_bert_0,gtx3g_exdes,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "gtx3g_exdes,Vivado 2017.2" *) 
-(* NotValidForBitStream *)
-module gtx3g_bert_0
-   (Q0_CLK1_GTREFCLK_PAD_N_IN,
-    Q0_CLK1_GTREFCLK_PAD_P_IN,
-    DRPCLK_IN,
-    TRACK_DATA_OUT,
-    TEST_RESET,
-    PATTERN_MODE,
-    ERROR_INSERT_MASK,
-    ECC_CODE_EN,
-    USER_CLK,
-    DATA_COUNT_OUT,
-    PATTERN_ERROR_COUNT_OUT,
-    TEST_OVER_OUT,
-    PATTERN_ERROR_OUT,
-    BLOCK_ERROR_OUT,
-    RXDATA_OUT,
-    GTX_RESETDONE_OUT);
-  input Q0_CLK1_GTREFCLK_PAD_N_IN;
-  input Q0_CLK1_GTREFCLK_PAD_P_IN;
-  input DRPCLK_IN;
-  output TRACK_DATA_OUT;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 TEST_RESET RST" *) input TEST_RESET;
-  input [2:0]PATTERN_MODE;
-  input [31:0]ERROR_INSERT_MASK;
-  input ECC_CODE_EN;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 USER_CLK CLK" *) output USER_CLK;
-  output [31:0]DATA_COUNT_OUT;
-  output [31:0]PATTERN_ERROR_COUNT_OUT;
-  output TEST_OVER_OUT;
-  output PATTERN_ERROR_OUT;
-  output [3:0]BLOCK_ERROR_OUT;
-  output [15:0]RXDATA_OUT;
-  output GTX_RESETDONE_OUT;
-
-  wire [3:0]BLOCK_ERROR_OUT;
-  wire [31:0]DATA_COUNT_OUT;
-  wire DRPCLK_IN;
-  wire ECC_CODE_EN;
-  wire [31:0]ERROR_INSERT_MASK;
-  wire GTX_RESETDONE_OUT;
-  wire [31:0]PATTERN_ERROR_COUNT_OUT;
-  wire PATTERN_ERROR_OUT;
-  wire [2:0]PATTERN_MODE;
-  wire Q0_CLK1_GTREFCLK_PAD_N_IN;
-  wire Q0_CLK1_GTREFCLK_PAD_P_IN;
-  wire [15:0]RXDATA_OUT;
-  wire TEST_OVER_OUT;
-  wire TEST_RESET;
-  wire TRACK_DATA_OUT;
-  wire USER_CLK;
-  wire [1:0]NLW_inst_TXN_OUT_UNCONNECTED;
-  wire [1:0]NLW_inst_TXP_OUT_UNCONNECTED;
-
-  (* DowngradeIPIdentifiedWarnings = "yes" *) 
-  (* EXAMPLE_CONFIG_INDEPENDENT_LANES = "1" *) 
-  (* EXAMPLE_LANE_WITH_START_CHAR = "0" *) 
-  (* EXAMPLE_SIM_GTRESET_SPEEDUP = "TRUE" *) 
-  (* EXAMPLE_USE_CHIPSCOPE = "0" *) 
-  (* EXAMPLE_WORDS_IN_BRAM = "512" *) 
-  (* LOOPBACK_MODE = "3'b010" *) 
-  (* STABLE_CLOCK_PERIOD = "10" *) 
-  gtx3g_bert_0_gtx3g_exdes inst
-       (.BLOCK_ERROR_OUT(BLOCK_ERROR_OUT),
-        .DATA_COUNT_OUT(DATA_COUNT_OUT),
-        .DRPCLK_IN(DRPCLK_IN),
-        .ECC_CODE_EN(ECC_CODE_EN),
-        .ERROR_INSERT_MASK(ERROR_INSERT_MASK),
-        .GTX_RESETDONE_OUT(GTX_RESETDONE_OUT),
-        .PATTERN_ERROR_COUNT_OUT(PATTERN_ERROR_COUNT_OUT),
-        .PATTERN_ERROR_OUT(PATTERN_ERROR_OUT),
-        .PATTERN_MODE(PATTERN_MODE),
-        .Q0_CLK1_GTREFCLK_PAD_N_IN(Q0_CLK1_GTREFCLK_PAD_N_IN),
-        .Q0_CLK1_GTREFCLK_PAD_P_IN(Q0_CLK1_GTREFCLK_PAD_P_IN),
-        .RXDATA_OUT(RXDATA_OUT),
-        .RXN_IN({1'b1,1'b0}),
-        .RXP_IN({1'b1,1'b0}),
-        .TEST_OVER_OUT(TEST_OVER_OUT),
-        .TEST_RESET(TEST_RESET),
-        .TRACK_DATA_OUT(TRACK_DATA_OUT),
-        .TXN_OUT(NLW_inst_TXN_OUT_UNCONNECTED[1:0]),
-        .TXP_OUT(NLW_inst_TXP_OUT_UNCONNECTED[1:0]),
-        .USER_CLK(USER_CLK));
-endmodule
-
+(* ORIG_REF_NAME = "gtx3g_common" *) 
 module gtx3g_bert_0_gtx3g_common
    (gt0_qplllock_in,
     gt0_qplloutclk_in,
@@ -22516,6 +21343,7 @@ module gtx3g_bert_0_gtx3g_common
         .REFCLKOUTMONITOR(NLW_gtxe2_common_i_REFCLKOUTMONITOR_UNCONNECTED));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_common_reset" *) 
 module gtx3g_bert_0_gtx3g_common_reset
    (gt0_qpllreset_t,
     CLK,
@@ -22542,7 +21370,7 @@ module gtx3g_bert_0_gtx3g_common_reset
   wire state;
   wire state_i_1_n_0;
 
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'h74)) 
     COMMON_RESET_i_1
@@ -22558,7 +21386,7 @@ module gtx3g_bert_0_gtx3g_common_reset
         .D(COMMON_RESET_i_1_n_0),
         .Q(commonreset_i),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT2 #(
     .INIT(4'hE)) 
     common_reset_asserted_i_1
@@ -22584,14 +21412,14 @@ module gtx3g_bert_0_gtx3g_common_reset
     \init_wait_count[0]_i_1 
        (.I0(init_wait_count_reg__0[0]),
         .O(\init_wait_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \init_wait_count[1]_i_1 
        (.I0(init_wait_count_reg__0[0]),
         .I1(init_wait_count_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \init_wait_count[2]_i_1 
@@ -22599,7 +21427,7 @@ module gtx3g_bert_0_gtx3g_common_reset
         .I1(init_wait_count_reg__0[0]),
         .I2(init_wait_count_reg__0[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \init_wait_count[3]_i_1 
@@ -22608,7 +21436,7 @@ module gtx3g_bert_0_gtx3g_common_reset
         .I2(init_wait_count_reg__0[1]),
         .I3(init_wait_count_reg__0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \init_wait_count[4]_i_1 
@@ -22638,7 +21466,7 @@ module gtx3g_bert_0_gtx3g_common_reset
         .I4(\init_wait_count[6]_i_2_n_0 ),
         .I5(init_wait_count_reg__0[6]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \init_wait_count[6]_i_2 
@@ -22654,7 +21482,7 @@ module gtx3g_bert_0_gtx3g_common_reset
         .I3(\init_wait_count[7]_i_3_n_0 ),
         .I4(init_wait_count_reg__0[1]),
         .O(init_wait_count));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
     \init_wait_count[7]_i_2 
@@ -22772,7 +21600,7 @@ endmodule
 
 (* DowngradeIPIdentifiedWarnings = "yes" *) (* EXAMPLE_CONFIG_INDEPENDENT_LANES = "1" *) (* EXAMPLE_LANE_WITH_START_CHAR = "0" *) 
 (* EXAMPLE_SIM_GTRESET_SPEEDUP = "TRUE" *) (* EXAMPLE_USE_CHIPSCOPE = "0" *) (* EXAMPLE_WORDS_IN_BRAM = "512" *) 
-(* LOOPBACK_MODE = "3'b010" *) (* STABLE_CLOCK_PERIOD = "10" *) 
+(* LOOPBACK_MODE = "3'b010" *) (* ORIG_REF_NAME = "gtx3g_exdes" *) (* STABLE_CLOCK_PERIOD = "10" *) 
 module gtx3g_bert_0_gtx3g_exdes
    (Q0_CLK1_GTREFCLK_PAD_N_IN,
     Q0_CLK1_GTREFCLK_PAD_P_IN,
@@ -22820,6 +21648,7 @@ module gtx3g_bert_0_gtx3g_exdes
   wire [31:0]DATA_COUNT_OUT;
   wire DRPCLK_IN;
   wire ECC_CODE_EN;
+  wire [31:0]ERROR_INSERT_MASK;
   wire GTX_RESETDONE_OUT;
   wire [31:0]PATTERN_ERROR_COUNT_OUT;
   wire PATTERN_ERROR_OUT;
@@ -22911,6 +21740,7 @@ module gtx3g_bert_0_gtx3g_exdes
         .out(gt0_rxresetdone_r3));
   gtx3g_bert_0_gtx3g_GT_FRAME_GEN gt0_frame_gen
        (.ECC_CODE_EN(ECC_CODE_EN),
+        .ERROR_INSERT_MASK(ERROR_INSERT_MASK[30:0]),
         .GT0_TXUSRCLK_OUT(USER_CLK),
         .PATTERN_MODE(PATTERN_MODE),
         .Q(gt0_txdata_i),
@@ -22968,6 +21798,7 @@ module gtx3g_bert_0_gtx3g_exdes
         .out(gt1_rxresetdone_r3));
   gtx3g_bert_0_gtx3g_GT_FRAME_GEN_0 gt1_frame_gen
        (.ECC_CODE_EN(ECC_CODE_EN),
+        .ERROR_INSERT_MASK(ERROR_INSERT_MASK[30:0]),
         .GT0_TXUSRCLK_OUT(USER_CLK),
         .PATTERN_MODE(PATTERN_MODE),
         .Q(gt1_txdata_i),
@@ -23112,8 +21943,8 @@ module gtx3g_bert_0_gtx3g_exdes
 endmodule
 
 (* DowngradeIPIdentifiedWarnings = "yes" *) (* EXAMPLE_SIMULATION = "0" *) (* EXAMPLE_SIM_GTRESET_SPEEDUP = "TRUE" *) 
-(* EXAMPLE_USE_CHIPSCOPE = "0" *) (* RX_CDRLOCK_TIME = "33333" *) (* STABLE_CLOCK_PERIOD = "10" *) 
-(* WAIT_TIME_CDRLOCK = "3333" *) 
+(* EXAMPLE_USE_CHIPSCOPE = "0" *) (* ORIG_REF_NAME = "gtx3g_init" *) (* RX_CDRLOCK_TIME = "33333" *) 
+(* STABLE_CLOCK_PERIOD = "10" *) (* WAIT_TIME_CDRLOCK = "3333" *) 
 module gtx3g_bert_0_gtx3g_init
    (sysclk_in,
     soft_reset_tx_in,
@@ -25735,6 +24566,7 @@ module gtx3g_bert_0_gtx3g_init
         .gtrxreset_i_reg(gt1_gtrxreset_i));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_multi_gt" *) 
 module gtx3g_bert_0_gtx3g_multi_gt
    (gt0_drprdy_out,
     gt0_eyescandataerror_out,
@@ -26346,6 +25178,7 @@ module gtx3g_bert_0_gtx3g_multi_gt
         .gtrxreset_i_reg(gtrxreset_i_reg));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_support" *) 
 module gtx3g_bert_0_gtx3g_support
    (RXDATA_OUT,
     gt0_rxcharisk_out,
@@ -26740,6 +25573,7 @@ module gtx3g_bert_0_gtx3g_support
         .sysclk_in(CLK));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_sync_block" *) 
 module gtx3g_bert_0_gtx3g_sync_block
    (data_out,
     gt1_txresetdone_out,
@@ -26932,7 +25766,7 @@ module gtx3g_bert_0_gtx3g_sync_block_10
         .I4(out[1]),
         .I5(out[0]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT5 #(
     .INIT(32'hAAAAA8AA)) 
     \FSM_sequential_rx_state[1]_i_2__0 
@@ -27105,7 +25939,7 @@ module gtx3g_bert_0_gtx3g_sync_block_10
         .I4(rx_fsm_reset_done_int_i_4__0_n_0),
         .I5(out[0]),
         .O(rx_fsm_reset_done_int_i_3__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT4 #(
     .INIT(16'hFF02)) 
     rx_fsm_reset_done_int_i_4__0
@@ -27216,13 +26050,13 @@ module gtx3g_bert_0_gtx3g_sync_block_11
         .D(data_sync5),
         .Q(mmcm_lock_i),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \mmcm_lock_count[9]_i_1__2 
        (.I0(mmcm_lock_i),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT5 #(
     .INIT(32'hFEFF0000)) 
     mmcm_lock_reclocked_i_1__2
@@ -27831,13 +26665,13 @@ module gtx3g_bert_0_gtx3g_sync_block_17
         .D(data_sync5),
         .Q(mmcm_lock_i),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \mmcm_lock_count[9]_i_1 
        (.I0(mmcm_lock_i),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT5 #(
     .INIT(32'hFEFF0000)) 
     mmcm_lock_reclocked_i_1
@@ -28912,7 +27746,7 @@ module gtx3g_bert_0_gtx3g_sync_block_28
         .I4(out[1]),
         .I5(out[0]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT5 #(
     .INIT(32'hAAAAA8AA)) 
     \FSM_sequential_rx_state[1]_i_2 
@@ -29085,7 +27919,7 @@ module gtx3g_bert_0_gtx3g_sync_block_28
         .I4(rx_fsm_reset_done_int_i_4_n_0),
         .I5(out[0]),
         .O(rx_fsm_reset_done_int_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT4 #(
     .INIT(16'hFF02)) 
     rx_fsm_reset_done_int_i_4
@@ -29196,13 +28030,13 @@ module gtx3g_bert_0_gtx3g_sync_block_29
         .D(data_sync5),
         .Q(mmcm_lock_i),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \mmcm_lock_count[9]_i_1__1 
        (.I0(mmcm_lock_i),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT5 #(
     .INIT(32'hFEFF0000)) 
     mmcm_lock_reclocked_i_1__1
@@ -29719,13 +28553,13 @@ module gtx3g_bert_0_gtx3g_sync_block_4
         .D(data_sync5),
         .Q(mmcm_lock_i),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \mmcm_lock_count[9]_i_1__0 
        (.I0(mmcm_lock_i),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT5 #(
     .INIT(32'hFEFF0000)) 
     mmcm_lock_reclocked_i_1__0
@@ -30300,6 +29134,7 @@ module gtx3g_bert_0_gtx3g_sync_block_9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "gtx3g_sync_pulse" *) 
 module gtx3g_bert_0_gtx3g_sync_pulse
    (p_3_out,
     E,
@@ -30608,103 +29443,95 @@ module gtx3g_bert_0_gtx3g_sync_pulse_26
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "parity_encoder" *) 
 module gtx3g_bert_0_parity_encoder
    (D,
     \tx_data_reg_reg[5] ,
     \tx_data_reg_reg[7] ,
     \tx_data_reg_reg[9] ,
-    \tx_data_reg_reg[12] ,
-    \tx_data_reg_reg[2] ,
-    \tx_data_reg_reg[4] ,
-    \tx_data_reg_reg[6] ,
-    \tx_data_reg_reg[8] ,
-    \tx_data_reg_reg[13] ,
-    \tx_data_reg_reg[14] ,
     \tx_data_reg_reg[15] ,
+    \tx_data_reg_reg[14] ,
+    \tx_data_reg_reg[13] ,
+    \tx_data_reg_reg[12] ,
+    \tx_data_reg_reg[4] ,
+    \tx_data_reg_reg[2] ,
+    \tx_data_reg_reg[3] ,
+    \tx_data_reg_reg[8] ,
+    \tx_data_reg_reg[11] ,
     Q,
     data_word_valid,
-    \block_word_cnt_reg[4] ,
-    \block_word_cnt_reg[3] ,
-    \block_word_cnt_reg[4]_0 ,
-    \pattern_reg_reg[10] ,
-    \test_init_cnt_reg_1__s_port_] ,
+    test_init_cnt_reg,
     \block_word_cnt_reg[2] ,
+    \block_word_cnt_reg[3] ,
+    \block_word_cnt_reg[4] ,
+    \block_word_cnt_reg[4]_0 ,
     \block_word_cnt_reg[4]_1 ,
+    \pattern_reg_reg[0] ,
+    \block_word_cnt_reg[0] ,
     \block_word_cnt_reg[4]_2 ,
     \block_word_cnt_reg[4]_3 ,
-    \block_word_cnt_reg[0] ,
-    test_init_cnt_reg,
     \block_word_cnt_reg[0]_0 ,
-    \block_word_cnt_reg[4]_4 ,
-    \block_word_cnt_reg[4]_5 ,
-    \block_word_cnt_reg[2]_0 ,
+    \test_init_cnt_reg[14] ,
     \block_word_cnt_reg[0]_1 ,
-    \block_word_cnt_reg[2]_1 ,
-    \block_word_cnt_reg[2]_2 ,
+    \pattern_reg_reg[10] ,
+    \block_word_cnt_reg[2]_0 ,
+    \block_word_cnt_reg[1] ,
+    \pattern_reg_reg[11] ,
     \pattern_reg_reg[1] ,
-    \block_word_cnt_reg[4]_6 ,
-    \block_word_cnt_reg[4]_7 ,
     SR,
     GT0_TXUSRCLK_OUT);
-  output [4:0]D;
+  output [3:0]D;
   output \tx_data_reg_reg[5] ;
   output \tx_data_reg_reg[7] ;
   output \tx_data_reg_reg[9] ;
-  output \tx_data_reg_reg[12] ;
-  output \tx_data_reg_reg[2] ;
-  output \tx_data_reg_reg[4] ;
-  output \tx_data_reg_reg[6] ;
-  output \tx_data_reg_reg[8] ;
-  output \tx_data_reg_reg[13] ;
-  output \tx_data_reg_reg[14] ;
   output \tx_data_reg_reg[15] ;
+  output \tx_data_reg_reg[14] ;
+  output \tx_data_reg_reg[13] ;
+  output \tx_data_reg_reg[12] ;
+  output \tx_data_reg_reg[4] ;
+  output \tx_data_reg_reg[2] ;
+  output \tx_data_reg_reg[3] ;
+  output \tx_data_reg_reg[8] ;
+  output \tx_data_reg_reg[11] ;
   input [15:0]Q;
   input data_word_valid;
-  input [3:0]\block_word_cnt_reg[4] ;
-  input \block_word_cnt_reg[3] ;
-  input \block_word_cnt_reg[4]_0 ;
-  input [7:0]\pattern_reg_reg[10] ;
-  input \test_init_cnt_reg_1__s_port_] ;
+  input [2:0]test_init_cnt_reg;
   input \block_word_cnt_reg[2] ;
+  input \block_word_cnt_reg[3] ;
+  input \block_word_cnt_reg[4] ;
+  input [3:0]\block_word_cnt_reg[4]_0 ;
   input \block_word_cnt_reg[4]_1 ;
+  input \pattern_reg_reg[0] ;
+  input \block_word_cnt_reg[0] ;
   input \block_word_cnt_reg[4]_2 ;
   input \block_word_cnt_reg[4]_3 ;
-  input \block_word_cnt_reg[0] ;
-  input [3:0]test_init_cnt_reg;
   input \block_word_cnt_reg[0]_0 ;
-  input \block_word_cnt_reg[4]_4 ;
-  input \block_word_cnt_reg[4]_5 ;
-  input \block_word_cnt_reg[2]_0 ;
+  input \test_init_cnt_reg[14] ;
   input \block_word_cnt_reg[0]_1 ;
-  input \block_word_cnt_reg[2]_1 ;
-  input \block_word_cnt_reg[2]_2 ;
+  input \pattern_reg_reg[10] ;
+  input \block_word_cnt_reg[2]_0 ;
+  input \block_word_cnt_reg[1] ;
+  input [5:0]\pattern_reg_reg[11] ;
   input \pattern_reg_reg[1] ;
-  input \block_word_cnt_reg[4]_6 ;
-  input \block_word_cnt_reg[4]_7 ;
   input [0:0]SR;
   input GT0_TXUSRCLK_OUT;
 
-  wire [4:0]D;
+  wire [3:0]D;
   wire GT0_TXUSRCLK_OUT;
   wire [15:0]Q;
   wire [0:0]SR;
   wire \block_word_cnt_reg[0] ;
   wire \block_word_cnt_reg[0]_0 ;
   wire \block_word_cnt_reg[0]_1 ;
+  wire \block_word_cnt_reg[1] ;
   wire \block_word_cnt_reg[2] ;
   wire \block_word_cnt_reg[2]_0 ;
-  wire \block_word_cnt_reg[2]_1 ;
-  wire \block_word_cnt_reg[2]_2 ;
   wire \block_word_cnt_reg[3] ;
-  wire [3:0]\block_word_cnt_reg[4] ;
-  wire \block_word_cnt_reg[4]_0 ;
+  wire \block_word_cnt_reg[4] ;
+  wire [3:0]\block_word_cnt_reg[4]_0 ;
   wire \block_word_cnt_reg[4]_1 ;
   wire \block_word_cnt_reg[4]_2 ;
   wire \block_word_cnt_reg[4]_3 ;
-  wire \block_word_cnt_reg[4]_4 ;
-  wire \block_word_cnt_reg[4]_5 ;
-  wire \block_word_cnt_reg[4]_6 ;
-  wire \block_word_cnt_reg[4]_7 ;
   wire data_word_valid;
   wire [15:0]hor_parity_word;
   wire hor_parity_word_reg1;
@@ -30713,9 +29540,7 @@ module gtx3g_bert_0_parity_encoder
   wire \hor_parity_word_reg[10]_i_2__0_n_0 ;
   wire \hor_parity_word_reg[11]_i_1__0_n_0 ;
   wire \hor_parity_word_reg[12]_i_1__0_n_0 ;
-  wire \hor_parity_word_reg[12]_i_2__0_n_0 ;
   wire \hor_parity_word_reg[13]_i_1__0_n_0 ;
-  wire \hor_parity_word_reg[13]_i_2__0_n_0 ;
   wire \hor_parity_word_reg[14]_i_1__0_n_0 ;
   wire \hor_parity_word_reg[14]_i_2__0_n_0 ;
   wire \hor_parity_word_reg[15]_i_1__0_n_0 ;
@@ -30737,22 +29562,24 @@ module gtx3g_bert_0_parity_encoder
   wire [3:1]p_0_in;
   wire \parity_word_cnt[0]_i_1__0_n_0 ;
   wire [3:0]parity_word_cnt_reg;
-  wire [7:0]\pattern_reg_reg[10] ;
+  wire \pattern_reg_reg[0] ;
+  wire \pattern_reg_reg[10] ;
+  wire [5:0]\pattern_reg_reg[11] ;
   wire \pattern_reg_reg[1] ;
-  wire [3:0]test_init_cnt_reg;
-  wire test_init_cnt_reg_1__s_net_1;
+  wire [2:0]test_init_cnt_reg;
+  wire \test_init_cnt_reg[14] ;
   wire \tx_data_reg[0]_i_2__0_n_0 ;
-  wire \tx_data_reg[10]_i_2__0_n_0 ;
   wire \tx_data_reg[1]_i_2_n_0 ;
-  wire \tx_data_reg[3]_i_2__0_n_0 ;
+  wire \tx_data_reg[6]_i_2__0_n_0 ;
+  wire \tx_data_reg_reg[11] ;
   wire \tx_data_reg_reg[12] ;
   wire \tx_data_reg_reg[13] ;
   wire \tx_data_reg_reg[14] ;
   wire \tx_data_reg_reg[15] ;
   wire \tx_data_reg_reg[2] ;
+  wire \tx_data_reg_reg[3] ;
   wire \tx_data_reg_reg[4] ;
   wire \tx_data_reg_reg[5] ;
-  wire \tx_data_reg_reg[6] ;
   wire \tx_data_reg_reg[7] ;
   wire \tx_data_reg_reg[8] ;
   wire \tx_data_reg_reg[9] ;
@@ -30774,14 +29601,12 @@ module gtx3g_bert_0_parity_encoder
   wire \ver_parity_word_reg[8]_i_1__0_n_0 ;
   wire \ver_parity_word_reg[9]_i_1__0_n_0 ;
 
-  assign test_init_cnt_reg_1__s_net_1 = \test_init_cnt_reg_1__s_port_] ;
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT5 #(
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[0]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg[1]),
-        .I2(parity_word_cnt_reg[0]),
+        .I1(parity_word_cnt_reg[0]),
+        .I2(parity_word_cnt_reg[1]),
         .I3(\hor_parity_word_reg[2]_i_2__0_n_0 ),
         .I4(hor_parity_word[0]),
         .O(\hor_parity_word_reg[0]_i_1__0_n_0 ));
@@ -30794,7 +29619,7 @@ module gtx3g_bert_0_parity_encoder
         .I3(\hor_parity_word_reg[10]_i_2__0_n_0 ),
         .I4(hor_parity_word[10]),
         .O(\hor_parity_word_reg[10]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hBF)) 
     \hor_parity_word_reg[10]_i_2__0 
@@ -30812,112 +29637,96 @@ module gtx3g_bert_0_parity_encoder
         .I4(parity_word_cnt_reg[2]),
         .I5(hor_parity_word[11]),
         .O(\hor_parity_word_reg[11]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+  LUT5 #(
+    .INIT(32'hFFFB0008)) 
     \hor_parity_word_reg[12]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg[3]),
-        .I2(data_word_valid),
-        .I3(parity_word_cnt_reg[2]),
-        .I4(\hor_parity_word_reg[12]_i_2__0_n_0 ),
-        .I5(hor_parity_word[12]),
+        .I1(\hor_parity_word_reg[14]_i_2__0_n_0 ),
+        .I2(parity_word_cnt_reg[0]),
+        .I3(parity_word_cnt_reg[1]),
+        .I4(hor_parity_word[12]),
         .O(\hor_parity_word_reg[12]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \hor_parity_word_reg[12]_i_2__0 
-       (.I0(parity_word_cnt_reg[0]),
-        .I1(parity_word_cnt_reg[1]),
-        .O(\hor_parity_word_reg[12]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     \hor_parity_word_reg[13]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(\hor_parity_word_reg[13]_i_2__0_n_0 ),
-        .I2(parity_word_cnt_reg[3]),
-        .I3(data_word_valid),
-        .I4(parity_word_cnt_reg[2]),
-        .I5(hor_parity_word[13]),
-        .O(\hor_parity_word_reg[13]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \hor_parity_word_reg[13]_i_2__0 
-       (.I0(parity_word_cnt_reg[0]),
         .I1(parity_word_cnt_reg[1]),
-        .O(\hor_parity_word_reg[13]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+        .I2(parity_word_cnt_reg[0]),
+        .I3(\hor_parity_word_reg[14]_i_2__0_n_0 ),
+        .I4(hor_parity_word[13]),
+        .O(\hor_parity_word_reg[13]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     \hor_parity_word_reg[14]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(\hor_parity_word_reg[14]_i_2__0_n_0 ),
-        .I2(parity_word_cnt_reg[3]),
-        .I3(data_word_valid),
-        .I4(parity_word_cnt_reg[2]),
-        .I5(hor_parity_word[14]),
-        .O(\hor_parity_word_reg[14]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \hor_parity_word_reg[14]_i_2__0 
-       (.I0(parity_word_cnt_reg[1]),
         .I1(parity_word_cnt_reg[0]),
+        .I2(parity_word_cnt_reg[1]),
+        .I3(\hor_parity_word_reg[14]_i_2__0_n_0 ),
+        .I4(hor_parity_word[14]),
+        .O(\hor_parity_word_reg[14]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \hor_parity_word_reg[14]_i_2__0 
+       (.I0(parity_word_cnt_reg[2]),
+        .I1(data_word_valid),
+        .I2(parity_word_cnt_reg[3]),
         .O(\hor_parity_word_reg[14]_i_2__0_n_0 ));
   LUT6 #(
     .INIT(64'hBFFFFFFF80000000)) 
     \hor_parity_word_reg[15]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg[2]),
-        .I2(\hor_parity_word_reg[15]_i_3__0_n_0 ),
+        .I1(\hor_parity_word_reg[15]_i_3__0_n_0 ),
+        .I2(parity_word_cnt_reg[3]),
         .I3(data_word_valid),
-        .I4(parity_word_cnt_reg[3]),
+        .I4(parity_word_cnt_reg[2]),
         .I5(hor_parity_word[15]),
         .O(\hor_parity_word_reg[15]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'h6996966996696996)) 
     \hor_parity_word_reg[15]_i_2__0 
        (.I0(\hor_parity_word_reg[15]_i_4__0_n_0 ),
-        .I1(Q[4]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[3]),
+        .I1(Q[5]),
+        .I2(Q[4]),
+        .I3(Q[3]),
+        .I4(Q[2]),
         .I5(\hor_parity_word_reg[15]_i_5__0_n_0 ),
         .O(hor_parity_word_reg1));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \hor_parity_word_reg[15]_i_3__0 
-       (.I0(parity_word_cnt_reg[0]),
-        .I1(parity_word_cnt_reg[1]),
+       (.I0(parity_word_cnt_reg[1]),
+        .I1(parity_word_cnt_reg[0]),
         .O(\hor_parity_word_reg[15]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \hor_parity_word_reg[15]_i_4__0 
-       (.I0(Q[6]),
-        .I1(Q[7]),
-        .I2(Q[0]),
-        .I3(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[7]),
+        .I3(Q[6]),
         .O(\hor_parity_word_reg[15]_i_4__0_n_0 ));
   LUT5 #(
     .INIT(32'h96696996)) 
     \hor_parity_word_reg[15]_i_5__0 
-       (.I0(Q[11]),
-        .I1(Q[10]),
-        .I2(Q[13]),
-        .I3(Q[12]),
+       (.I0(Q[10]),
+        .I1(Q[11]),
+        .I2(Q[12]),
+        .I3(Q[13]),
         .I4(\hor_parity_word_reg[15]_i_6__0_n_0 ),
         .O(\hor_parity_word_reg[15]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \hor_parity_word_reg[15]_i_6__0 
-       (.I0(Q[14]),
-        .I1(Q[15]),
-        .I2(Q[8]),
-        .I3(Q[9]),
+       (.I0(Q[9]),
+        .I1(Q[8]),
+        .I2(Q[15]),
+        .I3(Q[14]),
         .O(\hor_parity_word_reg[15]_i_6__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[1]_i_1__0 
@@ -30927,7 +29736,6 @@ module gtx3g_bert_0_parity_encoder
         .I3(\hor_parity_word_reg[2]_i_2__0_n_0 ),
         .I4(hor_parity_word[1]),
         .O(\hor_parity_word_reg[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[2]_i_1__0 
@@ -30937,7 +29745,7 @@ module gtx3g_bert_0_parity_encoder
         .I3(\hor_parity_word_reg[2]_i_2__0_n_0 ),
         .I4(hor_parity_word[2]),
         .O(\hor_parity_word_reg[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \hor_parity_word_reg[2]_i_2__0 
@@ -30959,8 +29767,8 @@ module gtx3g_bert_0_parity_encoder
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[4]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg[1]),
-        .I2(parity_word_cnt_reg[0]),
+        .I1(parity_word_cnt_reg[0]),
+        .I2(parity_word_cnt_reg[1]),
         .I3(\hor_parity_word_reg[6]_i_2__0_n_0 ),
         .I4(hor_parity_word[4]),
         .O(\hor_parity_word_reg[4]_i_1__0_n_0 ));
@@ -30982,6 +29790,7 @@ module gtx3g_bert_0_parity_encoder
         .I3(\hor_parity_word_reg[6]_i_2__0_n_0 ),
         .I4(hor_parity_word[6]),
         .O(\hor_parity_word_reg[6]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \hor_parity_word_reg[6]_i_2__0 
@@ -31003,12 +29812,11 @@ module gtx3g_bert_0_parity_encoder
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[8]_i_1__0 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg[1]),
-        .I2(parity_word_cnt_reg[0]),
+        .I1(parity_word_cnt_reg[0]),
+        .I2(parity_word_cnt_reg[1]),
         .I3(\hor_parity_word_reg[10]_i_2__0_n_0 ),
         .I4(hor_parity_word[8]),
         .O(\hor_parity_word_reg[8]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[9]_i_1__0 
@@ -31114,35 +29922,35 @@ module gtx3g_bert_0_parity_encoder
         .D(\hor_parity_word_reg[9]_i_1__0_n_0 ),
         .Q(hor_parity_word[9]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \parity_word_cnt[0]_i_1__0 
        (.I0(parity_word_cnt_reg[0]),
         .O(\parity_word_cnt[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \parity_word_cnt[1]_i_1__0 
-       (.I0(parity_word_cnt_reg[0]),
-        .I1(parity_word_cnt_reg[1]),
+       (.I0(parity_word_cnt_reg[1]),
+        .I1(parity_word_cnt_reg[0]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \parity_word_cnt[2]_i_1__0 
        (.I0(parity_word_cnt_reg[2]),
-        .I1(parity_word_cnt_reg[1]),
-        .I2(parity_word_cnt_reg[0]),
+        .I1(parity_word_cnt_reg[0]),
+        .I2(parity_word_cnt_reg[1]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \parity_word_cnt[3]_i_1__0 
        (.I0(parity_word_cnt_reg[3]),
         .I1(parity_word_cnt_reg[2]),
-        .I2(parity_word_cnt_reg[0]),
-        .I3(parity_word_cnt_reg[1]),
+        .I2(parity_word_cnt_reg[1]),
+        .I3(parity_word_cnt_reg[0]),
         .O(p_0_in[3]));
   FDRE \parity_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -31168,302 +29976,291 @@ module gtx3g_bert_0_parity_encoder
         .D(p_0_in[3]),
         .Q(parity_word_cnt_reg[3]),
         .R(SR));
-  LUT6 #(
-    .INIT(64'h44F444F4FFFF44F4)) 
+  LUT5 #(
+    .INIT(32'hFFFFFF40)) 
     \tx_data_reg[0]_i_1__0 
-       (.I0(\tx_data_reg[0]_i_2__0_n_0 ),
-        .I1(\block_word_cnt_reg[3] ),
-        .I2(\pattern_reg_reg[10] [0]),
-        .I3(\block_word_cnt_reg[0] ),
-        .I4(test_init_cnt_reg[0]),
-        .I5(\block_word_cnt_reg[0]_0 ),
+       (.I0(\block_word_cnt_reg[4]_0 [0]),
+        .I1(test_init_cnt_reg[0]),
+        .I2(\block_word_cnt_reg[4]_1 ),
+        .I3(\tx_data_reg[0]_i_2__0_n_0 ),
+        .I4(\pattern_reg_reg[0] ),
         .O(D[0]));
   LUT6 #(
-    .INIT(64'hFFFF3F5FFFF0FFFF)) 
+    .INIT(64'h8C888C8C8C888888)) 
     \tx_data_reg[0]_i_2__0 
-       (.I0(hor_parity_word[0]),
-        .I1(ver_parity_word[0]),
-        .I2(\block_word_cnt_reg[4] [2]),
-        .I3(\block_word_cnt_reg[4] [0]),
-        .I4(\block_word_cnt_reg[4] [1]),
-        .I5(\block_word_cnt_reg[4] [3]),
+       (.I0(\block_word_cnt_reg[0] ),
+        .I1(\block_word_cnt_reg[3] ),
+        .I2(\block_word_cnt_reg[4]_2 ),
+        .I3(hor_parity_word[0]),
+        .I4(\block_word_cnt_reg[4]_3 ),
+        .I5(ver_parity_word[0]),
         .O(\tx_data_reg[0]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'hAEAEAEAEAEFFAEAE)) 
+    .INIT(64'hEEFFEEFEEEEEEEFE)) 
     \tx_data_reg[10]_i_1__0 
-       (.I0(\tx_data_reg[10]_i_2__0_n_0 ),
-        .I1(\pattern_reg_reg[10] [7]),
-        .I2(\block_word_cnt_reg[2]_0 ),
-        .I3(\block_word_cnt_reg[0]_1 ),
-        .I4(test_init_cnt_reg[2]),
-        .I5(\block_word_cnt_reg[4]_4 ),
+       (.I0(\block_word_cnt_reg[0]_1 ),
+        .I1(\pattern_reg_reg[10] ),
+        .I2(ver_parity_word[10]),
+        .I3(\block_word_cnt_reg[2]_0 ),
+        .I4(\block_word_cnt_reg[4]_3 ),
+        .I5(hor_parity_word[10]),
         .O(D[3]));
   LUT6 #(
-    .INIT(64'hAAAAAAAAEEFAAAAA)) 
-    \tx_data_reg[10]_i_2__0 
-       (.I0(\block_word_cnt_reg[2]_1 ),
-        .I1(hor_parity_word[10]),
-        .I2(ver_parity_word[10]),
-        .I3(\block_word_cnt_reg[4]_3 ),
-        .I4(\block_word_cnt_reg[3] ),
-        .I5(\block_word_cnt_reg[2]_2 ),
-        .O(\tx_data_reg[10]_i_2__0_n_0 ));
+    .INIT(64'hBABABA8A8A8ABA8A)) 
+    \tx_data_reg[11]_i_2__0 
+       (.I0(\pattern_reg_reg[11] [5]),
+        .I1(\block_word_cnt_reg[4]_0 [1]),
+        .I2(\block_word_cnt_reg[4]_0 [3]),
+        .I3(hor_parity_word[11]),
+        .I4(\block_word_cnt_reg[4]_0 [0]),
+        .I5(ver_parity_word[11]),
+        .O(\tx_data_reg_reg[11] ));
   LUT6 #(
-    .INIT(64'hFEEEFEEEFFEEEEEE)) 
-    \tx_data_reg[11]_i_1__0 
-       (.I0(\block_word_cnt_reg[2] ),
-        .I1(\block_word_cnt_reg[4]_1 ),
-        .I2(hor_parity_word[11]),
-        .I3(\block_word_cnt_reg[4]_2 ),
-        .I4(ver_parity_word[11]),
-        .I5(\block_word_cnt_reg[4]_3 ),
-        .O(D[4]));
-  LUT6 #(
-    .INIT(64'hD0D0D0DDDDDDD0DD)) 
-    \tx_data_reg[12]_i_4 
-       (.I0(test_init_cnt_reg[3]),
-        .I1(\block_word_cnt_reg[4]_6 ),
-        .I2(\block_word_cnt_reg[2]_2 ),
-        .I3(ver_parity_word[12]),
-        .I4(\block_word_cnt_reg[4]_3 ),
-        .I5(hor_parity_word[12]),
+    .INIT(64'h00CA000000000000)) 
+    \tx_data_reg[12]_i_2__0 
+       (.I0(hor_parity_word[12]),
+        .I1(ver_parity_word[12]),
+        .I2(\block_word_cnt_reg[4]_0 [0]),
+        .I3(\block_word_cnt_reg[4]_0 [1]),
+        .I4(\block_word_cnt_reg[4]_0 [3]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
         .O(\tx_data_reg_reg[12] ));
   LUT6 #(
-    .INIT(64'h0B00080000000000)) 
+    .INIT(64'h00CA000000000000)) 
     \tx_data_reg[13]_i_2__0 
-       (.I0(ver_parity_word[13]),
-        .I1(\block_word_cnt_reg[4] [0]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(hor_parity_word[13]),
-        .I5(\block_word_cnt_reg[4] [2]),
+       (.I0(hor_parity_word[13]),
+        .I1(ver_parity_word[13]),
+        .I2(\block_word_cnt_reg[4]_0 [0]),
+        .I3(\block_word_cnt_reg[4]_0 [1]),
+        .I4(\block_word_cnt_reg[4]_0 [3]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
         .O(\tx_data_reg_reg[13] ));
   LUT6 #(
-    .INIT(64'h0B00080000000000)) 
+    .INIT(64'h00CA000000000000)) 
     \tx_data_reg[14]_i_2__0 
-       (.I0(ver_parity_word[14]),
-        .I1(\block_word_cnt_reg[4] [0]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(hor_parity_word[14]),
-        .I5(\block_word_cnt_reg[4] [2]),
+       (.I0(hor_parity_word[14]),
+        .I1(ver_parity_word[14]),
+        .I2(\block_word_cnt_reg[4]_0 [0]),
+        .I3(\block_word_cnt_reg[4]_0 [1]),
+        .I4(\block_word_cnt_reg[4]_0 [3]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
         .O(\tx_data_reg_reg[14] ));
   LUT6 #(
-    .INIT(64'h08000C0008000000)) 
+    .INIT(64'h00CA000000000000)) 
     \tx_data_reg[15]_i_4__0 
-       (.I0(ver_parity_word[15]),
-        .I1(\block_word_cnt_reg[4] [2]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(\block_word_cnt_reg[4] [0]),
-        .I5(hor_parity_word[15]),
+       (.I0(hor_parity_word[15]),
+        .I1(ver_parity_word[15]),
+        .I2(\block_word_cnt_reg[4]_0 [0]),
+        .I3(\block_word_cnt_reg[4]_0 [1]),
+        .I4(\block_word_cnt_reg[4]_0 [3]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
         .O(\tx_data_reg_reg[15] ));
   LUT6 #(
-    .INIT(64'h10FF10FF10FF1010)) 
+    .INIT(64'hEEEFEEEEEEEEEEEE)) 
     \tx_data_reg[1]_i_1__0 
-       (.I0(\block_word_cnt_reg[4] [0]),
-        .I1(\block_word_cnt_reg[4]_4 ),
-        .I2(test_init_cnt_reg[1]),
-        .I3(\tx_data_reg[1]_i_2_n_0 ),
-        .I4(\pattern_reg_reg[10] [1]),
-        .I5(\block_word_cnt_reg[3] ),
+       (.I0(\tx_data_reg[1]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg[0]_0 ),
+        .I2(\test_init_cnt_reg[14] ),
+        .I3(\block_word_cnt_reg[4]_0 [0]),
+        .I4(\block_word_cnt_reg[4]_1 ),
+        .I5(test_init_cnt_reg[1]),
         .O(D[1]));
-  LUT5 #(
-    .INIT(32'h0000BABF)) 
+  LUT6 #(
+    .INIT(64'h88888888A8A8AA88)) 
     \tx_data_reg[1]_i_2 
-       (.I0(\block_word_cnt_reg[2]_2 ),
-        .I1(hor_parity_word[1]),
-        .I2(\block_word_cnt_reg[4]_3 ),
+       (.I0(\block_word_cnt_reg[3] ),
+        .I1(\pattern_reg_reg[1] ),
+        .I2(hor_parity_word[1]),
         .I3(ver_parity_word[1]),
-        .I4(\pattern_reg_reg[1] ),
+        .I4(\block_word_cnt_reg[4]_3 ),
+        .I5(\block_word_cnt_reg[4]_2 ),
         .O(\tx_data_reg[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0C08000800000000)) 
+    .INIT(64'h0B00080000000000)) 
     \tx_data_reg[2]_i_2__0 
-       (.I0(hor_parity_word[2]),
-        .I1(\block_word_cnt_reg[4] [3]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [0]),
-        .I4(ver_parity_word[2]),
-        .I5(\block_word_cnt_reg[4] [2]),
+       (.I0(ver_parity_word[2]),
+        .I1(\block_word_cnt_reg[4]_0 [0]),
+        .I2(\block_word_cnt_reg[4]_0 [1]),
+        .I3(\block_word_cnt_reg[4]_0 [3]),
+        .I4(hor_parity_word[2]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
         .O(\tx_data_reg_reg[2] ));
   LUT6 #(
-    .INIT(64'h8F8F8080DFDFD080)) 
-    \tx_data_reg[3]_i_1__0 
-       (.I0(\block_word_cnt_reg[4] [2]),
-        .I1(\tx_data_reg[3]_i_2__0_n_0 ),
-        .I2(\block_word_cnt_reg[3] ),
-        .I3(\block_word_cnt_reg[4]_0 ),
-        .I4(\pattern_reg_reg[10] [2]),
-        .I5(test_init_cnt_reg_1__s_net_1),
-        .O(D[2]));
-  LUT6 #(
-    .INIT(64'hFFFFB8FF0000B800)) 
+    .INIT(64'hBABABA8A8A8ABA8A)) 
     \tx_data_reg[3]_i_2__0 
-       (.I0(ver_parity_word[3]),
-        .I1(\block_word_cnt_reg[4] [0]),
-        .I2(hor_parity_word[3]),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(\block_word_cnt_reg[4] [1]),
-        .I5(\pattern_reg_reg[10] [2]),
-        .O(\tx_data_reg[3]_i_2__0_n_0 ));
+       (.I0(\pattern_reg_reg[11] [0]),
+        .I1(\block_word_cnt_reg[4]_0 [1]),
+        .I2(\block_word_cnt_reg[4]_0 [3]),
+        .I3(hor_parity_word[3]),
+        .I4(\block_word_cnt_reg[4]_0 [0]),
+        .I5(ver_parity_word[3]),
+        .O(\tx_data_reg_reg[3] ));
   LUT6 #(
-    .INIT(64'h0B00080000000000)) 
+    .INIT(64'h00CA000000000000)) 
     \tx_data_reg[4]_i_2__0 
-       (.I0(ver_parity_word[4]),
-        .I1(\block_word_cnt_reg[4] [0]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(hor_parity_word[4]),
-        .I5(\block_word_cnt_reg[4] [2]),
+       (.I0(hor_parity_word[4]),
+        .I1(ver_parity_word[4]),
+        .I2(\block_word_cnt_reg[4]_0 [0]),
+        .I3(\block_word_cnt_reg[4]_0 [1]),
+        .I4(\block_word_cnt_reg[4]_0 [3]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
         .O(\tx_data_reg_reg[4] ));
   LUT6 #(
-    .INIT(64'hFF44F4F444444444)) 
-    \tx_data_reg[5]_i_3 
-       (.I0(\block_word_cnt_reg[4]_5 ),
-        .I1(\pattern_reg_reg[10] [3]),
-        .I2(ver_parity_word[5]),
-        .I3(hor_parity_word[5]),
-        .I4(\block_word_cnt_reg[4]_3 ),
-        .I5(\block_word_cnt_reg[4]_2 ),
+    .INIT(64'h4F4F4F44444F4444)) 
+    \tx_data_reg[5]_i_2__0 
+       (.I0(\block_word_cnt_reg[1] ),
+        .I1(\pattern_reg_reg[11] [1]),
+        .I2(\block_word_cnt_reg[2]_0 ),
+        .I3(\block_word_cnt_reg[4]_3 ),
+        .I4(ver_parity_word[5]),
+        .I5(hor_parity_word[5]),
         .O(\tx_data_reg_reg[5] ));
+  LUT5 #(
+    .INIT(32'hFFFFF200)) 
+    \tx_data_reg[6]_i_1__0 
+       (.I0(test_init_cnt_reg[2]),
+        .I1(\block_word_cnt_reg[2] ),
+        .I2(\tx_data_reg[6]_i_2__0_n_0 ),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\block_word_cnt_reg[4] ),
+        .O(D[2]));
   LUT6 #(
-    .INIT(64'h00A0058000000580)) 
-    \tx_data_reg[6]_i_3__0 
-       (.I0(\block_word_cnt_reg[4] [2]),
-        .I1(hor_parity_word[6]),
-        .I2(\block_word_cnt_reg[4] [3]),
-        .I3(\block_word_cnt_reg[4] [1]),
-        .I4(\block_word_cnt_reg[4] [0]),
-        .I5(ver_parity_word[6]),
-        .O(\tx_data_reg_reg[6] ));
+    .INIT(64'h00CA000000000000)) 
+    \tx_data_reg[6]_i_2__0 
+       (.I0(hor_parity_word[6]),
+        .I1(ver_parity_word[6]),
+        .I2(\block_word_cnt_reg[4]_0 [0]),
+        .I3(\block_word_cnt_reg[4]_0 [1]),
+        .I4(\block_word_cnt_reg[4]_0 [3]),
+        .I5(\block_word_cnt_reg[4]_0 [2]),
+        .O(\tx_data_reg[6]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFF44F4F444444444)) 
-    \tx_data_reg[7]_i_3 
-       (.I0(\block_word_cnt_reg[4]_5 ),
-        .I1(\pattern_reg_reg[10] [4]),
-        .I2(ver_parity_word[7]),
-        .I3(hor_parity_word[7]),
-        .I4(\block_word_cnt_reg[4]_3 ),
-        .I5(\block_word_cnt_reg[4]_2 ),
+    .INIT(64'h4F4F4F44444F4444)) 
+    \tx_data_reg[7]_i_2__0 
+       (.I0(\block_word_cnt_reg[1] ),
+        .I1(\pattern_reg_reg[11] [2]),
+        .I2(\block_word_cnt_reg[2]_0 ),
+        .I3(\block_word_cnt_reg[4]_3 ),
+        .I4(ver_parity_word[7]),
+        .I5(hor_parity_word[7]),
         .O(\tx_data_reg_reg[7] ));
   LUT6 #(
-    .INIT(64'h1F1F1FDFDFDF1FDF)) 
+    .INIT(64'h4545457575754575)) 
     \tx_data_reg[8]_i_2__0 
-       (.I0(\pattern_reg_reg[10] [5]),
-        .I1(\block_word_cnt_reg[4]_7 ),
-        .I2(\block_word_cnt_reg[4] [2]),
-        .I3(ver_parity_word[8]),
-        .I4(\block_word_cnt_reg[4]_3 ),
-        .I5(hor_parity_word[8]),
+       (.I0(\pattern_reg_reg[11] [3]),
+        .I1(\block_word_cnt_reg[4]_0 [1]),
+        .I2(\block_word_cnt_reg[4]_0 [3]),
+        .I3(hor_parity_word[8]),
+        .I4(\block_word_cnt_reg[4]_0 [0]),
+        .I5(ver_parity_word[8]),
         .O(\tx_data_reg_reg[8] ));
   LUT6 #(
-    .INIT(64'hFF44F4F444444444)) 
-    \tx_data_reg[9]_i_3__0 
-       (.I0(\block_word_cnt_reg[4]_5 ),
-        .I1(\pattern_reg_reg[10] [6]),
-        .I2(ver_parity_word[9]),
-        .I3(hor_parity_word[9]),
-        .I4(\block_word_cnt_reg[4]_3 ),
-        .I5(\block_word_cnt_reg[4]_2 ),
+    .INIT(64'h4F4F4F44444F4444)) 
+    \tx_data_reg[9]_i_5 
+       (.I0(\block_word_cnt_reg[1] ),
+        .I1(\pattern_reg_reg[11] [4]),
+        .I2(\block_word_cnt_reg[2]_0 ),
+        .I3(\block_word_cnt_reg[4]_3 ),
+        .I4(ver_parity_word[9]),
+        .I5(hor_parity_word[9]),
         .O(\tx_data_reg_reg[9] ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[0]_i_1__0 
-       (.I0(ver_parity_word[0]),
-        .I1(Q[0]),
+       (.I0(Q[0]),
+        .I1(ver_parity_word[0]),
         .O(\ver_parity_word_reg[0]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[10]_i_1__0 
-       (.I0(ver_parity_word[10]),
-        .I1(Q[10]),
+       (.I0(Q[10]),
+        .I1(ver_parity_word[10]),
         .O(\ver_parity_word_reg[10]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[11]_i_1__0 
-       (.I0(ver_parity_word[11]),
-        .I1(Q[11]),
+       (.I0(Q[11]),
+        .I1(ver_parity_word[11]),
         .O(\ver_parity_word_reg[11]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[12]_i_1__0 
-       (.I0(ver_parity_word[12]),
-        .I1(Q[12]),
+       (.I0(Q[12]),
+        .I1(ver_parity_word[12]),
         .O(\ver_parity_word_reg[12]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[13]_i_1__0 
-       (.I0(ver_parity_word[13]),
-        .I1(Q[13]),
+       (.I0(Q[13]),
+        .I1(ver_parity_word[13]),
         .O(\ver_parity_word_reg[13]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[14]_i_1__0 
-       (.I0(ver_parity_word[14]),
-        .I1(Q[14]),
+       (.I0(Q[14]),
+        .I1(ver_parity_word[14]),
         .O(\ver_parity_word_reg[14]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[15]_i_1__0 
-       (.I0(ver_parity_word[15]),
-        .I1(Q[15]),
+       (.I0(Q[15]),
+        .I1(ver_parity_word[15]),
         .O(\ver_parity_word_reg[15]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[1]_i_1__0 
-       (.I0(ver_parity_word[1]),
-        .I1(Q[1]),
+       (.I0(Q[1]),
+        .I1(ver_parity_word[1]),
         .O(\ver_parity_word_reg[1]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[2]_i_1__0 
-       (.I0(ver_parity_word[2]),
-        .I1(Q[2]),
+       (.I0(Q[2]),
+        .I1(ver_parity_word[2]),
         .O(\ver_parity_word_reg[2]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[3]_i_1__0 
-       (.I0(ver_parity_word[3]),
-        .I1(Q[3]),
+       (.I0(Q[3]),
+        .I1(ver_parity_word[3]),
         .O(\ver_parity_word_reg[3]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[4]_i_1__0 
-       (.I0(ver_parity_word[4]),
-        .I1(Q[4]),
+       (.I0(Q[4]),
+        .I1(ver_parity_word[4]),
         .O(\ver_parity_word_reg[4]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[5]_i_1__0 
-       (.I0(ver_parity_word[5]),
-        .I1(Q[5]),
+       (.I0(Q[5]),
+        .I1(ver_parity_word[5]),
         .O(\ver_parity_word_reg[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[6]_i_1__0 
-       (.I0(ver_parity_word[6]),
-        .I1(Q[6]),
+       (.I0(Q[6]),
+        .I1(ver_parity_word[6]),
         .O(\ver_parity_word_reg[6]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[7]_i_1__0 
-       (.I0(ver_parity_word[7]),
-        .I1(Q[7]),
+       (.I0(Q[7]),
+        .I1(ver_parity_word[7]),
         .O(\ver_parity_word_reg[7]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[8]_i_1__0 
-       (.I0(ver_parity_word[8]),
-        .I1(Q[8]),
+       (.I0(Q[8]),
+        .I1(ver_parity_word[8]),
         .O(\ver_parity_word_reg[8]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[9]_i_1__0 
-       (.I0(ver_parity_word[9]),
-        .I1(Q[9]),
+       (.I0(Q[9]),
+        .I1(ver_parity_word[9]),
         .O(\ver_parity_word_reg[9]_i_1__0_n_0 ));
   FDRE \ver_parity_word_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -31568,85 +30365,78 @@ module gtx3g_bert_0_parity_encoder_35
    (D,
     \tx_data_reg_reg[5] ,
     \tx_data_reg_reg[7] ,
-    \tx_data_reg_reg[8] ,
     \tx_data_reg_reg[9] ,
-    \tx_data_reg_reg[2] ,
-    \tx_data_reg_reg[3] ,
+    \tx_data_reg_reg[1] ,
+    \tx_data_reg_reg[11] ,
+    \tx_data_reg_reg[8] ,
     \tx_data_reg_reg[4] ,
+    \tx_data_reg_reg[2] ,
     \tx_data_reg_reg[6] ,
+    \tx_data_reg_reg[10] ,
+    \tx_data_reg_reg[12] ,
     \tx_data_reg_reg[13] ,
     \tx_data_reg_reg[14] ,
+    \tx_data_reg_reg[15] ,
     Q,
     data_word_valid,
     \block_word_cnt_reg[4] ,
-    test_init_cnt_reg,
-    \block_word_cnt_reg[2] ,
-    \pattern_reg_reg[15] ,
-    \block_word_cnt_reg[2]_0 ,
+    \test_init_cnt_reg[1] ,
     \block_word_cnt_reg[4]_0 ,
     \block_word_cnt_reg[3] ,
-    \pattern_reg_reg[12] ,
+    \pattern_reg_reg[11] ,
     \block_word_cnt_reg[4]_1 ,
+    test_init_cnt_reg,
+    \block_word_cnt_reg[2] ,
     \block_word_cnt_reg[4]_2 ,
-    \block_word_cnt_reg[0] ,
     \block_word_cnt_reg[4]_3 ,
-    \pattern_reg_reg[0] ,
-    \block_word_cnt_reg[4]_4 ,
-    \block_word_cnt_reg[1] ,
-    \block_word_cnt_reg[4]_5 ,
-    \block_word_cnt_reg[4]_6 ,
+    \pattern_reg_reg[1] ,
+    \block_word_cnt_reg[2]_0 ,
     SR,
     GT0_TXUSRCLK_OUT);
-  output [5:0]D;
+  output [1:0]D;
   output \tx_data_reg_reg[5] ;
   output \tx_data_reg_reg[7] ;
-  output \tx_data_reg_reg[8] ;
   output \tx_data_reg_reg[9] ;
-  output \tx_data_reg_reg[2] ;
-  output \tx_data_reg_reg[3] ;
+  output \tx_data_reg_reg[1] ;
+  output \tx_data_reg_reg[11] ;
+  output \tx_data_reg_reg[8] ;
   output \tx_data_reg_reg[4] ;
+  output \tx_data_reg_reg[2] ;
   output \tx_data_reg_reg[6] ;
+  output \tx_data_reg_reg[10] ;
+  output \tx_data_reg_reg[12] ;
   output \tx_data_reg_reg[13] ;
   output \tx_data_reg_reg[14] ;
+  output \tx_data_reg_reg[15] ;
   input [15:0]Q;
   input data_word_valid;
-  input \block_word_cnt_reg[4] ;
-  input [4:0]test_init_cnt_reg;
-  input \block_word_cnt_reg[2] ;
-  input [6:0]\pattern_reg_reg[15] ;
-  input \block_word_cnt_reg[2]_0 ;
-  input [3:0]\block_word_cnt_reg[4]_0 ;
+  input [3:0]\block_word_cnt_reg[4] ;
+  input \test_init_cnt_reg[1] ;
+  input \block_word_cnt_reg[4]_0 ;
   input \block_word_cnt_reg[3] ;
-  input \pattern_reg_reg[12] ;
+  input [6:0]\pattern_reg_reg[11] ;
   input \block_word_cnt_reg[4]_1 ;
+  input [0:0]test_init_cnt_reg;
+  input \block_word_cnt_reg[2] ;
   input \block_word_cnt_reg[4]_2 ;
-  input \block_word_cnt_reg[0] ;
   input \block_word_cnt_reg[4]_3 ;
-  input \pattern_reg_reg[0] ;
-  input \block_word_cnt_reg[4]_4 ;
-  input \block_word_cnt_reg[1] ;
-  input \block_word_cnt_reg[4]_5 ;
-  input \block_word_cnt_reg[4]_6 ;
+  input \pattern_reg_reg[1] ;
+  input \block_word_cnt_reg[2]_0 ;
   input [0:0]SR;
   input GT0_TXUSRCLK_OUT;
 
-  wire [5:0]D;
+  wire [1:0]D;
   wire GT0_TXUSRCLK_OUT;
   wire [15:0]Q;
   wire [0:0]SR;
-  wire \block_word_cnt_reg[0] ;
-  wire \block_word_cnt_reg[1] ;
   wire \block_word_cnt_reg[2] ;
   wire \block_word_cnt_reg[2]_0 ;
   wire \block_word_cnt_reg[3] ;
-  wire \block_word_cnt_reg[4] ;
-  wire [3:0]\block_word_cnt_reg[4]_0 ;
+  wire [3:0]\block_word_cnt_reg[4] ;
+  wire \block_word_cnt_reg[4]_0 ;
   wire \block_word_cnt_reg[4]_1 ;
   wire \block_word_cnt_reg[4]_2 ;
   wire \block_word_cnt_reg[4]_3 ;
-  wire \block_word_cnt_reg[4]_4 ;
-  wire \block_word_cnt_reg[4]_5 ;
-  wire \block_word_cnt_reg[4]_6 ;
   wire data_word_valid;
   wire [15:0]hor_parity_word;
   wire hor_parity_word_reg1;
@@ -31655,9 +30445,7 @@ module gtx3g_bert_0_parity_encoder_35
   wire \hor_parity_word_reg[10]_i_2_n_0 ;
   wire \hor_parity_word_reg[11]_i_1_n_0 ;
   wire \hor_parity_word_reg[12]_i_1_n_0 ;
-  wire \hor_parity_word_reg[12]_i_2_n_0 ;
   wire \hor_parity_word_reg[13]_i_1_n_0 ;
-  wire \hor_parity_word_reg[13]_i_2_n_0 ;
   wire \hor_parity_word_reg[14]_i_1_n_0 ;
   wire \hor_parity_word_reg[14]_i_2_n_0 ;
   wire \hor_parity_word_reg[15]_i_1_n_0 ;
@@ -31679,19 +30467,21 @@ module gtx3g_bert_0_parity_encoder_35
   wire [3:1]p_0_in;
   wire \parity_word_cnt[0]_i_1_n_0 ;
   wire [3:0]parity_word_cnt_reg__0;
-  wire \pattern_reg_reg[0] ;
-  wire \pattern_reg_reg[12] ;
-  wire [6:0]\pattern_reg_reg[15] ;
-  wire [4:0]test_init_cnt_reg;
+  wire [6:0]\pattern_reg_reg[11] ;
+  wire \pattern_reg_reg[1] ;
+  wire [0:0]test_init_cnt_reg;
+  wire \test_init_cnt_reg[1] ;
   wire \tx_data_reg[0]_i_2_n_0 ;
-  wire \tx_data_reg[10]_i_2_n_0 ;
-  wire \tx_data_reg[11]_i_3_n_0 ;
-  wire \tx_data_reg[12]_i_2_n_0 ;
-  wire \tx_data_reg[15]_i_4_n_0 ;
+  wire \tx_data_reg[0]_i_3_n_0 ;
+  wire \tx_data_reg[3]_i_2_n_0 ;
+  wire \tx_data_reg_reg[10] ;
+  wire \tx_data_reg_reg[11] ;
+  wire \tx_data_reg_reg[12] ;
   wire \tx_data_reg_reg[13] ;
   wire \tx_data_reg_reg[14] ;
+  wire \tx_data_reg_reg[15] ;
+  wire \tx_data_reg_reg[1] ;
   wire \tx_data_reg_reg[2] ;
-  wire \tx_data_reg_reg[3] ;
   wire \tx_data_reg_reg[4] ;
   wire \tx_data_reg_reg[5] ;
   wire \tx_data_reg_reg[6] ;
@@ -31716,17 +30506,15 @@ module gtx3g_bert_0_parity_encoder_35
   wire \ver_parity_word_reg[8]_i_1_n_0 ;
   wire \ver_parity_word_reg[9]_i_1_n_0 ;
 
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT5 #(
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[0]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .I3(\hor_parity_word_reg[2]_i_2_n_0 ),
         .I4(hor_parity_word[0]),
         .O(\hor_parity_word_reg[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[10]_i_1 
@@ -31736,7 +30524,7 @@ module gtx3g_bert_0_parity_encoder_35
         .I3(\hor_parity_word_reg[10]_i_2_n_0 ),
         .I4(hor_parity_word[10]),
         .O(\hor_parity_word_reg[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hBF)) 
     \hor_parity_word_reg[10]_i_2 
@@ -31754,110 +30542,94 @@ module gtx3g_bert_0_parity_encoder_35
         .I4(parity_word_cnt_reg__0[2]),
         .I5(hor_parity_word[11]),
         .O(\hor_parity_word_reg[11]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+  LUT5 #(
+    .INIT(32'hFFFB0008)) 
     \hor_parity_word_reg[12]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[3]),
-        .I2(data_word_valid),
-        .I3(parity_word_cnt_reg__0[2]),
-        .I4(\hor_parity_word_reg[12]_i_2_n_0 ),
-        .I5(hor_parity_word[12]),
+        .I1(\hor_parity_word_reg[14]_i_2_n_0 ),
+        .I2(parity_word_cnt_reg__0[0]),
+        .I3(parity_word_cnt_reg__0[1]),
+        .I4(hor_parity_word[12]),
         .O(\hor_parity_word_reg[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \hor_parity_word_reg[12]_i_2 
-       (.I0(parity_word_cnt_reg__0[0]),
-        .I1(parity_word_cnt_reg__0[1]),
-        .O(\hor_parity_word_reg[12]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     \hor_parity_word_reg[13]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(\hor_parity_word_reg[13]_i_2_n_0 ),
-        .I2(parity_word_cnt_reg__0[3]),
-        .I3(data_word_valid),
-        .I4(parity_word_cnt_reg__0[2]),
-        .I5(hor_parity_word[13]),
-        .O(\hor_parity_word_reg[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \hor_parity_word_reg[13]_i_2 
-       (.I0(parity_word_cnt_reg__0[0]),
         .I1(parity_word_cnt_reg__0[1]),
-        .O(\hor_parity_word_reg[13]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+        .I2(parity_word_cnt_reg__0[0]),
+        .I3(\hor_parity_word_reg[14]_i_2_n_0 ),
+        .I4(hor_parity_word[13]),
+        .O(\hor_parity_word_reg[13]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     \hor_parity_word_reg[14]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(\hor_parity_word_reg[14]_i_2_n_0 ),
-        .I2(parity_word_cnt_reg__0[3]),
-        .I3(data_word_valid),
-        .I4(parity_word_cnt_reg__0[2]),
-        .I5(hor_parity_word[14]),
-        .O(\hor_parity_word_reg[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \hor_parity_word_reg[14]_i_2 
-       (.I0(parity_word_cnt_reg__0[1]),
         .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
+        .I3(\hor_parity_word_reg[14]_i_2_n_0 ),
+        .I4(hor_parity_word[14]),
+        .O(\hor_parity_word_reg[14]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \hor_parity_word_reg[14]_i_2 
+       (.I0(parity_word_cnt_reg__0[2]),
+        .I1(data_word_valid),
+        .I2(parity_word_cnt_reg__0[3]),
         .O(\hor_parity_word_reg[14]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBFFFFFFF80000000)) 
     \hor_parity_word_reg[15]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[2]),
-        .I2(\hor_parity_word_reg[15]_i_3_n_0 ),
+        .I1(\hor_parity_word_reg[15]_i_3_n_0 ),
+        .I2(parity_word_cnt_reg__0[3]),
         .I3(data_word_valid),
-        .I4(parity_word_cnt_reg__0[3]),
+        .I4(parity_word_cnt_reg__0[2]),
         .I5(hor_parity_word[15]),
         .O(\hor_parity_word_reg[15]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h6996966996696996)) 
     \hor_parity_word_reg[15]_i_2 
        (.I0(\hor_parity_word_reg[15]_i_4_n_0 ),
-        .I1(Q[4]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[3]),
+        .I1(Q[5]),
+        .I2(Q[4]),
+        .I3(Q[3]),
+        .I4(Q[2]),
         .I5(\hor_parity_word_reg[15]_i_5_n_0 ),
         .O(hor_parity_word_reg1));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \hor_parity_word_reg[15]_i_3 
-       (.I0(parity_word_cnt_reg__0[0]),
-        .I1(parity_word_cnt_reg__0[1]),
+       (.I0(parity_word_cnt_reg__0[1]),
+        .I1(parity_word_cnt_reg__0[0]),
         .O(\hor_parity_word_reg[15]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \hor_parity_word_reg[15]_i_4 
-       (.I0(Q[6]),
-        .I1(Q[7]),
-        .I2(Q[0]),
-        .I3(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[7]),
+        .I3(Q[6]),
         .O(\hor_parity_word_reg[15]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'h96696996)) 
     \hor_parity_word_reg[15]_i_5 
-       (.I0(Q[11]),
-        .I1(Q[10]),
-        .I2(Q[13]),
-        .I3(Q[12]),
+       (.I0(Q[10]),
+        .I1(Q[11]),
+        .I2(Q[12]),
+        .I3(Q[13]),
         .I4(\hor_parity_word_reg[15]_i_6_n_0 ),
         .O(\hor_parity_word_reg[15]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \hor_parity_word_reg[15]_i_6 
-       (.I0(Q[14]),
-        .I1(Q[15]),
-        .I2(Q[8]),
-        .I3(Q[9]),
+       (.I0(Q[9]),
+        .I1(Q[8]),
+        .I2(Q[15]),
+        .I3(Q[14]),
         .O(\hor_parity_word_reg[15]_i_6_n_0 ));
   LUT5 #(
     .INIT(32'hFFEF0020)) 
@@ -31868,7 +30640,6 @@ module gtx3g_bert_0_parity_encoder_35
         .I3(\hor_parity_word_reg[2]_i_2_n_0 ),
         .I4(hor_parity_word[1]),
         .O(\hor_parity_word_reg[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[2]_i_1 
@@ -31878,7 +30649,7 @@ module gtx3g_bert_0_parity_encoder_35
         .I3(\hor_parity_word_reg[2]_i_2_n_0 ),
         .I4(hor_parity_word[2]),
         .O(\hor_parity_word_reg[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \hor_parity_word_reg[2]_i_2 
@@ -31896,13 +30667,12 @@ module gtx3g_bert_0_parity_encoder_35
         .I4(parity_word_cnt_reg__0[2]),
         .I5(hor_parity_word[3]),
         .O(\hor_parity_word_reg[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT5 #(
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[4]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .I3(\hor_parity_word_reg[6]_i_2_n_0 ),
         .I4(hor_parity_word[4]),
         .O(\hor_parity_word_reg[4]_i_1_n_0 ));
@@ -31915,6 +30685,7 @@ module gtx3g_bert_0_parity_encoder_35
         .I3(\hor_parity_word_reg[6]_i_2_n_0 ),
         .I4(hor_parity_word[5]),
         .O(\hor_parity_word_reg[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[6]_i_1 
@@ -31924,6 +30695,7 @@ module gtx3g_bert_0_parity_encoder_35
         .I3(\hor_parity_word_reg[6]_i_2_n_0 ),
         .I4(hor_parity_word[6]),
         .O(\hor_parity_word_reg[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \hor_parity_word_reg[6]_i_2 
@@ -31945,8 +30717,8 @@ module gtx3g_bert_0_parity_encoder_35
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[8]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .I3(\hor_parity_word_reg[10]_i_2_n_0 ),
         .I4(hor_parity_word[8]),
         .O(\hor_parity_word_reg[8]_i_1_n_0 ));
@@ -32055,35 +30827,35 @@ module gtx3g_bert_0_parity_encoder_35
         .D(\hor_parity_word_reg[9]_i_1_n_0 ),
         .Q(hor_parity_word[9]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \parity_word_cnt[0]_i_1 
        (.I0(parity_word_cnt_reg__0[0]),
         .O(\parity_word_cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \parity_word_cnt[1]_i_1 
-       (.I0(parity_word_cnt_reg__0[0]),
-        .I1(parity_word_cnt_reg__0[1]),
+       (.I0(parity_word_cnt_reg__0[1]),
+        .I1(parity_word_cnt_reg__0[0]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \parity_word_cnt[2]_i_1 
        (.I0(parity_word_cnt_reg__0[2]),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \parity_word_cnt[3]_i_1 
        (.I0(parity_word_cnt_reg__0[3]),
         .I1(parity_word_cnt_reg__0[2]),
-        .I2(parity_word_cnt_reg__0[0]),
-        .I3(parity_word_cnt_reg__0[1]),
+        .I2(parity_word_cnt_reg__0[1]),
+        .I3(parity_word_cnt_reg__0[0]),
         .O(p_0_in[3]));
   FDRE \parity_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -32110,309 +30882,292 @@ module gtx3g_bert_0_parity_encoder_35
         .Q(parity_word_cnt_reg__0[3]),
         .R(SR));
   LUT6 #(
-    .INIT(64'hF4F4F4F4FFF4F4F4)) 
+    .INIT(64'h55D555D5FFFF00C0)) 
     \tx_data_reg[0]_i_1 
        (.I0(\tx_data_reg[0]_i_2_n_0 ),
-        .I1(\block_word_cnt_reg[3] ),
-        .I2(\pattern_reg_reg[0] ),
-        .I3(\block_word_cnt_reg[4]_4 ),
-        .I4(test_init_cnt_reg[0]),
-        .I5(\block_word_cnt_reg[4]_0 [0]),
+        .I1(\block_word_cnt_reg[4]_1 ),
+        .I2(test_init_cnt_reg),
+        .I3(\block_word_cnt_reg[4] [0]),
+        .I4(\pattern_reg_reg[11] [0]),
+        .I5(\block_word_cnt_reg[3] ),
         .O(D[0]));
   LUT6 #(
-    .INIT(64'hFFFF5F3FFFF0FFFF)) 
+    .INIT(64'hB8BB88BB88B8BBBB)) 
     \tx_data_reg[0]_i_2 
-       (.I0(ver_parity_word[0]),
-        .I1(hor_parity_word[0]),
-        .I2(\block_word_cnt_reg[4]_0 [2]),
-        .I3(\block_word_cnt_reg[4]_0 [0]),
-        .I4(\block_word_cnt_reg[4]_0 [1]),
-        .I5(\block_word_cnt_reg[4]_0 [3]),
+       (.I0(\tx_data_reg[0]_i_3_n_0 ),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(\pattern_reg_reg[11] [0]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(\block_word_cnt_reg[4] [3]),
         .O(\tx_data_reg[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFF04FF04FFFFFF04)) 
-    \tx_data_reg[10]_i_1 
-       (.I0(\block_word_cnt_reg[4] ),
-        .I1(test_init_cnt_reg[1]),
-        .I2(\block_word_cnt_reg[2] ),
-        .I3(\tx_data_reg[10]_i_2_n_0 ),
-        .I4(\pattern_reg_reg[15] [4]),
-        .I5(\block_word_cnt_reg[2]_0 ),
-        .O(D[2]));
-  LUT5 #(
-    .INIT(32'hEEEAAEAA)) 
+    .INIT(64'h00001D00FFFF1DFF)) 
+    \tx_data_reg[0]_i_3 
+       (.I0(hor_parity_word[0]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(ver_parity_word[0]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(\pattern_reg_reg[11] [0]),
+        .O(\tx_data_reg[0]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0B00080000000000)) 
     \tx_data_reg[10]_i_2 
-       (.I0(\block_word_cnt_reg[1] ),
-        .I1(\block_word_cnt_reg[4]_2 ),
-        .I2(\block_word_cnt_reg[4]_1 ),
-        .I3(ver_parity_word[10]),
+       (.I0(ver_parity_word[10]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
         .I4(hor_parity_word[10]),
-        .O(\tx_data_reg[10]_i_2_n_0 ));
+        .I5(\block_word_cnt_reg[4] [2]),
+        .O(\tx_data_reg_reg[10] ));
   LUT6 #(
-    .INIT(64'hFF10FF10FFFFFF10)) 
-    \tx_data_reg[11]_i_1 
-       (.I0(\block_word_cnt_reg[2] ),
-        .I1(\block_word_cnt_reg[4] ),
-        .I2(test_init_cnt_reg[2]),
-        .I3(\tx_data_reg[11]_i_3_n_0 ),
-        .I4(\pattern_reg_reg[15] [5]),
-        .I5(\block_word_cnt_reg[2]_0 ),
-        .O(D[3]));
-  LUT5 #(
-    .INIT(32'hEFEAAAAA)) 
-    \tx_data_reg[11]_i_3 
-       (.I0(\block_word_cnt_reg[1] ),
-        .I1(hor_parity_word[11]),
-        .I2(\block_word_cnt_reg[4]_1 ),
-        .I3(ver_parity_word[11]),
-        .I4(\block_word_cnt_reg[4]_2 ),
-        .O(\tx_data_reg[11]_i_3_n_0 ));
+    .INIT(64'hFFFFE2FF0000E200)) 
+    \tx_data_reg[11]_i_2 
+       (.I0(hor_parity_word[11]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(ver_parity_word[11]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(\pattern_reg_reg[11] [6]),
+        .O(\tx_data_reg_reg[11] ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFF020000)) 
-    \tx_data_reg[12]_i_1 
-       (.I0(test_init_cnt_reg[3]),
-        .I1(\block_word_cnt_reg[4]_0 [2]),
-        .I2(\block_word_cnt_reg[4] ),
-        .I3(\tx_data_reg[12]_i_2_n_0 ),
-        .I4(\block_word_cnt_reg[3] ),
-        .I5(\pattern_reg_reg[12] ),
-        .O(D[4]));
-  LUT6 #(
-    .INIT(64'h00CA000000000000)) 
+    .INIT(64'h0B00080000000000)) 
     \tx_data_reg[12]_i_2 
-       (.I0(hor_parity_word[12]),
-        .I1(ver_parity_word[12]),
-        .I2(\block_word_cnt_reg[4]_0 [0]),
-        .I3(\block_word_cnt_reg[4]_0 [1]),
-        .I4(\block_word_cnt_reg[4]_0 [3]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
-        .O(\tx_data_reg[12]_i_2_n_0 ));
+       (.I0(ver_parity_word[12]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(hor_parity_word[12]),
+        .I5(\block_word_cnt_reg[4] [2]),
+        .O(\tx_data_reg_reg[12] ));
   LUT6 #(
     .INIT(64'h0B00080000000000)) 
     \tx_data_reg[13]_i_2 
        (.I0(ver_parity_word[13]),
-        .I1(\block_word_cnt_reg[4]_0 [0]),
-        .I2(\block_word_cnt_reg[4]_0 [1]),
-        .I3(\block_word_cnt_reg[4]_0 [3]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
         .I4(hor_parity_word[13]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
+        .I5(\block_word_cnt_reg[4] [2]),
         .O(\tx_data_reg_reg[13] ));
   LUT6 #(
     .INIT(64'h0B00080000000000)) 
-    \tx_data_reg[14]_i_4 
+    \tx_data_reg[14]_i_2 
        (.I0(ver_parity_word[14]),
-        .I1(\block_word_cnt_reg[4]_0 [0]),
-        .I2(\block_word_cnt_reg[4]_0 [1]),
-        .I3(\block_word_cnt_reg[4]_0 [3]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
         .I4(hor_parity_word[14]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
+        .I5(\block_word_cnt_reg[4] [2]),
         .O(\tx_data_reg_reg[14] ));
-  LUT5 #(
-    .INIT(32'hFFFF0200)) 
-    \tx_data_reg[15]_i_1 
-       (.I0(\block_word_cnt_reg[3] ),
-        .I1(\block_word_cnt_reg[4]_0 [2]),
-        .I2(\block_word_cnt_reg[4] ),
-        .I3(test_init_cnt_reg[4]),
-        .I4(\tx_data_reg[15]_i_4_n_0 ),
-        .O(D[5]));
-  LUT6 #(
-    .INIT(64'hFFF444444F444444)) 
-    \tx_data_reg[15]_i_4 
-       (.I0(\block_word_cnt_reg[4]_6 ),
-        .I1(\pattern_reg_reg[15] [6]),
-        .I2(\block_word_cnt_reg[4]_1 ),
-        .I3(ver_parity_word[15]),
-        .I4(\block_word_cnt_reg[4]_2 ),
-        .I5(hor_parity_word[15]),
-        .O(\tx_data_reg[15]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFB800)) 
-    \tx_data_reg[1]_i_1 
-       (.I0(hor_parity_word[1]),
-        .I1(\block_word_cnt_reg[4]_1 ),
-        .I2(ver_parity_word[1]),
-        .I3(\block_word_cnt_reg[4]_2 ),
-        .I4(\block_word_cnt_reg[0] ),
-        .I5(\block_word_cnt_reg[4]_3 ),
-        .O(D[1]));
   LUT6 #(
     .INIT(64'h0B00080000000000)) 
+    \tx_data_reg[15]_i_4 
+       (.I0(ver_parity_word[15]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(hor_parity_word[15]),
+        .I5(\block_word_cnt_reg[4] [2]),
+        .O(\tx_data_reg_reg[15] ));
+  LUT6 #(
+    .INIT(64'hAEAEAEAAAAAEAAAA)) 
+    \tx_data_reg[1]_i_3 
+       (.I0(\pattern_reg_reg[1] ),
+        .I1(\block_word_cnt_reg[3] ),
+        .I2(\block_word_cnt_reg[2]_0 ),
+        .I3(\block_word_cnt_reg[4]_3 ),
+        .I4(ver_parity_word[1]),
+        .I5(hor_parity_word[1]),
+        .O(\tx_data_reg_reg[1] ));
+  LUT6 #(
+    .INIT(64'h00CA000000000000)) 
     \tx_data_reg[2]_i_2 
-       (.I0(ver_parity_word[2]),
-        .I1(\block_word_cnt_reg[4]_0 [0]),
-        .I2(\block_word_cnt_reg[4]_0 [1]),
-        .I3(\block_word_cnt_reg[4]_0 [3]),
-        .I4(hor_parity_word[2]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
+       (.I0(hor_parity_word[2]),
+        .I1(ver_parity_word[2]),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [3]),
+        .I5(\block_word_cnt_reg[4] [2]),
         .O(\tx_data_reg_reg[2] ));
   LUT6 #(
-    .INIT(64'hFF35FFFFFFFFFFFF)) 
-    \tx_data_reg[3]_i_4 
-       (.I0(hor_parity_word[3]),
-        .I1(ver_parity_word[3]),
-        .I2(\block_word_cnt_reg[4]_0 [0]),
-        .I3(\block_word_cnt_reg[4]_0 [1]),
-        .I4(\block_word_cnt_reg[4]_0 [3]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
-        .O(\tx_data_reg_reg[3] ));
+    .INIT(64'hD8D8FFFFD8880000)) 
+    \tx_data_reg[3]_i_1 
+       (.I0(\block_word_cnt_reg[4] [2]),
+        .I1(\tx_data_reg[3]_i_2_n_0 ),
+        .I2(\test_init_cnt_reg[1] ),
+        .I3(\block_word_cnt_reg[4]_0 ),
+        .I4(\block_word_cnt_reg[3] ),
+        .I5(\pattern_reg_reg[11] [1]),
+        .O(D[1]));
   LUT6 #(
-    .INIT(64'h0B00080000000000)) 
-    \tx_data_reg[4]_i_2 
-       (.I0(ver_parity_word[4]),
-        .I1(\block_word_cnt_reg[4]_0 [0]),
-        .I2(\block_word_cnt_reg[4]_0 [1]),
-        .I3(\block_word_cnt_reg[4]_0 [3]),
-        .I4(hor_parity_word[4]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
+    .INIT(64'hFFFFE2FF0000E200)) 
+    \tx_data_reg[3]_i_2 
+       (.I0(hor_parity_word[3]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(ver_parity_word[3]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(\pattern_reg_reg[11] [1]),
+        .O(\tx_data_reg[3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hA2A2A2AAAAAAA2AA)) 
+    \tx_data_reg[4]_i_3 
+       (.I0(\block_word_cnt_reg[4] [2]),
+        .I1(\block_word_cnt_reg[4] [3]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(hor_parity_word[4]),
+        .I4(\block_word_cnt_reg[4] [0]),
+        .I5(ver_parity_word[4]),
         .O(\tx_data_reg_reg[4] ));
   LUT6 #(
-    .INIT(64'hF4FFF44444444444)) 
-    \tx_data_reg[5]_i_2 
-       (.I0(\block_word_cnt_reg[4]_5 ),
-        .I1(\pattern_reg_reg[15] [0]),
-        .I2(hor_parity_word[5]),
-        .I3(\block_word_cnt_reg[4]_1 ),
+    .INIT(64'h4F4F4F44444F4444)) 
+    \tx_data_reg[5]_i_3 
+       (.I0(\block_word_cnt_reg[2] ),
+        .I1(\pattern_reg_reg[11] [2]),
+        .I2(\block_word_cnt_reg[4]_2 ),
+        .I3(\block_word_cnt_reg[4]_3 ),
         .I4(ver_parity_word[5]),
-        .I5(\block_word_cnt_reg[4]_2 ),
+        .I5(hor_parity_word[5]),
         .O(\tx_data_reg_reg[5] ));
   LUT6 #(
     .INIT(64'h00CA000000000000)) 
     \tx_data_reg[6]_i_2 
        (.I0(hor_parity_word[6]),
         .I1(ver_parity_word[6]),
-        .I2(\block_word_cnt_reg[4]_0 [0]),
-        .I3(\block_word_cnt_reg[4]_0 [1]),
-        .I4(\block_word_cnt_reg[4]_0 [3]),
-        .I5(\block_word_cnt_reg[4]_0 [2]),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [3]),
+        .I5(\block_word_cnt_reg[4] [2]),
         .O(\tx_data_reg_reg[6] ));
   LUT6 #(
-    .INIT(64'hF4FFF44444444444)) 
-    \tx_data_reg[7]_i_2 
-       (.I0(\block_word_cnt_reg[4]_5 ),
-        .I1(\pattern_reg_reg[15] [1]),
-        .I2(hor_parity_word[7]),
-        .I3(\block_word_cnt_reg[4]_1 ),
+    .INIT(64'h4F4F4F44444F4444)) 
+    \tx_data_reg[7]_i_3 
+       (.I0(\block_word_cnt_reg[2] ),
+        .I1(\pattern_reg_reg[11] [3]),
+        .I2(\block_word_cnt_reg[4]_2 ),
+        .I3(\block_word_cnt_reg[4]_3 ),
         .I4(ver_parity_word[7]),
-        .I5(\block_word_cnt_reg[4]_2 ),
+        .I5(hor_parity_word[7]),
         .O(\tx_data_reg_reg[7] ));
   LUT6 #(
-    .INIT(64'hB800FFFFB800B800)) 
-    \tx_data_reg[8]_i_3 
+    .INIT(64'h00001D00FFFF1DFF)) 
+    \tx_data_reg[8]_i_2 
        (.I0(hor_parity_word[8]),
-        .I1(\block_word_cnt_reg[4]_1 ),
+        .I1(\block_word_cnt_reg[4] [0]),
         .I2(ver_parity_word[8]),
-        .I3(\block_word_cnt_reg[4]_2 ),
-        .I4(\block_word_cnt_reg[4]_5 ),
-        .I5(\pattern_reg_reg[15] [2]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(\pattern_reg_reg[11] [4]),
         .O(\tx_data_reg_reg[8] ));
   LUT6 #(
-    .INIT(64'hF4FFF44444444444)) 
+    .INIT(64'h4444FFF444444F44)) 
     \tx_data_reg[9]_i_4 
-       (.I0(\block_word_cnt_reg[4]_5 ),
-        .I1(\pattern_reg_reg[15] [3]),
-        .I2(hor_parity_word[9]),
-        .I3(\block_word_cnt_reg[4]_1 ),
-        .I4(ver_parity_word[9]),
-        .I5(\block_word_cnt_reg[4]_2 ),
+       (.I0(\block_word_cnt_reg[2] ),
+        .I1(\pattern_reg_reg[11] [5]),
+        .I2(\block_word_cnt_reg[4]_3 ),
+        .I3(ver_parity_word[9]),
+        .I4(\block_word_cnt_reg[4]_2 ),
+        .I5(hor_parity_word[9]),
         .O(\tx_data_reg_reg[9] ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[0]_i_1 
-       (.I0(ver_parity_word[0]),
-        .I1(Q[0]),
+       (.I0(Q[0]),
+        .I1(ver_parity_word[0]),
         .O(\ver_parity_word_reg[0]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[10]_i_1 
-       (.I0(ver_parity_word[10]),
-        .I1(Q[10]),
+       (.I0(Q[10]),
+        .I1(ver_parity_word[10]),
         .O(\ver_parity_word_reg[10]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[11]_i_1 
-       (.I0(ver_parity_word[11]),
-        .I1(Q[11]),
+       (.I0(Q[11]),
+        .I1(ver_parity_word[11]),
         .O(\ver_parity_word_reg[11]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[12]_i_1 
-       (.I0(ver_parity_word[12]),
-        .I1(Q[12]),
+       (.I0(Q[12]),
+        .I1(ver_parity_word[12]),
         .O(\ver_parity_word_reg[12]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[13]_i_1 
-       (.I0(ver_parity_word[13]),
-        .I1(Q[13]),
+       (.I0(Q[13]),
+        .I1(ver_parity_word[13]),
         .O(\ver_parity_word_reg[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[14]_i_1 
-       (.I0(ver_parity_word[14]),
-        .I1(Q[14]),
+       (.I0(Q[14]),
+        .I1(ver_parity_word[14]),
         .O(\ver_parity_word_reg[14]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[15]_i_1 
-       (.I0(ver_parity_word[15]),
-        .I1(Q[15]),
+       (.I0(Q[15]),
+        .I1(ver_parity_word[15]),
         .O(\ver_parity_word_reg[15]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[1]_i_1 
-       (.I0(ver_parity_word[1]),
-        .I1(Q[1]),
+       (.I0(Q[1]),
+        .I1(ver_parity_word[1]),
         .O(\ver_parity_word_reg[1]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[2]_i_1 
-       (.I0(ver_parity_word[2]),
-        .I1(Q[2]),
+       (.I0(Q[2]),
+        .I1(ver_parity_word[2]),
         .O(\ver_parity_word_reg[2]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[3]_i_1 
-       (.I0(ver_parity_word[3]),
-        .I1(Q[3]),
+       (.I0(Q[3]),
+        .I1(ver_parity_word[3]),
         .O(\ver_parity_word_reg[3]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[4]_i_1 
-       (.I0(ver_parity_word[4]),
-        .I1(Q[4]),
+       (.I0(Q[4]),
+        .I1(ver_parity_word[4]),
         .O(\ver_parity_word_reg[4]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[5]_i_1 
-       (.I0(ver_parity_word[5]),
-        .I1(Q[5]),
+       (.I0(Q[5]),
+        .I1(ver_parity_word[5]),
         .O(\ver_parity_word_reg[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[6]_i_1 
-       (.I0(ver_parity_word[6]),
-        .I1(Q[6]),
+       (.I0(Q[6]),
+        .I1(ver_parity_word[6]),
         .O(\ver_parity_word_reg[6]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[7]_i_1 
-       (.I0(ver_parity_word[7]),
-        .I1(Q[7]),
+       (.I0(Q[7]),
+        .I1(ver_parity_word[7]),
         .O(\ver_parity_word_reg[7]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[8]_i_1 
-       (.I0(ver_parity_word[8]),
-        .I1(Q[8]),
+       (.I0(Q[8]),
+        .I1(ver_parity_word[8]),
         .O(\ver_parity_word_reg[8]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_parity_word_reg[9]_i_1 
-       (.I0(ver_parity_word[9]),
-        .I1(Q[9]),
+       (.I0(Q[9]),
+        .I1(ver_parity_word[9]),
         .O(\ver_parity_word_reg[9]_i_1_n_0 ));
   FDRE \ver_parity_word_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -32513,7 +31268,7 @@ module gtx3g_bert_0_parity_encoder_35
 endmodule
 
 (* ORIG_REF_NAME = "parity_encoder" *) 
-module gtx3g_bert_0_parity_encoder_45
+module gtx3g_bert_0_parity_encoder_46
    (D,
     \ver_correct_mask_reg[15] ,
     Q,
@@ -32541,9 +31296,7 @@ module gtx3g_bert_0_parity_encoder_45
   wire \hor_parity_word_reg[10]_i_2__1_n_0 ;
   wire \hor_parity_word_reg[11]_i_1_n_0 ;
   wire \hor_parity_word_reg[12]_i_1_n_0 ;
-  wire \hor_parity_word_reg[12]_i_2__1_n_0 ;
   wire \hor_parity_word_reg[13]_i_1_n_0 ;
-  wire \hor_parity_word_reg[13]_i_2__1_n_0 ;
   wire \hor_parity_word_reg[14]_i_1_n_0 ;
   wire \hor_parity_word_reg[14]_i_2__1_n_0 ;
   wire \hor_parity_word_reg[15]_i_1_n_0 ;
@@ -32615,7 +31368,6 @@ module gtx3g_bert_0_parity_encoder_45
        (.I0(rx_data_r_track[13]),
         .I1(hor_parity_word[13]),
         .O(D[13]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \hor_correct_mask[14]_i_1 
@@ -32628,6 +31380,7 @@ module gtx3g_bert_0_parity_encoder_45
        (.I0(rx_data_r_track[15]),
         .I1(hor_parity_word[15]),
         .O(D[15]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \hor_correct_mask[1]_i_1 
@@ -32658,7 +31411,6 @@ module gtx3g_bert_0_parity_encoder_45
        (.I0(rx_data_r_track[5]),
         .I1(hor_parity_word[5]),
         .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \hor_correct_mask[6]_i_1 
@@ -32677,6 +31429,7 @@ module gtx3g_bert_0_parity_encoder_45
        (.I0(rx_data_r_track[8]),
         .I1(hor_parity_word[8]),
         .O(D[8]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \hor_correct_mask[9]_i_1 
@@ -32687,12 +31440,11 @@ module gtx3g_bert_0_parity_encoder_45
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[0]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .I3(\hor_parity_word_reg[2]_i_2__1_n_0 ),
         .I4(hor_parity_word[0]),
         .O(\hor_parity_word_reg[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[10]_i_1 
@@ -32702,7 +31454,7 @@ module gtx3g_bert_0_parity_encoder_45
         .I3(\hor_parity_word_reg[10]_i_2__1_n_0 ),
         .I4(hor_parity_word[10]),
         .O(\hor_parity_word_reg[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hBF)) 
     \hor_parity_word_reg[10]_i_2__1 
@@ -32720,110 +31472,95 @@ module gtx3g_bert_0_parity_encoder_45
         .I4(parity_word_cnt_reg__0[2]),
         .I5(hor_parity_word[11]),
         .O(\hor_parity_word_reg[11]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+  LUT5 #(
+    .INIT(32'hFFFB0008)) 
     \hor_parity_word_reg[12]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[3]),
-        .I2(data_word_valid),
-        .I3(parity_word_cnt_reg__0[2]),
-        .I4(\hor_parity_word_reg[12]_i_2__1_n_0 ),
-        .I5(hor_parity_word[12]),
+        .I1(\hor_parity_word_reg[14]_i_2__1_n_0 ),
+        .I2(parity_word_cnt_reg__0[0]),
+        .I3(parity_word_cnt_reg__0[1]),
+        .I4(hor_parity_word[12]),
         .O(\hor_parity_word_reg[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \hor_parity_word_reg[12]_i_2__1 
-       (.I0(parity_word_cnt_reg__0[0]),
-        .I1(parity_word_cnt_reg__0[1]),
-        .O(\hor_parity_word_reg[12]_i_2__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     \hor_parity_word_reg[13]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(\hor_parity_word_reg[13]_i_2__1_n_0 ),
-        .I2(parity_word_cnt_reg__0[3]),
-        .I3(data_word_valid),
-        .I4(parity_word_cnt_reg__0[2]),
-        .I5(hor_parity_word[13]),
-        .O(\hor_parity_word_reg[13]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \hor_parity_word_reg[13]_i_2__1 
-       (.I0(parity_word_cnt_reg__0[0]),
         .I1(parity_word_cnt_reg__0[1]),
-        .O(\hor_parity_word_reg[13]_i_2__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFFFFFFF80000000)) 
+        .I2(parity_word_cnt_reg__0[0]),
+        .I3(\hor_parity_word_reg[14]_i_2__1_n_0 ),
+        .I4(hor_parity_word[13]),
+        .O(\hor_parity_word_reg[13]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'hEFFF2000)) 
     \hor_parity_word_reg[14]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(\hor_parity_word_reg[14]_i_2__1_n_0 ),
-        .I2(parity_word_cnt_reg__0[3]),
-        .I3(data_word_valid),
-        .I4(parity_word_cnt_reg__0[2]),
-        .I5(hor_parity_word[14]),
-        .O(\hor_parity_word_reg[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \hor_parity_word_reg[14]_i_2__1 
-       (.I0(parity_word_cnt_reg__0[1]),
         .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
+        .I3(\hor_parity_word_reg[14]_i_2__1_n_0 ),
+        .I4(hor_parity_word[14]),
+        .O(\hor_parity_word_reg[14]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \hor_parity_word_reg[14]_i_2__1 
+       (.I0(parity_word_cnt_reg__0[2]),
+        .I1(data_word_valid),
+        .I2(parity_word_cnt_reg__0[3]),
         .O(\hor_parity_word_reg[14]_i_2__1_n_0 ));
   LUT6 #(
     .INIT(64'hBFFFFFFF80000000)) 
     \hor_parity_word_reg[15]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[2]),
-        .I2(\hor_parity_word_reg[15]_i_3__1_n_0 ),
+        .I1(\hor_parity_word_reg[15]_i_3__1_n_0 ),
+        .I2(parity_word_cnt_reg__0[3]),
         .I3(data_word_valid),
-        .I4(parity_word_cnt_reg__0[3]),
+        .I4(parity_word_cnt_reg__0[2]),
         .I5(hor_parity_word[15]),
         .O(\hor_parity_word_reg[15]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h6996966996696996)) 
     \hor_parity_word_reg[15]_i_2__1 
        (.I0(\hor_parity_word_reg[15]_i_4__1_n_0 ),
-        .I1(Q[4]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[3]),
+        .I1(Q[5]),
+        .I2(Q[4]),
+        .I3(Q[3]),
+        .I4(Q[2]),
         .I5(\hor_parity_word_reg[15]_i_5__1_n_0 ),
         .O(hor_parity_word_reg1));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \hor_parity_word_reg[15]_i_3__1 
-       (.I0(parity_word_cnt_reg__0[0]),
-        .I1(parity_word_cnt_reg__0[1]),
+       (.I0(parity_word_cnt_reg__0[1]),
+        .I1(parity_word_cnt_reg__0[0]),
         .O(\hor_parity_word_reg[15]_i_3__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \hor_parity_word_reg[15]_i_4__1 
-       (.I0(Q[6]),
-        .I1(Q[7]),
-        .I2(Q[0]),
-        .I3(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[7]),
+        .I3(Q[6]),
         .O(\hor_parity_word_reg[15]_i_4__1_n_0 ));
   LUT5 #(
     .INIT(32'h96696996)) 
     \hor_parity_word_reg[15]_i_5__1 
-       (.I0(Q[11]),
-        .I1(Q[10]),
-        .I2(Q[13]),
-        .I3(Q[12]),
+       (.I0(Q[10]),
+        .I1(Q[11]),
+        .I2(Q[12]),
+        .I3(Q[13]),
         .I4(\hor_parity_word_reg[15]_i_6__1_n_0 ),
         .O(\hor_parity_word_reg[15]_i_5__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h6996)) 
     \hor_parity_word_reg[15]_i_6__1 
-       (.I0(Q[14]),
-        .I1(Q[15]),
-        .I2(Q[8]),
-        .I3(Q[9]),
+       (.I0(Q[9]),
+        .I1(Q[8]),
+        .I2(Q[15]),
+        .I3(Q[14]),
         .O(\hor_parity_word_reg[15]_i_6__1_n_0 ));
   LUT5 #(
     .INIT(32'hFFEF0020)) 
@@ -32834,7 +31571,6 @@ module gtx3g_bert_0_parity_encoder_45
         .I3(\hor_parity_word_reg[2]_i_2__1_n_0 ),
         .I4(hor_parity_word[1]),
         .O(\hor_parity_word_reg[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[2]_i_1 
@@ -32844,7 +31580,7 @@ module gtx3g_bert_0_parity_encoder_45
         .I3(\hor_parity_word_reg[2]_i_2__1_n_0 ),
         .I4(hor_parity_word[2]),
         .O(\hor_parity_word_reg[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \hor_parity_word_reg[2]_i_2__1 
@@ -32866,8 +31602,8 @@ module gtx3g_bert_0_parity_encoder_45
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[4]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .I3(\hor_parity_word_reg[6]_i_2__1_n_0 ),
         .I4(hor_parity_word[4]),
         .O(\hor_parity_word_reg[4]_i_1_n_0 ));
@@ -32889,6 +31625,7 @@ module gtx3g_bert_0_parity_encoder_45
         .I3(\hor_parity_word_reg[6]_i_2__1_n_0 ),
         .I4(hor_parity_word[6]),
         .O(\hor_parity_word_reg[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \hor_parity_word_reg[6]_i_2__1 
@@ -32906,17 +31643,15 @@ module gtx3g_bert_0_parity_encoder_45
         .I4(data_word_valid),
         .I5(hor_parity_word[7]),
         .O(\hor_parity_word_reg[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'hFFFE0002)) 
     \hor_parity_word_reg[8]_i_1 
        (.I0(hor_parity_word_reg1),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .I3(\hor_parity_word_reg[10]_i_2__1_n_0 ),
         .I4(hor_parity_word[8]),
         .O(\hor_parity_word_reg[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'hFFEF0020)) 
     \hor_parity_word_reg[9]_i_1 
@@ -33022,35 +31757,35 @@ module gtx3g_bert_0_parity_encoder_45
         .D(\hor_parity_word_reg[9]_i_1_n_0 ),
         .Q(hor_parity_word[9]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \parity_word_cnt[0]_i_1__1 
        (.I0(parity_word_cnt_reg__0[0]),
         .O(\parity_word_cnt[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \parity_word_cnt[1]_i_1__1 
-       (.I0(parity_word_cnt_reg__0[0]),
-        .I1(parity_word_cnt_reg__0[1]),
+       (.I0(parity_word_cnt_reg__0[1]),
+        .I1(parity_word_cnt_reg__0[0]),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \parity_word_cnt[2]_i_1__1 
        (.I0(parity_word_cnt_reg__0[2]),
-        .I1(parity_word_cnt_reg__0[1]),
-        .I2(parity_word_cnt_reg__0[0]),
+        .I1(parity_word_cnt_reg__0[0]),
+        .I2(parity_word_cnt_reg__0[1]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \parity_word_cnt[3]_i_1__1 
        (.I0(parity_word_cnt_reg__0[3]),
         .I1(parity_word_cnt_reg__0[2]),
-        .I2(parity_word_cnt_reg__0[0]),
-        .I3(parity_word_cnt_reg__0[1]),
+        .I2(parity_word_cnt_reg__0[1]),
+        .I3(parity_word_cnt_reg__0[0]),
         .O(p_0_in__0[3]));
   FDRE \parity_word_cnt_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -33076,229 +31811,229 @@ module gtx3g_bert_0_parity_encoder_45
         .D(p_0_in__0[3]),
         .Q(parity_word_cnt_reg__0[3]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[0]_i_1 
        (.I0(rx_data_r_track[0]),
         .I1(ver_parity_word[0]),
         .O(\ver_correct_mask_reg[15] [0]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[10]_i_1 
        (.I0(rx_data_r_track[10]),
         .I1(ver_parity_word[10]),
         .O(\ver_correct_mask_reg[15] [10]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[11]_i_1 
        (.I0(rx_data_r_track[11]),
         .I1(ver_parity_word[11]),
         .O(\ver_correct_mask_reg[15] [11]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[12]_i_1 
        (.I0(rx_data_r_track[12]),
         .I1(ver_parity_word[12]),
         .O(\ver_correct_mask_reg[15] [12]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[13]_i_1 
        (.I0(rx_data_r_track[13]),
         .I1(ver_parity_word[13]),
         .O(\ver_correct_mask_reg[15] [13]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[14]_i_1 
        (.I0(rx_data_r_track[14]),
         .I1(ver_parity_word[14]),
         .O(\ver_correct_mask_reg[15] [14]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[15]_i_2 
        (.I0(rx_data_r_track[15]),
         .I1(ver_parity_word[15]),
         .O(\ver_correct_mask_reg[15] [15]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[1]_i_1 
        (.I0(rx_data_r_track[1]),
         .I1(ver_parity_word[1]),
         .O(\ver_correct_mask_reg[15] [1]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[2]_i_1 
        (.I0(rx_data_r_track[2]),
         .I1(ver_parity_word[2]),
         .O(\ver_correct_mask_reg[15] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[3]_i_1 
        (.I0(rx_data_r_track[3]),
         .I1(ver_parity_word[3]),
         .O(\ver_correct_mask_reg[15] [3]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[4]_i_1 
        (.I0(rx_data_r_track[4]),
         .I1(ver_parity_word[4]),
         .O(\ver_correct_mask_reg[15] [4]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[5]_i_1 
        (.I0(rx_data_r_track[5]),
         .I1(ver_parity_word[5]),
         .O(\ver_correct_mask_reg[15] [5]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[6]_i_1 
        (.I0(rx_data_r_track[6]),
         .I1(ver_parity_word[6]),
         .O(\ver_correct_mask_reg[15] [6]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[7]_i_1 
        (.I0(rx_data_r_track[7]),
         .I1(ver_parity_word[7]),
         .O(\ver_correct_mask_reg[15] [7]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[8]_i_1 
        (.I0(rx_data_r_track[8]),
         .I1(ver_parity_word[8]),
         .O(\ver_correct_mask_reg[15] [8]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ver_correct_mask[9]_i_1 
        (.I0(rx_data_r_track[9]),
         .I1(ver_parity_word[9]),
         .O(\ver_correct_mask_reg[15] [9]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[0]_i_1__1 
-       (.I0(ver_parity_word[0]),
-        .I1(Q[0]),
-        .O(\ver_parity_word_reg[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[10]_i_1__1 
-       (.I0(ver_parity_word[10]),
-        .I1(Q[10]),
-        .O(\ver_parity_word_reg[10]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[11]_i_1__1 
-       (.I0(ver_parity_word[11]),
-        .I1(Q[11]),
-        .O(\ver_parity_word_reg[11]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[12]_i_1__1 
-       (.I0(ver_parity_word[12]),
-        .I1(Q[12]),
-        .O(\ver_parity_word_reg[12]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[13]_i_1__1 
-       (.I0(ver_parity_word[13]),
-        .I1(Q[13]),
-        .O(\ver_parity_word_reg[13]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[14]_i_1__1 
-       (.I0(ver_parity_word[14]),
-        .I1(Q[14]),
-        .O(\ver_parity_word_reg[14]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[15]_i_1__1 
-       (.I0(ver_parity_word[15]),
-        .I1(Q[15]),
-        .O(\ver_parity_word_reg[15]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \ver_parity_word_reg[1]_i_1__1 
-       (.I0(ver_parity_word[1]),
-        .I1(Q[1]),
-        .O(\ver_parity_word_reg[1]_i_1__1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[2]_i_1__1 
-       (.I0(ver_parity_word[2]),
-        .I1(Q[2]),
-        .O(\ver_parity_word_reg[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+    \ver_parity_word_reg[0]_i_1__1 
+       (.I0(Q[0]),
+        .I1(ver_parity_word[0]),
+        .O(\ver_parity_word_reg[0]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[3]_i_1__1 
-       (.I0(ver_parity_word[3]),
-        .I1(Q[3]),
-        .O(\ver_parity_word_reg[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+    \ver_parity_word_reg[10]_i_1__1 
+       (.I0(Q[10]),
+        .I1(ver_parity_word[10]),
+        .O(\ver_parity_word_reg[10]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[4]_i_1__1 
-       (.I0(ver_parity_word[4]),
-        .I1(Q[4]),
-        .O(\ver_parity_word_reg[4]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+    \ver_parity_word_reg[11]_i_1__1 
+       (.I0(Q[11]),
+        .I1(ver_parity_word[11]),
+        .O(\ver_parity_word_reg[11]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[5]_i_1__1 
-       (.I0(ver_parity_word[5]),
-        .I1(Q[5]),
-        .O(\ver_parity_word_reg[5]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+    \ver_parity_word_reg[12]_i_1__1 
+       (.I0(Q[12]),
+        .I1(ver_parity_word[12]),
+        .O(\ver_parity_word_reg[12]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[6]_i_1__1 
-       (.I0(ver_parity_word[6]),
-        .I1(Q[6]),
-        .O(\ver_parity_word_reg[6]_i_1__1_n_0 ));
+    \ver_parity_word_reg[13]_i_1__1 
+       (.I0(Q[13]),
+        .I1(ver_parity_word[13]),
+        .O(\ver_parity_word_reg[13]_i_1__1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[7]_i_1__1 
-       (.I0(ver_parity_word[7]),
-        .I1(Q[7]),
-        .O(\ver_parity_word_reg[7]_i_1__1_n_0 ));
+    \ver_parity_word_reg[14]_i_1__1 
+       (.I0(Q[14]),
+        .I1(ver_parity_word[14]),
+        .O(\ver_parity_word_reg[14]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[15]_i_1__1 
+       (.I0(Q[15]),
+        .I1(ver_parity_word[15]),
+        .O(\ver_parity_word_reg[15]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[1]_i_1__1 
+       (.I0(Q[1]),
+        .I1(ver_parity_word[1]),
+        .O(\ver_parity_word_reg[1]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[2]_i_1__1 
+       (.I0(Q[2]),
+        .I1(ver_parity_word[2]),
+        .O(\ver_parity_word_reg[2]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[3]_i_1__1 
+       (.I0(Q[3]),
+        .I1(ver_parity_word[3]),
+        .O(\ver_parity_word_reg[3]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[4]_i_1__1 
+       (.I0(Q[4]),
+        .I1(ver_parity_word[4]),
+        .O(\ver_parity_word_reg[4]_i_1__1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \ver_parity_word_reg[8]_i_1__1 
-       (.I0(ver_parity_word[8]),
-        .I1(Q[8]),
-        .O(\ver_parity_word_reg[8]_i_1__1_n_0 ));
+    \ver_parity_word_reg[5]_i_1__1 
+       (.I0(Q[5]),
+        .I1(ver_parity_word[5]),
+        .O(\ver_parity_word_reg[5]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[6]_i_1__1 
+       (.I0(Q[6]),
+        .I1(ver_parity_word[6]),
+        .O(\ver_parity_word_reg[6]_i_1__1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h6)) 
+    \ver_parity_word_reg[7]_i_1__1 
+       (.I0(Q[7]),
+        .I1(ver_parity_word[7]),
+        .O(\ver_parity_word_reg[7]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \ver_parity_word_reg[8]_i_1__1 
+       (.I0(Q[8]),
+        .I1(ver_parity_word[8]),
+        .O(\ver_parity_word_reg[8]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
     \ver_parity_word_reg[9]_i_1__1 
-       (.I0(ver_parity_word[9]),
-        .I1(Q[9]),
+       (.I0(Q[9]),
+        .I1(ver_parity_word[9]),
         .O(\ver_parity_word_reg[9]_i_1__1_n_0 ));
   FDRE \ver_parity_word_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -33398,80 +32133,89 @@ module gtx3g_bert_0_parity_encoder_45
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "pattern_gen" *) 
 module gtx3g_bert_0_pattern_gen
    (D,
     Q,
+    \tx_data_reg_reg[6] ,
+    \tx_data_reg_reg[10] ,
     \tx_data_reg_reg[1] ,
-    \tx_data_reg_reg[11] ,
+    \tx_data_reg_reg[0] ,
+    \tx_data_reg_reg[1]_0 ,
     pattern_rst_reg,
     GT0_TXUSRCLK_OUT,
     pattern_pause_reg,
-    \hor_parity_word_reg_reg[2] ,
-    \block_word_cnt_reg[3] ,
-    \block_word_cnt_reg[2] ,
-    \pattern_reg_reg[8]_0 ,
     \block_word_cnt_reg[4] ,
+    \pattern_reg_reg[11]_0 ,
+    \block_word_cnt_reg[3] ,
+    \pattern_reg_reg[3]_0 ,
     \block_word_cnt_reg[0] ,
-    \ver_parity_word_reg_reg[4] ,
-    \block_word_cnt_reg[4]_0 ,
     \block_word_cnt_reg[0]_0 ,
     test_init_cnt_reg,
-    \block_word_cnt_reg[4]_1 ,
-    \block_word_cnt_reg[2]_0 ,
-    \block_word_cnt_reg[0]_1 ,
-    \pattern_reg_reg[5]_0 ,
-    \pattern_reg_reg[7]_0 ,
-    \pattern_reg_reg[9]_0 ,
-    \block_word_cnt_reg[2]_1 ,
-    \block_word_cnt_reg[2]_2 ,
-    \test_init_cnt_reg[12] ,
-    \block_word_cnt_reg[0]_2 ,
-    \ver_parity_word_reg_reg[13] ,
-    \ver_parity_word_reg_reg[14] ,
-    \ver_parity_word_reg_reg[15] ,
-    \block_word_cnt_reg[1] ,
-    \block_word_cnt_reg[1]_0 ,
     test_init_cnt_reg_3__s_port_,
-    PATTERN_MODE);
-  output [10:0]D;
-  output [7:0]Q;
+    \pattern_reg_reg[9]_0 ,
+    \pattern_reg_reg[7]_0 ,
+    \pattern_reg_reg[5]_0 ,
+    \pattern_reg_reg[8]_0 ,
+    \block_word_cnt_reg[1] ,
+    \block_word_cnt_reg[0]_1 ,
+    \block_word_cnt_reg[2] ,
+    \hor_parity_word_reg_reg[13] ,
+    \hor_parity_word_reg_reg[14] ,
+    \hor_parity_word_reg_reg[15] ,
+    \hor_parity_word_reg_reg[12] ,
+    \block_word_cnt_reg[2]_0 ,
+    \hor_parity_word_reg_reg[4] ,
+    \ver_parity_word_reg_reg[2] ,
+    \test_init_cnt_reg[3]_0 ,
+    test_init_cnt_reg_2__s_port_,
+    \block_word_cnt_reg[0]_2 ,
+    \block_word_cnt_reg[1]_0 ,
+    PATTERN_MODE,
+    \test_init_cnt_reg[2]_0 );
+  output [11:0]D;
+  output [5:0]Q;
+  output \tx_data_reg_reg[6] ;
+  output \tx_data_reg_reg[10] ;
   output \tx_data_reg_reg[1] ;
-  output \tx_data_reg_reg[11] ;
+  output \tx_data_reg_reg[0] ;
+  output \tx_data_reg_reg[1]_0 ;
   input pattern_rst_reg;
   input GT0_TXUSRCLK_OUT;
   input pattern_pause_reg;
-  input \hor_parity_word_reg_reg[2] ;
-  input \block_word_cnt_reg[3] ;
-  input \block_word_cnt_reg[2] ;
-  input \pattern_reg_reg[8]_0 ;
   input [3:0]\block_word_cnt_reg[4] ;
+  input \pattern_reg_reg[11]_0 ;
+  input \block_word_cnt_reg[3] ;
+  input \pattern_reg_reg[3]_0 ;
   input \block_word_cnt_reg[0] ;
-  input \ver_parity_word_reg_reg[4] ;
-  input \block_word_cnt_reg[4]_0 ;
   input \block_word_cnt_reg[0]_0 ;
-  input [8:0]test_init_cnt_reg;
-  input \block_word_cnt_reg[4]_1 ;
-  input \block_word_cnt_reg[2]_0 ;
-  input \block_word_cnt_reg[0]_1 ;
-  input \pattern_reg_reg[5]_0 ;
-  input \pattern_reg_reg[7]_0 ;
-  input \pattern_reg_reg[9]_0 ;
-  input \block_word_cnt_reg[2]_1 ;
-  input \block_word_cnt_reg[2]_2 ;
-  input \test_init_cnt_reg[12] ;
-  input \block_word_cnt_reg[0]_2 ;
-  input \ver_parity_word_reg_reg[13] ;
-  input \ver_parity_word_reg_reg[14] ;
-  input \ver_parity_word_reg_reg[15] ;
-  input \block_word_cnt_reg[1] ;
-  input \block_word_cnt_reg[1]_0 ;
+  input [10:0]test_init_cnt_reg;
   input test_init_cnt_reg_3__s_port_;
+  input \pattern_reg_reg[9]_0 ;
+  input \pattern_reg_reg[7]_0 ;
+  input \pattern_reg_reg[5]_0 ;
+  input \pattern_reg_reg[8]_0 ;
+  input \block_word_cnt_reg[1] ;
+  input \block_word_cnt_reg[0]_1 ;
+  input \block_word_cnt_reg[2] ;
+  input \hor_parity_word_reg_reg[13] ;
+  input \hor_parity_word_reg_reg[14] ;
+  input \hor_parity_word_reg_reg[15] ;
+  input \hor_parity_word_reg_reg[12] ;
+  input \block_word_cnt_reg[2]_0 ;
+  input \hor_parity_word_reg_reg[4] ;
+  input \ver_parity_word_reg_reg[2] ;
+  input \test_init_cnt_reg[3]_0 ;
+  input test_init_cnt_reg_2__s_port_;
+  input \block_word_cnt_reg[0]_2 ;
+  input \block_word_cnt_reg[1]_0 ;
   input [2:0]PATTERN_MODE;
+  input \test_init_cnt_reg[2]_0 ;
 
-  wire [10:0]D;
+  wire [11:0]D;
   wire GT0_TXUSRCLK_OUT;
   wire [2:0]PATTERN_MODE;
-  wire [7:0]Q;
+  wire [5:0]Q;
   wire \block_word_cnt_reg[0] ;
   wire \block_word_cnt_reg[0]_0 ;
   wire \block_word_cnt_reg[0]_1 ;
@@ -33480,12 +32224,8 @@ module gtx3g_bert_0_pattern_gen
   wire \block_word_cnt_reg[1]_0 ;
   wire \block_word_cnt_reg[2] ;
   wire \block_word_cnt_reg[2]_0 ;
-  wire \block_word_cnt_reg[2]_1 ;
-  wire \block_word_cnt_reg[2]_2 ;
   wire \block_word_cnt_reg[3] ;
   wire [3:0]\block_word_cnt_reg[4] ;
-  wire \block_word_cnt_reg[4]_0 ;
-  wire \block_word_cnt_reg[4]_1 ;
   wire bram_gen_inst1_n_10;
   wire bram_gen_inst1_n_11;
   wire bram_gen_inst1_n_12;
@@ -33497,17 +32237,23 @@ module gtx3g_bert_0_pattern_gen
   wire bram_gen_inst1_n_7;
   wire bram_gen_inst1_n_8;
   wire bram_gen_inst1_n_9;
-  wire \hor_parity_word_reg_reg[2] ;
+  wire \hor_parity_word_reg_reg[12] ;
+  wire \hor_parity_word_reg_reg[13] ;
+  wire \hor_parity_word_reg_reg[14] ;
+  wire \hor_parity_word_reg_reg[15] ;
+  wire \hor_parity_word_reg_reg[4] ;
   wire [8:0]p_0_in;
   wire [0:0]p_1_in;
   wire pattern_pause_reg;
   wire [15:0]pattern_reg;
+  wire \pattern_reg_reg[11]_0 ;
+  wire \pattern_reg_reg[3]_0 ;
   wire \pattern_reg_reg[5]_0 ;
   wire \pattern_reg_reg[7]_0 ;
   wire \pattern_reg_reg[8]_0 ;
   wire \pattern_reg_reg[9]_0 ;
   wire pattern_rst_reg;
-  wire [15:2]pattern_word;
+  wire [15:0]pattern_word;
   wire [15:0]prbs15_reg;
   wire [15:0]prbs20_reg;
   wire [15:0]prbs23_reg;
@@ -33534,22 +32280,25 @@ module gtx3g_bert_0_pattern_gen
   wire [15:0]prbs9_reg;
   wire [3:0]read_counter_i;
   wire [3:1]read_counter_i_d1;
-  wire [8:0]test_init_cnt_reg;
-  wire \test_init_cnt_reg[12] ;
+  wire [10:0]test_init_cnt_reg;
+  wire \test_init_cnt_reg[2]_0 ;
+  wire \test_init_cnt_reg[3]_0 ;
+  wire test_init_cnt_reg_2__s_net_1;
   wire test_init_cnt_reg_3__s_net_1;
-  wire \tx_data_reg[2]_i_4__0_n_0 ;
-  wire \tx_data_reg[4]_i_4__0_n_0 ;
-  wire \tx_data_reg[5]_i_2__0_n_0 ;
-  wire \tx_data_reg[7]_i_2__0_n_0 ;
+  wire \tx_data_reg[11]_i_3__0_n_0 ;
+  wire \tx_data_reg[12]_i_4__0_n_0 ;
+  wire \tx_data_reg[2]_i_3__0_n_0 ;
+  wire \tx_data_reg[3]_i_3__0_n_0 ;
+  wire \tx_data_reg[4]_i_3__0_n_0 ;
   wire \tx_data_reg[8]_i_3__0_n_0 ;
-  wire \tx_data_reg[9]_i_2__0_n_0 ;
-  wire \tx_data_reg_reg[11] ;
+  wire \tx_data_reg_reg[0] ;
+  wire \tx_data_reg_reg[10] ;
   wire \tx_data_reg_reg[1] ;
-  wire \ver_parity_word_reg_reg[13] ;
-  wire \ver_parity_word_reg_reg[14] ;
-  wire \ver_parity_word_reg_reg[15] ;
-  wire \ver_parity_word_reg_reg[4] ;
+  wire \tx_data_reg_reg[1]_0 ;
+  wire \tx_data_reg_reg[6] ;
+  wire \ver_parity_word_reg_reg[2] ;
 
+  assign test_init_cnt_reg_2__s_net_1 = test_init_cnt_reg_2__s_port_;
   assign test_init_cnt_reg_3__s_net_1 = test_init_cnt_reg_3__s_port_;
   gtx3g_bert_0_bram_gen bram_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
@@ -33561,7 +32310,7 @@ module gtx3g_bert_0_pattern_gen
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .\pattern_reg_reg[12] ({bram_gen_inst1_n_7,bram_gen_inst1_n_8,bram_gen_inst1_n_9,bram_gen_inst1_n_10,bram_gen_inst1_n_11,bram_gen_inst1_n_12,bram_gen_inst1_n_13,bram_gen_inst1_n_14,bram_gen_inst1_n_15,bram_gen_inst1_n_16,bram_gen_inst1_n_17}),
         .pattern_rst_reg(pattern_rst_reg));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \bram_reg[1]_i_2 
@@ -33569,7 +32318,7 @@ module gtx3g_bert_0_pattern_gen
         .I1(read_counter_i[3]),
         .I2(read_counter_i[1]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT4 #(
     .INIT(16'h999A)) 
     \bram_reg[2]_i_2 
@@ -33578,7 +32327,7 @@ module gtx3g_bert_0_pattern_gen
         .I2(read_counter_i[3]),
         .I3(read_counter_i[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT4 #(
     .INIT(16'hCC9A)) 
     \bram_reg[3]_i_2 
@@ -33587,7 +32336,7 @@ module gtx3g_bert_0_pattern_gen
         .I2(read_counter_i[3]),
         .I3(read_counter_i[1]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \bram_reg[4]_i_2 
@@ -33596,7 +32345,7 @@ module gtx3g_bert_0_pattern_gen
         .I2(read_counter_i[1]),
         .I3(read_counter_i[0]),
         .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     \bram_reg[7]_i_2 
@@ -33605,7 +32354,7 @@ module gtx3g_bert_0_pattern_gen
         .I2(read_counter_i[1]),
         .I3(read_counter_i[2]),
         .O(p_0_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \bram_reg[8]_i_2 
@@ -33625,19 +32374,19 @@ module gtx3g_bert_0_pattern_gen
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[0]),
-        .Q(Q[0]),
+        .Q(pattern_word[0]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[10] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[10]),
-        .Q(Q[7]),
+        .Q(pattern_word[10]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[11] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[11]),
-        .Q(pattern_word[11]),
+        .Q(Q[5]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[12] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -33667,7 +32416,7 @@ module gtx3g_bert_0_pattern_gen
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[1]),
-        .Q(Q[1]),
+        .Q(pattern_word[1]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[2] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -33679,7 +32428,7 @@ module gtx3g_bert_0_pattern_gen
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[3]),
-        .Q(Q[2]),
+        .Q(Q[0]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[4] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -33691,7 +32440,7 @@ module gtx3g_bert_0_pattern_gen
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[5]),
-        .Q(Q[3]),
+        .Q(Q[1]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[6] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -33703,19 +32452,19 @@ module gtx3g_bert_0_pattern_gen
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[7]),
-        .Q(Q[4]),
+        .Q(Q[2]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[8] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[8]),
-        .Q(Q[5]),
+        .Q(Q[3]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[9] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[9]),
-        .Q(Q[6]),
+        .Q(Q[4]),
         .R(pattern_rst_reg));
   gtx3g_bert_0_prbs11_gen prbs11_gen_inst1
        (.D(pattern_reg),
@@ -33797,189 +32546,230 @@ module gtx3g_bert_0_pattern_gen
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .pattern_rst_reg(pattern_rst_reg));
   LUT6 #(
-    .INIT(64'hFFFD7D7D20000000)) 
-    \tx_data_reg[11]_i_2 
-       (.I0(\block_word_cnt_reg[3] ),
+    .INIT(64'hA0AA2AA0AAAAAAAA)) 
+    \tx_data_reg[0]_i_3__0 
+       (.I0(pattern_word[0]),
+        .I1(\block_word_cnt_reg[4] [0]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [2]),
+        .I5(\block_word_cnt_reg[3] ),
+        .O(\tx_data_reg_reg[0] ));
+  LUT6 #(
+    .INIT(64'hAA22A888AAAAAAAA)) 
+    \tx_data_reg[10]_i_3__0 
+       (.I0(pattern_word[10]),
         .I1(\block_word_cnt_reg[4] [2]),
-        .I2(\block_word_cnt_reg[4] [3]),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [3]),
+        .I5(\block_word_cnt_reg[3] ),
+        .O(\tx_data_reg_reg[10] ));
+  LUT5 #(
+    .INIT(32'hC0AAF3AA)) 
+    \tx_data_reg[11]_i_1__0 
+       (.I0(Q[5]),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\pattern_reg_reg[11]_0 ),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\tx_data_reg[11]_i_3__0_n_0 ),
+        .O(D[7]));
+  LUT6 #(
+    .INIT(64'h000F0F0F0DDDDDDD)) 
+    \tx_data_reg[11]_i_3__0 
+       (.I0(test_init_cnt_reg[6]),
+        .I1(test_init_cnt_reg_2__s_net_1),
+        .I2(Q[5]),
         .I3(\block_word_cnt_reg[4] [0]),
         .I4(\block_word_cnt_reg[4] [1]),
-        .I5(pattern_word[11]),
-        .O(\tx_data_reg_reg[11] ));
-  LUT5 #(
-    .INIT(32'h54FF5454)) 
+        .I5(\block_word_cnt_reg[4] [3]),
+        .O(\tx_data_reg[11]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hBAF0BAF0BAF0FFF0)) 
     \tx_data_reg[12]_i_1__0 
-       (.I0(\block_word_cnt_reg[2]_1 ),
-        .I1(pattern_word[12]),
-        .I2(\block_word_cnt_reg[2]_2 ),
-        .I3(\test_init_cnt_reg[12] ),
-        .I4(\block_word_cnt_reg[3] ),
-        .O(D[7]));
+       (.I0(\hor_parity_word_reg_reg[12] ),
+        .I1(\block_word_cnt_reg[2]_0 ),
+        .I2(pattern_word[12]),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\block_word_cnt_reg[4] [2]),
+        .I5(\tx_data_reg[12]_i_4__0_n_0 ),
+        .O(D[8]));
+  LUT6 #(
+    .INIT(64'h000F0FFF0FFF0FDD)) 
+    \tx_data_reg[12]_i_4__0 
+       (.I0(test_init_cnt_reg[7]),
+        .I1(\test_init_cnt_reg[3]_0 ),
+        .I2(pattern_word[12]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(\block_word_cnt_reg[4] [0]),
+        .O(\tx_data_reg[12]_i_4__0_n_0 ));
   LUT6 #(
     .INIT(64'hFFFF44F444444444)) 
     \tx_data_reg[13]_i_1__0 
-       (.I0(\block_word_cnt_reg[0]_2 ),
+       (.I0(\block_word_cnt_reg[0]_1 ),
         .I1(pattern_word[13]),
-        .I2(test_init_cnt_reg[6]),
-        .I3(\block_word_cnt_reg[4]_1 ),
-        .I4(\ver_parity_word_reg_reg[13] ),
-        .I5(\block_word_cnt_reg[3] ),
-        .O(D[8]));
-  LUT6 #(
-    .INIT(64'hFFFF44F444444444)) 
-    \tx_data_reg[14]_i_1__0 
-       (.I0(\block_word_cnt_reg[0]_2 ),
-        .I1(pattern_word[14]),
-        .I2(test_init_cnt_reg[7]),
-        .I3(\block_word_cnt_reg[4]_1 ),
-        .I4(\ver_parity_word_reg_reg[14] ),
+        .I2(test_init_cnt_reg[8]),
+        .I3(\block_word_cnt_reg[2] ),
+        .I4(\hor_parity_word_reg_reg[13] ),
         .I5(\block_word_cnt_reg[3] ),
         .O(D[9]));
   LUT6 #(
     .INIT(64'hFFFF44F444444444)) 
-    \tx_data_reg[15]_i_1__0 
-       (.I0(\block_word_cnt_reg[0]_2 ),
-        .I1(pattern_word[15]),
-        .I2(test_init_cnt_reg[8]),
-        .I3(\block_word_cnt_reg[4]_1 ),
-        .I4(\ver_parity_word_reg_reg[15] ),
+    \tx_data_reg[14]_i_1__0 
+       (.I0(\block_word_cnt_reg[0]_1 ),
+        .I1(pattern_word[14]),
+        .I2(test_init_cnt_reg[9]),
+        .I3(\block_word_cnt_reg[2] ),
+        .I4(\hor_parity_word_reg_reg[14] ),
         .I5(\block_word_cnt_reg[3] ),
         .O(D[10]));
   LUT6 #(
-    .INIT(64'h82A8A2B8AAAAAABA)) 
-    \tx_data_reg[1]_i_3__0 
-       (.I0(Q[1]),
-        .I1(\block_word_cnt_reg[4] [2]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(\block_word_cnt_reg[4] [0]),
+    .INIT(64'hFFFF44F444444444)) 
+    \tx_data_reg[15]_i_1__0 
+       (.I0(\block_word_cnt_reg[0]_1 ),
+        .I1(pattern_word[15]),
+        .I2(test_init_cnt_reg[10]),
+        .I3(\block_word_cnt_reg[2] ),
+        .I4(\hor_parity_word_reg_reg[15] ),
         .I5(\block_word_cnt_reg[3] ),
+        .O(D[11]));
+  LUT6 #(
+    .INIT(64'h0004FFFF00040000)) 
+    \tx_data_reg[1]_i_3__0 
+       (.I0(\block_word_cnt_reg[4] [0]),
+        .I1(\block_word_cnt_reg[4] [1]),
+        .I2(\block_word_cnt_reg[4] [2]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[3] ),
+        .I5(pattern_word[1]),
         .O(\tx_data_reg_reg[1] ));
   LUT5 #(
-    .INIT(32'hF8B8FCFC)) 
+    .INIT(32'h8A28AA28)) 
+    \tx_data_reg[1]_i_5__0 
+       (.I0(pattern_word[1]),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\block_word_cnt_reg[4] [3]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [0]),
+        .O(\tx_data_reg_reg[1]_0 ));
+  LUT5 #(
+    .INIT(32'hBAF0FFF0)) 
     \tx_data_reg[2]_i_1__0 
-       (.I0(\hor_parity_word_reg_reg[2] ),
-        .I1(\block_word_cnt_reg[3] ),
+       (.I0(\ver_parity_word_reg_reg[2] ),
+        .I1(\block_word_cnt_reg[2]_0 ),
         .I2(pattern_word[2]),
-        .I3(\block_word_cnt_reg[2] ),
-        .I4(\tx_data_reg[2]_i_4__0_n_0 ),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\tx_data_reg[2]_i_3__0_n_0 ),
         .O(D[0]));
   LUT6 #(
     .INIT(64'hFFFFFFFF023A3A3A)) 
-    \tx_data_reg[2]_i_4__0 
+    \tx_data_reg[2]_i_3__0 
        (.I0(\block_word_cnt_reg[1]_0 ),
         .I1(pattern_word[2]),
         .I2(\block_word_cnt_reg[4] [3]),
-        .I3(\block_word_cnt_reg[4] [1]),
-        .I4(\block_word_cnt_reg[4] [0]),
+        .I3(\block_word_cnt_reg[4] [0]),
+        .I4(\block_word_cnt_reg[4] [1]),
         .I5(\block_word_cnt_reg[4] [2]),
-        .O(\tx_data_reg[2]_i_4__0_n_0 ));
+        .O(\tx_data_reg[2]_i_3__0_n_0 ));
   LUT5 #(
-    .INIT(32'hCF88FFAA)) 
-    \tx_data_reg[4]_i_1__0 
-       (.I0(\block_word_cnt_reg[3] ),
-        .I1(\ver_parity_word_reg_reg[4] ),
-        .I2(\block_word_cnt_reg[4]_0 ),
-        .I3(pattern_word[4]),
-        .I4(\tx_data_reg[4]_i_4__0_n_0 ),
+    .INIT(32'hC0AAF3AA)) 
+    \tx_data_reg[3]_i_1__0 
+       (.I0(Q[0]),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\pattern_reg_reg[3]_0 ),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\tx_data_reg[3]_i_3__0_n_0 ),
         .O(D[1]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF1122112F)) 
-    \tx_data_reg[4]_i_4__0 
-       (.I0(\block_word_cnt_reg[1] ),
-        .I1(pattern_word[4]),
-        .I2(\block_word_cnt_reg[0]_1 ),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(test_init_cnt_reg[0]),
-        .I5(\block_word_cnt_reg[4] [2]),
-        .O(\tx_data_reg[4]_i_4__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFF5554)) 
-    \tx_data_reg[5]_i_1__0 
-       (.I0(\tx_data_reg[5]_i_2__0_n_0 ),
-        .I1(\block_word_cnt_reg[0]_1 ),
-        .I2(\block_word_cnt_reg[4] [3]),
-        .I3(test_init_cnt_reg[1]),
-        .I4(\pattern_reg_reg[5]_0 ),
-        .O(D[2]));
-  LUT6 #(
-    .INIT(64'hFAAAAAAAFFFFFBBB)) 
-    \tx_data_reg[5]_i_2__0 
-       (.I0(\block_word_cnt_reg[4] [2]),
-        .I1(\block_word_cnt_reg[3] ),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [0]),
-        .I4(\block_word_cnt_reg[4] [3]),
-        .I5(Q[3]),
-        .O(\tx_data_reg[5]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFF44F444444444)) 
-    \tx_data_reg[6]_i_1__0 
-       (.I0(\block_word_cnt_reg[0]_0 ),
-        .I1(pattern_word[6]),
-        .I2(test_init_cnt_reg[2]),
-        .I3(\block_word_cnt_reg[4]_1 ),
-        .I4(\block_word_cnt_reg[2]_0 ),
-        .I5(\block_word_cnt_reg[3] ),
-        .O(D[3]));
-  LUT5 #(
-    .INIT(32'hFFFF5554)) 
-    \tx_data_reg[7]_i_1__0 
-       (.I0(\tx_data_reg[7]_i_2__0_n_0 ),
-        .I1(\block_word_cnt_reg[0]_1 ),
-        .I2(\block_word_cnt_reg[4] [3]),
-        .I3(test_init_cnt_reg[3]),
-        .I4(\pattern_reg_reg[7]_0 ),
-        .O(D[4]));
-  LUT6 #(
-    .INIT(64'hFAAAAAAAFFFFFBBB)) 
-    \tx_data_reg[7]_i_2__0 
-       (.I0(\block_word_cnt_reg[4] [2]),
-        .I1(\block_word_cnt_reg[3] ),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [0]),
-        .I4(\block_word_cnt_reg[4] [3]),
-        .I5(Q[4]),
-        .O(\tx_data_reg[7]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h5DFF5D005DFF5500)) 
-    \tx_data_reg[8]_i_1__0 
-       (.I0(\pattern_reg_reg[8]_0 ),
-        .I1(\tx_data_reg[8]_i_3__0_n_0 ),
-        .I2(\block_word_cnt_reg[4] [2]),
-        .I3(\block_word_cnt_reg[3] ),
-        .I4(Q[5]),
-        .I5(\block_word_cnt_reg[0] ),
-        .O(D[5]));
-  LUT6 #(
-    .INIT(64'hFFFFF0F8F0FFF0F8)) 
-    \tx_data_reg[8]_i_3__0 
-       (.I0(test_init_cnt_reg[4]),
-        .I1(test_init_cnt_reg_3__s_net_1),
+    .INIT(64'h000000020FF0F0F2)) 
+    \tx_data_reg[3]_i_3__0 
+       (.I0(\test_init_cnt_reg[2]_0 ),
+        .I1(test_init_cnt_reg[0]),
         .I2(\block_word_cnt_reg[4] [3]),
         .I3(\block_word_cnt_reg[4] [0]),
         .I4(\block_word_cnt_reg[4] [1]),
-        .I5(Q[5]),
-        .O(\tx_data_reg[8]_i_3__0_n_0 ));
+        .I5(Q[0]),
+        .O(\tx_data_reg[3]_i_3__0_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFF5554)) 
-    \tx_data_reg[9]_i_1__0 
-       (.I0(\tx_data_reg[9]_i_2__0_n_0 ),
-        .I1(\block_word_cnt_reg[0]_1 ),
-        .I2(\block_word_cnt_reg[4] [3]),
-        .I3(test_init_cnt_reg[5]),
-        .I4(\pattern_reg_reg[9]_0 ),
-        .O(D[6]));
+    .INIT(32'hBAF0FFF0)) 
+    \tx_data_reg[4]_i_1__0 
+       (.I0(\hor_parity_word_reg_reg[4] ),
+        .I1(\block_word_cnt_reg[2]_0 ),
+        .I2(pattern_word[4]),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\tx_data_reg[4]_i_3__0_n_0 ),
+        .O(D[2]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFF3333111)) 
-    \tx_data_reg[9]_i_2__0 
-       (.I0(\block_word_cnt_reg[3] ),
-        .I1(Q[6]),
-        .I2(\block_word_cnt_reg[4] [0]),
-        .I3(\block_word_cnt_reg[4] [1]),
-        .I4(\block_word_cnt_reg[4] [3]),
+    .INIT(64'hFFFFFFFF001F0F11)) 
+    \tx_data_reg[4]_i_3__0 
+       (.I0(test_init_cnt_reg_2__s_net_1),
+        .I1(test_init_cnt_reg[1]),
+        .I2(pattern_word[4]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[0]_2 ),
         .I5(\block_word_cnt_reg[4] [2]),
-        .O(\tx_data_reg[9]_i_2__0_n_0 ));
+        .O(\tx_data_reg[4]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF54545400)) 
+    \tx_data_reg[5]_i_1__0 
+       (.I0(\block_word_cnt_reg[0] ),
+        .I1(\block_word_cnt_reg[0]_0 ),
+        .I2(Q[1]),
+        .I3(test_init_cnt_reg[2]),
+        .I4(test_init_cnt_reg_3__s_net_1),
+        .I5(\pattern_reg_reg[5]_0 ),
+        .O(D[3]));
+  LUT6 #(
+    .INIT(64'hF77DFF7D00000200)) 
+    \tx_data_reg[6]_i_3__0 
+       (.I0(\block_word_cnt_reg[3] ),
+        .I1(\block_word_cnt_reg[4] [3]),
+        .I2(\block_word_cnt_reg[4] [2]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [0]),
+        .I5(pattern_word[6]),
+        .O(\tx_data_reg_reg[6] ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF54545400)) 
+    \tx_data_reg[7]_i_1__0 
+       (.I0(\block_word_cnt_reg[0] ),
+        .I1(\block_word_cnt_reg[0]_0 ),
+        .I2(Q[2]),
+        .I3(test_init_cnt_reg[3]),
+        .I4(test_init_cnt_reg_3__s_net_1),
+        .I5(\pattern_reg_reg[7]_0 ),
+        .O(D[4]));
+  LUT6 #(
+    .INIT(64'h5C5C5C5CFC0CCC0C)) 
+    \tx_data_reg[8]_i_1__0 
+       (.I0(\pattern_reg_reg[8]_0 ),
+        .I1(Q[3]),
+        .I2(\block_word_cnt_reg[3] ),
+        .I3(\tx_data_reg[8]_i_3__0_n_0 ),
+        .I4(\block_word_cnt_reg[1] ),
+        .I5(\block_word_cnt_reg[4] [2]),
+        .O(D[5]));
+  LUT6 #(
+    .INIT(64'hFFFFF000FFFFF4F4)) 
+    \tx_data_reg[8]_i_3__0 
+       (.I0(\test_init_cnt_reg[3]_0 ),
+        .I1(test_init_cnt_reg[4]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(Q[3]),
+        .I4(\block_word_cnt_reg[4] [3]),
+        .I5(\block_word_cnt_reg[4] [0]),
+        .O(\tx_data_reg[8]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF54545400)) 
+    \tx_data_reg[9]_i_1__0 
+       (.I0(\block_word_cnt_reg[0] ),
+        .I1(\block_word_cnt_reg[0]_0 ),
+        .I2(Q[4]),
+        .I3(test_init_cnt_reg[5]),
+        .I4(test_init_cnt_reg_3__s_net_1),
+        .I5(\pattern_reg_reg[9]_0 ),
+        .O(D[6]));
 endmodule
 
 (* ORIG_REF_NAME = "pattern_gen" *) 
@@ -33987,91 +32777,85 @@ module gtx3g_bert_0_pattern_gen_36
    (D,
     Q,
     \tx_data_reg_reg[1] ,
-    \tx_data_reg_reg[12] ,
-    \tx_data_reg_reg[1]_0 ,
-    \tx_data_reg_reg[0] ,
     pattern_rst_reg,
     GT0_TXUSRCLK_OUT,
     pattern_pause_reg,
-    \ver_parity_word_reg_reg[2] ,
-    \block_word_cnt_reg[3] ,
-    \block_word_cnt_reg[2] ,
-    \block_word_cnt_reg[1] ,
     \block_word_cnt_reg[4] ,
-    \ver_parity_word_reg_reg[4] ,
-    \block_word_cnt_reg[4]_0 ,
+    \hor_parity_word_reg_reg[11] ,
+    \block_word_cnt_reg[3] ,
+    \hor_parity_word_reg_reg[6] ,
     test_init_cnt_reg,
-    \block_word_cnt_reg[1]_0 ,
+    \block_word_cnt_reg[2] ,
+    \block_word_cnt_reg[4]_0 ,
+    \ver_parity_word_reg_reg[1] ,
+    \hor_parity_word_reg_reg[8] ,
+    \block_word_cnt_reg[4]_1 ,
     \block_word_cnt_reg[2]_0 ,
-    \block_word_cnt_reg[1]_1 ,
+    \block_word_cnt_reg[2]_1 ,
+    \block_word_cnt_reg[1] ,
     \pattern_reg_reg[5]_0 ,
     \pattern_reg_reg[7]_0 ,
     \pattern_reg_reg[9]_0 ,
-    \block_word_cnt_reg[4]_1 ,
-    \block_word_cnt_reg[2]_1 ,
+    \block_word_cnt_reg[4]_2 ,
     \ver_parity_word_reg_reg[13] ,
     \ver_parity_word_reg_reg[14] ,
-    \hor_parity_word_reg_reg[6] ,
-    \block_word_cnt_reg[2]_2 ,
-    \hor_parity_word_reg_reg[8] ,
+    \ver_parity_word_reg_reg[15] ,
+    \ver_parity_word_reg_reg[12] ,
+    \block_word_cnt_reg[4]_3 ,
+    \ver_parity_word_reg_reg[10] ,
+    \hor_parity_word_reg_reg[2] ,
+    \block_word_cnt_reg[1]_0 ,
     test_init_cnt_reg_3__s_port_,
-    \block_word_cnt_reg[2]_3 ,
-    \block_word_cnt_reg[4]_2 ,
-    \hor_parity_word_reg_reg[3] ,
     PATTERN_MODE);
-  output [9:0]D;
+  output [13:0]D;
   output [6:0]Q;
   output \tx_data_reg_reg[1] ;
-  output \tx_data_reg_reg[12] ;
-  output \tx_data_reg_reg[1]_0 ;
-  output \tx_data_reg_reg[0] ;
   input pattern_rst_reg;
   input GT0_TXUSRCLK_OUT;
   input pattern_pause_reg;
-  input \ver_parity_word_reg_reg[2] ;
-  input \block_word_cnt_reg[3] ;
-  input \block_word_cnt_reg[2] ;
-  input \block_word_cnt_reg[1] ;
   input [3:0]\block_word_cnt_reg[4] ;
-  input \ver_parity_word_reg_reg[4] ;
+  input \hor_parity_word_reg_reg[11] ;
+  input \block_word_cnt_reg[3] ;
+  input \hor_parity_word_reg_reg[6] ;
+  input [12:0]test_init_cnt_reg;
+  input \block_word_cnt_reg[2] ;
   input \block_word_cnt_reg[4]_0 ;
-  input [8:0]test_init_cnt_reg;
-  input \block_word_cnt_reg[1]_0 ;
+  input \ver_parity_word_reg_reg[1] ;
+  input \hor_parity_word_reg_reg[8] ;
+  input \block_word_cnt_reg[4]_1 ;
   input \block_word_cnt_reg[2]_0 ;
-  input \block_word_cnt_reg[1]_1 ;
+  input \block_word_cnt_reg[2]_1 ;
+  input \block_word_cnt_reg[1] ;
   input \pattern_reg_reg[5]_0 ;
   input \pattern_reg_reg[7]_0 ;
   input \pattern_reg_reg[9]_0 ;
-  input \block_word_cnt_reg[4]_1 ;
-  input \block_word_cnt_reg[2]_1 ;
+  input \block_word_cnt_reg[4]_2 ;
   input \ver_parity_word_reg_reg[13] ;
   input \ver_parity_word_reg_reg[14] ;
-  input \hor_parity_word_reg_reg[6] ;
-  input \block_word_cnt_reg[2]_2 ;
-  input \hor_parity_word_reg_reg[8] ;
+  input \ver_parity_word_reg_reg[15] ;
+  input \ver_parity_word_reg_reg[12] ;
+  input \block_word_cnt_reg[4]_3 ;
+  input \ver_parity_word_reg_reg[10] ;
+  input \hor_parity_word_reg_reg[2] ;
+  input \block_word_cnt_reg[1]_0 ;
   input test_init_cnt_reg_3__s_port_;
-  input \block_word_cnt_reg[2]_3 ;
-  input \block_word_cnt_reg[4]_2 ;
-  input \hor_parity_word_reg_reg[3] ;
   input [2:0]PATTERN_MODE;
 
-  wire [9:0]D;
+  wire [13:0]D;
   wire GT0_TXUSRCLK_OUT;
   wire [2:0]PATTERN_MODE;
   wire [6:0]Q;
   wire \block_word_cnt_reg[1] ;
   wire \block_word_cnt_reg[1]_0 ;
-  wire \block_word_cnt_reg[1]_1 ;
   wire \block_word_cnt_reg[2] ;
   wire \block_word_cnt_reg[2]_0 ;
   wire \block_word_cnt_reg[2]_1 ;
-  wire \block_word_cnt_reg[2]_2 ;
-  wire \block_word_cnt_reg[2]_3 ;
   wire \block_word_cnt_reg[3] ;
   wire [3:0]\block_word_cnt_reg[4] ;
   wire \block_word_cnt_reg[4]_0 ;
   wire \block_word_cnt_reg[4]_1 ;
   wire \block_word_cnt_reg[4]_2 ;
+  wire \block_word_cnt_reg[4]_3 ;
   wire bram_gen_inst1_n_10;
   wire bram_gen_inst1_n_11;
   wire bram_gen_inst1_n_12;
@@ -34083,7 +32867,8 @@ module gtx3g_bert_0_pattern_gen_36
   wire bram_gen_inst1_n_7;
   wire bram_gen_inst1_n_8;
   wire bram_gen_inst1_n_9;
-  wire \hor_parity_word_reg_reg[3] ;
+  wire \hor_parity_word_reg_reg[11] ;
+  wire \hor_parity_word_reg_reg[2] ;
   wire \hor_parity_word_reg_reg[6] ;
   wire \hor_parity_word_reg_reg[8] ;
   wire [8:0]p_0_in;
@@ -34094,7 +32879,7 @@ module gtx3g_bert_0_pattern_gen_36
   wire \pattern_reg_reg[7]_0 ;
   wire \pattern_reg_reg[9]_0 ;
   wire pattern_rst_reg;
-  wire [14:0]pattern_word;
+  wire [15:1]pattern_word;
   wire [15:0]prbs15_reg;
   wire [15:0]prbs20_reg;
   wire [15:0]prbs23_reg;
@@ -34121,20 +32906,25 @@ module gtx3g_bert_0_pattern_gen_36
   wire [15:0]prbs9_reg;
   wire [3:0]read_counter_i;
   wire [3:1]read_counter_i_d1;
-  wire [8:0]test_init_cnt_reg;
+  wire [12:0]test_init_cnt_reg;
   wire test_init_cnt_reg_3__s_net_1;
+  wire \tx_data_reg[10]_i_3_n_0 ;
+  wire \tx_data_reg[11]_i_3_n_0 ;
+  wire \tx_data_reg[12]_i_4_n_0 ;
   wire \tx_data_reg[2]_i_3_n_0 ;
   wire \tx_data_reg[4]_i_4_n_0 ;
+  wire \tx_data_reg[5]_i_2_n_0 ;
   wire \tx_data_reg[6]_i_3_n_0 ;
-  wire \tx_data_reg[8]_i_2_n_0 ;
-  wire \tx_data_reg_reg[0] ;
-  wire \tx_data_reg_reg[12] ;
+  wire \tx_data_reg[7]_i_2_n_0 ;
+  wire \tx_data_reg[8]_i_3_n_0 ;
+  wire \tx_data_reg[9]_i_2_n_0 ;
   wire \tx_data_reg_reg[1] ;
-  wire \tx_data_reg_reg[1]_0 ;
+  wire \ver_parity_word_reg_reg[10] ;
+  wire \ver_parity_word_reg_reg[12] ;
   wire \ver_parity_word_reg_reg[13] ;
   wire \ver_parity_word_reg_reg[14] ;
-  wire \ver_parity_word_reg_reg[2] ;
-  wire \ver_parity_word_reg_reg[4] ;
+  wire \ver_parity_word_reg_reg[15] ;
+  wire \ver_parity_word_reg_reg[1] ;
 
   assign test_init_cnt_reg_3__s_net_1 = test_init_cnt_reg_3__s_port_;
   gtx3g_bert_0_bram_gen_37 bram_gen_inst1
@@ -34147,7 +32937,7 @@ module gtx3g_bert_0_pattern_gen_36
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .\pattern_reg_reg[12] ({bram_gen_inst1_n_7,bram_gen_inst1_n_8,bram_gen_inst1_n_9,bram_gen_inst1_n_10,bram_gen_inst1_n_11,bram_gen_inst1_n_12,bram_gen_inst1_n_13,bram_gen_inst1_n_14,bram_gen_inst1_n_15,bram_gen_inst1_n_16,bram_gen_inst1_n_17}),
         .pattern_rst_reg(pattern_rst_reg));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \bram_reg[1]_i_2 
@@ -34155,7 +32945,7 @@ module gtx3g_bert_0_pattern_gen_36
         .I1(read_counter_i[3]),
         .I2(read_counter_i[1]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'h999A)) 
     \bram_reg[2]_i_2 
@@ -34164,7 +32954,7 @@ module gtx3g_bert_0_pattern_gen_36
         .I2(read_counter_i[3]),
         .I3(read_counter_i[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'hCC9A)) 
     \bram_reg[3]_i_2 
@@ -34173,7 +32963,7 @@ module gtx3g_bert_0_pattern_gen_36
         .I2(read_counter_i[3]),
         .I3(read_counter_i[1]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'hABA8)) 
     \bram_reg[4]_i_2 
@@ -34182,7 +32972,7 @@ module gtx3g_bert_0_pattern_gen_36
         .I2(read_counter_i[1]),
         .I3(read_counter_i[0]),
         .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     \bram_reg[7]_i_2 
@@ -34191,7 +32981,7 @@ module gtx3g_bert_0_pattern_gen_36
         .I2(read_counter_i[1]),
         .I3(read_counter_i[2]),
         .O(p_0_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \bram_reg[8]_i_2 
@@ -34211,19 +33001,19 @@ module gtx3g_bert_0_pattern_gen_36
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[0]),
-        .Q(pattern_word[0]),
+        .Q(Q[0]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[10] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[10]),
-        .Q(Q[4]),
+        .Q(pattern_word[10]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[11] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[11]),
-        .Q(Q[5]),
+        .Q(Q[6]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[12] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -34247,7 +33037,7 @@ module gtx3g_bert_0_pattern_gen_36
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[15]),
-        .Q(Q[6]),
+        .Q(pattern_word[15]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[1] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -34265,7 +33055,7 @@ module gtx3g_bert_0_pattern_gen_36
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[3]),
-        .Q(pattern_word[3]),
+        .Q(Q[1]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[4] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -34277,7 +33067,7 @@ module gtx3g_bert_0_pattern_gen_36
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[5]),
-        .Q(Q[0]),
+        .Q(Q[2]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[6] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -34289,19 +33079,19 @@ module gtx3g_bert_0_pattern_gen_36
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[7]),
-        .Q(Q[1]),
+        .Q(Q[3]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[8] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[8]),
-        .Q(Q[2]),
+        .Q(Q[4]),
         .R(pattern_rst_reg));
   FDRE \pattern_reg_reg[9] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(1'b1),
         .D(pattern_reg[9]),
-        .Q(Q[3]),
+        .Q(Q[5]),
         .R(pattern_rst_reg));
   gtx3g_bert_0_prbs11_gen_38 prbs11_gen_inst1
        (.D(pattern_reg),
@@ -34383,187 +33173,254 @@ module gtx3g_bert_0_pattern_gen_36
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .pattern_rst_reg(pattern_rst_reg));
   LUT6 #(
-    .INIT(64'hAA222A88AAAAAAAA)) 
-    \tx_data_reg[0]_i_3 
-       (.I0(pattern_word[0]),
-        .I1(\block_word_cnt_reg[4] [3]),
-        .I2(\block_word_cnt_reg[4] [0]),
-        .I3(\block_word_cnt_reg[4] [1]),
-        .I4(\block_word_cnt_reg[4] [2]),
-        .I5(\block_word_cnt_reg[3] ),
-        .O(\tx_data_reg_reg[0] ));
+    .INIT(64'hAEAAFF00BFBBFF00)) 
+    \tx_data_reg[10]_i_1 
+       (.I0(\ver_parity_word_reg_reg[10] ),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\block_word_cnt_reg[4]_3 ),
+        .I3(pattern_word[10]),
+        .I4(\block_word_cnt_reg[3] ),
+        .I5(\tx_data_reg[10]_i_3_n_0 ),
+        .O(D[8]));
   LUT6 #(
-    .INIT(64'h88AAEA80AAAAAAAA)) 
-    \tx_data_reg[12]_i_3 
-       (.I0(pattern_word[12]),
-        .I1(\block_word_cnt_reg[4] [1]),
-        .I2(\block_word_cnt_reg[4] [0]),
+    .INIT(64'h000D0FDD0FDD0FDD)) 
+    \tx_data_reg[10]_i_3 
+       (.I0(test_init_cnt_reg[7]),
+        .I1(\block_word_cnt_reg[1] ),
+        .I2(pattern_word[10]),
         .I3(\block_word_cnt_reg[4] [3]),
-        .I4(\block_word_cnt_reg[4] [2]),
-        .I5(\block_word_cnt_reg[3] ),
-        .O(\tx_data_reg_reg[12] ));
+        .I4(\block_word_cnt_reg[4] [0]),
+        .I5(\block_word_cnt_reg[4] [1]),
+        .O(\tx_data_reg[10]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hC0AAF3AA)) 
+    \tx_data_reg[11]_i_1 
+       (.I0(Q[6]),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\hor_parity_word_reg_reg[11] ),
+        .I3(\block_word_cnt_reg[3] ),
+        .I4(\tx_data_reg[11]_i_3_n_0 ),
+        .O(D[9]));
+  LUT6 #(
+    .INIT(64'h000D0FDD0FDD0FDD)) 
+    \tx_data_reg[11]_i_3 
+       (.I0(test_init_cnt_reg[8]),
+        .I1(\block_word_cnt_reg[1] ),
+        .I2(Q[6]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [0]),
+        .I5(\block_word_cnt_reg[4] [1]),
+        .O(\tx_data_reg[11]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hAEAAFF00BFBBFF00)) 
+    \tx_data_reg[12]_i_1 
+       (.I0(\ver_parity_word_reg_reg[12] ),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\block_word_cnt_reg[4]_3 ),
+        .I3(pattern_word[12]),
+        .I4(\block_word_cnt_reg[3] ),
+        .I5(\tx_data_reg[12]_i_4_n_0 ),
+        .O(D[10]));
+  LUT6 #(
+    .INIT(64'h000D0FDD0FDD0FDD)) 
+    \tx_data_reg[12]_i_4 
+       (.I0(test_init_cnt_reg[9]),
+        .I1(\block_word_cnt_reg[1] ),
+        .I2(pattern_word[12]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [0]),
+        .I5(\block_word_cnt_reg[4] [1]),
+        .O(\tx_data_reg[12]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFFFF44F444444444)) 
     \tx_data_reg[13]_i_1 
-       (.I0(\block_word_cnt_reg[4]_1 ),
+       (.I0(\block_word_cnt_reg[4]_2 ),
         .I1(pattern_word[13]),
-        .I2(test_init_cnt_reg[7]),
-        .I3(\block_word_cnt_reg[2]_1 ),
+        .I2(test_init_cnt_reg[10]),
+        .I3(\block_word_cnt_reg[2] ),
         .I4(\ver_parity_word_reg_reg[13] ),
         .I5(\block_word_cnt_reg[3] ),
-        .O(D[8]));
+        .O(D[11]));
   LUT6 #(
     .INIT(64'hFFFF44F444444444)) 
     \tx_data_reg[14]_i_1 
-       (.I0(\block_word_cnt_reg[4]_1 ),
+       (.I0(\block_word_cnt_reg[4]_2 ),
         .I1(pattern_word[14]),
-        .I2(test_init_cnt_reg[8]),
-        .I3(\block_word_cnt_reg[2]_1 ),
+        .I2(test_init_cnt_reg[11]),
+        .I3(\block_word_cnt_reg[2] ),
         .I4(\ver_parity_word_reg_reg[14] ),
         .I5(\block_word_cnt_reg[3] ),
-        .O(D[9]));
+        .O(D[12]));
   LUT6 #(
-    .INIT(64'hCCCC0CCC4C0CCC0C)) 
-    \tx_data_reg[1]_i_4 
-       (.I0(\block_word_cnt_reg[4] [0]),
-        .I1(pattern_word[1]),
-        .I2(\block_word_cnt_reg[3] ),
-        .I3(\block_word_cnt_reg[4] [3]),
-        .I4(\block_word_cnt_reg[4] [1]),
-        .I5(\block_word_cnt_reg[4] [2]),
-        .O(\tx_data_reg_reg[1]_0 ));
-  LUT6 #(
-    .INIT(64'h1011101000110010)) 
-    \tx_data_reg[1]_i_5 
-       (.I0(\block_word_cnt_reg[2]_2 ),
-        .I1(\block_word_cnt_reg[4] [3]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [0]),
-        .I4(test_init_cnt_reg[0]),
-        .I5(pattern_word[1]),
-        .O(\tx_data_reg_reg[1] ));
-  LUT5 #(
-    .INIT(32'hF8B8FCFC)) 
-    \tx_data_reg[2]_i_1 
-       (.I0(\ver_parity_word_reg_reg[2] ),
-        .I1(\block_word_cnt_reg[3] ),
-        .I2(pattern_word[2]),
+    .INIT(64'hFFFF44F444444444)) 
+    \tx_data_reg[15]_i_1 
+       (.I0(\block_word_cnt_reg[4]_2 ),
+        .I1(pattern_word[15]),
+        .I2(test_init_cnt_reg[12]),
         .I3(\block_word_cnt_reg[2] ),
-        .I4(\tx_data_reg[2]_i_3_n_0 ),
+        .I4(\ver_parity_word_reg_reg[15] ),
+        .I5(\block_word_cnt_reg[3] ),
+        .O(D[13]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF8F8A0000)) 
+    \tx_data_reg[1]_i_1 
+       (.I0(\block_word_cnt_reg[4] [1]),
+        .I1(pattern_word[1]),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(test_init_cnt_reg[0]),
+        .I4(\block_word_cnt_reg[4]_0 ),
+        .I5(\ver_parity_word_reg_reg[1] ),
         .O(D[0]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF03332AAA)) 
+    .INIT(64'h8828A828AAAAAAAA)) 
+    \tx_data_reg[1]_i_4 
+       (.I0(pattern_word[1]),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\block_word_cnt_reg[4] [3]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [0]),
+        .I5(\block_word_cnt_reg[3] ),
+        .O(\tx_data_reg_reg[1] ));
+  LUT6 #(
+    .INIT(64'hAEAAFF00FFFFFF00)) 
+    \tx_data_reg[2]_i_1 
+       (.I0(\hor_parity_word_reg_reg[2] ),
+        .I1(\block_word_cnt_reg[4] [2]),
+        .I2(\block_word_cnt_reg[4]_3 ),
+        .I3(pattern_word[2]),
+        .I4(\block_word_cnt_reg[3] ),
+        .I5(\tx_data_reg[2]_i_3_n_0 ),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hAABFBFFFAABFAAAA)) 
     \tx_data_reg[2]_i_3 
-       (.I0(\block_word_cnt_reg[1] ),
-        .I1(pattern_word[2]),
+       (.I0(\block_word_cnt_reg[4] [2]),
+        .I1(\block_word_cnt_reg[4] [0]),
         .I2(\block_word_cnt_reg[4] [1]),
-        .I3(\block_word_cnt_reg[4] [0]),
+        .I3(pattern_word[2]),
         .I4(\block_word_cnt_reg[4] [3]),
-        .I5(\block_word_cnt_reg[4] [2]),
+        .I5(\block_word_cnt_reg[1]_0 ),
         .O(\tx_data_reg[2]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFF405F40FFF0FFF0)) 
-    \tx_data_reg[3]_i_1 
-       (.I0(\block_word_cnt_reg[2]_3 ),
-        .I1(\block_word_cnt_reg[4]_2 ),
-        .I2(\block_word_cnt_reg[3] ),
-        .I3(pattern_word[3]),
-        .I4(\block_word_cnt_reg[2] ),
-        .I5(\hor_parity_word_reg_reg[3] ),
-        .O(D[1]));
-  LUT5 #(
-    .INIT(32'hF8B8FCFC)) 
+    .INIT(64'h4444FFF444444444)) 
     \tx_data_reg[4]_i_1 
-       (.I0(\ver_parity_word_reg_reg[4] ),
-        .I1(\block_word_cnt_reg[3] ),
-        .I2(pattern_word[4]),
-        .I3(\block_word_cnt_reg[2] ),
-        .I4(\tx_data_reg[4]_i_4_n_0 ),
+       (.I0(\block_word_cnt_reg[2]_0 ),
+        .I1(pattern_word[4]),
+        .I2(\block_word_cnt_reg[2] ),
+        .I3(test_init_cnt_reg[1]),
+        .I4(\block_word_cnt_reg[2]_1 ),
+        .I5(\tx_data_reg[4]_i_4_n_0 ),
         .O(D[2]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF1F11111F)) 
+    .INIT(64'hFEEEEFFFAAAAAAAA)) 
     \tx_data_reg[4]_i_4 
-       (.I0(\block_word_cnt_reg[4]_0 ),
-        .I1(test_init_cnt_reg[1]),
-        .I2(pattern_word[4]),
-        .I3(\block_word_cnt_reg[1]_0 ),
-        .I4(\block_word_cnt_reg[4] [3]),
-        .I5(\block_word_cnt_reg[4] [2]),
-        .O(\tx_data_reg[4]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF54545400)) 
-    \tx_data_reg[5]_i_1 
-       (.I0(\block_word_cnt_reg[2]_0 ),
-        .I1(\block_word_cnt_reg[1]_1 ),
-        .I2(Q[0]),
-        .I3(test_init_cnt_reg[2]),
-        .I4(\block_word_cnt_reg[4]_0 ),
-        .I5(\pattern_reg_reg[5]_0 ),
-        .O(D[3]));
-  LUT6 #(
-    .INIT(64'hEEE0EEEEEEE0EEE0)) 
-    \tx_data_reg[6]_i_1 
-       (.I0(\block_word_cnt_reg[3] ),
-        .I1(pattern_word[6]),
-        .I2(\hor_parity_word_reg_reg[6] ),
-        .I3(\tx_data_reg[6]_i_3_n_0 ),
-        .I4(\block_word_cnt_reg[2]_1 ),
-        .I5(test_init_cnt_reg[3]),
-        .O(D[4]));
-  LUT6 #(
-    .INIT(64'hAA222B88AAAAABAA)) 
-    \tx_data_reg[6]_i_3 
-       (.I0(pattern_word[6]),
-        .I1(\block_word_cnt_reg[4] [3]),
+       (.I0(pattern_word[4]),
+        .I1(\block_word_cnt_reg[4] [2]),
         .I2(\block_word_cnt_reg[4] [0]),
         .I3(\block_word_cnt_reg[4] [1]),
-        .I4(\block_word_cnt_reg[4] [2]),
+        .I4(\block_word_cnt_reg[4] [3]),
         .I5(\block_word_cnt_reg[3] ),
-        .O(\tx_data_reg[6]_i_3_n_0 ));
+        .O(\tx_data_reg[4]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFF5554)) 
+    \tx_data_reg[5]_i_1 
+       (.I0(\tx_data_reg[5]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg[1] ),
+        .I2(\block_word_cnt_reg[4] [3]),
+        .I3(test_init_cnt_reg[2]),
+        .I4(\pattern_reg_reg[5]_0 ),
+        .O(D[3]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF54545400)) 
+    .INIT(64'hFAAAAAAAFFFFFBBB)) 
+    \tx_data_reg[5]_i_2 
+       (.I0(\block_word_cnt_reg[4] [2]),
+        .I1(\block_word_cnt_reg[3] ),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [3]),
+        .I5(Q[2]),
+        .O(\tx_data_reg[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFAFAFAFACACAFACA)) 
+    \tx_data_reg[6]_i_1 
+       (.I0(pattern_word[6]),
+        .I1(\hor_parity_word_reg_reg[6] ),
+        .I2(\block_word_cnt_reg[3] ),
+        .I3(test_init_cnt_reg[3]),
+        .I4(\block_word_cnt_reg[2] ),
+        .I5(\tx_data_reg[6]_i_3_n_0 ),
+        .O(D[4]));
+  LUT5 #(
+    .INIT(32'hC0CC4CD0)) 
+    \tx_data_reg[6]_i_3 
+       (.I0(\block_word_cnt_reg[4] [0]),
+        .I1(pattern_word[6]),
+        .I2(\block_word_cnt_reg[4] [1]),
+        .I3(\block_word_cnt_reg[4] [3]),
+        .I4(\block_word_cnt_reg[4] [2]),
+        .O(\tx_data_reg[6]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFF5554)) 
     \tx_data_reg[7]_i_1 
-       (.I0(\block_word_cnt_reg[2]_0 ),
-        .I1(\block_word_cnt_reg[1]_1 ),
-        .I2(Q[1]),
+       (.I0(\tx_data_reg[7]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg[1] ),
+        .I2(\block_word_cnt_reg[4] [3]),
         .I3(test_init_cnt_reg[4]),
-        .I4(\block_word_cnt_reg[4]_0 ),
-        .I5(\pattern_reg_reg[7]_0 ),
+        .I4(\pattern_reg_reg[7]_0 ),
         .O(D[5]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF55150000)) 
+    .INIT(64'hFAAAAAAAFFFFFBBB)) 
+    \tx_data_reg[7]_i_2 
+       (.I0(\block_word_cnt_reg[4] [2]),
+        .I1(\block_word_cnt_reg[3] ),
+        .I2(\block_word_cnt_reg[4] [0]),
+        .I3(\block_word_cnt_reg[4] [1]),
+        .I4(\block_word_cnt_reg[4] [3]),
+        .I5(Q[3]),
+        .O(\tx_data_reg[7]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h5C5C5C5CCC0CFC0C)) 
     \tx_data_reg[8]_i_1 
-       (.I0(\block_word_cnt_reg[2]_2 ),
-        .I1(\block_word_cnt_reg[4] [3]),
-        .I2(\block_word_cnt_reg[1]_0 ),
-        .I3(Q[2]),
-        .I4(\tx_data_reg[8]_i_2_n_0 ),
-        .I5(\hor_parity_word_reg_reg[8] ),
+       (.I0(\hor_parity_word_reg_reg[8] ),
+        .I1(Q[4]),
+        .I2(\block_word_cnt_reg[3] ),
+        .I3(\tx_data_reg[8]_i_3_n_0 ),
+        .I4(\block_word_cnt_reg[4]_1 ),
+        .I5(\block_word_cnt_reg[4] [2]),
         .O(D[6]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFF000F4F4)) 
-    \tx_data_reg[8]_i_2 
-       (.I0(test_init_cnt_reg_3__s_net_1),
-        .I1(test_init_cnt_reg[5]),
-        .I2(\block_word_cnt_reg[4] [1]),
-        .I3(Q[2]),
+    .INIT(64'hFFFFF0F8F0FFF0F8)) 
+    \tx_data_reg[8]_i_3 
+       (.I0(test_init_cnt_reg[5]),
+        .I1(test_init_cnt_reg_3__s_net_1),
+        .I2(\block_word_cnt_reg[4] [3]),
+        .I3(\block_word_cnt_reg[4] [0]),
+        .I4(\block_word_cnt_reg[4] [1]),
+        .I5(Q[4]),
+        .O(\tx_data_reg[8]_i_3_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFF5554)) 
+    \tx_data_reg[9]_i_1 
+       (.I0(\tx_data_reg[9]_i_2_n_0 ),
+        .I1(\block_word_cnt_reg[1] ),
+        .I2(\block_word_cnt_reg[4] [3]),
+        .I3(test_init_cnt_reg[6]),
+        .I4(\pattern_reg_reg[9]_0 ),
+        .O(D[7]));
+  LUT6 #(
+    .INIT(64'hFFF3F3F3F3F1F1F1)) 
+    \tx_data_reg[9]_i_2 
+       (.I0(\block_word_cnt_reg[3] ),
+        .I1(Q[5]),
+        .I2(\block_word_cnt_reg[4] [2]),
+        .I3(\block_word_cnt_reg[4] [1]),
         .I4(\block_word_cnt_reg[4] [0]),
         .I5(\block_word_cnt_reg[4] [3]),
-        .O(\tx_data_reg[8]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF54545400)) 
-    \tx_data_reg[9]_i_1 
-       (.I0(\block_word_cnt_reg[2]_0 ),
-        .I1(\block_word_cnt_reg[1]_1 ),
-        .I2(Q[3]),
-        .I3(test_init_cnt_reg[6]),
-        .I4(\block_word_cnt_reg[4]_0 ),
-        .I5(\pattern_reg_reg[9]_0 ),
-        .O(D[7]));
+        .O(\tx_data_reg[9]_i_2_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "pattern_gen" *) 
-module gtx3g_bert_0_pattern_gen_46
+module gtx3g_bert_0_pattern_gen_47
    (S,
     \pattern_error_cnt_reg[0] ,
     rx_fifo_rst,
@@ -34624,7 +33481,7 @@ module gtx3g_bert_0_pattern_gen_46
   wire [15:0]prbs9_reg;
   wire rx_fifo_rst;
 
-  gtx3g_bert_0_bram_gen_47 bram_gen_inst1
+  gtx3g_bert_0_bram_gen_48 bram_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q({bram_gen_inst1_n_0,bram_gen_inst1_n_1,bram_gen_inst1_n_2,bram_gen_inst1_n_3,bram_gen_inst1_n_4,bram_gen_inst1_n_5,bram_gen_inst1_n_6,bram_gen_inst1_n_7,bram_gen_inst1_n_8,bram_gen_inst1_n_9,bram_gen_inst1_n_10}),
         .pattern_pause_reg_reg(pattern_pause_reg_reg),
@@ -34639,52 +33496,52 @@ module gtx3g_bert_0_pattern_gen_46
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     pattern_error_reg0_carry__0_i_2
-       (.I0(pattern_reg[12]),
-        .I1(Q[12]),
-        .I2(pattern_reg[14]),
-        .I3(Q[14]),
-        .I4(Q[13]),
-        .I5(pattern_reg[13]),
+       (.I0(Q[13]),
+        .I1(pattern_reg[13]),
+        .I2(Q[12]),
+        .I3(pattern_reg[12]),
+        .I4(pattern_reg[14]),
+        .I5(Q[14]),
         .O(\pattern_error_cnt_reg[0] [0]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     pattern_error_reg0_carry_i_1
-       (.I0(pattern_reg[10]),
-        .I1(Q[10]),
-        .I2(pattern_reg[11]),
-        .I3(Q[11]),
-        .I4(Q[9]),
-        .I5(pattern_reg[9]),
+       (.I0(Q[9]),
+        .I1(pattern_reg[9]),
+        .I2(Q[10]),
+        .I3(pattern_reg[10]),
+        .I4(pattern_reg[11]),
+        .I5(Q[11]),
         .O(S[3]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     pattern_error_reg0_carry_i_2
-       (.I0(pattern_reg[7]),
-        .I1(Q[7]),
-        .I2(pattern_reg[8]),
-        .I3(Q[8]),
-        .I4(Q[6]),
-        .I5(pattern_reg[6]),
+       (.I0(Q[7]),
+        .I1(pattern_reg[7]),
+        .I2(Q[6]),
+        .I3(pattern_reg[6]),
+        .I4(pattern_reg[8]),
+        .I5(Q[8]),
         .O(S[2]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     pattern_error_reg0_carry_i_3
-       (.I0(pattern_reg[4]),
-        .I1(Q[4]),
-        .I2(pattern_reg[5]),
-        .I3(Q[5]),
-        .I4(Q[3]),
-        .I5(pattern_reg[3]),
+       (.I0(Q[3]),
+        .I1(pattern_reg[3]),
+        .I2(Q[4]),
+        .I3(pattern_reg[4]),
+        .I4(pattern_reg[5]),
+        .I5(Q[5]),
         .O(S[1]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     pattern_error_reg0_carry_i_4
-       (.I0(pattern_reg[1]),
-        .I1(Q[1]),
-        .I2(pattern_reg[2]),
-        .I3(Q[2]),
-        .I4(Q[0]),
-        .I5(pattern_reg[0]),
+       (.I0(Q[0]),
+        .I1(pattern_reg[0]),
+        .I2(Q[1]),
+        .I3(pattern_reg[1]),
+        .I4(pattern_reg[2]),
+        .I5(Q[2]),
         .O(S[0]));
   FDRE \pattern_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
@@ -34782,7 +33639,7 @@ module gtx3g_bert_0_pattern_gen_46
         .D(pattern_reg_0[9]),
         .Q(pattern_reg[9]),
         .R(rx_fifo_rst));
-  gtx3g_bert_0_prbs11_gen_48 prbs11_gen_inst1
+  gtx3g_bert_0_prbs11_gen_49 prbs11_gen_inst1
        (.D(pattern_reg_0),
         .GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .PATTERN_MODE(PATTERN_MODE),
@@ -34807,24 +33664,24 @@ module gtx3g_bert_0_pattern_gen_46
         .\prbs31_reg_reg[9] (prbs31_gen_inst1_n_12),
         .\prbs7_reg_reg[15] (prbs7_reg),
         .rx_fifo_rst(rx_fifo_rst));
-  gtx3g_bert_0_prbs15_gen_49 prbs15_gen_inst1
+  gtx3g_bert_0_prbs15_gen_50 prbs15_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(prbs15_reg),
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .rx_fifo_rst(rx_fifo_rst));
-  gtx3g_bert_0_prbs20_gen_50 prbs20_gen_inst1
+  gtx3g_bert_0_prbs20_gen_51 prbs20_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(prbs20_reg),
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .prbs31_reg_reg_r_21(prbs31_gen_inst1_n_1),
         .rx_fifo_rst(rx_fifo_rst));
-  gtx3g_bert_0_prbs23_gen_51 prbs23_gen_inst1
+  gtx3g_bert_0_prbs23_gen_52 prbs23_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(prbs23_reg),
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .prbs31_reg_reg_r_22(prbs31_gen_inst1_n_2),
         .rx_fifo_rst(rx_fifo_rst));
-  gtx3g_bert_0_prbs31_gen_52 prbs31_gen_inst1
+  gtx3g_bert_0_prbs31_gen_53 prbs31_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .PATTERN_MODE(PATTERN_MODE[1:0]),
         .Q(prbs23_reg),
@@ -34851,18 +33708,19 @@ module gtx3g_bert_0_pattern_gen_46
         .prbs31_reg_reg_r_22_0(prbs31_gen_inst1_n_1),
         .prbs31_reg_reg_r_23_0(prbs31_gen_inst1_n_2),
         .rx_fifo_rst(rx_fifo_rst));
-  gtx3g_bert_0_prbs7_gen_53 prbs7_gen_inst1
+  gtx3g_bert_0_prbs7_gen_54 prbs7_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(prbs7_reg),
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .rx_fifo_rst(rx_fifo_rst));
-  gtx3g_bert_0_prbs9_gen_54 prbs9_gen_inst1
+  gtx3g_bert_0_prbs9_gen_55 prbs9_gen_inst1
        (.GT0_TXUSRCLK_OUT(GT0_TXUSRCLK_OUT),
         .Q(prbs9_reg),
         .pattern_pause_reg_reg(prbs31_gen_inst1_n_0),
         .rx_fifo_rst(rx_fifo_rst));
 endmodule
 
+(* ORIG_REF_NAME = "prbs11_gen" *) 
 module gtx3g_bert_0_prbs11_gen
    (D,
     PATTERN_MODE,
@@ -35731,7 +34589,7 @@ module gtx3g_bert_0_prbs11_gen_38
 endmodule
 
 (* ORIG_REF_NAME = "prbs11_gen" *) 
-module gtx3g_bert_0_prbs11_gen_48
+module gtx3g_bert_0_prbs11_gen_49
    (D,
     PATTERN_MODE,
     \prbs31_reg_reg[0] ,
@@ -36164,6 +35022,7 @@ module gtx3g_bert_0_prbs11_gen_48
         .R(rx_fifo_rst));
 endmodule
 
+(* ORIG_REF_NAME = "prbs15_gen" *) 
 module gtx3g_bert_0_prbs15_gen
    (Q,
     pattern_rst_reg,
@@ -36406,7 +35265,7 @@ module gtx3g_bert_0_prbs15_gen_39
 endmodule
 
 (* ORIG_REF_NAME = "prbs15_gen" *) 
-module gtx3g_bert_0_prbs15_gen_49
+module gtx3g_bert_0_prbs15_gen_50
    (Q,
     rx_fifo_rst,
     pattern_pause_reg_reg,
@@ -36526,6 +35385,7 @@ module gtx3g_bert_0_prbs15_gen_49
         .R(rx_fifo_rst));
 endmodule
 
+(* ORIG_REF_NAME = "prbs20_gen" *) 
 module gtx3g_bert_0_prbs20_gen
    (Q,
     pattern_pause_reg_reg,
@@ -36840,7 +35700,7 @@ module gtx3g_bert_0_prbs20_gen_40
 endmodule
 
 (* ORIG_REF_NAME = "prbs20_gen" *) 
-module gtx3g_bert_0_prbs20_gen_50
+module gtx3g_bert_0_prbs20_gen_51
    (Q,
     pattern_pause_reg_reg,
     GT0_TXUSRCLK_OUT,
@@ -36996,6 +35856,7 @@ module gtx3g_bert_0_prbs20_gen_50
         .O(prbs20_reg_reg_gate_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "prbs23_gen" *) 
 module gtx3g_bert_0_prbs23_gen
    (Q,
     pattern_pause_reg_reg,
@@ -37334,7 +36195,7 @@ module gtx3g_bert_0_prbs23_gen_41
 endmodule
 
 (* ORIG_REF_NAME = "prbs23_gen" *) 
-module gtx3g_bert_0_prbs23_gen_51
+module gtx3g_bert_0_prbs23_gen_52
    (Q,
     pattern_pause_reg_reg,
     GT0_TXUSRCLK_OUT,
@@ -37502,6 +36363,7 @@ module gtx3g_bert_0_prbs23_gen_51
         .O(prbs23_reg_reg_gate_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "prbs31_gen" *) 
 module gtx3g_bert_0_prbs31_gen
    (\prbs31_reg_reg[30]_0 ,
     prbs31_reg_reg_r_12_0,
@@ -37580,7 +36442,7 @@ module gtx3g_bert_0_prbs31_gen
   wire [15:0]\prbs15_reg_reg[15] ;
   wire [15:0]\prbs20_reg_reg[15] ;
   wire [30:0]prbs31_reg;
-  wire \prbs31_reg[0]_i_1__0_n_0 ;
+  wire \prbs31_reg[0]_i_1__2_n_0 ;
   wire \prbs31_reg_reg[25]_srl10___gt1_frame_gen_pattern_gen_inst_1_prbs31_gen_inst1_prbs31_reg_reg_r_18_n_0 ;
   wire \prbs31_reg_reg[26]_gt1_frame_gen_pattern_gen_inst_1_prbs31_gen_inst1_prbs31_reg_reg_r_19_n_0 ;
   wire \prbs31_reg_reg[30]_0 ;
@@ -37759,14 +36621,14 @@ module gtx3g_bert_0_prbs31_gen
         .O(\pattern_reg_reg[9] ));
   LUT2 #(
     .INIT(4'h6)) 
-    \prbs31_reg[0]_i_1__0 
+    \prbs31_reg[0]_i_1__2 
        (.I0(prbs31_reg[30]),
         .I1(prbs31_reg[27]),
-        .O(\prbs31_reg[0]_i_1__0_n_0 ));
+        .O(\prbs31_reg[0]_i_1__2_n_0 ));
   FDSE \prbs31_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\prbs31_reg_reg[30]_0 ),
-        .D(\prbs31_reg[0]_i_1__0_n_0 ),
+        .D(\prbs31_reg[0]_i_1__2_n_0 ),
         .Q(prbs31_reg[0]),
         .S(pattern_rst_reg));
   FDRE \prbs31_reg_reg[10] 
@@ -38058,7 +36920,7 @@ module gtx3g_bert_0_prbs31_gen_42
   wire [15:0]\prbs15_reg_reg[15] ;
   wire [15:0]\prbs20_reg_reg[15] ;
   wire [30:0]prbs31_reg;
-  wire \prbs31_reg[0]_i_1_n_0 ;
+  wire \prbs31_reg[0]_i_1__1_n_0 ;
   wire \prbs31_reg_reg[25]_srl10___gt0_frame_gen_pattern_gen_inst_1_prbs31_gen_inst1_prbs31_reg_reg_r_8_n_0 ;
   wire \prbs31_reg_reg[26]_gt0_frame_gen_pattern_gen_inst_1_prbs31_gen_inst1_prbs31_reg_reg_r_9_n_0 ;
   wire \prbs31_reg_reg[30]_0 ;
@@ -38237,14 +37099,14 @@ module gtx3g_bert_0_prbs31_gen_42
         .O(\pattern_reg_reg[9] ));
   LUT2 #(
     .INIT(4'h6)) 
-    \prbs31_reg[0]_i_1 
+    \prbs31_reg[0]_i_1__1 
        (.I0(prbs31_reg[30]),
         .I1(prbs31_reg[27]),
-        .O(\prbs31_reg[0]_i_1_n_0 ));
+        .O(\prbs31_reg[0]_i_1__1_n_0 ));
   FDSE \prbs31_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\prbs31_reg_reg[30]_0 ),
-        .D(\prbs31_reg[0]_i_1_n_0 ),
+        .D(\prbs31_reg[0]_i_1__1_n_0 ),
         .Q(prbs31_reg[0]),
         .S(pattern_rst_reg));
   FDRE \prbs31_reg_reg[10] 
@@ -38458,7 +37320,7 @@ module gtx3g_bert_0_prbs31_gen_42
 endmodule
 
 (* ORIG_REF_NAME = "prbs31_gen" *) 
-module gtx3g_bert_0_prbs31_gen_52
+module gtx3g_bert_0_prbs31_gen_53
    (\prbs31_reg_reg[30]_0 ,
     prbs31_reg_reg_r_22_0,
     prbs31_reg_reg_r_23_0,
@@ -38535,7 +37397,7 @@ module gtx3g_bert_0_prbs31_gen_52
   wire [15:0]\prbs15_reg_reg[15] ;
   wire [15:0]\prbs20_reg_reg[15] ;
   wire [30:0]prbs31_reg;
-  wire \prbs31_reg[0]_i_1__1_n_0 ;
+  wire \prbs31_reg[0]_i_1__3_n_0 ;
   wire \prbs31_reg_reg[25]_srl10___gt0_frame_check_pattern_gen_inst_2_prbs31_gen_inst1_prbs31_reg_reg_r_28_n_0 ;
   wire \prbs31_reg_reg[26]_gt0_frame_check_pattern_gen_inst_2_prbs31_gen_inst1_prbs31_reg_reg_r_29_n_0 ;
   wire \prbs31_reg_reg[30]_0 ;
@@ -38715,14 +37577,14 @@ module gtx3g_bert_0_prbs31_gen_52
         .O(\pattern_reg_reg[9] ));
   LUT2 #(
     .INIT(4'h6)) 
-    \prbs31_reg[0]_i_1__1 
+    \prbs31_reg[0]_i_1__3 
        (.I0(prbs31_reg[30]),
         .I1(prbs31_reg[27]),
-        .O(\prbs31_reg[0]_i_1__1_n_0 ));
+        .O(\prbs31_reg[0]_i_1__3_n_0 ));
   FDSE \prbs31_reg_reg[0] 
        (.C(GT0_TXUSRCLK_OUT),
         .CE(\prbs31_reg_reg[30]_0 ),
-        .D(\prbs31_reg[0]_i_1__1_n_0 ),
+        .D(\prbs31_reg[0]_i_1__3_n_0 ),
         .Q(prbs31_reg[0]),
         .S(rx_fifo_rst));
   FDRE \prbs31_reg_reg[10] 
@@ -38935,6 +37797,655 @@ module gtx3g_bert_0_prbs31_gen_52
         .O(\prbs31_reg_reg[30]_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "prbs31_rand_gen" *) 
+module gtx3g_bert_0_prbs31_rand_gen
+   (S,
+    error_insert_reg_reg,
+    error_insert_reg_reg_0,
+    ERROR_INSERT_MASK,
+    error_insertion_rst_reg,
+    GT0_TXUSRCLK_OUT);
+  output [3:0]S;
+  output [3:0]error_insert_reg_reg;
+  output [2:0]error_insert_reg_reg_0;
+  input [30:0]ERROR_INSERT_MASK;
+  input error_insertion_rst_reg;
+  input GT0_TXUSRCLK_OUT;
+
+  wire [30:0]ERROR_INSERT_MASK;
+  wire GT0_TXUSRCLK_OUT;
+  wire [3:0]S;
+  wire [3:0]error_insert_reg_reg;
+  wire [2:0]error_insert_reg_reg_0;
+  wire error_insertion_rst_reg;
+  wire [0:0]p_0_out;
+  wire [30:0]prbs31_rand;
+
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_1__0
+       (.I0(prbs31_rand[21]),
+        .I1(ERROR_INSERT_MASK[21]),
+        .I2(ERROR_INSERT_MASK[23]),
+        .I3(prbs31_rand[23]),
+        .I4(ERROR_INSERT_MASK[22]),
+        .I5(prbs31_rand[22]),
+        .O(error_insert_reg_reg[3]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_2__0
+       (.I0(prbs31_rand[18]),
+        .I1(ERROR_INSERT_MASK[18]),
+        .I2(ERROR_INSERT_MASK[20]),
+        .I3(prbs31_rand[20]),
+        .I4(ERROR_INSERT_MASK[19]),
+        .I5(prbs31_rand[19]),
+        .O(error_insert_reg_reg[2]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_3__0
+       (.I0(prbs31_rand[15]),
+        .I1(ERROR_INSERT_MASK[15]),
+        .I2(ERROR_INSERT_MASK[17]),
+        .I3(prbs31_rand[17]),
+        .I4(ERROR_INSERT_MASK[16]),
+        .I5(prbs31_rand[16]),
+        .O(error_insert_reg_reg[1]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_4__0
+       (.I0(prbs31_rand[12]),
+        .I1(ERROR_INSERT_MASK[12]),
+        .I2(ERROR_INSERT_MASK[14]),
+        .I3(prbs31_rand[14]),
+        .I4(ERROR_INSERT_MASK[13]),
+        .I5(prbs31_rand[13]),
+        .O(error_insert_reg_reg[0]));
+  LUT2 #(
+    .INIT(4'hD)) 
+    error_insert_reg0_carry__1_i_1__0
+       (.I0(ERROR_INSERT_MASK[30]),
+        .I1(prbs31_rand[30]),
+        .O(error_insert_reg_reg_0[2]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__1_i_2__0
+       (.I0(prbs31_rand[27]),
+        .I1(ERROR_INSERT_MASK[27]),
+        .I2(ERROR_INSERT_MASK[29]),
+        .I3(prbs31_rand[29]),
+        .I4(ERROR_INSERT_MASK[28]),
+        .I5(prbs31_rand[28]),
+        .O(error_insert_reg_reg_0[1]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__1_i_3__0
+       (.I0(prbs31_rand[24]),
+        .I1(ERROR_INSERT_MASK[24]),
+        .I2(ERROR_INSERT_MASK[26]),
+        .I3(prbs31_rand[26]),
+        .I4(ERROR_INSERT_MASK[25]),
+        .I5(prbs31_rand[25]),
+        .O(error_insert_reg_reg_0[0]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_1__0
+       (.I0(prbs31_rand[9]),
+        .I1(ERROR_INSERT_MASK[9]),
+        .I2(ERROR_INSERT_MASK[11]),
+        .I3(prbs31_rand[11]),
+        .I4(ERROR_INSERT_MASK[10]),
+        .I5(prbs31_rand[10]),
+        .O(S[3]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_2__0
+       (.I0(prbs31_rand[6]),
+        .I1(ERROR_INSERT_MASK[6]),
+        .I2(ERROR_INSERT_MASK[8]),
+        .I3(prbs31_rand[8]),
+        .I4(ERROR_INSERT_MASK[7]),
+        .I5(prbs31_rand[7]),
+        .O(S[2]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_3__0
+       (.I0(prbs31_rand[3]),
+        .I1(ERROR_INSERT_MASK[3]),
+        .I2(ERROR_INSERT_MASK[5]),
+        .I3(prbs31_rand[5]),
+        .I4(ERROR_INSERT_MASK[4]),
+        .I5(prbs31_rand[4]),
+        .O(S[1]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_4__0
+       (.I0(prbs31_rand[0]),
+        .I1(ERROR_INSERT_MASK[0]),
+        .I2(ERROR_INSERT_MASK[2]),
+        .I3(prbs31_rand[2]),
+        .I4(ERROR_INSERT_MASK[1]),
+        .I5(prbs31_rand[1]),
+        .O(S[0]));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \prbs31_reg[0]_i_1__0 
+       (.I0(prbs31_rand[30]),
+        .I1(prbs31_rand[27]),
+        .O(p_0_out));
+  FDRE \prbs31_reg_reg[0] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(p_0_out),
+        .Q(prbs31_rand[0]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[10] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[9]),
+        .Q(prbs31_rand[10]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[11] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[10]),
+        .Q(prbs31_rand[11]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[12] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[11]),
+        .Q(prbs31_rand[12]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[13] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[12]),
+        .Q(prbs31_rand[13]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[14] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[13]),
+        .Q(prbs31_rand[14]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[15] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[14]),
+        .Q(prbs31_rand[15]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[16] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[15]),
+        .Q(prbs31_rand[16]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[17] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[16]),
+        .Q(prbs31_rand[17]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[18] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[17]),
+        .Q(prbs31_rand[18]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[19] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[18]),
+        .Q(prbs31_rand[19]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[1] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[0]),
+        .Q(prbs31_rand[1]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[20] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[19]),
+        .Q(prbs31_rand[20]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[21] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[20]),
+        .Q(prbs31_rand[21]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[22] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[21]),
+        .Q(prbs31_rand[22]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[23] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[22]),
+        .Q(prbs31_rand[23]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[24] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[23]),
+        .Q(prbs31_rand[24]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[25] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[24]),
+        .Q(prbs31_rand[25]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[26] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[25]),
+        .Q(prbs31_rand[26]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[27] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[26]),
+        .Q(prbs31_rand[27]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[28] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[27]),
+        .Q(prbs31_rand[28]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[29] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[28]),
+        .Q(prbs31_rand[29]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[2] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[1]),
+        .Q(prbs31_rand[2]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[30] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[29]),
+        .Q(prbs31_rand[30]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[3] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[2]),
+        .Q(prbs31_rand[3]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[4] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[3]),
+        .Q(prbs31_rand[4]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[5] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[4]),
+        .Q(prbs31_rand[5]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[6] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[5]),
+        .Q(prbs31_rand[6]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[7] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[6]),
+        .Q(prbs31_rand[7]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[8] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[7]),
+        .Q(prbs31_rand[8]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[9] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[8]),
+        .Q(prbs31_rand[9]),
+        .R(error_insertion_rst_reg));
+endmodule
+
+(* ORIG_REF_NAME = "prbs31_rand_gen" *) 
+module gtx3g_bert_0_prbs31_rand_gen_45
+   (S,
+    error_insert_reg_reg,
+    error_insert_reg_reg_0,
+    ERROR_INSERT_MASK,
+    error_insertion_rst_reg,
+    GT0_TXUSRCLK_OUT);
+  output [3:0]S;
+  output [3:0]error_insert_reg_reg;
+  output [2:0]error_insert_reg_reg_0;
+  input [30:0]ERROR_INSERT_MASK;
+  input error_insertion_rst_reg;
+  input GT0_TXUSRCLK_OUT;
+
+  wire [30:0]ERROR_INSERT_MASK;
+  wire GT0_TXUSRCLK_OUT;
+  wire [3:0]S;
+  wire [3:0]error_insert_reg_reg;
+  wire [2:0]error_insert_reg_reg_0;
+  wire error_insertion_rst_reg;
+  wire [0:0]p_0_out;
+  wire [30:0]prbs31_rand;
+
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_1
+       (.I0(prbs31_rand[21]),
+        .I1(ERROR_INSERT_MASK[21]),
+        .I2(ERROR_INSERT_MASK[23]),
+        .I3(prbs31_rand[23]),
+        .I4(ERROR_INSERT_MASK[22]),
+        .I5(prbs31_rand[22]),
+        .O(error_insert_reg_reg[3]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_2
+       (.I0(prbs31_rand[18]),
+        .I1(ERROR_INSERT_MASK[18]),
+        .I2(ERROR_INSERT_MASK[20]),
+        .I3(prbs31_rand[20]),
+        .I4(ERROR_INSERT_MASK[19]),
+        .I5(prbs31_rand[19]),
+        .O(error_insert_reg_reg[2]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_3
+       (.I0(prbs31_rand[15]),
+        .I1(ERROR_INSERT_MASK[15]),
+        .I2(ERROR_INSERT_MASK[17]),
+        .I3(prbs31_rand[17]),
+        .I4(ERROR_INSERT_MASK[16]),
+        .I5(prbs31_rand[16]),
+        .O(error_insert_reg_reg[1]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__0_i_4
+       (.I0(prbs31_rand[12]),
+        .I1(ERROR_INSERT_MASK[12]),
+        .I2(ERROR_INSERT_MASK[14]),
+        .I3(prbs31_rand[14]),
+        .I4(ERROR_INSERT_MASK[13]),
+        .I5(prbs31_rand[13]),
+        .O(error_insert_reg_reg[0]));
+  LUT2 #(
+    .INIT(4'hD)) 
+    error_insert_reg0_carry__1_i_1
+       (.I0(ERROR_INSERT_MASK[30]),
+        .I1(prbs31_rand[30]),
+        .O(error_insert_reg_reg_0[2]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__1_i_2
+       (.I0(prbs31_rand[27]),
+        .I1(ERROR_INSERT_MASK[27]),
+        .I2(ERROR_INSERT_MASK[29]),
+        .I3(prbs31_rand[29]),
+        .I4(ERROR_INSERT_MASK[28]),
+        .I5(prbs31_rand[28]),
+        .O(error_insert_reg_reg_0[1]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry__1_i_3
+       (.I0(prbs31_rand[24]),
+        .I1(ERROR_INSERT_MASK[24]),
+        .I2(ERROR_INSERT_MASK[26]),
+        .I3(prbs31_rand[26]),
+        .I4(ERROR_INSERT_MASK[25]),
+        .I5(prbs31_rand[25]),
+        .O(error_insert_reg_reg_0[0]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_1
+       (.I0(prbs31_rand[9]),
+        .I1(ERROR_INSERT_MASK[9]),
+        .I2(ERROR_INSERT_MASK[11]),
+        .I3(prbs31_rand[11]),
+        .I4(ERROR_INSERT_MASK[10]),
+        .I5(prbs31_rand[10]),
+        .O(S[3]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_2
+       (.I0(prbs31_rand[6]),
+        .I1(ERROR_INSERT_MASK[6]),
+        .I2(ERROR_INSERT_MASK[8]),
+        .I3(prbs31_rand[8]),
+        .I4(ERROR_INSERT_MASK[7]),
+        .I5(prbs31_rand[7]),
+        .O(S[2]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_3
+       (.I0(prbs31_rand[3]),
+        .I1(ERROR_INSERT_MASK[3]),
+        .I2(ERROR_INSERT_MASK[5]),
+        .I3(prbs31_rand[5]),
+        .I4(ERROR_INSERT_MASK[4]),
+        .I5(prbs31_rand[4]),
+        .O(S[1]));
+  LUT6 #(
+    .INIT(64'hBB0BBB0B0000BB0B)) 
+    error_insert_reg0_carry_i_4
+       (.I0(prbs31_rand[0]),
+        .I1(ERROR_INSERT_MASK[0]),
+        .I2(ERROR_INSERT_MASK[2]),
+        .I3(prbs31_rand[2]),
+        .I4(ERROR_INSERT_MASK[1]),
+        .I5(prbs31_rand[1]),
+        .O(S[0]));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \prbs31_reg[0]_i_1 
+       (.I0(prbs31_rand[30]),
+        .I1(prbs31_rand[27]),
+        .O(p_0_out));
+  FDRE \prbs31_reg_reg[0] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(p_0_out),
+        .Q(prbs31_rand[0]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[10] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[9]),
+        .Q(prbs31_rand[10]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[11] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[10]),
+        .Q(prbs31_rand[11]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[12] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[11]),
+        .Q(prbs31_rand[12]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[13] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[12]),
+        .Q(prbs31_rand[13]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[14] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[13]),
+        .Q(prbs31_rand[14]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[15] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[14]),
+        .Q(prbs31_rand[15]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[16] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[15]),
+        .Q(prbs31_rand[16]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[17] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[16]),
+        .Q(prbs31_rand[17]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[18] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[17]),
+        .Q(prbs31_rand[18]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[19] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[18]),
+        .Q(prbs31_rand[19]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[1] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[0]),
+        .Q(prbs31_rand[1]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[20] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[19]),
+        .Q(prbs31_rand[20]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[21] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[20]),
+        .Q(prbs31_rand[21]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[22] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[21]),
+        .Q(prbs31_rand[22]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[23] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[22]),
+        .Q(prbs31_rand[23]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[24] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[23]),
+        .Q(prbs31_rand[24]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[25] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[24]),
+        .Q(prbs31_rand[25]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[26] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[25]),
+        .Q(prbs31_rand[26]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[27] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[26]),
+        .Q(prbs31_rand[27]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[28] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[27]),
+        .Q(prbs31_rand[28]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[29] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[28]),
+        .Q(prbs31_rand[29]),
+        .R(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[2] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[1]),
+        .Q(prbs31_rand[2]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[30] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[29]),
+        .Q(prbs31_rand[30]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[3] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[2]),
+        .Q(prbs31_rand[3]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[4] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[3]),
+        .Q(prbs31_rand[4]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[5] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[4]),
+        .Q(prbs31_rand[5]),
+        .S(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[6] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[5]),
+        .Q(prbs31_rand[6]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[7] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[6]),
+        .Q(prbs31_rand[7]),
+        .R(error_insertion_rst_reg));
+  FDSE \prbs31_reg_reg[8] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[7]),
+        .Q(prbs31_rand[8]),
+        .S(error_insertion_rst_reg));
+  FDRE \prbs31_reg_reg[9] 
+       (.C(GT0_TXUSRCLK_OUT),
+        .CE(1'b1),
+        .D(prbs31_rand[8]),
+        .Q(prbs31_rand[9]),
+        .R(error_insertion_rst_reg));
+endmodule
+
+(* ORIG_REF_NAME = "prbs7_gen" *) 
 module gtx3g_bert_0_prbs7_gen
    (Q,
     pattern_rst_reg,
@@ -39177,7 +38688,7 @@ module gtx3g_bert_0_prbs7_gen_43
 endmodule
 
 (* ORIG_REF_NAME = "prbs7_gen" *) 
-module gtx3g_bert_0_prbs7_gen_53
+module gtx3g_bert_0_prbs7_gen_54
    (Q,
     rx_fifo_rst,
     pattern_pause_reg_reg,
@@ -39297,6 +38808,7 @@ module gtx3g_bert_0_prbs7_gen_53
         .R(rx_fifo_rst));
 endmodule
 
+(* ORIG_REF_NAME = "prbs9_gen" *) 
 module gtx3g_bert_0_prbs9_gen
    (Q,
     pattern_rst_reg,
@@ -39539,7 +39051,7 @@ module gtx3g_bert_0_prbs9_gen_44
 endmodule
 
 (* ORIG_REF_NAME = "prbs9_gen" *) 
-module gtx3g_bert_0_prbs9_gen_54
+module gtx3g_bert_0_prbs9_gen_55
    (Q,
     rx_fifo_rst,
     pattern_pause_reg_reg,
@@ -39659,7 +39171,8 @@ module gtx3g_bert_0_prbs9_gen_54
         .R(rx_fifo_rst));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "rx_word_fifo,fifo_generator_v13_1_4,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "fifo_generator_v13_1_4,Vivado 2017.2" *) 
+(* CHECK_LICENSE_TYPE = "rx_word_fifo,fifo_generator_v13_1_4,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "rx_word_fifo" *) 
+(* X_CORE_INFO = "fifo_generator_v13_1_4,Vivado 2017.2" *) 
 module gtx3g_bert_0_rx_word_fifo
    (clk,
     srst,
@@ -40834,6 +40347,7 @@ module gtx3g_bert_0_rx_word_fifo__xdcDup__1
         .wr_rst_busy(NLW_U0_wr_rst_busy_UNCONNECTED));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module gtx3g_bert_0_blk_mem_gen_generic_cstr
    (dout,
     clk,
@@ -40873,7 +40387,7 @@ module gtx3g_bert_0_blk_mem_gen_generic_cstr
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
-module gtx3g_bert_0_blk_mem_gen_generic_cstr_64
+module gtx3g_bert_0_blk_mem_gen_generic_cstr_65
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -40900,7 +40414,7 @@ module gtx3g_bert_0_blk_mem_gen_generic_cstr_64
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_blk_mem_gen_prim_width_65 \ramloop[0].ram.r 
+  gtx3g_bert_0_blk_mem_gen_prim_width_66 \ramloop[0].ram.r 
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -40911,6 +40425,7 @@ module gtx3g_bert_0_blk_mem_gen_generic_cstr_64
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module gtx3g_bert_0_blk_mem_gen_prim_width
    (dout,
     clk,
@@ -40950,7 +40465,7 @@ module gtx3g_bert_0_blk_mem_gen_prim_width
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
-module gtx3g_bert_0_blk_mem_gen_prim_width_65
+module gtx3g_bert_0_blk_mem_gen_prim_width_66
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -40977,7 +40492,7 @@ module gtx3g_bert_0_blk_mem_gen_prim_width_65
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_blk_mem_gen_prim_wrapper_66 \prim_noinit.ram 
+  gtx3g_bert_0_blk_mem_gen_prim_wrapper_67 \prim_noinit.ram 
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -40988,6 +40503,7 @@ module gtx3g_bert_0_blk_mem_gen_prim_width_65
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module gtx3g_bert_0_blk_mem_gen_prim_wrapper
    (dout,
     clk,
@@ -41162,7 +40678,7 @@ module gtx3g_bert_0_blk_mem_gen_prim_wrapper
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module gtx3g_bert_0_blk_mem_gen_prim_wrapper_66
+module gtx3g_bert_0_blk_mem_gen_prim_wrapper_67
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -41335,6 +40851,7 @@ module gtx3g_bert_0_blk_mem_gen_prim_wrapper_66
         .WEBWE({E,E,E,E}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module gtx3g_bert_0_blk_mem_gen_top
    (dout,
     clk,
@@ -41374,7 +40891,7 @@ module gtx3g_bert_0_blk_mem_gen_top
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_top" *) 
-module gtx3g_bert_0_blk_mem_gen_top_63
+module gtx3g_bert_0_blk_mem_gen_top_64
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -41401,7 +40918,7 @@ module gtx3g_bert_0_blk_mem_gen_top_63
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_blk_mem_gen_generic_cstr_64 \valid.cstr 
+  gtx3g_bert_0_blk_mem_gen_generic_cstr_65 \valid.cstr 
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -41412,6 +40929,7 @@ module gtx3g_bert_0_blk_mem_gen_top_63
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) 
 module gtx3g_bert_0_blk_mem_gen_v8_3_6
    (dout,
     clk,
@@ -41451,7 +40969,7 @@ module gtx3g_bert_0_blk_mem_gen_v8_3_6
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6" *) 
-module gtx3g_bert_0_blk_mem_gen_v8_3_6_61
+module gtx3g_bert_0_blk_mem_gen_v8_3_6_62
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -41478,7 +40996,7 @@ module gtx3g_bert_0_blk_mem_gen_v8_3_6_61
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_blk_mem_gen_v8_3_6_synth_62 inst_blk_mem_gen
+  gtx3g_bert_0_blk_mem_gen_v8_3_6_synth_63 inst_blk_mem_gen
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -41489,6 +41007,7 @@ module gtx3g_bert_0_blk_mem_gen_v8_3_6_61
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
 module gtx3g_bert_0_blk_mem_gen_v8_3_6_synth
    (dout,
     clk,
@@ -41528,7 +41047,7 @@ module gtx3g_bert_0_blk_mem_gen_v8_3_6_synth
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_v8_3_6_synth" *) 
-module gtx3g_bert_0_blk_mem_gen_v8_3_6_synth_62
+module gtx3g_bert_0_blk_mem_gen_v8_3_6_synth_63
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -41555,7 +41074,7 @@ module gtx3g_bert_0_blk_mem_gen_v8_3_6_synth_62
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_blk_mem_gen_top_63 \gnbram.gnativebmg.native_blk_mem_gen 
+  gtx3g_bert_0_blk_mem_gen_top_64 \gnbram.gnativebmg.native_blk_mem_gen 
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -41566,6 +41085,7 @@ module gtx3g_bert_0_blk_mem_gen_v8_3_6_synth_62
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module gtx3g_bert_0_fifo_generator_ramfifo
    (dout,
     empty,
@@ -41634,7 +41154,7 @@ module gtx3g_bert_0_fifo_generator_ramfifo
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
-module gtx3g_bert_0_fifo_generator_ramfifo_57
+module gtx3g_bert_0_fifo_generator_ramfifo_58
    (dout,
     empty,
     full,
@@ -41668,7 +41188,7 @@ module gtx3g_bert_0_fifo_generator_ramfifo_57
   wire tmp_ram_rd_en;
   wire wr_en;
 
-  gtx3g_bert_0_rd_logic_58 \gntv_or_sync_fifo.gl0.rd 
+  gtx3g_bert_0_rd_logic_59 \gntv_or_sync_fifo.gl0.rd 
        (.\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (p_0_out),
         .Q(rd_pntr_plus1),
         .clk(clk),
@@ -41678,7 +41198,7 @@ module gtx3g_bert_0_fifo_generator_ramfifo_57
         .rd_en(rd_en),
         .srst(srst),
         .tmp_ram_rd_en(tmp_ram_rd_en));
-  gtx3g_bert_0_wr_logic_59 \gntv_or_sync_fifo.gl0.wr 
+  gtx3g_bert_0_wr_logic_60 \gntv_or_sync_fifo.gl0.wr 
        (.E(p_17_out),
         .Q(p_11_out),
         .clk(clk),
@@ -41690,7 +41210,7 @@ module gtx3g_bert_0_fifo_generator_ramfifo_57
         .rd_en(rd_en),
         .srst(srst),
         .wr_en(wr_en));
-  gtx3g_bert_0_memory_60 \gntv_or_sync_fifo.mem 
+  gtx3g_bert_0_memory_61 \gntv_or_sync_fifo.mem 
        (.E(p_17_out),
         .Q(p_11_out),
         .clk(clk),
@@ -41701,6 +41221,7 @@ module gtx3g_bert_0_fifo_generator_ramfifo_57
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module gtx3g_bert_0_fifo_generator_top
    (dout,
     empty,
@@ -41740,7 +41261,7 @@ module gtx3g_bert_0_fifo_generator_top
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_top" *) 
-module gtx3g_bert_0_fifo_generator_top_56
+module gtx3g_bert_0_fifo_generator_top_57
    (dout,
     empty,
     full,
@@ -41767,7 +41288,7 @@ module gtx3g_bert_0_fifo_generator_top_56
   wire srst;
   wire wr_en;
 
-  gtx3g_bert_0_fifo_generator_ramfifo_57 \grf.rf 
+  gtx3g_bert_0_fifo_generator_ramfifo_58 \grf.rf 
        (.clk(clk),
         .din(din),
         .dout(dout),
@@ -41845,7 +41366,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "4" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_1_4" *) 
 module gtx3g_bert_0_fifo_generator_v13_1_4
    (backup,
     backup_marker,
@@ -43897,7 +43418,7 @@ module gtx3g_bert_0_fifo_generator_v13_1_4__2
        (.G(\<const0> ));
   VCC VCC
        (.P(\<const1> ));
-  gtx3g_bert_0_fifo_generator_v13_1_4_synth_55 inst_fifo_gen
+  gtx3g_bert_0_fifo_generator_v13_1_4_synth_56 inst_fifo_gen
        (.clk(clk),
         .din(din),
         .dout(dout),
@@ -43908,6 +43429,7 @@ module gtx3g_bert_0_fifo_generator_v13_1_4__2
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
 module gtx3g_bert_0_fifo_generator_v13_1_4_synth
    (dout,
     empty,
@@ -43947,7 +43469,7 @@ module gtx3g_bert_0_fifo_generator_v13_1_4_synth
 endmodule
 
 (* ORIG_REF_NAME = "fifo_generator_v13_1_4_synth" *) 
-module gtx3g_bert_0_fifo_generator_v13_1_4_synth_55
+module gtx3g_bert_0_fifo_generator_v13_1_4_synth_56
    (dout,
     empty,
     full,
@@ -43974,7 +43496,7 @@ module gtx3g_bert_0_fifo_generator_v13_1_4_synth_55
   wire srst;
   wire wr_en;
 
-  gtx3g_bert_0_fifo_generator_top_56 \gconvfifo.rf 
+  gtx3g_bert_0_fifo_generator_top_57 \gconvfifo.rf 
        (.clk(clk),
         .din(din),
         .dout(dout),
@@ -43985,6 +43507,7 @@ module gtx3g_bert_0_fifo_generator_v13_1_4_synth_55
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "memory" *) 
 module gtx3g_bert_0_memory
    (dout,
     clk,
@@ -44024,7 +43547,7 @@ module gtx3g_bert_0_memory
 endmodule
 
 (* ORIG_REF_NAME = "memory" *) 
-module gtx3g_bert_0_memory_60
+module gtx3g_bert_0_memory_61
    (dout,
     clk,
     tmp_ram_rd_en,
@@ -44051,7 +43574,7 @@ module gtx3g_bert_0_memory_60
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_blk_mem_gen_v8_3_6_61 \gbm.gbmg.gbmga.ngecc.bmg 
+  gtx3g_bert_0_blk_mem_gen_v8_3_6_62 \gbm.gbmg.gbmga.ngecc.bmg 
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -44062,6 +43585,7 @@ module gtx3g_bert_0_memory_60
         .tmp_ram_rd_en(tmp_ram_rd_en));
 endmodule
 
+(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module gtx3g_bert_0_rd_bin_cntr
    (Q,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ,
@@ -44092,7 +43616,7 @@ module gtx3g_bert_0_rd_bin_cntr
        (.I0(Q[1]),
         .I1(Q[0]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \gc0.count[2]_i_1 
@@ -44100,7 +43624,7 @@ module gtx3g_bert_0_rd_bin_cntr
         .I1(Q[1]),
         .I2(Q[0]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \gc0.count[3]_i_1 
@@ -44176,7 +43700,7 @@ module gtx3g_bert_0_rd_bin_cntr
 endmodule
 
 (* ORIG_REF_NAME = "rd_bin_cntr" *) 
-module gtx3g_bert_0_rd_bin_cntr_70
+module gtx3g_bert_0_rd_bin_cntr_71
    (Q,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ,
     srst,
@@ -44289,6 +43813,7 @@ module gtx3g_bert_0_rd_bin_cntr_70
         .R(srst));
 endmodule
 
+(* ORIG_REF_NAME = "rd_logic" *) 
 module gtx3g_bert_0_rd_logic
    (out,
     empty,
@@ -44338,7 +43863,7 @@ module gtx3g_bert_0_rd_logic
 endmodule
 
 (* ORIG_REF_NAME = "rd_logic" *) 
-module gtx3g_bert_0_rd_logic_58
+module gtx3g_bert_0_rd_logic_59
    (out,
     empty,
     Q,
@@ -44369,7 +43894,7 @@ module gtx3g_bert_0_rd_logic_58
   wire srst;
   wire tmp_ram_rd_en;
 
-  gtx3g_bert_0_rd_status_flags_ss_69 \grss.rsts 
+  gtx3g_bert_0_rd_status_flags_ss_70 \grss.rsts 
        (.E(p_7_out),
         .clk(clk),
         .empty(empty),
@@ -44378,7 +43903,7 @@ module gtx3g_bert_0_rd_logic_58
         .rd_en(rd_en),
         .srst(srst),
         .tmp_ram_rd_en(tmp_ram_rd_en));
-  gtx3g_bert_0_rd_bin_cntr_70 rpntr
+  gtx3g_bert_0_rd_bin_cntr_71 rpntr
        (.\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram ),
         .E(p_7_out),
         .Q(Q),
@@ -44386,6 +43911,7 @@ module gtx3g_bert_0_rd_logic_58
         .srst(srst));
 endmodule
 
+(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module gtx3g_bert_0_rd_status_flags_ss
    (out,
     empty,
@@ -44453,7 +43979,7 @@ module gtx3g_bert_0_rd_status_flags_ss
 endmodule
 
 (* ORIG_REF_NAME = "rd_status_flags_ss" *) 
-module gtx3g_bert_0_rd_status_flags_ss_69
+module gtx3g_bert_0_rd_status_flags_ss_70
    (out,
     empty,
     tmp_ram_rd_en,
@@ -44519,6 +44045,7 @@ module gtx3g_bert_0_rd_status_flags_ss_69
         .S(srst));
 endmodule
 
+(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module gtx3g_bert_0_wr_bin_cntr
    (ram_full_fb_i_reg,
     ram_empty_i_reg,
@@ -44577,7 +44104,7 @@ module gtx3g_bert_0_wr_bin_cntr
        (.I0(p_12_out[1]),
         .I1(p_12_out[0]),
         .O(plusOp__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \gcc0.gc0.count[2]_i_1 
@@ -44585,7 +44112,7 @@ module gtx3g_bert_0_wr_bin_cntr
         .I1(p_12_out[1]),
         .I2(p_12_out[0]),
         .O(plusOp__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \gcc0.gc0.count[3]_i_1 
@@ -44668,7 +44195,7 @@ module gtx3g_bert_0_wr_bin_cntr
         .I4(ram_full_fb_i_reg_0),
         .I5(rd_en),
         .O(ram_empty_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'h84)) 
     ram_empty_fb_i_i_2
@@ -44695,7 +44222,7 @@ module gtx3g_bert_0_wr_bin_cntr
         .I3(rd_en),
         .I4(ram_full_fb_i_i_3_n_0),
         .O(ram_full_fb_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hDE)) 
     ram_full_fb_i_i_2
@@ -44735,7 +44262,7 @@ module gtx3g_bert_0_wr_bin_cntr
 endmodule
 
 (* ORIG_REF_NAME = "wr_bin_cntr" *) 
-module gtx3g_bert_0_wr_bin_cntr_68
+module gtx3g_bert_0_wr_bin_cntr_69
    (ram_full_fb_i_reg,
     ram_empty_i_reg,
     Q,
@@ -44950,6 +44477,7 @@ module gtx3g_bert_0_wr_bin_cntr_68
         .O(ram_full_fb_i_i_5_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "wr_logic" *) 
 module gtx3g_bert_0_wr_logic
    (full,
     ram_empty_i_reg,
@@ -45012,7 +44540,7 @@ module gtx3g_bert_0_wr_logic
 endmodule
 
 (* ORIG_REF_NAME = "wr_logic" *) 
-module gtx3g_bert_0_wr_logic_59
+module gtx3g_bert_0_wr_logic_60
    (full,
     ram_empty_i_reg,
     Q,
@@ -45050,7 +44578,7 @@ module gtx3g_bert_0_wr_logic_59
   wire wpntr_n_0;
   wire wr_en;
 
-  gtx3g_bert_0_wr_status_flags_ss_67 \gwss.wsts 
+  gtx3g_bert_0_wr_status_flags_ss_68 \gwss.wsts 
        (.E(E),
         .clk(clk),
         .full(full),
@@ -45058,7 +44586,7 @@ module gtx3g_bert_0_wr_logic_59
         .ram_empty_fb_i_reg(wpntr_n_0),
         .srst(srst),
         .wr_en(wr_en));
-  gtx3g_bert_0_wr_bin_cntr_68 wpntr
+  gtx3g_bert_0_wr_bin_cntr_69 wpntr
        (.E(E),
         .Q(Q),
         .clk(clk),
@@ -45073,6 +44601,7 @@ module gtx3g_bert_0_wr_logic_59
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module gtx3g_bert_0_wr_status_flags_ss
    (out,
     full,
@@ -45142,7 +44671,7 @@ module gtx3g_bert_0_wr_status_flags_ss
 endmodule
 
 (* ORIG_REF_NAME = "wr_status_flags_ss" *) 
-module gtx3g_bert_0_wr_status_flags_ss_67
+module gtx3g_bert_0_wr_status_flags_ss_68
    (out,
     full,
     E,

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Sat May  5 21:50:53 2018
+| Date         : Tue May  8 21:39:57 2018
 | Host         : idea-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gtx3g_bert_axi_v1_0_utilization_synth.rpt -pb gtx3g_bert_axi_v1_0_utilization_synth.pb
 | Design       : gtx3g_bert_axi_v1_0

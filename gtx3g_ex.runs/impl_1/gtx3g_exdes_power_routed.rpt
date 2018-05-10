@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Sat May  5 11:02:24 2018
+| Date             : Sun May  6 22:32:38 2018
 | Host             : idea-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file gtx3g_exdes_power_routed.rpt -pb gtx3g_exdes_power_summary_routed.pb -rpx gtx3g_exdes_power_routed.rpx
 | Design           : gtx3g_exdes
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.776 |
-| Dynamic (W)              | 0.551 |
+| Total On-Chip Power (W)  | 0.780 |
+| Dynamic (W)              | 0.554 |
 | Device Static (W)        | 0.225 |
 | Effective TJA (C/W)      | 1.8   |
 | Max Ambient (C)          | 98.6  |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.015 |       10 |       --- |             --- |
-| Slice Logic             |     0.006 |     3825 |       --- |             --- |
-|   LUT as Logic          |     0.005 |     1288 |    277400 |            0.46 |
-|   Register              |    <0.001 |     1950 |    554800 |            0.35 |
-|   CARRY4                |    <0.001 |      116 |     69350 |            0.17 |
+| Slice Logic             |     0.006 |     3814 |       --- |             --- |
+|   LUT as Logic          |     0.005 |     1279 |    277400 |            0.46 |
+|   Register              |    <0.001 |     1948 |    554800 |            0.35 |
+|   CARRY4                |    <0.001 |      106 |     69350 |            0.15 |
 |   LUT as Shift Register |    <0.001 |       25 |    108200 |            0.02 |
-|   F7/F8 Muxes           |    <0.001 |       61 |    277400 |            0.02 |
-|   Others                |     0.000 |      143 |       --- |             --- |
-| Signals                 |     0.007 |     2794 |       --- |             --- |
-| Block RAM               |     0.001 |      0.5 |       755 |            0.07 |
-| I/O                     |     0.030 |       95 |       362 |           26.24 |
+|   F7/F8 Muxes           |    <0.001 |       59 |    277400 |            0.02 |
+|   Others                |     0.000 |      145 |       --- |             --- |
+| Signals                 |     0.008 |     2796 |       --- |             --- |
+| Block RAM               |     0.002 |      0.5 |       755 |            0.07 |
+| I/O                     |     0.032 |      126 |       362 |           34.81 |
 | GTX                     |     0.492 |        2 |        16 |           12.50 |
 | Static Power            |     0.225 |          |           |                 |
-| Total                   |     0.776 |          |           |                 |
+| Total                   |     0.780 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,11 +72,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       0.950 |     0.115 |       0.076 |      0.039 |
+| Vccint    |       0.950 |     0.117 |       0.077 |      0.039 |
 | Vccaux    |       1.800 |     0.058 |       0.002 |      0.056 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.005 |       0.004 |      0.001 |
-| Vcco18    |       1.800 |     0.010 |       0.009 |      0.001 |
+| Vcco18    |       1.800 |     0.011 |       0.010 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -150,7 +150,7 @@ Table of Contents
 +----------------------------------------------------------+-----------+
 | Name                                                     | Power (W) |
 +----------------------------------------------------------+-----------+
-| gtx3g_exdes                                              |     0.551 |
+| gtx3g_exdes                                              |     0.554 |
 |   gt0_frame_check                                        |     0.009 |
 |     parity_encoder_inst_2                                |    <0.001 |
 |     pattern_gen_inst_2                                   |     0.002 |
@@ -173,15 +173,16 @@ Table of Contents
 |               gntv_or_sync_fifo.gl0.wr                   |    <0.001 |
 |                 gwss.wsts                                |    <0.001 |
 |                 wpntr                                    |    <0.001 |
-|               gntv_or_sync_fifo.mem                      |     0.001 |
-|                 gbm.gbmg.gbmga.ngecc.bmg                 |     0.001 |
-|                   inst_blk_mem_gen                       |     0.001 |
-|                     gnbram.gnativebmg.native_blk_mem_gen |     0.001 |
-|                       valid.cstr                         |     0.001 |
-|                         ramloop[0].ram.r                 |     0.001 |
-|                           prim_noinit.ram                |     0.001 |
+|               gntv_or_sync_fifo.mem                      |     0.002 |
+|                 gbm.gbmg.gbmga.ngecc.bmg                 |     0.002 |
+|                   inst_blk_mem_gen                       |     0.002 |
+|                     gnbram.gnativebmg.native_blk_mem_gen |     0.002 |
+|                       valid.cstr                         |     0.002 |
+|                         ramloop[0].ram.r                 |     0.002 |
+|                           prim_noinit.ram                |     0.002 |
 |   gt0_frame_gen                                          |     0.005 |
 |     error_insertion_inst_1                               |    <0.001 |
+|       prbs31_rand_gen_inst_1                             |    <0.001 |
 |     parity_encoder_inst_1                                |    <0.001 |
 |     pattern_gen_inst_1                                   |     0.002 |
 |       bram_gen_inst1                                     |    <0.001 |
@@ -206,6 +207,7 @@ Table of Contents
 |                 wpntr                                    |    <0.001 |
 |   gt1_frame_gen                                          |     0.005 |
 |     error_insertion_inst_1                               |    <0.001 |
+|       prbs31_rand_gen_inst_1                             |    <0.001 |
 |     parity_encoder_inst_1                                |    <0.001 |
 |     pattern_gen_inst_1                                   |     0.002 |
 |       bram_gen_inst1                                     |    <0.001 |

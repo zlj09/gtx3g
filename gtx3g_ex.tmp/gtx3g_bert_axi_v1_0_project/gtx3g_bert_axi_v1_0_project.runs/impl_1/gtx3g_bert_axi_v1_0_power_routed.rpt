@@ -1,0 +1,273 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date             : Tue May  8 21:44:04 2018
+| Host             : idea-PC running 64-bit major release  (build 9200)
+| Command          : report_power -file gtx3g_bert_axi_v1_0_power_routed.rpt -pb gtx3g_bert_axi_v1_0_power_summary_routed.pb -rpx gtx3g_bert_axi_v1_0_power_routed.rpx
+| Design           : gtx3g_bert_axi_v1_0
+| Device           : xc7z100iffg900-2L
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 0.514 |
+| Dynamic (W)              | 0.293 |
+| Device Static (W)        | 0.222 |
+| Effective TJA (C/W)      | 1.8   |
+| Max Ambient (C)          | 99.1  |
+| Junction Temperature (C) | 25.9  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.014 |       10 |       --- |             --- |
+| Slice Logic             |     0.004 |     5198 |       --- |             --- |
+|   LUT as Logic          |     0.003 |     1598 |    277400 |            0.58 |
+|   CARRY4                |    <0.001 |      106 |     69350 |            0.15 |
+|   Register              |    <0.001 |     2858 |    554800 |            0.52 |
+|   LUT as Shift Register |    <0.001 |       26 |    108200 |            0.02 |
+|   F7/F8 Muxes           |    <0.001 |      155 |    277400 |            0.06 |
+|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
+|   Others                |     0.000 |      150 |       --- |             --- |
+| Signals                 |     0.006 |     3799 |       --- |             --- |
+| Block RAM               |     0.002 |      0.5 |       755 |            0.07 |
+| I/O                     |     0.012 |       94 |       362 |           25.97 |
+| GTX                     |     0.256 |        2 |        16 |           12.50 |
+| Static Power            |     0.222 |          |           |                 |
+| Total                   |     0.514 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       0.950 |     0.110 |       0.071 |      0.039 |
+| Vccaux    |       1.800 |     0.057 |       0.001 |      0.056 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.006 |       0.005 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       0.950 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.160 |       0.155 |      0.005 |
+| MGTAVtt   |       1.200 |     0.045 |       0.035 |      0.010 |
+| MGTVccaux |       1.800 |     0.009 |       0.009 |      0.000 |
+| Vccpint   |       1.000 |     0.011 |       0.000 |      0.011 |
+| Vccpaux   |       1.800 |     0.009 |       0.000 |      0.009 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.018 |       0.000 |      0.018 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.3                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                           | Domain                                                                                                                          | Constraint (ns) |
++---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| drpclk_in_i                                                                                                                     | drpclk_in_IBUF                                                                                                                  |            10.0 |
+| gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/Q0_CLK1_GTREFCLK_PAD_P_IN                                              | refclk_p_in_IBUF                                                                                                                |             6.7 |
+| gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i/TXOUTCLK | gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gt0_txoutclk_out |             6.7 |
++---------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++----------------------------------------------------------------+-----------+
+| Name                                                           | Power (W) |
++----------------------------------------------------------------+-----------+
+| gtx3g_bert_axi_v1_0                                            |     0.293 |
+|   gtx3g_bert_axi_v1_0_S00_AXI_inst                             |     0.279 |
+|     gtx3g_bert_0_inst1                                         |     0.277 |
+|       inst                                                     |     0.277 |
+|         gt0_frame_check                                        |     0.007 |
+|           parity_encoder_inst_2                                |    <0.001 |
+|           pattern_gen_inst_2                                   |     0.001 |
+|             bram_gen_inst1                                     |    <0.001 |
+|             prbs11_gen_inst1                                   |    <0.001 |
+|             prbs15_gen_inst1                                   |    <0.001 |
+|             prbs20_gen_inst1                                   |    <0.001 |
+|             prbs23_gen_inst1                                   |    <0.001 |
+|             prbs31_gen_inst1                                   |    <0.001 |
+|             prbs7_gen_inst1                                    |    <0.001 |
+|             prbs9_gen_inst1                                    |    <0.001 |
+|           rx_word_fifo_inst_1                                  |     0.002 |
+|             U0                                                 |     0.002 |
+|               inst_fifo_gen                                    |     0.002 |
+|                 gconvfifo.rf                                   |     0.002 |
+|                   grf.rf                                       |     0.002 |
+|                     gntv_or_sync_fifo.gl0.rd                   |    <0.001 |
+|                       grss.rsts                                |    <0.001 |
+|                       rpntr                                    |    <0.001 |
+|                     gntv_or_sync_fifo.gl0.wr                   |    <0.001 |
+|                       gwss.wsts                                |    <0.001 |
+|                       wpntr                                    |    <0.001 |
+|                     gntv_or_sync_fifo.mem                      |     0.002 |
+|                       gbm.gbmg.gbmga.ngecc.bmg                 |     0.002 |
+|                         inst_blk_mem_gen                       |     0.002 |
+|                           gnbram.gnativebmg.native_blk_mem_gen |     0.002 |
+|                             valid.cstr                         |     0.002 |
+|                               ramloop[0].ram.r                 |     0.002 |
+|                                 prim_noinit.ram                |     0.002 |
+|         gt0_frame_gen                                          |     0.002 |
+|           error_insertion_inst_1                               |    <0.001 |
+|             prbs31_rand_gen_inst_1                             |    <0.001 |
+|           parity_encoder_inst_1                                |    <0.001 |
+|           pattern_gen_inst_1                                   |     0.001 |
+|             bram_gen_inst1                                     |    <0.001 |
+|             prbs11_gen_inst1                                   |    <0.001 |
+|             prbs15_gen_inst1                                   |    <0.001 |
+|             prbs20_gen_inst1                                   |    <0.001 |
+|             prbs23_gen_inst1                                   |    <0.001 |
+|             prbs31_gen_inst1                                   |    <0.001 |
+|             prbs7_gen_inst1                                    |    <0.001 |
+|             prbs9_gen_inst1                                    |    <0.001 |
+|         gt1_frame_check                                        |     0.002 |
+|           rx_word_fifo_inst_1                                  |    <0.001 |
+|             U0                                                 |    <0.001 |
+|               inst_fifo_gen                                    |    <0.001 |
+|                 gconvfifo.rf                                   |    <0.001 |
+|                   grf.rf                                       |    <0.001 |
+|                     gntv_or_sync_fifo.gl0.rd                   |    <0.001 |
+|                       grss.rsts                                |    <0.001 |
+|                       rpntr                                    |    <0.001 |
+|                     gntv_or_sync_fifo.gl0.wr                   |    <0.001 |
+|                       gwss.wsts                                |    <0.001 |
+|                       wpntr                                    |    <0.001 |
+|         gt1_frame_gen                                          |     0.002 |
+|           error_insertion_inst_1                               |    <0.001 |
+|             prbs31_rand_gen_inst_1                             |    <0.001 |
+|           parity_encoder_inst_1                                |    <0.001 |
+|           pattern_gen_inst_1                                   |     0.001 |
+|             bram_gen_inst1                                     |    <0.001 |
+|             prbs11_gen_inst1                                   |    <0.001 |
+|             prbs15_gen_inst1                                   |    <0.001 |
+|             prbs20_gen_inst1                                   |    <0.001 |
+|             prbs23_gen_inst1                                   |    <0.001 |
+|             prbs31_gen_inst1                                   |    <0.001 |
+|             prbs7_gen_inst1                                    |    <0.001 |
+|             prbs9_gen_inst1                                    |    <0.001 |
+|         gtx3g_support_i                                        |     0.264 |
+|           common0_i                                            |    <0.001 |
+|           common_reset_i                                       |    <0.001 |
+|           gt_usrclk_source                                     |    <0.001 |
+|           gtx3g_init_i                                         |     0.263 |
+|             inst                                               |     0.263 |
+|               gt0_rxresetfsm_i                                 |     0.002 |
+|                 sync_RXRESETDONE                               |    <0.001 |
+|                 sync_data_valid                                |    <0.001 |
+|                 sync_mmcm_lock_reclocked                       |    <0.001 |
+|                 sync_qplllock                                  |    <0.001 |
+|                 sync_run_phase_alignment_int                   |    <0.001 |
+|                 sync_rx_fsm_reset_done_int                     |    <0.001 |
+|                 sync_time_out_wait_bypass                      |    <0.001 |
+|               gt0_tx_manual_phase_i                            |    <0.001 |
+|                 cdc[0].sync_TXDLYSRESETDONE                    |    <0.001 |
+|                 cdc[0].sync_TXPHALIGNDONE                      |    <0.001 |
+|                 cdc[0].sync_TXPHINITDONE                       |    <0.001 |
+|                 cdc[1].sync_TXDLYSRESETDONE                    |    <0.001 |
+|                 cdc[1].sync_TXPHALIGNDONE                      |    <0.001 |
+|                 cdc[1].sync_TXPHINITDONE                       |    <0.001 |
+|               gt0_txresetfsm_i                                 |     0.001 |
+|                 sync_TXRESETDONE                               |    <0.001 |
+|                 sync_mmcm_lock_reclocked                       |    <0.001 |
+|                 sync_qplllock                                  |    <0.001 |
+|                 sync_run_phase_alignment_int                   |    <0.001 |
+|                 sync_time_out_wait_bypass                      |    <0.001 |
+|                 sync_tx_fsm_reset_done_int                     |    <0.001 |
+|               gt1_rxresetfsm_i                                 |     0.002 |
+|                 sync_RXRESETDONE                               |    <0.001 |
+|                 sync_data_valid                                |    <0.001 |
+|                 sync_mmcm_lock_reclocked                       |    <0.001 |
+|                 sync_qplllock                                  |    <0.001 |
+|                 sync_run_phase_alignment_int                   |    <0.001 |
+|                 sync_rx_fsm_reset_done_int                     |    <0.001 |
+|                 sync_time_out_wait_bypass                      |    <0.001 |
+|               gt1_txresetfsm_i                                 |     0.001 |
+|                 sync_TXRESETDONE                               |    <0.001 |
+|                 sync_mmcm_lock_reclocked                       |    <0.001 |
+|                 sync_qplllock                                  |    <0.001 |
+|                 sync_run_phase_alignment_int                   |    <0.001 |
+|                 sync_time_out_wait_bypass                      |    <0.001 |
+|                 sync_tx_fsm_reset_done_int                     |    <0.001 |
+|               gtx3g_i                                          |     0.256 |
+|                 gt0_gtx3g_i                                    |     0.128 |
+|                 gt1_gtx3g_i                                    |     0.128 |
++----------------------------------------------------------------+-----------+
+
+

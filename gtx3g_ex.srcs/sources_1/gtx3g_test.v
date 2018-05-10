@@ -80,6 +80,7 @@ wire    [1:0]   txp_out_i;
     wire test_over_out;
     wire pattern_error_out;
     wire [3:0] block_error_out;
+    wire gtx_resetdone_out;
 
     wire [15:0] rxdata_out;
 
@@ -108,8 +109,8 @@ wire    [1:0]   txp_out_i;
 
             test_reset <= 1'b1;
             pattern_mode <= 3'd1;
-            error_insert_mask <= 32'h8a34f09d;
-            ecc_code_en <= 1'b0;
+            error_insert_mask <= 32'hefbf_7fdf;
+            ecc_code_en <= 1'b1;
 
             test_flag <= 1'b0;
         end
@@ -227,7 +228,7 @@ wire    [1:0]   txp_out_i;
 
     simple_uart #(
       .BAUD_RATE(32'd9600),
-      .BUF_LEN(8'd16)
+      .BUF_LEN(8'd28)
     )simple_uart_inst_1(
       .clk_150m(user_clk),
       .rst(sysrst),
@@ -265,7 +266,8 @@ wire    [1:0]   txp_out_i;
         .PATTERN_ERROR_OUT                   (pattern_error_out),
         .BLOCK_ERROR_OUT                     (block_error_out),
 
-        .RXDATA_OUT                          (rxdata_out)
+        .RXDATA_OUT                          (rxdata_out),
+        .GTX_RESETDONE_OUT                   (gtx_resetdone_out)
     );
 
 endmodule
