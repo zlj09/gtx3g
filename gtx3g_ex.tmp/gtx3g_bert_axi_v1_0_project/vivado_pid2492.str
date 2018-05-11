@@ -1,0 +1,680 @@
+/*
+
+Vivado v2017.2 (64-bit)
+SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+
+Process ID: 2492
+License: Customer
+
+Current time: 	5/9/18 10:06:21 PM CST
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+OS Version: 6.1
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1280x1024
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 283 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/java.exe
+Java library paths: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o;C:/Windows/Sun/Java/bin;C:/Windows/system32;C:/Windows;C:/Xilinx/Vivado/2017.2/bin;C:/Xilinx/Vivado/2017.2/lib/win64.o;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin/server;C:/Xilinx/Vivado/2017.2/tps/win64/jre/bin;C:/Xilinx/SDK/2017.2/bin;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2017.2/ids_lite/ISE/lib/nt64;C:/Xilinx/Vivado_HLS/2017.2/bin;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS/;C:/Program Files/Intel/Intel(R) Management Engine Components/iCLS/;C:/Windows/system32;C:/Windows;C:/Windows/System32/Wbem;C:/Windows/System32/WindowsPowerShell/v1.0/;C:/Program Files (x86)/Intel/UCRT/;C:/Program Files/Intel/UCRT/;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files/Intel/Intel(R) Management Engine Components/DAL;C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT;C:/Program Files/Intel/Intel(R) Management Engine Components/IPT;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/bin;C:/Xilinx/Vivado/2017.2/tps/mingw/6.2.0/win64.o/nt/libexec/gcc/x86_64-w64-mingw32/6.2.0;.
+
+User name: 	FPGA
+User home directory: C:/Users/FPGA
+User working directory: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.2
+RDI_DATADIR: C:/Xilinx/Vivado/2017.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.2/bin
+
+User preferences location: C:/Users/FPGA/AppData/Roaming/Xilinx/Vivado
+Vivado preferences directory: C:/Users/FPGA/AppData/Roaming/Xilinx/Vivado/2017.2/vivado.xml
+Vivado layouts directory: C:/Users/FPGA/AppData/Roaming/Xilinx/Vivado/2017.2/layouts
+PlanAhead jar location: 	C:/Xilinx/Vivado/2017.2/lib/classes/planAhead.jar
+Vivado Look & Feel: 	[Synthetica - the extended Synth Look and Feel. - ui.g.i.H]
+Engine tmp dir: 	E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/.Xil/Vivado-2492-FPGA-PC
+
+GUI allocated memory:	176 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 515 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 53 MB (+53168kb) [00:00:03]
+// [Engine Memory]: 470 MB (+340855kb) [00:00:03]
+// bs:g (cg:JFrame):  Open Project : addNotify
+// Opening Vivado Project: E:\ljzhu\test_gtx\gtx3g_ex\gtx3g_ex.tmp\gtx3g_bert_axi_v1_0_project\gtx3g_bert_axi_v1_0_project.xpr. Version: Vivado v2017.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// [Engine Memory]: 523 MB (+31468kb) [00:00:07]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 606 MB (+59939kb) [00:00:08]
+// [GUI Memory]: 60 MB (+4296kb) [00:00:08]
+// [GUI Memory]: 67 MB (+4145kb) [00:00:09]
+// [Engine Memory]: 646 MB (+9981kb) [00:00:09]
+// Tcl Message: open_project E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/ljzhu/test_gtx/ip_repo/gtx3g_bert'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 656 MB. GUI used memory: 41 MB. Current time: 5/9/18 10:06:25 PM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 886.777 ; gain = 155.059 
+// Project name: gtx3g_bert_axi_v1_0_project; location: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project; part: xc7z100iffg900-2L
+dismissDialog("Open Project"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v)]", 1); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 2, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 2, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 165, 154); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 257, 161); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 257, 159); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 247, 187); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Package IP]", 5, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u:M (JViewport:JComponent, cg:JFrame)
+// bs:g (cg:JFrame):  Open Project Manager : addNotify
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 78 MB (+8560kb) [00:01:05]
+dismissDialog("Open Project Manager"); // bs:g (cg:JFrame)
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 84 MB (+1773kb) [00:01:06]
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// bs:g (cg:JFrame):  IP Packager : addNotify
+dismissDialog("IP Packager"); // bs:g (cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 676 MB. GUI used memory: 49 MB. Current time: 5/9/18 10:07:23 PM CST
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // an:k (JViewport:JComponent, cg:JFrame)
+selectButton(PAResourceOtoP.PackagerStepContentPanel_MESSAGES, "3"); // h:k (JPanel:JComponent, cg:JFrame)
+// [Engine Memory]: 705 MB (+27761kb) [00:01:12]
+// Elapsed time: 25 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, IP Packager, File Groups Wizard, [IP_Flow 19-530] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': Component file 'F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci' (e:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci) does not exist.. ]", 2); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTreeTableHeader(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Library Name", 1); // K:af (JViewport:JComponent, cg:JFrame)
+// [GUI Memory]: 88 MB (+65kb) [00:01:54]
+// Elapsed time: 16 seconds
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg ;  ; unknown ; false ; xilinx_testbench ; ", 23, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg", 0, false); // K:af (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 5); // B:i (D:JPanel, cg:JFrame)
+// [GUI Memory]: 96 MB (+3779kb) [00:02:06]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v)]", 7, true); // B:i (D:JPanel, cg:JFrame) - Node
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// Elapsed time: 12 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+// Elapsed time: 33 seconds
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg ;  ; unknown ; false ; xilinx_testbench ; ", 23, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg", 0, false); // K:af (JViewport:JComponent, cg:JFrame)
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Waveform Configuration File]", 11); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Waveform Configuration File, tb_gtx3g_bert_axi_v1_0_behav.wcfg]", 12, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Waveform Configuration File, tb_gtx3g_bert_axi_v1_0_behav.wcfg]", 12, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Waveform Configuration File, tb_gtx3g_bert_axi_v1_0_behav.wcfg]", 12, false, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click
+// ac:q (cg:JFrame): Unable to Open File: addNotify
+dismissDialog("Unable to Open File"); // ac:q (cg:JFrame)
+selectButton(PAResourceQtoS.SrcFilePropPanels_TYPE, (String) null); // q:a (bT:r, cg:JFrame)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci ;  ; xci ; false ; xilinx_verilogsynthesis ; ", 4, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci", 0, false); // K:af (JViewport:JComponent, cg:JFrame)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci ;  ; xci ; false ; xilinx_verilogbehavioralsimulation ; ", 8, "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci", 0, false); // K:af (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v), gtx3g_bert_0_inst1 : gtx3g_bert_0 (gtx3g_bert_0.xci)]", 10, false); // B:i (D:JPanel, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as:g (cg:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, as:g)
+// TclEventType: RUN_MODIFY
+dismissDialog("Remove Sources"); // as:g (cg:JFrame)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// Tcl Message: remove_files  -fileset gtx3g_bert_0 E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci 
+// as:g (cg:JFrame): Remove Sources: addNotify
+// TclEventType: DG_GRAPH_STALE
+// bs:g (as:g):  Remove Sources : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: INFO: [Project 1-386] Moving file 'E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_1/gtx3g_bert_0.xci' from fileset 'gtx3g_bert_0' to fileset 'sources_1'. 
+// Tcl Message: file delete -force E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0 
+dismissDialog("Remove Sources"); // bs:g (as:g)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_UNLOAD_CORE
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - gtx3g_bert_axi"); // Y:aJ
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - gtx3g_bert_axi"); // Y:aJ
+// Tcl Message: ipx::unload_core e:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/component.xml 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c:g (cg:JFrame): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+dismissDialog("Add Sources"); // c:g (cg:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// bs:g (cg:JFrame):  IP Catalog : addNotify
+dismissDialog("IP Catalog"); // bs:g (cg:JFrame)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "UserIP ;  ;  ;  ; ", 1); // O:af (JViewport:JComponent, cg:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "gtx3g_bert_v1_0 ;  ; Production ; Included ; fudan.edu.cn:user:gtx3g_bert:1.0", 2, "gtx3g_bert_v1_0", 0, false); // O:af (JViewport:JComponent, cg:JFrame)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "gtx3g_bert_v1_0 ;  ; Production ; Included ; fudan.edu.cn:user:gtx3g_bert:1.0", 2); // O:af (JViewport:JComponent, cg:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "gtx3g_bert_v1_0 ;  ; Production ; Included ; fudan.edu.cn:user:gtx3g_bert:1.0", 2, "gtx3g_bert_v1_0", 0, false, false, false, false, false, true); // O:af (JViewport:JComponent, cg:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// p:g (cg:JFrame): Customize IP: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Customize IP"); // p:g (cg:JFrame)
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name gtx3g_bert -vendor fudan.edu.cn -library user -version 1.0 -module_name gtx3g_bert_0 -dir e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip 
+// Tcl Message: INFO: [filemgmt 56-101] Creating core container 'e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2.xcix' for IP 'gtx3g_bert_0' 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'gtx3g_bert_0'... 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gtx3g_bert_0'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gtx3g_bert_0'... INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'gtx3g_bert_0'... 
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 731 MB. GUI used memory: 54 MB. Current time: 5/9/18 10:10:23 PM CST
+// [Engine Memory]: 745 MB (+5324kb) [00:04:13]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 923.383 ; gain = 20.133 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all gtx3g_bert_0] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP gtx3g_bert_0, cache-ID = 85a9a5402205637d; cache size = 16.443 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects [get_files e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci] -no_script -sync -force -quiet 
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci] 
+// Tcl Message: INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci' 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 17 seconds
+dismissDialog("Managing Output Products"); // bs:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Waveform Configuration File, tb_gtx3g_bert_axi_v1_0_behav.wcfg]", 12, false); // B:i (D:JPanel, cg:JFrame)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// as:g (cg:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, as:g)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Remove Sources"); // as:g (cg:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset sim_1 E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B:JideButton (f:CommandBar, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c:g (cg:JFrame): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a:JRadioButton (JPanel:JComponent, c:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a:JButton (C:JPanel, c:g)
+// Elapsed time: 14 seconds
+setFileChooser("E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, c:g)
+// 'h' command handler elapsed time: 19 seconds
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Add Sources"); // c:g (cg:JFrame)
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sim_1/tb_gtx3g_bert_axi_v1_0_behav.wcfg 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v), gtx3g_bert_0_inst1 : gtx3g_bert_0 (gtx3g_bert_0.xci)]", 10, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 9, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 9, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// bs:g (cg:JFrame):  IP Catalog : addNotify
+dismissDialog("IP Catalog"); // bs:g (cg:JFrame)
+// Elapsed time: 28 seconds
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Distributed Memory Generator ;  ; Production ; Included ; xilinx.com:ip:dist_mem_gen:8.0", 10, "Distributed Memory Generator", 0, false); // O:af (JViewport:JComponent, cg:JFrame)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "ram"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, cg:JFrame)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Distributed Memory Generator ;  ; Production ; Included ; xilinx.com:ip:dist_mem_gen:8.0", 10); // O:af (JViewport:JComponent, cg:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Distributed Memory Generator ;  ; Production ; Included ; xilinx.com:ip:dist_mem_gen:8.0", 10, "Distributed Memory Generator", 0, false, false, false, false, false, true); // O:af (JViewport:JComponent, cg:JFrame) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// l:bs (cg:JFrame):  Customize IP : addNotify
+// p:g (cg:JFrame): Customize IP: addNotify
+dismissDialog("Customize IP"); // l:bs (cg:JFrame)
+// [GUI Memory]: 103 MB (+2062kb) [00:06:22]
+setText("Data Width", "32"); // z:X (cS:y, p:g)
+// Elapsed time: 12 seconds
+setText("Depth", "16"); // z:X (cS:y, p:g)
+selectRadioButton((HResource) null, "Dual Port RAM"); // cM:a
+// Elapsed time: 18 seconds
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "Port config", 1); // cR:i (C:JPanel, p:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "RST & Initialization", 2); // cR:i (C:JPanel, p:g)
+selectTab(PAResourceTtoZ.XPG_TabbedPane_TABBED_PANE, (HResource) null, "memory config", 0); // cR:i (C:JPanel, p:g)
+selectRadioButton((HResource) null, "Simple Dual Port RAM"); // cM:a
+selectRadioButton((HResource) null, "Dual Port RAM"); // cM:a
+// Elapsed time: 28 seconds
+dismissDialog("Customize IP"); // p:g (cg:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3", 12, "Block Memory Generator", 0, true); // O:af (JViewport:JComponent, cg:JFrame) - Node
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3", 12); // O:af (JViewport:JComponent, cg:JFrame)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Block Memory Generator ; AXI4 ; Production ; Included ; xilinx.com:ip:blk_mem_gen:8.3", 12, "Block Memory Generator", 0, true, false, false, false, false, true); // O:af (JViewport:JComponent, cg:JFrame) - Double Click - Node
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// l:bs (cg:JFrame):  Customize IP : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 928 MB. GUI used memory: 54 MB. Current time: 5/9/18 10:14:08 PM CST
+// [Engine Memory]: 986 MB (+213087kb) [00:07:54]
+// p:g (cg:JFrame): Customize IP: addNotify
+dismissDialog("Customize IP"); // l:bs (cg:JFrame)
+selectComboBox("Memory Type (Memory_Type)", "True Dual Port RAM", 2); // y:e (C:JPanel, p:g)
+// Elapsed time: 44 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Power Estimation", 1); // aU:i (C:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, PAResourceEtoH.HACGCBasePanel_IP_SYMBOL, "IP Symbol", 0); // aU:i (C:JPanel, p:g)
+selectCheckBox(PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS, "Show disabled ports", true); // g:JCheckBox (al:C, p:g): TRUE
+selectCheckBox(PAResourceEtoH.HACGCIPSymbol_SHOW_DISABLED_PORTS, "Show disabled ports", false); // g:JCheckBox (al:C, p:g): FALSE
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aU:i (C:JPanel, p:g)
+setText("Defines the PortA Write Width(DINA)", "32"); // z:X (aV:y, p:g)
+// Elapsed time: 69 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // B:JideButton (f:CommandBar, p:g)
+selectMenuItem(PAResourceCommand.PACommandNames_SHOW_PRODUCT_GUIDE, "Product Guide"); // ac:JMenuItem (ai:JPopupMenu, p:g)
+// Run Command: PAResourceCommand.PACommandNames_SHOW_PRODUCT_GUIDE
+// [GUI Memory]: 109 MB (+753kb) [00:37:22]
+// Elapsed time: 1654 seconds
+selectComboBox("Enable Port Type (Enable_A)", "Use ENA Pin", 1); // y:e (C:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port B Options", 2); // aU:i (C:JPanel, p:g)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port A Options", 1); // aU:i (C:JPanel, p:g)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,028 MB. GUI used memory: 61 MB. Current time: 5/9/18 10:44:09 PM CST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Port B Options", 2); // aU:i (C:JPanel, p:g)
+// Elapsed time: 13 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 3); // aU:i (C:JPanel, p:g)
+// Elapsed time: 10 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 4); // aU:i (C:JPanel, p:g)
+// Elapsed time: 46 seconds
+setText("Component Name", "async_dual_port_bram"); // z:X (N:y, p:g)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, p:g)
+dismissDialog("Customize IP"); // p:g (cg:JFrame)
+// TclEventType: CREATE_IP_CORE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.3 -module_name async_dual_port_bram -dir e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip 
+// Tcl Message: INFO: [filemgmt 56-101] Creating core container 'e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram.xcix' for IP 'async_dual_port_bram' 
+// bs:g (cg:JFrame):  Customize IP : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips async_dual_port_bram] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target {instantiation_template} [get_files e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'async_dual_port_bram'... 
+// au:p (cg:JFrame): Generate Output Products: addNotify
+dismissDialog("Customize IP"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a:JButton (JPanel:JComponent, au:p)
+// bs:g (cg:JFrame):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'async_dual_port_bram'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'async_dual_port_bram'... INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'async_dual_port_bram'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'async_dual_port_bram'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all async_dual_port_bram] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/async_dual_port_bram/async_dual_port_bram.xci] 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs -jobs 2 async_dual_port_bram_synth_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed May  9 22:45:27 2018] Launched async_dual_port_bram_synth_1... Run output will be captured here: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/async_dual_port_bram_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 1,035 MB (+150kb) [00:39:12]
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_OUT_OF_CONTEXT_MODULE_RUNS_WERE_LAUNCHED_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, G:JDialog)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,038 MB. GUI used memory: 59 MB. Current time: 5/9/18 10:45:39 PM CST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking too long to process. Increasing delay to 3000 ms.
+// Elapsed time: 52 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 10, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 10, true, false, false, false, false, true); // B:i (D:JPanel, cg:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, async_dual_port_bram (async_dual_port_bram.xci)]", 12, false); // B:i (D:JPanel, cg:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, async_dual_port_bram (async_dual_port_bram.xci)]", 12, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, async_dual_port_bram (async_dual_port_bram.xci)]", 12, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 97, 256); // bI:J (JPanel:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_FILE
+// Elapsed time: 74 seconds
+dismissFileChooser();
+// 'e' command handler elapsed time: 73 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, async_dual_port_bram (async_dual_port_bram.xci)]", 12, false, false, false, false, true, false); // B:i (D:JPanel, cg:JFrame) - Popup Trigger
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // Z:JMenu (ai:JPopupMenu, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_EXAMPLE, "Open IP Example Design..."); // ac:JMenuItem (ai:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_EXAMPLE
+// B:p (cg:JFrame): Open IP Example Design: addNotify
+// Elapsed time: 12 seconds
+selectCheckBox(PAResourceOtoP.OpenExample_OVERWRITE_EXISTING_EXAMPLE_PROJECT, "Overwrite existing example project", false); // g:JCheckBox (JPanel:JComponent, B:p): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, B:p)
+// 'z' command handler elapsed time: 13 seconds
+dismissDialog("Open IP Example Design"); // B:p (cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bs:g (cg:JFrame):  Open IP Example Design : addNotify
+// Tcl Message: open_example_project -dir E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp [get_ips  async_dual_port_bram] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Examples' target for IP 'async_dual_port_bram'... 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: open_example_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 1225.531 ; gain = 0.000 
+// Elapsed time: 25 seconds
+dismissDialog("Open IP Example Design"); // bs:g (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 59 seconds
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 92, 328); // bI:J (JPanel:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, async_dual_port_bram (async_dual_port_bram.xci)]", 12); // B:i (D:JPanel, cg:JFrame)
+// x:aN (cg:JFrame): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, x:aN)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // x:aN (cg:JFrame)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,060 MB. GUI used memory: 65 MB. Current time: 5/9/18 10:49:59 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, async_dual_port_bram (async_dual_port_bram.xci), async_dual_port_bram (async_dual_port_bram.v)]", 13, true); // B:i (D:JPanel, cg:JFrame) - Node
+// Elapsed time: 11 seconds
+selectCodeEditor("async_dual_port_bram.v", 66, 213); // C:bI (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("async_dual_port_bram.v", 64, 226); // C:bI (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("async_dual_port_bram.v", 67, 245); // C:bI (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 183 seconds
+selectCodeEditor("async_dual_port_bram.v", 90, 364); // C:bI (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "async_dual_port_bram.v", 'c'); // C:bI (JPanel:JComponent, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "async_dual_port_bram.v", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectCodeEditor("async_dual_port_bram.v", 140, 127); // C:bI (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("async_dual_port_bram.v", 40, 143); // C:bI (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "async_dual_port_bram.v", 'c'); // C:bI (JPanel:JComponent, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IP Catalog", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 157, 353); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 128, 342); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 113, 332); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 'c'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "async_dual_port_bram.v", 3); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectCodeEditor("async_dual_port_bram.v", 68, 339); // C:bI (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("async_dual_port_bram.v", 50, 366); // C:bI (JPanel:JComponent, cg:JFrame)
+typeControlKey((HResource) null, "async_dual_port_bram.v", 'c'); // C:bI (JPanel:JComponent, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IP Catalog", 2); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 1); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// [GUI Memory]: 115 MB (+195kb) [00:49:39]
+// Elapsed time: 225 seconds
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 103, 409); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 143, 389); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "gtx3g_bert_axi_v1_0_S00_AXI.v", 'v'); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 22, 192); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 34, 188); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 66, 176); // bI:J (JPanel:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 23, 181); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 24 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// [GUI Memory]: 122 MB (+1519kb) [00:55:15]
+// Elapsed time: 852 seconds
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 29, 355); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "ram"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, cg:JFrame)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "ram"); // OverlayTextField:JTextField (DefaultOverlayable:JPanel, cg:JFrame)
+// Elapsed time: 53 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v), axi_ad9286_ctrl_v0_1_inst_1 : gtx3g_bert_axi_v1_0 (gtx3g_bert_axi_v1_0.v), gtx3g_bert_axi_v1_0_S00_AXI_inst : gtx3g_bert_axi_v1_0_S00_AXI (gtx3g_bert_axi_v1_0_S00_AXI.v)]", 9, true); // B:i (D:JPanel, cg:JFrame) - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,077 MB. GUI used memory: 64 MB. Current time: 5/9/18 11:19:59 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,085 MB. GUI used memory: 64 MB. Current time: 5/9/18 11:25:54 PM CST
+// [Engine Memory]: 1,092 MB (+5413kb) [01:19:43]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,092 MB. GUI used memory: 64 MB. Current time: 5/9/18 11:55:55 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 2839 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb_gtx3g_bert_axi_v1_0 (tb_gtx3g_bert_axi_v1_0.v)]", 7, true); // B:i (D:JPanel, cg:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x:aN (cg:JFrame): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, x:aN)
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x:aN (cg:JFrame)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// bs:g (cg:JFrame):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci' is already up-to-date 
+// Tcl Message: [Thu May 10 00:01:27 2018] Launched synth_1... Run output will be captured here: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bs:g (cg:JFrame)
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aF:FrameContainer (ContainerContainer:JideSplitPane, cg:JFrame)
+// TclEventType: RUN_FAILED
+// ah:x (cg:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ah:x)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah:x (cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-1031] bram_axi_addra is not declared [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:410]. ]", 2, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;410;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// bs:g (cg:JFrame):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci' is already up-to-date 
+// Tcl Message: [Thu May 10 00:02:17 2018] Launched synth_1... Run output will be captured here: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs:g (cg:JFrame)
+// Elapsed time: 21 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // A:b
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 43 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ah:x)
+dismissDialog("Synthesis Completed"); // ah:x (cg:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k:TdiGroup (j:CodeEditorDocumentPane, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]. ]", 2, true); // ah:i (JViewport:JComponent, cg:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0.v;-;;-;16;-;line;-;4;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+// Elapsed time: 11 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]. ]", 2); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]. ]", 3, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0.v;-;;-;16;-;line;-;4;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]. ]", 4, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0.v;-;;-;16;-;line;-;4;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0.v", 185, 351); // bI:J (JPanel:JComponent, cg:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u:M (JViewport:JComponent, cg:JFrame)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u:M (JViewport:JComponent, cg:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs:g (cg:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f:p (cg:JFrame): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, f:p)
+// bs:g (cg:JFrame):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f:p (cg:JFrame)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'e:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/gtx3g_bert_0.xci' is already up-to-date 
+// Tcl Message: [Thu May 10 00:04:32 2018] Launched synth_1... Run output will be captured here: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs:g (cg:JFrame)
+// TclEventType: RUN_COMPLETED
+// ah:x (cg:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 40 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, ah:x)
+dismissDialog("Synthesis Completed"); // ah:x (cg:JFrame)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 2); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 3, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 179, 303); // bI:J (JPanel:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 3, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 4, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 5, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 2, true); // ah:i (JViewport:JComponent, cg:JFrame) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 2, true); // ah:i (JViewport:JComponent, cg:JFrame) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 3, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 4, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectCodeEditor("gtx3g_bert_axi_v1_0_S00_AXI.v", 107, 374); // bI:J (JPanel:JComponent, cg:JFrame)
+// Elapsed time: 192 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 5, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 4, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 5, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. , [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]. ]", 5, false); // ah:i (JViewport:JComponent, cg:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;E:\ljzhu\test_gtx\ip_repo\gtx3g_bert_axi\gtx3g_bert_axi_1.0\hdl\gtx3g_bert_axi_v1_0_S00_AXI.v;-;;-;16;-;line;-;171;-;;-;16;-;"); // ah:i (JViewport:JComponent, cg:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,092 MB. GUI used memory: 65 MB. Current time: 5/10/18 12:25:55 AM CST
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking too long to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking too long to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,092 MB. GUI used memory: 65 MB. Current time: 5/10/18 8:39:23 AM CST
+// [GUI Memory]: 128 MB (+17kb) [10:33:32]

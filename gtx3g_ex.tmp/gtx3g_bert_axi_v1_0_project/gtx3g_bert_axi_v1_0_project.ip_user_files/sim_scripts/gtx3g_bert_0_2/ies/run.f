@@ -15,26 +15,26 @@
   "../../../ipstatic/hdl/fifo_generator_v13_1_rfs.v" \
 -endlib
 -makelib ies/xil_defaultlib \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/rx_word_fifo/sim/rx_word_fifo.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_sync_pulse.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_tx_manual_phase_align.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_tx_startup_fsm.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_rx_startup_fsm.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g_init.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g_gt.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g_multi_gt.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_sync_block.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g/gtx3g.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_common.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_common_reset.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_gt_frame_check.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_gt_frame_gen.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_gt_usrclk_source.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_support.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/parity_coding.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/pattern_gen.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/src/gtx3g_exdes.v" \
-  "../../../../gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0_2/sim/gtx3g_bert_0.v" \
+  "../../../ip/gtx3g_bert_0_2/src/rx_word_fifo/sim/rx_word_fifo.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_sync_pulse.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_tx_manual_phase_align.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_tx_startup_fsm.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_rx_startup_fsm.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g_init.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g_gt.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g_multi_gt.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g/example_design/gtx3g_sync_block.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g/gtx3g.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_common.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_common_reset.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_gt_frame_check.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_gt_frame_gen.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_gt_usrclk_source.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_support.v" \
+  "../../../ip/gtx3g_bert_0_2/src/parity_coding.v" \
+  "../../../ip/gtx3g_bert_0_2/src/pattern_gen.v" \
+  "../../../ip/gtx3g_bert_0_2/src/gtx3g_exdes.v" \
+  "../../../ip/gtx3g_bert_0_2/sim/gtx3g_bert_0.v" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

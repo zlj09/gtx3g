@@ -1,1 +1,1 @@
-create_clock -period 10 [get_ports s00_axi_aclk]
+create_clock -period 20 [get_ports s00_axi_aclk]

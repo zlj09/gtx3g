@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu May 10 21:08:15 2018
-# Process ID: 9124
+# Start of session at: Thu May 10 00:04:34 2018
+# Process ID: 7892
 # Current directory: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1
 # Command line: vivado.exe -log gtx3g_bert_axi_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source gtx3g_bert_axi_v1_0.tcl
 # Log file: E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/gtx3g_bert_axi_v1_0.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100i-ffg900'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7072 
+INFO: Helper process launched with PID 7448 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 390.125 ; gain = 55.129
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 389.383 ; gain = 54.754
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_axi_v1_0' [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -29,13 +29,29 @@ INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_axi_v1_0_S00_AXI' [E:/ljzhu/
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
 INFO: [Synth 8-226] default block is never used [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:273]
-INFO: [Synth 8-226] default block is never used [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:525]
-INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_0' [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/realtime/gtx3g_bert_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_0' (1#1) [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/realtime/gtx3g_bert_0_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'async_dual_port_bram' [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/realtime/async_dual_port_bram_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'async_dual_port_bram' (2#1) [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/realtime/async_dual_port_bram_stub.v:6]
+INFO: [Synth 8-226] default block is never used [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:524]
+WARNING: [Synth 8-567] referenced signal 'S_AXI_ARESETN' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:668]
+WARNING: [Synth 8-567] referenced signal 'bram_axi_addr' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:668]
+WARNING: [Synth 8-567] referenced signal 'slv_reg2' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:668]
+WARNING: [Synth 8-567] referenced signal 'slv_reg3' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:668]
+WARNING: [Synth 8-567] referenced signal 'slv_reg4' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:668]
+WARNING: [Synth 8-567] referenced signal 'slv_reg0' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:668]
+WARNING: [Synth 8-567] referenced signal 'GTX_RESETDONE_OUT' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'bram_axi_addr' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'test_state' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'bram_axi_dout' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'data_count_d' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'pattern_error_count_d' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'block_error_d' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'error_pos1_d' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'error_rxdata1_d' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:700]
+WARNING: [Synth 8-567] referenced signal 'test_start_r' should be on the sensitivity list [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:759]
+INFO: [Synth 8-638] synthesizing module 'gtx3g_bert_0' [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/realtime/gtx3g_bert_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_0' (1#1) [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/realtime/gtx3g_bert_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'async_dual_port_bram' [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/realtime/async_dual_port_bram_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'async_dual_port_bram' (2#1) [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/realtime/async_dual_port_bram_stub.v:6]
 WARNING: [Synth 8-6014] Unused sequential element byte_index was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:251]
-WARNING: [Synth 8-6014] Unused sequential element test_result_valid_d_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:621]
+WARNING: [Synth 8-6014] Unused sequential element test_result_valid_d_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:620]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_axi_v1_0_S00_AXI' (3#1) [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:4]
 INFO: [Synth 8-256] done synthesizing module 'gtx3g_bert_axi_v1_0' (4#1) [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v:4]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
@@ -45,7 +61,7 @@ WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port 
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 427.199 ; gain = 92.203
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 426.707 ; gain = 92.078
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -55,19 +71,17 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 427.199 ; gain = 92.203
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 426.707 ; gain = 92.078
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z100iffg900-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/dcp5/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
-Finished Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/dcp5/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
-Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/dcp7/async_dual_port_bram_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1'
-Finished Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-9124-FPGA-PC/dcp7/async_dual_port_bram_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1'
-Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/constrs_1/new/gtx3g_bert_axi_v1_0.xdc]
-Finished Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/constrs_1/new/gtx3g_bert_axi_v1_0.xdc]
+Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/dcp5/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
+Finished Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/dcp5/gtx3g_bert_0_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1'
+Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/dcp7/async_dual_port_bram_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1'
+Finished Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/.Xil/Vivado-7892-FPGA-PC/dcp7/async_dual_port_bram_in_context.xdc] for cell 'gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1'
 Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
@@ -75,17 +89,17 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 825.344 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 824.844 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1' at clock pin 'clkb' is different from the actual clock period '6.667', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z100iffg900-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -93,29 +107,21 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for gtx3g_bert_axi_v1_0_S00_AXI_inst/async_dual_port_bram_inst_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'test_state_reg' in module 'gtx3g_bert_axi_v1_0_S00_AXI'
-WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:618]
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:617]
 INFO: [Synth 8-5544] ROM "slv_reg0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bram_axi_we" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "slv_reg1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "slv_reg5" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "slv_reg6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "slv_reg7" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "slv_reg8" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "slv_reg9" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bram_axi_we" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bram_trans_we" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bram_trans_din" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "test_ctrl_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "pattern_mode_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "error_insert_mask_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "ecc_code_en_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "test_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element bram_axi_addr_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:672]
-WARNING: [Synth 8-6014] Unused sequential element bram_trans_addr_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:706]
-WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:618]
-WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:618]
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:617]
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:617]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -125,9 +131,14 @@ WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [
                  iSTATE2 |                               11 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'test_state_reg' using encoding 'sequential' in module 'gtx3g_bert_axi_v1_0_S00_AXI'
-WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:618]
+WARNING: [Synth 8-6014] Unused sequential element test_state_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:617]
+WARNING: [Synth 8-327] inferring latch for variable 'bram_trans_din_reg' [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:704]
+WARNING: [Synth 8-327] inferring latch for variable 'test_start_r_reg' [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:706]
+WARNING: [Synth 8-327] inferring latch for variable 'pattern_mode_r_reg' [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:707]
+WARNING: [Synth 8-327] inferring latch for variable 'error_insert_mask_r_reg' [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:708]
+WARNING: [Synth 8-327] inferring latch for variable 'ecc_code_en_r_reg' [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:709]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -141,28 +152,29 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 24    
-	               16 Bit    Registers := 1     
+	               32 Bit    Registers := 22    
 	                8 Bit    Registers := 1     
 	                6 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 13    
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   8 Input     32 Bit        Muxes := 7     
+	   8 Input     32 Bit        Muxes := 6     
 	  16 Input     32 Bit        Muxes := 16    
-	   2 Input     32 Bit        Muxes := 11    
+	   2 Input     32 Bit        Muxes := 12    
 	   5 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 7     
 	   5 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 8     
+	   9 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -174,28 +186,29 @@ Module gtx3g_bert_axi_v1_0_S00_AXI
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 24    
-	               16 Bit    Registers := 1     
+	               32 Bit    Registers := 22    
 	                8 Bit    Registers := 1     
 	                6 Bit    Registers := 2     
-	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 13    
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   8 Input     32 Bit        Muxes := 7     
+	   8 Input     32 Bit        Muxes := 6     
 	  16 Input     32 Bit        Muxes := 16    
-	   2 Input     32 Bit        Muxes := 11    
+	   2 Input     32 Bit        Muxes := 12    
 	   5 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 7     
 	   5 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 6     
-	   4 Input      1 Bit        Muxes := 8     
+	   9 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -211,26 +224,150 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element bram_axi_addr_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:672]
-WARNING: [Synth 8-6014] Unused sequential element bram_trans_addr_reg was removed.  [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:706]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design gtx3g_bert_axi_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[16]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[17]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[18]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[19]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[20]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[21]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[22]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[23]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[24]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[25]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[26]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[27]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[28]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[29]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[30]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ECC_CODE_EN_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/PATTERN_MODE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/PATTERN_MODE_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/PATTERN_MODE_reg[2] )
 INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/test_start_r_reg) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/pattern_mode_r_reg[2]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/pattern_mode_r_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/pattern_mode_r_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[31]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[30]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[29]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[28]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[27]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[26]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[25]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[24]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[23]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[22]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[21]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[20]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[19]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[18]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[17]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[16]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[15]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[14]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[13]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[12]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[11]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[10]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[9]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[8]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[7]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[6]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[5]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[4]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[3]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[2]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_insert_mask_r_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ecc_code_en_r_reg) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/PATTERN_MODE_reg[2]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/PATTERN_MODE_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/PATTERN_MODE_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[31]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[30]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[29]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[28]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[27]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[26]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[25]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[24]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[23]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[22]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[21]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[20]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[19]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[18]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[17]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[16]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[15]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[14]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[13]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[12]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[11]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[10]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[9]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[8]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[7]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[6]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[5]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[4]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[3]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[2]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[1]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ERROR_INSERT_MASK_reg[0]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/ECC_CODE_EN_reg) is unused and will be removed from module gtx3g_bert_axi_v1_0.
+WARNING: [Synth 8-3332] Sequential element (gtx3g_bert_axi_v1_0_S00_AXI_inst/error_rxdata1_d_reg[31]) is unused and will be removed from module gtx3g_bert_axi_v1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,13 +381,51 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/USER_CLK' to pin 'gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/bbstub_USER_CLK/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_12/O (GATE_2_11)
+     1: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_12/I1 (GATE_2_11)
+     2: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_55/O (BUF)
+     3: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_55/I (BUF)
+     4: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_12/O (GATE_2_11)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]
+Inferred a: "set_disable_timing -from I1 -to O gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_12"
+Found timing loop:
+     0: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_54/O (BUF)
+     1: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_54/I (BUF)
+     2: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_49/O (GATE_2_6_XOR)
+     3: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_49/I1 (GATE_2_6_XOR)
+     4: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_36/O (GATE_2_11)
+     5: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_36/I1 (GATE_2_11)
+     6: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_54/O (BUF)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]
+Inferred a: "set_disable_timing -from I -to O gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_54"
+Found timing loop:
+     0: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_25/O (GATE_2_11)
+     1: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_25/I1 (GATE_2_11)
+     2: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_53/O (INV)
+     3: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_53/I (INV)
+     4: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_47/O (GATE_2_6_XOR)
+     5: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_47/I0 (GATE_2_6_XOR)
+     6: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_25/O (GATE_2_11)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]
+Inferred a: "set_disable_timing -from I1 -to O gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_25"
+Found timing loop:
+     0: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_52/O (BUF)
+     1: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_52/I (BUF)
+     2: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_45/O (GATE_2_6_XOR)
+     3: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_45/I0 (GATE_2_6_XOR)
+     4: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_15/O (GATE_2_2)
+     5: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_15/I0 (GATE_2_2)
+     6: gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_52/O (BUF)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [E:/ljzhu/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:171]
+Inferred a: "set_disable_timing -from I -to O gtx3g_bert_axi_v1_0_S00_AXI_insti_5/i_52"
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +437,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,7 +461,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -299,7 +474,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,25 +486,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -349,46 +524,48 @@ Report Cell Usage:
 +------+---------------------+------+
 |1     |async_dual_port_bram |     1|
 |2     |gtx3g_bert_0         |     1|
-|3     |BUFG                 |     1|
-|4     |LUT1                 |     4|
-|5     |LUT2                 |    13|
+|3     |BUFG                 |     2|
+|4     |LUT1                 |     3|
+|5     |LUT2                 |     5|
 |6     |LUT3                 |     6|
-|7     |LUT4                 |    21|
-|8     |LUT5                 |    50|
-|9     |LUT6                 |   310|
+|7     |LUT4                 |    20|
+|8     |LUT5                 |    20|
+|9     |LUT6                 |   345|
 |10    |MUXF7                |    64|
 |11    |MUXF8                |    32|
-|12    |FDRE                 |   823|
-|13    |FDSE                 |    10|
-|14    |IBUF                 |    54|
-|15    |OBUF                 |    42|
+|12    |FDRE                 |   676|
+|13    |FDSE                 |     9|
+|14    |LDC                  |    32|
+|15    |IBUF                 |    54|
+|16    |OBUF                 |    42|
 +------+---------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------------------+----------------------------+------+
 |      |Instance                           |Module                      |Cells |
 +------+-----------------------------------+----------------------------+------+
-|1     |top                                |                            |  1583|
-|2     |  gtx3g_bert_axi_v1_0_S00_AXI_inst |gtx3g_bert_axi_v1_0_S00_AXI |  1486|
+|1     |top                                |                            |  1463|
+|2     |  gtx3g_bert_axi_v1_0_S00_AXI_inst |gtx3g_bert_axi_v1_0_S00_AXI |  1364|
 +------+-----------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 825.344 ; gain = 92.203
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 825.344 ; gain = 490.348
+Synthesis finished with 0 errors, 4 critical warnings and 95 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 824.844 ; gain = 92.078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 824.844 ; gain = 490.215
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'gtx3g_bert_axi_v1_0' is not ideal for floorplanning, since the cellview 'gtx3g_bert_axi_v1_0_S00_AXI' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 32 instances were transformed.
+  LDC => LDCE: 32 instances
 
-43 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+89 Infos, 121 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 825.344 ; gain = 532.762
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 824.844 ; gain = 532.789
 INFO: [Common 17-1381] The checkpoint 'E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.runs/synth_1/gtx3g_bert_axi_v1_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 825.344 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu May 10 21:08:50 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 824.844 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 10 00:05:09 2018...

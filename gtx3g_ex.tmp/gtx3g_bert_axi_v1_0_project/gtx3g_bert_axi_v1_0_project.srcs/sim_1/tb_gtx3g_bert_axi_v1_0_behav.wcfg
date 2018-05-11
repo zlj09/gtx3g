@@ -11,21 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="84569730333fs"></ZoomStartTime>
-      <ZoomEndTime time="84709130334fs"></ZoomEndTime>
-      <Cursor1Time time="84634530000fs"></Cursor1Time>
+      <ZoomStartTime time="623572420333fs"></ZoomStartTime>
+      <ZoomEndTime time="623635320334fs"></ZoomEndTime>
+      <Cursor1Time time="623624837000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="261"></NameColumnWidth>
-      <ValueColumnWidth column_width="68"></ValueColumnWidth>
+      <ValueColumnWidth column_width="150"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="602" />
-   <wave_markers>
-      <marker time="84779239000" label="" />
-   </wave_markers>
+   <WVObjectSize size="594" />
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/refclk_p_in" type="logic">
       <obj_property name="ElementShortName">refclk_p_in</obj_property>
       <obj_property name="ObjectShortName">refclk_p_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_reset_r" type="logic">
+      <obj_property name="ElementShortName">axi_reset_r</obj_property>
+      <obj_property name="ObjectShortName">axi_reset_r</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/TEST_RESET" type="logic">
       <obj_property name="ElementShortName">TEST_RESET</obj_property>
@@ -83,6 +84,14 @@
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/slv_reg0" type="array">
+      <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/USER_CLK" type="logic">
+      <obj_property name="ElementShortName">USER_CLK</obj_property>
+      <obj_property name="ObjectShortName">USER_CLK</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/test_start_r" type="logic">
       <obj_property name="ElementShortName">test_start_r</obj_property>
       <obj_property name="ObjectShortName">test_start_r</obj_property>
@@ -90,50 +99,6 @@
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/test_start_r1" type="logic">
       <obj_property name="ElementShortName">test_start_r1</obj_property>
       <obj_property name="ObjectShortName">test_start_r1</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/S_AXI_ARESETN" type="logic">
-      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
-      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_axi_addr" type="array">
-      <obj_property name="ElementShortName">bram_axi_addr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_axi_addr[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_axi_din" type="array">
-      <obj_property name="ElementShortName">bram_axi_din[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_axi_din[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_axi_we" type="logic">
-      <obj_property name="ElementShortName">bram_axi_we</obj_property>
-      <obj_property name="ObjectShortName">bram_axi_we</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_axi_dout" type="array">
-      <obj_property name="ElementShortName">bram_axi_dout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_axi_dout[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_trans_we" type="logic">
-      <obj_property name="ElementShortName">bram_trans_we</obj_property>
-      <obj_property name="ObjectShortName">bram_trans_we</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/USER_CLK" type="logic">
-      <obj_property name="ElementShortName">USER_CLK</obj_property>
-      <obj_property name="ObjectShortName">USER_CLK</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_trans_addr" type="array">
-      <obj_property name="ElementShortName">bram_trans_addr[3:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_trans_addr[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_trans_din" type="array">
-      <obj_property name="ElementShortName">bram_trans_din[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_trans_din[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/bram_trans_dout" type="array">
-      <obj_property name="ElementShortName">bram_trans_dout[31:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_trans_dout[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/slv_reg0" type="array">
-      <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
-      <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/slv_reg1" type="array">
       <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
@@ -271,6 +236,10 @@
       <obj_property name="ElementShortName">C_S00_AXI_ADDR_WIDTH[31:0]</obj_property>
       <obj_property name="ObjectShortName">C_S00_AXI_ADDR_WIDTH[31:0]</obj_property>
    </wvobject>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/S_AXI_ARESETN" type="logic">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/S_AXI_AWADDR" type="array">
       <obj_property name="ElementShortName">S_AXI_AWADDR[5:0]</obj_property>
       <obj_property name="ObjectShortName">S_AXI_AWADDR[5:0]</obj_property>
@@ -346,6 +315,14 @@
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/S_AXI_RREADY" type="logic">
       <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
       <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/refclk_p_in" type="logic">
+      <obj_property name="ElementShortName">refclk_p_in</obj_property>
+      <obj_property name="ObjectShortName">refclk_p_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/refclk_n_in" type="logic">
+      <obj_property name="ElementShortName">refclk_n_in</obj_property>
+      <obj_property name="ObjectShortName">refclk_n_in</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/axi_awaddr" type="array">
       <obj_property name="ElementShortName">axi_awaddr[5:0]</obj_property>
@@ -447,9 +424,9 @@
       <obj_property name="ElementShortName">ecc_code_en_r</obj_property>
       <obj_property name="ObjectShortName">ecc_code_en_r</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/test_state_d1" type="array">
-      <obj_property name="ElementShortName">test_state_d1[2:0]</obj_property>
-      <obj_property name="ObjectShortName">test_state_d1[2:0]</obj_property>
+   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/test_state_d1" type="logic">
+      <obj_property name="ElementShortName">test_state_d1</obj_property>
+      <obj_property name="ObjectShortName">test_state_d1</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/test_result_valid_d" type="logic">
       <obj_property name="ElementShortName">test_result_valid_d</obj_property>
@@ -2418,17 +2395,5 @@
    <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/gtx3g_bert_0_inst1/inst/gt0_frame_check/TEST_DATA_MAX_CNT" type="array">
       <obj_property name="ElementShortName">TEST_DATA_MAX_CNT[31:0]</obj_property>
       <obj_property name="ObjectShortName">TEST_DATA_MAX_CNT[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/C_S_AXI_ADDR_WIDTH" type="array">
-      <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/LOOPBACK_MODE" type="array">
-      <obj_property name="ElementShortName">LOOPBACK_MODE[2:0]</obj_property>
-      <obj_property name="ObjectShortName">LOOPBACK_MODE[2:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_gtx3g_bert_axi_v1_0/axi_ad9286_ctrl_v0_1_inst_1/gtx3g_bert_axi_v1_0_S00_AXI_inst/ADDR_LSB" type="array">
-      <obj_property name="ElementShortName">ADDR_LSB[31:0]</obj_property>
-      <obj_property name="ObjectShortName">ADDR_LSB[31:0]</obj_property>
    </wvobject>
 </wave_config>

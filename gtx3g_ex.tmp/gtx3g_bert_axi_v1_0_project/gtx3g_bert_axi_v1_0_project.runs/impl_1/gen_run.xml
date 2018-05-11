@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525957693">
+<GenRun Id="impl_1" LaunchPart="xc7z100iffg900-2L" LaunchTime="1525786591">
   <File Type="PWROPT-DRC" Name="gtx3g_bert_axi_v1_0_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="gtx3g_bert_axi_v1_0_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="gtx3g_bert_axi_v1_0_timing_summary_init.rpt"/>
@@ -62,13 +62,6 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/ip/gtx3g_bert_0_3/gtx3g_bert_0.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../../ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -84,13 +77,6 @@
     <File Path="$PPRDIR/../../../ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/component.xml">
       <FileInfo SFType="IPXACT"/>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/gtx3g_bert_0_3.xcix">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="gtx3g_bert_axi_v1_0"/>
@@ -99,14 +85,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/gtx3g_bert_axi_v1_0.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/gtx3g_bert_axi_v1_0.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -122,5 +101,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="async_dual_port_bram"/>
+  <BlockFileSet Type="BlockSrcs" Name="gtx3g_bert_0"/>
 </GenRun>
