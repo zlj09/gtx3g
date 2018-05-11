@@ -94,9 +94,9 @@ set_false_path -to [get_pins -hierarchical -filter {NAME =~ *reset_on_error_in_r
 ################################# mgt wrapper constraints #####################
 
 ##---------- Set placement for gt0_gtx_wrapper_i/GTXE2_CHANNEL ------
-set_property LOC GTXE2_CHANNEL_X0Y1 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i]
+set_property LOC GTXE2_CHANNEL_X0Y5 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt0_gtx3g_i/gtxe2_i]
 ##---------- Set placement for gt1_gtx_wrapper_i/GTXE2_CHANNEL ------
-set_property LOC GTXE2_CHANNEL_X0Y2 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt1_gtx3g_i/gtxe2_i]
+set_property LOC GTXE2_CHANNEL_X0Y6 [get_cells gtx3g_exdes_i/gtx3g_support_i/gtx3g_init_i/inst/gtx3g_i/gt1_gtx3g_i/gtxe2_i]
 
 ##---------- Set ASYNC_REG for flop which have async input ----------
 ##set_property ASYNC_REG TRUE [get_cells -hier -filter {name=~*gt0_frame_gen*system_reset_r_reg}]
@@ -116,7 +116,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports uart_z7_out]
 set_property PACKAGE_PIN AG16 [get_ports track_data_out]
 set_property PACKAGE_PIN AJ21 [get_ports uart_z7_in]
 set_property PACKAGE_PIN AK21 [get_ports uart_z7_out]
-set_property PACKAGE_PIN N8 [get_ports refclk_p_in]
+set_property PACKAGE_PIN U8 [get_ports refclk_p_in]
 
 set_property IOSTANDARD LVCMOS25 [get_ports user_clk]
 set_property PACKAGE_PIN AD21 [get_ports user_clk]

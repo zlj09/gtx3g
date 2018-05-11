@@ -42,6 +42,9 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -51,17 +54,21 @@ set rc [catch {
   create_project -in_memory -part xc7z100iffg900-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.cache/wt [current_project]
-  set_property parent.project_path f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.xpr [current_project]
-  set_property ip_output_repo f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.cache/ip [current_project]
+  set_property webtalk.parent_dir F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.cache/wt [current_project]
+  set_property parent.project_path F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.xpr [current_project]
+  set_property ip_repo_paths {
+  F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert
+  F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0
+} [current_project]
+  set_property ip_output_repo F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/synth_1/gtx3g_test.dcp
-  read_ip -quiet f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g.xci
-  set_property is_locked true [get_files f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g.xci]
-  read_ip -quiet f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/rx_word_fifo/rx_word_fifo.xci
-  set_property is_locked true [get_files f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/sources_1/ip/rx_word_fifo/rx_word_fifo.xci]
-  read_xdc f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc
+  add_files -quiet F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.runs/synth_1/gtx3g_test.dcp
+  read_ip -quiet F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.srcs/sources_1/ip/rx_word_fifo/rx_word_fifo.xci
+  set_property is_locked true [get_files F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.srcs/sources_1/ip/rx_word_fifo/rx_word_fifo.xci]
+  read_ip -quiet F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g.xci
+  set_property is_locked true [get_files F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.srcs/sources_1/ip/gtx3g/gtx3g.xci]
+  read_xdc F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.srcs/constrs_1/imports/example_design/gtx3g_exdes.xdc
   link_design -top gtx3g_test -part xc7z100iffg900-2L
   close_msg_db -file init_design.pb
 } RESULT]

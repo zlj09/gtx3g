@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date                      : Fri May  4 19:43:23 2018
+| Date                      : Sun May  6 21:33:22 2018
 | Host                      : idea-PC running 64-bit major release  (build 9200)
 | Command                   : report_io -file gtx3g_test_io_placed.rpt
 | Design                    : gtx3g_test
@@ -701,8 +701,8 @@ Table of Contents
 | N4         |                    |                  | MGTXTXP3_112            | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | N5         |                    |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
 | N6         |                    |                  | MGTAVCC                 | Gigabit Power |             |         |            |      |                     |                      |           |            |           |          |      |                  |
-| N7         | refclk_n_in        |                  | MGTREFCLK0N_112         | INPUT         |             |         |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |
-| N8         | refclk_p_in        |                  | MGTREFCLK0P_112         | INPUT         |             |         |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |
+| N7         |                    |                  | MGTREFCLK0N_112         | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |
+| N8         |                    |                  | MGTREFCLK0P_112         | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | N9         |                    |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
 | N10        |                    |                  | VCCAUX                  | VCCAUX        |             |         |            |      |                     |                      |      1.80 |            |           |          |      |                  |
 | N11        |                    |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
@@ -821,8 +821,8 @@ Table of Contents
 | U4         |                    |                  | MGTXRXP1_112            | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | U5         |                    |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |
 | U6         |                    |                  | MGTAVCC                 | Gigabit Power |             |         |            |      |                     |                      |           |            |           |          |      |                  |
-| U7         |                    |                  | MGTREFCLK0N_111         | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |
-| U8         |                    |                  | MGTREFCLK0P_111         | Gigabit       |             |         |            |      |                     |                      |           |            |           |          |      |                  |
+| U7         | refclk_n_in        |                  | MGTREFCLK0N_111         | INPUT         |             |         |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |
+| U8         | refclk_p_in        |                  | MGTREFCLK0P_111         | INPUT         |             |         |            |      |                     |                 NONE |           | FIXED      |           |          |      | NONE             |
 | U9         |                    |                  | RSVDVCC1                | Reserved      |             |         |            |      |                     |                      |           |            |           |          |      |                  |
 | U10        |                    |                  | VCCAUX                  | VCCAUX        |             |         |            |      |                     |                      |      1.80 |            |           |          |      |                  |
 | U11        |                    |                  | GND                     | GND           |             |         |            |      |                     |                      |       0.0 |            |           |          |      |                  |

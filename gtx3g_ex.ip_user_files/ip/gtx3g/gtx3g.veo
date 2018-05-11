@@ -78,7 +78,7 @@
      .gt1_data_valid_in(gt1_data_valid_in), // input wire gt1_data_valid_in
 
     //_________________________________________________________________________
-    //GT0  (X0Y1)
+    //GT0  (X0Y5)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
         .gt0_drpaddr_in                 (gt0_drpaddr_in), // input wire [8:0] gt0_drpaddr_in
@@ -191,7 +191,7 @@
     //---------------- Transmit Ports - pattern Generator Ports ----------------
         .gt0_txprbssel_in               (gt0_txprbssel_in), // input wire [2:0] gt0_txprbssel_in
 
-    //GT1  (X0Y2)
+    //GT1  (X0Y6)
     //____________________________CHANNEL PORTS________________________________
     //-------------------------- Channel - DRP Ports  --------------------------
         .gt1_drpaddr_in                 (gt1_drpaddr_in), // input wire [8:0] gt1_drpaddr_in

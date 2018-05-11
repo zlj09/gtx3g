@@ -24,7 +24,7 @@ module tb_frame(
 		SYSTEM_RESET <= 1'b1;
 		TEST_RESET <= 1'b1;
 		PATTERN_MODE <= 3'd1;
-		ERROR_INSERT_MASK <= 32'b0;
+		ERROR_INSERT_MASK <= 32'hffff_ffff;
 		ENCODER_EN <= 1'b0;
 
 		#100

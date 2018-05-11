@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='f:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.runs/impl_1'
+HD_PWD='F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex_full/gtx3g_ex.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

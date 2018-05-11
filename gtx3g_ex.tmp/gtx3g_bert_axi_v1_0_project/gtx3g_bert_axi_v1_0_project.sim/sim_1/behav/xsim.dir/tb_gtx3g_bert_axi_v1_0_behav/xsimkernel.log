@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_gtx3g_bert_axi_v1_0_behav/xsimk.exe -simmode gui -wdb tb_gtx3g_bert_axi_v1_0_behav.wdb -simrunnum 0 -socket 51811
+Design successfully loaded
+Design Loading Memory Usage: 270836 KB (Peak: 270836 KB)
+Design Loading CPU Usage: 826 ms
+Simulation completed
+Simulation Memory Usage: 320352 KB (Peak: 320352 KB)
+Simulation CPU Usage: 362015 ms

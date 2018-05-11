@@ -673,7 +673,7 @@ assign TRACK_DATA_OUT = sm_link;
                 end
             end
 
-    localparam TEST_DATA_MAX_CNT = 32'h0000ffff;
+    localparam TEST_DATA_MAX_CNT = 32'hffff_ffff;
 
     always @(posedge USER_CLK)
         if (system_reset_r2 || TEST_RESET) begin

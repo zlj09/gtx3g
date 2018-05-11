@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="444190370000fs"></ZoomStartTime>
-      <ZoomEndTime time="445183370001fs"></ZoomEndTime>
-      <Cursor1Time time="445017870000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1257095746fs"></ZoomEndTime>
+      <Cursor1Time time="961309000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="199"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="139" />
+   <WVObjectSize size="143" />
    <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/USER_CLK" type="logic">
       <obj_property name="ElementShortName">USER_CLK</obj_property>
       <obj_property name="ObjectShortName">USER_CLK</obj_property>
@@ -320,14 +320,6 @@
       <obj_property name="ElementShortName">error_detected_r</obj_property>
       <obj_property name="ObjectShortName">error_detected_r</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_frame/gt0_frame_check/read_counter_i" type="array">
-      <obj_property name="ElementShortName">read_counter_i[9:0]</obj_property>
-      <obj_property name="ObjectShortName">read_counter_i[9:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_frame/gt0_frame_check/rom" type="array">
-      <obj_property name="ElementShortName">rom[0:511][79:0]</obj_property>
-      <obj_property name="ObjectShortName">rom[0:511][79:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_frame/gt0_frame_check/rx_data_r" type="array">
       <obj_property name="ElementShortName">rx_data_r[15:0]</obj_property>
       <obj_property name="ObjectShortName">rx_data_r[15:0]</obj_property>
@@ -399,10 +391,6 @@
    <wvobject fp_name="/tb_frame/gt0_frame_check/sel" type="array">
       <obj_property name="ElementShortName">sel[1:0]</obj_property>
       <obj_property name="ObjectShortName">sel[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_frame/gt0_frame_check/bram_data_r" type="array">
-      <obj_property name="ElementShortName">bram_data_r[15:0]</obj_property>
-      <obj_property name="ObjectShortName">bram_data_r[15:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_frame/gt0_frame_check/error_detected_c" type="logic">
       <obj_property name="ElementShortName">error_detected_c</obj_property>
@@ -575,5 +563,33 @@
    <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/pattern_gen_inst_1/bram_gen_inst1/bram_reg" type="array">
       <obj_property name="ElementShortName">bram_reg[15:0]</obj_property>
       <obj_property name="ObjectShortName">bram_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/error_insertion_rst" type="logic">
+      <obj_property name="ElementShortName">error_insertion_rst</obj_property>
+      <obj_property name="ObjectShortName">error_insertion_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/word_cnt" type="array">
+      <obj_property name="ElementShortName">word_cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">word_cnt[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/error_insert_mask" type="array">
+      <obj_property name="ElementShortName">error_insert_mask[31:0]</obj_property>
+      <obj_property name="ObjectShortName">error_insert_mask[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/error_insert" type="logic">
+      <obj_property name="ElementShortName">error_insert</obj_property>
+      <obj_property name="ObjectShortName">error_insert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/error_insert_reg" type="logic">
+      <obj_property name="ElementShortName">error_insert_reg</obj_property>
+      <obj_property name="ObjectShortName">error_insert_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_frame/gtx3g_GT_FRAME_GEN_inst_1/error_insertion_inst_1/prbs31_rand" type="array">
+      <obj_property name="ElementShortName">prbs31_rand[31:0]</obj_property>
+      <obj_property name="ObjectShortName">prbs31_rand[31:0]</obj_property>
    </wvobject>
 </wave_config>

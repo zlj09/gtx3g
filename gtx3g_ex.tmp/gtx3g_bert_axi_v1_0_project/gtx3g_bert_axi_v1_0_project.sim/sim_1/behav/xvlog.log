@@ -1,0 +1,65 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/rx_word_fifo/sim/rx_word_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rx_word_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g/example_design/gtx3g_sync_pulse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_sync_pulse
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g/example_design/gtx3g_tx_manual_phase_align.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_TX_MANUAL_PHASE_ALIGN
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g/example_design/gtx3g_tx_startup_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_TX_STARTUP_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g/example_design/gtx3g_rx_startup_fsm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_RX_STARTUP_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g_gt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_GT
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g_multi_gt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_multi_gt
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g/example_design/gtx3g_sync_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_sync_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g/gtx3g.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_common.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_common
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_common_reset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_common_reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_gt_frame_check.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_GT_FRAME_CHECK
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_gt_frame_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_GT_FRAME_GEN
+INFO: [VRFC 10-311] analyzing module error_insertion
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_gt_usrclk_source.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_GT_USRCLK_SOURCE
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_support.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_support
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/parity_coding.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parity_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/pattern_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pattern_gen
+INFO: [VRFC 10-311] analyzing module bram_gen
+INFO: [VRFC 10-311] analyzing module prbs7_gen
+INFO: [VRFC 10-311] analyzing module prbs9_gen
+INFO: [VRFC 10-311] analyzing module prbs11_gen
+INFO: [VRFC 10-311] analyzing module prbs15_gen
+INFO: [VRFC 10-311] analyzing module prbs20_gen
+INFO: [VRFC 10-311] analyzing module prbs23_gen
+INFO: [VRFC 10-311] analyzing module prbs31_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/src/gtx3g_exdes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_exdes
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.srcs/sources_1/ip/gtx3g_bert_0/sim/gtx3g_bert_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_bert_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_bert_axi_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gtx3g_bert_axi_v1_0_S00_AXI
+WARNING: [VRFC 10-756] identifier test_state_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:405]
+WARNING: [VRFC 10-756] identifier test_result_valid_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:407]
+WARNING: [VRFC 10-756] identifier data_count_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:408]
+WARNING: [VRFC 10-756] identifier pattern_error_count_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:409]
+WARNING: [VRFC 10-756] identifier block_error_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:410]
+WARNING: [VRFC 10-756] identifier error_pos1_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:411]
+WARNING: [VRFC 10-756] identifier error_rxdata1_d1 is used before its declaration [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/hdl/gtx3g_bert_axi_v1_0_S00_AXI.v:412]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/tb/tb_gtx3g_bert_axi_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_gtx3g_bert_axi_v1_0
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_aclk is not permitted, left-hand side should be reg/integer/time/genvar [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/tb/tb_gtx3g_bert_axi_v1_0.v:94]
+ERROR: [VRFC 10-1280] procedural assignment to a non-register s00_axi_aclk is not permitted, left-hand side should be reg/integer/time/genvar [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/tb/tb_gtx3g_bert_axi_v1_0.v:94]
+ERROR: [VRFC 10-1040] module tb_gtx3g_bert_axi_v1_0 ignored due to previous errors [F:/Programs/Verilog/FPGA_Group/test_gtx/ip_repo/gtx3g_bert_axi/gtx3g_bert_axi_1.0/tb/tb_gtx3g_bert_axi_v1_0.v:23]

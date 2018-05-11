@@ -283,3 +283,25 @@ module prbs31_gen(
 
 	assign prbs31_word = prbs31_reg[15 : 0];
 endmodule
+
+module prbs31_rand_gen(
+	input clk,
+	input rst,
+	input pause,
+	output [30 : 0] prbs31_rand
+);
+	localparam prbs31_INIT = 31'h5c2f_d17a;
+
+	reg [30 : 0] prbs31_reg;
+
+	always @(posedge clk)
+		if (rst)
+			prbs31_reg <= prbs31_INIT;
+		else
+			if (pause)
+				prbs31_reg <= prbs31_reg;
+			else
+				prbs31_reg <= {prbs31_reg[29 : 0], prbs31_reg[30] ^ prbs31_reg[27]};
+
+	assign prbs31_rand = prbs31_reg;
+endmodule

@@ -1,0 +1,109 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 3b3a801a907d4040877445d5c9017376 --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_6 -L xil_defaultlib -L fifo_generator_v13_1_4 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_gtx3g_bert_axi_v1_0_behav xil_defaultlib.tb_gtx3g_bert_axi_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 2 for port RXN_IN [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/sim/gtx3g_bert_0.v:101]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 2 for port RXP_IN [E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/sim/gtx3g_bert_0.v:102]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.2/nightly/2017_06_15_1909853/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 1. Module pattern_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 95. Module bram_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 132. Module prbs7_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 154. Module prbs9_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 176. Module prbs11_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 199. Module prbs15_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 221. Module prbs20_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 243. Module prbs23_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 265. Module prbs31_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/parity_coding.v" Line 1. Module parity_encoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 287. Module prbs31_rand_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 1. Module pattern_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 95. Module bram_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 132. Module prbs7_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 154. Module prbs9_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 176. Module prbs11_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 199. Module prbs15_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 221. Module prbs20_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 243. Module prbs23_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 265. Module prbs31_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/parity_coding.v" Line 1. Module parity_encoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 287. Module prbs31_rand_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 1. Module pattern_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 95. Module bram_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 132. Module prbs7_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 154. Module prbs9_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 176. Module prbs11_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 199. Module prbs15_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 221. Module prbs20_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 243. Module prbs23_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 265. Module prbs31_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/parity_coding.v" Line 1. Module parity_encoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 1. Module pattern_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 95. Module bram_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 132. Module prbs7_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 154. Module prbs9_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 176. Module prbs11_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 199. Module prbs15_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 221. Module prbs20_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 243. Module prbs23_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/pattern_gen.v" Line 265. Module prbs31_gen doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/ljzhu/test_gtx/gtx3g_ex/gtx3g_ex.tmp/gtx3g_bert_axi_v1_0_project/gtx3g_bert_axi_v1_0_project.ip_user_files/ip/gtx3g_bert_0_2/src/parity_coding.v" Line 1. Module parity_encoder doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUFDS_GTE2
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.gtx3g_GT_USRCLK_SOURCE
+Compiling secureip modules ...
+Compiling module unisims_ver.GTXE2_COMMON(QPLL_CFG=27'b011010...
+Compiling module xil_defaultlib.gtx3g_common(WRAPPER_SIM_GTRESET...
+Compiling module xil_defaultlib.gtx3g_common_reset(STABLE_CLOCK_...
+Compiling secureip modules ...
+Compiling module unisims_ver.GTXE2_CHANNEL(CHAN_BOND_MAX_SKEW...
+Compiling module xil_defaultlib.gtx3g_GT(GT_SIM_GTRESET_SPEEDUP=...
+Compiling module xil_defaultlib.gtx3g_multi_gt(WRAPPER_SIM_GTRES...
+Compiling module unisims_ver.FDRE(INIT=1'b0)
+Compiling module unisims_ver.FD(INIT=1'b0)
+Compiling module xil_defaultlib.gtx3g_sync_block
+Compiling module xil_defaultlib.gtx3g_TX_STARTUP_FSM(STABLE_CLOC...
+Compiling module xil_defaultlib.gtx3g_RX_STARTUP_FSM(EXAMPLE_SIM...
+Compiling module xil_defaultlib.gtx3g_sync_pulse
+Compiling module xil_defaultlib.gtx3g_TX_MANUAL_PHASE_ALIGN(NUMB...
+Compiling module xil_defaultlib.gtx3g_init_default
+Compiling module xil_defaultlib.gtx3g
+Compiling module xil_defaultlib.gtx3g_support(EXAMPLE_SIM_GTRESE...
+Compiling module xil_defaultlib.bram_gen
+Compiling module xil_defaultlib.prbs7_gen
+Compiling module xil_defaultlib.prbs9_gen
+Compiling module xil_defaultlib.prbs11_gen
+Compiling module xil_defaultlib.prbs15_gen
+Compiling module xil_defaultlib.prbs20_gen
+Compiling module xil_defaultlib.prbs23_gen
+Compiling module xil_defaultlib.prbs31_gen
+Compiling module xil_defaultlib.pattern_gen
+Compiling module xil_defaultlib.parity_encoder
+Compiling module xil_defaultlib.prbs31_rand_gen
+Compiling module xil_defaultlib.error_insertion
+Compiling module xil_defaultlib.gtx3g_GT_FRAME_GEN(WORDS_IN_BRAM...
+Compiling module unisims_ver.FD
+Compiling module fifo_generator_v13_1_4.fifo_generator_v13_1_4_bhv_ver_s...
+Compiling module fifo_generator_v13_1_4.fifo_generator_v13_1_4_CONV_VER(...
+Compiling module fifo_generator_v13_1_4.fifo_generator_vlog_beh(C_COMMON...
+Compiling module fifo_generator_v13_1_4.fifo_generator_v13_1_4(C_COMMON_...
+Compiling module xil_defaultlib.rx_word_fifo
+Compiling module xil_defaultlib.gtx3g_GT_FRAME_CHECK(RX_DATA_WID...
+Compiling module xil_defaultlib.gtx3g_exdes
+Compiling module xil_defaultlib.gtx3g_bert_0
+Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_output_stage(...
+Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_output_stage(...
+Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_3_6.blk_mem_axi_regs_fwd_v8_3(C_DATA...
+Compiling module blk_mem_gen_v8_3_6.blk_mem_gen_v8_3_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.async_dual_port_bram
+Compiling module xil_defaultlib.gtx3g_bert_axi_v1_0_S00_AXI(C_S_...
+Compiling module xil_defaultlib.gtx3g_bert_axi_v1_0
+Compiling module xil_defaultlib.tb_gtx3g_bert_axi_v1_0
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_gtx3g_bert_axi_v1_0_behav
